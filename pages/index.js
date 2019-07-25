@@ -1,15 +1,17 @@
 import Link from "next/link";
 import logo from "../static/logo.svg";
 import soon from "../static/assets/img/soon.svg";
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components";
+import Head from "next/head";
 
 export default function Landing() {
   return (
     <>
+      <Head>
+        <title>Antítesis | Próximamente</title>
+      </Head>
       <Wrapper>
-        <Link href="home">
           <Logo />
-        </Link>
         <Coming />
         <Social>
           <a
@@ -29,7 +31,7 @@ export default function Landing() {
           </a>
         </Social>
         <Date>© MMXIX</Date>
-        <StylesX/>
+        <StylesX />
       </Wrapper>
     </>
   );
@@ -45,7 +47,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   position: relative;
   text-transform: uppercase;
-  background-color:black;
+  background-color: black;
   @media (max-width: 1000px) {
     font-size: 0.8rem;
   }
@@ -119,7 +121,6 @@ const Coming = styled(soon)`
   }
 `;
 
-
 const StylesX = createGlobalStyle`
       html {
         height: 100vh;
@@ -142,5 +143,8 @@ const StylesX = createGlobalStyle`
       }
       header{
         display:none !important;
+      }
+      footer{
+        display: none !important
       }
 `;

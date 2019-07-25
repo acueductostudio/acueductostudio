@@ -1,18 +1,19 @@
-import styled from "styled-components/";
+import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 export default function Contacto() {
   return (
-        <ContactoWrapper>Contacto</ContactoWrapper>
+    <Slide>
+      <ContactoWrapper><h1>Contacto</h1></ContactoWrapper>
+    </Slide>
   );
 }
 
 const ContactoWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   box-sizing: border-box;
-  padding: 5%;
-  overflow: hidden;
-  background-color:red;
+  padding: 4%;
   position: relative;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: flex-end;
 `;
