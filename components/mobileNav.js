@@ -4,20 +4,20 @@ import { useState } from "react";
 import logo from "../static/assets/img/favicon.svg";
 
 export default function MobileNav(props) {
-  const [isOpen, setOpen] = useState(false);
+  //   const [isOpen, setOpen] = useState(false);
 
-  const toggleNav = () => {
-    setOpen(!isOpen);
-  };
+  //   const toggleNav = () => {
+  //     setOpen(!isOpen);
+  //   };
 
-  const closeNav = () => {
-    setOpen(false);
-  };
+  //   const closeNav = () => {
+  //     setOpen(false);
+  //   };
   return (
     <>
-      <NavTrigger onClick={toggleNav} open={isOpen} />
-      <NavWrapper open={isOpen}>
-        <MobileNavList onClick={closeNav}>
+      <NavTrigger onClick={props.toggleNav} open={props.isOpen} />
+      <NavWrapper open={props.isOpen}>
+        <MobileNavList onClick={props.closeNav}>
           <Link href="/home">
             <a>Home</a>
           </Link>
@@ -63,7 +63,7 @@ const Logo = styled(logo)`
   right: 0;
   bottom: 50%;
   transform: translateY(50%);
-  width: 20%;
+  width: 15%;
   height: auto;
   padding-right: 4%;
   max-width: 175px;
@@ -106,6 +106,9 @@ const MobileNavList = styled.nav`
   flex-direction: column;
   display: flex;
   text-transform: uppercase;
+  @media (max-width: 900px) {
+    grid-column: 2 / span 4;
+  }
 `;
 
 const NavTrigger = styled.div`
@@ -119,7 +122,7 @@ const NavTrigger = styled.div`
   margin-left: 4%;
   &:before {
     content: " ";
-    height: 80px;
+    height: 100%;
     width: 4px;
     background-color: ${props => (props.open ? "white" : "black")};
     position: absolute;
@@ -128,12 +131,15 @@ const NavTrigger = styled.div`
   }
   &:after {
     content: " ";
-    height: 80px;
+    height: 100%;
     width: 4px;
     background-color: ${props => (props.open ? "white" : "black")};
     position: absolute;
     left: 20px;
     top: 0;
+  }
+  @media (max-width: 1100px) {
+    display: none;
   }
 `;
 
@@ -155,7 +161,15 @@ const NavWrapper = styled.div`
   background-color: black;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  @media (max-width: 900px) {
+    a {
+      padding-bottom: 5%;
+    }
+  }
   a {
     text-decoration: none;
     color: white;
@@ -164,7 +178,7 @@ const NavWrapper = styled.div`
     props.open &&
     css`
       opacity: 1;
-      transition: opacity .2s ease-in;
+      transition: opacity 0.2s ease-in;
       pointer-events: auto;
     `}
 `;

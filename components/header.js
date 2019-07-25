@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import {useEffect} from "react";
+import { useEffect } from "react";
 
 export default function Header(props) {
   return (
@@ -20,9 +20,46 @@ export default function Header(props) {
           <a>Contacto</a>
         </Link>
       </NavList>
+      <NavTriggerMobile onClick={() => props.toggleNav()} open={props.isOpen} />
     </TopHeader>
   );
 }
+
+const NavTriggerMobile = styled.div`
+  display: none;
+  height: 30px;
+  max-width: 50px;
+  width: 100%;
+  position: relative;
+  justify-self: flex-end;
+  margin-top: 3px;
+  &:before {
+    content: " ";
+    height: 4px;
+    width: 100%;
+    background-color: ${props => (props.open ? "white" : "black")};
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  &:after {
+    content: " ";
+    height: 4px;
+    width: 100%;
+    background-color: ${props => (props.open ? "white" : "black")};
+    position: absolute;
+    top: 19px;
+    left: 0;
+  }
+  @media (max-width: 1100px) {
+    display: flex;
+    grid-column: 12 / span 1;
+  }
+  @media (max-width: 900px) {
+    display: flex;
+    grid-column: 6 / span 1;
+  }
+`;
 
 const TopHeader = styled.header`
   display: ${props => (props.hidden ? "none" : "flex")};
@@ -36,6 +73,10 @@ const TopHeader = styled.header`
   top: 0;
   left: 0;
   padding: 2% 4% 0 4%;
+  z-index: 12;
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 `;
 
 const Logotype = styled.p`
@@ -51,6 +92,9 @@ const Desc = styled.p`
   grid-column: 4 / span 4;
   margin: 0;
   max-width: 330px;
+  @media (max-width: 900px) {
+    grid-column: 3 / span 3;
+  }
 `;
 
 const NavList = styled.nav`
@@ -62,5 +106,12 @@ const NavList = styled.nav`
     color: black;
     text-decoration: none;
     text-transform: uppercase;
+    padding-right: 2%;
+    &:nth-last-of-type(1) {
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 1100px) {
+    display: none;
   }
 `;

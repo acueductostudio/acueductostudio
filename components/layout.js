@@ -4,10 +4,21 @@ import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import MobileNav from "./mobileNav";
 import logo from "../static/assets/img/favicon.svg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default ({ children, title = "Antitesis" }) => {
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleNav = () => {
+    setOpen(!isOpen);
+  };
+
+  const closeNav = () => {
+    setOpen(false);
+  };
+
   var hideForLanding = false;
+
   useEffect(() => {
     if (window.document.title === "Antítesis | Próximamente") {
       hideForLanding = true;
@@ -25,8 +36,8 @@ export default ({ children, title = "Antitesis" }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Styles />
-      <Header hidden={hideForLanding} />
-      <MobileNav />
+      <Header hidden={hideForLanding} toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen}/>
+      <MobileNav toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen}/>
 
       {children}
       <Logo hidden={hideForLanding} />
@@ -61,7 +72,7 @@ const Logo = styled(logo)`
   right: 0;
   bottom: 50%;
   transform: translateY(50%);
-  width: 20%;
+  width: 15%;
   height: auto;
   padding-right: 4%;
   max-width: 175px;
@@ -103,9 +114,18 @@ const Styles = createGlobalStyle`
       }
 
       html {
-        font-size: 100%;
+        font-size: 16px;
         height: 100vh;
         box-sizing: border-box;
+        @media (max-width: 1330px) {
+          font-size:14px;
+        }
+        @media (max-width: 1000px) {
+          font-size:12px;
+        }
+        @media (max-width: 700px) {
+          font-size:10px;
+        }
       }
       *,
         *:before,

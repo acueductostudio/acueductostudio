@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 export default function Nosotros() {
   return (
     <NosotrosWrapper>
-      <h1>Nosotros</h1>
+      <Slide bottom cascade>
+        <h2>Nosotros</h2>
+      </Slide>
     </NosotrosWrapper>
   );
 }
@@ -11,8 +14,12 @@ export default function Nosotros() {
 const NosotrosWrapper = styled.div`
   display: grid;
   box-sizing: border-box;
-  padding: 4%;
   position: relative;
   grid-template-columns: repeat(12, 1fr);
   align-items: flex-end;
+  h2 {
+    grid-column: 4 / span 4;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+  }
 `;

@@ -3,17 +3,23 @@ import Slide from "react-reveal/Slide";
 
 export default function Contacto() {
   return (
-    <Slide>
-      <ContactoWrapper><h1>Contacto</h1></ContactoWrapper>
-    </Slide>
+    <ContactoWrapper>
+      <Slide bottom cascade>
+        <h2>Contacto</h2>
+      </Slide>
+    </ContactoWrapper>
   );
 }
 
 const ContactoWrapper = styled.div`
   display: grid;
   box-sizing: border-box;
-  padding: 4%;
   position: relative;
   grid-template-columns: repeat(12, 1fr);
   align-items: flex-end;
+  h2 {
+    grid-column: 4 / span 4;
+    text-transform: uppercase;
+    font-size: 3.2rem;
+  }
 `;
