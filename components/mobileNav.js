@@ -144,6 +144,7 @@ const NavTrigger = styled.div`
 `;
 
 const NavWrapper = styled.div`
+  opacity: 0;
   padding: 2% 4% 0 4%;
   z-index: 9;
   width: 100%;
@@ -159,7 +160,6 @@ const NavWrapper = styled.div`
   align-items: center;
   font-size: 3rem;
   background-color: black;
-  opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in;
   @media (max-width: 900px) {

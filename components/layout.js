@@ -35,7 +35,7 @@ export default ({ children, title = "Antitesis" }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Styles />
+      {/* <Styles /> */}
       <Header hidden={hideForLanding} toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen}/>
       <MobileNav toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen}/>
 

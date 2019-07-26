@@ -30,7 +30,7 @@ export default function Landing() {
             ig
           </a>
         </Social>
-        <Date>© MMXIX</Date>
+        <Date><Link href="/home">© MMXIX</Link></Date>
         <StylesX />
       </Wrapper>
     </>
@@ -91,6 +91,10 @@ const Date = styled.div`
   justify-self: flex-end;
   font-size: 1.5em;
   min-width: 100px;
+  a{
+    text-decoration:none;
+    color:white;
+  }
 `;
 
 const Coming = styled(soon)`
