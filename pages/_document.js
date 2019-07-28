@@ -9,7 +9,6 @@ export default class MyDocument extends Document {
       sheet.collectStyles(<App {...props} />)
     );
     const styleTags = sheet.getStyleElement();
-    console.log("get initial props called from document");
     return { ...page, styleTags };
   }
   render() {

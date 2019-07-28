@@ -5,9 +5,9 @@ import { useEffect } from "react";
 export default function Header(props) {
   return (
     <TopHeader hidden={props.hidden}>
-      <Link href="/home">
-        <Logotype>ANTÍTESIS FILMS</Logotype>
-      </Link>
+      <Logotype>
+        <Link href="/home"><a>ANTÍTESIS FILMS</a></Link>
+      </Logotype>
       <Desc>CASA PRODUCTORA EN LA CIUDAD DE MÉXICO</Desc>
       <NavList>
         <Link href="/nosotros" prefetch={true}>
@@ -33,23 +33,21 @@ const NavTriggerMobile = styled.div`
   position: relative;
   justify-self: flex-end;
   margin-top: 3px;
-  &:before {
+  &:before,
+  &:after {
     content: " ";
     height: 4px;
     width: 100%;
-    background-color: ${props => (props.open ? "white" : "black")};
+    background-color: ${props =>
+      props.open
+        ? props.theme.colors.background
+        : props.theme.colors.foreground};
     position: absolute;
     left: 0px;
     top: 0px;
   }
   &:after {
-    content: " ";
-    height: 4px;
-    width: 100%;
-    background-color: ${props => (props.open ? "white" : "black")};
-    position: absolute;
     top: 19px;
-    left: 0;
   }
   @media (max-width: 1100px) {
     display: flex;
@@ -62,8 +60,7 @@ const NavTriggerMobile = styled.div`
 `;
 
 const TopHeader = styled.header`
-  display: ${props => (props.hidden ? "none" : "flex")};
-  display: grid;
+  display: ${props => (props.hidden ? "none" : "grid")};
   grid-template-columns: repeat(12, 1fr);
   align-items: flex-start;
   letter-spacing: 0.05rem;
@@ -74,6 +71,7 @@ const TopHeader = styled.header`
   left: 0;
   padding: 2% 4% 0 4%;
   z-index: 12;
+  color: ${props => props.theme.colors.foreground};
   @media (max-width: 900px) {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -85,6 +83,10 @@ const Logotype = styled.p`
   max-width: 130px;
   margin: 0;
   cursor: pointer;
+  a{
+    color: inherit;
+    text-decoration:none;
+  }
 `;
 
 const Desc = styled.p`
@@ -103,7 +105,7 @@ const NavList = styled.nav`
   grid-column: 8 / span 5;
   a {
     margin: 0;
-    color: black;
+    color: ${props => props.theme.colors.foreground};
     text-decoration: none;
     text-transform: uppercase;
     padding-right: 2%;

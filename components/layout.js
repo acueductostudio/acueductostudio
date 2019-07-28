@@ -3,10 +3,10 @@ import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import MobileNav from "./mobileNav";
-import logo from "../static/assets/img/favicon.svg";
+import Logo from "../static/assets/img/favicon.svg";
 import { useEffect, useState } from "react";
 
-export default ({ children, title = "Antitesis" }) => {
+export default ({ children, title = "Antitesis", changeTheme }) => {
   const [isOpen, setOpen] = useState(false);
 
   const toggleNav = () => {
@@ -22,11 +22,15 @@ export default ({ children, title = "Antitesis" }) => {
   useEffect(() => {
     if (window.document.title === "Antítesis | Próximamente") {
       hideForLanding = true;
-      console.log(hideForLanding);
+      console.log("Is hidden for landing page? " + hideForLanding);
     } else {
-      console.log(hideForLanding);
+      console.log("Is hidden for landing page? " + hideForLanding);
     }
   }, []);
+
+  const doChangeTheme = () => {
+    changeTheme();
+  };
 
   return (
     <>
@@ -35,39 +39,64 @@ export default ({ children, title = "Antitesis" }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      {/* <Styles /> */}
-      <Header hidden={hideForLanding} toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen}/>
-      <MobileNav toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen}/>
+      <Styles />
+      <PageWrapper>
+        <Header
+          hidden={hideForLanding}
+          toggleNav={toggleNav}
+          closeNav={closeNav}
+          isOpen={isOpen}
+        />
+        <MobileNav toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen} />
 
-      {children}
-      <Logo hidden={hideForLanding} />
+        {children}
+        <ModeToggler
+          isOpen={isOpen}
+          hidden={hideForLanding}
+          onClick={() => doChangeTheme()}
+        >
+          <Logo />
+        </ModeToggler>
 
-      <Footer hidden={hideForLanding}>
-        <Social>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.facebook.com/somos.antitesis"
-          >
-            fb
-          </a>
-          —
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/somos.antitesis/"
-          >
-            ig
-          </a>
-        </Social>
-        <Date>© MMXIX</Date>
-      </Footer>
+        <Footer hidden={hideForLanding} isOpen={isOpen}>
+          <Social>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/somos.antitesis"
+            >
+              fb
+            </a>
+            —
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/somos.antitesis/"
+            >
+              ig
+            </a>
+          </Social>
+          <Date>© MMXIX</Date>
+        </Footer>
+      </PageWrapper>
     </>
   );
 };
 
-const Logo = styled(logo)`
+const PageWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  padding: 2% 4% 0 4%;
+  flex-direction: column;
   display: flex;
+  justify-content: center;
+  color: ${props => props.theme.colors.foreground};
+  background-color: ${props => props.theme.colors.background};
+`;
+
+const ModeToggler = styled.div`
+  cursor: pointer;
+  display: ${props => (props.hidden ? "none" : "flex")};
   position: fixed;
   right: 0;
   bottom: 50%;
@@ -76,7 +105,37 @@ const Logo = styled(logo)`
   height: auto;
   padding-right: 4%;
   max-width: 175px;
+  z-index: 10;
+  svg {
+    width: 100%;
+    path {
+      fill: ${props =>
+        props.isOpen
+          ? props.theme.colors.background
+          : props.theme.colors.foreground};
+    }
+  }
 `;
+
+// const Logo = styled(logo)`
+//   cursor: pointer;
+//   display: flex;
+//   position: fixed;
+//   right: 0;
+//   bottom: 50%;
+//   transform: translateY(50%);
+//   width: 15%;
+//   height: auto;
+//   padding-right: 4%;
+//   max-width: 175px;
+//   z-index: 10;
+//   path {
+//     background-color: ${props =>
+//       props.open
+//         ? props.theme.colors.background
+//         : props.theme.colors.foreground};
+//   }
+// `;
 
 const Footer = styled.footer`
   display: flex;
@@ -85,7 +144,12 @@ const Footer = styled.footer`
   left: 0;
   padding: 0 4% 2% 4%;
   width: 100%;
+  color: ${props =>
+    props.isOpen
+      ? props.theme.colors.background
+      : props.theme.colors.foreground};
   justify-content: space-between;
+  z-index: 10;
 `;
 
 const Social = styled.div`
@@ -94,7 +158,7 @@ const Social = styled.div`
   font-size: 1.5em;
   min-width: 85px;
   a {
-    color: black;
+    color: inherit;
     text-decoration: none;
   }
 `;
@@ -107,75 +171,7 @@ const Date = styled.div`
 `;
 
 const Styles = createGlobalStyle`
-    @font-face {
-        font-family: "DrunkWide";
-        src: url("../static/assets/font/DrukWide.woff2") format("woff2"),
-          url("../static/assets/font/DrukWide.woff") format("woff");
-      }
-
-      html {
-        font-size: 16px;
-        height: 100vh;
-        box-sizing: border-box;
-        @media (max-width: 1330px) {
-          font-size:14px;
-        }
-        @media (max-width: 1000px) {
-          font-size:12px;
-        }
-        @media (max-width: 700px) {
-          font-size:10px;
-        }
-      }
-      *,
-        *:before,
-        *:after {
-            box-sizing: inherit;
-        }
-
       body {
-        margin: 0;
-        padding: 0;
-        font-family: "DrunkWide", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        background-color: white;
-        color: black;
-        height: 100vh;
-        width: 100%;
-        box-sizing: border-box;
+        color: ${props => props.theme.colors.foreground};
       }
-
-      #__next {
-        height: 100%;
-        width: 100%;
-        padding: 2% 4% 0 4%;
-        flex-direction: column;
-        display:flex;
-        justify-content: center;
-      }
-      main{
-        z-index:0;
-      }
-      h1{
-        margin:0;
-      }
-      h2{
-        margin:0;
-        overflow:hidden;
-      }
-      h3{
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 100;
-        font-size: 2.8rem;
-        margin-top: 20px;
-        overflow:hidden;
-      }
-      h4{
-        font-size: 1.5rem;
-        overflow:hidden;
-      }
-
-  /* normalize */
-  a{background-color:transparent}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}  
 `;

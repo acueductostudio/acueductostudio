@@ -1,8 +1,6 @@
 export default {
-    fonts: {
-        main: 'DrunkWide, sans-serif',
-        secondary: 'Courier New, Courier, monospace',
-    },
-    fg: 'black',
-    bg:'white'
-}
+    colors:{
+      background: "#F4F4F4",
+      foreground: "#0A0A0A"
+    }
+  };

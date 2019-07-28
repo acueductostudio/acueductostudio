@@ -11,7 +11,7 @@ export default function Landing() {
         <title>Antítesis | Próximamente</title>
       </Head>
       <Wrapper>
-          <Logo />
+        <Logo />
         <Coming />
         <Social>
           <a
@@ -30,7 +30,9 @@ export default function Landing() {
             ig
           </a>
         </Social>
-        <Date><Link href="/home">© MMXIX</Link></Date>
+        <Date>
+          <Link href="/home">© MMXIX</Link>
+        </Date>
         <StylesX />
       </Wrapper>
     </>
@@ -45,9 +47,13 @@ const Wrapper = styled.div`
   padding: 5%;
   height: 100%;
   overflow: hidden;
-  position: relative;
   text-transform: uppercase;
   background-color: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   @media (max-width: 1000px) {
     font-size: 0.8rem;
   }
@@ -91,9 +97,9 @@ const Date = styled.div`
   justify-self: flex-end;
   font-size: 1.5em;
   min-width: 100px;
-  a{
-    text-decoration:none;
-    color:white;
+  a {
+    text-decoration: none;
+    color: white;
   }
 `;
 

@@ -33,10 +33,10 @@ html {
   body {
       margin: 0;
       padding: 0;
-      color: ${Theme.fg};
+      color: ${Theme.colors.foreground};
       font-size: inherit;
-      background-color: ${Theme.bg};
-      font-family: ${Theme.fonts.main};
+      background-color: ${Theme.colors.background};
+      font-family: "DrunkWide", sans-serf;
       min-height: 100vh;
       height:100%;
       width: 100%;
@@ -45,10 +45,6 @@ html {
   #__next {
       height: 100%;
       width: 100%;
-      padding: 2% 4% 0 4%;
-      flex-direction: column;
-      display:flex;
-      justify-content: center;
     }
     main{
       z-index:0;

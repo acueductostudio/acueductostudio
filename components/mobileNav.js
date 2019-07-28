@@ -31,27 +31,6 @@ export default function MobileNav(props) {
             <a>Contacto</a>
           </Link>
         </MobileNavList>
-        <Logo />
-        <Footer>
-          <Social>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/somos.antitesis"
-            >
-              fb
-            </a>
-            —
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/somos.antitesis/"
-            >
-              ig
-            </a>
-          </Social>
-          <Date>© MMXIX</Date>
-        </Footer>
       </NavWrapper>
     </>
   );
@@ -80,7 +59,7 @@ const Footer = styled.footer`
   padding: 0 4% 2% 4%;
   width: 100%;
   justify-content: space-between;
-  color: white;
+  color: ${props => props.theme.colors.background};
   font-size: 1rem;
 `;
 
@@ -89,8 +68,9 @@ const Social = styled.div`
   justify-self: flex-start;
   font-size: 1.5em;
   min-width: 85px;
+  color: inherit;
   a {
-    color: white;
+    color: inherit;
     text-decoration: none;
   }
 `;
@@ -120,23 +100,17 @@ const NavTrigger = styled.div`
   bottom: 50%;
   transform: translateY(50%);
   margin-left: 4%;
-  &:before {
+  &:before, &:after {
     content: " ";
     height: 100%;
     width: 4px;
-    background-color: ${props => (props.open ? "white" : "black")};
-    position: absolute;
+    background-color: ${props => (props.open ? props.theme.colors.background : props.theme.colors.foreground)};
+    position: absolute; 
     left: 0;
     top: 0;
   }
   &:after {
-    content: " ";
-    height: 100%;
-    width: 4px;
-    background-color: ${props => (props.open ? "white" : "black")};
-    position: absolute;
     left: 20px;
-    top: 0;
   }
   @media (max-width: 1100px) {
     display: none;
@@ -159,7 +133,8 @@ const NavWrapper = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  background-color: black;
+  background-color: ${props => props.theme.colors.foreground};
+  color: ${props => props.theme.colors.background};
   pointer-events: none;
   transition: opacity 0.3s ease-in;
   @media (max-width: 900px) {
@@ -172,7 +147,7 @@ const NavWrapper = styled.div`
   }
   a {
     text-decoration: none;
-    color: white;
+    color: inherit;
   }
   ${props =>
     props.open &&
