@@ -5,9 +5,9 @@ import { useEffect } from "react";
 export default function Header(props) {
   return (
     <TopHeader hidden={props.hidden}>
-      <Logotype>
-        <Link href="/home"><a>ANTÍTESIS FILMS</a></Link>
-      </Logotype>
+      <Link href="/home">
+        <Logotype>ANTÍTESIS FILMS</Logotype>
+      </Link>
       <Desc>CASA PRODUCTORA EN LA CIUDAD DE MÉXICO</Desc>
       <NavList>
         <Link href="/nosotros" prefetch={true}>
@@ -77,23 +77,21 @@ const TopHeader = styled.header`
   }
 `;
 
-const Logotype = styled.p`
+const Logotype = styled.a`
   display: flex;
   grid-column: 1 / span 2;
   max-width: 130px;
   margin: 0;
   cursor: pointer;
-  a{
-    color: inherit;
-    text-decoration:none;
-  }
+  color: inherit;
+  text-decoration: none;
 `;
 
-const Desc = styled.p`
+const Desc = styled.span`
   display: flex;
   grid-column: 4 / span 4;
   margin: 0;
-  max-width: 330px;
+  max-width: 380px;
   @media (max-width: 900px) {
     grid-column: 3 / span 3;
   }

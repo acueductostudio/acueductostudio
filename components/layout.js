@@ -4,6 +4,12 @@ import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import MobileNav from "./mobileNav";
 import Logo from "../static/assets/img/favicon.svg";
+import Ig from "../static/assets/img/social/ig.svg";
+import Tw from "../static/assets/img/social/tw.svg";
+import Fb from "../static/assets/img/social/fb.svg";
+import Yt from "../static/assets/img/social/yt.svg";
+import Vm from "../static/assets/img/social/vm.svg";
+
 import { useEffect, useState } from "react";
 
 export default ({ children, title = "Antitesis", changeTheme }) => {
@@ -59,21 +65,41 @@ export default ({ children, title = "Antitesis", changeTheme }) => {
         </ModeToggler>
 
         <Footer hidden={hideForLanding} isOpen={isOpen}>
-          <Social>
+          <Social isOpen={isOpen}>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.facebook.com/somos.antitesis"
             >
-              fb
+              <Fb />
             </a>
-            —
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.instagram.com/somos.antitesis/"
             >
-              ig
+              <Tw />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/somos.antitesis/"
+            >
+              <Ig />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/somos.antitesis/"
+            >
+              <Yt />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/somos.antitesis/"
+            >
+              <Vm />
             </a>
           </Social>
           <Date>© MMXIX</Date>
@@ -84,12 +110,14 @@ export default ({ children, title = "Antitesis", changeTheme }) => {
 };
 
 const PageWrapper = styled.div`
-  height: 100%;
   width: 100%;
-  padding: 2% 4% 0 4%;
+  padding: 180px 4% 0 4%;
+  height: 100%;
+  position: relative;
   flex-direction: column;
+  overflow: scroll;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
 `;
@@ -117,26 +145,6 @@ const ModeToggler = styled.div`
   }
 `;
 
-// const Logo = styled(logo)`
-//   cursor: pointer;
-//   display: flex;
-//   position: fixed;
-//   right: 0;
-//   bottom: 50%;
-//   transform: translateY(50%);
-//   width: 15%;
-//   height: auto;
-//   padding-right: 4%;
-//   max-width: 175px;
-//   z-index: 10;
-//   path {
-//     background-color: ${props =>
-//       props.open
-//         ? props.theme.colors.background
-//         : props.theme.colors.foreground};
-//   }
-// `;
-
 const Footer = styled.footer`
   display: flex;
   position: fixed;
@@ -160,6 +168,37 @@ const Social = styled.div`
   a {
     color: inherit;
     text-decoration: none;
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    * {
+      fill: ${props =>
+        props.isOpen
+          ? props.theme.colors.background
+          : props.theme.colors.foreground};
+      transition: fill 300ms ease-out;
+    }
+    .plasta {
+      fill: ${props =>
+        props.isOpen
+          ? props.theme.colors.background
+          : props.theme.colors.foreground};
+      opacity: 0;
+      transition: opacity 150ms ease-out;
+    }
+    &:hover {
+      *:not(.plasta) {
+        fill: ${props =>
+        props.isOpen
+          ? props.theme.colors.foreground
+          : props.theme.colors.background};
+      }
+      .plasta {
+        opacity: 1;
+      }
+    }
   }
 `;
 

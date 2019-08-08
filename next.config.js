@@ -4,7 +4,14 @@ module.exports = (nextConfig = {}) => {
       // access to webpack config here
       config.module.rules.push({
         test: /\.svg$/,
-        use: ["@svgr/webpack"]
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              svgo: false
+            }
+          }
+        ]
       });
 
       return config;
@@ -12,6 +19,7 @@ module.exports = (nextConfig = {}) => {
   });
 };
 
+//addClassesToSVGElement: true
 
 // Este funciona bien para imágenes, dice Josh que no es necesario, y es verdad
 
