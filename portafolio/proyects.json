@@ -1,0 +1,17 @@
+{
+    "proyects": {
+		"reel": {
+            "title": "Antitesis Films",
+            "subtitle": "2019 Showreel",
+            "videoStill" : "/static/assets/img/reel/reel2.jpg",
+            "videoLink": "https://vimeo.com/347767118"
+        }, 
+        "excapes":{
+            "title": "Excapes",
+            "subtitle" : "Serie Web",
+            "description" : "eXcapes es un reality show en el que tres grupos de amigos se reencuentran, compiten, viajan y apoyan causas altruistas en diversos estados de la república.",
+            "videoStill" : "/static/assets/img/reel/reel2.jpg",
+            "videoLink": "https://vimeo.com/342806062 "
+        }
+    }
+}

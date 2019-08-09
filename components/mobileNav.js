@@ -100,6 +100,7 @@ const NavTrigger = styled.div`
   bottom: 50%;
   transform: translateY(50%);
   margin-left: 4%;
+  cursor:pointer;
   &:before, &:after {
     content: " ";
     height: 100%;
@@ -108,10 +109,22 @@ const NavTrigger = styled.div`
     position: absolute; 
     left: 0;
     top: 0;
+    transform-origin: bottom center;
+    transition: transform .3s ease;
   }
   &:after {
     left: 20px;
   }
+  ${props =>
+    props.open &&
+    css`
+      &:before{
+        transform: rotate(45deg) translate3d(-20px,5px,0px);
+      }
+      &:after{
+        transform:rotate(-45deg) translate3d(20px,5px,0px);
+      }
+    `}
   @media (max-width: 1100px) {
     display: none;
   }

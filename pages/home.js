@@ -3,6 +3,13 @@ import Head from "next/head";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
+import Link from "next/link";
+
+const H4Link = props => (
+    <Link href="/[id]" as={`/${props.id}`}>
+      <h4>Ver Proyecto</h4>
+    </Link>
+);
 
 export default function Index() {
   const [date, setDate] = useState([]);
@@ -16,7 +23,7 @@ export default function Index() {
           <h2>Antitesis</h2>
           <h2>Films</h2>
           <h3>2019 Showreel</h3>
-          <h4>Ver Proyecto</h4>
+          <H4Link id="reel" />
         </Slide>
       </Info>
       <Video>
@@ -50,6 +57,9 @@ const Info = styled.div`
     font-size: 3.2rem;
     max-width: 490px;
   }
+  h4{
+    
+  }
   @media (max-width: 900px) {
     grid-column: 2 / span 4;
   }
@@ -64,7 +74,7 @@ const Video = styled.div`
   z-index: -1;
   figure {
     background-size: cover;
-    background-position:center;
+    background-position: center;
     z-index: 10;
     width: 100%;
     height: 100%;
@@ -74,6 +84,6 @@ const Video = styled.div`
     grid-column: 4 / span 2;
   }
   @media (max-width: 700px) {
-    height:130px;
+    height: 130px;
   }
 `;

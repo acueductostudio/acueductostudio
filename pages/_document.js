@@ -20,6 +20,7 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
+          <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
           <GlobalStyles />
           {this.props.styleTags}
         </Head>
