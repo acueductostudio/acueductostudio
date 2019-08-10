@@ -15,6 +15,10 @@ import { useEffect, useState } from "react";
 export default ({ children, title = "Antitesis", changeTheme }) => {
   const [isOpen, setOpen] = useState(false);
 
+  useEffect(() => {
+    document.getElementById('PageWrapper').scrollTop = 0;
+  });
+
   const toggleNav = () => {
     setOpen(!isOpen);
   };
@@ -32,6 +36,7 @@ export default ({ children, title = "Antitesis", changeTheme }) => {
     } else {
       console.log("Is hidden for landing page? " + hideForLanding);
     }
+    window.scrollTo(0, 0);
   }, []);
 
   const doChangeTheme = () => {
@@ -46,7 +51,7 @@ export default ({ children, title = "Antitesis", changeTheme }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Styles />
-      <PageWrapper>
+      <PageWrapper id="PageWrapper">
         <Header
           hidden={hideForLanding}
           toggleNav={toggleNav}
