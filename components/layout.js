@@ -120,7 +120,7 @@ const PageWrapper = styled.div`
   height: 100%;
   position: relative;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
   display: flex;
   justify-content: flex-start;
   color: ${props => props.theme.colors.foreground};

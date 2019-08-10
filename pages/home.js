@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import Router from 'next/router';
+import Router from "next/router";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
@@ -80,6 +80,8 @@ const Proyect = styled.section`
   align-items: flex-start;
   position: relative;
   height: calc(100vh - 180px);
+  scroll-snap-align: end;
+  scroll-snap-stop: always;
   h3 {
     grid-column: 1 / span 7;
     margin-bottom: 0;
@@ -111,6 +113,14 @@ const HomeWrapper = styled.main`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  padding: 180px 4% 0 4%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
   @media (max-width: 900px) {
     grid-template-columns: repeat(6, 1fr);
   }
