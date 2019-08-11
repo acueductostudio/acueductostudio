@@ -6,24 +6,22 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import Link from "next/link";
 import FilePlayer from "react-player";
-import TrackVisibility from "react-on-screen";
 import { proyects } from "../portafolio/proyects.json";
 import { useInView } from "react-intersection-observer";
 import ReactCursorPosition from "react-cursor-position";
+import debounce from "lodash/debounce";
 
 const Screen = props => {
   const [ref, inView, entry] = useInView({
-    /* Optional options */
     threshold: 0.9,
     rootMargin: "200px"
   });
+
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       props.setCounter(props.counterNumber);
-      console.log(props.counterNumber + "is in  view");
     }
-  }, [inView]); // Only re-subscribe if props.friend.id changes
+  }, [inView]);
 
   return (
     <Proyect>
@@ -34,33 +32,75 @@ const Screen = props => {
           <h3>{props.subtitle}</h3>
         </Slide>
         <Link href="/[id]" as={`/${props.link}`}>
-          <Fade when={inView}>
-            <h4>Ver Proyecto</h4>
-          </Fade>
+          {/* <Fade when={inView}> */}
+          <h4>Ver Proyecto</h4>
+          {/* </Fade> */}
         </Link>
       </Info>
-      <Video double={props.title2} style={{transform:`translate3d(${props.position.x-480}px, ${props.position.y-390}px, 0)`}}>
-        <Fade>
-          <FilePlayer
-            url={`../static/assets/video/${props.clip}`}
-            muted={true}
-            volume={0}
-            controls={false}
-            loop={true}
-            playing={true}
-            wrapper={"figure"}
-            width={"100%"}
-            height={"auto"}
-          />
-        </Fade>
-      </Video>
     </Proyect>
+  );
+};
+
+const MouseFollow = props => {
+  const [video, setVideo] = useState("antitesis.mp4");
+  const [isVisible, setVisible] = useState(true);
+  const [ref2, inView, entry] = useInView({
+    threshold: 1,
+    rootMargin: "0px"
+  });
+
+  const _p = Object.entries(proyects);
+
+  useEffect(() => {
+    setVisible(false);
+    setVideo(_p[props.counter][1].clip);
+    setTimeout(() => setVisible(true), 200);
+    console.log(isVisible);
+  }, [props.counter]);
+
+  return (
+    <Video
+      style={{
+        top: `${props.position.y + 100}px`,
+        left: `${props.position.x + 250}px`
+      }}
+      ref={ref2}
+    >
+      <Fade
+        when={isVisible}
+        delay={0}
+      >
+        <FilePlayer
+          url={`../static/assets/video/${video}`}
+          style={{ height: 0, paddingBottom: "55%" }}
+          muted={true}
+          volume={0}
+          controls={false}
+          loop={true}
+          playing={true}
+          wrapper={"figure"}
+          width={"100%"}
+          height={"auto"}
+        />
+      </Fade>
+    </Video>
   );
 };
 
 export default function Index() {
   const [counter, setCounter] = useState(1);
-  // let refs = useRef([React.createRef(), React.createRef()]);
+  const positioning = useRef(null);
+
+  const reset = debounce(
+    () => {
+      positioning.current.reset();
+    },
+    650,
+    {
+      leading: false,
+      trailing: true
+    }
+  );
 
   var slides = Object.entries(proyects).map(function(_proyect, index) {
     var currentProyect = _proyect[1];
@@ -69,31 +109,34 @@ export default function Index() {
       return;
     } else {
       return (
-        <ReactCursorPosition style={{ gridColumn: "4 /span 6" }}>
-          <Screen
-            key={"screen" + index}
-            // ref={refs.current[index]}
-            counterNumber={index + 1}
-            setCounter={setCounter}
-            title={currentProyect.title}
-            title2={currentProyect.title2}
-            subtitle={currentProyect.subtitle}
-            link={currentProyectId}
-            clip={currentProyect.clip}
-          />
-        </ReactCursorPosition>
+        <Screen
+          key={"screen" + index}
+          counterNumber={index}
+          setCounter={setCounter}
+          title={currentProyect.title}
+          title2={currentProyect.title2}
+          subtitle={currentProyect.subtitle}
+          link={currentProyectId}
+          clip={currentProyect.clip}
+        />
       );
     }
   });
 
   return (
-    <HomeWrapper>
+    <HomeWrapper onScroll={reset}>
       <Head>
         <title>Antitesis Films</title>
       </Head>
-      {slides}
+      <ReactCursorPosition
+        style={{ gridColumn: "4 / span 6" }}
+        ref={positioning}
+      >
+        {slides}
+        <MouseFollow counter={counter} />
+      </ReactCursorPosition>
       <Counter>
-        <Fade>{counter + "/8"}</Fade>
+        <Fade>{counter + 1 + "/8"}</Fade>
       </Counter>
     </HomeWrapper>
   );
@@ -169,13 +212,12 @@ const Info = styled.div`
 `;
 
 const Video = styled.div`
-  grid-column: 5 / span 3;
   max-width: 390px;
-  height: auto;
+  overflow: hidden;
   position: absolute;
   width: 100%;
   z-index: -1;
-  margin-top: ${props => (props.double ? "70%" : "52%")};
+  background-color: black;
   figure {
     background-size: cover;
     background-position: center;

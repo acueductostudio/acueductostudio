@@ -21,6 +21,7 @@
     "react-on-screen": "^2.1.1",
     "react-player": "^1.11.1",
     "react-reveal": "^1.2.2",
+    "react-sticky-mouse-tooltip": "^0.0.1",
     "styled-components": "^5.0.0-beta.8",
     "svg-react-loader": "^0.4.6",
     "url-loader": "^2.1.0"
