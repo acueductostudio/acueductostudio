@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Head from "next/head";
 import Router from "next/router";
 import styled from "styled-components";
@@ -6,6 +6,7 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import Link from "next/link";
 import FilePlayer from "react-player";
+import TrackVisibility from 'react-on-screen';
 import { proyects } from "../portafolio/proyects.json";
 
 const H4Link = props => (
@@ -14,63 +15,80 @@ const H4Link = props => (
   </Link>
 );
 
-const Screen = props => (
-  <Proyect>
-    <Info>
-      <Slide bottom cascade>
-        <h2>{props.title}</h2>
-        {props.title2 !== undefined ? <h2>{props.title2}</h2> : ""}
-        <h3>{props.subtitle}</h3>
-        <H4Link id={props.link} />
-      </Slide>
-    </Info>
-    <Video double={props.title2}>
-      <Fade>
-        <FilePlayer
-          url={`../static/assets/video/${props.clip}`}
-          muted={true}
-          volume={0}
-          controls={false}
-          loop={true}
-          playing={true}
-          wrapper={"figure"}
-          width={"100%"}
-          height={"auto"}
-        />
-      </Fade>
-    </Video>
-  </Proyect>
-);
-
-var slides = Object.entries(proyects).map(function(_proyect, index) {
-  var currentProyect = _proyect[1];
-  var currentProyectId = _proyect[0];
-  if (currentProyect.title === "Miedo Chico") {
-    return;
-  } else {
-    return (
-      <Screen
-        key={"screen" + index}
-        title={currentProyect.title}
-        title2={currentProyect.title2}
-        subtitle={currentProyect.subtitle}
-        link={currentProyectId}
-        clip={currentProyect.clip}
-      />
-    );
-  }
-});
+const Screen = props => {
+  return (
+    <Proyect>
+      <Info>
+        <Slide bottom cascade>
+          <h2>{props.title}</h2>
+          {props.title2 !== undefined ? <h2>{props.title2}</h2> : ""}
+          <h3>{props.subtitle}</h3>
+          {/* <H4Link id={props.link} /> */}
+          <Link href="/[id]" as={`/${props.link}`}>
+            <h4>Ver Proyecto</h4>
+          </Link>
+        </Slide>
+      </Info>
+      <Video double={props.title2}>
+        <Fade>
+          <FilePlayer
+            url={`../static/assets/video/${props.clip}`}
+            muted={true}
+            volume={0}
+            controls={false}
+            loop={true}
+            playing={true}
+            wrapper={"figure"}
+            width={"100%"}
+            height={"auto"}
+          />
+        </Fade>
+      </Video>
+    </Proyect>
+  );
+};
 
 export default function Index() {
+  const [counter, setCounter] = useState(1);
+  // let refs = useRef([React.createRef(), React.createRef()]);
+
+  var slides = Object.entries(proyects).map(function(_proyect, index) {
+    var currentProyect = _proyect[1];
+    var currentProyectId = _proyect[0];
+    if (currentProyect.title === "Miedo Chico") {
+      return;
+    } else {
+      return (
+        <Screen
+          key={"screen" + index}
+          // ref={refs.current[index]}
+          title={currentProyect.title}
+          title2={currentProyect.title2}
+          subtitle={currentProyect.subtitle}
+          link={currentProyectId}
+          clip={currentProyect.clip}
+        />
+      );
+    }
+  });
+
   return (
     <HomeWrapper>
       <Head>
         <title>Antitesis Films</title>
       </Head>
       {slides}
+      <Counter>{counter}/9</Counter>
     </HomeWrapper>
   );
 }
+
+const Counter = styled.div`
+  font-size: 3rem;
+  position: fixed;
+  bottom: 0;
+  grid-column: 4 span 2;
+`;
 
 const Proyect = styled.section`
   grid-column: 4 / span 7;
