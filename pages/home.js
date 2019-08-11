@@ -68,11 +68,9 @@ const MouseFollow = props => {
     >
       <Fade
         when={isVisible}
-        delay={0}
       >
         <FilePlayer
           url={`../static/assets/video/${video}`}
-          style={{ height: 0, paddingBottom: "55%" }}
           muted={true}
           volume={0}
           controls={false}
@@ -80,7 +78,7 @@ const MouseFollow = props => {
           playing={true}
           wrapper={"figure"}
           width={"100%"}
-          height={"auto"}
+          height={"0"}
         />
       </Fade>
     </Video>
@@ -225,6 +223,15 @@ const Video = styled.div`
     width: 100%;
     height: 100%;
     margin: 0;
+    height:0;
+    padding-bottom: 56.2%;
+    video{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:auto;
+    }
   }
   @media (max-width: 900px) {
     grid-column: 4 / span 2;
