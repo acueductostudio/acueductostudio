@@ -168,7 +168,7 @@ const Footer = styled.footer`
 const Social = styled.div`
   align-self: flex-end;
   justify-self: flex-start;
-  font-size: 1.5em;
+  font-size: 1.3em;
   min-width: 85px;
   a {
     color: inherit;
@@ -210,7 +210,7 @@ const Social = styled.div`
 const Date = styled.div`
   align-self: flex-end;
   justify-self: flex-end;
-  font-size: 1.5em;
+  font-size: 1.3em;
   min-width: 100px;
 `;
 

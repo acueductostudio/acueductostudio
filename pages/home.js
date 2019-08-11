@@ -6,30 +6,40 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import Link from "next/link";
 import FilePlayer from "react-player";
-import TrackVisibility from 'react-on-screen';
+import TrackVisibility from "react-on-screen";
 import { proyects } from "../portafolio/proyects.json";
-
-const H4Link = props => (
-  <Link href="/[id]" as={`/${props.id}`}>
-    <h4>Ver Proyecto</h4>
-  </Link>
-);
+import { useInView } from "react-intersection-observer";
+import ReactCursorPosition from "react-cursor-position";
 
 const Screen = props => {
+  const [ref, inView, entry] = useInView({
+    /* Optional options */
+    threshold: 0.9,
+    rootMargin: "200px"
+  });
+  useEffect(() => {
+    console.log(inView);
+    if (inView) {
+      props.setCounter(props.counterNumber);
+      console.log(props.counterNumber + "is in  view");
+    }
+  }, [inView]); // Only re-subscribe if props.friend.id changes
+
   return (
     <Proyect>
-      <Info>
-        <Slide bottom cascade>
+      <Info ref={ref}>
+        <Slide bottom cascade when={inView}>
           <h2>{props.title}</h2>
           {props.title2 !== undefined ? <h2>{props.title2}</h2> : ""}
           <h3>{props.subtitle}</h3>
-          {/* <H4Link id={props.link} /> */}
-          <Link href="/[id]" as={`/${props.link}`}>
-            <h4>Ver Proyecto</h4>
-          </Link>
         </Slide>
+        <Link href="/[id]" as={`/${props.link}`}>
+          <Fade when={inView}>
+            <h4>Ver Proyecto</h4>
+          </Fade>
+        </Link>
       </Info>
-      <Video double={props.title2}>
+      <Video double={props.title2} style={{transform:`translate3d(${props.position.x-480}px, ${props.position.y-390}px, 0)`}}>
         <Fade>
           <FilePlayer
             url={`../static/assets/video/${props.clip}`}
@@ -59,15 +69,19 @@ export default function Index() {
       return;
     } else {
       return (
-        <Screen
-          key={"screen" + index}
-          // ref={refs.current[index]}
-          title={currentProyect.title}
-          title2={currentProyect.title2}
-          subtitle={currentProyect.subtitle}
-          link={currentProyectId}
-          clip={currentProyect.clip}
-        />
+        <ReactCursorPosition style={{ gridColumn: "4 /span 6" }}>
+          <Screen
+            key={"screen" + index}
+            // ref={refs.current[index]}
+            counterNumber={index + 1}
+            setCounter={setCounter}
+            title={currentProyect.title}
+            title2={currentProyect.title2}
+            subtitle={currentProyect.subtitle}
+            link={currentProyectId}
+            clip={currentProyect.clip}
+          />
+        </ReactCursorPosition>
       );
     }
   });
@@ -78,16 +92,18 @@ export default function Index() {
         <title>Antitesis Films</title>
       </Head>
       {slides}
-      <Counter>{counter}/9</Counter>
+      <Counter>
+        <Fade>{counter + "/8"}</Fade>
+      </Counter>
     </HomeWrapper>
   );
 }
 
 const Counter = styled.div`
-  font-size: 3rem;
+  font-size: 1.32rem;
   position: fixed;
-  bottom: 0;
-  grid-column: 4 span 2;
+  bottom: 4%;
+  left: 27%;
 `;
 
 const Proyect = styled.section`
