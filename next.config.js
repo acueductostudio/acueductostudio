@@ -18,21 +18,3 @@ module.exports = (nextConfig = {}) => {
     }
   });
 };
-
-//addClassesToSVGElement: true
-
-// Este funciona bien para imágenes, dice Josh que no es necesario, y es verdad
-
-// const withImages = require("next-images");
-// module.exports = withImages({
-//   webpack(config, options) {
-//     config.module.rules
-//       .push
-//       // {
-//       //   test: /\.svg$/,
-//       //   use: ['@svgr/webpack'],
-//       // }
-//       ();
-//     return config;
-//   }
-// });

@@ -1,5 +1,5 @@
 {
-  "name": "antitesis-website",
+  "name": "acueducto",
   "scripts": {
     "dev": "next",
     "build": "next build",
