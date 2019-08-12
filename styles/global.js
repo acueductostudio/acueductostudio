@@ -3,9 +3,8 @@ import Theme from "./theme";
 
 let theStyles = `
 @font-face {
-  font-family: \'DrunkWide\';
-  src: url('../static/assets/font/DrukWide.woff2') format('woff2'),
-    url('../static/assets/font/DrukWide.woff') format('woff');
+  font-family: \'Acumin\';
+  src: url('../static/assets/font/Acumin.otf') format('opentype');
 }
 
 html {
@@ -36,7 +35,7 @@ html {
       color: ${Theme.colors.foreground};
       font-size: inherit;
       background-color: ${Theme.colors.background};
-      font-family: "DrunkWide", sans-serf;
+      font-family: "Acumin", sans-serf;
       min-height: 100vh;
       height:100%;
       width: 100%;
@@ -61,14 +60,12 @@ html {
       margin-top: 1.2%;
     }
     h3{
-      font-family: 'Courier New', Courier, monospace;
       font-weight: 100;
       font-size: 3.2rem;
       margin-top: 20px;
       overflow:hidden;
     }
     p{
-      font-family: 'Courier New', Courier, monospace;
       letter-spacing: 1px;
       font-size: 1.32rem;
       hyphens: auto;

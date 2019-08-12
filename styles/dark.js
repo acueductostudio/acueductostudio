@@ -1,7 +1,7 @@
 
 export default {
     colors:{
-      background: "#0A0A0A",
-      foreground: "#F4F4F4"
+      background: "#F4F4F4",
+      foreground: "#060809"
     }
   };

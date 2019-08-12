@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import Layout from "../components/layout";
 import theme from "../styles/theme";
 import darkTheme from "../styles/dark";
+import en from "../static/locales/en.json";
 
 export default class MyApp extends App {
   constructor(props) {
@@ -61,8 +62,8 @@ export default class MyApp extends App {
     return (
       <Container>
         <ThemeProvider theme={this.state.isDarkMode? darkTheme : theme}>
-          <Layout changeTheme={this.changeTheme.bind(this)}>
-            <Component {...pageProps}/>
+          <Layout locale={en} changeTheme={this.changeTheme.bind(this)}>
+            <Component locale={en} {...pageProps}/>
           </Layout>
         </ThemeProvider>
       </Container>

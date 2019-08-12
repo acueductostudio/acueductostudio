@@ -1,23 +1,28 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { useEffect } from "react";
+import Logo from "../static/assets/img/layout/logo.svg";
 
 export default function Header(props) {
   return (
-    <TopHeader hidden={props.hidden}>
-      <Link href="/home">
-        <Logotype>ANTÍTESIS FILMS</Logotype>
+    <TopHeader>
+      <Link href="/">
+        <Logotype>
+          <Logo />
+        </Logotype>
       </Link>
-      <Desc>CASA PRODUCTORA EN LA CIUDAD DE MÉXICO</Desc>
       <NavList>
-        <Link href="/nosotros" prefetch={true}>
-          <a>Nosotros</a>
+        <Link href="/work" prefetch={true}>
+          <a>work</a>
         </Link>
-        <Link href="/renta" prefetch={true}>
-          <a>Renta</a>
+        <Link href="/about" prefetch={true}>
+          <a>about</a>
         </Link>
-        <Link href="/contacto" prefetch={true}>
-          <a>Contacto</a>
+        <Link href="/manifesto" prefetch={true}>
+          <a>manifesto</a>
+        </Link>
+        <Link href="/contact" prefetch={true}>
+          <a>manifesto</a>
         </Link>
       </NavList>
       <NavTriggerMobile onClick={() => props.toggleNav()} open={props.isOpen} />
@@ -26,7 +31,6 @@ export default function Header(props) {
 }
 
 const NavTriggerMobile = styled.div`
-  display: none;
   height: 30px;
   max-width: 50px;
   width: 100%;
@@ -38,10 +42,7 @@ const NavTriggerMobile = styled.div`
     content: " ";
     height: 4px;
     width: 100%;
-    background-color: ${props =>
-      props.open
-        ? props.theme.colors.background
-        : props.theme.colors.foreground};
+    background-color: ${props => props.theme.colors.foreground};
     position: absolute;
     left: 0px;
     top: 0px;
@@ -60,21 +61,14 @@ const NavTriggerMobile = styled.div`
 `;
 
 const TopHeader = styled.header`
-  display: ${props => (props.hidden ? "none" : "grid")};
-  grid-template-columns: repeat(12, 1fr);
-  align-items: flex-start;
-  letter-spacing: 0.05rem;
-  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 2% 4% 0 4%;
+  padding: 50px 70px 0 70px;
   z-index: 12;
-  color: ${props => props.theme.colors.foreground};
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(6, 1fr);
-  }
 `;
 
 const Logotype = styled.a`
@@ -85,6 +79,11 @@ const Logotype = styled.a`
   cursor: pointer;
   color: inherit;
   text-decoration: none;
+  svg{
+    path{
+      fill:${props => props.theme.colors.foreground};
+    }
+  }
 `;
 
 const Desc = styled.span`
@@ -98,7 +97,7 @@ const Desc = styled.span`
 `;
 
 const NavList = styled.nav`
-  display: flex;
+  display: none;
   justify-content: space-between;
   grid-column: 8 / span 5;
   a {

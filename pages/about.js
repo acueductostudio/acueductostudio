@@ -12,9 +12,6 @@ export default function Nosotros() {
       <Hero>
         <Fade>
           <figure
-            style={{
-              backgroundImage: `url(../static/assets/img/stills/about.jpg)`
-            }}
           />
         </Fade>
       </Hero>
