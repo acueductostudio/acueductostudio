@@ -3,14 +3,14 @@ import Head from "next/head";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import Nav from "./Nav";
-
 import { useEffect, useState } from "react";
+import Clipper from "./Clipper";
 
 export default ({ children, title = "Antitesis", changeTheme, locale }) => {
   const [isOpen, setOpen] = useState(false);
 
   useEffect(() => {
-    document.getElementById('PageWrapper').scrollTop = 0;
+    document.getElementById("PageWrapper").scrollTop = 0;
   });
 
   const toggleNav = () => {
@@ -37,19 +37,20 @@ export default ({ children, title = "Antitesis", changeTheme, locale }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Styles />
-      <PageWrapper id="PageWrapper">
-        <Header
+      <PageWrapper
+        id="PageWrapper"
+        // render={isOpen => (children)}
+      >
+        <Header toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen} />
+        <Nav
+          locale={locale}
           toggleNav={toggleNav}
           closeNav={closeNav}
           isOpen={isOpen}
         />
-        <Nav locale={locale} toggleNav={toggleNav} closeNav={closeNav} isOpen={isOpen} />
-
         {children}
-        <ModeToggler
-          isOpen={isOpen}
-          onClick={() => doChangeTheme()}
-        >
+        <ModeToggler isOpen={isOpen} onClick={() => doChangeTheme()}>
+          {/* <Clipper open={isOpen} /> */}
           lights out
         </ModeToggler>
       </PageWrapper>

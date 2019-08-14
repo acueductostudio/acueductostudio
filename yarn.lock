@@ -831,7 +831,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.1":
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.5.tgz#74fba56d35efbeca444091c7850ccd494fd2f132"
   integrity sha512-28QvEGyQyNkB0/m2B4FU7IEZGK2NUrcMtT6BZEFALTguLk+AUT6ofsHtPk5QyjAdUkpMJ+/Em+quwz4HOt30AQ==
@@ -4436,6 +4436,14 @@ react-reveal@^1.2.2:
   dependencies:
     prop-types "^15.5.10"
 
+react-spring@^8.0.27:
+  version "8.0.27"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.27.tgz#97d4dee677f41e0b2adcb696f3839680a3aa356a"
+  integrity sha512-nDpWBe3ZVezukNRandTeLSPcwwTMjNVu1IDq9qA/AMiUqHuRN4BeSWvKr3eIxxg1vtiYiOLy4FqdfCP5IoP77g==
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+    prop-types "^15.5.8"
+
 react-sticky-mouse-tooltip@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/react-sticky-mouse-tooltip/-/react-sticky-mouse-tooltip-0.0.1.tgz#9bf2f03f6168ffd3d9e34f42699979cf643faa80"
@@ -5078,6 +5086,11 @@ supports-color@^5.3.0, supports-color@^5.5.0:
   integrity sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
   dependencies:
     has-flag "^3.0.0"
+
+svg-morpheus@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/svg-morpheus/-/svg-morpheus-0.3.0.tgz#75785df183a9cb717e0bffe29c678965964275a6"
+  integrity sha1-dXhd8YOpy3F+C//inGeJZZZCdaY=
 
 svg-parser@^2.0.0:
   version "2.0.2"

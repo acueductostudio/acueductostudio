@@ -2,6 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import { useEffect } from "react";
 import Logo from "../static/assets/img/layout/logo.svg";
+import Hamburger from "../static/assets/img/layout/hamburger.svg";
 
 export default function Header(props) {
   return (
@@ -25,38 +26,25 @@ export default function Header(props) {
           <a>manifesto</a>
         </Link>
       </NavList>
-      <NavTriggerMobile onClick={() => props.toggleNav()} open={props.isOpen} />
+      <NavTrigger onClick={() => props.toggleNav()} open={props.isOpen}>
+        <Hamburger />
+      </NavTrigger>
     </TopHeader>
   );
 }
 
-const NavTriggerMobile = styled.div`
-  height: 30px;
-  max-width: 50px;
-  width: 100%;
+const NavTrigger = styled.div`
+  width: 40px;
   position: relative;
   justify-self: flex-end;
-  margin-top: 3px;
-  &:before,
-  &:after {
-    content: " ";
-    height: 4px;
+  svg {
     width: 100%;
-    background-color: ${props => props.theme.colors.foreground};
-    position: absolute;
-    left: 0px;
-    top: 0px;
-  }
-  &:after {
-    top: 19px;
-  }
-  @media (max-width: 1100px) {
-    display: flex;
-    grid-column: 12 / span 1;
-  }
-  @media (max-width: 900px) {
-    display: flex;
-    grid-column: 6 / span 1;
+    height: auto;
+    path {
+      stroke-width: 2px;
+      stroke-linejoin: round;
+      stroke: ${props => props.theme.colors.foreground};
+    }
   }
 `;
 
@@ -67,8 +55,11 @@ const TopHeader = styled.header`
   width: 100%;
   top: 0;
   left: 0;
+  right: 0;
   padding: 50px 70px 0 70px;
   z-index: 12;
+  margin: 0px auto;
+  max-width: 1500px;
 `;
 
 const Logotype = styled.a`
@@ -79,9 +70,9 @@ const Logotype = styled.a`
   cursor: pointer;
   color: inherit;
   text-decoration: none;
-  svg{
-    path{
-      fill:${props => props.theme.colors.foreground};
+  svg {
+    path {
+      fill: ${props => props.theme.colors.foreground};
     }
   }
 `;

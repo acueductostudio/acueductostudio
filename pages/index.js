@@ -6,10 +6,10 @@ import Fade from "react-reveal/Fade";
 import Slide from "react-reveal/Slide";
 import Link from "next/link";
 import FilePlayer from "react-player";
-import { proyects } from "../portafolio/proyects.json";
 import { useInView } from "react-intersection-observer";
 import ReactCursorPosition from "react-cursor-position";
 import debounce from "lodash/debounce";
+//import Clipper from "../components/Clipper"
 
 const Process = props => {
   let t = props.t;
@@ -24,7 +24,7 @@ const Process = props => {
 const ProcessWrapper = styled.section`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
-  min-height:100vh;
+  min-height: 100vh;
 `;
 
 export default function Index(props) {
@@ -32,7 +32,7 @@ export default function Index(props) {
   return (
     <>
       <Background />
-      <HomeWrapper>
+      <HomeWrapper id="clipped">
         <Scroller>
           <Head>
             <title>Acueducto</title>
@@ -74,12 +74,13 @@ const Land = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: pink;
 `;
 
 const Intro = styled.div`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
-  min-height:100vh;
+  min-height: 100vh;
 `;
 
 const HomeWrapper = styled.div`
@@ -87,9 +88,13 @@ const HomeWrapper = styled.div`
   width: calc(100% - 44px);
   height: calc(100% - 44px);
   position: absolute;
+  margin: 0 auto;
+  max-width: 1500px;
   top: 20px;
   left: 20px;
   bottom: 20px;
   right: 20px;
   overflow: hidden;
+  clip-path: url(#myClip);
+  -webkit-transition: clip-path 1s ease;
 `;
