@@ -56,8 +56,8 @@ export default ({ children, title = "Antitesis", changeTheme, locale }) => {
       </Head>
       <Styles />
       <PageWrapper id="PageWrapper">
-        {/* {showSketch? <Sketch/> : "noshow"} */}
-        {showSketch? <Background /> : "noshow"}
+        {showSketch? <Sketch/> : " "}
+        {/* {showSketch? <Background /> : " "} */}
         <Border />
         <NavTrigger toggleNav={toggleNav} isOpen={isOpen} />
         <Header closeNav={closeNav} isOpen={isOpen} />
