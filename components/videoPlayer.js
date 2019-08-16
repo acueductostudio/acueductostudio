@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import VimeoPlayer from "react-player";
 import styled, { css, keyframes } from "styled-components";
-import Loadable from "react-loadable";
+// import Loadable from "react-loadable";
 import Loader from "./loader";
 import withReveal from 'react-reveal/withReveal';
 import Fade from "react-reveal/Fade";

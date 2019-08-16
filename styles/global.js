@@ -1,26 +1,31 @@
 import React from "react";
 import Theme from "./theme";
 
+// @media screen and (max-width: 1330px) {
+//   body{font-size:14px};
+// }
+// @media screen and (max-width: 1000px) {
+//   html{font-size:12px};
+// }
+// @media screen and (max-width: 700px) {
+//   html{font-size:10px};
+// }
+
 let theStyles = `
 @font-face {
-  font-family: \'Acumin\';
-  src: url('../static/assets/font/Acumin.otf') format('opentype');
+  font-family: 'AcuWide';
+  src: url('../static/assets/font/AcuWide.woff2') format('woff2'),
+      url('../static/assets/font/AcuWide.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
 }
 
 html {
-  font-size: 16px;
+  font-size: 62.5%;
   height: 100vh;
   box-sizing: border-box;
-}
-
-@media screen and (max-width: 1330px) {
-  html{font-size:14px};
-}
-@media screen and (max-width: 1000px) {
-  html{font-size:12px};
-}
-@media screen and (max-width: 700px) {
-  html{font-size:10px};
+  font-weight: 100;
+  font-family: 'AcuWide';
 }
 
 *,
@@ -33,9 +38,10 @@ html {
       margin: 0;
       padding: 0;
       color: ${Theme.colors.foreground};
-      font-size: inherit;
+      font-size: 1.8rem;
       background-color: ${Theme.colors.background};
-      font-family: "Acumin", sans-serf;
+      font-family: inherit;
+      font-weight: inherit;
       min-height: 100vh;
       height:100%;
       width: 100%;
@@ -51,29 +57,29 @@ html {
     }
     h1{
       margin:0;
+      font-weight:inherit;
+      font-size: 5rem;
     }
-    h2{
-      margin:15% 0 0 0;
-      overflow:hidden;
-    }
-    h2 + h2{
-      margin-top: 1.2%;
+    h2 {
+      margin: 4% 0 0 0;
+      font-weight:inherit;
+      font-size: 5.8rem;
     }
     h3{
-      font-weight: 100;
-      font-size: 3.2rem;
-      margin-top: 20px;
-      overflow:hidden;
+      font-size: 5.8rem;
+      margin: 0px;
+      font-weight:inherit;
     }
     p{
-      letter-spacing: 1px;
-      font-size: 1.32rem;
-      hyphens: auto;
+      margin:0;
+      line-height: 135%;
     }
     h4{
       font-size: 1.32rem;
-      letter-spacing: 1px;
-      overflow:hidden;
+      font-weight:inherit;
+    }
+    a{
+      color: inherit;
     }
 
   /* normalize */
@@ -81,7 +87,7 @@ html {
 
 `;
 
-function createMarkup() { return {__html: theStyles}; };
-export default () => (
-  <style dangerouslySetInnerHTML={createMarkup()}/>
-);
+function createMarkup() {
+  return { __html: theStyles };
+}
+export default () => <style dangerouslySetInnerHTML={createMarkup()} />;

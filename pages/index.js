@@ -1,50 +1,62 @@
 import { useEffect, useState, useRef } from "react";
 import Head from "next/head";
-import Router from "next/router";
+import dynamic from "next/dynamic";
+import Link from "next/link";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import Slide from "react-reveal/Slide";
-import Link from "next/link";
-import FilePlayer from "react-player";
 import { useInView } from "react-intersection-observer";
-import ReactCursorPosition from "react-cursor-position";
-import debounce from "lodash/debounce";
-//import Clipper from "../components/Clipper"
+import TitleSection from "../components/TitleSection";
+import Loader from "../components/loader";
+import Process from "../components/Process";
 
-const Process = props => {
-  let t = props.t;
-  return (
-    <ProcessWrapper>
-      <h3>{t.services.title}</h3>
-      <p>{t.services.p}</p>
-    </ProcessWrapper>
-  );
-};
-
-const ProcessWrapper = styled.section`
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
-  min-height: 100vh;
-`;
+// const Sketch = dynamic(import("../components/sketch/Sketch"), {
+//   loading: () => <p>Loading wrapper...</p>,
+//   ssr: false
+// });
 
 export default function Index(props) {
   let t = props.locale.home_page;
   return (
     <>
-      <Background />
-      <HomeWrapper id="clipped">
+      {/* <Sketch/> */}
+      <HomeWrapper>
         <Scroller>
           <Head>
             <title>Acueducto</title>
           </Head>
           <Land>
-            <h1>{t.landing.heading}</h1>
-            <h2>{t.landing.tagline}</h2>
+            <LandContainer>
+              <h1>{t.landing.heading}</h1>
+              <h2>{t.landing.tagline}</h2>
+            </LandContainer>
           </Land>
           <Intro>
-            <h3>{t.intro.title}</h3>
-            <p>{t.intro.p}</p>
-            <p>{t.intro.link}</p>
+            <TitleSection
+              title={t.intro.title}
+              text={t.intro.p}
+              link={t.intro.link}
+              borderTop
+            />
+            <ImageGallery>
+              <Image
+                columnStart={5}
+                columnEnd={8}
+                ratio={60}
+                style={{
+                  backgroundImage: "url(./static/assets/img/layout/intro_1.jpg)"
+                }}
+              />
+              <Image
+                columnStart={1}
+                columnEnd={6}
+                ratio={80}
+                style={{
+                  backgroundImage:
+                    "url(./static/assets/img/layout/intro_2.jpg)",
+                  transform: "translateY(-70%)"
+                }}
+              />
+            </ImageGallery>
           </Intro>
           <Process t={t} />
         </Scroller>
@@ -53,34 +65,64 @@ export default function Index(props) {
   );
 }
 
+const Image = styled.figure`
+  height: 0;
+  padding-bottom: ${props => (props.ratio ? props.ratio + "%" : "60%")};
+  background-size: 106%;
+  background-position: center;
+  transition: background-size 0.5s ease, margin 0.3s ease;
+  background-color: pink;
+  grid-column: ${props => (props.columnStart ? props.columnStart : 1)} / span
+    ${props => (props.columnEnd ? props.columnEnd : 5)};
+  &:hover {
+    background-size: 100%;
+    margin: 0 20px;
+    z-index: 0;
+  }
+`;
+
+const ImageGallery = styled.div`
+  width: 100%;
+  display: grid;
+  grid-gap: 2.2rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 300px;
+  padding: 0 4%;
+`;
+
 const Scroller = styled.div`
   position: relative;
   min-height: 100vh;
   overflow-y: scroll;
 `;
 
-const Background = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  background-color: red;
-`;
-
 const Land = styled.div`
   min-height: 100%;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2.2rem;
+  align-items: center;
+  h2 {
+    font-size: 2.1rem;
+    color: ${props => props.theme.colors.white};
+  }
+  h1 {
+    color: ${props => props.theme.colors.white};
+  }
+`;
+
+const LandContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: pink;
+  grid-column: 3 / span 6;
 `;
 
 const Intro = styled.div`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
   min-height: 100vh;
+  transition: .3s ease all;
 `;
 
 const HomeWrapper = styled.div`
@@ -95,6 +137,4 @@ const HomeWrapper = styled.div`
   bottom: 20px;
   right: 20px;
   overflow: hidden;
-  clip-path: url(#myClip);
-  -webkit-transition: clip-path 1s ease;
 `;

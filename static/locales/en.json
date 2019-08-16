@@ -13,12 +13,20 @@
         },
         "intro" : {
             "title" : "the new generation of digital thinking",
-            "p" : "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of a partnership, and this is what we like to offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses and communities alike, it works like magic. </br>We are always thrilled by new challenges and the people that come with them: as challenges become projects, partners become friends.",
-            "link" : "Read more <a href=\"/about\">about us</a>"
+            "p" : "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. </br></br>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.</br></br>Read more <a href=\"/about\">about us</a>"
         },
         "services" : {
             "title" : "pioneering in strategic design",
-            "p": "Let us share a conviction of ours: Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users."
+            "p": "Let us share a conviction of ours: Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users."
+        }
+    },
+    "about_page":{
+        "main" :{
+            "title" : "a two-part ensamble to grow your business",
+            "p": "Without us knowing, we started this studio 15 years ago when we began to fall in love with technology, music, and alternative & pop culture. Growing up together, and driven by each other’s perspectives, we would always push ourselves forward; and everytime we shared a song, a design, or a business idea, we felt fascinated by the mind of the other.</br></br>Motivated by high standards and innovation, we joined our professional paths in order to create thoughtful and powerful digital experiences.</br></br>Acueducto is not just a studio, is the result of a journey that has taken us many years to build, as our own firendship."
+
         }
     }
 }
+
+

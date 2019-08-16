@@ -1,73 +1,14 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import { useState } from "react";
-import logo from "../static/assets/img/favicon.svg";
 import { useEffect } from "react";
-import { useSpring, animated, interpolate } from "react-spring";
-
-const Background = props => {
-  const [key, setKey] = useState(1);
-  const spring = useSpring({ o: props.open ? 151 : 1 });
-
-  function is_safari() {
-    if (typeof window !== "undefined") {
-      const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-     return isSafari;
-    } else {
-      return false;
-    }
-  }
-
-  var pre = props.open
-    ? "M2,1 H970 L1400 151 V860 H2 z"
-    : "M2,1 H970 L1400 1 V860 H2 z";
-  var pre2 = spring.o.interpolate(
-    o => `M2,1 H970 L1400 ${Math.round(o)} V860 H2 z`
-  );
-  var whichRender = is_safari() ? pre : pre2;
-  var style = is_safari() ? ".3s ease all" : "";
-
-  return (
-    <SVG viewBox={"0 0 1402 862"} preserveAspectRatio="none" {...props}>
-      <defs>
-        <clipPath
-          id="myClip"
-          preserveAspectRatio="none"
-          clipPathUnits="objectBoundingBox"
-          transform="scale(0.00071326676 0.0011600928)"
-        >
-          <animated.path
-          d = {whichRender}
-          style={{transition: style}}
-            // d={
-            //   props.open
-            //     ? "M2,1 H970 L1400 151 V860 H2 z"
-            //     : "M2,1 H970 L1400 1 V860 H2 z"
-            // }
-            //d={prup.o.interpolate(o => `M2,1 H970 L1400 ${Math.round(o)} V860 H2 z`)}
-          />
-        </clipPath>
-      </defs>
-      <animated.path
-        d={spring.o.interpolate(
-          o => `M2,1 H970 L1400 ${Math.round(o)} V860 H2 z`
-        )}
-        fill={props.open ? "#080B0C" : "transparent"}
-        stroke="#fff"
-        vectorEffect="non-scaling-stroke"
-        strokeWidth={2}
-      />
-    </SVG>
-  );
-};
+import { useSpring, animated } from "react-spring";
 
 export default function Nav(props) {
   let t = props.locale.nav;
-
   return (
     <>
       <NavWrapper open={props.isOpen}>
-        <Background open={props.isOpen} />
         <NavList onClick={props.closeNav} open={props.isOpen}>
           <Link href="/">
             <a>{t.home}</a>
@@ -90,23 +31,7 @@ export default function Nav(props) {
   );
 }
 
-const SVG = styled.svg`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  path {
-    transition: fill 0.3s ease 0.2s;
-  }
-`;
-
 const NavList = styled.nav`
-  opacity: ${props => (props.open ? "1" : "0")};
   grid-column: 4 / span 4;
   flex-direction: column;
   display: flex;
@@ -116,43 +41,35 @@ const NavList = styled.nav`
 `;
 
 const NavWrapper = styled.div`
-  opacity: 1;
+  opacity: ${props => (props.open ? 1 : 0)};
   pointer-events: ${props => (props.open ? "auto" : "none")};
   z-index: 9;
   width: calc(100% - 40px);
   height: calc(100% - 42px);
+  background-color: ${props =>
+    props.open ? props.theme.colors.background : "none"};
   position: fixed;
   left: 20px;
   top: 20px;
   right: 20px;
+  bottom: 20px;
   display: grid;
   margin: 0 auto;
   max-width: 1500px;
-  /* mix-blend-mode: exclusion; */
   grid-template-columns: repeat(12, 1fr);
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 6rem;
   pointer-events: none;
-  transition: opacity 0.3s ease-in;
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(6, 1fr);
-  }
-  @media (max-width: 900px) {
-    a {
-      padding-bottom: 5%;
-    }
-  }
+  transition: all 0.3s ease;
   a {
     text-decoration: none;
-    color: inherit;
   }
   ${props =>
     props.open &&
     css`
       opacity: 1;
-      transition: opacity 0.2s ease-in;
       pointer-events: auto;
     `}
 `;
