@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 180 180">
+  <path d="M120 5l54 31v63l-54 31-55-31V36z" class="st0"/>
+  <path d="M120 130V68l54-32M120 68L65 36" class="st0"/>
+  <path class="accent" d="M61 50l54 31v63l-55 31-54-31V81z"/>
+  <path class="accent" d="M60 175v-62l55-32M60 113L6 81"/>
+</svg>

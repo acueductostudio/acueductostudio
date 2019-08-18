@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1" viewBox="0 0 180 180">
+  <path d="M5 32h170v123H5z"/>
+  <path class="accent" d="M90 30v127V30z"/>
+  <path class="accent" d="M163 32s-15-9-35-9c-19 0-38 9-38 9v122s19-9 38-9c20 0 35 9 35 9V32zM90 32s-15-9-35-9c-19 0-38 9-38 9v122s19-9 38-9c20 0 35 9 35 9V32z"/>
+</svg>

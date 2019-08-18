@@ -8,17 +8,12 @@ import { useInView } from "react-intersection-observer";
 import TitleSection from "../components/TitleSection";
 import Loader from "../components/loader";
 import Process from "../components/Process";
-
-// const Sketch = dynamic(import("../components/sketch/Sketch"), {
-//   loading: () => <p>Loading wrapper...</p>,
-//   ssr: false
-// });
+import CaseStudiesSmall from "../components/CaseStudiesSmall";
 
 export default function Index(props) {
   let t = props.locale.home_page;
   return (
     <>
-      {/* <Sketch/> */}
       <HomeWrapper>
         <Scroller>
           <Head>
@@ -59,6 +54,7 @@ export default function Index(props) {
             </ImageGallery>
           </Intro>
           <Process t={t} />
+          <CaseStudiesSmall t={t} />
         </Scroller>
       </HomeWrapper>
     </>
@@ -105,6 +101,7 @@ const Land = styled.div`
   align-items: center;
   h2 {
     font-size: 2.1rem;
+    margin-top: 4%;
     color: ${props => props.theme.colors.white};
   }
   h1 {
@@ -122,7 +119,7 @@ const Intro = styled.div`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
   min-height: 100vh;
-  transition: .3s ease all;
+  transition: 0.3s ease all;
 `;
 
 const HomeWrapper = styled.div`
@@ -131,7 +128,7 @@ const HomeWrapper = styled.div`
   height: calc(100% - 44px);
   position: absolute;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1496px;
   top: 20px;
   left: 20px;
   bottom: 20px;

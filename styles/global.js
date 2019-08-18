@@ -61,7 +61,7 @@ html {
       font-size: 5rem;
     }
     h2 {
-      margin: 4% 0 0 0;
+      margin:0;
       font-weight:inherit;
       font-size: 5.8rem;
     }

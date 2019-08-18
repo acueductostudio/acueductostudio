@@ -8,9 +8,25 @@ import NightMode from "../static/assets/img/layout/night.svg";
 import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
 
+
+const Sketch = dynamic(import("../components/sketch/Sketch"), {
+  loading: () => <p>Loading wrapper...</p>,
+  ssr: false
+});
+
 export default ({ children, title = "Antitesis", changeTheme, locale }) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.route === "/") {
+      setShowSketch(true);
+    } else {
+      setShowSketch(false);
+    }
+    console.log(router.route);
+  }, [router.route]);
 
   // useEffect(() => {
   //   window.scrollTo(0, 0);
@@ -31,22 +47,6 @@ export default ({ children, title = "Antitesis", changeTheme, locale }) => {
     changeTheme();
   };
 
-  const Sketch = dynamic(import("../components/sketch/Sketch"), {
-    loading: () => <p>Loading wrapper...</p>,
-    ssr: false
-  });
-
-  const router = useRouter();
-
-  useEffect(() => {
-    if (router.route === "/") {
-      setShowSketch(true);
-    } else {
-      setShowSketch(false);
-    }
-    console.log(router.route);
-  }, [router.route]);
-
   return (
     <>
       <Head>
@@ -56,8 +56,8 @@ export default ({ children, title = "Antitesis", changeTheme, locale }) => {
       </Head>
       <Styles />
       <PageWrapper id="PageWrapper">
-        {showSketch? <Sketch/> : " "}
-        {/* {showSketch? <Background /> : " "} */}
+        {/* {showSketch? <Sketch/> : " "} */}
+        {showSketch? <Background /> : " "}
         <Border />
         <NavTrigger toggleNav={toggleNav} isOpen={isOpen} />
         <Header closeNav={closeNav} isOpen={isOpen} />

@@ -1,0 +1,6 @@
+<svg viewBox="0 0 180 180">
+    <path d="M26 31h75M26 47h49M26 77h75M26 93h49"/>
+    <path d="M7 7h121v149H7z"/>
+    <circle cx="103" cy="103" r="38" class="accent"/>
+    <path d="M175 175l-45-45" class="accent"/>
+</svg>

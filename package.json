@@ -23,8 +23,10 @@
     "react-reveal": "^1.2.2",
     "react-spring": "^8.0.27",
     "react-sticky-mouse-tooltip": "^0.0.1",
+    "react-three-fiber": "^2.3.6",
     "styled-components": "^5.0.0-beta.8",
     "svg-react-loader": "^0.4.6",
+    "three": "^0.107.0",
     "url-loader": "^2.1.0"
   },
   "devDependencies": {

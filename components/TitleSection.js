@@ -1,9 +1,6 @@
-import react from "react";
 import styled from "styled-components";
 import Fade from "react-reveal";
-
-
-function createMarkup(i) { return {__html: i}; };
+import createMarkup from "../helpers/createMarkup"
 
 const TitleSection = props => {
   const { title, text, link } = props;
