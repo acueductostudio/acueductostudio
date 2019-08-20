@@ -1,29 +1,42 @@
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import TitleSection from "../components/TitleSection";
 import createMarkup from "../helpers/createMarkup";
+import Process from "../components/Process";
+import Services from "../components/Services";
+import ContactFooter from "../components/ContactFooter";
 
 const Head3D = dynamic(import("../components/head3D/Head3D"), {
-  loading: () => <span style={{height: "500px"}}>Loading head...</span>,
+  loading: () => <span style={{ height: "500px" }}>Loading head...</span>,
   ssr: false
 });
 
 export default function About(props) {
   let t = props.locale.about_page;
+  let s = props.locale.services;
+  let p = props.locale.process;
+  let f = props.locale.contactfooter;
 
-  let teamMembers = t.team.map(function(member, index) {
-    return (
-      <Person key={"person" + index}>
-        <Head3D file={member.model} key={"model" + index}/>
-        <h4>{member.name}</h4>
-        <span>{member.position}</span>
-        <p dangerouslySetInnerHTML={createMarkup(member.p)} />
-      </Person>
-    );
-  });
+  const [isVisible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
+  // let teamMembers = t.team.map(function(member, index) {
+  //   return (
+  //     <Person key={"person" + index}>
+  //       {isVisible? <Head3D file={member.model} key={"model" + index}/> : ""}
+  //       <h4>{member.name}</h4>
+  //       <span>{member.position}</span>
+  //       <p dangerouslySetInnerHTML={createMarkup(member.p)} />
+  //     </Person>
+  //   );
+  // });
 
   return (
     <NosotrosWrapper>
@@ -35,9 +48,25 @@ export default function About(props) {
           <h2>{t.main.title}</h2>
           <p dangerouslySetInnerHTML={createMarkup(t.main.p)} />
         </Fade>
-        <ScrollDown>{teamMembers}</ScrollDown>
+        <ScrollDown>
+          <Person>
+            {isVisible ? <Head3D file={t.team[0].model} /> : ""}
+            <h4>{t.team[0].name}</h4>
+            <span>{t.team[0].position}</span>
+            <p dangerouslySetInnerHTML={createMarkup(t.team[0].p)} />
+          </Person>
+          {/* <Person>
+            {isVisible ? <Head3D file={t.team[1].model} /> : ""}
+            <h4>{t.team[1].name}</h4>
+            <span>{t.team[1].position}</span>
+            <p dangerouslySetInnerHTML={createMarkup(t.team[1].p)} />
+          </Person> */}
+        </ScrollDown>
       </Grid>
       <TitleSection title={t.values.title} text={t.values.p} borderTop />
+      <Process p={p}/>
+      <Services s={s}/>
+      <ContactFooter f={f}/>
     </NosotrosWrapper>
   );
 }

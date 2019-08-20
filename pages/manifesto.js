@@ -3,22 +3,14 @@ import Slide from "react-reveal/Slide";
 import Head from "next/head";
 
 
-export default function Renta() {
+export default function Manifesto() {
   return (
     <RentaWrapper>
           <Head>
-        <title>Antítesis Films | Renta</title>
+        <title>Acueducto | Manifesto</title>
       </Head>
       <Slide bottom cascade>
-        <h2>Renta</h2>
-      </Slide>
-      <Slide bottom>
-        <h3>Equipo</h3>
-        <p>
-          Contamos con equipo de cámara y de producción a disposición para tus
-          proyectos.
-        </p>
-        <h4><a href="../static/assets/pdf/Antitesis_renta.pdf">Ver PDF</a></h4>
+        <h2>Manifesto</h2>
       </Slide>
     </RentaWrapper>
   );

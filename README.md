@@ -8,3 +8,10 @@
 ## For cookies
 
 - https://www.npmjs.com/package/react-cookie-consent 
+
+## Falta
+Animation icons
+Cookie message
+3D heads
+404
+favicon

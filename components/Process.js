@@ -25,8 +25,8 @@ const StepContainer = props => {
 };
 
 const Process = props => {
-  let t = props.t.services;
-  var steps = t.steps.map(function(step, index) {
+  let p = props.p;
+  var steps = p.steps.map(function(step, index) {
     return (
       <StepContainer
         key={"step" + index}
@@ -39,7 +39,7 @@ const Process = props => {
   });
   return (
     <ProcessWrapper>
-      <TitleSection title={t.title} text={t.p} borderTop />
+      <TitleSection title={p.title} text={p.p} borderTop />
       <StepsSection>{steps}</StepsSection>
     </ProcessWrapper>
   );

@@ -6,64 +6,80 @@
     "manifesto": "manifesto",
     "contact": "contact"
   },
-  "casestudies": [
-    {
-      "title": "from strategy to production in the filmmaking industry",
-      "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
-      "video": "fieras.mp4",
-      "link": "ladanzadelasfieras"
+  "process": {
+    "title": "pioneering</br> in strategic design",
+    "p": "Let us share a conviction of ours: Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
+    "steps": [
+      {
+        "title": "discover",
+        "p": "Understand the context, audience, needs, and challenges of the project.</br>We get smart.",
+        "icon": "discover.svg"
+      },
+      {
+        "title": "envision",
+        "p": "Here we re-frame the problem to highlight new insights and opportunities.</br>We make sense.",
+        "icon": "envision.svg"
+      },
+      {
+        "title": "build the story",
+        "p": "Create a strategy that guides concepting, prioritization, and co-creation.</br>We create empathy.",
+        "icon": "buildstory.svg"
+      },
+      {
+        "title": "design, tech & craft",
+        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.</b>We develop.",
+        "icon": "craft.svg"
+      },
+      {
+        "title": "launch",
+        "p": "Implement new solutions, support socialization of organizational changes and product innovation.</br>We drive change.",
+        "icon": "launch.svg"
+      },
+      {
+        "title": "review",
+        "p": "Reflect, document, and iterate on our process and approach.</br>We get better.",
+        "icon": "review.svg"
+      }
+    ]
+  },
+  "casestudies":{
+    "intro": {
+      "title": "our selected case studies",
+      "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.</br></br>Read about selected projects we have launched alongside our partners."
     },
-    {
-      "title": "how do you share music nowadays?",
-      "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
-      "video": "fieras.mp4",
-      "link": "salvajenada"
+    "studies":[
+      {
+        "title": "from strategy to production in the filmmaking industry",
+        "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
+        "video": "fieras.mp4",
+        "link": "ladanzadelasfieras"
+      },
+      {
+        "title": "how do you share music nowadays?",
+        "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
+        "video": "fieras.mp4",
+        "link": "salvajenada"
+      }
+    ]
+  },
+  "services" :{
+    "intro": {
+      "title": "from ideation</br>to launch",
+      "p": "– And everything in between.</br></br> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
     }
-  ],
+  },
+  "contactfooter":{
+    "title": "let's talk business",
+    "p":"We want to partner with you"
+  },  
   "home_page": {
     "landing": {
-      "heading": "we are a strategic design & development studio",
+      "heading": "we are a strategic design</br>& development studio",
       "tagline": "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds"
     },
     "intro": {
-      "title": "the new generation of digital thinking",
+      "title": "the new generation</br> of digital thinking",
       "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. </br></br>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.</br></br>Read more <a href=\"/about\">about us</a>"
-    },
-    "services": {
-      "title": "pioneering in strategic design",
-      "p": "Let us share a conviction of ours: Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
-      "steps": [
-        {
-          "title": "discover",
-          "p": "Understand the context, audience, needs, and challenges of the project.</br>We get smart.",
-          "icon": "discover.svg"
-        },
-        {
-          "title": "envision",
-          "p": "Here we re-frame the problem to highlight new insights and opportunities.</br>We make sense.",
-          "icon": "envision.svg"
-        },
-        {
-          "title": "build the story",
-          "p": "Create a strategy that guides concepting, prioritization, and co-creation.</br>We create empathy.",
-          "icon": "buildstory.svg"
-        },
-        {
-          "title": "design, tech & craft",
-          "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.</b>We develop.",
-          "icon": "craft.svg"
-        },
-        {
-          "title": "launch",
-          "p": "Implement new solutions, support socialization of organizational changes and product innovation.</br>We drive change.",
-          "icon": "launch.svg"
-        },
-        {
-          "title": "review",
-          "p": "Reflect, document, and iterate on our process and approach.</br>We get better.",
-          "icon": "review.svg"
-        }
-      ]
     },
     "studies": {
       "title": "our selected case studies",
@@ -86,12 +102,18 @@
         "name": "artemio pedraza",
         "position": "strategy & communication",
         "p": "A communication strategist, project administrator and community manager with five years of experience as a freelancer.<br/><br/>He has also gone from copywriter to community manager and marketing consultant, and he’s one of the few licenced digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own record label Bludot, manages artists, and tours the world playing drums for Wet Baes.",
-        "model": "rodrigo.gltf"
+        "model": "artemio.gltf"
       }
     ],
     "values": {
-      "title": "building better communities",
+      "title": "building</br> better</br> communities",
       "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.</br></br>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.</br></br>Read our <a href=\"/manfesto\"> Manifesto</a>"
+    }
+  },
+  "work_page":{
+    "intro": {
+      "title": "we crafted these studies for you",
+      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what can it achieve.</br></br>Read about the selected projects we have launched alongside our partners."
     }
   }
 }

@@ -77,6 +77,7 @@ html {
     h4{
       font-size: 1.32rem;
       font-weight:inherit;
+      margin:0;
     }
     a{
       color: inherit;

@@ -22,32 +22,19 @@ function Model({ file }) {
   // the model is read only for some reason
   // It won't come to this point until the resource has been fetched
   return (
-    <primitive
-      object={scene}
-      position={[0, 0, 0]}
-      scale={[0.1, 0.1, 0.1]}
-      attach="geometry"
-    />
+    <>
+      {console.log(0)}
+      <mesh>
+        <primitive
+          object={scene}
+          position={[0, 0, 0]}
+          scale={[0.1, 0.1, 0.1]}
+          attach="geometry"
+        />
+      </mesh>
+    </>
   );
 }
-
-const Intermedio = ({ file, mouse, x, y, factor }) => {
-  return (
-    // <mesh>
-    <Model file={file} mouse={mouse} x={0} y={0} factor={800} />
-    // <ModelOBJ file={file}/>
-    //   <meshStandardMaterial
-    //     opacity={1}
-    //     transparent
-    //     attach="material"
-    //     color={"#080b0c"}
-    //     roughness={0.73}
-    //     side={THREE.DoubleSide}
-    //     metalness={0.4}
-    //   />
-    // </mesh>
-  );
-};
 
 function Cursor({ mouse, helper }) {
   return (
@@ -80,11 +67,7 @@ function Cursor({ mouse, helper }) {
 
 function PlaceHolder() {
   return (
-    <mesh
-      visible
-      position={[1, 2, 3]}
-      rotation={[0, 0, 0]}
-    >
+    <mesh visible position={[1, 2, 3]} rotation={[0, 0, 0]}>
       <sphereGeometry attach="geometry" args={[1, 16, 16]} />
       <meshStandardMaterial attach="material" color="indianred" transparent />
     </mesh>
@@ -118,13 +101,7 @@ function Scene({ mouse }) {
       </group>
       <group ref={group}>
         <Suspense fallback={<PlaceHolder />}>
-          <Intermedio
-            file="rodrigo.gltf"
-            mouse={mouse}
-            x={0}
-            y={0}
-            factor={800}
-          />
+          <Model file={"rodrigo.gltf"} />
         </Suspense>
       </group>
       <Cursor mouse={mouse} />

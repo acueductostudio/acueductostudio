@@ -8,10 +8,17 @@ import { useInView } from "react-intersection-observer";
 import TitleSection from "../components/TitleSection";
 import Loader from "../components/loader";
 import Process from "../components/Process";
-import CaseStudiesSmall from "../components/CaseStudiesSmall";
+import CaseStudiesPreview from "../components/CaseStudies/CaseStudiesPreview";
+import ContactFooter from "../components/ContactFooter";
+import createMarkup from "../helpers/createMarkup";
+import Services from "../components/Services";
 
 export default function Index(props) {
   let t = props.locale.home_page;
+  let c = props.locale.casestudies;
+  let s = props.locale.services;
+  let p = props.locale.process;
+  let f = props.locale.contactfooter;
   return (
     <>
       <HomeWrapper>
@@ -21,7 +28,7 @@ export default function Index(props) {
           </Head>
           <Land>
             <LandContainer>
-              <h1>{t.landing.heading}</h1>
+              <h1 dangerouslySetInnerHTML={createMarkup(t.landing.heading)} />
               <h2>{t.landing.tagline}</h2>
             </LandContainer>
           </Land>
@@ -53,8 +60,10 @@ export default function Index(props) {
               />
             </ImageGallery>
           </Intro>
-          <Process t={t} />
-          <CaseStudiesSmall t={t} />
+          <Process p={p} />
+          <CaseStudiesPreview c={c} />
+          <Services s={s} />
+          <ContactFooter f={f}/>
         </Scroller>
       </HomeWrapper>
     </>
@@ -113,6 +122,12 @@ const LandContainer = styled.div`
   display: flex;
   flex-direction: column;
   grid-column: 3 / span 6;
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    max-width: 498px;
+  }
 `;
 
 const Intro = styled.div`
