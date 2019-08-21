@@ -115,6 +115,7 @@ const Land = styled.div`
   }
   h1 {
     color: ${props => props.theme.colors.white};
+    line-height:100%;
   }
 `;
 

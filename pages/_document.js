@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
           <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+          <link href="https://fonts.googleapis.com/css?family=Eczar|Lora|Work+Sans&display=swap" rel="stylesheet"></link>
           <GlobalStyles />
           {this.props.styleTags}
         </Head>

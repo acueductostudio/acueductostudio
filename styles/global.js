@@ -20,6 +20,7 @@ let theStyles = `
   font-style: normal;
 }
 
+
 html {
   font-size: 62.5%;
   height: 100vh;
@@ -64,6 +65,7 @@ html {
       margin:0;
       font-weight:inherit;
       font-size: 5.8rem;
+      font-family: 'Work Sans', sans-serif;
     }
     h3{
       font-size: 5.8rem;
