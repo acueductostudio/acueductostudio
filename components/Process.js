@@ -57,6 +57,7 @@ const Step = styled.div`
   h3 {
     font-size: 2.5rem;
     margin-bottom: 10px;
+    font-weight:200;
   }
   span {
     color: ${props => props.theme.colors.accent};

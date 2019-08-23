@@ -13,7 +13,7 @@ export default function Manifesto(props) {
   let beliefs = t.beliefs.map(function(belief, index) {
     return (
       <Belief key={"belief" + index}>
-        <span>{index + 1}</span>
+        <span>0{index + 1}</span>
         <h3>{belief.title}</h3>
         <p>{belief.p}</p>
       </Belief>
@@ -37,12 +37,13 @@ position:relative;
 margin-bottom: 25%;
   span {
     color: ${props => props.theme.colors.accent};
-    font-size:3.5rem;
+    font-size:3rem;
     position: absolute;
-    left: -4.5rem;
+    left: -6rem;
   }
   h3{
     font-size:3rem;
     margin-bottom:10px;
+    font-weight:200;
   }
 `;

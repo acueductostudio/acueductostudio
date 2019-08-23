@@ -13,9 +13,16 @@ import Theme from "./theme";
 
 let theStyles = `
 @font-face {
-  font-family: 'AcuWide';
-  src: url('../static/assets/font/AcuWide.woff2') format('woff2'),
-      url('../static/assets/font/AcuWide.woff') format('woff');
+  font-family: 'Wide';
+  src: url('../static/assets/font/Bold.woff2') format('woff2'),
+      url('../static/assets/font/Bold.woff') format('woff');
+  font-weight: 200;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'Wide';
+  src: url('../static/assets/font/Normal.woff2') format('woff2'),
+      url('../static/assets/font/Normal.woff') format('woff');
   font-weight: 100;
   font-style: normal;
 }
@@ -25,10 +32,8 @@ html {
   font-size: 62.5%;
   height: 100vh;
   box-sizing: border-box;
+  font-family: 'Wide', sans-serif;
   font-weight: 100;
-  //font-family: 'AcuWide';
-  font-family: acumin-pro-wide, sans-serif;
-  //font-weight: 400;
   font-style:normal;
 }
 
@@ -50,6 +55,7 @@ html {
       height:100%;
       width: 100%;
       overflow:hidden;
+      letter-spacing: .02px;
   }
 
   #__next {
@@ -63,6 +69,7 @@ html {
       margin:0;
       font-weight:inherit;
       font-size: 5rem;
+      font-weight: 200;
     }
     h2 {
       margin:0;

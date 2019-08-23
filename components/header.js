@@ -1,9 +1,8 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { useEffect } from "react";
 import Logo from "../static/assets/img/layout/logo.svg";
 
-export default function Header(props) {
+export default function Header() {
   return (
     <TopHeader>
       <Link href="/">
@@ -12,9 +11,6 @@ export default function Header(props) {
           <Logo />
         </Logotype>
       </Link>
-      {/* <NavTrigger onClick={() => props.toggleNav()} open={props.isOpen}>
-        <Hamburger />
-      </NavTrigger> */}
     </TopHeader>
   );
 }

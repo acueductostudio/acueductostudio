@@ -4,17 +4,34 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import Fade from "react-reveal/Fade";
+import { useRouter } from "next/router";
+
+const NavLink = styled.a`
+  color: ${({ active }) => active ? 'red' : 'black'}; 
+`
 
 export default function Nav(props) {
-  let t = props.locale.nav;
+  let t = props.locale.nav; 
+  const router = useRouter();
 
   const NavLink = ({ href, name }) => {
     return (
       <Link href={href} passHref>
-        <a>{name}</a>
+        {/* <a selected={router.pathname === href ? true : false}>{name}</a> */}
+        <a selected>{name}</a>
       </Link>
     );
   };
+  
+  const ActiveLink = ({ children, ...props }) => {
+    const router = useRouter()
+    const child = React.Children.only(children)
+    return (
+      <Link {...props}>
+        {React.cloneElement(child, { active: router.pathname === props.href })}
+      </Link>
+    )
+  }
 
   let navItems = t.map(function(item, index) {
     return (
@@ -94,6 +111,10 @@ const NavList = styled.nav`
       font-size: 6rem;
       line-height: 160%;
       position: relative;
+      a{
+        font-weight: 200;
+        border-bottom: ${props => props.selected ? "2px solid blue" : "none"};
+      }
       span {
         color: ${props => props.theme.colors.accent};
         font-size: 1.5rem;

@@ -104,25 +104,21 @@ const Land = styled.section`
   align-items: center;
   h2 {
     font-size: 2.1rem;
-    margin-top: 4%;
+    margin-top: 15px;
     color: ${props => props.theme.colors.white};
+    max-width: 498px;
   }
   h1 {
     color: ${props => props.theme.colors.white};
     line-height:100%;
+    font-size:7rem;
   }
 `;
 
 const LandContainer = styled.div`
   display: flex;
   flex-direction: column;
-  grid-column: 3 / span 6;
-  h1 {
-    font-size: 5rem;
-  }
-  h2 {
-    max-width: 498px;
-  }
+  grid-column: 3 / span 8;
 `;
 
 const Intro = styled.section`

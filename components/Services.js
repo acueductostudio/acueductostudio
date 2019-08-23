@@ -32,6 +32,9 @@ export default Services;
 
 const Info = styled.div`
   width: auto;
+  h4{
+    font-weight: 200;
+  }
 `;
 
 const ServiceGrid = styled.div`

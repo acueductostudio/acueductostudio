@@ -50,7 +50,7 @@ const Grid = styled.div`
     margin-bottom: 5%;
   }
   p {
-    grid-column: 7 / span 5;
+    grid-column: 7 / span 4;
     color: ${props => props.theme.colors.foreground_low};
     position: relative;
   }
@@ -60,7 +60,7 @@ const Grid = styled.div`
     display: block;
     b {
       color: ${props => props.theme.colors.foreground};
-      font-weight:inherit;
+      font-weight:200;
       border-bottom: ${props =>
         props.theme.stroke + " solid " + props.theme.colors.accent};
     }

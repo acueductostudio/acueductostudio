@@ -8,7 +8,7 @@
   ],
   "process": {
     "title": "pioneering</br> in strategic design",
-    "p": "Let us share a conviction of ours: Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
+    "p": "Let us share a conviction of ours: </br>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br></br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
     "steps": [
       {
         "title": "discover",
@@ -27,7 +27,7 @@
       },
       {
         "title": "design, tech & craft",
-        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.</b>We develop.",
+        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.</br>We develop.",
         "icon": "craft.svg"
       },
       {
@@ -198,7 +198,7 @@
   "contact_page": {
     "intro": {
       "title": "let’s be partners let’s be friends",
-      "p": "We would love to start getting to know you, fill in this guided form with the details about your project, or just write us directly at hola@acueducto.studio"
+      "p": "We would love to start getting to know you, fill in this guided form with the details about your project, or just write us directly at <a href=\"mailto:hola@acueducto.studio\"><b>hola@acueducto.studio</b></a>"
     }
   }
 }

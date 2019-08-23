@@ -14,11 +14,8 @@ Animation icons
 Cookie message
 3D heads
 404
-favicon
 Animation hovers
-Title in pages
 language icons
-Numeros en manifesto desalineados
 
 ## Falta materiales
 - Arte debe mandar la animación del fondo para  el caso de estudio  de  salvajenada

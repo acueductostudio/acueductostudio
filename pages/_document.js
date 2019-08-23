@@ -20,12 +20,15 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
-          <link
-            rel="shortcut icon"
-            type="image/x-icon"
-            href="/static/favicon.ico"
-          />
-          <link rel="stylesheet" href="https://use.typekit.net/zdy4yjp.css"/>
+          <link rel="apple-touch-icon" sizes="180x180" href="../static/assets/favicon/apple-touch-icon.png"/>
+          <link rel="icon" type="image/png" sizes="32x32" href="../static/assets/favicon/favicon-32x32.png"/>
+          <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/favicon/favicon-16x16.png"/>
+          <link rel="manifest" href="../static/assets/favicon/site.webmanifest"/>
+          <link rel="mask-icon" href="../static/assets/favicon/safari-pinned-tab.svg" color="#1740bf"/>
+          <link rel="shortcut icon" href="../static/assets/favicon/favicon.ico"/>
+          <meta name="msapplication-TileColor" content="#1740bf"/>
+          <meta name="msapplication-config" content="../static/assets/favicon/browserconfig.xml"/>
+          <meta name="theme-color" content="#ffffff"/>
           <GlobalStyles />
           {this.props.styleTags}
         </Head>

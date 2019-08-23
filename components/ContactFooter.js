@@ -74,6 +74,7 @@ const Grid = styled.footer`
   h2 {
     display: inline;
     font-size: 8.5rem;
+    font-weight:200;
     background-size: 1px 1em;
     box-shadow: ${props => props.theme.colors.accent} 0px -7px inset,
       ${props => props.theme.colors.foreground} 0px -12px inset;

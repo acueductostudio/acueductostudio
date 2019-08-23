@@ -55,6 +55,7 @@ const Info = styled.div`
   justify-content: space-between;
   h4 {
     font-size: 4.5rem;
+    font-weight: 200;
   }
   p {
     color: ${props => props.theme.colors.foreground_low};

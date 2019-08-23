@@ -14,26 +14,22 @@ const Sketch = dynamic(import("../components/sketch/Sketch"), {
   ssr: false
 });
 
-export default ({ children, title = "Antitesis", changeTheme, locale }) => {
+export default ({ children, title = "Acueducto", changeTheme, locale }) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
+  const [headerTitle, setTitle] = useState("")
   const router = useRouter();
 
   useEffect(() => {
     if (router.route === "/") {
       setShowSketch(true);
+      setTitle("")
     } else {
+      setTitle(router.route.split("/").pop())
       setShowSketch(false);
     }
     console.log(router.route);
   }, [router.route]);
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-  // useEffect(() => {
-  //   document.getElementById("PageWrapper").scrollTop = 0;
-  // });
 
   const toggleNav = () => {
     setOpen(!isOpen);
@@ -53,12 +49,13 @@ export default ({ children, title = "Antitesis", changeTheme, locale }) => {
         <title>{title}</title>
       </Head>
       <Styles />
-      <PageWrapper id="PageWrapper">
-        {showSketch? <Sketch/> : " "}
-        {/* {showSketch? <Background /> : " "} */}
+      <PageWrapper>
+        {/* {showSketch? <Sketch/> : ""} */}
+        {showSketch? <Background /> : ""}
         <Border />
         <NavTrigger toggleNav={toggleNav} isOpen={isOpen} />
-        <Header closeNav={closeNav} isOpen={isOpen} />
+        <Header closeNav={closeNav} isOpen={isOpen} title={headerTitle}/>
+        <HeaderTitle>{headerTitle}</HeaderTitle>
         <Nav
           locale={locale}
           toggleNav={toggleNav}
@@ -73,6 +70,17 @@ export default ({ children, title = "Antitesis", changeTheme, locale }) => {
     </>
   );
 };
+
+const HeaderTitle = styled.div`
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    font-size:1.4rem;
+    letter-spacing:4px;
+    z-index: 2;
+    top: 66px;
+`;
 
 const PageWrapper = styled.div`
   width: 100%;
