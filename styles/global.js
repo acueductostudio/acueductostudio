@@ -26,7 +26,10 @@ html {
   height: 100vh;
   box-sizing: border-box;
   font-weight: 100;
-  font-family: 'AcuWide';
+  //font-family: 'AcuWide';
+  font-family: acumin-pro-wide, sans-serif;
+  //font-weight: 400;
+  font-style:normal;
 }
 
 *,
@@ -65,7 +68,6 @@ html {
       margin:0;
       font-weight:inherit;
       font-size: 5.8rem;
-      font-family: 'Work Sans', sans-serif;
     }
     h3{
       font-size: 5.8rem;
@@ -77,12 +79,15 @@ html {
       line-height: 135%;
     }
     h4{
-      font-size: 1.32rem;
       font-weight:inherit;
       margin:0;
     }
     a{
       color: inherit;
+    }
+    ul,ol{
+      margin:0;
+      padding:0;
     }
 
   /* normalize */

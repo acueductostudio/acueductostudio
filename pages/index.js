@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { useInView } from "react-intersection-observer";
 import TitleSection from "../components/TitleSection";
+import PageClipper from "../components/PageClipper";
 import Loader from "../components/loader";
 import Process from "../components/Process";
 import CaseStudiesPreview from "../components/CaseStudies/CaseStudiesPreview";
@@ -21,8 +22,7 @@ export default function Index(props) {
   let f = props.locale.contactfooter;
   return (
     <>
-      <HomeWrapper>
-        <Scroller>
+      <PageClipper>
           <Head>
             <title>Acueducto</title>
           </Head>
@@ -37,6 +37,7 @@ export default function Index(props) {
               title={t.intro.title}
               text={t.intro.p}
               link={t.intro.link}
+              linktext={t.intro.linktext}
               borderTop
             />
             <ImageGallery>
@@ -45,7 +46,7 @@ export default function Index(props) {
                 columnEnd={8}
                 ratio={60}
                 style={{
-                  backgroundImage: "url(./static/assets/img/layout/intro_1.jpg)"
+                  backgroundImage: "url(https://source.unsplash.com/collection/253848)"
                 }}
               />
               <Image
@@ -54,7 +55,7 @@ export default function Index(props) {
                 ratio={80}
                 style={{
                   backgroundImage:
-                    "url(./static/assets/img/layout/intro_2.jpg)",
+                    "url(https://source.unsplash.com/user/realla)",
                   transform: "translateY(-70%)"
                 }}
               />
@@ -64,8 +65,7 @@ export default function Index(props) {
           <CaseStudiesPreview c={c} />
           <Services s={s} />
           <ContactFooter f={f}/>
-        </Scroller>
-      </HomeWrapper>
+      </PageClipper>
     </>
   );
 }
@@ -73,15 +73,15 @@ export default function Index(props) {
 const Image = styled.figure`
   height: 0;
   padding-bottom: ${props => (props.ratio ? props.ratio + "%" : "60%")};
-  background-size: 106%;
+  background-size: 104%;
+  background-repeat: no-repeat;
   background-position: center;
   transition: background-size 0.5s ease, margin 0.3s ease;
-  background-color: pink;
   grid-column: ${props => (props.columnStart ? props.columnStart : 1)} / span
     ${props => (props.columnEnd ? props.columnEnd : 5)};
   &:hover {
     background-size: 100%;
-    margin: 0 20px;
+    margin: 0 10px;
     z-index: 0;
   }
 `;
@@ -95,13 +95,7 @@ const ImageGallery = styled.div`
   padding: 0 4%;
 `;
 
-const Scroller = styled.div`
-  position: relative;
-  min-height: 100vh;
-  overflow-y: scroll;
-`;
-
-const Land = styled.div`
+const Land = styled.section`
   min-height: 100%;
   width: 100%;
   display: grid;
@@ -131,23 +125,8 @@ const LandContainer = styled.div`
   }
 `;
 
-const Intro = styled.div`
+const Intro = styled.section`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
-  min-height: 100vh;
   transition: 0.3s ease all;
-`;
-
-const HomeWrapper = styled.div`
-  display: flex;
-  width: calc(100% - 44px);
-  height: calc(100% - 44px);
-  position: absolute;
-  margin: 0 auto;
-  max-width: 1496px;
-  top: 20px;
-  left: 20px;
-  bottom: 20px;
-  right: 20px;
-  overflow: hidden;
 `;

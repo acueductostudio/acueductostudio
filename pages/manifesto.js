@@ -1,49 +1,48 @@
 import styled from "styled-components";
-import Slide from "react-reveal/Slide";
 import Head from "next/head";
+import PageClipper from "../components/PageClipper";
+import ContactFooter from "../components/ContactFooter";
+import PinnedSection from "../components/PinnedSection";
+import CaseStudiesPreview from "../components/CaseStudies/CaseStudiesPreview";
 
+export default function Manifesto(props) {
+  let t = props.locale.manifesto_page;
+  let f = props.locale.contactfooter;
+  let c = props.locale.casestudies;
 
-export default function Manifesto() {
+  let beliefs = t.beliefs.map(function(belief, index) {
+    return (
+      <Belief key={"belief" + index}>
+        <span>{index + 1}</span>
+        <h3>{belief.title}</h3>
+        <p>{belief.p}</p>
+      </Belief>
+    );
+  });
   return (
-    <RentaWrapper>
-          <Head>
+    <PageClipper>
+      <Head>
         <title>Acueducto | Manifesto</title>
       </Head>
-      <Slide bottom cascade>
-        <h2>Manifesto</h2>
-      </Slide>
-    </RentaWrapper>
+      <PinnedSection t={t} scroll={<ol>{beliefs}</ol>} />
+      <CaseStudiesPreview c={c} />
+      <ContactFooter f={f} />
+    </PageClipper>
   );
 }
 
-const RentaWrapper = styled.div`
-  display: grid;
-  box-sizing: border-box;
-  position: relative;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: flex-end;
-  padding-bottom: 160px;
-  h2 {
-    grid-column: 4 / span 6;
-    text-transform: uppercase;
-    font-size: 3.2rem;
+const Belief = styled.li`
+list-style:none;
+position:relative;
+margin-bottom: 25%;
+  span {
+    color: ${props => props.theme.colors.accent};
+    font-size:3.5rem;
+    position: absolute;
+    left: -4.5rem;
   }
-  h3,
-  h4,
-  p {
-    grid-column: 4 / span 6;
-  }
-  h4 {
-    overflow: visible;
-    a {
-      color: inherit;
-      text-decoration: none;
-      padding-bottom: 4px;
-      border-bottom: 2px solid ${props => props.theme.colors.background};
-      transition: border-color 0.3s ease;
-      &:hover {
-        border-color: ${props => props.theme.colors.foreground};
-      }
-    }
+  h3{
+    font-size:3rem;
+    margin-bottom:10px;
   }
 `;

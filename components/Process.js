@@ -17,7 +17,7 @@ const StepContainer = props => {
       <Fade>
         <span>0{props.index}</span>
         <Icon/>
-        <h4>{props.title}</h4>
+        <h3>{props.title}</h3>
         <p dangerouslySetInnerHTML={createMarkup(props.p)} />
       </Fade>
     </Step>
@@ -38,10 +38,10 @@ const Process = props => {
     );
   });
   return (
-    <ProcessWrapper>
+    <ProcessSection>
       <TitleSection title={p.title} text={p.p} borderTop />
       <StepsSection>{steps}</StepsSection>
-    </ProcessWrapper>
+    </ProcessSection>
   );
 };
 
@@ -54,13 +54,13 @@ const Step = styled.div`
   border: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
-  h4 {
+  h3 {
     font-size: 2.5rem;
     margin-bottom: 10px;
   }
   span {
     color: ${props => props.theme.colors.accent};
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   p {
     font-size: 1.5rem;
@@ -68,7 +68,7 @@ const Step = styled.div`
   }
   svg {
     max-width: 100px;
-    margin: 15% auto;
+    margin: 22% auto;
     display: block;
     * {
       vector-effect: non-scaling-stroke;
@@ -102,8 +102,7 @@ const StepsSection = styled.div`
   }
 `;
 
-const ProcessWrapper = styled.section`
+const ProcessSection = styled.section`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
-  min-height: 90vh;
 `;

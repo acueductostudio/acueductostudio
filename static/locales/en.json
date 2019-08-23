@@ -1,11 +1,11 @@
 {
-  "nav": {
-    "home": "home",
-    "about": "about",
-    "work": "work",
-    "manifesto": "manifesto",
-    "contact": "contact"
-  },
+  "nav": [
+    { "title": "home", "link": "/" },
+    { "title": "about", "link": "/about" },
+    { "title": "work", "link": "/work" },
+    { "title": "manifesto", "link": "/manifesto" },
+    { "title": "contact", "link": "/contact" }
+  ],
   "process": {
     "title": "pioneering</br> in strategic design",
     "p": "Let us share a conviction of ours: Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
@@ -42,12 +42,12 @@
       }
     ]
   },
-  "casestudies":{
+  "casestudies": {
     "intro": {
-      "title": "our selected case studies",
+      "title": "our selected</br> case studies",
       "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.</br></br>Read about selected projects we have launched alongside our partners."
     },
-    "studies":[
+    "studies": [
       {
         "title": "from strategy to production in the filmmaking industry",
         "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
@@ -62,32 +62,65 @@
       }
     ]
   },
-  "services" :{
+  "services": {
     "intro": {
       "title": "from ideation</br>to launch",
       "p": "– And everything in between.</br></br> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
-    }
+    },
+    "service_categories": [
+      {
+        "title": "Strategy",
+        "tags": [
+          "Project management",
+          "Community management",
+          "Digital marketing"
+        ]
+      },
+      {
+        "title": "Design & content",
+        "tags": [
+          "Transmedia development",
+          "Art direction",
+          "UX design",
+          "Motion design",
+          "Copywriting",
+          "Impact evaluation"
+        ]
+      },
+      {
+        "title": "Development",
+        "tags": [
+          "Prototyping",
+          "Development",
+          "User testing",
+          "Platform integration",
+          "Deployment"
+        ]
+      }
+    ]
   },
-  "contactfooter":{
+  "contactfooter": {
     "title": "let's talk business",
-    "p":"We want to partner with you"
-  },  
+    "p": "We want to partner with you"
+  },
   "home_page": {
     "landing": {
       "heading": "we are a strategic design</br>& development studio",
-      "tagline": "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds"
+      "tagline": "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
     },
     "intro": {
       "title": "the new generation</br> of digital thinking",
-      "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. </br></br>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.</br></br>Read more <a href=\"/about\">about us</a>"
+      "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. </br></br>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
+      "link" : ["/about", "about us"],
+      "linktext": "Read more"
     },
     "studies": {
-      "title": "our selected case studies",
+      "title": "our selected</br> case studies",
       "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.</br></br>Read about selected projects we have launched alongside our partners."
     }
   },
   "about_page": {
-    "main": {
+    "intro": {
       "title": "a two-part ensemble to grow your business",
       "p": "Without us knowing, we started this studio 15 years ago when we began to fall in love with technology, music, and alternative & pop culture. Growing up together, and driven by each other’s perspectives, we would always push ourselves forward; and everytime we shared a song, a design, or a business idea, we felt fascinated by the mind of the other.</br></br>Motivated by high standards and innovation, we joined our professional paths in order to create thoughtful and powerful digital experiences.</br></br>Acueducto is not just a studio, is the result of a journey that has taken us many years to build, as our own firendship."
     },
@@ -106,14 +139,66 @@
       }
     ],
     "values": {
-      "title": "building</br> better</br> communities",
-      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.</br></br>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.</br></br>Read our <a href=\"/manfesto\"> Manifesto</a>"
+      "title": "building better</br> communities",
+      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.</br></br>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.",
+      "link" :["/manifesto", "Manifesto"],
+      "linktext":"Read our"
     }
   },
-  "work_page":{
+  "work_page": {
     "intro": {
       "title": "we crafted these studies for you",
       "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what can it achieve.</br></br>Read about the selected projects we have launched alongside our partners."
+    }
+  },
+  "manifesto_page": {
+    "intro": {
+      "title": "what makes the work great",
+      "p": "Years of experience have shaped the core values of Acueducto; governed by the following principles, we aim to become better impact-driven business strategists and quality-driven digital experience developers. </br></br>This is our Manifesto."
+    },
+    "beliefs": [
+      {
+        "title": "We partner with you",
+        "p": "Trust us, working in partnership gets the best results."
+      },
+      {
+        "title": "We love problems",
+        "p": "And amazing work can happen if we analyze them together."
+      },
+      {
+        "title": "We are quality driven",
+        "p": "If our work is not incredible, why bother doing it?"
+      },
+      {
+        "title": "We are human",
+        "p": "We put people first, working respecfully with respectful clients."
+      },
+      {
+        "title": "We work for your users",
+        "p": "There may be times we will have to side with them."
+      },
+      {
+        "title": "We are tech romantics",
+        "p": "Future solutions for today's problems, expect the bleeding edge."
+      },
+      {
+        "title": "We are fair",
+        "p": "We rate our work on the added value we bring to your business."
+      },
+      {
+        "title": "We keep learning",
+        "p": "We embrace change, a lot of times it’s part of the solution."
+      },
+      {
+        "title": "We are always open",
+        "p": "We love feedback, hearing what you have to say is a fundamental part of our process."
+      }
+    ]
+  },
+  "contact_page": {
+    "intro": {
+      "title": "let’s be partners let’s be friends",
+      "p": "We would love to start getting to know you, fill in this guided form with the details about your project, or just write us directly at hola@acueducto.studio"
     }
   }
 }

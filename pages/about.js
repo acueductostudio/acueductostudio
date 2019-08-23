@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import TitleSection from "../components/TitleSection";
+import PageClipper from "../components/PageClipper";
 import createMarkup from "../helpers/createMarkup";
 import Process from "../components/Process";
 import Services from "../components/Services";
 import ContactFooter from "../components/ContactFooter";
+import PinnedSection from "../components/PinnedSection";
 
 const Head3D = dynamic(import("../components/head3D/Head3D"), {
   loading: () => <span style={{ height: "500px" }}>Loading head...</span>,
@@ -38,36 +39,37 @@ export default function About(props) {
   //   );
   // });
 
+  //Arte manual
+
   return (
-    <NosotrosWrapper>
+    <PageClipper>
       <Head>
         <title>Acueducto | About</title>
       </Head>
-      <Grid>
-        <Fade>
-          <h2>{t.main.title}</h2>
-          <p dangerouslySetInnerHTML={createMarkup(t.main.p)} />
-        </Fade>
-        <ScrollDown>
+      <PinnedSection
+        t={t}
+        scroll={
+          <>
           <Person>
             {isVisible ? <Head3D file={t.team[0].model} /> : ""}
             <h4>{t.team[0].name}</h4>
             <span>{t.team[0].position}</span>
             <p dangerouslySetInnerHTML={createMarkup(t.team[0].p)} />
           </Person>
-          {/* <Person>
-            {isVisible ? <Head3D file={t.team[1].model} /> : ""}
-            <h4>{t.team[1].name}</h4>
-            <span>{t.team[1].position}</span>
-            <p dangerouslySetInnerHTML={createMarkup(t.team[1].p)} />
-          </Person> */}
-        </ScrollDown>
-      </Grid>
-      <TitleSection title={t.values.title} text={t.values.p} borderTop />
-      <Process p={p}/>
-      <Services s={s}/>
-      <ContactFooter f={f}/>
-    </NosotrosWrapper>
+            <Person>
+            {/* {isVisible ? <Head3D file={t.team[1].model} /> : ""} */}
+        <h4>{t.team[1].name}</h4>
+          <span>{t.team[1].position}</span>
+          <p dangerouslySetInnerHTML={createMarkup(t.team[1].p)} />
+         </Person>
+         </>
+        }
+      />
+      <TitleSection title={t.values.title} text={t.values.p} link={t.values.link} linktext={t.values.linktext} borderTop />
+      <Process p={p} />
+      <Services s={s} />
+      <ContactFooter f={f} />
+    </PageClipper>
   );
 }
 
@@ -88,52 +90,10 @@ const Person = styled.div`
   }
 `;
 
-const ScrollDown = styled.div`
-  grid-column: 7 / span 4;
-  display: flex;
-  flex-direction: column;
-`;
-const Grid = styled.div`
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 2.2rem;
-  width: 100%;
-  display: grid;
-  padding: 10% 4%;
-  border-top: ${props =>
-    props.borderTop
-      ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`
-      : "none"};
-  h2 {
-    grid-column: 2 / span 4;
-    position: sticky;
-    top: 17.5%;
-  }
-  p {
-    grid-column: 7 / span 5;
-    color: ${props => props.theme.colors.foreground_low};
-    margin-bottom: 5%;
-  }
-`;
-
 const ModelSection = styled.div`
   min-height: 500px;
   height: auto;
   position: relative;
   width: 100%;
   display: flex;
-`;
-const NosotrosWrapper = styled.div`
-  display: flex;
-  width: calc(100% - 44px);
-  height: calc(100% - 44px);
-  position: absolute;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 1500px;
-  top: 20px;
-  left: 20px;
-  bottom: 20px;
-  right: 20px;
-  overflow-x: hidden;
-  overflow-y: scroll;
 `;

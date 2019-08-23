@@ -1,30 +1,18 @@
 import styled from "styled-components";
 import Head from "next/head";
 import Fade from "react-reveal/Fade";
+import PageClipper from "../components/PageClipper";
+import TitleSection from "../components/TitleSection";
 
-export default function Contact() {
+
+export default function Contact(props) {
+  let t = props.locale.contact_page;
   return (
-    <ContactoWrapper>
+    <PageClipper>
       <Head>
-        <title>Antítesis Films | Contacto</title>
+        <title>Acueducto | Contact</title>
       </Head>
-      <Fade>
-        <h2>Contacto</h2>
-      </Fade>
-    </ContactoWrapper>
+      <TitleSection title={t.intro.title} text={t.intro.p}/>
+    </PageClipper>
   );
 }
-
-const ContactoWrapper = styled.div`
-    display: flex;
-    width: calc(100% - 44px);
-    height: calc(100% - 44px);
-    position: absolute;
-    margin: 0 auto;
-    max-width: 1500px;
-    top: 20px;
-    left: 20px;
-    bottom: 20px;
-    right: 20px;
-    overflow: hidden;
-`;

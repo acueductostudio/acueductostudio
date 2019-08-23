@@ -1,3 +1,5 @@
-<svg viewBox="0 0 27 22">
-<path d="M0 2H13.5H27M0 11H27M14.3182 20H27" vector-effect="non-scaling-stroke"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 22">
+    <line id="top" x1="0" x2="27" y1="2" y2="2" vector-effect="non-scaling-stroke"/>
+    <line id="mid" x1="0" x2="27" y1="11" y2="11" vector-effect="non-scaling-stroke"/>
+    <line id="bot" x1="14.3" x2="27" y1="20" y2="20" vector-effect="non-scaling-stroke"/>
 </svg>

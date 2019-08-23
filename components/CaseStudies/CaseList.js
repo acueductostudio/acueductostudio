@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import TitleSection from "../TitleSection";
 import createMarkup from "../../helpers/createMarkup";
 import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
@@ -37,7 +36,7 @@ const CaseList = props => {
       );
     }
   });
-  return <CaseStudiesSmallWrapper>{cases}</CaseStudiesSmallWrapper>;
+  return <CaseStudiesWrapper>{cases}</CaseStudiesWrapper>;
 };
 
 export default CaseList;
@@ -84,8 +83,7 @@ const Case = styled.div`
   }
 `;
 
-const CaseStudiesSmallWrapper = styled.section`
+const CaseStudiesWrapper = styled.section`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
-  min-height: 90vh;
 `;

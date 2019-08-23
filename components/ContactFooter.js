@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
 import Imago from "../static/assets/img/layout/imago.svg";
-import Arrow from "../static/assets/img/layout/arrow.svg";
+import Arrow from "../components/Arrow";
 
-const ContactFooter = (props) => {
+const ContactFooter = props => {
   let f = props.f;
   return (
     <Grid>
@@ -15,16 +15,16 @@ const ContactFooter = (props) => {
       </Graphic>
       <Linked>
         <Fade>
-          <Link href="/contact">
-            <h2>{f.title}</h2>
+          <Link href="/contact" passHref>
+            <a>
+              <h2>{f.title}</h2>
+              <Flexed>
+                <p>{f.p}</p>
+                <Arrow />
+              </Flexed>
+            </a>
           </Link>
-          </Fade>
-          <Flexed>
-            <Fade>
-            <p>{f.p}</p>
-            <Arrow />
-            </Fade>
-          </Flexed>
+        </Fade>
       </Linked>
     </Grid>
   );
@@ -50,32 +50,26 @@ const Linked = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  width:100%;
-  cursor: pointer;
-  svg {
-    align-self: flex-end;
-    width: 50px;
-    height: 40px;
-    fill: none;
-    stroke: ${props => props.theme.colors.foreground};
-    stroke-width: ${props => props.theme.stroke};
+  width: 100%;
+  a{
+    text-decoration:none;
   }
 `;
 
 const Flexed = styled.div`
-display:flex;
-justify-content: space-between;
-align-items:center;
-width:100%;
-margin-top: 25px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
 `;
 
-const Grid = styled.div`
+const Grid = styled.footer`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2.2rem;
   width: 100%;
   display: grid;
-  padding: 10% 4%;
+  padding: 7% 4%;
   background-color: ${props => props.theme.colors.accent};
   h2 {
     display: inline;

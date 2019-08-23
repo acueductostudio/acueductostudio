@@ -51,8 +51,6 @@ export default ({ children, title = "Antitesis", changeTheme, locale }) => {
     <>
       <Head>
         <title>{title}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Styles />
       <PageWrapper id="PageWrapper">

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Hamburger from "../static/assets/img/layout/hamburger.svg";
 
 const NavTrigger = props => (
@@ -37,10 +37,26 @@ const Trigger = styled.div`
     width: 100%;
     height: auto;
     padding-top: 7px;
-    path {
+    line {
       stroke-width: ${props => props.theme.stroke};
       stroke-linejoin: round;
       stroke: ${props => props.theme.colors.white};
+      transition: transform .3s ease;
+      &#bot{
+        transition: transform .3s ease .15s;
+      }
     }
   }
+  ${props =>
+    props.open &&
+    css`
+      svg {
+        #top{
+          transform: translateX(-27px);
+        } 
+        #bot{
+          transform: translateX(13px);
+        }
+      }
+    `}
 `;
