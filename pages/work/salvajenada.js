@@ -6,21 +6,11 @@ import Fade from "react-reveal/Fade";
 import ContactFooter from "../../components/ContactFooter";
 import LogoSalvaje from "../../static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
 import createMarkup from "../../helpers/createMarkup";
-import Marquee from "react-double-marquee";
+import Marquee from "../../helpers/react-double-marquee";
 
 export default function Salvajenada(props) {
-  const [mountMarkee, setMarkeee] = useState(true);
   let t = props.locale.casestudies.studies.salvajenada;
   let f = props.locale.contactfooter;
-
-  useEffect(() => {
-    // setMarkeee(true);
-    // console.log("set true effect");
-    return function cleanup() {
-      setMarkeee(false);
-      console.log("set false cleanup");
-    };
-  });
 
   let formarquee = t.intro_section.tags.map(function(tag, index) {
     return <h3 key={index + "h"}>{tag}</h3>;
@@ -37,13 +27,11 @@ export default function Salvajenada(props) {
         </Land>
       </Fade>
       <Intro>
-        {mountMarkee ? (
-          <TagScroll>
-            <Marquee delay={0} childMargin={0}>
-              {formarquee} {formarquee}
-            </Marquee>
-          </TagScroll>
-        ) : null}
+        <TagScroll>
+          <Marquee delay={0} childMargin={0}>
+            {formarquee} {formarquee}
+          </Marquee>
+        </TagScroll>
         <Video />
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />

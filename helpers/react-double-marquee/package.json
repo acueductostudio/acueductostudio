@@ -1,0 +1,86 @@
+{
+  "name": "react-double-marquee",
+  "version": "0.3.4",
+  "description": "A smooth-scrolling React <marquee> component that loops content twice",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup --config config/rollup.config.prod.js",
+    "build:watch": "npm run build -- --watch",
+    "cz": "git-cz",
+    "dev": "rollup --config config/rollup.config.dev.js --watch",
+    "docs": "rollup --config config/rollup.config.docs.js",
+    "lint": "eslint \"src/**\"",
+    "release": "semantic-release",
+    "release:verify": "npm run build && npm run lint && npm run docs && npm run release",
+    "test": "jest",
+    "test:coverage": "npm run test -- --coverage",
+    "test:coveralls": "npm run test:coverage && cat coverage/lcov.info | coveralls",
+    "test:watch": "npm run test -- --watch"
+  },
+  "keywords": [
+    "React",
+    "Marquee",
+    "Component"
+  ],
+  "author": "Colin Tinney (https://tinney.dev)",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.4",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "@timdp/rollup-plugin-image": "^1.0.3",
+    "babel-eslint": "^10.0.1",
+    "commitizen": "^3.0.7",
+    "coveralls": "^3.0.3",
+    "cz-conventional-changelog": "^2.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.5.0",
+    "rollup": "^1.6.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-live-server": "^1.0.1",
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-replace": "^2.1.0",
+    "semantic-release": "^15.13.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-json-pretty": "^2.1.0",
+    "react-jss": "^8.6.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
+  }
+}
