@@ -73,15 +73,16 @@ const Grid = styled.footer`
   background-color: ${props => props.theme.colors.accent};
   h2 {
     display: inline;
+    padding:0;
     font-size: 8.5rem;
     font-weight:200;
     background-size: 1px 1em;
-    box-shadow: ${props => props.theme.colors.accent} 0px -7px inset,
+    box-shadow: ${props => props.theme.colors.accent} 0px -8px inset,
       ${props => props.theme.colors.foreground} 0px -12px inset;
     transition: 0.3s ease all;
     line-height: 108%;
     &:hover {
-      box-shadow: ${props => props.theme.colors.accent} 0px -7px inset,
+      box-shadow: ${props => props.theme.colors.accent} 0px -8px inset,
         ${props => props.theme.colors.background} 0px -12px inset;
     }
   }

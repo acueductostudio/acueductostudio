@@ -15,7 +15,7 @@ Cookie message
 3D heads
 404
 Animation hovers
-language icons
+Language change
 
 ## Falta materiales
 - Arte debe mandar la animación del fondo para  el caso de estudio  de  salvajenada

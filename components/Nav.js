@@ -1,44 +1,29 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
-import { useState } from "react";
-import { useEffect } from "react";
-import { useSpring, animated } from "react-spring";
 import Fade from "react-reveal/Fade";
 import { useRouter } from "next/router";
 
-const NavLink = styled.a`
-  color: ${({ active }) => active ? 'red' : 'black'}; 
-`
-
 export default function Nav(props) {
-  let t = props.locale.nav; 
-  const router = useRouter();
+  let t = props.locale.nav;
 
-  const NavLink = ({ href, name }) => {
+  const ActiveLink = ({ children, ...props }) => {
+    const router = useRouter();
+    const child = React.Children.only(children);
     return (
-      <Link href={href} passHref>
-        {/* <a selected={router.pathname === href ? true : false}>{name}</a> */}
-        <a selected>{name}</a>
+      <Link {...props} passHref>
+        {React.cloneElement(child, { active: router.pathname === props.href })}
       </Link>
     );
   };
-  
-  const ActiveLink = ({ children, ...props }) => {
-    const router = useRouter()
-    const child = React.Children.only(children)
-    return (
-      <Link {...props}>
-        {React.cloneElement(child, { active: router.pathname === props.href })}
-      </Link>
-    )
-  }
 
   let navItems = t.map(function(item, index) {
     return (
       <Fade delay={200 + index * 50} key={"item" + index}>
         <li>
           <span>0{index + 1}</span>
-          <NavLink href={item.link} name={item.title} />
+          <ActiveLink href={item.link}>
+            <NavLink>{item.title}</NavLink>
+          </ActiveLink>
         </li>
       </Fade>
     );
@@ -71,6 +56,24 @@ export default function Nav(props) {
   );
 }
 
+const NavLink = styled.a`
+  font-size: 6rem;
+  font-weight: 200;
+  transition: box-shadow 250ms ease;
+  box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
+      ${props => props.theme.colors.background} 0px 57px inset;
+  &:hover {
+    box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
+      ${props => props.theme.colors.accent} 0px 59px inset;
+  }
+  ${props =>
+    props.active &&
+    css`
+      box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
+        ${props => props.theme.colors.foreground_lowest} 0px 57px inset;
+    `}
+`;
+
 const Social = styled.div`
   grid-column: 5 / span 5;
   a {
@@ -85,7 +88,7 @@ const BottomNav = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   grid-gap: 2.2rem;
-  display:grid;
+  display: grid;
   border-top: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   position: absolute;
@@ -111,10 +114,6 @@ const NavList = styled.nav`
       font-size: 6rem;
       line-height: 160%;
       position: relative;
-      a{
-        font-weight: 200;
-        border-bottom: ${props => props.selected ? "2px solid blue" : "none"};
-      }
       span {
         color: ${props => props.theme.colors.accent};
         font-size: 1.5rem;

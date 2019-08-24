@@ -5,6 +5,7 @@ import Header from "./header";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
 import NightMode from "../static/assets/img/layout/night.svg";
+import Language from "../static/assets/img/layout/language.svg";
 import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
 
@@ -64,7 +65,7 @@ export default ({ children, title = "Acueducto", changeTheme, locale }) => {
         />
         {children}
         <ModeToggler isOpen={isOpen} onClick={() => doChangeTheme()}>
-          <NightMode />
+          <Language />
         </ModeToggler>
       </PageWrapper>
     </>
@@ -135,10 +136,10 @@ const ModeToggler = styled.div`
   svg {
     width: 30px;
     pointer-events: auto;
-    path {
+    .a {
       fill: ${props => props.theme.colors.white};
     }
-    circle {
+    * {
       fill: none;
       stroke-width: ${props => props.theme.stroke};
       stroke: ${props => props.theme.colors.white};
@@ -152,7 +153,7 @@ const Background = styled.div`
   right: 0;
   bottom: 0;
   top: 0%;
-  background-image: url("./static/assets/img/layout/fond.jpg");
+  background-image: url("../static/assets/img/layout/fond.jpg");
   background-size: cover;
 `;
 

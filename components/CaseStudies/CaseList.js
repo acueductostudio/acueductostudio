@@ -2,16 +2,29 @@ import styled from "styled-components";
 import createMarkup from "../../helpers/createMarkup";
 import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
+import Link from "next/link";
+
+
+//var otherProyects = Object.entries(proyects).map(function(_proyect, index) {
+
 
 const SingleCase = props => {
   return (
     <Case>
-      <figure />
+      <Link href={"work" + props.link} passHref>
+        <a>
+          <figure />
+        </a>
+      </Link>
       <Info>
         <h4>{props.title}</h4>
         <Flexed>
           <p dangerouslySetInnerHTML={createMarkup(props.tags)} />
-          <Arrow />
+          <Link href={"work" + props.link} passHref>
+            <a>
+              <Arrow />
+            </a>
+          </Link>
         </Flexed>
       </Info>
     </Case>
@@ -21,7 +34,8 @@ const SingleCase = props => {
 const CaseList = props => {
   let c = props.c;
 
-  let cases = c.map(function(study, index) {
+  let cases = Object.entries(c).map(function(study, index) {
+    study = study[1]
     if (props.limit !== undefined && index + 1 > props.limit) {
       return;
     } else {
@@ -45,6 +59,10 @@ const Flexed = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  a{
+    justify-content: flex-end;
+    display: flex;
+  }
 `;
 
 const Info = styled.div`

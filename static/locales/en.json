@@ -47,20 +47,48 @@
       "title": "our selected</br> case studies",
       "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.</br></br>Read about selected projects we have launched alongside our partners."
     },
-    "studies": [
-      {
+    "studies": {
+      "ladanzadelasfieras": {
         "title": "from strategy to production in the filmmaking industry",
         "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
         "video": "fieras.mp4",
-        "link": "ladanzadelasfieras"
+        "link": "/ladanzadelasfieras"
       },
-      {
+      "salvajenada": {
         "title": "how do you share music nowadays?",
         "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
         "video": "fieras.mp4",
-        "link": "salvajenada"
+        "link": "/salvajenada",
+        "intro_section": {
+          "tags": [
+            "project strategy",
+            "content strategy",
+            "digital tov",
+            "copywriting"
+          ],
+          "video": "salvajevideo.mp4",
+          "title": "Act I</br>Death sights",
+          "p": "Sebastián, aka Sebas, and his crew of music tasters -including our own founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
+          "graphicp": "days without posting",
+          "p2": "But one year before we partnered, Salvajenada was showing death sights. Their social media channels where deserted, their website was outdated and slow, and all its collaborators felt like the project had already given what it had, and nobody was taking any action."
+        },
+        "second_section": {
+          "title": "Act II</br>The crafting of an amazing playlist",
+          "p": "The first thing was reviewing the founding ideas and values of the brand, its last actions, and their responsibilities in order to create a strong digital project. Even though Salvajenada had been afloat for over 5 years, this was the first time they were developing a proper model that framed their whole business model and company values.</br></br>Finding solutions is about making the right choices. A wide-picture perspective is mandatory in order to re-frame the complications of an organization and identify highlights and opportunities.",
+          "table": [
+            {
+              "label": "Strengths",
+              "content": "Music discovery team</br>Brand authority"
+            },
+            {
+              "label": "Restrictions",
+              "content": "Collaborators time</br>Only work on digital context"
+            }
+          ],
+          "p2": "Context analysis threw a possible solution: bring back to life their new-discoveries playlist known as #CanastaBásica -which is spanish for food basket, an analogy for the basic dietary music needs for a human being- and make it the core product of the organization. </br></br>Collaborators would just drag and drop their daily discoveries into a joint list and the rest of the communication work would be done by three collaborators who formed a team for content creation and moderation."
+        }
       }
-    ]
+    }
   },
   "services": {
     "intro": {
@@ -111,7 +139,7 @@
     "intro": {
       "title": "the new generation</br> of digital thinking",
       "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. </br></br>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
-      "link" : ["/about", "about us"],
+      "link": ["/about", "about us"],
       "linktext": "Read more"
     },
     "studies": {
@@ -141,8 +169,8 @@
     "values": {
       "title": "building better</br> communities",
       "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.</br></br>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.",
-      "link" :["/manifesto", "Manifesto"],
-      "linktext":"Read our"
+      "link": ["/manifesto", "Manifesto"],
+      "linktext": "Read our"
     }
   },
   "work_page": {
