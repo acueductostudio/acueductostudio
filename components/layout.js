@@ -81,6 +81,7 @@ const HeaderTitle = styled.div`
     letter-spacing:4px;
     z-index: 2;
     top: 66px;
+    mix-blend-mode: exclusion;
 `;
 
 const PageWrapper = styled.div`

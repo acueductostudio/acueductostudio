@@ -68,7 +68,7 @@
           ],
           "video": "salvajevideo.mp4",
           "title": "Act I</br>Death sights",
-          "p": "Sebastián, aka Sebas, and his crew of music tasters -including our own founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
+          "p": "Sebastián Tavera, aka Sebas, and his crew of music tasters -including our own founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
           "graphicp": "days without posting",
           "p2": "But one year before we partnered, Salvajenada was showing death sights. Their social media channels where deserted, their website was outdated and slow, and all its collaborators felt like the project had already given what it had, and nobody was taking any action."
         },
@@ -85,7 +85,60 @@
               "content": "Collaborators time</br>Only work on digital context"
             }
           ],
-          "p2": "Context analysis threw a possible solution: bring back to life their new-discoveries playlist known as #CanastaBásica -which is spanish for food basket, an analogy for the basic dietary music needs for a human being- and make it the core product of the organization. </br></br>Collaborators would just drag and drop their daily discoveries into a joint list and the rest of the communication work would be done by three collaborators who formed a team for content creation and moderation."
+          "p2": "Context analysis threw a possible solution: bring back to life their new-discoveries playlist known as #CanastaBásica -which is spanish for food basket, an analogy for the basic dietary music needs for a human being- and make it the core product of the organization. </br></br>Collaborators would just drag and drop their daily discoveries into a joint list and the rest of the communication work would be done by three collaborators who formed a team for content creation and moderation.",
+          "p3": "How could this playlist be more special than the plethora of selections you can find on the web?</br>Building a strong value proposition and a solid strategy around it.",
+          "table2": [
+            {
+              "p": "Value proposition</br></br>Playlist updated every 15 days with new and authentic music. A selection of an experienced team of music researchers whose goal is to break with conventional trends and create new experiences."
+            },
+            {
+              "p": "Customer relationship</br></br>- Reviews, music in context</br>- Playlist update</br>- Authority badges"
+            },
+            {
+              "p": "Channels</br></br>- Social Media</br>- Music Platforms</br>- Radio show"
+            }
+          ],
+          "quote": {
+            "quote": "Building a business model helped us launch the project and follow through it. Amazing ideas are now landed every quarter as we adjust our future actions with our metrics at hand. This actually shapes everything we do and the responsibilities distributed in the team; we all know where we’re going to and what’s expected to happen in the future timeline.",
+            "name": "Sebastián Tavera"
+          }
+        },
+        "third_section": {
+          "subtitle": "– Post, engage and spread",
+          "p": "The discovery phase threw several insights that helped build the communication plan with an incredible playlist at its core. Through conducted research and data analysis Acueducto and the team decided to use Instagram as their main media channel, and publish the playlist updates through Apple Music and Spotify.</br></br>Taking this into consideration, a plan was crafted to reach and engage with the existing audience and new possible users.",
+          "insights": {
+            "periodicity": {
+              "title": "Periodicity",
+              "p": "Whatever you do on social media needs consistency, #CanastaBásica is programmed to be updated every 15 days along a special selection of six Instagram posts that are micro-reviews of the best songs in the update.  Including the posts that announce every new release, this reviews sum a total of 108 posts in the Instagram feed every two quarters, an average of 4.5 every week."
+            },
+            "meaningfulness": {
+              "title": "Meaningfulness",
+              "p": "Listeners do not just receive a new selection of the latest music releases every 15 days, but they also get context and information on the best songs of the list. As an artist, appearing in any “best of” playlist works to the promotion and credibility of the picked song, receiving an honorific mention serves as an authority badge even more."
+            },
+            "spreadability": {
+              "title": "Spreadability",
+              "p": "The last point relates directly to this one. By giving artists an authority badge they could show to the world, their reviews could be proudly shared among their profiles in Instagram Stories. These featured artists shared Salvajenada’s content more than 20 times, which makes an average of one per edition. This way, Salvajenada got featured in artists profiles and reached their audiences."
+            },
+            "multimedia_development": {
+              "title": "Multimedia development",
+              "p": "The playlist was pitched to the editorial team of Ibero 90.9 FM, the biggest college radio in Mexico, and from that moment on, every time the playlist updates the team of Salvajenada is invited to play and discuss their featured themes live on air.",
+              "quote": {
+                "quote": "We don’t own just a playlist that users can listen to, it’s the branded concept of sharing new music, a collection of songs that you might be able to find on your own, but you might not have the time to search for. #CanastaBasica solves that problem and also serves as a place where you can learn about the context of the new music you discover (and love).",
+                "name": "Sebastián Tavera"
+              }
+            }
+          }
+        },
+        "fourth_section":{
+          "title" : "Act III</br>Stats and plans",
+          "p" : "The strategy was implemented and after launch Salvajenada’s profiles on social media and music platforms threw immediate and positive results in areas such as following base, reach and engagement. Take a look at the data collected after the first semester of work:",
+          "stats" : {
+            "x" : "p"
+          },
+          "p2" : "Motivated by these results, Salvajenada is now thinking of how to turn their following base into revenue streams, current ideas go from organizing concerts and advertising music releases, to partnering with a vinyl store to offer a suscription-based physical record delivery system.</br></br>Taking over their niche with an amazing concept, Sebastián and his crew are currently working towards reaching and engaging with more people who, just like them, love discovering new music from around the world. </br></br>And taking Acueducto’s digital consultancy and partnership to develop a web experience, a new strategy is being built to offer value to this community of music lovers through content and digital innovation. "
+        },
+        "fifth_section":{
+          "title" : "listen to #CanastaBasica"
         }
       }
     }
