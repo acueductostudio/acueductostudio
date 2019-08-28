@@ -449,6 +449,8 @@ const CommonSection = styled.section`
   display: flex;
   flex-direction: column;
   position: relative;
+  height:auto;
+  flex: 0 0 auto;
 `;
 
 const CommonTransition = styled.div`

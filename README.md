@@ -24,11 +24,15 @@ Cookie message
 404
 Animation hovers
 Language change
+No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
+
+## Optimizar
+Lazy load images on case studies
+Cortes limpios en fondos de caso de estudio de Salvajenada
+
 
 ## Falta materiales
-- Arte debe mandar la animación del fondo para  el caso de estudio  de  salvajenada
-
-No tiene sentido importar el locale manualmente en cada página, probar  ContextProvider
+- Link de Apple Music para caso de estudio de salvajenada
 
 ## To consider 
 - Friends is not too professional, think about it, especially because of the amount of  case  studies, combine  with contact footer?
