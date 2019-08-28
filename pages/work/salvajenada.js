@@ -653,8 +653,7 @@ const Land = styled.section`
   align-items: center;
   margin-top: 2px;
   svg {
-    max-width: 80%;
-    max-height: 860px;
-    width: 100%;
+    max-width: 860px;
+    width: 70%;
   }
 `;
