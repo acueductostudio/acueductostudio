@@ -75,6 +75,7 @@
         "second_section": {
           "title": "Act II</br>The crafting of an amazing playlist",
           "p": "The first thing was reviewing the founding ideas and values of the brand, its last actions, and their responsibilities in order to create a strong digital project. Even though Salvajenada had been afloat for over 5 years, this was the first time they were developing a proper model that framed their whole business model and company values.</br></br>Finding solutions is about making the right choices. A wide-picture perspective is mandatory in order to re-frame the complications of an organization and identify highlights and opportunities.",
+          "sticky" : "Listen on",
           "table": [
             {
               "label": "Strengths",
@@ -129,16 +130,35 @@
             }
           }
         },
-        "fourth_section":{
-          "title" : "Act III</br>Stats and plans",
-          "p" : "The strategy was implemented and after launch Salvajenada’s profiles on social media and music platforms threw immediate and positive results in areas such as following base, reach and engagement. Take a look at the data collected after the first semester of work:",
-          "stats" : {
-            "x" : "p"
-          },
-          "p2" : "Motivated by these results, Salvajenada is now thinking of how to turn their following base into revenue streams, current ideas go from organizing concerts and advertising music releases, to partnering with a vinyl store to offer a suscription-based physical record delivery system.</br></br>Taking over their niche with an amazing concept, Sebastián and his crew are currently working towards reaching and engaging with more people who, just like them, love discovering new music from around the world. </br></br>And taking Acueducto’s digital consultancy and partnership to develop a web experience, a new strategy is being built to offer value to this community of music lovers through content and digital innovation. "
+        "fourth_section": {
+          "title": "Act III</br>Stats and plans",
+          "p": "The strategy was implemented and after launch Salvajenada’s profiles on social media and music platforms threw immediate and positive results in areas such as following base, reach and engagement. Take a look at the data collected after the first semester of work:",
+          "stats": [
+            {
+              "big": "<i>+</i>950",
+              "small": "organic playlist growth"
+            },
+            {
+              "big": "<i>+</i>341%",
+              "small": "average reach per publication"
+            },
+            {
+              "big": "<i>x</i>2",
+              "small": "radio airings per week"
+            },
+            {
+              "big": "<i>+</i>42%",
+              "small": "instagram following base"
+            },
+            {
+              "big": "6<i>+</i>",
+              "small": "daily email song submissions from listeners, artists, managers and PR agents"
+            }
+          ],
+          "p2": "Motivated by these results, Salvajenada is now thinking of how to turn their following base into revenue streams, current ideas go from organizing concerts and advertising music releases, to partnering with a vinyl store to offer a suscription-based physical record delivery system.</br></br>Taking over their niche with an amazing concept, Sebastián and his crew are currently working towards reaching and engaging with more people who, just like them, love discovering new music from around the world. </br></br>And taking Acueducto’s digital consultancy and partnership to develop a web experience, a new strategy is being built to offer value to this community of music lovers through content and digital innovation. "
         },
-        "fifth_section":{
-          "title" : "listen to #CanastaBasica"
+        "fifth_section": {
+          "title": "listen to #CanastaBasica"
         }
       }
     }

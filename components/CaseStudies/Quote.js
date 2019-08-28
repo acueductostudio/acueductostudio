@@ -2,7 +2,7 @@ import styled from "styled-components";
 import createMarkup from "../../helpers/createMarkup";
 
 const Quote = props => (
-  <Wrapper>
+  <Wrapper marginBottom={props.marginBottom}>
     <blockquote dangerouslySetInnerHTML={createMarkup(props.quote)} />
     <br />
     <p>– {props.name}</p>
@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   font-size: 3.4rem;
   max-width: 670px;
   margin: 4% 0;
+  margin-bottom: ${props => props.marginBottom ? props.marginBottom : "4%"};
   blockquote {
     margin: 0;
     position: relative;

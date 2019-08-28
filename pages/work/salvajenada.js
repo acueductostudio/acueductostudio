@@ -8,9 +8,13 @@ import ContactFooter from "../../components/ContactFooter";
 import LogoSalvaje from "../../static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
 import Ig from "../../static/assets/img/casestudies/salvajenada/ig.svg";
 import Ibero from "../../static/assets/img/casestudies/salvajenada/90.svg";
+import Wolf from "../../static/assets/img/casestudies/salvajenada/wolf.svg";
+import Apple from "../../static/assets/img/casestudies/salvajenada/apple.svg";
+import Spotify from "../../static/assets/img/casestudies/salvajenada/spotify.svg";
 import createMarkup from "../../helpers/createMarkup";
 import Marquee from "../../helpers/react-double-marquee";
 import Quote from "../../components/CaseStudies/Quote";
+import Stat from "../../components/CaseStudies/Salvajenada/Stat";
 import Insight from "../../components/CaseStudies/Insight";
 import dynamic from "next/dynamic";
 
@@ -20,6 +24,8 @@ const FramesEmbed = dynamic(
     loading: () => <span style={{ height: "500px" }}>Loading frames...</span>
   }
 );
+
+const salvajeBlue = "#009ee2";
 
 export default function Salvajenada(props) {
   let t = props.locale.casestudies.studies.salvajenada;
@@ -85,12 +91,12 @@ export default function Salvajenada(props) {
     for (let i = 0; i < 7; i++) {
       x.push(
         <video
-        autoPlay
-        muted
-        loop
-        key={"tile_" + i}
-        src={`../static/assets/img/casestudies/salvajenada/p_4.mp4`}
-      />
+          autoPlay
+          muted
+          loop
+          key={"tile_" + i}
+          src={`../static/assets/img/casestudies/salvajenada/p_4.mp4`}
+        />
       );
     }
     return x;
@@ -118,7 +124,10 @@ export default function Salvajenada(props) {
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
           <p>{t.intro_section.p}</p>
           <Graphic>
-            <LogoWolf />
+            <LogoWolf>
+              <Wolf />
+            </LogoWolf>
+
             <p>
               <b>429</b>
               <br />
@@ -130,6 +139,20 @@ export default function Salvajenada(props) {
       </Intro>
       <Second>
         <SecondBack />
+        <InterBack />
+        <StickyContainer>
+          <Sticky>
+            <span>{t.second_section.sticky}</span>
+            <div>
+              <a href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g">
+                <Spotify />
+              </a>
+              <a href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g">
+                <Apple />
+              </a>
+            </div>
+          </Sticky>
+        </StickyContainer>
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.second_section.title)} />
           <p dangerouslySetInnerHTML={createMarkup(t.second_section.p)} />
@@ -188,6 +211,7 @@ export default function Salvajenada(props) {
         <Quote
           quote={t.second_section.quote.quote}
           name={t.second_section.quote.name}
+          marginBottom="0px"
         />
       </Second>
       <Third>
@@ -245,7 +269,15 @@ export default function Salvajenada(props) {
           <h2 dangerouslySetInnerHTML={createMarkup(t.fourth_section.title)} />
           <p dangerouslySetInnerHTML={createMarkup(t.fourth_section.p)} />
         </Limited>
-        <Stats />
+        <StatGrid>
+          <Stat stat={t.fourth_section.stats[0]} />
+          <Stat stat={t.fourth_section.stats[1]} />
+          <Stat stat={t.fourth_section.stats[2]} />
+          <Stat stat={t.fourth_section.stats[3]} />
+          <Stat stat={t.fourth_section.stats[4]}>
+            <Wolf />
+          </Stat>
+        </StatGrid>
         <Limited>
           <p dangerouslySetInnerHTML={createMarkup(t.fourth_section.p2)} />
         </Limited>
@@ -264,6 +296,73 @@ export default function Salvajenada(props) {
     </PageClipper>
   );
 }
+
+const Sticky = styled.div`
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  span {
+    padding: 13px 21px;
+    border: ${props =>
+      props.theme.stroke + " solid " + props.theme.colors.foreground};
+    text-align: center;
+  }
+  div {
+    padding: 13px 21px 11px 21px;
+    border: ${props =>
+      props.theme.stroke + " solid " + props.theme.colors.foreground};
+    border-top: 0;
+    display: flex;
+    a {
+      height: 35px;
+      &:nth-child(1) {
+        padding-right: 8px;
+      }
+      &:nth-child(2) {
+        padding-left: 8px;
+      }
+    }
+    svg {
+      width: 100%;
+      * {
+        fill: ${props => props.theme.colors.foreground};
+      }
+    }
+  }
+`;
+
+const StickyContainer = styled.div`
+  width: 135px;
+  position: sticky;
+  right: 0px;
+  top: 200px;
+  display: flex;
+  align-self: flex-end;
+  margin-right: 120px;
+`;
+
+const StatGrid = styled.div`
+  max-width: 900px;
+  width: 100%;
+  margin: 7% 0px;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 0.7fr;
+  gap: 4rem;
+  div:nth-child(5) {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 2;
+    padding: 10% 15% 5% 15%;
+    svg {
+      align-self: flex-end;
+      padding: 6% 0 6% 6%;
+      margin-right: -10px;
+      * {
+        fill: ${salvajeBlue};
+      }
+    }
+  }
+`;
 
 const VideoTile = styled.div`
   display: grid;
@@ -323,14 +422,33 @@ const PlaylistGrid = styled.div`
 const Stats = styled.div`
   height: 500px;
   width: 1000px;
-  background-color: pink;
   margin: 5% 0;
+`;
+
+const CommonStat = styled.div`
+  border: 2px solid white;
+  display: flex;
+  i {
+    font-size: 3.4rem;
+    font-style: normal;
+  }
+  p {
+    padding: 6%;
+    width: 100%;
+    line-height: 85%;
+  }
+  b {
+    font-size: 8rem;
+    font-weight: 200;
+    line-height: 100%;
+  }
 `;
 
 const CommonSection = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 const CommonTransition = styled.div`
@@ -346,7 +464,7 @@ const FifthBack = styled(CommonTransition)`
 `;
 
 const Fifth = styled(CommonSection)`
-  background-color: #009ee2;
+  background-color: ${salvajeBlue};
   color: ${props => props.theme.colors.background};
   padding-bottom: 10%;
   h3 {
@@ -362,7 +480,8 @@ const Fifth = styled(CommonSection)`
 
 const FourthBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/fourthBack.svg");
-  padding-bottom: 46%;
+  padding-bottom: 48%;
+  margin-top: -1px;
 `;
 
 const Fourth = styled(CommonSection)`
@@ -387,19 +506,35 @@ const ThirdBack = styled(CommonTransition)`
   padding-bottom: 42%;
 `;
 
+const InterBack = styled.div`
+  background-image: url("../static/assets/img/casestudies/salvajenada/interBack.svg");
+  background-size: cover;
+  height: 0px;
+  width: 50%;
+  padding-bottom: 96%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  right: 0;
+  z-index: -1;
+`;
+
 const Second = styled(CommonSection)`
-  background-color: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.foreground_low};
+  margin-bottom: 7%;
   h2 {
     color: ${props => props.theme.colors.foreground};
+    padding-top: 0;
   }
   table {
     color: ${props => props.theme.colors.foreground};
   }
 `;
+
 const SecondBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/secondBack.svg");
   padding-bottom: 46%;
+  margin-bottom: 10%;
 `;
 
 const GlobalStyle = createGlobalStyle`
@@ -468,14 +603,11 @@ const Graphic = styled.div`
 `;
 
 const LogoWolf = styled.div`
-  background-image: url("../static/assets/img/casestudies/salvajenada/wolf.svg");
-  background-position: center center;
-  background-size: 82px;
-  height: 0px;
   width: 55%;
-  background-repeat: no-repeat;
-  padding-bottom: 37%;
   border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Video = styled.div`
@@ -502,14 +634,15 @@ const TagScroll = styled.div`
 `;
 
 const Intro = styled(CommonSection)`
-  background-color: #009ee2;
+  background-color: ${salvajeBlue};
   color: ${props => props.theme.colors.background};
   padding-bottom: 8%;
+  margin-top: -1px;
 `;
 
 const Land = styled.section`
   min-height: 100vh;
-  background-color: #009ee2;
+  background-color: ${props => props.theme.colors.background};
   background-image: url("../static/assets/img/casestudies/salvajenada/landBack.svg");
   background-position: center bottom;
   background-size: cover;
@@ -518,7 +651,7 @@ const Land = styled.section`
   align-items: center;
   margin-top: 2px;
   svg {
-    max-width: 90%;
+    max-width: 80%;
     max-height: 860px;
     width: 100%;
   }
