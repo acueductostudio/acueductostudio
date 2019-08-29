@@ -1,5 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
-import { useState, useEffect } from "react";
+import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
 import PageClipper from "../../components/PageClipper";
@@ -19,7 +18,7 @@ import Insight from "../../components/CaseStudies/Insight";
 import dynamic from "next/dynamic";
 
 const FramesEmbed = dynamic(
-  import("../../components/CaseStudies/FramesEmbed"),
+  import("../../components/CaseStudies/Salvajenada/FramesEmbed"),
   {
     loading: () => <span style={{ height: "500px" }}>Loading frames...</span>
   }
@@ -107,7 +106,6 @@ export default function Salvajenada(props) {
       <Head>
         <title>Case Study | Salvajenada</title>
       </Head>
-      <GlobalStyle />
       <Fade>
         <Land>
           <LogoSalvaje />
@@ -127,7 +125,6 @@ export default function Salvajenada(props) {
             <LogoWolf>
               <Wolf />
             </LogoWolf>
-
             <p>
               <b>429</b>
               <br />
@@ -208,46 +205,32 @@ export default function Salvajenada(props) {
             </tr>
           </tbody>
         </table>
-        <Quote
-          quote={t.second_section.quote.quote}
-          name={t.second_section.quote.name}
-          marginBottom="0px"
-        />
+        <Quote quote={t.second_section.quote} marginBottom="0px" />
       </Second>
       <Third>
         <ThirdBack />
         <Limited>
           <h3
-            dangerouslySetInnerHTML={createMarkup(t.third_section.subtitle)}
+            dangerouslySetInnerHTML={createMarkup(
+              "– " + t.third_section.subtitle
+            )}
           />
           <p dangerouslySetInnerHTML={createMarkup(t.third_section.p)} />
         </Limited>
 
-        <Insight
-          title={t.third_section.insights.periodicity.title}
-          p={t.third_section.insights.periodicity.p}
-          number={1}
-        >
+        <Insight insight={t.third_section.insights.periodicity} number={1}>
           <PlaylistGrid>{playlistCovers()}</PlaylistGrid>
         </Insight>
-        <Insight
-          title={t.third_section.insights.meaningfulness.title}
-          p={t.third_section.insights.meaningfulness.p}
-          number={2}
-        >
+        <Insight insight={t.third_section.insights.meaningfulness} number={2}>
           <PlaylistGrid>{playlistDescriptions()}</PlaylistGrid>
         </Insight>
-        <Insight
-          title={t.third_section.insights.spreadability.title}
-          p={t.third_section.insights.spreadability.p}
-          number={3}
-        >
+        <Insight insight={t.third_section.insights.spreadability} number={3}>
           <ShoutGrid>{artistShout()}</ShoutGrid>
         </Insight>
         <Insight
-          title={t.third_section.insights.multimedia_development.title}
+          insight={t.third_section.insights.multimedia_development}
           p={t.third_section.insights.multimedia_development.p}
-          number={3}
+          number={4}
         >
           <IberoGrid>
             <Ibero />
@@ -258,8 +241,8 @@ export default function Salvajenada(props) {
           </IberoGrid>
         </Insight>
         <Quote
-          quote={t.third_section.insights.multimedia_development.quote.quote}
-          name={t.third_section.insights.multimedia_development.quote.name}
+          quote={t.third_section.insights.multimedia_development.quote}
+          color={props => props.theme.colors.background}
         />
         {/* <VideoTile>{newPlaylistVideos()}</VideoTile> */}
       </Third>
@@ -419,38 +402,28 @@ const PlaylistGrid = styled.div`
   }
 `;
 
-const Stats = styled.div`
-  height: 500px;
-  width: 1000px;
-  margin: 5% 0;
-`;
-
-const CommonStat = styled.div`
-  border: 2px solid white;
-  display: flex;
-  i {
-    font-size: 3.4rem;
-    font-style: normal;
-  }
-  p {
-    padding: 6%;
-    width: 100%;
-    line-height: 85%;
-  }
-  b {
-    font-size: 8rem;
-    font-weight: 200;
-    line-height: 100%;
-  }
-`;
-
 const CommonSection = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
   position: relative;
-  height:auto;
+  height: auto;
   flex: 0 0 auto;
+  table {
+    text-align: left;
+    width: 100%;
+    max-width: 800px;
+    padding: 2%;
+    border-collapse: collapse;
+    margin: 5%;
+  }
+  table,
+  th,
+  td {
+    border: 2px solid ${props => props.theme.colors.foreground_low};
+    padding: 25px;
+    font-weight: 100;
+  }
 `;
 
 const CommonTransition = styled.div`
@@ -488,7 +461,7 @@ const FourthBack = styled(CommonTransition)`
 
 const Fourth = styled(CommonSection)`
   background-color: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.foreground};
+  color: ${props => props.theme.colors.foreground_low};
   margin-bottom: 10%;
 `;
 
@@ -539,53 +512,25 @@ const SecondBack = styled(CommonTransition)`
   margin-bottom: 10%;
 `;
 
-const GlobalStyle = createGlobalStyle`
-h2{
-  padding: 15% 0 5% 0;
-  font-weight:200;
-  max-width: 670px;
-}
-h3{
-  font-size:4.5rem;
-  margin-bottom: 25px;
-}
-h4{
-  font-size:3rem;
-  position:relative;
-  span{
-    font-size: 1.5rem;
-    color: #019EE3;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: -40px;
-    line-height: 190%;
+const Limited = styled.div`
+  h2 {
+    padding: 15% 0 5% 0;
+    font-weight: 200;
+    max-width: 670px;
   }
-}
-p{
-  max-width: 670px;
-  &.bigger{
-    font-size: 3.4rem;
-    text-align:center;
-    margin-top:10%;
+  h3 {
+    font-size: 4.5rem;
+    margin-bottom: 25px;
   }
-}
-table{
-  text-align: left;
-    width: 100%;
-    max-width: 800px;
-    padding: 2%;
-    border-collapse: collapse;
-    margin:5%;
-}
-table, th, td {
-  border: 2px solid ${props => props.theme.colors.foreground_low};
-  padding: 25px;
-  font-weight:100;
-}
+  p {
+    max-width: 670px;
+    &.bigger {
+      font-size: 3.4rem;
+      text-align: center;
+      margin-top: 10%;
+    }
+  }
 `;
-
-const Limited = styled.div``;
 
 const Graphic = styled.div`
   border: 2px solid black;

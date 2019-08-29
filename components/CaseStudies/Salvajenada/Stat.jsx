@@ -33,6 +33,7 @@ const StatWrapper = styled.div`
     font-weight: 200;
     line-height: 100%;
     display:block;
+    color: ${props=> props.theme.colors.foreground};
   }
   `;
 
