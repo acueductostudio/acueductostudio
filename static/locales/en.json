@@ -52,6 +52,7 @@
         "title": "from strategy to production in the filmmaking industry",
         "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
         "video": "fieras.mp4",
+        "logo": "fieras.svg",
         "link": "/ladanzadelasfieras",
         "intro_section": {
           "tags": [
@@ -89,6 +90,7 @@
           "p": "Creative and research sessions were taken alongside Aly and her team in order to craft a visual identity and branding for the film. Some shorts were documentaries and some fiction; one of them was even narrated from a phone screen. Finding a voice and a cohesive tone was the first task to take on.",
           "font_logo": "Logo + Animation",
           "font_body": "Body text",
+          "font_titles": "Titles",
           "red": "Wild Red",
           "p2": "Part of the branding included the design and animation for the opening sequence of the film. Everyone involved loved it so much that this application stuck to be reused on the website.</br></br>Click to watch it, it's only a couple of minutes long (and crank up your speakers, it’s worth it)."
         },
@@ -145,7 +147,8 @@
       "salvajenada": {
         "title": "how do you share music nowadays?",
         "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Website</br>",
-        "video": "fieras.mp4",
+        "video": "salvajenada.mp4",
+        "logo": "salvajenada.svg",
         "link": "/salvajenada",
         "intro_section": {
           "tags": [

@@ -4,16 +4,25 @@ import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
 import Link from "next/link";
 
-
 //var otherProyects = Object.entries(proyects).map(function(_proyect, index) {
 
-
 const SingleCase = props => {
+  console.log(props.logo)
   return (
     <Case>
       <Link href={"work" + props.link} passHref>
         <a>
-          <figure />
+          <VidContainer>
+            {/* <Logo style={{backgroundImage : `url(static/assets/img/casestudies/${props.logo})`}}/> */}
+            <Logo src={`static/assets/img/casestudies/${props.logo}`}/>
+            <video
+              autoPlay
+              playsInline
+              muted
+              loop
+              src={`../static/assets/img/casestudies/${props.video}`}
+            />
+          </VidContainer>
         </a>
       </Link>
       <Info>
@@ -35,7 +44,7 @@ const CaseList = props => {
   let c = props.c;
 
   let cases = Object.entries(c).map(function(study, index) {
-    study = study[1]
+    study = study[1];
     if (props.limit !== undefined && index + 1 > props.limit) {
       return;
     } else {
@@ -46,6 +55,7 @@ const CaseList = props => {
           tags={study.tags}
           link={study.link}
           video={study.video}
+          logo={study.logo}
         />
       );
     }
@@ -55,11 +65,22 @@ const CaseList = props => {
 
 export default CaseList;
 
+const Logo = styled.img`
+    width: 70%;
+    transform: translateZ(1px) translateY(-50%);
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+`;
+
 const Flexed = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  a{
+  a {
     justify-content: flex-end;
     display: flex;
   }
@@ -88,18 +109,31 @@ const Info = styled.div`
   }
 `;
 
-const Case = styled.div`
-  display: grid;
-  border-top: ${props =>
-    props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
-  grid-template-columns: repeat(2, 1fr);
-  figure {
+const VidContainer = styled.div`
     margin: 10%;
     background-color: ${props => props.theme.colors.accent};
     width: 80%;
     height: 0;
     padding-bottom: 80%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width:100%;
   }
+`;
+
+const Case = styled.div`
+  display: grid;
+  border-top: ${props =>
+    props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 const CaseStudiesWrapper = styled.section`

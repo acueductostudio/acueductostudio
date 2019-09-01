@@ -16,6 +16,8 @@ Main diferentiator
 404
 Contact footer
 Portfolio component
+Boceto LDDLF
+Cortes limpios en fondos de caso de estudio de Salvajenada
 
 ## Falta programar
 Animation icons
@@ -28,7 +30,6 @@ No tiene sentido importar el locale manualmente en cada página, probar ContextP
 
 ## Optimizar
 Lazy load images on case studies
-Cortes limpios en fondos de caso de estudio de Salvajenada
 
 
 ## Falta materiales

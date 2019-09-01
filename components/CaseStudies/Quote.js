@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   width: 100%;
   font-size: 3.4rem;
   max-width: 670px;
-  margin: 4% 0;
+  margin: 6% 0;
   position:relative;
   color: ${props => props.passedColor? props.passedColor : props.theme.colors.foreground};
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom : "4%")};

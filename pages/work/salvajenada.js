@@ -67,6 +67,7 @@ export default function Salvajenada(props) {
     x.push(
       <video
         autoPlay
+        playsInline
         muted
         loop
         key={"v_4"}
