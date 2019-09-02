@@ -134,6 +134,14 @@ export default function LaDanzaDeLasFieras(props) {
           number={1}
           color={fierasRed}
         >
+                    <InsightVideo
+            autoPlay
+            playsInline
+            muted
+            loop
+            key={"v_4"}
+            src={`../static/assets/img/casestudies/lddlf/i_1.mp4`}
+          />
           <Quote
             quote={t.third_section.insights.portfolio.quote}
             color={props => props.theme.colors.background}
@@ -144,6 +152,7 @@ export default function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.press}
           number={2}
         >
+          <MacPress src="../static/assets/img/casestudies/lddlf/i_1.jpg" />
           <Quote
             quote={t.third_section.insights.press.quote}
             color={props => props.theme.colors.background}
@@ -153,7 +162,10 @@ export default function LaDanzaDeLasFieras(props) {
           color={fierasRed}
           insight={t.third_section.insights.availability}
           number={3}
-        ></Insight>
+        >
+                    <MacContact src="../static/assets/img/casestudies/lddlf/i_3.jpg" />
+
+        </Insight>
         <Limited>
           <h3
             dangerouslySetInnerHTML={createMarkup(
@@ -188,7 +200,6 @@ export default function LaDanzaDeLasFieras(props) {
             playsInline
             muted
             loop
-            key={"v_4"}
             src={`../static/assets/img/casestudies/lddlf/incognito.mp4`}
           />
         </Limited>
@@ -216,6 +227,23 @@ export default function LaDanzaDeLasFieras(props) {
     </PageClipper>
   );
 }
+
+const InsightVideo = styled.video`
+max-width: 1100px;
+width:90%;
+margin: 5% 5% 0 5%;
+`;
+
+const MacContact = styled.img`
+max-width: 670px;
+margin: 5% 0;
+`;
+
+const MacPress = styled.img`
+max-width: 1100px;
+width:90%;
+margin: 5% 5% -17% 5%;
+`;
 
 const AppGrid = styled.div`
 display:grid;
