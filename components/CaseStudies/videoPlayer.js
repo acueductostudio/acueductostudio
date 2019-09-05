@@ -1,5 +1,5 @@
 import { useState } from "react";
-import VimeoPlayer from "react-player";
+import YouTubePlayer from "react-player";
 import dynamic from "next/dynamic";
 import styled, { css, keyframes } from "styled-components";
 import Pause from "../../static/assets/img/casestudies/lddlf/pause.svg";
@@ -48,7 +48,7 @@ function VideoPlayer(props) {
         onClick={() => handlePlay(true)}
       />
       {!isInitial && (
-        <VimeoPlayer
+        <YouTubePlayer
           playing={isPlaying}
           url={props.url}
           controls={false}
@@ -71,7 +71,7 @@ function VideoPlayer(props) {
 export default VideoPlayer;
 
 const VideoWrapper = styled.div`
-  padding-bottom: ${props => props.ratio || "52.7%"};
+  padding-bottom: ${props => props.ratio || "50.6%"};
   display: block;
   width: 90%;
   margin: 5%;
@@ -102,7 +102,8 @@ const hidePause = keyframes`
 
 const Clicker = styled.div`
   width: 100%;
-  height: calc(100% - 50px);
+  /* height: calc(100% - 50px); */
+  height: 100%;
   position: absolute;
   pointer-events: auto;
   z-index: 3;

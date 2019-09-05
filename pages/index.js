@@ -13,6 +13,7 @@ import CaseStudiesPreview from "../components/CaseStudies/CaseStudiesPreview";
 import ContactFooter from "../components/ContactFooter";
 import createMarkup from "../helpers/createMarkup";
 import Services from "../components/Services";
+import LogoComplete from "../static/assets/img/layout/logoComplete.svg";
 
 export default function Index(props) {
   let t = props.locale.home_page;
@@ -23,24 +24,24 @@ export default function Index(props) {
   return (
     <>
       <PageClipper>
-          <Head>
-            <title>Acueducto</title>
-          </Head>
-          <Land>
-            <LandContainer>
-              <h1 dangerouslySetInnerHTML={createMarkup(t.landing.heading)} />
-              <h2>{t.landing.tagline}</h2>
-            </LandContainer>
-          </Land>
-          <Intro>
-            <TitleSection
-              title={t.intro.title}
-              text={t.intro.p}
-              link={t.intro.link}
-              linktext={t.intro.linktext}
-              borderTop
-            />
-            <ImageGallery>
+        <Head>
+          <title>Acueducto</title>
+        </Head>
+        <Land>
+          <LandContainer>
+            <h1 dangerouslySetInnerHTML={createMarkup(t.landing.heading)} />
+            <h2>{t.landing.tagline}</h2>
+          </LandContainer>
+        </Land>
+        <Intro>
+          <TitleSection
+            title={t.intro.title}
+            text={t.intro.p}
+            link={t.intro.link}
+            linktext={t.intro.linktext}
+            borderTop
+          />
+          {/* <ImageGallery>
               <Image
                 columnStart={5}
                 columnEnd={8}
@@ -59,16 +60,73 @@ export default function Index(props) {
                   transform: "translateY(-70%)"
                 }}
               />
-            </ImageGallery>
-          </Intro>
-          <Process p={p} />
-          <CaseStudiesPreview c={c} />
-          <Services s={s} />
-          <ContactFooter f={f}/>
+            </ImageGallery> */}
+        </Intro>
+        <ImageGalleryRemovable>
+          <Padded>
+            <Boxed>
+              <LogoComplete />
+            </Boxed>
+          </Padded>
+        </ImageGalleryRemovable>
+        <Process p={p} />
+        <CaseStudiesPreview c={c} />
+        <Services s={s} />
+        <ContactFooter f={f} />
       </PageClipper>
     </>
   );
 }
+
+const Boxed = styled.div`
+    border: 2px solid white;
+    padding: 20%;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items: center;
+  justify-content: center;
+`;
+
+const Padded = styled.div`
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: 4 / span 7;
+  &:after {
+    content: " ";
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: ${props => props.theme.colors.background};
+  }
+  svg {
+    max-width: 370px;
+    width: 100%;
+  }
+`;
+
+const ImageGalleryRemovable = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4%;
+  align-content: center;
+  justify-content: center;
+  &:before,
+  &:after {
+    content: " ";
+    height: 100%;
+    display: flex;
+    background-color: ${props => props.theme.colors.background};
+  }
+  &:before {
+    grid-column: 1 / span 3;
+  }
+  &:after {
+    grid-column: 11 / span 4;
+  }
+`;
 
 const Image = styled.figure`
   height: 0;
@@ -110,8 +168,8 @@ const Land = styled.section`
   }
   h1 {
     color: ${props => props.theme.colors.white};
-    line-height:100%;
-    font-size:7rem;
+    line-height: 100%;
+    font-size: 7rem;
   }
 `;
 

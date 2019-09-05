@@ -18,6 +18,7 @@ Contact footer
 Portfolio component
 Boceto LDDLF
 Cortes limpios en fondos de caso de estudio de Salvajenada
+Posters para videos casos de estudio -> Salvajenada
 
 ## Falta programar
 Animation icons
@@ -33,7 +34,7 @@ Lazy load images on case studies
 
 
 ## Falta materiales
-- Link de Apple Music para caso de estudio de salvajenada
+- .ai embbed y tipografías de Salvajenada
 
 ## To consider 
 - Friends is not too professional, think about it, especially because of the amount of  case  studies, combine  with contact footer?

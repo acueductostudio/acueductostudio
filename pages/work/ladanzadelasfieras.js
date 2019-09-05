@@ -19,7 +19,9 @@ import Quote from "../../components/CaseStudies/Quote";
 import Insight from "../../components/CaseStudies/Insight";
 import dynamic from "next/dynamic";
 
-const fierasRed = "#C64028";
+// const fierasRed = "#C64028";
+const fierasRed = "rgb(221, 56, 20)";
+// const fierasRed = "#DB1919" //lastRed
 
 const ThePlayer = dynamic(import("../../components/CaseStudies/videoPlayer"), {
   loading: () => <p>Loading wrapper...</p>,
@@ -59,7 +61,17 @@ export default function LaDanzaDeLasFieras(props) {
             {formarquee}
           </Marquee>
         </TagScroll>
-        <Video />
+        <Video
+          autoPlay
+          playsInline
+          muted
+          loop
+          poster="../static/assets/img/casestudies/lddlf/introVideo_poster.jpg"
+        >
+          <source
+            src="../static/assets/img/casestudies/lddlf/introVideo.mp4"
+          />
+        </Video>
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
           <p dangerouslySetInnerHTML={createMarkup(t.intro_section.p)} />
@@ -81,7 +93,7 @@ export default function LaDanzaDeLasFieras(props) {
           <img src="../static/assets/img/casestudies/lddlf/p_1.jpg" />
           <img src="../static/assets/img/casestudies/lddlf/p_2.jpg" />
           <img src="../static/assets/img/casestudies/lddlf/p_3.jpg" />
-          <img src="../static/assets/img/casestudies/lddlf/p_4.jpg" />
+          <img src="../static/assets/img/casestudies/lddlf/boceto.jpg" />
           <img src="../static/assets/img/casestudies/lddlf/p_5.png" />
         </PosterGrid>
         <Type>
@@ -101,7 +113,7 @@ export default function LaDanzaDeLasFieras(props) {
             <div>
               {t.second_section.red}
               <br />
-              #C64028
+              #DD3814
             </div>
             <div>#080B0C</div>
             <div>#F4F4F4</div>
@@ -112,10 +124,15 @@ export default function LaDanzaDeLasFieras(props) {
             <img src="../static/assets/img/casestudies/lddlf/materials.jpg" />
           </TransitionWrapper>
           <Limited>
+            <h3
+              dangerouslySetInnerHTML={createMarkup(
+                "– " + t.second_section.subtitle
+              )}
+            />
             <p dangerouslySetInnerHTML={createMarkup(t.second_section.p2)} />
           </Limited>
           <ThePlayer
-            url={"https://vimeo.com/344121730"}
+            url={"https://www.youtube.com/embed/KX0zZxml8a8"}
             still={"../static/assets/img/casestudies/lddlf/videoBack.jpg"}
           />
         </SecondSection_Sub>
@@ -134,14 +151,8 @@ export default function LaDanzaDeLasFieras(props) {
           number={1}
           color={fierasRed}
         >
-                    <InsightVideo
-            autoPlay
-            playsInline
-            muted
-            loop
-            key={"v_4"}
-            src={`../static/assets/img/casestudies/lddlf/i_1.mp4`}
-          />
+          <Faces src="../static/assets/img/casestudies/lddlf/d_1.jpg" />
+
           <Quote
             quote={t.third_section.insights.portfolio.quote}
             color={props => props.theme.colors.background}
@@ -163,8 +174,7 @@ export default function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.availability}
           number={3}
         >
-                    <MacContact src="../static/assets/img/casestudies/lddlf/i_3.jpg" />
-
+          <MacContact src="../static/assets/img/casestudies/lddlf/i_3.jpg" />
         </Insight>
         <Limited>
           <h3
@@ -214,7 +224,7 @@ export default function LaDanzaDeLasFieras(props) {
           color={props => props.theme.colors.background}
         />
         <Limited>
-          <img src="../static/assets/img/casestudies/lddlf/laureles.png" />
+          <img src="../static/assets/img/casestudies/lddlf/l_1.jpg" />
           <p dangerouslySetInnerHTML={createMarkup(t.fifth_section.p2)} />
         </Limited>
       </Fifth>
@@ -229,35 +239,40 @@ export default function LaDanzaDeLasFieras(props) {
 }
 
 const InsightVideo = styled.video`
-max-width: 1100px;
-width:90%;
-margin: 5% 5% 0 5%;
+  max-width: 1100px;
+  width: 90%;
+  margin: 5% 5% 0 5%;
 `;
 
 const MacContact = styled.img`
-max-width: 670px;
-margin: 5% 0;
+  max-width: 670px;
+  margin: 5% 0;
+`;
+
+const Faces = styled.img`
+  max-width: 670px;
+  margin: 3.5% 0px -1.5%;
 `;
 
 const MacPress = styled.img`
-max-width: 1100px;
-width:90%;
-margin: 5% 5% -17% 5%;
+  max-width: 830px;
+  width: 90%;
+  margin: 4% 5% -9% 5%;
 `;
 
 const AppGrid = styled.div`
-display:grid;
-grid-template-columns: 1fr 1fr;
-max-width: 670px;
-margin:10% 0 20% 0;
-img{
-  max-width:100%;
-  width:100%;
-}
-svg{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 670px;
+  margin: 10% 0 20% 0;
+  img {
+    max-width: 100%;
+    width: 100%;
+  }
+  svg {
     height: 100%;
     justify-self: center;
-}
+  }
 `;
 
 const Type = styled.div`
@@ -287,7 +302,7 @@ const ColorGrid = styled.div`
     &:nth-child(1) {
       grid-column: 1 / span 1;
       &:before {
-        background-color: #c64028;
+        background-color: ${fierasRed};
       }
     }
     &:nth-child(2) {
@@ -315,7 +330,6 @@ const TypeGrid = styled.div`
 `;
 
 const TransitionWrapper = styled.div`
-  background-color: ${fierasRed};
   position: relative;
   width: 100%;
   display: flex;
@@ -340,7 +354,7 @@ const TransitionWrapper = styled.div`
 
 const PosterGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 4.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 4.65fr;
   grid-template-rows: 1fr 3fr;
   grid-gap: 2rem;
   max-width: 1200px;
@@ -410,6 +424,7 @@ const CommonSection = styled.section`
   position: relative;
   height: auto;
   flex: 0 0 auto;
+  margin: 0 2px;
 `;
 
 const Sixth = styled(CommonSection)`
@@ -542,10 +557,7 @@ const Graphic = styled.div`
   }
 `;
 
-const Video = styled.div`
-  background-color: pink;
-  height: 0;
-  padding-bottom: 45%;
+const Video = styled.video`
   width: 100%;
   max-width: 1000px;
 `;
@@ -566,7 +578,7 @@ const TagScroll = styled.div`
 `;
 
 const FirstSection = styled(CommonSection)`
-  background-color: ${fierasRed};
+  background-color: ${props => props.theme.colors.foreground};
   color: ${props => props.theme.colors.background};
   padding-bottom: 8%;
   margin-top: -1px;
@@ -575,13 +587,13 @@ const FirstSection = styled(CommonSection)`
 const LandSection = styled.section`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("../static/assets/img/casestudies/lddlf/landBack.svg");
+  background-image: url("../static/assets/img/casestudies/lddlf/landBackX.svg");
   background-position: center bottom;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2px;
+  margin: 2px 2px 0 2px;
   svg {
     max-width: 650px;
     width: 70%;
