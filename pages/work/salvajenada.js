@@ -24,7 +24,7 @@ const FramesEmbed = dynamic(
   }
 );
 
-const salvajeBlue = "#009ee2";
+const salvajeBlue = "rgb(60, 179, 224)";
 
 export default function Salvajenada(props) {
   let t = props.locale.casestudies.studies.salvajenada;
@@ -86,22 +86,6 @@ export default function Salvajenada(props) {
     return x;
   };
 
-  const newPlaylistVideos = () => {
-    let x = [];
-    for (let i = 0; i < 7; i++) {
-      x.push(
-        <video
-          autoPlay
-          muted
-          loop
-          key={"tile_" + i}
-          src={`../static/assets/img/casestudies/salvajenada/p_4.mp4`}
-        />
-      );
-    }
-    return x;
-  };
-
   return (
     <PageClipper>
       <Head>
@@ -118,7 +102,17 @@ export default function Salvajenada(props) {
             {formarquee} {formarquee}
           </Marquee>
         </TagScroll>
-        <Video />
+        <Video
+          autoPlay
+          playsInline
+          muted
+          loop
+          poster="../static/assets/img/casestudies/salvajenada/introVideo_poster.jpg"
+        >
+          <source
+            src="../static/assets/img/casestudies/salvajenada/introVideo.mp4"
+          />
+        </Video>
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
           <p>{t.intro_section.p}</p>
@@ -558,10 +552,7 @@ const LogoWolf = styled.div`
   justify-content: center;
 `;
 
-const Video = styled.div`
-  background-color: pink;
-  height: 0;
-  padding-bottom: 45%;
+const Video = styled.video`
   width: 100%;
   max-width: 1000px;
 `;
