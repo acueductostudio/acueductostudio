@@ -7,27 +7,26 @@
 # Missing:
 
 ## Content
-Main diferentiator 
+- Main diferentiator 
 
 ## Design
-404 Page 
-Contact footer
-Portfolio component
-Cortes limpios en fondos de caso de estudio de Salvajenada
-Posters para videos casos de estudio -> Salvajenada
+- 404 Page 
+- Contact footer
+- Portfolio component
+- Cortes limpios en fondos de caso de estudio de Salvajenada
+- Posters para videos casos de estudio -> Salvajenada
 
 ## Development
-Animation icons
-Cookie message
-3D heads
-404
-Animation hovers
-Language change
-No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
+- Animation icons
+- Cookie message
+- 3D heads
+- 404
+- Animation hovers
+- Language change
+- No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
 
 ## Optimization
-Lazy load images on case studies
-
+- Lazy load images on case studies
 
 ## To consider 
 - "Friends" is not too professional, especially because of the amount of  case  studies
