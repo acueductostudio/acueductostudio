@@ -41,7 +41,7 @@ export default function Index(props) {
             linktext={t.intro.linktext}
             borderTop
           />
-          {/* <ImageGallery>
+          <ImageGallery>
               <Image
                 columnStart={5}
                 columnEnd={8}
@@ -60,7 +60,7 @@ export default function Index(props) {
                   transform: "translateY(-70%)"
                 }}
               />
-            </ImageGallery> */}
+            </ImageGallery>
         </Intro>
         <ImageGalleryRemovable>
           <Padded>

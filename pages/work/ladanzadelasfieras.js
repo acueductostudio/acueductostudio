@@ -19,9 +19,9 @@ import Quote from "../../components/CaseStudies/Quote";
 import Insight from "../../components/CaseStudies/Insight";
 import dynamic from "next/dynamic";
 
-// const fierasRed = "#C64028";
-const fierasRed = "rgb(221, 56, 20)";
-// const fierasRed = "#DB1919" //lastRed
+// const originalRed = "#C64028";
+// const YoutubeFirstRed = "rgb(221, 56, 20)";
+const fierasRed = "rgb(201,32,26)";
 
 const ThePlayer = dynamic(import("../../components/CaseStudies/videoPlayer"), {
   loading: () => <p>Loading wrapper...</p>,
@@ -68,9 +68,7 @@ export default function LaDanzaDeLasFieras(props) {
           loop
           poster="../static/assets/img/casestudies/lddlf/introVideo_poster.jpg"
         >
-          <source
-            src="../static/assets/img/casestudies/lddlf/introVideo.mp4"
-          />
+          <source src="../static/assets/img/casestudies/lddlf/introVideo.mp4" />
         </Video>
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
@@ -131,10 +129,13 @@ export default function LaDanzaDeLasFieras(props) {
             />
             <p dangerouslySetInnerHTML={createMarkup(t.second_section.p2)} />
           </Limited>
-          <ThePlayer
-            url={"https://www.youtube.com/embed/KX0zZxml8a8"}
-            still={"../static/assets/img/casestudies/lddlf/videoBack.jpg"}
-          />
+          <SequenceContainer>
+            <ThePlayer
+              url={"https://www.youtube.com/embed/AJMXiE16gtc"}
+              still={"../static/assets/img/casestudies/lddlf/videoBack.jpg"}
+              ratio={"50.62%"}
+            />
+          </SequenceContainer>
         </SecondSection_Sub>
       </Second>
       <Third>
@@ -238,10 +239,10 @@ export default function LaDanzaDeLasFieras(props) {
   );
 }
 
-const InsightVideo = styled.video`
-  max-width: 1100px;
-  width: 90%;
-  margin: 5% 5% 0 5%;
+const SequenceContainer = styled.div`
+  max-width: 1300px;
+  width: 100%;
+  margin: 4% auto;
 `;
 
 const MacContact = styled.img`

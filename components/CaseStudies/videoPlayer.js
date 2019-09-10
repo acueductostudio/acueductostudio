@@ -5,19 +5,6 @@ import styled, { css, keyframes } from "styled-components";
 import Pause from "../../static/assets/img/casestudies/lddlf/pause.svg";
 import Play from "../../static/assets/img/casestudies/lddlf/play.svg";
 
-//52.7 es el de todos menos, desechables tiene una línea negra a la derecha y el trailer está en 1080p
-
-// const ThePlayer = dynamic(import("react-player").then(mod => mod.VimeoPlayer), {
-//   loading: () => <p>Loading wrapper...</p>,
-//   ssr: false
-// });
-
-// const ThePlayer = dynamic(() =>
-//   import('react-player').then(mod => mod.VimeoPlayer),{
-//     loading: () => <p>Loading wrapper...</p>,
-//   }
-// )
-
 function VideoPlayer(props) {
   const [isPlaying, setPlaying] = useState(false);
   const [isInitial, setInitial] = useState(true);
@@ -39,12 +26,12 @@ function VideoPlayer(props) {
   return (
     <VideoWrapper ratio={props.ratio}>
       <Clicker onClick={() => handlePlay()} hideSvg={isPlaying}>
-        {isPlaying ? <PauseButton id="paused" /> : <PlayButton />}
+        {isPlaying ? <Button>Pause</Button> : <Button>Play</Button>}
       </Clicker>
       <Fader hide={isPlaying} />
       <OverStill
         style={{ backgroundImage: `url(${props.still})` }}
-        hide={!isInitial}
+        hide={isPlaying}
         onClick={() => handlePlay(true)}
       />
       {!isInitial && (
@@ -102,21 +89,25 @@ const hidePause = keyframes`
 
 const Clicker = styled.div`
   width: 100%;
-  /* height: calc(100% - 50px); */
   height: 100%;
   position: absolute;
   pointer-events: auto;
   z-index: 3;
   cursor: pointer;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${props => props.theme.colors.foreground};
+
   ${props =>
     props.hideSvg &&
     css`
-      svg {
+      div {
         opacity: 0;
       }
       :hover {
-        svg {
-          animation: ${hidePause} 2.4s;
+        div {
+          animation: ${hidePause} 1.2s;
           animation-fill-mode: forwards;
         }
       }
@@ -139,25 +130,10 @@ const Clicker = styled.div`
     }
   }
 `;
-const OverStill = styled.div`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer;
-  transition: 0.4s ease opacity;
-  opacity: ${props => (props.hide ? "0" : "1")};
-  pointer-events: ${props => (props.hide ? "none" : "auto")};
-  background-size: cover;
-  background-position: center;
-`;
 
-const PlayButton = styled(Play)`
+const Button = styled.div`
   opacity: ${props => (props.hide ? "0" : "1")};
-`;
-
-const PauseButton = styled(Pause)`
-  opacity: ${props => (props.hide ? "0" : "1")};
+  font-size: 4.5rem;
 `;
 
 const Fader = styled.div`
@@ -168,9 +144,30 @@ const Fader = styled.div`
   transition: 0.4s ease opacity;
   margin-bottom: 50px;
   pointer-events: none;
-  ${props =>
+  opacity: ${props=> props.hide? 0 : 1}
+  /* ${props =>
     props.hide &&
     css`
       opacity: 0;
+    `} */
+`;
+
+
+const OverStill = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0s ease opacity;
+  opacity: ${props => (props.hide ? "0" : "1")};
+  pointer-events: ${props => (props.hide ? "none" : "auto")};
+  background-size: cover;
+  background-position: center;
+  ${props =>
+    props.hide &&
+    css`
+      transition: opacity 0.35s ease 0.4s;
+
     `}
 `;

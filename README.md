@@ -1,26 +1,22 @@
 # Acueducto Web App
 
+## Articles for development
+- [Localization](https://medium.com/@isaachinman/creating-localised-nextjs-apps-with-next-i18next-f01d5e610307)
+- [Cookies](https://www.npmjs.com/package/react-cookie-consent) 
 
-## For localization
+# Missing:
 
-- https://medium.com/@isaachinman/creating-localised-nextjs-apps-with-next-i18next-f01d5e610307
-
-## For cookies
-
-- https://www.npmjs.com/package/react-cookie-consent 
-
-## Falta content
+## Content
 Main diferentiator 
 
-## Falta diseñar
-404
+## Design
+404 Page 
 Contact footer
 Portfolio component
-Boceto LDDLF
 Cortes limpios en fondos de caso de estudio de Salvajenada
 Posters para videos casos de estudio -> Salvajenada
 
-## Falta programar
+## Development
 Animation icons
 Cookie message
 3D heads
@@ -29,29 +25,15 @@ Animation hovers
 Language change
 No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
 
-## Optimizar
+## Optimization
 Lazy load images on case studies
 
 
-## Falta materiales
-- .ai embbed y tipografías de Salvajenada
-
 ## To consider 
-- Friends is not too professional, think about it, especially because of the amount of  case  studies, combine  with contact footer?
-
-- Title type? and copy for titles you should  be able to scan it and tell a story on their  own
-
-- What's our main diferentiator? We're missing a section with that info and strategic design is maybe not enough
-
-- What makes us the most special? That in home  page
-
-- Form doesn't make sense, dissonance with the budget might give the illusion of we being  able to work for the  selected  budget and then starting  with the  wrong  foot as we say no we can't do what you're asking  with that money.
-- If there's no budget, why the form?
-- if there's no form, why the contact page?
-
-
-- Don't repeat components / but portfolio one? would have to be smaller
-
-- We know you're looking  for  agencies, we're looking  for clients too and we'll also choose the right fit. 
+- "Friends" is not too professional, especially because of the amount of  case  studies
+- Copy for titles: you should be able to scan them and they should and tell a story on their own
+- What's our main diferentiator? What makes us the most special? (section)
+- Don't repeat components / portfolio component would have to be smaller/different
+- "We know you're looking for agencies, we're also looking for clients to partner with and we'll also choose the right fit. 
 
 

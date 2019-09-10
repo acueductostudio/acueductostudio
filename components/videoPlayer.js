@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import VimeoPlayer from "react-player";
+import FilePlayer from "react-player";
 import styled, { css, keyframes } from "styled-components";
 // import Loadable from "react-loadable";
 import Loader from "./loader";
@@ -10,7 +10,7 @@ const ThePlayer = Loadable({
   loader: () => import("react-player"),
   loading: Loader,
   render(loaded, props) {
-    let Component = VimeoPlayer;
+    let Component = YouTubePlayer;
     return <Component {...props} />;
   }
 });
@@ -62,11 +62,11 @@ function VideoPlayer(props) {
             onEnded={restoreVideo}
             onPause={pauseVideo}
             onPlay={() => handlePlay(true)}
-            config={{
-              vimeo: {
-                preload: true
-              }
-            }}
+            // config={{
+            //   vimeo: {
+            //     preload: true
+            //   }
+            // }}
           />
         )}
     </VideoWrapper>

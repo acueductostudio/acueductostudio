@@ -55,7 +55,7 @@ export default function Salvajenada(props) {
         <img
           key={"d_" + i}
           alt={"salvajenada_writing " + i}
-          src={`../static/assets/img/casestudies/salvajenada/d_${i}.jpg`}
+          src={`../static/assets/img/casestudies/salvajenada/d_${i}.png`}
         />
       );
     }
