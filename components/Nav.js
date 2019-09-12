@@ -40,9 +40,9 @@ export default function Nav(props) {
               hola@acueducto.studio
             </a>
             <Social>
-              <a href="faceebook">facebook</a>
-              <a href="instagram">instagram</a>
-              <a href="linkedin">linkedin</a>
+              <a target="_blank" href="https://www.facebook.com/acueducto.co/">facebook</a>
+              <a target="_blank" href="https://www.instagram.com/acueducto.co/">instagram</a>
+              <a target="_blank" href="https://www.linkedin.com/company/acueducto-co/">linkedin</a>
             </Social>
             <div className="language">
               <span>english</span> | <span>español</span>
