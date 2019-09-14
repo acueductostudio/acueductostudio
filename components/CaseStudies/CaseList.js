@@ -7,7 +7,6 @@ import Link from "next/link";
 //var otherProyects = Object.entries(proyects).map(function(_proyect, index) {
 
 const SingleCase = props => {
-  console.log(props.logo)
   return (
     <Case>
       <Link href={"work" + props.link} passHref>

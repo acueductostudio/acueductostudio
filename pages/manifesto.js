@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Head from "next/head";
+import { useEffect } from "react";
 import PageClipper from "../components/PageClipper";
 import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
@@ -9,6 +10,10 @@ export default function Manifesto(props) {
   let t = props.locale.manifesto_page;
   let f = props.locale.contactfooter;
   let c = props.locale.casestudies;
+
+  useEffect(() => {
+    props.setTitle(t.headerTitle);
+  }, []);
 
   let beliefs = t.beliefs.map(function(belief, index) {
     return (
@@ -24,7 +29,9 @@ export default function Manifesto(props) {
       <Head>
         <title>Acueducto | Manifesto</title>
       </Head>
-      <PinnedSection t={t} scroll={<ol>{beliefs}</ol>} />
+      <PinnedSection t={t}>
+        <ol>{beliefs}</ol>
+      </PinnedSection>
       <CaseStudiesPreview c={c} />
       <ContactFooter f={f} />
     </PageClipper>
@@ -32,18 +39,18 @@ export default function Manifesto(props) {
 }
 
 const Belief = styled.li`
-list-style:none;
-position:relative;
-margin-bottom: 25%;
+  list-style: none;
+  position: relative;
+  margin-bottom: 25%;
   span {
     color: ${props => props.theme.colors.accent};
-    font-size:3rem;
+    font-size: 3rem;
     position: absolute;
     left: -6rem;
   }
-  h3{
-    font-size:3rem;
-    margin-bottom:10px;
-    font-weight:200;
+  h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 200;
   }
 `;

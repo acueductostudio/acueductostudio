@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PageClipper = ({children}) => <Wrapper>{children}</Wrapper>;
+const PageClipper = ({children}) => <Wrapper id="Clipper">{children}</Wrapper>;
 
 export default PageClipper;
 

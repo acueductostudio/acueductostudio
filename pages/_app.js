@@ -1,57 +1,40 @@
 import React from "react";
-import App, { Container } from "next/app";
+import App from "next/app";
 import { ThemeProvider } from "styled-components";
 import Layout from "../components/layout";
 import theme from "../styles/theme";
-import darkTheme from "../styles/dark";
+import Cookies from "js-cookie/src/js.cookie";
 import en from "../static/locales/en.json";
 
 export default class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
-      isDarkMode: false
+      isDarkMode: false,
+      hasToConsent: true
     };
   }
 
+//añadir el should component update para que no cambie a menos que cambie el locale
 
-  // Esto solo vale la pena si vamos a implementar más cookies,
-  // habrá que tripear al respecto
-  //
-  // componentWillMount(){
-  //   this.setState({
-  //     isDarkMode: this.getLocalStorage()
-  //   });
-  // }
+  componentDidMount() {
+    var _C = Cookies.get("showCookieMessage");
+    if (_C === undefined) {
+      console.log("cookies: hasn't consented before");
+      this.setState({ hasToConsent: true });
+    } else if (_C === 'false') {
+      console.log("cookies: has consented before");
+      this.setState({ hasToConsent: false });
+    }
+  }
 
-  // getLocalStorage() {
-  //   if (typeof window !== "undefined") {
-  //     console.log("we are running on the client");
-  //     let stored = localStorage.getItem("isDarkMode");
-  //     if (!stored){
-  //       return false
-  //     }
-  //     return stored === "true"? true : false;
-  //   } else {
-  //     console.log("we are running on the server");
-  //     return false;
-  //   }
-  // }
+  consentToCookies() {
+    console.log("Remove the cookie message");
+    Cookies.set('showCookieMessage', 'false');
+    this.setState({ hasToConsent: false });
+  }
 
-  // Y la función change theme debe incluír:
-  // localStorage.setItem("isDarkMode", !this.state.isDarkMode);
-
-
-  // static async getInitialProps({ Component, router, ctx }) {
-  //   let pageProps = {};
-
-  //   if (Component.getInitialProps) {
-  //     pageProps = await Component.getInitialProps(ctx);
-  //   }
-  //   return { pageProps };
-  // }
-
-  changeTheme(){
+  changeTheme() {
     this.setState({
       isDarkMode: !this.state.isDarkMode
     });
@@ -60,13 +43,16 @@ export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
-      <Container>
-        <ThemeProvider theme={this.state.isDarkMode? darkTheme : theme}>
-          <Layout locale={en} changeTheme={this.changeTheme.bind(this)}>
-            <Component locale={en} {...pageProps}/>
-          </Layout>
-        </ThemeProvider>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Layout
+          locale={en}
+          changeTheme={this.changeTheme.bind(this)}
+          consentToCookies={this.consentToCookies.bind(this)}
+          hasToConsent={this.state.hasToConsent}
+        >
+          <Component locale={en} {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     );
   }
 }

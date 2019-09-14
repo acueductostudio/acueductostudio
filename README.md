@@ -2,37 +2,36 @@
 
 ## Articles for development
 - [Localization](https://medium.com/@isaachinman/creating-localised-nextjs-apps-with-next-i18next-f01d5e610307)
-- [Cookies](https://www.npmjs.com/package/react-cookie-consent) 
 
-# Missing:
+# Copy changes:
+- Landing copy
+- Copy for titles: you should be able to scan them and they should tell a story on their own
+* Comentario en Cookie Policy, Cookie no linkea a Privacy?
+* Decir Application en lugar de website?
 
-## Content
-- Main diferentiator 
+# New Problems:
+- No les estamos avisando que usamos las cookies nomás por estar en la página, qué pasa si pican en close?
+- Cookie component se ve mal en otras páginas
+- Lista de cosas que queremos saber (ej, cuanta gente dice alv cookies damelas)
 
-## Design
-- 404 Page 
-- Contact footer
-- Portfolio component
+# Lunes:
+- 3D heads + headloader
+- Revisar si los videos tienen margen negro dentro del archivo. 
+- Posters para videos en Portafolio + mejorar Fieras?
+- Background Loader
+- Tripear scroll en portafolio
+- Revisar diseño de la danza de las fieras (A en visita la página,colores homogeneos).
+- Animacion de load inicio. 
+
+## Jueves: 
+- Responsive
 - Cortes limpios en fondos de caso de estudio de Salvajenada
-- Posters para videos casos de estudio -> Salvajenada
+- Animation icons hovers
+- Lazy load images on case studies
+- Detalles Sebas Textos Salvajenada
+- Analytics (google) / hotjar? 
 
-## Development
-- Animation icons
-- Cookie message
-- 3D heads
-- 404
-- Animation hovers
+# Next steps
 - Language change
 - No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
-
-## Optimization
-- Lazy load images on case studies
-
-## To consider 
-- "Friends" is not too professional, especially because of the amount of  case  studies
-- Copy for titles: you should be able to scan them and they should and tell a story on their own
-- What's our main diferentiator? What makes us the most special? (section)
-- Don't repeat components / portfolio component would have to be smaller/different
-- "We know you're looking for agencies, we're also looking for clients to partner with and we'll also choose the right fit. 
-
-
+- Redesing Potfolio component

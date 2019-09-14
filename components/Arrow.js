@@ -17,5 +17,8 @@ const ArrowContainer = styled.span`
     fill: none;
     stroke: ${props => props.theme.colors.foreground};
     stroke-width: ${props => props.theme.stroke};
+    path{
+      transition: all 0.3s ease;
+    }
   }
 `;

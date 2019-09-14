@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect } from "react";
 import PageClipper from "../../components/PageClipper";
 import Fade from "react-reveal/Fade";
 import ContactFooter from "../../components/ContactFooter";
@@ -31,6 +32,10 @@ const ThePlayer = dynamic(import("../../components/CaseStudies/videoPlayer"), {
 export default function LaDanzaDeLasFieras(props) {
   let t = props.locale.casestudies.studies.ladanzadelasfieras;
   let f = props.locale.contactfooter;
+
+  useEffect(() => {
+    props.setTitle(t.headerTitle);
+  }, []);
 
   let formarquee = t.intro_section.tags.map(function(tag, index) {
     return <h3 key={index + "h"}>{tag}</h3>;
@@ -211,8 +216,10 @@ export default function LaDanzaDeLasFieras(props) {
             playsInline
             muted
             loop
-            src={`../static/assets/img/casestudies/lddlf/incognito.mp4`}
-          />
+            poster={"./../static/assets/img/casestudies/lddlf/introVideo_incognito.jpg"}
+          >
+            <source src="../static/assets/img/casestudies/lddlf/incognito.mp4" />
+          </video>
         </Limited>
       </Fourth>
       <Fifth>

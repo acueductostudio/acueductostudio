@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import Head from "next/head";
+import { useEffect } from "react";
 import TitleSection from "../components/TitleSection";
 import CaseList from "../components/CaseStudies/CaseList";
 import PageClipper from "../components/PageClipper";
@@ -9,6 +9,10 @@ export default function Work(props) {
   let t = props.locale.work_page;
   let c = props.locale.casestudies.studies;
   let f = props.locale.contactfooter;
+
+  useEffect(() => {
+    props.setTitle(t.headerTitle);
+  }, []);
 
   return (
     <PageClipper>

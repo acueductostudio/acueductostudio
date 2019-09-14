@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Head from "next/head";
+import { useEffect } from "react";
 import Link from "next/link";
 import PageClipper from "../../components/PageClipper";
 import Fade from "react-reveal/Fade";
@@ -29,6 +30,10 @@ const salvajeBlue = "rgb(60, 179, 224)";
 export default function Salvajenada(props) {
   let t = props.locale.casestudies.studies.salvajenada;
   let f = props.locale.contactfooter;
+
+  useEffect(() => {
+    props.setTitle(t.headerTitle);
+  }, []);
 
   let formarquee = t.intro_section.tags.map(function(tag, index) {
     return <h3 key={index + "h"}>{tag}</h3>;
@@ -66,13 +71,15 @@ export default function Salvajenada(props) {
     let x = [];
     x.push(
       <video
-        autoPlay
+        // autoPlay
         playsInline
         muted
         loop
         key={"v_4"}
-        src={`../static/assets/img/casestudies/salvajenada/p_4.mp4`}
-      />
+        poster={`../static/assets/img/casestudies/salvajenada/introPoster_girlUltra.jpg`}
+      >
+        <source src="../static/assets/img/casestudies/salvajenada/p_4.mp4" />
+      </video>
     );
     for (let i = 1; i < 4; i++) {
       x.push(
@@ -109,9 +116,7 @@ export default function Salvajenada(props) {
           loop
           poster="../static/assets/img/casestudies/salvajenada/introVideo_poster.jpg"
         >
-          <source
-            src="../static/assets/img/casestudies/salvajenada/introVideo.mp4"
-          />
+          <source src="../static/assets/img/casestudies/salvajenada/introVideo.mp4" />
         </Video>
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
@@ -239,7 +244,6 @@ export default function Salvajenada(props) {
           quote={t.third_section.insights.multimedia_development.quote}
           color={props => props.theme.colors.background}
         />
-        {/* <VideoTile>{newPlaylistVideos()}</VideoTile> */}
       </Third>
       <Fourth>
         <FourthBack />
@@ -339,19 +343,6 @@ const StatGrid = styled.div`
         fill: ${salvajeBlue};
       }
     }
-  }
-`;
-
-const VideoTile = styled.div`
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  width: 120%;
-  align-items: center;
-  justify-items: center;
-  grid-gap: 1rem;
-  margin-top: 5rem;
-  video {
-    max-width: 250px;
   }
 `;
 

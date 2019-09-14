@@ -4,32 +4,35 @@ import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
-import NightMode from "../static/assets/img/layout/night.svg";
 import Language from "../static/assets/img/layout/language.svg";
 import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
-
+import CookieMessage from "./CookieMessage";
 
 const Sketch = dynamic(import("../components/sketch/Sketch"), {
   loading: () => <p>Loading wrapper...</p>,
   ssr: false
 });
 
-export default ({ children, title = "Acueducto", changeTheme, locale }) => {
+export default ({
+  children,
+  title = "OLVIDADOS",
+  changeTheme,
+  consentToCookies,
+  hasToConsent,
+  locale
+}) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
-  const [headerTitle, setTitle] = useState("")
+  const [headerTitle, setTitle] = useState("");
   const router = useRouter();
 
   useEffect(() => {
     if (router.route === "/") {
       setShowSketch(true);
-      setTitle("")
     } else {
-      setTitle(router.route.split("/").pop())
       setShowSketch(false);
     }
-    console.log(router.route);
   }, [router.route]);
 
   const toggleNav = () => {
@@ -44,6 +47,10 @@ export default ({ children, title = "Acueducto", changeTheme, locale }) => {
     changeTheme();
   };
 
+  const doConsentToCookies = () => {
+    consentToCookies();
+  };
+
   return (
     <>
       <Head>
@@ -51,11 +58,11 @@ export default ({ children, title = "Acueducto", changeTheme, locale }) => {
       </Head>
       <Styles />
       <PageWrapper>
-        {showSketch? <Sketch/> : ""}
-        {/* {showSketch? <Background /> : ""} */}
+        {/* {showSketch? <Sketch/> : ""} */}
+        {showSketch ? <Background /> : ""}
         <Border />
         <NavTrigger toggleNav={toggleNav} isOpen={isOpen} />
-        <Header closeNav={closeNav} isOpen={isOpen} title={headerTitle}/>
+        <Header closeNav={closeNav} isOpen={isOpen} title={headerTitle} />
         <HeaderTitle>{headerTitle}</HeaderTitle>
         <Nav
           locale={locale}
@@ -63,25 +70,30 @@ export default ({ children, title = "Acueducto", changeTheme, locale }) => {
           closeNav={closeNav}
           isOpen={isOpen}
         />
-        {children}
+        {React.cloneElement(children, { setTitle: setTitle })}
         <ModeToggler isOpen={isOpen} onClick={() => doChangeTheme()}>
           <Language />
         </ModeToggler>
+        <CookieMessage
+          locale={locale}
+          doConsentToCookies={doConsentToCookies}
+          hasToConsent={hasToConsent}
+        />
       </PageWrapper>
     </>
   );
 };
 
 const HeaderTitle = styled.div`
-    position:absolute;
-    left:50%;
-    transform: translateX(-50%);
-    text-transform: uppercase;
-    font-size:1.4rem;
-    letter-spacing:4px;
-    z-index: 2;
-    top: 66px;
-    mix-blend-mode: exclusion;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  z-index: 2;
+  top: 66px;
+  mix-blend-mode: exclusion;
 `;
 
 const PageWrapper = styled.div`
@@ -135,12 +147,12 @@ const ModeToggler = styled.div`
   margin: 0px auto;
   max-width: 1500px;
   svg {
-    width: 30px;
+    width: 33px;
     pointer-events: auto;
-    .a {
+    .fill * {
       fill: ${props => props.theme.colors.white};
     }
-    * {
+    .stroke * {
       fill: none;
       stroke-width: ${props => props.theme.stroke};
       stroke: ${props => props.theme.colors.white};

@@ -6,8 +6,6 @@ import Head from "next/head";
 import TitleSection from "../components/TitleSection";
 import PageClipper from "../components/PageClipper";
 import createMarkup from "../helpers/createMarkup";
-import Process from "../components/Process";
-import Services from "../components/Services";
 import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
 
@@ -18,13 +16,12 @@ const Head3D = dynamic(import("../components/head3D/Head3D"), {
 
 export default function About(props) {
   let t = props.locale.about_page;
-  let s = props.locale.services;
-  let p = props.locale.process;
   let f = props.locale.contactfooter;
 
   const [isVisible, setVisible] = useState(false);
 
   useEffect(() => {
+    props.setTitle("About");
     setVisible(true);
   }, []);
 
@@ -46,28 +43,27 @@ export default function About(props) {
       <Head>
         <title>Acueducto | About</title>
       </Head>
-      <PinnedSection
-        t={t}
-        scroll={
-          <>
-          <Person>
-            {isVisible ? <Head3D file={t.team[0].model} /> : ""}
-            <h4>{t.team[0].name}</h4>
-            <span>{t.team[0].position}</span>
-            <p dangerouslySetInnerHTML={createMarkup(t.team[0].p)} />
-          </Person>
-            <Person>
-            {/* {isVisible ? <Head3D file={t.team[1].model} /> : ""} */}
-        <h4>{t.team[1].name}</h4>
+      <PinnedSection t={t}>
+        <Person>
+          {isVisible ? <Head3D file={t.team[0].model} /> : ""}
+          <h4>{t.team[0].name}</h4>
+          <span>{t.team[0].position}</span>
+          <p dangerouslySetInnerHTML={createMarkup(t.team[0].p)} />
+        </Person>
+        <Person>
+          {/* {isVisible ? <Head3D file={t.team[1].model} /> : ""} */}
+          <h4>{t.team[1].name}</h4>
           <span>{t.team[1].position}</span>
           <p dangerouslySetInnerHTML={createMarkup(t.team[1].p)} />
-         </Person>
-         </>
-        }
+        </Person>
+      </PinnedSection>
+      <TitleSection
+        title={t.values.title}
+        text={t.values.p}
+        link={t.values.link}
+        linktext={t.values.linktext}
+        borderTop
       />
-      <TitleSection title={t.values.title} text={t.values.p} link={t.values.link} linktext={t.values.linktext} borderTop />
-      <Process p={p} />
-      <Services s={s} />
       <ContactFooter f={f} />
     </PageClipper>
   );

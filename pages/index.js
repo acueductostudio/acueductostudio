@@ -1,19 +1,15 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 import Head from "next/head";
-import dynamic from "next/dynamic";
-import Link from "next/link";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
-import { useInView } from "react-intersection-observer";
 import TitleSection from "../components/TitleSection";
 import PageClipper from "../components/PageClipper";
-import Loader from "../components/loader";
 import Process from "../components/Process";
 import CaseStudiesPreview from "../components/CaseStudies/CaseStudiesPreview";
 import ContactFooter from "../components/ContactFooter";
 import createMarkup from "../helpers/createMarkup";
 import Services from "../components/Services";
 import LogoComplete from "../static/assets/img/layout/logoComplete.svg";
+import Holed from "../static/assets/img/layout/holed.svg";
 
 export default function Index(props) {
   let t = props.locale.home_page;
@@ -21,6 +17,11 @@ export default function Index(props) {
   let s = props.locale.services;
   let p = props.locale.process;
   let f = props.locale.contactfooter;
+  
+  useEffect(() => {
+    props.setTitle(t.headerTitle);
+  }, []);
+
   return (
     <>
       <PageClipper>
@@ -63,12 +64,12 @@ export default function Index(props) {
             </ImageGallery> */}
         </Intro>
         <ImageGalleryRemovable>
-          <Padded>
-            <Boxed>
-              <LogoComplete />
-            </Boxed>
-          </Padded>
+          <Holed />
+          <Boxed>
+            <LogoComplete />
+          </Boxed>
         </ImageGalleryRemovable>
+        <Divider />
         <Process p={p} />
         <CaseStudiesPreview c={c} />
         <Services s={s} />
@@ -78,53 +79,27 @@ export default function Index(props) {
   );
 }
 
-const Boxed = styled.div`
-    border: 2px solid white;
-    padding: 20%;
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items: center;
-  justify-content: center;
+const Divider = styled.div`
+  width: 100%;
+  padding-bottom: 12%;
+  background-color: ${props => props.theme.colors.background};
 `;
 
-const Padded = styled.div`
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  grid-column: 4 / span 7;
-  &:after {
-    content: " ";
-    width: 100%;
-    height: 100px;
-    display: flex;
-    background-color: ${props => props.theme.colors.background};
-  }
-  svg {
-    max-width: 370px;
-    width: 100%;
-  }
+const Boxed = styled.div`
+  position: absolute;
+  max-width: 350px;
+  width: 40%;
 `;
 
 const ImageGalleryRemovable = styled.div`
   width: 100%;
-  display: grid;
-  grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4%;
+  display: flex;
   align-content: center;
   justify-content: center;
-  &:before,
-  &:after {
-    content: " ";
-    height: 100%;
-    display: flex;
-    background-color: ${props => props.theme.colors.background};
-  }
-  &:before {
-    grid-column: 1 / span 3;
-  }
-  &:after {
-    grid-column: 11 / span 4;
+  align-items: center;
+  flex-direction: column;
+  svg {
+    width: 100%;
   }
 `;
 

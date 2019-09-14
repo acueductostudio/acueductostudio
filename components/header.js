@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Logo from "../static/assets/img/layout/logo.svg";
+import Logo from "./../static/assets/img/layout/logo.svg";
 
 export default function Header() {
   return (

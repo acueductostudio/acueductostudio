@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import Fade from "react-reveal/Fade";
+import Hoverable from "./styles/BorderedLink";
 import { useRouter } from "next/router";
 
 export default function Nav(props) {
@@ -16,7 +17,22 @@ export default function Nav(props) {
     );
   };
 
+  const scrollToBottom = e => {
+    e.preventDefault();
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  };
+
   let navItems = t.map(function(item, index) {
+    if (item.title === "contact" || item.title === "contacto") {
+      return (
+        <Fade delay={200 + index * 50} key={"item" + index}>
+          <li>
+            <span>0{index + 1}</span>
+            <NavLink onClick={scrollToBottom}>{item.title}</NavLink>
+          </li>
+        </Fade>
+      );
+    }
     return (
       <Fade delay={200 + index * 50} key={"item" + index}>
         <li>
@@ -36,16 +52,35 @@ export default function Nav(props) {
             <ul>{navItems}</ul>
           </NavList>
           <BottomNav>
-            <a className="contact" href="mailto:hola@acueducto.studio">
-              hola@acueducto.studio
-            </a>
+            © MMXIX
             <Social>
-              <a target="_blank" href="https://www.facebook.com/acueducto.co/">facebook</a>
-              <a target="_blank" href="https://www.instagram.com/acueducto.co/">instagram</a>
-              <a target="_blank" href="https://www.linkedin.com/company/acueducto-co/">linkedin</a>
+              <Hoverable
+                target="_blank"
+                href="https://www.facebook.com/acueducto.co/"
+              >
+                facebook
+              </Hoverable>
+              <Hoverable
+                target="_blank"
+                href="https://www.instagram.com/acueducto.co/"
+              >
+                instagram
+              </Hoverable>
+              <Hoverable
+                target="_blank"
+                href="https://www.linkedin.com/company/acueducto-co/"
+              >
+                linkedin
+              </Hoverable>
             </Social>
-            <div className="language">
-              <span>english</span> | <span>español</span>
+            <div className="policies" onClick={props.closeNav}>
+              <Link href="/cookies">
+                <Hoverable>cookie policy</Hoverable>
+              </Link>{" "}
+              |{" "}
+              <Link href="/privacy">
+                <Hoverable>privacy policy</Hoverable>
+              </Link>
             </div>
           </BottomNav>
         </>
@@ -60,11 +95,12 @@ const NavLink = styled.a`
   font-size: 6rem;
   font-weight: 200;
   transition: box-shadow 250ms ease;
+  cursor: pointer;
   box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
-      ${props => props.theme.colors.background} 0px 57px inset;
+    ${props => props.theme.colors.background} 0px 57px inset;
   &:hover {
     box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
-      ${props => props.theme.colors.accent} 0px 59px inset;
+      ${props => props.theme.colors.accent} 0px 57px inset;
   }
   ${props =>
     props.active &&
@@ -95,11 +131,13 @@ const BottomNav = styled.div`
   bottom: 0;
   padding: 2.5% 4%;
   width: 100%;
+  color: ${props => props.theme.colors.foreground_low};
+  font-weight: 100;
   .contact {
     grid-column: 1 / span 2;
   }
-  .language {
-    grid-column: 11 / span 2;
+  .policies {
+    grid-column: 10 / span 3;
     text-align: right;
   }
 `;
