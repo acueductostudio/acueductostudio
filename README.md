@@ -11,23 +11,25 @@
 
 # New Problems:
 - No les estamos avisando que usamos las cookies nomás por estar en la página, qué pasa si pican en close?
-- Cookie component se ve mal en otras páginas
 - Lista de cosas que queremos saber (ej, cuanta gente dice alv cookies damelas)
+- Qué analytics urgen?
+- Videos de portafolio, opinión. 
+- Copy to  clipboard
+- Resize en fondo se rompe -> cambiando de página?
 
 # Lunes:
-- Revisar si los videos tienen margen negro dentro del archivo. 
+- Detalles Sebas Textos Salvajenada
+- Revisar diseño de la danza de las fieras (A en visita la página, colores homogeneos).
 - Posters para videos en Portafolio + mejorar Fieras?
-- Background Loader
-- Tripear scroll en portafolio
-- Revisar diseño de la danza de las fieras (A en visita la página,colores homogeneos).
-- Animacion de load inicio. 
+- Revisar si los videos tienen margen negro dentro del archivo. 
+- Cortes limpios en fondos de caso de estudio de Salvajenada
 
 ## Jueves: 
 - Responsive
-- Cortes limpios en fondos de caso de estudio de Salvajenada
 - Animation icons hovers
+- Links Hovers
+- ScrollBar
 - Lazy load images on case studies
-- Detalles Sebas Textos Salvajenada
 - Analytics (google) / hotjar? 
 
 # Next steps

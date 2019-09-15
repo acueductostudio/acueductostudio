@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
 import PageClipper from "../components/PageClipper";
 import SimplePinnedSection from "../components/SimplePinnedSection";
 import createMarkup from "../helpers/createMarkup";
@@ -19,6 +20,7 @@ export default function Privacy(props) {
         <title>Acueducto | Privacy Policy</title>
       </Head>
       <SimplePinnedSection t={t}>
+        <Fade>
           <h2>{b.subtitle1}</h2>
           <p>{b.p1}</p>
           <h2>{b.subtitle2}</h2>
@@ -44,6 +46,7 @@ export default function Privacy(props) {
           <p dangerouslySetInnerHTML={createMarkup(b.p6)} />
           <h2>{b.subtitle7}</h2>
           <p>{b.p7}</p>
+        </Fade>
       </SimplePinnedSection>
       <ContactFooter f={f} />
     </PageClipper>

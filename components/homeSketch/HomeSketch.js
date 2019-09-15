@@ -3,7 +3,7 @@ import Fade from "react-reveal";
 import shade from "./shade";
 import P5Wrapper from "react-p5-wrapper";
 
-function Sketch() {
+export default function HomeSketch() {
   return (
     <SketchContainer>
       <Fade>
@@ -29,5 +29,3 @@ const SketchContainer = styled.div`
     overflow: hidden;
   }
 `;
-
-export default Sketch;

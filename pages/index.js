@@ -1,10 +1,11 @@
 import { useEffect } from "react";
+import Fade from "react-reveal/Fade";
 import Head from "next/head";
 import styled from "styled-components";
 import TitleSection from "../components/TitleSection";
 import PageClipper from "../components/PageClipper";
 import Process from "../components/Process";
-import CaseStudiesPreview from "../components/CaseStudies/CaseStudiesPreview";
+import CaseStudiesPreview from "../components/caseStudies/CaseStudiesPreview";
 import ContactFooter from "../components/ContactFooter";
 import createMarkup from "../helpers/createMarkup";
 import Services from "../components/Services";
@@ -34,7 +35,7 @@ export default function Index(props) {
             <h2>{t.landing.tagline}</h2>
           </LandContainer>
         </Land>
-        <Intro>
+        <Intro id="removeArrow">
           <TitleSection
             title={t.intro.title}
             text={t.intro.p}
@@ -66,7 +67,9 @@ export default function Index(props) {
         <ImageGalleryRemovable>
           <Holed />
           <Boxed>
+            <Fade>
             <LogoComplete />
+            </Fade>
           </Boxed>
         </ImageGalleryRemovable>
         <Divider />

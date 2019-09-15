@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import Hamburger from "../static/assets/img/layout/hamburger.svg";
 
 const NavTrigger = props => (
-  <TriggerContainer>
+  <TriggerContainer visible={props.hasLoaded}>
     <Trigger onClick={() => props.toggleNav()} open={props.isOpen}>
       <Hamburger />
     </Trigger>
@@ -12,6 +12,7 @@ const NavTrigger = props => (
 export default NavTrigger;
 
 const TriggerContainer = styled.div`
+  opacity: ${props => (props.visible ? 1 : 0)};
   display: flex;
   justify-content: flex-end;
   position: fixed;
@@ -25,6 +26,7 @@ const TriggerContainer = styled.div`
   max-width: 1500px;
   pointer-events: none;
   mix-blend-mode: exclusion;
+  transition: .3s ease .3s;
 `;
 
 const Trigger = styled.div`
@@ -41,9 +43,9 @@ const Trigger = styled.div`
       stroke-width: ${props => props.theme.stroke};
       stroke-linejoin: round;
       stroke: ${props => props.theme.colors.white};
-      transition: transform .3s ease;
-      &#bot{
-        transition: transform .3s ease .15s;
+      transition: transform 0.3s ease;
+      &#bot {
+        transition: transform 0.3s ease 0.15s;
       }
     }
   }
@@ -51,10 +53,10 @@ const Trigger = styled.div`
     props.open &&
     css`
       svg {
-        #top{
+        #top {
           transform: translateX(-27px);
-        } 
-        #bot{
+        }
+        #bot {
           transform: translateX(13px);
         }
       }

@@ -77,7 +77,7 @@ const WidthLink = styled.a`
   position:relative;
   b {
     color: ${props => props.theme.colors.foreground};
-    font-weight: 200;
+    font-weight: 100;
     border-bottom: ${props =>
       props.theme.stroke + " solid " + props.theme.colors.accent};
   }

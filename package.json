@@ -14,6 +14,7 @@
     "next-compose-plugins": "^2.2.0",
     "p5": "^0.9.0",
     "react": "^16.8.6",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-cursor-position": "^3.0.3",
     "react-dom": "^16.8.6",
     "react-intersection-observer": "^8.24.1",

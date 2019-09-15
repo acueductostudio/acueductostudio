@@ -2,15 +2,15 @@ import styled from "styled-components";
 import createMarkup from "../../../helpers/createMarkup";
 
 const Stat = ({ stat, children }) => {
-    return (
-        <StatWrapper>
-            <p>
-                <b dangerouslySetInnerHTML={createMarkup(stat.big)}/>
-                {stat.small}
-            </p>
-            {children}
-        </StatWrapper>
-    )
+  return (
+    <StatWrapper>
+      <p>
+        <b dangerouslySetInnerHTML={createMarkup(stat.big)} />
+        {stat.small}
+      </p>
+      {children}
+    </StatWrapper>
+  )
 };
 
 export default Stat;
@@ -33,7 +33,7 @@ const StatWrapper = styled.div`
     font-weight: 200;
     line-height: 100%;
     display:block;
-    color: ${props=> props.theme.colors.foreground};
+    color: ${props => props.theme.colors.foreground};
   }
   `;
 

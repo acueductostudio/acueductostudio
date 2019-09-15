@@ -11,8 +11,9 @@ const SingleCase = props => {
     <Case>
       <Link href={"work" + props.link} passHref>
         <a>
+        <Fade>
           <VidContainer>
-            {/* <Logo style={{backgroundImage : `url(static/assets/img/casestudies/${props.logo})`}}/> */}
+
             <Logo src={`static/assets/img/casestudies/${props.logo}`}/>
             <video
               autoPlay
@@ -21,13 +22,19 @@ const SingleCase = props => {
               loop
               src={`../static/assets/img/casestudies/${props.video}`}
             />
+           
           </VidContainer>
+          </Fade>
         </a>
       </Link>
       <Info>
+        <Fade>
         <h4>{props.title}</h4>
+        </Fade>
         <Flexed>
+          <Fade>
           <p dangerouslySetInnerHTML={createMarkup(props.tags)} />
+          </Fade>
           <Link href={"work" + props.link} passHref>
             <a>
               <Arrow />
@@ -110,7 +117,6 @@ const Info = styled.div`
 
 const VidContainer = styled.div`
     margin: 10%;
-    background-color: ${props => props.theme.colors.accent};
     width: 80%;
     height: 0;
     padding-bottom: 80%;

@@ -2,18 +2,32 @@ import Link from "next/link";
 import styled from "styled-components";
 import Logo from "./../static/assets/img/layout/logo.svg";
 
-export default function Header() {
+export default function Header({hasLoaded, headerTitle}) {
   return (
-    <TopHeader>
+    <TopHeader reveal={hasLoaded}>
       <Link href="/">
         <Logotype>
           <h1>acueducto</h1>
           <Logo />
         </Logotype>
       </Link>
+      <HeaderTitle>{headerTitle}</HeaderTitle>
     </TopHeader>
   );
 }
+
+const HeaderTitle = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  z-index: 2;
+  top: 66px;
+  mix-blend-mode: exclusion;
+`;
+
 
 const TopHeader = styled.header`
   display: flex;
@@ -29,6 +43,8 @@ const TopHeader = styled.header`
   max-width: 1500px;
   pointer-events:none;
   mix-blend-mode: exclusion;
+  opacity: ${props => props.reveal ? 1 : 0};
+  transition: opacity .3s ease .3s;
 `;
 
 const Logotype = styled.a`

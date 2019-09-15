@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Fade from "react-reveal/Fade";
 import { useEffect } from "react";
 import PageClipper from "../components/PageClipper";
 import SimplePinnedSection from "../components/SimplePinnedSection";
@@ -19,6 +20,7 @@ export default function Cookies(props) {
         <title>Acueducto | Cookie Policy</title>
       </Head>
       <SimplePinnedSection t={t}>
+        <Fade>
         <h2>{b.title1}</h2>
         <p>{b.p1}</p>
         <h2>{b.title2}</h2>
@@ -40,6 +42,7 @@ export default function Cookies(props) {
         <p>{b.p9}</p>
         <h4>{b.subsubtitle10}</h4>
         <p dangerouslySetInnerHTML={createMarkup(b.p10)} />
+        </Fade>
       </SimplePinnedSection>
       <ContactFooter f={f} />
     </PageClipper>

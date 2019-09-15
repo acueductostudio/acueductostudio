@@ -9,7 +9,7 @@ import createMarkup from "../helpers/createMarkup";
 import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
 
-const HeadSketch = dynamic(import("../components/head3D/HeadSketch"), {
+const HeadSketch = dynamic(import("../components/headSketch/HeadSketch"), {
   loading: () => <HeadLoader src="./../static/assets/img/layout/headPlacerHolder.jpg"/>,
   ssr: false
 });
@@ -22,19 +22,6 @@ export default function About(props) {
     props.setTitle("About");
   }, []);
 
-  // let teamMembers = t.team.map(function(member, index) {
-  //   return (
-  //     <Person key={"person" + index}>
-  //       {isVisible? <Head3D file={member.model} key={"model" + index}/> : ""}
-  //       <h4>{member.name}</h4>
-  //       <span>{member.position}</span>
-  //       <p dangerouslySetInnerHTML={createMarkup(member.p)} />
-  //     </Person>
-  //   );
-  // });
-
-  //Arte manual
-
   return (
     <PageClipper>
       <Head>
@@ -42,18 +29,20 @@ export default function About(props) {
       </Head>
       <PinnedSection t={t}>
         <Person>
-          {/* <Head3D file="./static/assets/3d/rodrigo.gltf"/> */}
           <HeadSketch />
-          <h4>{t.team[0].name}</h4>
-          <span>{t.team[0].position}</span>
-          <p dangerouslySetInnerHTML={createMarkup(t.team[0].p)} />
+          <Fade>
+          <h4>{t.team.rodrigo.name}</h4>
+          <span>{t.team.rodrigo.position}</span>
+          <p dangerouslySetInnerHTML={createMarkup(t.team.rodrigo.bio)} />
+          </Fade>
         </Person>
-        <Person>
-          {/* <Head3D color={"#CC2E44"} file="./static/assets/3d/artemio.gltf"/> */}
+        <Person> 
           <HeadSketch second rotationStart={50} invertRotation />
-          <h4>{t.team[1].name}</h4>
-          <span>{t.team[1].position}</span>
-          <p dangerouslySetInnerHTML={createMarkup(t.team[1].p)} />
+          <Fade>
+          <h4>{t.team.artemio.name}</h4>
+          <span>{t.team.artemio.position}</span>
+          <p dangerouslySetInnerHTML={createMarkup(t.team.artemio.bio)} />
+          </Fade>
         </Person>
       </PinnedSection>
       <TitleSection
@@ -92,12 +81,4 @@ const Person = styled.div`
     letter-spacing: 3.5px;
     margin-bottom: 6%;
   }
-`;
-
-const ModelSection = styled.div`
-  min-height: 500px;
-  height: auto;
-  position: relative;
-  width: 100%;
-  display: flex;
 `;

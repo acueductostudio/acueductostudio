@@ -4,34 +4,38 @@ import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
-import Language from "../static/assets/img/layout/language.svg";
+import LanguageToggler from "./LanguageToggler";
 import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
 import CookieMessage from "./CookieMessage";
+import ScrollIncentive from "./ScrollIncentive";
 
-const Sketch = dynamic(import("../components/sketch/Sketch"), {
-  loading: () => <p>Loading wrapper...</p>,
+const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
   ssr: false
 });
 
 export default ({
   children,
-  title = "OLVIDADOS",
+  title = "NO TITLE",
   changeTheme,
   consentToCookies,
   hasToConsent,
+  hasLoaded,
   locale
 }) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
   const [headerTitle, setTitle] = useState("");
+  const [showArrow, setShowArrow] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     if (router.route === "/") {
       setShowSketch(true);
+      setShowArrow(true);
     } else {
       setShowSketch(false);
+      setShowArrow(false);
     }
   }, [router.route]);
 
@@ -51,19 +55,23 @@ export default ({
     consentToCookies();
   };
 
+  const removeArrow = () => {
+    if (document.getElementById("Clipper").scrollTop > 100){
+      setShowArrow(false);
+    }
+  }
+
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <Styles />
-      <PageWrapper>
-        {/* {showSketch? <Sketch/> : ""} */}
-        {showSketch ? <Background /> : ""}
+      <PageWrapper onScroll={showArrow ? removeArrow : null}>
+        {showSketch? <HomeSketch/> : ""}
+        {/* {showSketch ? <Background /> : ""} */}
         <Border />
-        <NavTrigger toggleNav={toggleNav} isOpen={isOpen} />
-        <Header closeNav={closeNav} isOpen={isOpen} title={headerTitle} />
-        <HeaderTitle>{headerTitle}</HeaderTitle>
+        <NavTrigger toggleNav={toggleNav} isOpen={isOpen} hasLoaded={hasLoaded}/>
+        <Header closeNav={closeNav} isOpen={isOpen} headerTitle={headerTitle} hasLoaded={hasLoaded}/>
         <Nav
           locale={locale}
           toggleNav={toggleNav}
@@ -71,9 +79,8 @@ export default ({
           isOpen={isOpen}
         />
         {React.cloneElement(children, { setTitle: setTitle })}
-        <ModeToggler isOpen={isOpen} onClick={() => doChangeTheme()}>
-          <Language />
-        </ModeToggler>
+        <LanguageToggler doChangeTheme={doChangeTheme} hasLoaded={hasLoaded}/>
+        <ScrollIncentive hasLoaded={hasLoaded} showArrow={showArrow} isOpen={isOpen}/>
         <CookieMessage
           locale={locale}
           doConsentToCookies={doConsentToCookies}
@@ -83,18 +90,6 @@ export default ({
     </>
   );
 };
-
-const HeaderTitle = styled.div`
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  letter-spacing: 4px;
-  z-index: 2;
-  top: 66px;
-  mix-blend-mode: exclusion;
-`;
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -128,38 +123,6 @@ const Border = styled.div`
     `${props.theme.stroke} solid ${props.theme.colors.foreground}`};
 `;
 
-const ModeToggler = styled.div`
-  cursor: pointer;
-  bottom: 50%;
-  display: flex;
-  z-index: 10;
-  height: 100%;
-  mix-blend-mode: exclusion;
-  pointer-events: none;
-  justify-content: flex-end;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-right: 50px;
-  margin: 0px auto;
-  max-width: 1500px;
-  svg {
-    width: 33px;
-    pointer-events: auto;
-    .fill * {
-      fill: ${props => props.theme.colors.white};
-    }
-    .stroke * {
-      fill: none;
-      stroke-width: ${props => props.theme.stroke};
-      stroke: ${props => props.theme.colors.white};
-    }
-  }
-`;
-
 const Background = styled.div`
   position: absolute;
   left: 0;
@@ -168,10 +131,4 @@ const Background = styled.div`
   top: 0%;
   background-image: url("../static/assets/img/layout/fond.jpg");
   background-size: cover;
-`;
-
-const Styles = createGlobalStyle`
-      body {
-        color: ${props => props.theme.colors.foreground};
-      }
 `;

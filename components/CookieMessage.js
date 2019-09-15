@@ -81,8 +81,9 @@ const Wrapper = styled.div`
   pointer-events: ${props => (props.clickable ? "auto" : "none")};
   opacity: ${props => (props.clickable ? "1" : "0")};
   width: 380px;
-  bottom: 10%;
-  right: 15%;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 100;
   position: fixed;
   transition: opacity 0.3s ease;

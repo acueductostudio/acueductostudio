@@ -1,13 +1,20 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import Link from "next/link";
-import Imago from "../static/assets/img/layout/imago.svg";
 import createMarkup from "../helpers/createMarkup";
 import Arrow from "../components/Arrow";
 import Logo from "./../static/assets/img/layout/logo.svg";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const ContactFooter = props => {
   let f = props.f;
+
+  const copyClipboard = () => {
+    console.log("should copy");
+    var copyText = document.querySelector("#copyText");
+    copyText.select();
+    document.execCommand("copy");
+  };
+  
   return (
     <Grid borderTop={props.borderTop} id="contact">
       <Fade>
@@ -59,7 +66,7 @@ const WidthLink = styled.a`
   &:hover {
     b {
       border-bottom: ${props =>
-      props.theme.stroke + " solid " + props.theme.colors.background};
+        props.theme.stroke + " solid " + props.theme.colors.background};
     }
     svg {
       * {

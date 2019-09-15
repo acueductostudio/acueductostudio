@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import PageClipper from "../components/PageClipper";
 import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
-import CaseStudiesPreview from "../components/CaseStudies/CaseStudiesPreview";
+import CaseStudiesPreview from "../components/caseStudies/CaseStudiesPreview";
 
 export default function Manifesto(props) {
   let t = props.locale.manifesto_page;
@@ -44,9 +44,10 @@ const Belief = styled.li`
   margin-bottom: 25%;
   span {
     color: ${props => props.theme.colors.accent};
-    font-size: 3rem;
+    font-size: 1.5rem;
     position: absolute;
-    left: -6rem;
+    left: -40px;
+    top: 12px;
   }
   h3 {
     font-size: 3rem;
