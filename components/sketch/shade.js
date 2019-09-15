@@ -115,6 +115,14 @@ color*=(1.5*f*f*f+1.2*f*f+2.3*f);
   //   }
   //   console.log(c) //LOG THE C VALUES
   // }
+
+  // Not sure if this was working before, check mobile
+  // but now it responds on desktop
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+  }
+
+
   p.draw = function() {
     LDShader.setUniform("iResolution", [p.width, p.height]); //pass some values to the shader
     LDShader.setUniform("iTime", p.millis() * 0.001);

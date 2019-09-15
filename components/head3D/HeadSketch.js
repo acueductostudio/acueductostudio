@@ -1,13 +1,18 @@
 import styled from "styled-components";
 import Fade from "react-reveal";
-import shade from "./../sketch/shade";
+import head from "./head";
 import P5Wrapper from "react-p5-wrapper";
 
-export default function HeadSketch() {
+export default function HeadSketch(props) {
   return (
     <SketchContainer>
       <Fade>
-      <P5Wrapper sketch={shade} id="Frame"/>
+        <P5Wrapper
+          sketch={head}
+          second={props.second}
+          rotationStart={props.rotationStart}
+          invertRotation={props.invertRotation}
+        />
       </Fade>
     </SketchContainer>
   );
@@ -15,9 +20,19 @@ export default function HeadSketch() {
 
 const SketchContainer = styled.div`
   width: 100%;
-  height: 500px;
+  height: 400px;
+  margin-bottom: 13%;
   position: relative;
-  left: -20%;
+  left: -10%;
+  div div div{
+    width:100%;
+    height:100%;
+    padding-left:10%;
+    color: ${props => props.theme.colors.foreground_lowest};
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 3.5px;
+  }
   canvas {
     width: 100%;
     height: 100%;
@@ -27,21 +42,3 @@ const SketchContainer = styled.div`
     pointer-events: none;
   }
 `;
-
-
-// const SketchContainer = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   position: absolute;
-//   z-index: 10;
-//   z-index: 0;
-//   pointer-events: none;
-//   canvas {
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     top: 0;
-//     pointer-events: none;
-//     overflow: hidden;
-//   }
-// `;

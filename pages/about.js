@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -9,8 +9,8 @@ import createMarkup from "../helpers/createMarkup";
 import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
 
-const Head3D = dynamic(import("../components/head3D/Head3D"), {
-  loading: () => <span style={{ height: "500px" }}>Loading head...</span>,
+const HeadSketch = dynamic(import("../components/head3D/HeadSketch"), {
+  loading: () => <HeadLoader src="./../static/assets/img/layout/headPlacerHolder.jpg"/>,
   ssr: false
 });
 
@@ -42,13 +42,15 @@ export default function About(props) {
       </Head>
       <PinnedSection t={t}>
         <Person>
-          <Head3D file="./static/assets/3d/rodrigo.gltf"/>
+          {/* <Head3D file="./static/assets/3d/rodrigo.gltf"/> */}
+          <HeadSketch />
           <h4>{t.team[0].name}</h4>
           <span>{t.team[0].position}</span>
           <p dangerouslySetInnerHTML={createMarkup(t.team[0].p)} />
         </Person>
         <Person>
-          <Head3D color={"#CC2E44"} file="./static/assets/3d/artemio.gltf"/>
+          {/* <Head3D color={"#CC2E44"} file="./static/assets/3d/artemio.gltf"/> */}
+          <HeadSketch second rotationStart={50} invertRotation />
           <h4>{t.team[1].name}</h4>
           <span>{t.team[1].position}</span>
           <p dangerouslySetInnerHTML={createMarkup(t.team[1].p)} />
@@ -65,6 +67,15 @@ export default function About(props) {
     </PageClipper>
   );
 }
+
+const HeadLoader = styled.img`
+  width: 100%;
+  height: auto;
+  max-width:400px;
+  margin-bottom: 13%;
+  position: relative;
+  left: -10%;
+`;
 
 const Person = styled.div`
   display: flex;

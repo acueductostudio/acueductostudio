@@ -15,7 +15,6 @@
 - Lista de cosas que queremos saber (ej, cuanta gente dice alv cookies damelas)
 
 # Lunes:
-- 3D heads + headloader
 - Revisar si los videos tienen margen negro dentro del archivo. 
 - Posters para videos en Portafolio + mejorar Fieras?
 - Background Loader
