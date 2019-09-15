@@ -8,35 +8,27 @@ import * as THREE from "three";
 
 // Creates a cached async resource
 const resource = createResource(
-  file =>
-    new Promise(
-      async res =>
-        await new GLTFLoader().load("./static/assets/3d/" + file, res)
-    )
+  file => new Promise(async res => await new GLTFLoader().load(file, res))
 );
 
 function Model({ file }) {
   // Read from cache ... this will throw an exception which will be caught by <Suspense />
-  const { scene } = resource.read(file);
-  console.log(scene);
+  console.log("call to read file");
+  const { scene } = resource.read(file)
+  console.log(scene.uuid);
   // the model is read only for some reason
   // It won't come to this point until the resource has been fetched
   return (
-    <>
-      {console.log(0)}
-      <mesh>
-        <primitive
-          object={scene}
-          position={[0, 0, 0]}
-          scale={[0.1, 0.1, 0.1]}
-          attach="geometry"
-        />
-      </mesh>
-    </>
+    <primitive
+      object={scene}
+      position={[0, 0, 0]}
+      scale={[0.1, 0.1, 0.1]}
+      attach="geometry"
+    />
   );
 }
 
-function Cursor({ mouse, helper }) {
+function CursorLight({ mouse, helper, color }) {
   return (
     <a.group
       position={interpolate([mouse], mouse => [
@@ -46,20 +38,20 @@ function Cursor({ mouse, helper }) {
       ])}
     >
       <pointLight
-        color={"#1740BF"}
+        color={color ? color : "#1740BF"}
         intensity={3}
         sphereSize={0.002}
         position={[0, 0, 0]}
       />
       {helper ? (
-        <a.mesh position={[0, 0, 0]}>
+        <mesh position={[0, 0, 0]}>
           <sphereGeometry attach="geometry" args={[0.02, 20, 20]} />
           <meshLambertMaterial
             attach="material"
-            color="#1740BF"
-            refractionRatio={0}
+            color={color ? color : "#1740BF"}
+            refractionRatio={0.3}
           />
-        </a.mesh>
+        </mesh>
       ) : null}
     </a.group>
   );
@@ -67,49 +59,38 @@ function Cursor({ mouse, helper }) {
 
 function PlaceHolder() {
   return (
-    <mesh visible position={[1, 2, 3]} rotation={[0, 0, 0]}>
-      <sphereGeometry attach="geometry" args={[1, 16, 16]} />
-      <meshStandardMaterial attach="material" color="indianred" transparent />
+    <mesh visible position={[0, 0, 0]} rotation={[0, 0, 0]}>
+      <sphereGeometry attach="geometry" args={[1, 8, 8]} />
+      <meshLambertMaterial
+        attach="material"
+        color="#1740BF"
+        refractionRatio={1}
+      />
     </mesh>
   );
 }
 
-function Scene({ mouse }) {
-  let group = useRef();
-  let light1 = useRef();
-  let theta = 0;
-  let theta2 = -20;
+function RotatingElement({ file }) {
+  let model = useRef();
+  let thetaVertical = 0;
+  let thetaHorizontal = -20;
   useRender(() =>
-    group.current.rotation.set(
-      0.15 * Math.sin(THREE.Math.degToRad((theta += 0.12))),
-      1.5 * Math.sin(THREE.Math.degToRad((theta2 += 0.12))),
+    model.current.rotation.set(
+      0.15 * Math.sin(THREE.Math.degToRad((thetaVertical += 0.12))),
+      1.5 * Math.sin(THREE.Math.degToRad((thetaHorizontal += 0.12))),
       0
     )
   );
-
   return (
-    <>
-      <ambientLight intensity={0.06} />
-      <group ref={light1}>
-        <spotLight
-          intensity={0.35}
-          position={[-40, -30, 5]}
-          angle={0.02}
-          penumbra={1}
-          color={"#CC2E44"}
-        />
-      </group>
-      <group ref={group}>
-        <Suspense fallback={<PlaceHolder />}>
-          <Model file={"rodrigo.gltf"} />
-        </Suspense>
-      </group>
-      <Cursor mouse={mouse} />
-    </>
+    <group ref={model}>
+      <Suspense fallback={<PlaceHolder />}>
+        <Model file={file} />
+      </Suspense>
+    </group>
   );
 }
 
-function Head3D() {
+function Head3D({ color, file }) {
   const [{ mouse }, setMouse] = useSpring(() => ({ mouse: [0, 0] }));
   let model = useRef();
   const onMouseMove = useCallback(
@@ -125,7 +106,16 @@ function Head3D() {
   return (
     <ModelContainer onMouseMove={onMouseMove} ref={model}>
       <Canvas camera={{ position: [0, 0, 4] }}>
-        <Scene mouse={mouse} />
+        <ambientLight intensity={0.06} />
+        <spotLight
+          intensity={0.35}
+          position={[-40, -30, 5]}
+          angle={0.02}
+          penumbra={1}
+          color={"#CC2E44"}
+        />
+        <RotatingElement mouse={mouse} color={color} file={file} />
+        <CursorLight mouse={mouse} color={color} helper />
       </Canvas>
     </ModelContainer>
   );

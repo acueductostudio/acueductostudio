@@ -18,11 +18,8 @@ export default function About(props) {
   let t = props.locale.about_page;
   let f = props.locale.contactfooter;
 
-  const [isVisible, setVisible] = useState(false);
-
   useEffect(() => {
     props.setTitle("About");
-    setVisible(true);
   }, []);
 
   // let teamMembers = t.team.map(function(member, index) {
@@ -45,13 +42,13 @@ export default function About(props) {
       </Head>
       <PinnedSection t={t}>
         <Person>
-          {isVisible ? <Head3D file={t.team[0].model} /> : ""}
+          <Head3D file="./static/assets/3d/rodrigo.gltf"/>
           <h4>{t.team[0].name}</h4>
           <span>{t.team[0].position}</span>
           <p dangerouslySetInnerHTML={createMarkup(t.team[0].p)} />
         </Person>
         <Person>
-          {/* {isVisible ? <Head3D file={t.team[1].model} /> : ""} */}
+          <Head3D color={"#CC2E44"} file="./static/assets/3d/artemio.gltf"/>
           <h4>{t.team[1].name}</h4>
           <span>{t.team[1].position}</span>
           <p dangerouslySetInnerHTML={createMarkup(t.team[1].p)} />
