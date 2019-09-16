@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import PageClipper from "../components/PageClipper";
 import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
-import CaseStudiesPreview from "../components/caseStudies/CaseStudiesPreview";
+import CaseStudiesPreview from "../components/caseStudy/CaseStudiesPreview";
 
 export default function Manifesto(props) {
   let t = props.locale.manifesto_page;

@@ -1,9 +1,6 @@
 import { useState } from "react";
 import YouTubePlayer from "react-player";
-import dynamic from "next/dynamic";
 import styled, { css, keyframes } from "styled-components";
-import Pause from "../../static/assets/img/casestudies/lddlf/pause.svg";
-import Play from "../../static/assets/img/casestudies/lddlf/play.svg";
 
 function VideoPlayer(props) {
   const [isPlaying, setPlaying] = useState(false);
@@ -26,7 +23,7 @@ function VideoPlayer(props) {
   return (
     <VideoWrapper ratio={props.ratio}>
       <Clicker onClick={() => handlePlay()} hideSvg={isPlaying}>
-        {isPlaying ? <Button>Pause</Button> : <Button>Play</Button>}
+        {isPlaying ? <Button>Pause</Button> : <ButtonPlay>Play</ButtonPlay>}
       </Clicker>
       <Fader hide={isPlaying} />
       <OverStill
@@ -34,7 +31,7 @@ function VideoPlayer(props) {
         hide={isPlaying}
         onClick={() => handlePlay(true)}
       />
-      {!isInitial && (
+      <PlayerWrapper hide={!isPlaying}>
         <YouTubePlayer
           playing={isPlaying}
           url={props.url}
@@ -50,12 +47,18 @@ function VideoPlayer(props) {
             }
           }}
         />
-      )}
+      </PlayerWrapper>
     </VideoWrapper>
   );
 }
 
 export default VideoPlayer;
+
+const PlayerWrapper = styled.div`
+  z-index: 0;
+  opacity: ${props => (props.hide ? 0 : 1)};
+  transition: opacity ${props => (props.hide? "0s linear 0s" : "0.3s ease .8s")};
+`;
 
 const VideoWrapper = styled.div`
   padding-bottom: ${props => props.ratio || "50.6%"};
@@ -87,6 +90,16 @@ const hidePause = keyframes`
   }
 `;
 
+const Button = styled.div`
+  opacity: ${props => (props.hide ? "0" : "1")};
+  font-size: 4.5rem;
+  border-bottom: 2px solid transparent;
+`;
+
+const ButtonPlay = styled(Button)`
+  transition: border-color .3s ease;
+`;
+
 const Clicker = styled.div`
   width: 100%;
   height: 100%;
@@ -95,10 +108,14 @@ const Clicker = styled.div`
   z-index: 3;
   cursor: pointer;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${props => props.theme.colors.foreground};
-
+  align-items: center;
+  justify-content: center;
+  color: ${props => props.theme.colors.foreground};
+  &:hover {
+    ${ButtonPlay} {
+      border-color: ${props => props.theme.colors.foreground};
+    }
+  }
   ${props =>
     props.hideSvg &&
     css`
@@ -112,28 +129,6 @@ const Clicker = styled.div`
         }
       }
     `}
-  svg {
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    left: calc(50% - 17.5px);
-    top: calc(50% + 10px);
-    transition: opacity 0.4s ease;
-    z-index: 3;
-    path {
-      stroke: ${props => props.theme.colors.foreground};
-      stroke-width: 26px;
-      fill: none;
-      stroke: rgb(255, 255, 255);
-      stroke-linejoin: round;
-      stroke-miterlimit: 10;
-    }
-  }
-`;
-
-const Button = styled.div`
-  opacity: ${props => (props.hide ? "0" : "1")};
-  font-size: 4.5rem;
 `;
 
 const Fader = styled.div`
@@ -144,14 +139,8 @@ const Fader = styled.div`
   transition: 0.4s ease opacity;
   margin-bottom: 50px;
   pointer-events: none;
-  opacity: ${props=> props.hide? 0 : 1}
-  /* ${props =>
-    props.hide &&
-    css`
-      opacity: 0;
-    `} */
+  opacity: ${props => (props.hide ? 0 : 1)};
 `;
-
 
 const OverStill = styled.div`
   width: 100%;
@@ -159,7 +148,7 @@ const OverStill = styled.div`
   position: absolute;
   z-index: 1;
   cursor: pointer;
-  transition: 0s ease opacity;
+  transition: 0.3s ease opacity 0s;
   opacity: ${props => (props.hide ? "0" : "1")};
   pointer-events: ${props => (props.hide ? "none" : "auto")};
   background-size: cover;
@@ -167,7 +156,6 @@ const OverStill = styled.div`
   ${props =>
     props.hide &&
     css`
-      transition: opacity 0.35s ease 0.4s;
-
+      transition: opacity 0.3s ease 0.3s;
     `}
 `;

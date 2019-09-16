@@ -5,7 +5,7 @@ import styled from "styled-components";
 import TitleSection from "../components/TitleSection";
 import PageClipper from "../components/PageClipper";
 import Process from "../components/Process";
-import CaseStudiesPreview from "../components/caseStudies/CaseStudiesPreview";
+import CaseStudiesPreview from "../components/caseStudy/CaseStudiesPreview";
 import ContactFooter from "../components/ContactFooter";
 import createMarkup from "../helpers/createMarkup";
 import Services from "../components/Services";

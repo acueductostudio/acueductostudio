@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect } from "react";
 import TitleSection from "../components/TitleSection";
-import CaseList from "../components/caseStudies/CaseList";
+import CaseList from "../components/caseStudy/CaseList";
 import PageClipper from "../components/PageClipper";
 import ContactFooter from "../components/ContactFooter";
 

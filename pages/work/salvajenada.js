@@ -13,9 +13,9 @@ import Apple from "../../static/assets/img/casestudies/salvajenada/apple.svg";
 import Spotify from "../../static/assets/img/casestudies/salvajenada/spotify.svg";
 import createMarkup from "../../helpers/createMarkup";
 import Marquee from "../../helpers/react-double-marquee";
-import Quote from "../../components/CaseStudies/Quote";
-import Stat from "../../components/CaseStudies/Salvajenada/Stat";
-import Insight from "../../components/CaseStudies/Insight";
+import Quote from "../../components/caseStudy/Quote";
+import Stat from "../../components/caseStudy/Salvajenada/Stat";
+import Insight from "../../components/caseStudy/Insight";
 import dynamic from "next/dynamic";
 
 const FramesEmbed = dynamic(

@@ -15,17 +15,16 @@ import Type_3 from "../../static/assets/img/casestudies/lddlf/type_3.svg";
 import AppSvg from "../../static/assets/img/casestudies/lddlf/app.svg";
 import createMarkup from "../../helpers/createMarkup";
 import Marquee from "../../helpers/react-double-marquee";
-import VideoPlayer from "../../components/CaseStudies/videoPlayer";
-import Quote from "../../components/CaseStudies/Quote";
-import Insight from "../../components/CaseStudies/Insight";
+import Quote from "../../components/caseStudy/Quote";
+import Insight from "../../components/caseStudy/Insight";
 import dynamic from "next/dynamic";
 
 // const originalRed = "#C64028";
 // const YoutubeFirstRed = "rgb(221, 56, 20)";
 const fierasRed = "rgb(201,32,26)";
 
-const ThePlayer = dynamic(import("../../components/CaseStudies/videoPlayer"), {
-  loading: () => <p>Loading wrapper...</p>,
+const ThePlayer = dynamic(import("../../components/caseStudies/VideoPlayer"), {
+  loading: () => <p>Loading player...</p>,
   ssr: false
 });
 
@@ -446,6 +445,7 @@ const Sixth = styled(CommonSection)`
   align-items: center;
   a {
     font-size: 4.5rem;
+    margin-bottom: 3%;
     text-decoration: none;
     line-height: 100%;
     border-bottom: 3px solid ${props => props.theme.colors.foreground};
