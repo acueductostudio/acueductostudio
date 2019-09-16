@@ -19,7 +19,7 @@ import Insight from "../../components/caseStudy/Insight";
 import dynamic from "next/dynamic";
 
 const FramesEmbed = dynamic(
-  import("../../components/CaseStudies/Salvajenada/FramesEmbed"),
+  import("../../components/caseStudy/Salvajenada/FramesEmbed"),
   {
     loading: () => <span style={{ height: "500px" }}>Loading frames...</span>
   }
