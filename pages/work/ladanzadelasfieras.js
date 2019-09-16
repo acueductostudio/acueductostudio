@@ -23,7 +23,7 @@ import dynamic from "next/dynamic";
 // const YoutubeFirstRed = "rgb(221, 56, 20)";
 const fierasRed = "rgb(201,32,26)";
 
-const ThePlayer = dynamic(import("../../components/caseStudies/VideoPlayer"), {
+const ThePlayer = dynamic(import("../../components/caseStudy/VideoPlayer"), {
   loading: () => <p>Loading player...</p>,
   ssr: false
 });
