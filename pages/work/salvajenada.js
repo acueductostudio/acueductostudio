@@ -71,7 +71,7 @@ export default function Salvajenada(props) {
     let x = [];
     x.push(
       <video
-        // autoPlay
+        autoPlay
         playsInline
         muted
         loop

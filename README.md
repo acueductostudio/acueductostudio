@@ -16,11 +16,11 @@
 - Revisar diseño de la danza de las fieras (A en visita la página, colores homogeneos).
 - Videos de portafolio, opinión. 
 - Copy to clipboard
+- No olvidar las fotos
 
 # Lunes:
 - Posters para videos en Portafolio + mejorar Fieras?
 - Revisar si los videos tienen margen negro dentro del archivo. 
-- Cortes limpios en fondos de caso de estudio de Salvajenada
 
 ## Jueves: 
 - Responsive
