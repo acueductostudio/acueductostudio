@@ -19,12 +19,13 @@ const ScrollDown = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Pinned = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2.2rem;
   width: 100%;
   display: grid;
-  padding: 10% 4%;
+  padding: calc(70px + 5%) 4%;
   border-top: ${props =>
     props.borderTop
       ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`
@@ -42,19 +43,27 @@ const Pinned = styled.div`
     color: ${props => props.theme.colors.foreground_low};
     margin-bottom: 5%;
   }
-  a{
-      color: ${props => props.theme.colors.foreground};
-      background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 1)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
-      text-decoration: none;
-      background-repeat: repeat-x;
-      background-size:1px 1px;
-      background-position: 0 calc(1rem + 7px);
-      transition: .3s ease all;
-      padding-bottom: 2px;
-      &:hover{
-        background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="2" y2="2" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
-        background-size:2px 2px;
-
-      }
+  @media (max-width: 1200px) {
+    h1 {
+      /* grid-column: 1 / span 5; */
+      font-size: 6rem;
     }
+    ${ScrollDown}, p {
+      grid-column: 7 / span 5;
+    }
+  }
+  a {
+    color: ${props => props.theme.colors.foreground};
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 1)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
+    text-decoration: none;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 calc(1rem + 7px);
+    transition: 0.3s ease all;
+    padding-bottom: 2px;
+    &:hover {
+      background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="2" y2="2" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
+      background-size: 2px 2px;
+    }
+  }
 `;

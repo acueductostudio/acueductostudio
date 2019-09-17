@@ -6,6 +6,7 @@ export default PageClipper;
 
 const Wrapper = styled.main`
   display: flex;
+  -webkit-overflow-scrolling: touch;
   width: calc(100% - 44px);
   height: calc(100% - 44px);
   position: absolute;

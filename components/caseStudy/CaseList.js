@@ -4,8 +4,6 @@ import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
 import Link from "next/link";
 
-//var otherProyects = Object.entries(proyects).map(function(_proyect, index) {
-
 const SingleCase = props => {
   return (
     <Case>
@@ -14,14 +12,16 @@ const SingleCase = props => {
         <Fade>
           <VidContainer>
 
-            <Logo src={`static/assets/img/casestudies/${props.logo}`}/>
+            <Logo src={`static/assets/img/casestudies${props.link}/portfolio_logo.svg`}/>
             <video
               autoPlay
               playsInline
               muted
               loop
-              src={`../static/assets/img/casestudies/${props.video}`}
-            />
+               poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+            >
+              <source src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}/>
+            </video>
            
           </VidContainer>
           </Fade>

@@ -104,6 +104,11 @@ html {
       overflow:hidden;
       letter-spacing: .02px;
   }
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 1.4rem;
+    }
+  }
 
   #__next {
     height: 100%;

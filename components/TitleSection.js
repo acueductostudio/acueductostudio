@@ -42,6 +42,9 @@ const Grid = styled.div`
     props.borderTop
       ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`
       : "none"};
+  @media (max-width: 600px) {
+    grid-gap: 0rem;
+  }
   h1 {
     grid-column: 2 / span 7;
     letter-spacing: 0;
@@ -53,6 +56,21 @@ const Grid = styled.div`
     grid-column: 7 / span 4;
     color: ${props => props.theme.colors.foreground_low};
     position: relative;
+    @media (max-width: 1400px) {
+      grid-column-end: span 5;
+    }
+    @media (max-width: 1100px) {
+      grid-column-end: span 6;
+      grid-column-start: 5;
+    }
+    @media (max-width: 800px) {
+      grid-column-end: span 8;
+      grid-column-start: 3;
+    }
+    @media (max-width: 600px) {
+      grid-column-end: span 10;
+      grid-column-start: 2;
+    }
     a.inline {
       color: ${props => props.theme.colors.foreground};
       background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 1)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
@@ -74,7 +92,7 @@ const WidthLink = styled.a`
   grid-column: 7 / span 5;
   text-decoration: none;
   display: block;
-  position:relative;
+  position: relative;
   b {
     color: ${props => props.theme.colors.foreground};
     font-weight: 100;

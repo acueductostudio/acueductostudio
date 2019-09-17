@@ -18,7 +18,7 @@ export default function Index(props) {
   let s = props.locale.services;
   let p = props.locale.process;
   let f = props.locale.contactfooter;
-  
+
   useEffect(() => {
     props.setTitle(t.headerTitle);
   }, []);
@@ -65,10 +65,10 @@ export default function Index(props) {
             </ImageGallery> */}
         </Intro>
         <ImageGalleryRemovable>
-          <Holed />
+            <Holed />
           <Boxed>
             <Fade>
-            <LogoComplete />
+              <LogoComplete />
             </Fade>
           </Boxed>
         </ImageGalleryRemovable>
@@ -97,10 +97,12 @@ const Boxed = styled.div`
 const ImageGalleryRemovable = styled.div`
   width: 100%;
   display: flex;
+  flex:0 0 auto;
   align-content: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position:relative;
   svg {
     width: 100%;
   }

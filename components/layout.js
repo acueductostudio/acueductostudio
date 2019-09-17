@@ -67,8 +67,8 @@ export default ({
         <title>{title}</title>
       </Head>
       <PageWrapper onScroll={showArrow ? removeArrow : null}>
-        {showSketch? <HomeSketch/> : ""}
-        {/* {showSketch ? <Background /> : ""} */}
+        {/* {showSketch? <HomeSketch/> : ""} */}
+        {showSketch ? <Background /> : ""}
         <Border />
         <NavTrigger toggleNav={toggleNav} isOpen={isOpen} hasLoaded={hasLoaded}/>
         <Header closeNav={closeNav} isOpen={isOpen} headerTitle={headerTitle} hasLoaded={hasLoaded}/>
@@ -96,7 +96,7 @@ const PageWrapper = styled.div`
   height: 100%;
   position: relative;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow: hidden;
   display: flex;
   justify-content: flex-start;
   color: ${props => props.theme.colors.foreground};

@@ -52,7 +52,7 @@ export default function Nav(props) {
             <ul>{navItems}</ul>
           </NavList>
           <BottomNav>
-            © MMXIX
+            <Registered>© MMXIX</Registered>
             <Social>
               <Hoverable
                 target="_blank"
@@ -73,15 +73,15 @@ export default function Nav(props) {
                 linkedin
               </Hoverable>
             </Social>
-            <div className="policies" onClick={props.closeNav}>
+            <Policies onClick={props.closeNav}>
               <Link href="/cookies">
                 <Hoverable>cookie policy</Hoverable>
-              </Link>{" "}
-              |{" "}
+              </Link>
+              <span> | </span>
               <Link href="/privacy">
                 <Hoverable>privacy policy</Hoverable>
               </Link>
-            </div>
+            </Policies>
           </BottomNav>
         </>
       ) : (
@@ -96,22 +96,34 @@ const NavLink = styled.a`
   font-weight: 200;
   transition: box-shadow 250ms ease;
   cursor: pointer;
-  box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
-    ${props => props.theme.colors.background} 0px 57px inset;
+  box-shadow: ${props =>
+    props.active
+      ? `${props.theme.colors.background} 0px 55px inset, ${props.theme.colors.foreground_lowest} 0px 57px inset;`
+      : `${props.theme.colors.background} 0px 55px inset, ${props.theme.colors.background} 0px 57px inset`};
   &:hover {
     box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
       ${props => props.theme.colors.accent} 0px 57px inset;
   }
-  ${props =>
-    props.active &&
-    css`
-      box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
-        ${props => props.theme.colors.foreground_lowest} 0px 57px inset;
-    `}
+`;
+
+const Registered = styled.div`
+  grid-column: 1 / span 2;
+  pointer-events: none;
+`;
+
+const Policies = styled.div`
+  grid-column: 9 / span 4;
+  text-align: right;
+  span {
+    opacity: 0.5;
+  }
 `;
 
 const Social = styled.div`
-  grid-column: 5 / span 5;
+  grid-column: 5 / span 4;
+  @media (max-width: 1200px) {
+    grid-column-start: 4;
+  }
   a {
     margin-right: 10%;
     &:last-of-type {
@@ -133,12 +145,61 @@ const BottomNav = styled.div`
   width: 100%;
   color: ${props => props.theme.colors.foreground_low};
   font-weight: 100;
-  .contact {
-    grid-column: 1 / span 2;
+  @media (max-width: 950px) {
+    font-size: 1.5rem;
   }
-  .policies {
-    grid-column: 10 / span 3;
-    text-align: right;
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: space-between;
+    span {
+      display: none;
+    }
+    ${Social}, ${Policies} {
+      display: flex;
+      flex-direction: column;
+      & > * :not(:last-child) {
+        padding-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+    ${Social} {
+      text-align: center;
+      align-items: center;
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 4% 8%;
+  }
+  @media (max-width: 450px) {
+    display: grid;
+    grid-gap: 0;
+    ${Policies} {
+      grid-column: 1 / span 12;
+      grid-row: 1;
+      flex-direction: row;
+      justify-content: space-between;
+      span {
+        display: flex;
+      }
+    }
+    ${Social} {
+      grid-column: 1 / span 8;
+      display: flex;
+      text-align: left;
+      flex-direction: row;
+      grid-row: 2;
+      flex-wrap: wrap;
+      width: 100%;
+      a {
+        width: 50%;
+      }
+    }
+    ${Registered} {
+      grid-column: 1 / span 12;
+      margin-top: 3%;
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
   }
 `;
 
@@ -158,6 +219,43 @@ const NavList = styled.nav`
         position: absolute;
         left: -55px;
         bottom: -10px;
+        pointer-events: none;
+      }
+    }
+  }
+  @media (max-height: 700px) {
+    ul li {
+      line-height: 130%;
+    }
+  }
+  @media (max-width: 1200px) {
+    grid-column-start: 4;
+  }
+  @media (max-width: 800px) {
+    ul li {
+      font-size: 5rem;
+      a {
+        font-size: 5rem;
+      }
+      span {
+        font-size: 1.3rem;
+        left: -35px;
+        bottom: -9px;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    grid-column-start: 3;
+  }
+  @media (max-width: 450px) {
+    ul li {
+      font-size: 3.5rem;
+      a {
+        font-size: 3.5rem;
+      }
+      span {
+        font-size: 1.1rem;
+        bottom: -6px;
       }
     }
   }
@@ -196,4 +294,7 @@ const NavWrapper = styled.div`
       pointer-events: auto;
       transition: opacity 0.3s ease;
     `}
+  @media (max-width: 800px) {
+    padding-bottom: 15%;
+  }
 `;

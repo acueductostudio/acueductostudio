@@ -2,21 +2,21 @@ import styled from "styled-components";
 import Head from "next/head";
 import { useEffect } from "react";
 import Link from "next/link";
-import PageClipper from "../../components/PageClipper";
+import dynamic from "next/dynamic";
 import Fade from "react-reveal/Fade";
+import PageClipper from "../../components/PageClipper";
 import ContactFooter from "../../components/ContactFooter";
+import Quote from "../../components/caseStudy/Quote";
+import Stat from "../../components/caseStudy/Salvajenada/Stat";
 import LogoSalvaje from "../../static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
 import Ig from "../../static/assets/img/casestudies/salvajenada/ig.svg";
-import Ibero from "../../static/assets/img/casestudies/salvajenada/90.svg";
+import Ibero from "../../static/assets/img/casestudies/salvajenada/ibero.svg";
 import Wolf from "../../static/assets/img/casestudies/salvajenada/wolf.svg";
 import Apple from "../../static/assets/img/casestudies/salvajenada/apple.svg";
 import Spotify from "../../static/assets/img/casestudies/salvajenada/spotify.svg";
 import createMarkup from "../../helpers/createMarkup";
 import Marquee from "../../helpers/react-double-marquee";
-import Quote from "../../components/caseStudy/Quote";
-import Stat from "../../components/caseStudy/Salvajenada/Stat";
 import Insight from "../../components/caseStudy/Insight";
-import dynamic from "next/dynamic";
 
 const FramesEmbed = dynamic(
   import("../../components/caseStudy/Salvajenada/FramesEmbed"),
@@ -46,7 +46,7 @@ export default function Salvajenada(props) {
         <img
           key={"c_" + i}
           alt={"salvajenada_release " + i}
-          src={`../static/assets/img/casestudies/salvajenada/c_${i}.jpg`}
+          src={`/static/assets/img/casestudies/salvajenada/c_${i}.jpg`}
         />
       );
     }
@@ -60,7 +60,7 @@ export default function Salvajenada(props) {
         <img
           key={"d_" + i}
           alt={"salvajenada_writing " + i}
-          src={`../static/assets/img/casestudies/salvajenada/d_${i}.png`}
+          src={`/static/assets/img/casestudies/salvajenada/d_${i}.png`}
         />
       );
     }
@@ -76,9 +76,9 @@ export default function Salvajenada(props) {
         muted
         loop
         key={"v_4"}
-        poster={`../static/assets/img/casestudies/salvajenada/introPoster_girlUltra.jpg`}
+        poster={`/static/assets/img/casestudies/salvajenada/girlUltra_poster.jpg`}
       >
-        <source src="../static/assets/img/casestudies/salvajenada/p_4.mp4" />
+        <source src="/static/assets/video/casestudies/salvajenada/girlUltra.mp4" />
       </video>
     );
     for (let i = 1; i < 4; i++) {
@@ -86,7 +86,7 @@ export default function Salvajenada(props) {
         <img
           key={"p_" + i}
           alt={"salvajenada_shoutout " + i}
-          src={`../static/assets/img/casestudies/salvajenada/p_${i}.jpg`}
+          src={`/static/assets/img/casestudies/salvajenada/p_${i}.jpg`}
         />
       );
     }
@@ -114,9 +114,9 @@ export default function Salvajenada(props) {
           playsInline
           muted
           loop
-          poster="../static/assets/img/casestudies/salvajenada/introVideo_poster.jpg"
+          poster="/static/assets/img/casestudies/salvajenada/intro_poster.jpg"
         >
-          <source src="../static/assets/img/casestudies/salvajenada/introVideo.mp4" />
+          <source src="/static/assets/video/casestudies/salvajenada/intro.mp4" />
         </Video>
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
@@ -235,7 +235,7 @@ export default function Salvajenada(props) {
           <IberoGrid>
             <Ibero />
             <img
-              src="../../static/assets/img/casestudies/salvajenada/ibero.jpg"
+              src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
               alt="salvajenada en Ibero 90.9"
             />
           </IberoGrid>

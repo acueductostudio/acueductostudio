@@ -13,23 +13,26 @@
 - No les estamos avisando que usamos las cookies nomás por estar en la página, qué pasa si pican en close?
 - Lista de cosas que queremos saber (ej, cuanta gente dice alv cookies damelas)
 - Qué analytics urgen?
-- Revisar diseño de la danza de las fieras (A en visita la página, colores homogeneos).
+- Revisar diseño de la danza de las fieras.
 - Videos de portafolio, opinión. 
 - Copy to clipboard
-- No olvidar las fotos
-
-# Lunes:
-- Posters para videos en Portafolio + mejorar Fieras?
-- Revisar si los videos tienen margen negro dentro del archivo. 
+- Fotos ibero
+- Problemón con scroll en mobile 
 
 ## Jueves: 
 - Responsive
+- Titulos de portafolio  deben  ser  links
 - Animation icons hovers
 - Links Hovers
 - ScrollBar
 - Lazy load images on case studies
 - Resize en fondo se rompe -> cambiando de página?
 - Analytics (google) / hotjar? 
+
+# Viernes:
+- Alt tags
+- Head
+- Don't expose mail?
 
 # Next steps
 - Language change

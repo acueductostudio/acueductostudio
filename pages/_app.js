@@ -14,6 +14,8 @@ export default class MyApp extends App {
       hasToConsent: true,
       hasLoaded: false
     };
+    this.changeTheme = this.changeTheme.bind(this);
+    this.consentToCookies = this.consentToCookies.bind(this);
   }
 
   authenticate() {
@@ -30,7 +32,7 @@ export default class MyApp extends App {
       if (bordered) {
         setTimeout(() => {
           // transition out
-          bordered.classList.add('hidden'); //hide after
+          bordered.classList.add('hidden'); //hide after //TODO: clean bordered
           logo.style.opacity = "0";
           bordered.style.transform = "scale(1)";
           bordered.style.borderWidth = "2px";
@@ -50,7 +52,9 @@ export default class MyApp extends App {
       }
     })
 
-    //cookies stuff
+    // Check if cookie message has been closed before
+    // TODO: add expiry date?
+
     var _C = Cookies.get("showCookieMessage");
     if (_C === undefined) {
       console.log("cookies: hasn't consented before");
@@ -80,8 +84,8 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <Layout
           locale={en}
-          changeTheme={this.changeTheme.bind(this)}
-          consentToCookies={this.consentToCookies.bind(this)}
+          changeTheme={this.changeTheme}
+          consentToCookies={this.consentToCookies}
           hasToConsent={this.state.hasToConsent}
           hasLoaded={this.state.hasLoaded}
         >

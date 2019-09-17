@@ -2,7 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import Logo from "./../static/assets/img/layout/logo.svg";
 
-export default function Header({hasLoaded, headerTitle}) {
+export default function Header({ hasLoaded, headerTitle }) {
   return (
     <TopHeader reveal={hasLoaded}>
       <Link href="/">
@@ -28,7 +28,6 @@ const HeaderTitle = styled.div`
   mix-blend-mode: exclusion;
 `;
 
-
 const TopHeader = styled.header`
   display: flex;
   justify-content: space-between;
@@ -41,10 +40,16 @@ const TopHeader = styled.header`
   z-index: 12;
   margin: 0px auto;
   max-width: 1500px;
-  pointer-events:none;
+  pointer-events: none;
   mix-blend-mode: exclusion;
-  opacity: ${props => props.reveal ? 1 : 0};
-  transition: opacity .3s ease .3s;
+  opacity: ${props => (props.reveal ? 1 : 0)};
+  transition: opacity 0.3s ease 0.3s;
+  @media (max-height: 400px) {
+    padding-top: 45px;
+  }
+  @media (max-width: 450px) {
+    padding-top: 45px;
+  }
 `;
 
 const Logotype = styled.a`
@@ -55,9 +60,9 @@ const Logotype = styled.a`
   cursor: pointer;
   color: inherit;
   text-decoration: none;
-  pointer-events:auto;
-  h1{
-    font-size:0;
+  pointer-events: auto;
+  h1 {
+    font-size: 0;
   }
   svg {
     path {

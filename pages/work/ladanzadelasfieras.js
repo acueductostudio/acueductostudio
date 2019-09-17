@@ -5,14 +5,14 @@ import { useEffect } from "react";
 import PageClipper from "../../components/PageClipper";
 import Fade from "react-reveal/Fade";
 import ContactFooter from "../../components/ContactFooter";
-import LogoDanza from "../../static/assets/img/casestudies/lddlf/logoDanza.svg";
-import Laurel from "../../static/assets/img/casestudies/lddlf/laurel.svg";
-import PosterLine from "../../static/assets/img/casestudies/lddlf/line.svg";
-import LogoF from "../../static/assets/img/casestudies/lddlf/logoF.svg";
-import Type_1 from "../../static/assets/img/casestudies/lddlf/type_1.svg";
-import Type_2 from "../../static/assets/img/casestudies/lddlf/type_2.svg";
-import Type_3 from "../../static/assets/img/casestudies/lddlf/type_3.svg";
-import AppSvg from "../../static/assets/img/casestudies/lddlf/app.svg";
+import LogoDanza from "../../static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
+import Laurel from "../../static/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
+import PosterLine from "../../static/assets/img/casestudies/ladanzadelasfieras/line.svg";
+import LogoF from "../../static/assets/img/casestudies/ladanzadelasfieras/logoF.svg";
+import Type_1 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_1.svg";
+import Type_2 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
+import Type_3 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
+import AppSvg from "../../static/assets/img/casestudies/ladanzadelasfieras/app.svg";
 import createMarkup from "../../helpers/createMarkup";
 import Marquee from "../../helpers/react-double-marquee";
 import Quote from "../../components/caseStudy/Quote";
@@ -70,9 +70,9 @@ export default function LaDanzaDeLasFieras(props) {
           playsInline
           muted
           loop
-          poster="../static/assets/img/casestudies/lddlf/introVideo_poster.jpg"
+          poster="/static/assets/img/casestudies/ladanzadelasfieras/intro_poster.jpg"
         >
-          <source src="../static/assets/img/casestudies/lddlf/introVideo.mp4" />
+          <source src="/static/assets/video/casestudies/ladanzadelasfieras/intro.mp4" />
         </Video>
         <Limited>
           <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
@@ -92,11 +92,11 @@ export default function LaDanzaDeLasFieras(props) {
         </Limited>
         <PosterGrid>
           <PosterLine />
-          <img src="../static/assets/img/casestudies/lddlf/p_1.jpg" />
-          <img src="../static/assets/img/casestudies/lddlf/p_2.jpg" />
-          <img src="../static/assets/img/casestudies/lddlf/p_3.jpg" />
-          <img src="../static/assets/img/casestudies/lddlf/boceto.jpg" />
-          <img src="../static/assets/img/casestudies/lddlf/p_5.png" />
+          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg" />
+          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg" />
+          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg" />
+          <img src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg" />
+          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.png" />
         </PosterGrid>
         <Type>
           <p>{t.second_section.font_logo}</p>
@@ -123,7 +123,7 @@ export default function LaDanzaDeLasFieras(props) {
         </Type>
         <SecondSection_Sub>
           <TransitionWrapper>
-            <img src="../static/assets/img/casestudies/lddlf/materials.jpg" />
+            <img src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg" />
           </TransitionWrapper>
           <Limited>
             <h3
@@ -136,7 +136,7 @@ export default function LaDanzaDeLasFieras(props) {
           <SequenceContainer>
             <ThePlayer
               url={"https://www.youtube.com/embed/AJMXiE16gtc"}
-              still={"../static/assets/img/casestudies/lddlf/videoBack.jpg"}
+              still={"/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"}
               ratio={"50.62%"}
             />
           </SequenceContainer>
@@ -156,7 +156,7 @@ export default function LaDanzaDeLasFieras(props) {
           number={1}
           color={fierasRed}
         >
-          <Faces src="../static/assets/img/casestudies/lddlf/d_1.jpg" />
+          <Faces src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg" />
 
           <Quote
             quote={t.third_section.insights.portfolio.quote}
@@ -168,7 +168,7 @@ export default function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.press}
           number={2}
         >
-          <MacPress src="../static/assets/img/casestudies/lddlf/i_1.jpg" />
+          <MacPress src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg" />
           <Quote
             quote={t.third_section.insights.press.quote}
             color={props => props.theme.colors.background}
@@ -179,7 +179,7 @@ export default function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.availability}
           number={3}
         >
-          <MacContact src="../static/assets/img/casestudies/lddlf/i_3.jpg" />
+          <MacContact src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg" />
         </Insight>
         <Limited>
           <h3
@@ -189,7 +189,7 @@ export default function LaDanzaDeLasFieras(props) {
           />
           <p dangerouslySetInnerHTML={createMarkup(t.third_section.p2)} />
           <AppGrid>
-            <img src="../static/assets/img/casestudies/lddlf/webapp.png" />
+            <img src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png" />
             <AppSvg />
           </AppGrid>
         </Limited>
@@ -215,9 +215,9 @@ export default function LaDanzaDeLasFieras(props) {
             playsInline
             muted
             loop
-            poster={"./../static/assets/img/casestudies/lddlf/introVideo_incognito.jpg"}
+            poster={"/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"}
           >
-            <source src="../static/assets/img/casestudies/lddlf/incognito.mp4" />
+            <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
           </video>
         </Limited>
       </Fourth>
@@ -231,7 +231,7 @@ export default function LaDanzaDeLasFieras(props) {
           color={props => props.theme.colors.background}
         />
         <Limited>
-          <img src="../static/assets/img/casestudies/lddlf/l_1.jpg" />
+          <img src="../static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg" />
           <p dangerouslySetInnerHTML={createMarkup(t.fifth_section.p2)} />
         </Limited>
       </Fifth>
@@ -437,7 +437,7 @@ const CommonSection = styled.section`
 const Sixth = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("../static/assets/img/casestudies/lddlf/sixthBack.svg");
+  background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/sixthBack.svg");
   background-position: center bottom;
   background-size: cover;
   display: flex;
@@ -595,7 +595,7 @@ const FirstSection = styled(CommonSection)`
 const LandSection = styled.section`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("../static/assets/img/casestudies/lddlf/landBackX.svg");
+  background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/landBackX.svg");
   background-position: center bottom;
   background-size: cover;
   display: flex;
