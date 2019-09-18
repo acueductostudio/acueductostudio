@@ -94,8 +94,8 @@ export default ({
         onScroll={showArrow || showConsentMessage ? removeArrow : null}
         // onTouchStart={listenScroll ? scrollPage : null}
       >
-        {/* {showSketch ? <HomeSketch /> : ""} */}
-        {showSketch ? <Background /> : ""}
+        {showSketch ? <HomeSketch /> : ""}
+        {/* {showSketch ? <Background /> : ""} */}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}
