@@ -21,9 +21,19 @@ export default function HeadSketch(props) {
 const SketchContainer = styled.div`
   width: 100%;
   height: 400px;
-  margin-bottom: 13%;
+  margin-bottom: 10%;
   position: relative;
   left: -10%;
+  z-index: -1;
+  @media(max-width:1250px){
+    margin-bottom: 8%;
+  }
+  @media(max-width:1000px){
+    margin-bottom: 7%;
+  }
+  @media(max-width:600px){
+  left:-30px;
+  }
   div div div{
     width:100%;
     height:100%;

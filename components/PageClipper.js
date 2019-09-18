@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const PageClipper = ({children}) => <Wrapper id="Clipper">{children}</Wrapper>;
+const PageClipper = ({ children, className, unPadded }) => (
+  <Wrapper id="Clipper" className={className} unPadded={unPadded}> 
+    {children}
+  </Wrapper>
+);
 
 export default PageClipper;
 
@@ -19,4 +23,16 @@ const Wrapper = styled.main`
   right: 20px;
   overflow-x: hidden;
   overflow-y: scroll;
+  @media (max-width: 1300px) {
+    padding-top: ${props => props.unPadded? "0" : "5%"};
+  }
+  @media (max-width: 700px) {
+    padding-top: ${props => props.unPadded? "0" : "10%"};
+  }
+  @media (max-width: 500px) {
+    padding-top: ${props => props.unPadded? "0" : "15%"};
+  }
+  @media (max-width: 400px) {
+    padding-top: ${props => props.unPadded? "0" : "20%"};
+  }
 `;

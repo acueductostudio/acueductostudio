@@ -54,4 +54,37 @@ const Belief = styled.li`
     margin-bottom: 10px;
     font-weight: 200;
   }
+  @media (max-width: 1250px) {
+    h3 {
+      font-size: 2.5rem;
+    }
+    span {
+      top: 8px;
+    }
+  }
+  @media (max-width: 1100px) {
+    margin-bottom: 15%;
+  }
+  @media (max-width: 600px) {
+    margin-left: 30px;
+    margin-bottom: 8%;
+    span {
+      left: -30px;
+      top: 5px;
+    }
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
+  @media (max-width: 400px) {
+    margin-left: 25px;
+    span {
+      top: 5px;
+      font-size: 1.2rem;
+      left: -25px;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+  }
 `;

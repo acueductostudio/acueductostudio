@@ -52,7 +52,7 @@ export default function LaDanzaDeLasFieras(props) {
   });
 
   return (
-    <PageClipper>
+    <PageClipper unPadded>
       <Head>
         <title>Case Study | La Danza de las Fieras</title>
       </Head>

@@ -178,6 +178,9 @@ const BottomNav = styled.div`
       grid-row: 1;
       flex-direction: row;
       justify-content: space-between;
+      & > * :not(:last-child) {
+        padding-bottom: 20px;
+      }
       span {
         display: flex;
       }
@@ -190,8 +193,16 @@ const BottomNav = styled.div`
       grid-row: 2;
       flex-wrap: wrap;
       width: 100%;
+      margin-bottom: -14%;
+      & > * :not(:last-child) {
+        padding-bottom: 20px;
+      }
       a {
         width: 50%;
+        &:nth-child(3) {
+          padding-left: 50%;
+          width: 100%;
+        }
       }
     }
     ${Registered} {
@@ -250,12 +261,14 @@ const NavList = styled.nav`
   @media (max-width: 450px) {
     ul li {
       font-size: 3.5rem;
+      padding-bottom: 10px;
       a {
         font-size: 3.5rem;
       }
       span {
         font-size: 1.1rem;
-        bottom: -6px;
+        bottom: 4px;
+        left: -25px;
       }
     }
   }
@@ -296,5 +309,8 @@ const NavWrapper = styled.div`
     `}
   @media (max-width: 800px) {
     padding-bottom: 15%;
+  }
+  @media (max-width: 450){
+    padding-bottom: 20%;
   }
 `;

@@ -3,6 +3,7 @@ import Fade from "react-reveal";
 import createMarkup from "../helpers/createMarkup";
 import Link from "next/link";
 import Arrow from "../components/Arrow";
+import Grid from "./TitleSectionGrid"; 
 
 const TitleSection = props => {
   const { title, text, link, linktext } = props;
@@ -32,7 +33,7 @@ const TitleSection = props => {
 
 export default TitleSection;
 
-const Grid = styled.div`
+const Grid2 = styled.div`
   border-top: ${props =>
     props.borderTop
       ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`

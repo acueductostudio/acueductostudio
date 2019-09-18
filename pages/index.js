@@ -25,7 +25,7 @@ export default function Index(props) {
 
   return (
     <>
-      <PageClipper>
+      <PageClipper unPadded>
         <Head>
           <title>Acueducto</title>
         </Head>
@@ -74,7 +74,7 @@ export default function Index(props) {
         </ImageGalleryRemovable>
         <Divider />
         <Process p={p} />
-        <CaseStudiesPreview c={c} cpage={t.studies}/>
+        <CaseStudiesPreview c={c} cpage={t.studies} />
         <Services s={s} />
         <ContactFooter f={f} />
       </PageClipper>
@@ -138,6 +138,7 @@ const Land = styled.section`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  padding: 0 4%;
   grid-gap: 2.2rem;
   align-items: center;
   h2 {
@@ -149,13 +150,58 @@ const Land = styled.section`
     color: ${props => props.theme.colors.white};
     line-height: 100%;
     font-size: 7rem;
+    max-width: 800px;
+    /* font-size: 6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: "acumin-pro-wide";
+    letter-spacing: -2px; */
+  }
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 5rem;
+    }
+    h2{
+      font-size:1.8rem;
+    }
+  }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 520px) {
+    h1 {
+      max-width:290px;
+    }
+  }
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 3.5rem;
+      max-width:250px;
+    }
+    h2{
+      font-size:1.6rem;
+      max-width:240px;
+    }
   }
 `;
 
 const LandContainer = styled.div`
   display: flex;
   flex-direction: column;
-  grid-column: 3 / span 8;
+  grid-column: 2 / span 10;
+  @media (max-width: 570px) {
+    grid-column: 1 / span 11;
+  }
+  @media (max-width: 420px) {
+    grid-column: 1 / span 12;
+  }
 `;
 
 const Intro = styled.section`

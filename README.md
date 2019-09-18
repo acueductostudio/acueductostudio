@@ -7,8 +7,12 @@
 - Fotos ibero
 
 ## Jueves: 
-- Responsive
+- Responsive case studies
+- links desaparecen al reducir tipo (cookie,  pero hay mas)
+- manifesto responsive numero de belief
+- nav breaks on landscape
 - Resize en fondo se rompe -> cambiando de página?
+- Pointer events clipboard mobile
 - Head
 - Animation icons hovers
 - Links Hovers

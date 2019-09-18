@@ -3,7 +3,7 @@ import Language from "../static/assets/img/layout/language.svg";
 
 const LanguageToggler = ({ hasLoaded, doChangeTheme }) => (
   <Toggler reveal={hasLoaded}>
-    <Language onClick={doChangeTheme}/>
+    <Language onClick={doChangeTheme} />
   </Toggler>
 );
 
@@ -27,8 +27,8 @@ const Toggler = styled.div`
   padding-right: 35px;
   margin: 0px auto;
   max-width: 1500px;
-  opacity: ${props => props.reveal ? 1 : 0};
-  transition: opacity .3s ease .3s;
+  opacity: ${props => (props.reveal ? 1 : 0)};
+  transition: opacity 0.3s ease 0.3s;
   svg {
     width: 33px;
     pointer-events: auto;
@@ -42,5 +42,17 @@ const Toggler = styled.div`
       stroke-width: ${props => props.theme.stroke};
       stroke: ${props => props.theme.colors.white};
     }
+  }
+  @media (max-width: 600px) {
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-right: calc(22px + 1%);
+  }
+  @media (max-width: 450px) {
+    padding-top: 30px;
+    padding-right: 23px;
+  }
+  @media (max-height: 400px) and (max-width: 600px) {
+    padding-top: 30px;
   }
 `;

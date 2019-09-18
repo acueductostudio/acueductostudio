@@ -2,16 +2,29 @@ import styled from "styled-components";
 import PinnedSection from "./PinnedSection";
 
 const SimplePinnedSection = styled(PinnedSection)`
+    @media (max-width: 600px){
+      padding-bottom:20%;
+    }
   p {
-    grid-column: 7 / span 5;
+    grid-column-end: span 5;
     margin-bottom: 0;
+    max-width:unset;
+    @media (max-width: 1100px){
+      grid-column-end: span 6;
+    }
+    @media (max-width: 800px){
+      grid-column-end: span 8;
+    }
+    @media (max-width: 600px){
+      grid-column-end: span 12;
+    }
   }
-  h1 {
+  /* h1 {
     grid-column: 2 / span 5;
-  }
+  } */
   div {
     color: ${props => props.theme.colors.foreground_low};
-    grid-column: 7 / span 5;
+    grid-column-end: span 5;
     h2 {
       font-size: 3rem;
       margin-top: 10%;

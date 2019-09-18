@@ -9,6 +9,7 @@ import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
 import CookieMessage from "./CookieMessage";
 import ScrollIncentive from "./ScrollIncentive";
+import screenfull from "screenfull";
 
 const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
   ssr: false
@@ -29,9 +30,11 @@ export default ({
   const [headerTitle, setTitle] = useState("");
   const [showArrow, setShowArrow] = useState(false);
   const [showConsentMessage, setShowConsentMessage] = useState(true);
+  const [listenScroll, setListenScroll] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
+    // Sketch and arrow in home
     if (router.route === "/") {
       setShowSketch(true);
       setShowArrow(true);
@@ -40,6 +43,19 @@ export default ({
       setShowArrow(false);
     }
   }, [router.route]);
+
+
+  //not working
+  const scrollPage = () => {
+    listenScroll
+      ? (
+        (document.getElementById("Wrapper").scrollTop = 300),
+        window.scrollTo(0, 100),
+        console.log(window.scrollTop),
+        setListenScroll(false),
+        console.log("listenscroll off"))
+      : null;
+  };
 
   const toggleNav = () => {
     setOpen(!isOpen);
@@ -58,6 +74,9 @@ export default ({
   };
 
   const removeArrow = () => {
+    // if (screenfull.isEnabled) {
+    // 	screenfull.request();
+    // }
     if (document.getElementById("Clipper").scrollTop > 100) {
       setShowArrow(false);
       checkForConsent();
@@ -71,7 +90,9 @@ export default ({
         <title>{title}</title>
       </Head>
       <PageWrapper
+        id="Wrapper"
         onScroll={showArrow || showConsentMessage ? removeArrow : null}
+        // onTouchStart={listenScroll ? scrollPage : null}
       >
         {/* {showSketch ? <HomeSketch /> : ""} */}
         {showSketch ? <Background /> : ""}
@@ -82,10 +103,10 @@ export default ({
           hasLoaded={hasLoaded}
         />
         <Header
-          closeNav={closeNav}
           isOpen={isOpen}
           headerTitle={headerTitle}
           hasLoaded={hasLoaded}
+          closeNav={closeNav}
         />
         <Nav
           locale={locale}
@@ -113,7 +134,8 @@ export default ({
 const PageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
+  max-height:100vh;
+  position: fixed;
   flex-direction: column;
   overflow: hidden;
   display: flex;

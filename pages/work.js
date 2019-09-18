@@ -1,4 +1,5 @@
 import Head from "next/head";
+import styled from "styled-components";
 import { useEffect } from "react";
 import TitleSection from "../components/TitleSection";
 import CaseList from "../components/caseStudy/CaseList";
@@ -15,7 +16,7 @@ export default function Work(props) {
   }, []);
 
   return (
-    <PageClipper>
+    <PageClipperPadded>
       <Head>
         <title>Acueducto | Work</title>
       </Head>
@@ -26,6 +27,18 @@ export default function Work(props) {
       />
       <CaseList c={c} />
       <ContactFooter f={f} />
-    </PageClipper>
+    </PageClipperPadded>
   );
 }
+
+const PageClipperPadded = styled(PageClipper)`
+  @media (max-width: 1300px) {
+    padding-top: 5%;
+  }
+  @media (max-width: 700px) {
+    padding-top: 10%;
+  }
+  @media (max-width: 500px) {
+    padding-top: 15%;
+  }
+`;

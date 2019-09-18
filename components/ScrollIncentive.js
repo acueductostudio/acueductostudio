@@ -63,4 +63,9 @@ const Container = styled.div`
   max-width: 1500px;
   opacity: ${props => (props.reveal && props.showArrow? 1 : 0)};
   transition: opacity 0.3s ease 1s;
+  @media (max-width:550px){
+    padding-left: 25px;
+    justify-content: flex-start;
+    padding-bottom: 40px;
+  }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
 import Head from "next/head";
@@ -10,7 +10,9 @@ import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
 
 const HeadSketch = dynamic(import("../components/headSketch/HeadSketch"), {
-  loading: () => <HeadLoader src="./../static/assets/img/layout/headPlacerHolder.jpg"/>,
+  loading: () => (
+    <HeadLoader src="./../static/assets/img/layout/headPlacerHolder.jpg" />
+  ),
   ssr: false
 });
 
@@ -31,17 +33,17 @@ export default function About(props) {
         <Person>
           <HeadSketch />
           <Fade>
-          <h4>{t.team.rodrigo.name}</h4>
-          <span>{t.team.rodrigo.position}</span>
-          <p dangerouslySetInnerHTML={createMarkup(t.team.rodrigo.bio)} />
+            <h4>{t.team.rodrigo.name}</h4>
+            <span>{t.team.rodrigo.position}</span>
+            <p dangerouslySetInnerHTML={createMarkup(t.team.rodrigo.bio)} />
           </Fade>
         </Person>
-        <Person> 
+        <Person>
           <HeadSketch second rotationStart={50} invertRotation />
           <Fade>
-          <h4>{t.team.artemio.name}</h4>
-          <span>{t.team.artemio.position}</span>
-          <p dangerouslySetInnerHTML={createMarkup(t.team.artemio.bio)} />
+            <h4>{t.team.artemio.name}</h4>
+            <span>{t.team.artemio.position}</span>
+            <p dangerouslySetInnerHTML={createMarkup(t.team.artemio.bio)} />
           </Fade>
         </Person>
       </PinnedSection>
@@ -60,7 +62,7 @@ export default function About(props) {
 const HeadLoader = styled.img`
   width: 100%;
   height: auto;
-  max-width:400px;
+  max-width: 400px;
   margin-bottom: 13%;
   position: relative;
   left: -10%;
@@ -80,5 +82,21 @@ const Person = styled.div`
     font-size: 1.1rem;
     letter-spacing: 3.5px;
     margin-bottom: 6%;
+  }
+  @media (max-width: 1250px) {
+    h4 {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 1000px) {
+    h4 {
+      font-size: 3.5rem;
+    }
+  }
+  @media (max-width: 600px) {
+    h4 {
+      font-size: 3rem;
+    }
+    margin-top: 5%;
   }
 `;

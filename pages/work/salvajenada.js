@@ -95,7 +95,7 @@ export default function Salvajenada(props) {
   };
 
   return (
-    <PageClipper>
+    <PageClipper unPadded>
       <Head>
         <title>Case Study | Salvajenada</title>
       </Head>

@@ -10,6 +10,7 @@ const TitleSectionGrid = styled.div`
   width: 100%;
   display: grid;
   padding: 10% 4%;
+  position:relative;
   h1 {
     grid-column: 2 / span 10;
     letter-spacing: 0;
@@ -17,9 +18,10 @@ const TitleSectionGrid = styled.div`
     font-size: 7rem;
     margin-bottom: 5%;
     max-width: 800px;
+    color: ${props => props.theme.colors.accent};
   }
   p {
-    grid-column: 7 / span 4;
+    grid-column: 7 / span 5;
     color: ${props => props.theme.colors.foreground_low};
     position: relative;
     max-width: 445px;
@@ -54,10 +56,12 @@ const TitleSectionGrid = styled.div`
   }
   @media (max-width: 600px) {
     grid-column-gap: 0rem;
-
     p,
     h1 {
       grid-column: 2 / span 10;
+    }
+    h1{
+      margin-bottom:0;
     }
   }
   @media (max-width: 600px) {

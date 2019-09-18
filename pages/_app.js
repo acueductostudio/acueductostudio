@@ -53,23 +53,11 @@ export default class MyApp extends App {
         }, 500);
       }
     })
-
-    // Check if cookie message has been closed before
-    // TODO: add expiry date?
-    // this.checkForConsent();
-
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   if (this.state.hasToConsent !== nextState.hasToConsent) {
-  //     console.log("false")
-  //     return false;
-  //   }
-  //   console.log("true")
-  //   return true;
-  // }
-
   checkForConsent(){
+    // Check if cookie message has been closed before
+    // TODO: add expiry date?
     var _C = Cookies.get("showCookieMessage");
     if (_C === undefined) {
       console.log("cookies: hasn't consented before");

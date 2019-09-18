@@ -55,6 +55,7 @@ export default class MyDocument extends Document {
             name="msapplication-config"
             content="../static/assets/favicon/browserconfig.xml"
           />
+          <meta name="apple-mobile-web-app-capable" content="yes"/>
           <meta name="theme-color" content="#ffffff" />
           <link rel="stylesheet" href="https://use.typekit.net/zdy4yjp.css"></link>
           <GlobalStyles />

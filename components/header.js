@@ -2,16 +2,16 @@ import Link from "next/link";
 import styled from "styled-components";
 import Logo from "./../static/assets/img/layout/logo.svg";
 
-export default function Header({ hasLoaded, headerTitle }) {
+export default function Header({ hasLoaded, headerTitle, isOpen, closeNav }) {
   return (
     <TopHeader reveal={hasLoaded}>
       <Link href="/">
-        <Logotype>
+        <Logotype onClick={closeNav}>
           <h1>acueducto</h1>
           <Logo />
         </Logotype>
       </Link>
-      <HeaderTitle>{headerTitle}</HeaderTitle>
+      <HeaderTitle hide={isOpen}>{headerTitle}</HeaderTitle>
     </TopHeader>
   );
 }
@@ -26,6 +26,11 @@ const HeaderTitle = styled.div`
   z-index: 2;
   top: 66px;
   mix-blend-mode: exclusion;
+  opacity: ${props => props.hide ? 0 : 1};
+  transition: opacity 0.2s ease;
+  @media (max-height: 400px) and (min-width: 800px) {
+    top: 40px;
+  }
 `;
 
 const TopHeader = styled.header`
@@ -44,11 +49,27 @@ const TopHeader = styled.header`
   mix-blend-mode: exclusion;
   opacity: ${props => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
+  @media (max-width: 800px) {
+    flex-direction:column;
+    ${HeaderTitle} {
+      margin-top:5px;
+      transform: none;
+      left: 0;
+      position: relative;
+      top: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    padding-left: calc(20px + 5%);
+    ${HeaderTitle} {
+      font-size: 1.2rem;
+    }
+  }
   @media (max-height: 400px) {
-    padding-top: 45px;
+    padding-top: 40px;
   }
   @media (max-width: 450px) {
-    padding-top: 45px;
+    padding-top: 40px;
   }
 `;
 
