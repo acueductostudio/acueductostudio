@@ -32,7 +32,7 @@ export default function Index(props) {
         <Land>
           <LandContainer>
             <h1 dangerouslySetInnerHTML={createMarkup(t.landing.heading)} />
-            <h2>{t.landing.tagline}</h2>
+            <h2 dangerouslySetInnerHTML={createMarkup(t.landing.tagline)} />
           </LandContainer>
         </Land>
         <Intro id="removeArrow">
@@ -65,7 +65,7 @@ export default function Index(props) {
             </ImageGallery> */}
         </Intro>
         <ImageGalleryRemovable>
-            <Holed />
+          <Holed />
           <Boxed>
             <Fade>
               <LogoComplete />
@@ -74,7 +74,7 @@ export default function Index(props) {
         </ImageGalleryRemovable>
         <Divider />
         <Process p={p} />
-        <CaseStudiesPreview c={c} />
+        <CaseStudiesPreview c={c} cpage={t.studies}/>
         <Services s={s} />
         <ContactFooter f={f} />
       </PageClipper>
@@ -97,12 +97,12 @@ const Boxed = styled.div`
 const ImageGalleryRemovable = styled.div`
   width: 100%;
   display: flex;
-  flex:0 0 auto;
+  flex: 0 0 auto;
   align-content: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position:relative;
+  position: relative;
   svg {
     width: 100%;
   }
@@ -144,7 +144,6 @@ const Land = styled.section`
     font-size: 2.1rem;
     margin-top: 15px;
     color: ${props => props.theme.colors.white};
-    max-width: 498px;
   }
   h1 {
     color: ${props => props.theme.colors.white};

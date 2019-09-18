@@ -18,6 +18,7 @@ export default ({
   children,
   title = "NO TITLE",
   changeTheme,
+  checkForConsent,
   consentToCookies,
   hasToConsent,
   hasLoaded,
@@ -27,6 +28,7 @@ export default ({
   const [showSketch, setShowSketch] = useState(true);
   const [headerTitle, setTitle] = useState("");
   const [showArrow, setShowArrow] = useState(false);
+  const [showConsentMessage, setShowConsentMessage] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
@@ -56,22 +58,35 @@ export default ({
   };
 
   const removeArrow = () => {
-    if (document.getElementById("Clipper").scrollTop > 100){
+    if (document.getElementById("Clipper").scrollTop > 100) {
       setShowArrow(false);
+      checkForConsent();
+      setShowConsentMessage(false);
     }
-  }
+  };
 
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <PageWrapper onScroll={showArrow ? removeArrow : null}>
-        {/* {showSketch? <HomeSketch/> : ""} */}
-        {showSketch ? <Background /> : ""}
+      <PageWrapper
+        onScroll={showArrow || showConsentMessage ? removeArrow : null}
+      >
+        {showSketch ? <HomeSketch /> : ""}
+        {/* {showSketch ? <Background /> : ""} */}
         <Border />
-        <NavTrigger toggleNav={toggleNav} isOpen={isOpen} hasLoaded={hasLoaded}/>
-        <Header closeNav={closeNav} isOpen={isOpen} headerTitle={headerTitle} hasLoaded={hasLoaded}/>
+        <NavTrigger
+          toggleNav={toggleNav}
+          isOpen={isOpen}
+          hasLoaded={hasLoaded}
+        />
+        <Header
+          closeNav={closeNav}
+          isOpen={isOpen}
+          headerTitle={headerTitle}
+          hasLoaded={hasLoaded}
+        />
         <Nav
           locale={locale}
           toggleNav={toggleNav}
@@ -79,8 +94,12 @@ export default ({
           isOpen={isOpen}
         />
         {React.cloneElement(children, { setTitle: setTitle })}
-        <LanguageToggler doChangeTheme={doChangeTheme} hasLoaded={hasLoaded}/>
-        <ScrollIncentive hasLoaded={hasLoaded} showArrow={showArrow} isOpen={isOpen}/>
+        <LanguageToggler doChangeTheme={doChangeTheme} hasLoaded={hasLoaded} />
+        <ScrollIncentive
+          hasLoaded={hasLoaded}
+          showArrow={showArrow}
+          isOpen={isOpen}
+        />
         <CookieMessage
           locale={locale}
           doConsentToCookies={doConsentToCookies}

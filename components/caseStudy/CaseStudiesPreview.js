@@ -4,9 +4,10 @@ import CaseList from "./CaseList";
 
 const CaseStudiesPreview = props => {
   let c = props.c;
+  let cpage = props.cpage;
   return (
     <CaseStudiesPreviewWrapper>
-      <TitleSection title={c.intro.title} text={c.intro.p} borderTop/>
+      <TitleSection title={cpage? cpage.title : c.intro.title} text={cpage? cpage.p : c.intro.p} borderTop/>
       <CaseList c={c.studies} limit={2}/>
     </CaseStudiesPreviewWrapper>
   );

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useState } from "react";
 import Fade from "react-reveal/Fade";
 import createMarkup from "../helpers/createMarkup";
 import Arrow from "../components/Arrow";
@@ -8,25 +9,45 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 const ContactFooter = props => {
   let f = props.f;
 
-  const copyClipboard = () => {
-    console.log("should copy");
-    var copyText = document.querySelector("#copyText");
-    copyText.select();
-    document.execCommand("copy");
+  const [copied, setCopied] = useState(false);
+  const [copying, setCopying] = useState(false);
+
+  const setHovered = () => {
+    setCopying(true);
   };
-  
+
+  const setUnhovered = () => {
+    setCopying(false);
+    setTimeout(function() {
+      setCopied(false);
+    }, 300);
+  };
+
+  const doSetCopied = () => {
+    setCopied(true);
+  };
+
   return (
     <Grid borderTop={props.borderTop} id="contact">
       <Fade>
         <h1 dangerouslySetInnerHTML={createMarkup(f.title)} />
-        <p>
-          <WidthLink href="mailto:hola@acueducto.studio">
-            {f.p + " "}
-            <b>hola@acueducto.studio</b>
-            <Arrow />
-          </WidthLink>
-        </p>
       </Fade>
+      <CopyToClipboard
+        text={"hola@acueducto.studio"}
+        onCopy={doSetCopied}
+        onMouseEnter={setHovered}
+        onMouseLeave={setUnhovered}
+      >
+        <p>
+          {f.p}
+          <b>
+            hola@acueducto.studio
+            <CopyMessage reveal={copying}>
+              {copied ? f.copied : f.copy}
+            </CopyMessage>
+          </b>
+        </p>
+      </CopyToClipboard>
       <LogoCrop>
         <Logo />
       </LogoCrop>
@@ -35,6 +56,33 @@ const ContactFooter = props => {
 };
 
 export default ContactFooter;
+
+const CopyMessage = styled.span`
+  position: absolute;
+  opacity: ${props => (props.reveal ? 1 : 0)};
+  bottom: -38px;
+  left: 0;
+  width: 100%;
+  padding: 4% 4% 3%;
+  background-color: ${props => props.theme.colors.background};
+  text-align: center;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  transition: ${props =>
+    props.reveal ? "0.3s ease all 0s" : "0.3s ease all"};
+  &:before {
+    content: " ";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid ${props => props.theme.colors.background};
+  }
+`;
 
 const Grid = styled.div`
   grid-template-columns: repeat(12, 1fr);
@@ -55,6 +103,24 @@ const Grid = styled.div`
     grid-column: 7 / span 4;
     color: ${props => props.theme.colors.foreground_low};
     position: relative;
+    &:hover {
+      b {
+        border-bottom: ${props =>
+          props.theme.stroke + " solid " + props.theme.colors.background};
+        border-color: transparent;
+        transition: 0.3s ease all;
+      }
+    }
+    b {
+      cursor: pointer;
+      position: relative;
+      color: ${props => props.theme.colors.foreground};
+      font-weight: 100;
+      transition: 0.3s ease all 0.1s;
+      padding-bottom: 2px;
+      border-bottom: ${props =>
+        props.theme.stroke + " solid " + props.theme.colors.foreground};
+    }
   }
 `;
 

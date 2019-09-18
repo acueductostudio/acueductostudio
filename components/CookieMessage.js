@@ -7,25 +7,23 @@ const CookieMessage = props => {
   let t = props.locale.cookie_message;
   return (
     <Wrapper borderTop={props.borderTop} clickable={props.hasToConsent}>
-      {/* <Fade when={props.hasToConsent}> */}
-        <Border>
-          <Divider onClick={props.doConsentToCookies}>
-            <Button>
-              <span>{t.title}</span>
-            </Button>
-            <CrossContainer>
-              <Cross />
-            </CrossContainer>
-          </Divider>
-          <p>
-            {t.p}
-            <Link href="/cookies" passHref>
-              <a>{t.link}</a>
-            </Link>
-            {t.p_continued}
-          </p>
-        </Border>
-      {/* </Fade> */}
+      <Border>
+        <Divider onClick={props.doConsentToCookies}>
+          <Button>
+            <span>{t.title}</span>
+          </Button>
+          <CrossContainer>
+            <Cross />
+          </CrossContainer>
+        </Divider>
+        <p>
+          {t.p}
+          <Link href="/cookies" passHref>
+            <a>{t.link}</a>
+          </Link>
+          {t.p_continued}
+        </p>
+      </Border>
     </Wrapper>
   );
 };
@@ -80,17 +78,17 @@ const CrossContainer = styled.div`
 const Wrapper = styled.div`
   pointer-events: ${props => (props.clickable ? "auto" : "none")};
   opacity: ${props => (props.clickable ? "1" : "0")};
-  width: 380px;
+  max-width: 590px;
+  width: 80%;
   bottom: 5%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) ${props=> props.clickable? "translateY(0%)": "translateY(5%)"};
   font-weight: 100;
   position: fixed;
-  transition: opacity 0.3s ease;
-  p {
+  transition: opacity .4s ease, transform .5s ease;
+    p {
     font-size: 1.2rem;
-    padding: 4%;
-    ${props => props.theme.colors.foreground_low}
+    padding: 2.5% 4%;
   }
   a {
     text-decoration: none;

@@ -11,11 +11,13 @@ export default class MyApp extends App {
     super(props);
     this.state = {
       isDarkMode: false,
-      hasToConsent: true,
+      hasToConsent: false,
       hasLoaded: false
     };
     this.changeTheme = this.changeTheme.bind(this);
     this.consentToCookies = this.consentToCookies.bind(this);
+    this.checkForConsent = this.checkForConsent.bind(this);
+
   }
 
   authenticate() {
@@ -54,7 +56,20 @@ export default class MyApp extends App {
 
     // Check if cookie message has been closed before
     // TODO: add expiry date?
+    // this.checkForConsent();
 
+  }
+
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (this.state.hasToConsent !== nextState.hasToConsent) {
+  //     console.log("false")
+  //     return false;
+  //   }
+  //   console.log("true")
+  //   return true;
+  // }
+
+  checkForConsent(){
     var _C = Cookies.get("showCookieMessage");
     if (_C === undefined) {
       console.log("cookies: hasn't consented before");
@@ -85,6 +100,7 @@ export default class MyApp extends App {
         <Layout
           locale={en}
           changeTheme={this.changeTheme}
+          checkForConsent={this.checkForConsent}
           consentToCookies={this.consentToCookies}
           hasToConsent={this.state.hasToConsent}
           hasLoaded={this.state.hasLoaded}

@@ -449,6 +449,9 @@ const Fourth = styled(CommonSection)`
   background-color: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.foreground_low};
   margin-bottom: 10%;
+  h2 {
+    color: ${props => props.theme.colors.foreground};
+  }
 `;
 
 const Third = styled(CommonSection)`
@@ -503,6 +506,10 @@ const Limited = styled.div`
     padding: 15% 0 5% 0;
     font-weight: 200;
     max-width: 670px;
+    b {
+      color: ${salvajeBlue};
+      font-size: 4rem;
+    }
   }
   h3 {
     font-size: 4.5rem;
@@ -568,6 +575,9 @@ const Intro = styled(CommonSection)`
   color: ${props => props.theme.colors.background};
   padding-bottom: 8%;
   margin-top: -1px;
+  h2 b {
+    color: ${props => props.theme.colors.background};
+  }
 `;
 
 const Land = styled.section`

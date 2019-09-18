@@ -21,6 +21,7 @@ import dynamic from "next/dynamic";
 
 // const originalRed = "#C64028";
 // const YoutubeFirstRed = "rgb(221, 56, 20)";
+
 const fierasRed = "rgb(201,32,26)";
 
 const ThePlayer = dynamic(import("../../components/caseStudy/VideoPlayer"), {
@@ -98,29 +99,31 @@ export default function LaDanzaDeLasFieras(props) {
           <img src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg" />
           <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.png" />
         </PosterGrid>
-        <Type>
-          <p>{t.second_section.font_logo}</p>
-          <Type_1 />
-          <TypeGrid>
-            <div>
-              <p>{t.second_section.font_body}</p>
-              <Type_2 />
-            </div>
-            <div>
-              <p>{t.second_section.font_titles}</p>
-              <Type_3 />
-            </div>
-          </TypeGrid>
-          <ColorGrid>
-            <div>
-              {t.second_section.red}
-              <br />
-              #DD3814
-            </div>
-            <div>#080B0C</div>
-            <div>#F4F4F4</div>
-          </ColorGrid>
-        </Type>
+        <SecondSection_Pre>
+          <Type>
+            <p>{t.second_section.font_logo}</p>
+            <Type_1 />
+            <TypeGrid>
+              <div>
+                <p>{t.second_section.font_body}</p>
+                <Type_2 />
+              </div>
+              <div>
+                <p>{t.second_section.font_titles}</p>
+                <Type_3 />
+              </div>
+            </TypeGrid>
+            <ColorGrid>
+              <div>
+                {t.second_section.red}
+                <br />
+                #DD3814
+              </div>
+              <div>#080B0C</div>
+              <div>#F4F4F4</div>
+            </ColorGrid>
+          </Type>
+        </SecondSection_Pre>
         <SecondSection_Sub>
           <TransitionWrapper>
             <img src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg" />
@@ -136,7 +139,9 @@ export default function LaDanzaDeLasFieras(props) {
           <SequenceContainer>
             <ThePlayer
               url={"https://www.youtube.com/embed/AJMXiE16gtc"}
-              still={"/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"}
+              still={
+                "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
+              }
               ratio={"50.62%"}
             />
           </SequenceContainer>
@@ -215,7 +220,9 @@ export default function LaDanzaDeLasFieras(props) {
             playsInline
             muted
             loop
-            poster={"/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"}
+            poster={
+              "/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
+            }
           >
             <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
           </video>
@@ -345,7 +352,7 @@ const TransitionWrapper = styled.div`
     max-width: 1100px;
     margin: 0 auto;
     z-index: 1;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
   }
   &:before {
     content: " ";
@@ -365,7 +372,7 @@ const PosterGrid = styled.div`
   grid-template-rows: 1fr 3fr;
   grid-gap: 2rem;
   max-width: 1200px;
-  margin: 5% 5% 10% 5%;
+  margin: 5% 5% 0% 5%;
   width: 90%;
   position: relative;
   svg {
@@ -481,6 +488,20 @@ const Third = styled(CommonSection)`
   background-color: ${props => props.theme.colors.foreground};
 `;
 
+const SecondSection_Pre = styled.div`
+  color: ${props => props.theme.colors.foreground};
+  background-color: ${props => props.theme.colors.background};
+  padding: 10% 0%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  flex: 0 0 auto;
+  width: 100%;
+  margin-top: 10%;
+`;
+
 const SecondSection_Sub = styled.div`
   color: ${props => props.theme.colors.background};
   background-color: ${fierasRed};
@@ -492,13 +513,13 @@ const SecondSection_Sub = styled.div`
   height: auto;
   flex: 0 0 auto;
   width: 100%;
-  margin-top: 10%;
 `;
 
 const Second = styled(CommonSection)`
-  color: ${props => props.theme.colors.foreground_low};
+  background-color: ${props => props.theme.colors.foreground};
+  color: ${props => props.theme.colors.background};
   h2 {
-    color: ${props => props.theme.colors.foreground};
+    color: ${props => props.theme.colors.background};
   }
 `;
 
@@ -507,6 +528,10 @@ const Limited = styled.div`
     padding: 18% 0 5% 0;
     font-weight: 200;
     max-width: 670px;
+    b {
+      color: ${fierasRed};
+      font-size: 4rem;
+    }
   }
   h3 {
     font-weight: 200;
@@ -547,7 +572,7 @@ const Graphic = styled.div`
     width: 20%;
     max-width: 70px;
     * {
-      fill: ${props => props.theme.colors.background};
+      fill: ${props => props.theme.colors.foreground};
     }
     &:nth-of-type(2) {
       transform: rotateZ(180deg) rotateX(180deg);
@@ -586,16 +611,16 @@ const TagScroll = styled.div`
 `;
 
 const FirstSection = styled(CommonSection)`
-  background-color: ${props => props.theme.colors.foreground};
-  color: ${props => props.theme.colors.background};
-  padding-bottom: 8%;
+  background-color: ${props => props.theme.colors.background};
+  color: ${props => props.theme.colors.foreground};
+  padding-bottom: 10%;
   margin-top: -1px;
 `;
 
 const LandSection = styled.section`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/landBackX.svg");
+  background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
   background-position: center bottom;
   background-size: cover;
   display: flex;
