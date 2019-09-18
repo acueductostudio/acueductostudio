@@ -1,39 +1,53 @@
 import styled from "styled-components";
+import {useEffect, useRef } from "react";
 import createMarkup from "../../helpers/createMarkup";
 import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
 import Link from "next/link";
 
 const SingleCase = props => {
+  const video = useRef(null);
+
+  // useEffect(() => {
+  //   video.current.pause();
+  //   video.current.play(); //user denied permission
+  //   console.log("set play ");
+  // }, []);
+
   return (
     <Case>
       <Link href={"work" + props.link} passHref>
         <a>
-        <Fade>
-          <VidContainer>
-
-            <Logo src={`static/assets/img/casestudies${props.link}/portfolio_logo.svg`}/>
-            <video
-              autoPlay
-              playsInline
-              muted
-              loop
-               poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
-            >
-              <source src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}/>
-            </video>
-           
-          </VidContainer>
+          <Fade>
+            <VidContainer>
+              <Logo
+                src={`static/assets/img/casestudies${props.link}/portfolio_logo.svg`}
+              />
+              <video
+                ref={video}
+                autoPlay
+                playsInline
+                muted
+                loop
+                poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+              >
+                <source
+                  src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
+                />
+              </video>
+            </VidContainer>
           </Fade>
         </a>
       </Link>
       <Info>
         <Fade>
-        <h4>{props.title}</h4>
+          <Link href={"work" + props.link} passHref>
+            <h4>{props.title}</h4>
+          </Link>
         </Fade>
         <Flexed>
           <Fade>
-          <p dangerouslySetInnerHTML={createMarkup(props.tags)} />
+            <p dangerouslySetInnerHTML={createMarkup(props.tags)} />
           </Fade>
           <Link href={"work" + props.link} passHref>
             <a>
@@ -72,14 +86,14 @@ const CaseList = props => {
 export default CaseList;
 
 const Logo = styled.img`
-    width: 70%;
-    transform: translateZ(1px) translateY(-50%);
-    align-self: center;
-    justify-self: center;
-    display: flex;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
+  width: 70%;
+  transform: translateZ(1px) translateY(-50%);
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
 `;
 
 const Flexed = styled.div`
@@ -93,7 +107,7 @@ const Flexed = styled.div`
 `;
 
 const Info = styled.div`
-  padding: 10%;
+  padding: 10% 10% 10% 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -101,6 +115,9 @@ const Info = styled.div`
   h4 {
     font-size: 4.5rem;
     font-weight: 200;
+    line-height: 110%;
+    max-width: 500px;
+    cursor: pointer;
   }
   p {
     color: ${props => props.theme.colors.foreground_low};
@@ -113,24 +130,47 @@ const Info = styled.div`
     stroke: ${props => props.theme.colors.foreground};
     stroke-width: ${props => props.theme.stroke};
   }
+  @media (max-width: 1160px) {
+    h4 {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 950px) {
+    h4 {
+      font-size: 3.5rem;
+    }
+  }
+  @media (max-width: 780px) {
+    h4 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 500px) {
+    h4 {
+      font-size: 2.5rem;
+    }
+  }
 `;
 
 const VidContainer = styled.div`
-    margin: 10%;
-    width: 80%;
-    height: 0;
-    padding-bottom: 80%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
+  margin: 10%;
+  width: 80%;
+  height: 0;
+  padding-bottom: 80%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
   video {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    width:100%;
+    width: 100%;
   }
 `;
 
@@ -139,6 +179,24 @@ const Case = styled.div`
   border-top: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    ${VidContainer} {
+      margin: 5% 5% 25px 5%;
+      width: 90%;
+      padding-bottom: 45%;
+      video {
+        top: -50%;
+      }
+    }
+    ${Info} {
+      padding: 0 5% 5% 5%;
+    }
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
 `;
 
 const CaseStudiesWrapper = styled.section`

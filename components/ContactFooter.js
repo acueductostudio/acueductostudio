@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
 import createMarkup from "../helpers/createMarkup";
-import Arrow from "../components/Arrow";
+import TitleSectionGrid from "./TitleSectionGrid"; 
 import Logo from "./../static/assets/img/layout/logo.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
@@ -55,7 +55,7 @@ const ContactFooter = props => {
   );
 };
 
-export default ContactFooter;
+export default React.memo(ContactFooter);
 
 const CopyMessage = styled.span`
   position: absolute;

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Head from "next/head";
-import Link from "next/link";
 import { useEffect } from "react";
 import PageClipper from "../../components/PageClipper";
 import Fade from "react-reveal/Fade";
 import ContactFooter from "../../components/ContactFooter";
+import NextStudy from "../../components/caseStudy/NextStudy";
 import LogoDanza from "../../static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
 import Laurel from "../../static/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
 import PosterLine from "../../static/assets/img/casestudies/ladanzadelasfieras/line.svg";
@@ -32,6 +32,7 @@ const ThePlayer = dynamic(import("../../components/caseStudy/VideoPlayer"), {
 export default function LaDanzaDeLasFieras(props) {
   let t = props.locale.casestudies.studies.ladanzadelasfieras;
   let f = props.locale.contactfooter;
+  let n = props.locale.next_study;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -247,6 +248,7 @@ export default function LaDanzaDeLasFieras(props) {
           {t.sixth_section.linkp} ladanzadelasfieras.com
         </a>
       </Sixth>
+      <NextStudy n={n} link="salvajenada"/>
       <ContactFooter f={f} />
     </PageClipper>
   );

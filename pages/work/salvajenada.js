@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import Head from "next/head";
 import { useEffect } from "react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import Fade from "react-reveal/Fade";
 import PageClipper from "../../components/PageClipper";
 import ContactFooter from "../../components/ContactFooter";
+import NextStudy from "../../components/caseStudy/NextStudy";
 import Quote from "../../components/caseStudy/Quote";
 import Stat from "../../components/caseStudy/Salvajenada/Stat";
 import LogoSalvaje from "../../static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
@@ -30,6 +30,7 @@ const salvajeBlue = "rgb(60, 179, 224)";
 export default function Salvajenada(props) {
   let t = props.locale.casestudies.studies.salvajenada;
   let f = props.locale.contactfooter;
+  let n = props.locale.next_study;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -274,6 +275,7 @@ export default function Salvajenada(props) {
           <Ig />
         </a>
       </Fifth>
+      <NextStudy n={n} link="ladanzadelasfieras"/>
       <ContactFooter f={f} />
     </PageClipper>
   );
@@ -591,7 +593,7 @@ const Land = styled.section`
   align-items: center;
   margin-top: 2px;
   svg {
-    max-width: 860px;
+    max-width: 800px;
     width: 70%;
   }
 `;

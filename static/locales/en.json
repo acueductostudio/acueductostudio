@@ -306,6 +306,9 @@
     "link": "cookie policy",
     "p_continued": " and opt-out if you wish. If you continue to use this site, we’ll asume you’re okay with it."
   },
+  "next_study":{
+    "p" : "click for next case study"
+  },
   "home_page": {
     "headerTitle": " ",
     "landing": {
@@ -319,7 +322,7 @@
       "linktext": "Read more"
     },
     "studies": {
-      "title": "to tackle exiting</br>business challenges",
+      "title": "tackling tough</br>business challenges",
       "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.</br></br>Read about selected projects we have launched alongside our partners."
     }
   },

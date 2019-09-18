@@ -83,6 +83,23 @@ const Step = styled.div`
       stroke: ${props => props.theme.colors.accent};
     }
   }
+  @media (max-width: 1000px) {
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 550px) {
+    padding: 8%;
+    svg {
+      max-width: 70px;
+    }
+    p {
+      /* font-size: 1.2rem; */
+    }
+  }
 `;
 
 const StepsSection = styled.div`
@@ -99,6 +116,24 @@ const StepsSection = styled.div`
     :nth-of-type(3),
     :nth-of-type(6) {
       border-right: 0;
+    }
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+    ${Step} {
+      :nth-of-type(3) {
+        border-top: 0;
+        border-right: ${props =>
+          props.theme.stroke +
+          " solid " +
+          props.theme.colors.foreground_lowest};
+      }
+      :nth-of-type(4) {
+        border-bottom: ${props =>
+          props.theme.stroke +
+          " solid " +
+          props.theme.colors.foreground_lowest};
+      }
     }
   }
 `;

@@ -7,8 +7,6 @@
 - Fotos ibero
 
 ## Jueves: 
-- Links to other study from study
-- Titulos de portafolio deben ser linksq
 - Responsive
 - Resize en fondo se rompe -> cambiando de página?
 - Head

@@ -41,6 +41,10 @@ const ServiceGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 15%;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Service = styled.div`
@@ -70,6 +74,36 @@ const Service = styled.div`
     list-style: none;
     line-height: 135%;
     color: ${props => props.theme.colors.foreground_low};
+  }
+  @media (max-width: 1000px) {
+    padding: 12%;
+    align-items: flex-start;
+    ul li {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 800px) {
+    padding: 10% 0 10% 10%;
+    border-right: 0;
+    &:nth-child(1),
+    &:nth-child(2) {
+      border-bottom: none;
+    }
+    h4 {
+      font-size: 2.5rem;
+    }
+    ul {
+      margin-top: 8px;
+      li {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 5% 0 5% 5%;
+    h4 {
+      text-transform: lowercase;
+    }
   }
 `;
 
