@@ -129,7 +129,7 @@
         "fourth_section": {
           "subtitle": "What about the content?",
           "p": "A powerful web app was built and the film’s premier was getting close. It was time to deliver its message in a clear, concise, and elegant way. But how? Having a unified tone and message throughout the whole experience. With this in mind, alongside the production houses of the film, Acueducto crafted the web-app’s copywriting. That way the whole narrative around the project was controlled; not just on the web app, but also in the press.</br></br>It is a common thing to find throughout press articles that the messages and adjectives of La Danza de las Fieras’ web app were used, most of them word by word.",
-          "stat": "Of press publications quoted word by word content on the web app or the presskit.",
+          "stat": "of press publications quoted word by word content on the web app or the presskit.",
           "p2": "But, is it not the most valuable result for the filmmakers to actually get people to watch their film? In film festival’s box office listings, they can compete with hundreds of other films for viewers’ attention. Most of them do not have a proper portal to hold their synopsis, credits, and trailer, and this lack of preview assets impacts the film’s viewing rate. This is why SEO for “La Danza de las Fieras” was paramount, a lot of effort was put into so that any search of that combination of words would throw the web app as the first result."
         },
         "fifth_section": {
@@ -297,8 +297,8 @@
   "contactfooter": {
     "title": "let's be partners,</br> let's talk business",
     "p": "We would love to start getting to know you, write us directly at ",
-    "copy" : "Copy to clipboard",
-    "copied" : "Copied"
+    "copy": "Copy to clipboard",
+    "copied": "Copied"
   },
   "cookie_message": {
     "title": "I’m okay with cookies",
@@ -306,8 +306,8 @@
     "link": "cookie policy",
     "p_continued": " and opt-out if you wish. If you continue to use this site, we’ll asume you’re okay with it."
   },
-  "next_study":{
-    "p" : "click for next case study"
+  "next_study": {
+    "p": "click for next case study"
   },
   "home_page": {
     "headerTitle": " ",

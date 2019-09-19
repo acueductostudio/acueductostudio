@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import Fade from "react-reveal";
 import Link from "next/link";
-import Arrow from "./../Arrow";
+import Arrow from "./../../Arrow";
 
 const NextStudy = ({ link, n }) => {
-  console.log(n);
   return (
     <Link href={link}>
       <Wrapper>
@@ -24,39 +23,26 @@ const NextStudy = ({ link, n }) => {
   );
 };
 
-export default NextStudy;
+export default React.memo(NextStudy);
 
 const ArrowContainer = styled.div`
-  margin-top: 15px;w
-  /* position: absolute;
-  right: 5%;
-  bottom: 50%;
-  transform: translateY(50%);
-  svg {
-    width: 65px;
-    height: auto;
-  } */
+  margin-top: 1%;
 `;
 
 const LogoContainer = styled.div`
-  height: 0;
-  padding-bottom: 12.3%;
   width: 100%;
   max-width: 700px;
   position: relative;
 `;
 
 const Logo = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0%;
-  bottom: 0;
+  padding-bottom: 20%;
   background-size: 90%;
   background-position: 50% 50%;
   transition: 0.3s ease all;
   background-repeat: no-repeat;
   transform: scale(0.97);
+  transform-origin: 50% 0;
 `;
 
 const Wrapper = styled.div`
@@ -76,9 +62,6 @@ const Wrapper = styled.div`
     transition: 0.3s ease all;
   }
   &:hover {
-    /* p {
-      border-bottom: 2px solid ${props => props.theme.colors.accent};
-    } */
     ${Logo} {
       transform: scale(1);
     }
@@ -86,6 +69,14 @@ const Wrapper = styled.div`
       * {
         stroke: ${props => props.theme.colors.accent};
       }
+    }
+  }
+  @media (max-width: 900px) {
+    padding-top: 15%;
+  }
+  @media (max-width: 450px) {
+    ${Logo} {
+      margin-bottom: 5%;
     }
   }
 `;

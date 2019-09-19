@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Head from "next/head";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
 import PageClipper from "../../components/PageClipper";
 import Fade from "react-reveal/Fade";
 import ContactFooter from "../../components/ContactFooter";
-import NextStudy from "../../components/caseStudy/NextStudy";
+import NextStudy from "../../components/caseStudy/shared/NextStudy";
 import LogoDanza from "../../static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
 import Laurel from "../../static/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
 import PosterLine from "../../static/assets/img/casestudies/ladanzadelasfieras/line.svg";
@@ -13,23 +14,30 @@ import Type_1 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_
 import Type_2 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
 import Type_3 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
 import AppSvg from "../../static/assets/img/casestudies/ladanzadelasfieras/app.svg";
-import createMarkup from "../../helpers/createMarkup";
-import Marquee from "../../helpers/react-double-marquee";
-import Quote from "../../components/caseStudy/Quote";
-import Insight from "../../components/caseStudy/Insight";
-import dynamic from "next/dynamic";
+import { H2, H3, P } from "../../components/caseStudy/shared/Dangerously";
+import IntroVideo from "../../components/caseStudy/shared/IntroVideo";
+import Marquee from "../../components/caseStudy/shared/Marquee";
+import Quote from "../../components/caseStudy/shared/Quote";
+import Insight from "../../components/caseStudy/shared/Insight";
+import TextColumn from "../../components/caseStudy/shared/TextColumn";
+import CommonSection from "../../components/caseStudy/shared/CommonSection";
+
+// import VideoPlayer from "../../components/caseStudy/ladanzadelasfieras/VideoPlayer";
 
 // const originalRed = "#C64028";
 // const YoutubeFirstRed = "rgb(221, 56, 20)";
 
 const fierasRed = "rgb(201,32,26)";
 
-const ThePlayer = dynamic(import("../../components/caseStudy/VideoPlayer"), {
-  loading: () => <p>Loading player...</p>,
-  ssr: false
-});
+const ThePlayer = dynamic(
+  import("../../components/caseStudy/ladanzadelasfieras/VideoPlayer"),
+  {
+    loading: () => <p>Loading player...</p>,
+    ssr: false
+  }
+);
 
-export default function LaDanzaDeLasFieras(props) {
+function LaDanzaDeLasFieras(props) {
   let t = props.locale.casestudies.studies.ladanzadelasfieras;
   let f = props.locale.contactfooter;
   let n = props.locale.next_study;
@@ -37,10 +45,6 @@ export default function LaDanzaDeLasFieras(props) {
   useEffect(() => {
     props.setTitle(t.headerTitle);
   }, []);
-
-  let formarquee = t.intro_section.tags.map(function(tag, index) {
-    return <h3 key={index + "h"}>{tag}</h3>;
-  });
 
   let initialStats = t.intro_section.stats.map(function(stat, index) {
     return (
@@ -62,36 +66,24 @@ export default function LaDanzaDeLasFieras(props) {
         </LandSection>
       </Fade>
       <FirstSection>
-        <TagScroll>
-          <Marquee delay={0} childMargin={0}>
-            {formarquee}
-          </Marquee>
-        </TagScroll>
-        <Video
-          autoPlay
-          playsInline
-          muted
-          loop
-          poster="/static/assets/img/casestudies/ladanzadelasfieras/intro_poster.jpg"
-        >
-          <source src="/static/assets/video/casestudies/ladanzadelasfieras/intro.mp4" />
-        </Video>
-        <Limited>
-          <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
-          <p dangerouslySetInnerHTML={createMarkup(t.intro_section.p)} />
-          <Graphic>
+        <Marquee tags={t.intro_section.tags} />
+        <IntroVideo link={t.link} />
+        <TextColumn>
+          <H2>{t.intro_section.title}</H2>
+          <P>{t.intro_section.p}</P>
+          <LaurelNumbers>
             <Laurel />
             {initialStats}
             <Laurel />
-          </Graphic>
+          </LaurelNumbers>
           <p>{t.intro_section.p2}</p>
-        </Limited>
+        </TextColumn>
       </FirstSection>
-      <Second>
-        <Limited>
-          <h2 dangerouslySetInnerHTML={createMarkup(t.second_section.title)} />
-          <p dangerouslySetInnerHTML={createMarkup(t.second_section.p)} />
-        </Limited>
+      <SecondSection>
+        <TextColumn>
+          <H2>{t.second_section.title}</H2>
+          <P>{t.second_section.p}</P>
+        </TextColumn>
         <PosterGrid>
           <PosterLine />
           <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg" />
@@ -100,7 +92,9 @@ export default function LaDanzaDeLasFieras(props) {
           <img src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg" />
           <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.png" />
         </PosterGrid>
-        <SecondSection_Pre>
+      </SecondSection>
+      <Section_Pre>
+        <TextColumn>
           <Type>
             <p>{t.second_section.font_logo}</p>
             <Type_1 />
@@ -124,62 +118,55 @@ export default function LaDanzaDeLasFieras(props) {
               <div>#F4F4F4</div>
             </ColorGrid>
           </Type>
-        </SecondSection_Pre>
-        <SecondSection_Sub>
-          <TransitionWrapper>
-            <img src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg" />
-          </TransitionWrapper>
-          <Limited>
-            <h3
-              dangerouslySetInnerHTML={createMarkup(
-                "– " + t.second_section.subtitle
-              )}
-            />
-            <p dangerouslySetInnerHTML={createMarkup(t.second_section.p2)} />
-          </Limited>
-          <SequenceContainer>
-            <ThePlayer
-              url={"https://www.youtube.com/embed/AJMXiE16gtc"}
-              still={
-                "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
-              }
-              ratio={"50.62%"}
-            />
-          </SequenceContainer>
-        </SecondSection_Sub>
-      </Second>
-      <Third>
-        <Limited>
-          <h3
-            dangerouslySetInnerHTML={createMarkup(
-              "– " + t.third_section.subtitle
-            )}
+        </TextColumn>
+      </Section_Pre>
+      <Section_Sub>
+        <TransitionWrapper>
+          <img src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg" />
+        </TransitionWrapper>
+        <TextColumn>
+          <H3>{"– " + t.second_section.subtitle}</H3>
+          <P>{t.second_section.p2}</P>
+        </TextColumn>
+        <SequenceContainer>
+          <ThePlayer
+            url={"https://www.youtube.com/embed/AJMXiE16gtc"}
+            still={
+              "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
+            }
+            ratio={"50.62%"}
           />
-          <p dangerouslySetInnerHTML={createMarkup(t.third_section.p)} />
-        </Limited>
+        </SequenceContainer>
+      </Section_Sub>
+      <Third>
+        <TextColumn>
+          <H3>{"– " + t.third_section.subtitle}</H3>
+          <P>{t.third_section.p}</P>
+        </TextColumn>
         <Insight
           insight={t.third_section.insights.portfolio}
           number={1}
           color={fierasRed}
         >
           <Faces src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg" />
-
-          <Quote
-            quote={t.third_section.insights.portfolio.quote}
-            color={props => props.theme.colors.background}
-          />
         </Insight>
+        <Quote
+          quote={t.third_section.insights.portfolio.quote}
+          color={props => props.theme.colors.background}
+          noMargin
+        />
         <Insight
           color={fierasRed}
           insight={t.third_section.insights.press}
           number={2}
         >
           <MacPress src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg" />
-          <Quote
-            quote={t.third_section.insights.press.quote}
-            color={props => props.theme.colors.background}
-          />
         </Insight>
+        <Quote
+          quote={t.third_section.insights.press.quote}
+          color={props => props.theme.colors.background}
+          noMargin
+        />
         <Insight
           color={fierasRed}
           insight={t.third_section.insights.availability}
@@ -187,35 +174,25 @@ export default function LaDanzaDeLasFieras(props) {
         >
           <MacContact src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg" />
         </Insight>
-        <Limited>
-          <h3
-            dangerouslySetInnerHTML={createMarkup(
-              "– " + t.third_section.subtitle2
-            )}
-          />
-          <p dangerouslySetInnerHTML={createMarkup(t.third_section.p2)} />
+        <TextColumn>
+          <H3>{"– " + t.third_section.subtitle2}</H3>
+          <P>{t.third_section.p2}</P>
           <AppGrid>
             <img src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png" />
             <AppSvg />
           </AppGrid>
-        </Limited>
+        </TextColumn>
       </Third>
       <Fourth>
-        <Limited>
-          <h3
-            dangerouslySetInnerHTML={createMarkup(
-              "– " + t.fourth_section.subtitle
-            )}
-          />
-          <p dangerouslySetInnerHTML={createMarkup(t.fourth_section.p)} />
-        </Limited>
-        <Stat>
-          <LogoF />
-          <b>81%</b>
-          <p>{t.fourth_section.stat}</p>
-        </Stat>
-        <Limited>
-          <p dangerouslySetInnerHTML={createMarkup(t.fourth_section.p2)} />
+        <TextColumn>
+          <H3>{"– " + t.fourth_section.subtitle}</H3>
+          <P>{t.fourth_section.p}</P>
+          <Stat>
+            <LogoF />
+            <b>81%</b>
+            <p>{t.fourth_section.stat}</p>
+          </Stat>
+          <P>{t.fourth_section.p2}</P>
           <video
             autoPlay
             playsInline
@@ -227,32 +204,34 @@ export default function LaDanzaDeLasFieras(props) {
           >
             <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
           </video>
-        </Limited>
+        </TextColumn>
       </Fourth>
       <Fifth>
-        <Limited>
-          <h2 dangerouslySetInnerHTML={createMarkup(t.fifth_section.title)} />
-          <p dangerouslySetInnerHTML={createMarkup(t.fifth_section.p)} />
-        </Limited>
+        <TextColumn>
+          <H2>{t.fifth_section.title}</H2>
+          <P>{t.fifth_section.p}</P>
+        </TextColumn>
         <Quote
           quote={t.fifth_section.quote}
           color={props => props.theme.colors.background}
         />
-        <Limited>
+        <TextColumn>
           <img src="../static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg" />
-          <p dangerouslySetInnerHTML={createMarkup(t.fifth_section.p2)} />
-        </Limited>
+          <P>{t.fifth_section.p2}</P>
+        </TextColumn>
       </Fifth>
       <Sixth>
         <a href="https://ladanzadelasfieras.com">
           {t.sixth_section.linkp} ladanzadelasfieras.com
         </a>
       </Sixth>
-      <NextStudy n={n} link="salvajenada"/>
+      <NextStudy n={n} link="salvajenada" />
       <ContactFooter f={f} />
     </PageClipper>
   );
 }
+
+export default React.memo(LaDanzaDeLasFieras);
 
 const SequenceContainer = styled.div`
   max-width: 1300px;
@@ -263,17 +242,31 @@ const SequenceContainer = styled.div`
 const MacContact = styled.img`
   max-width: 670px;
   margin: 5% 0;
+  @media (max-width: 500px) {
+    max-width: 480px;
+  }
 `;
 
 const Faces = styled.img`
   max-width: 670px;
-  margin: 3.5% 0px -1.5%;
+  margin: 4% 0px 1%;
+  position: relative;
+  width: 100%;
+  @media (max-width: 700px) {
+    margin: 8% 0 5%;
+  }
 `;
 
 const MacPress = styled.img`
   max-width: 830px;
   width: 90%;
   margin: 4% 5% -9% 5%;
+  @media (max-width: 1050px) {
+    margin: 8% 5% -9% 5%;
+  }
+  @media (max-width: 450px) {
+    margin: 8% 5% -7% 5%;
+  }
 `;
 
 const AppGrid = styled.div`
@@ -296,6 +289,15 @@ const Type = styled.div`
   width: 100%;
   svg {
     width: 100%;
+  }
+  @media (max-width: 800px) {
+    padding: 0 10%;
+  }
+  @media (max-width: 600px) {
+    padding: 0 15%;
+    p {
+      display: none;
+    }
   }
 `;
 
@@ -335,6 +337,28 @@ const ColorGrid = styled.div`
       }
     }
   }
+  @media (max-width: 800px) {
+    display: flex;
+    justify-content: space-between;
+    div {
+      font-size: 1.6rem;
+      align-items: center;
+      &:before {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    div {
+      font-size: 1.3rem;
+    }
+  }
+  @media (max-width: 450px) {
+    div {
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 const TypeGrid = styled.div`
@@ -351,10 +375,11 @@ const TransitionWrapper = styled.div`
   display: flex;
   align-items: center;
   img {
-    max-width: 1100px;
+    max-width: 1300px;
+    padding: 0 5%;
+    width: 100%;
     margin: 0 auto;
     z-index: 1;
-    margin-bottom: 1%;
   }
   &:before {
     content: " ";
@@ -374,7 +399,7 @@ const PosterGrid = styled.div`
   grid-template-rows: 1fr 3fr;
   grid-gap: 2rem;
   max-width: 1200px;
-  margin: 5% 5% 0% 5%;
+  margin: 5% 5% 12% 5%;
   width: 90%;
   position: relative;
   svg {
@@ -384,7 +409,6 @@ const PosterGrid = styled.div`
     bottom: 0;
     top: 0;
     z-index: 0;
-    opacity: 0.5;
     path {
       stroke-width: ${props => props.theme.stroke};
     }
@@ -402,19 +426,48 @@ const PosterGrid = styled.div`
       grid-row: 1 / span 2;
     }
   }
+  @media (max-width: 900px) {
+    img {
+      &:nth-of-type(4) {
+        grid-column: 1 / span 3;
+      }
+      &:nth-of-type(5) {
+        grid-column: 4 / span 3;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    grid-template-rows: 1fr 1fr 5fr;
+    margin-bottom: 0;
+    svg {
+      display: none;
+    }
+    img {
+      grid-column-end: span 2;
+      &:nth-of-type(4) {
+        grid-row: 1 / span 2;
+        grid-column: 5 / span 2;
+      }
+      &:nth-of-type(5) {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 6;
+      }
+    }
+  }
 `;
 
 const Stat = styled.div`
   position: relative;
-  margin: 8% 0;
-  max-width: 390px;
+  margin: 12% auto;
+  max-width: 310px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   color: ${props => props.theme.colors.foreground};
   b {
     font-size: 8rem;
     font-weight: 200;
-    line-height: 100%;
+    line-height: 80%;
     display: block;
     text-align: center;
     z-index: 1;
@@ -429,18 +482,26 @@ const Stat = styled.div`
     display: flex;
     z-index: 0;
     align-self: center;
-    top: -20px;
+    top: -30px;
   }
-`;
-
-const CommonSection = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: auto;
-  flex: 0 0 auto;
-  margin: 0 2px;
+  @media (max-width: 700px) {
+    max-width: 330px;
+    margin: 16% auto 12%;
+  }
+  @media (max-width: 600px) {
+    max-width: 240px;
+    margin: 20% auto 14%;
+    b {
+      font-size: 6rem;
+    }
+    svg {
+      width: 15%;
+      top: -18px;
+    }
+  }
+  @media (max-width: 400px) {
+    margin: 14% auto 14%;
+  }
 `;
 
 const Sixth = styled(CommonSection)`
@@ -449,9 +510,6 @@ const Sixth = styled(CommonSection)`
   background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/sixthBack.svg");
   background-position: center bottom;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   a {
     font-size: 4.5rem;
     margin-bottom: 3%;
@@ -459,12 +517,35 @@ const Sixth = styled(CommonSection)`
     line-height: 100%;
     border-bottom: 3px solid ${props => props.theme.colors.foreground};
   }
+  @media (max-width: 900px) {
+    background-position: left top;
+    a {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 600px) {
+    a {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 500px) {
+    a {
+      font-size: 1.5rem;
+      padding: 5%;
+      border-radius: 4px;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+      border: 0;
+    }
+  }
 `;
 
 const Fifth = styled(CommonSection)`
   background-color: ${props => props.theme.colors.foreground};
   color: ${props => props.theme.colors.background};
   padding-bottom: 10%;
+  h2 b {
+    color: ${fierasRed};
+  }
   img {
     max-width: 670px;
     margin: 5% 0 12% 0;
@@ -490,77 +571,30 @@ const Third = styled(CommonSection)`
   background-color: ${props => props.theme.colors.foreground};
 `;
 
-const SecondSection_Pre = styled.div`
+const Section_Pre = styled(CommonSection)`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
   padding: 10% 0%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: auto;
-  flex: 0 0 auto;
-  width: 100%;
-  margin-top: 10%;
 `;
 
-const SecondSection_Sub = styled.div`
+const Section_Sub = styled(CommonSection)`
   color: ${props => props.theme.colors.background};
   background-color: ${fierasRed};
-  padding-bottom: 7%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: auto;
-  flex: 0 0 auto;
-  width: 100%;
+  padding-bottom: 2%;
 `;
 
-const Second = styled(CommonSection)`
+const SecondSection = styled(CommonSection)`
   background-color: ${props => props.theme.colors.foreground};
   color: ${props => props.theme.colors.background};
   h2 {
     color: ${props => props.theme.colors.background};
-  }
-`;
-
-const Limited = styled.div`
-  h2 {
-    padding: 18% 0 5% 0;
-    font-weight: 200;
-    max-width: 670px;
     b {
       color: ${fierasRed};
-      font-size: 4rem;
     }
-  }
-  h3 {
-    font-weight: 200;
-    padding: 18% 0 5% 0;
-    font-size: 4.5rem;
-    margin-bottom: 25px;
-    max-width: 670px;
-  }
-  h4 {
-    font-size: 3rem;
-    position: relative;
-    span {
-      font-size: 1.5rem;
-      color: #019ee3;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: -40px;
-      line-height: 190%;
-    }
-  }
-  p {
-    max-width: 670px;
   }
 `;
 
-const Graphic = styled.div`
+const LaurelNumbers = styled.div`
   display: flex;
   width: 100%;
   margin: 10% auto;
@@ -573,11 +607,12 @@ const Graphic = styled.div`
   svg {
     width: 20%;
     max-width: 70px;
+    transform-origin: 50% 50%;
     * {
       fill: ${props => props.theme.colors.foreground};
     }
     &:nth-of-type(2) {
-      transform: rotateZ(180deg) rotateX(180deg);
+      transform: scaleX(-1);
     }
   }
   p {
@@ -590,25 +625,42 @@ const Graphic = styled.div`
     font-weight: 200;
     line-height: 100%;
   }
-`;
-
-const Video = styled.video`
-  width: 100%;
-  max-width: 1000px;
-`;
-
-const TagScroll = styled.div`
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  margin: 5% 0 7% 0;
-  width: 100%;
-  h3 {
-    margin-right: 70px;
-    font-weight: 100;
-    font-size: 1.4rem;
-    display: inline;
+  @media (max-width: 700px) {
+    b {
+      font-size: 10rem;
+    }
+  }
+  @media (max-width: 600px) {
+    p {
+      color: ${props => props.theme.colors.foreground_low};
+      margin-top: -5px;
+    }
+    b {
+      font-size: 9rem;
+    }
+    svg {
+      max-width: 50px;
+    }
+  }
+  @media (max-width: 500px) {
+    b {
+      font-size: 7rem;
+    }
+    svg {
+      max-width: 40px;
+    }
+  }
+  @media (max-width: 400px) {
+    p {
+      margin-top: 0px;
+      font-size: 1.3rem;
+    }
+    b {
+      font-size: 5rem;
+    }
+    svg {
+      max-width: 30px;
+    }
   }
 `;
 
@@ -616,19 +668,19 @@ const FirstSection = styled(CommonSection)`
   background-color: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.foreground};
   padding-bottom: 10%;
-  margin-top: -1px;
+  h2 {
+    b {
+      color: ${fierasRed};
+    }
+  }
 `;
 
-const LandSection = styled.section`
+const LandSection = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
   background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
   background-position: center bottom;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2px 2px 0 2px;
   svg {
     max-width: 650px;
     width: 70%;

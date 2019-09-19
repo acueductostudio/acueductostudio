@@ -2,6 +2,8 @@ import { useState } from "react";
 import YouTubePlayer from "react-player";
 import styled, { css, keyframes } from "styled-components";
 
+const fierasRed = "rgb(201,32,26)";
+
 function VideoPlayer(props) {
   const [isPlaying, setPlaying] = useState(false);
   const [isInitial, setInitial] = useState(true);
@@ -57,7 +59,8 @@ export default VideoPlayer;
 const PlayerWrapper = styled.div`
   z-index: 0;
   opacity: ${props => (props.hide ? 0 : 1)};
-  transition: opacity ${props => (props.hide? "0s linear 0s" : "0.3s ease .8s")};
+  transition: opacity
+    ${props => (props.hide ? "0s linear 0s" : "0.3s ease .8s")};
 `;
 
 const VideoWrapper = styled.div`
@@ -94,10 +97,21 @@ const Button = styled.div`
   opacity: ${props => (props.hide ? "0" : "1")};
   font-size: 4.5rem;
   border-bottom: 2px solid transparent;
+  @media (max-width: 1000px) {
+    font-size: 3.8rem;
+  }
+  @media (max-width: 450px) {
+    background-color: ${fierasRed};
+    border-radius: 3px;
+    padding: 4% 15%;
+    font-size: 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 7px;
+    text-align: center;
+  }
 `;
 
 const ButtonPlay = styled(Button)`
-  transition: border-color .3s ease;
+  transition: border-color 0.3s ease;
 `;
 
 const Clicker = styled.div`
@@ -114,6 +128,9 @@ const Clicker = styled.div`
   &:hover {
     ${ButtonPlay} {
       border-color: ${props => props.theme.colors.foreground};
+      @media (max-width: 450px) {
+        border-color: transparent;
+      }
     }
   }
   ${props =>

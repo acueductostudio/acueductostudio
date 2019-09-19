@@ -11,8 +11,8 @@ export default PageClipper;
 const Wrapper = styled.main`
   display: flex;
   -webkit-overflow-scrolling: touch;
-  width: calc(100% - 44px);
-  height: calc(100% - 44px);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   position: absolute;
   flex-direction: column;
   margin: 0 auto;

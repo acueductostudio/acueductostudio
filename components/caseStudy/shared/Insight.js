@@ -22,6 +22,7 @@ const Limiter = styled.div`
 
 const InsightWrapper = styled.div`
   margin: 10% 0 4% 0;
+  padding: 0 5%;
   width: 100%;
   align-items: center;
   display: flex;
@@ -33,12 +34,36 @@ const InsightWrapper = styled.div`
     position: relative;
     span {
       font-size: 1.5rem;
-      color: ${props => props.color? props.color : "#019ee3"};
+      color: ${props => (props.color ? props.color : "#019ee3")};
       display: block;
       position: absolute;
       bottom: 0;
       left: -40px;
       line-height: 190%;
+    }
+  }
+  @media (max-width: 1000px) {
+    h4 {
+      font-size: 2.4rem;
+    }
+  }
+  @media (max-width: 850px) {
+    h4 {
+      span {
+        line-height: 100%;
+        left: 0;
+        position: relative;
+        margin-right: 15px;
+        font-size: 5rem;
+      }
+      &:after {
+        content: "–";
+        font-size: inherit;
+        color: ${props => (props.color ? props.color : "#019ee3")};
+        display: block;
+        width: 100%;
+        min-height: 20px;
+      }
     }
   }
 `;

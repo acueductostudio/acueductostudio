@@ -9,7 +9,7 @@ import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
 import CookieMessage from "./CookieMessage";
 import ScrollIncentive from "./ScrollIncentive";
-import screenfull from "screenfull";
+// import screenfull from "screenfull";
 
 const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
   ssr: false
@@ -148,16 +148,16 @@ const Border = styled.div`
   opacity: 1;
   pointer-events: none;
   z-index: 99;
-  width: calc(100% - 40px);
-  height: calc(100% - 42px);
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
   background-color: none;
   position: fixed;
-  left: 20px;
-  top: 20px;
-  right: 20px;
-  bottom: 20px;
+  left: 18px;
+  top: 18px;
+  right: 18px;
+  bottom: 18px;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1504px;
   mix-blend-mode: exclusion;
   transition: opacity 0.3s ease-in, border 0.3s ease-in;
   border: ${props =>

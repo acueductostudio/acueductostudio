@@ -5,9 +5,9 @@ import dynamic from "next/dynamic";
 import Fade from "react-reveal/Fade";
 import PageClipper from "../../components/PageClipper";
 import ContactFooter from "../../components/ContactFooter";
-import NextStudy from "../../components/caseStudy/NextStudy";
-import Quote from "../../components/caseStudy/Quote";
-import Stat from "../../components/caseStudy/Salvajenada/Stat";
+import NextStudy from "../../components/caseStudy/shared/NextStudy";
+import Quote from "../../components/caseStudy/shared/Quote";
+import Stat from "../../components/caseStudy/salvajenada/Stat";
 import LogoSalvaje from "../../static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
 import Ig from "../../static/assets/img/casestudies/salvajenada/ig.svg";
 import Ibero from "../../static/assets/img/casestudies/salvajenada/ibero.svg";
@@ -15,11 +15,15 @@ import Wolf from "../../static/assets/img/casestudies/salvajenada/wolf.svg";
 import Apple from "../../static/assets/img/casestudies/salvajenada/apple.svg";
 import Spotify from "../../static/assets/img/casestudies/salvajenada/spotify.svg";
 import createMarkup from "../../helpers/createMarkup";
-import Marquee from "../../helpers/react-double-marquee";
-import Insight from "../../components/caseStudy/Insight";
+import { H2, H3, P, Td } from "../../components/caseStudy/shared/Dangerously";
+import IntroVideo from "../../components/caseStudy/shared/IntroVideo";
+import Marquee from "../../components/caseStudy/shared/Marquee";
+import Insight from "../../components/caseStudy/shared/Insight";
+import TextColumn from "../../components/caseStudy/shared/TextColumn";
+import CommonSection from "../../components/caseStudy/shared/CommonSection";
 
 const FramesEmbed = dynamic(
-  import("../../components/caseStudy/Salvajenada/FramesEmbed"),
+  import("../../components/caseStudy/salvajenada/FramesEmbed"),
   {
     loading: () => <span style={{ height: "500px" }}>Loading frames...</span>
   }
@@ -35,10 +39,6 @@ export default function Salvajenada(props) {
   useEffect(() => {
     props.setTitle(t.headerTitle);
   }, []);
-
-  let formarquee = t.intro_section.tags.map(function(tag, index) {
-    return <h3 key={index + "h"}>{tag}</h3>;
-  });
 
   const playlistCovers = () => {
     let covers = [];
@@ -105,22 +105,10 @@ export default function Salvajenada(props) {
         </Land>
       </Fade>
       <Intro>
-        <TagScroll>
-          <Marquee delay={0} childMargin={0}>
-            {formarquee} {formarquee}
-          </Marquee>
-        </TagScroll>
-        <Video
-          autoPlay
-          playsInline
-          muted
-          loop
-          poster="/static/assets/img/casestudies/salvajenada/intro_poster.jpg"
-        >
-          <source src="/static/assets/video/casestudies/salvajenada/intro.mp4" />
-        </Video>
-        <Limited>
-          <h2 dangerouslySetInnerHTML={createMarkup(t.intro_section.title)} />
+        <Marquee tags={t.intro_section.tags} amount={2} />
+        <IntroVideo link={t.link} />
+        <Column>
+          <H2>{t.intro_section.title}</H2>
           <p>{t.intro_section.p}</p>
           <Graphic>
             <LogoWolf>
@@ -133,7 +121,7 @@ export default function Salvajenada(props) {
             </p>
           </Graphic>
           <p>{t.intro_section.p2}</p>
-        </Limited>
+        </Column>
       </Intro>
       <Second>
         <SecondBack />
@@ -151,46 +139,30 @@ export default function Salvajenada(props) {
             </div>
           </Sticky>
         </StickyContainer>
-        <Limited>
-          <h2 dangerouslySetInnerHTML={createMarkup(t.second_section.title)} />
-          <p dangerouslySetInnerHTML={createMarkup(t.second_section.p)} />
-        </Limited>
-        <table>
+        <Column>
+          <H2>{t.second_section.title}</H2>
+          <P>{t.second_section.p}</P>
+        </Column>
+        <Table>
           <tbody>
             <tr>
               <th>{t.second_section.table[0].label}</th>
               <th>{t.second_section.table[1].label}</th>
             </tr>
             <tr>
-              <td
-                dangerouslySetInnerHTML={createMarkup(
-                  t.second_section.table[0].content
-                )}
-              />
-              <td
-                dangerouslySetInnerHTML={createMarkup(
-                  t.second_section.table[1].content
-                )}
-              />
+              <Td>{t.second_section.table[0].content}</Td>
+              <Td>{t.second_section.table[1].content}</Td>
             </tr>
           </tbody>
-        </table>
-        <Limited>
-          <p dangerouslySetInnerHTML={createMarkup(t.second_section.p2)} />
-          <p
-            className="bigger"
-            dangerouslySetInnerHTML={createMarkup(t.second_section.p3)}
-          />
-        </Limited>
-        <table>
+        </Table>
+        <Column>
+          <P>{t.second_section.p2}</P>
+          <P className="bigger">{t.second_section.p3}</P>
+        </Column>
+        <Table>
           <tbody>
             <tr>
-              <td
-                dangerouslySetInnerHTML={createMarkup(
-                  t.second_section.table2[0].p
-                )}
-                colSpan="2"
-              />
+              <Td colSpan="2">{t.second_section.table2[0].p}</Td>
             </tr>
             <tr>
               <td
@@ -205,19 +177,15 @@ export default function Salvajenada(props) {
               />
             </tr>
           </tbody>
-        </table>
-        <Quote quote={t.second_section.quote} marginBottom="0px" />
+        </Table>
+        <Quote quote={t.second_section.quote}/>
       </Second>
       <Third>
         <ThirdBack />
-        <Limited>
-          <h3
-            dangerouslySetInnerHTML={createMarkup(
-              "– " + t.third_section.subtitle
-            )}
-          />
-          <p dangerouslySetInnerHTML={createMarkup(t.third_section.p)} />
-        </Limited>
+        <Column>
+          <H3>{"– " + t.third_section.subtitle}</H3>
+          <P>{t.third_section.p}</P>
+        </Column>
 
         <Insight insight={t.third_section.insights.periodicity} number={1}>
           <PlaylistGrid>{playlistCovers()}</PlaylistGrid>
@@ -248,10 +216,10 @@ export default function Salvajenada(props) {
       </Third>
       <Fourth>
         <FourthBack />
-        <Limited>
-          <h2 dangerouslySetInnerHTML={createMarkup(t.fourth_section.title)} />
-          <p dangerouslySetInnerHTML={createMarkup(t.fourth_section.p)} />
-        </Limited>
+        <Column>
+          <H2>{t.fourth_section.title}</H2>
+          <P>{t.fourth_section.p}</P>
+        </Column>
         <StatGrid>
           <Stat stat={t.fourth_section.stats[0]} />
           <Stat stat={t.fourth_section.stats[1]} />
@@ -261,21 +229,21 @@ export default function Salvajenada(props) {
             <Wolf />
           </Stat>
         </StatGrid>
-        <Limited>
-          <p dangerouslySetInnerHTML={createMarkup(t.fourth_section.p2)} />
-        </Limited>
+        <Column>
+          <P>{t.fourth_section.p2}</P>
+        </Column>
       </Fourth>
       <Fifth>
         <FifthBack />
-        <Limited>
-          <h3 dangerouslySetInnerHTML={createMarkup(t.fifth_section.title)} />
-        </Limited>
+        <Column>
+          <H3>{t.fifth_section.title}</H3>
+        </Column>
         <FramesEmbed />
         <a href="https://www.instagram.com/salvajenada/">
           <Ig />
         </a>
       </Fifth>
-      <NextStudy n={n} link="ladanzadelasfieras"/>
+      <NextStudy n={n} link="ladanzadelasfieras" />
       <ContactFooter f={f} />
     </PageClipper>
   );
@@ -390,22 +358,14 @@ const PlaylistGrid = styled.div`
   }
 `;
 
-const CommonSection = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: auto;
-  flex: 0 0 auto;
-  table {
+const Table = styled.table`
     text-align: left;
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     padding: 2%;
     border-collapse: collapse;
     margin: 5%;
-  }
-  table,
+  &,
   th,
   td {
     border: 2px solid ${props => props.theme.colors.foreground_low};
@@ -430,9 +390,6 @@ const Fifth = styled(CommonSection)`
   background-color: ${salvajeBlue};
   color: ${props => props.theme.colors.background};
   padding-bottom: 10%;
-  h3 {
-    font-size: 4.5rem;
-  }
   svg {
     width: 50px;
     * {
@@ -453,6 +410,9 @@ const Fourth = styled(CommonSection)`
   margin-bottom: 10%;
   h2 {
     color: ${props => props.theme.colors.foreground};
+    b {
+      color: ${salvajeBlue};
+    }
   }
 `;
 
@@ -469,7 +429,7 @@ const Third = styled(CommonSection)`
 `;
 const ThirdBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/thirdBack.svg");
-  padding-bottom: 42%;
+  padding-bottom: 41%;
 `;
 
 const InterBack = styled.div`
@@ -487,10 +447,12 @@ const InterBack = styled.div`
 
 const Second = styled(CommonSection)`
   color: ${props => props.theme.colors.foreground_low};
-  margin-bottom: 7%;
   h2 {
     color: ${props => props.theme.colors.foreground};
     padding-top: 0;
+    b {
+      color: ${salvajeBlue};
+    }
   }
   table {
     color: ${props => props.theme.colors.foreground};
@@ -503,27 +465,9 @@ const SecondBack = styled(CommonTransition)`
   margin-bottom: 10%;
 `;
 
-const Limited = styled.div`
-  h2 {
-    padding: 15% 0 5% 0;
-    font-weight: 200;
-    max-width: 670px;
-    b {
-      color: ${salvajeBlue};
-      font-size: 4rem;
-    }
-  }
+const Column = styled(TextColumn)`
   h3 {
-    font-size: 4.5rem;
-    margin-bottom: 25px;
-  }
-  p {
-    max-width: 670px;
-    &.bigger {
-      font-size: 3.4rem;
-      text-align: center;
-      margin-top: 10%;
-    }
+    padding-top:0;
   }
 `;
 
@@ -552,26 +496,6 @@ const LogoWolf = styled.div`
   justify-content: center;
 `;
 
-const Video = styled.video`
-  width: 100%;
-  max-width: 1000px;
-`;
-
-const TagScroll = styled.div`
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 1.4rem;
-  white-space: nowrap;
-  margin: 5% 0 7% 0;
-  width: 100%;
-  h3 {
-    margin-right: 70px;
-    font-weight: 100;
-    font-size: 1.4rem;
-    display: inline;
-  }
-`;
-
 const Intro = styled(CommonSection)`
   background-color: ${salvajeBlue};
   color: ${props => props.theme.colors.background};
@@ -582,16 +506,12 @@ const Intro = styled(CommonSection)`
   }
 `;
 
-const Land = styled.section`
+const Land = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
   background-image: url("../static/assets/img/casestudies/salvajenada/landBack.svg");
   background-position: center bottom;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2px;
   svg {
     max-width: 800px;
     width: 70%;
