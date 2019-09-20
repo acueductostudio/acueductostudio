@@ -1,9 +1,9 @@
 import Head from "next/head";
 
 const Meta = props => {
-  console.log(!props.title ? "MISSING TITLE" : "");
-  console.log(!props.description ? "MISSING DESCRIPTION" : "");
-  console.log(!props.canonical ? "MISSING CANNONICAL" : "");
+  // console.log(!props.title ? "MISSING TITLE" : "");
+  // console.log(!props.description ? "MISSING DESCRIPTION" : "");
+  // console.log(!props.canonical ? "MISSING CANNONICAL" : "");
   return (
     <Head>
       <title>{props.title}</title>

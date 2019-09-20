@@ -84,7 +84,7 @@ const Pinned = styled.div`
     }
   }
   @media (max-width: 600px) {
-    padding-bottom:5%;
+    padding-bottom: 5%;
     p,
     h1,
     ${ScrollDown} {
@@ -96,13 +96,16 @@ const Pinned = styled.div`
   }
   a {
     color: ${props => props.theme.colors.foreground};
-    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 1)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
     text-decoration: none;
     background-repeat: repeat-x;
     background-size: 1px 1px;
     background-position: 0 calc(1rem + 7px);
     transition: 0.3s ease all;
     padding-bottom: 2px;
+    @media (max-width: 600px) {
+      padding-bottom: 3px;
+    }
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 1)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
     &:hover {
       background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="2" y2="2" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
       background-size: 2px 2px;

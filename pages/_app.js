@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import theme from "../styles/theme";
 import Cookies from "js-cookie/src/js.cookie";
 import en from "../static/locales/en.json";
+import { hotjar } from "react-hotjar";
 
 export default class MyApp extends App {
   constructor(props) {
@@ -17,16 +18,16 @@ export default class MyApp extends App {
     this.changeTheme = this.changeTheme.bind(this);
     this.consentToCookies = this.consentToCookies.bind(this);
     this.checkForConsent = this.checkForConsent.bind(this);
-
   }
 
   authenticate() {
     return new Promise(resolve => setTimeout(resolve, 1500)); //1500
   }
 
-//añadir el should component update para que no cambie a menos que cambie el locale
+  //añadir el should component update para que no cambie a menos que cambie el locale
 
   componentDidMount() {
+    // Load Animation
     this.authenticate().then(() => {
       const bordered = document.getElementById("bordered");
       const logo = document.getElementById("logo");
@@ -34,14 +35,15 @@ export default class MyApp extends App {
       if (bordered) {
         setTimeout(() => {
           // transition out
-          bordered.classList.add('hidden'); //hide after //TODO: clean bordered
+          bordered.classList.add("hidden"); //hide after //TODO: clean bordered
           logo.style.opacity = "0";
           bordered.style.transform = "scale(1)";
           bordered.style.borderWidth = "2px";
+
           setTimeout(() => {
             revealer.style.opacity = "0";
             revealer.style.pointerEvents = "none";
-            this.setState({ hasLoaded: true }, () => console.log(this.state.hasLoaded));
+            this.setState({ hasLoaded: true });
           }, 500);
 
           setTimeout(() => {
@@ -52,17 +54,18 @@ export default class MyApp extends App {
           }, 3000);
         }, 500);
       }
-    })
+    });
+    // init HotJar
+    hotjar.initialize(1494703, 6);
   }
 
-  checkForConsent(){
+  checkForConsent() {
     // Check if cookie message has been closed before
-    // TODO: add expiry date?
     var _C = Cookies.get("showCookieMessage");
     if (_C === undefined) {
       console.log("cookies: hasn't consented before");
       this.setState({ hasToConsent: true });
-    } else if (_C === 'false') {
+    } else if (_C === "false") {
       console.log("cookies: has consented before");
       this.setState({ hasToConsent: false });
     }
@@ -70,12 +73,12 @@ export default class MyApp extends App {
 
   consentToCookies() {
     console.log("Remove the cookie message");
-    Cookies.set('showCookieMessage', 'false');
+    Cookies.set("showCookieMessage", "false");
     this.setState({ hasToConsent: false });
   }
 
   changeTheme() {
-    console.log("change language")
+    console.log("change language");
     this.setState({
       isDarkMode: !this.state.isDarkMode
     });

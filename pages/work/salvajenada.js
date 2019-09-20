@@ -305,8 +305,9 @@ const StickyContainer = styled.div`
 `;
 
 const StatGrid = styled.div`
-  max-width: 900px;
+  max-width: 1050px;
   width: 100%;
+  padding: 0 5%;
   margin: 7% 0px;
   display: grid;
   grid-template-columns: 0.8fr 1fr 0.7fr;
@@ -321,6 +322,79 @@ const StatGrid = styled.div`
       margin-right: -10px;
       * {
         fill: ${salvajeBlue};
+      }
+    }
+  }
+  @media (max-width: 1100px) {
+    div {
+      padding-left: 6%;
+      &:nth-child(5) {
+        padding-left: 10%;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    div {
+      grid-column-end: span 2;
+      &:nth-child(5) {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+        padding: 3%;
+        flex-direction: row;
+        svg {
+          width: 30%;
+          height: auto;
+          padding: 0 2% 0 10%;
+        }
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    grid-gap: 2rem;
+  }
+  @media (max-width: 700px) {
+    grid-template-columns: 0.8fr auto auto auto;
+    grid-gap: 0;
+    div {
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        margin-top: -2px;
+      }
+      &:nth-child(2),
+      &:nth-child(4) {
+        margin-left: -2px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-top: 8%;
+    margin-left: 6%;
+    padding-left: 0px;
+    width: 95%;
+    div {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5) {
+        width: 120px;
+        min-width: 70%;
+        margin: 0 5% 5% 0;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        text-align: center;
+        padding: 2%;
+        align-items: center;
+        justify-content: center;
+      }
+      svg {
+        display: none;
       }
     }
   }
@@ -488,12 +562,18 @@ const CommonTransition = styled.div`
   background-position: center bottom;
   background-size: cover;
   height: 0;
+  margin: -1px 0;
 `;
 
 const FifthBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/fifthBack.svg");
-  padding-bottom: 27%;
-  margin: -1px 0;
+  padding-bottom: 28%;
+  @media (max-width: 1300px) {
+    padding-bottom: 40%;
+  }
+  @media (max-width: 600px) {
+    padding-bottom: 60%;
+  }
 `;
 
 const Fifth = styled(CommonSection)`
@@ -511,7 +591,15 @@ const Fifth = styled(CommonSection)`
 const FourthBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/fourthBack.svg");
   padding-bottom: 48%;
-  margin-top: -1px;
+  @media (max-width: 1300px) {
+    padding-bottom: 55%;
+  }
+  @media (max-width: 800px) {
+    padding-bottom: 65%;
+  }
+  @media (max-width: 500px) {
+    padding-bottom: 95%;
+  }
 `;
 
 const Fourth = styled(CommonSection)`
@@ -585,6 +673,15 @@ const SecondBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/secondBack.svg");
   padding-bottom: 46%;
   margin-bottom: 10%;
+  @media (max-width: 1300px) {
+    padding-bottom: 60%;
+  }
+  @media (max-width: 800px) {
+    padding-bottom: 60%;
+  }
+  @media (max-width: 500px) {
+    padding-bottom: 90%;
+  }
 `;
 
 const Column = styled(TextColumn)`

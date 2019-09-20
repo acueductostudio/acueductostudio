@@ -94,15 +94,17 @@ export default function Nav(props) {
 const NavLink = styled.a`
   font-size: 6rem;
   font-weight: 200;
-  transition: box-shadow 250ms ease;
+  transition: all 0.3s ease 0s;
   cursor: pointer;
-  box-shadow: ${props =>
+  background-image: ${props =>
     props.active
-      ? `${props.theme.colors.background} 0px 55px inset, ${props.theme.colors.foreground_lowest} 0px 57px inset;`
-      : `${props.theme.colors.background} 0px 55px inset, ${props.theme.colors.background} 0px 57px inset`};
+      ? `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0.5)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`
+      : `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`};
+  background-repeat: repeat-x;
+  background-size: 1px 2px;
+  background-position: 0 100%;
   &:hover {
-    box-shadow: ${props => props.theme.colors.background} 0px 55px inset,
-      ${props => props.theme.colors.accent} 0px 57px inset;
+    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
   }
 `;
 
@@ -168,10 +170,8 @@ const BottomNav = styled.div`
     }
   }
   @media (max-width: 600px) {
-    padding: 4% 8%;
-  }
-  @media (max-width: 450px) {
     display: grid;
+    padding: 4% 8%;
     grid-gap: 0;
     ${Policies} {
       grid-column: 1 / span 12;
@@ -193,7 +193,6 @@ const BottomNav = styled.div`
       grid-row: 2;
       flex-wrap: wrap;
       width: 100%;
-      margin-bottom: -14%;
       & > * :not(:last-child) {
         padding-bottom: 20px;
       }
@@ -210,6 +209,18 @@ const BottomNav = styled.div`
       margin-top: 3%;
       font-size: 1.2rem;
       opacity: 0.7;
+      position: absolute;
+      grid-row: last;
+      margin-top: 0;
+      margin-bottom: 5.5%;
+      bottom: 0;
+      align-self: flex-end;
+      justify-content: flex-end;
+    }
+  }
+  @media (max-width: 350px) {
+    ${Registered} {
+      margin-bottom: 6%;
     }
   }
 `;
@@ -279,7 +290,7 @@ const NavWrapper = styled.div`
   pointer-events: none;
   z-index: 9;
   width: calc(100% - 40px);
-  height: calc(100% - 42px);
+  height: calc(100% - 40px);
   background-color: ${props => props.theme.colors.background};
   position: fixed;
   left: 20px;
@@ -310,7 +321,7 @@ const NavWrapper = styled.div`
   @media (max-width: 800px) {
     padding-bottom: 15%;
   }
-  @media (max-width: 450){
+  @media (max-width: 450) {
     padding-bottom: 20%;
   }
 `;

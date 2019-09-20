@@ -10,31 +10,35 @@
 
 ## Jueves:
 
-- Responsive Salvajenada
-- cookies responsive
-- links desaparecen al reducir tipo (cookie, pero hay mas)
-- h3 en scroller está mal, hacer ul
+- Safari app grid breaks, copy to clipboarrd breaks
+- heads in firefox
 - pensar en un listmaker helper
+- h3 en scroller está mal, hacer ul
 
 - review clickable items on mobile (buttons)
-- match black introvideo fieras
-- manifesto responsive numero de belief choca con titulo
-- nav breaks on landscape
-- Resize en fondo se rompe -> cambiando de página?
-- Animation icons hovers
 - Links Hovers
+- manifesto responsive numero de belief choca con titulo
+
+- nav breaks on landscape
+
+---
+
+- match black introvideo fieras \*vale la pena?
 - ScrollBar
+- Animation icons hovers
 
-# Viernes:
+# Si se arma:
 
-- Analytics (google) / hotjar?
+- Font tests
 - Don't expose mail?
 - Lazy load images on case studies
+
+# Futuro
+
+- global será styled component? para minimizarse en prod
 - Problemón con scroll en mobile
 - Humans.txt
-
-# Next steps
-
+- Server no carga / y sin /
 - Head to take title and description from db
 - Language change
 - No tiene sentido importar el locale manualmente en cada página, probar ContextProvider

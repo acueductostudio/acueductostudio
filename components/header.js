@@ -67,11 +67,6 @@ const TopHeader = styled.header`
   }
   @media (max-width: 450px) {
     padding-top: 40px;
-    ${HeaderTitle} {
-      max-height: 13px;
-      overflow: hidden;
-      text-indent: -145px;
-    }
   }
 `;
 

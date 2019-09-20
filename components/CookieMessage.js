@@ -82,11 +82,13 @@ const Wrapper = styled.div`
   width: 80%;
   bottom: 5%;
   left: 50%;
-  transform: translateX(-50%) ${props=> props.clickable? "translateY(0%)": "translateY(5%)"};
+  transform: translateX(-50%)
+    ${props => (props.clickable ? "translateY(0%)" : "translateY(5%)")};
   font-weight: 100;
   position: fixed;
-  transition: opacity .4s ease, transform .5s ease;
-    p {
+  transition: opacity 0.4s ease, transform 0.5s ease;
+  z-index: 12;
+  p {
     font-size: 1.2rem;
     padding: 2.5% 4%;
   }
@@ -97,5 +99,14 @@ const Wrapper = styled.div`
     &:hover {
       border-bottom: 1.2px solid ${props => props.theme.colors.accent};
     }
+  }
+  @media (max-width: 600px) {
+    left: 0;
+    transform: none;
+    width: calc(100% - 36px);
+    margin-left: 18px;
+    margin-right: 18px;
+    bottom: 18px;
+    z-index: 100;
   }
 `;

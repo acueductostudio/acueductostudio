@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const PageClipper = ({ children, className, unPadded }) => (
-  <Wrapper id="Clipper" className={className} unPadded={unPadded}> 
+  <Wrapper id="Clipper" className={className} unPadded={unPadded}>
     {children}
   </Wrapper>
 );
@@ -10,7 +10,6 @@ export default PageClipper;
 
 const Wrapper = styled.main`
   display: flex;
-  -webkit-overflow-scrolling: touch;
   width: calc(100% - 40px);
   height: calc(100% - 40px);
   position: absolute;
@@ -24,15 +23,16 @@ const Wrapper = styled.main`
   overflow-x: hidden;
   overflow-y: scroll;
   @media (max-width: 1300px) {
-    padding-top: ${props => props.unPadded? "0" : "5%"};
+    padding-top: ${props => (props.unPadded ? "0" : "5%")};
   }
   @media (max-width: 700px) {
-    padding-top: ${props => props.unPadded? "0" : "10%"};
+    padding-top: ${props => (props.unPadded ? "0" : "10%")};
   }
   @media (max-width: 500px) {
-    padding-top: ${props => props.unPadded? "0" : "15%"};
+    padding-top: ${props => (props.unPadded ? "0" : "15%")};
+    -webkit-overflow-scrolling: touch;
   }
   @media (max-width: 400px) {
-    padding-top: ${props => props.unPadded? "0" : "20%"};
+    padding-top: ${props => (props.unPadded ? "0" : "20%")};
   }
 `;

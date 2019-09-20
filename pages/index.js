@@ -107,6 +107,7 @@ const ImageGalleryRemovable = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin: -1px 0;
   svg {
     width: 100%;
   }

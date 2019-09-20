@@ -5,6 +5,7 @@ import createMarkup from "../helpers/createMarkup";
 import TitleSectionGrid from "./TitleSectionGrid";
 import Logo from "./../static/assets/img/layout/logo.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { logEvent } from "../helpers/analytics";
 
 const ContactFooter = props => {
   let f = props.f;
@@ -14,7 +15,6 @@ const ContactFooter = props => {
 
   const setHovered = () => {
     setCopying(true);
-    console.log("should appear");
   };
 
   const setUnhovered = () => {
@@ -26,7 +26,7 @@ const ContactFooter = props => {
 
   const doSetCopied = () => {
     setCopied(true);
-    console.log("should copy");
+    logEvent("Click", "Copied email to clipboard");
   };
 
   return (
