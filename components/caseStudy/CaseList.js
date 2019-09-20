@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import createMarkup from "../../helpers/createMarkup";
 import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
@@ -7,12 +7,6 @@ import Link from "next/link";
 
 const SingleCase = props => {
   const video = useRef(null);
-
-  // useEffect(() => {
-  //   video.current.pause();
-  //   video.current.play(); //user denied permission
-  //   console.log("set play ");
-  // }, []);
 
   return (
     <Case>

@@ -10,19 +10,13 @@
 
 ## Jueves:
 
-- Safari app grid breaks, copy to clipboarrd breaks
-- heads in firefox
-- pensar en un listmaker helper
-- h3 en scroller está mal, hacer ul
-
 - review clickable items on mobile (buttons)
 - Links Hovers
 - manifesto responsive numero de belief choca con titulo
 
-- nav breaks on landscape
-
 ---
 
+- Alt text images
 - match black introvideo fieras \*vale la pena?
 - ScrollBar
 - Animation icons hovers
@@ -32,6 +26,7 @@
 - Font tests
 - Don't expose mail?
 - Lazy load images on case studies
+- heads in firefox
 
 # Futuro
 

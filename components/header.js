@@ -28,7 +28,7 @@ const HeaderTitle = styled.div`
   mix-blend-mode: exclusion;
   opacity: ${props => (props.hide ? 0 : 1)};
   transition: opacity 0.2s ease;
-  @media (max-height: 400px) and (min-width: 800px) {
+  @media (max-height: 450px) and (min-width: 800px) {
     top: 40px;
   }
 `;
@@ -66,7 +66,10 @@ const TopHeader = styled.header`
     }
   }
   @media (max-width: 450px) {
-    padding-top: 40px;
+    padding-top: 35px;
+  }
+  @media (max-height: 450px) {
+    padding-top: 35px;
   }
 `;
 

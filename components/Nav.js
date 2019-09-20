@@ -48,6 +48,9 @@ export default function Nav(props) {
     <NavWrapper open={props.isOpen}>
       {props.isOpen ? (
         <>
+          <NavLandscapeHider>
+            Please turn your phone around to see the menu
+          </NavLandscapeHider>
           <NavList onClick={props.closeNav} open={props.isOpen}>
             <ul>{navItems}</ul>
           </NavList>
@@ -91,8 +94,30 @@ export default function Nav(props) {
   );
 }
 
+const NavLandscapeHider = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: ${props => props.theme.colors.background};
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  font-size: 0;
+  transition: opacity 0.5s ease;
+  @media (max-height: 450px) {
+    pointer-events: auto;
+    opacity: 1;
+    font-size: inherit;
+    transition: none;
+  }
+`;
+
 const NavLink = styled.a`
-  font-size: 6rem;
   font-weight: 200;
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -147,6 +172,7 @@ const BottomNav = styled.div`
   width: 100%;
   color: ${props => props.theme.colors.foreground_low};
   font-weight: 100;
+  max-height: 120px;
   @media (max-width: 950px) {
     font-size: 1.5rem;
   }
@@ -245,20 +271,15 @@ const NavList = styled.nav`
       }
     }
   }
-  @media (max-height: 700px) {
-    ul li {
-      line-height: 130%;
-    }
-  }
   @media (max-width: 1200px) {
     grid-column-start: 4;
   }
   @media (max-width: 800px) {
+    grid-column-start: 3;
+  }
+  @media (max-width: 800px), (max-height: 660px) {
     ul li {
       font-size: 5rem;
-      a {
-        font-size: 5rem;
-      }
       span {
         font-size: 1.3rem;
         left: -35px;
@@ -269,17 +290,30 @@ const NavList = styled.nav`
   @media (max-width: 500px) {
     grid-column-start: 3;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 450px), (max-height: 600px) {
     ul li {
       font-size: 3.5rem;
       padding-bottom: 10px;
-      a {
-        font-size: 3.5rem;
-      }
       span {
         font-size: 1.1rem;
         bottom: 4px;
         left: -25px;
+      }
+    }
+  }
+
+  @media (max-height: 450px) {
+    grid-column-end: span 7;
+    padding-top: 10%;
+    ul {
+      column-count: 2;
+      li {
+        font-size: 3.5rem;
+        /* span {
+          font-size: 1.1rem;
+          bottom: 4px;
+          left: -25px;
+        } */
       }
     }
   }

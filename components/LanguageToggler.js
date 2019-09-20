@@ -29,6 +29,10 @@ const Toggler = styled.div`
   max-width: 1500px;
   opacity: ${props => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
+
+  /* TO CHANGE ON LANGUAGE */
+  opacity: 0;
+
   svg {
     width: 33px;
     pointer-events: auto;

@@ -107,10 +107,10 @@ const Grid = styled(TitleSectionGrid)`
 const CopyMessage = styled.span`
   position: absolute;
   opacity: ${props => (props.reveal ? 1 : 0)};
-  bottom: -38px;
+  bottom: -40px;
   left: 0;
   width: 100%;
-  padding: 4% 4% 3%;
+  padding: 10px 10px 5px;
   background-color: ${props => props.theme.colors.background};
   text-align: center;
   border-radius: 4px;

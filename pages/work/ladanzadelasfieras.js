@@ -288,6 +288,7 @@ const AppGrid = styled.div`
   svg {
     height: 100%;
     max-width: 100%;
+    max-height: 188px;
     width: auto;
     justify-self: center;
   }

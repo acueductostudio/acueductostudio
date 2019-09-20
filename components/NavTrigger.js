@@ -62,10 +62,7 @@ const TriggerContainer = styled.div`
   pointer-events: none;
   mix-blend-mode: exclusion;
   transition: opacity 0.3s ease 0.3s;
-  @media (max-height: 400px) and (min-width: 600px) {
-    padding-top: 40px;
-  }
-  @media (max-width: 600px) {
+  @media (max-width: 600px), (max-height: 450px) {
     top: unset;
     bottom: 0;
     padding-bottom: 40px;
@@ -73,7 +70,7 @@ const TriggerContainer = styled.div`
     mix-blend-mode: normal;
     ${Trigger} {
       background-color: ${props => props.theme.colors.accent};
-      box-shadow: 0px 3px 7px rgba(0,0,0,0.3);
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
       border-radius: 50% 50%;
       width: 60px;
       height: 60px;
