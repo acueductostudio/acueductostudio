@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
-import Head from "next/head";
 import styled from "styled-components";
 import TitleSection from "../components/TitleSection";
 import PageClipper from "../components/PageClipper";
@@ -11,6 +10,7 @@ import createMarkup from "../helpers/createMarkup";
 import Services from "../components/Services";
 import LogoComplete from "../static/assets/img/layout/logoComplete.svg";
 import Holed from "../static/assets/img/layout/holed.svg";
+import Head from "../components/Head";
 
 export default function Index(props) {
   let t = props.locale.home_page;
@@ -26,9 +26,13 @@ export default function Index(props) {
   return (
     <>
       <PageClipper unPadded>
-        <Head>
-          <title>Acueducto</title>
-        </Head>
+        <Head
+          title={"Acueducto, a strategic design & technology studio."}
+          description={
+            "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+          }
+          canonical={"https://acueducto.studio/"}
+        />
         <Land>
           <LandContainer>
             <h1 dangerouslySetInnerHTML={createMarkup(t.landing.heading)} />
@@ -166,8 +170,8 @@ const Land = styled.section`
     h1 {
       font-size: 5rem;
     }
-    h2{
-      font-size:1.8rem;
+    h2 {
+      font-size: 1.8rem;
     }
   }
   @media (max-width: 700px) {
@@ -177,17 +181,17 @@ const Land = styled.section`
   }
   @media (max-width: 520px) {
     h1 {
-      max-width:290px;
+      max-width: 290px;
     }
   }
   @media (max-width: 420px) {
     h1 {
       font-size: 3.5rem;
-      max-width:250px;
+      max-width: 250px;
     }
-    h2{
-      font-size:1.6rem;
-      max-width:240px;
+    h2 {
+      font-size: 1.6rem;
+      max-width: 240px;
     }
   }
 `;

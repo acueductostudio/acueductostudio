@@ -7,6 +7,9 @@ const TextColumn = styled.div`
     font-weight: 200;
     max-width: 670px;
     line-height: 110%;
+    &.topUnPadded {
+      padding: 1px 0 5% 0;
+    }
     b {
       font-size: 4rem;
     }
@@ -38,7 +41,7 @@ const TextColumn = styled.div`
     }
     h3 {
       font-size: 3.5rem;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
   }
   @media (max-width: 700px) {
@@ -49,9 +52,14 @@ const TextColumn = styled.div`
       }
     }
   }
-  @media (max-width:600px){
+  @media (max-width: 600px) {
     h3 {
       font-size: 2.5rem;
+    }
+  }
+  @media (max-width: 450px) {
+    h2 {
+      font-size: 3.3rem;
     }
   }
 `;

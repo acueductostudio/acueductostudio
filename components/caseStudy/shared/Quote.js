@@ -3,7 +3,11 @@ import createMarkup from "../../../helpers/createMarkup";
 import Mark from "../../../static/assets/img/layout/quoteMark.svg";
 
 const Quote = props => (
-  <QuoteWrapper passedColor={props.color} noMargin={props.noMargin}>
+  <QuoteWrapper
+    passedColor={props.color}
+    noMargin={props.noMargin}
+    specialMarginBottom={props.specialMarginBottom}
+  >
     <QuoteLimiter>
       <QuoteMark passedColor={props.color}>
         <Mark />
@@ -57,6 +61,7 @@ const QuoteWrapper = styled.div`
   width: 100%;
   font-size: 3.4rem;
   margin: ${props => (props.noMargin ? "0" : "6% 0 4% 0")};
+  ${props => (props.specialMarginBottom ? "margin-bottom: -10%;" : "")}
   padding: 0 5%;
   position: relative;
   display: flex;
@@ -69,21 +74,21 @@ const QuoteWrapper = styled.div`
   }
   @media (max-width: 1000px) {
     font-size: 2.5rem;
-    ${Author}{
-      font-size:2rem;
+    ${Author} {
+      font-size: 2rem;
     }
-    ${Label}{
-      margin-left:20px;
+    ${Label} {
+      margin-left: 20px;
     }
   }
   @media (max-width: 700px) {
     font-size: 2.2rem;
-    ${Author}{
-      font-size:1.8rem;
+    ${Author} {
+      font-size: 1.8rem;
     }
-    ${Label}{
-      margin-left:17px;
-      font-size:1rem;
+    ${Label} {
+      margin-left: 17px;
+      font-size: 1rem;
     }
   }
 `;

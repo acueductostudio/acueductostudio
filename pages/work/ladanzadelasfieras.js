@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Head from "next/head";
+import Head from "../../components/Head";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import PageClipper from "../../components/PageClipper";
@@ -57,9 +57,15 @@ function LaDanzaDeLasFieras(props) {
 
   return (
     <PageClipper unPadded>
-      <Head>
-        <title>Case Study | La Danza de las Fieras</title>
-      </Head>
+      <Head
+        title={
+          "From strategy to production | La Danza de las Fieras & Acueducto"
+        }
+        description={
+          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+        }
+        canonical={"https://acueducto.studio/ladanzadelasfieras"}
+      />
       <Fade>
         <LandSection>
           <LogoDanza />
@@ -274,13 +280,34 @@ const AppGrid = styled.div`
   grid-template-columns: 1fr 1fr;
   max-width: 670px;
   margin: 10% 0 20% 0;
+  width: 100%;
   img {
     max-width: 100%;
     width: 100%;
   }
   svg {
     height: 100%;
+    max-width: 100%;
+    width: auto;
     justify-self: center;
+  }
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+    img {
+      max-width: 400px;
+      align-self: center;
+      margin-bottom: 15%;
+    }
+  }
+  @media (max-width: 450px) {
+    padding: 0;
+    svg {
+      height: auto;
+      width: 30%;
+      align-self: center;
+    }
   }
 `;
 
@@ -575,6 +602,9 @@ const Section_Pre = styled(CommonSection)`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
   padding: 10% 0%;
+  @media (max-width: 1000px) {
+    padding-top: 20%;
+  }
 `;
 
 const Section_Sub = styled(CommonSection)`

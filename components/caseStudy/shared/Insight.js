@@ -58,11 +58,12 @@ const InsightWrapper = styled.div`
       }
       &:after {
         content: "–";
-        font-size: inherit;
-        color: ${props => (props.color ? props.color : "#019ee3")};
+        font-size: 3rem;
         display: block;
         width: 100%;
-        min-height: 20px;
+        min-height: 25px;
+        line-height: 60%;
+        color: ${props => (props.color ? props.color : "#019ee3")};
       }
     }
   }

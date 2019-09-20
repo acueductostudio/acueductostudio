@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../components/Head";
 import styled from "styled-components";
 import { useEffect } from "react";
 import TitleSection from "../components/TitleSection";
@@ -17,9 +17,13 @@ export default function Work(props) {
 
   return (
     <PageClipperPadded>
-      <Head>
-        <title>Acueducto | Work</title>
-      </Head>
+      <Head
+        title={"Our Work | Let's build amazing things together"}
+        description={
+          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+        }
+        canonical={"https://acueducto.studio/work"}
+      />
       <TitleSection
         title={t.intro.title}
         text={t.intro.p}

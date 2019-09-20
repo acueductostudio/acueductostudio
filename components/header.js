@@ -26,7 +26,7 @@ const HeaderTitle = styled.div`
   z-index: 2;
   top: 66px;
   mix-blend-mode: exclusion;
-  opacity: ${props => props.hide ? 0 : 1};
+  opacity: ${props => (props.hide ? 0 : 1)};
   transition: opacity 0.2s ease;
   @media (max-height: 400px) and (min-width: 800px) {
     top: 40px;
@@ -50,9 +50,9 @@ const TopHeader = styled.header`
   opacity: ${props => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
   @media (max-width: 800px) {
-    flex-direction:column;
+    flex-direction: column;
     ${HeaderTitle} {
-      margin-top:5px;
+      margin-top: 5px;
       transform: none;
       left: 0;
       position: relative;
@@ -65,11 +65,13 @@ const TopHeader = styled.header`
       font-size: 1.2rem;
     }
   }
-  @media (max-height: 400px) {
-    padding-top: 40px;
-  }
   @media (max-width: 450px) {
     padding-top: 40px;
+    ${HeaderTitle} {
+      max-height: 13px;
+      overflow: hidden;
+      text-indent: -145px;
+    }
   }
 `;
 

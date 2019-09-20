@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Head from "next/head";
+import Head from "../../components/Head";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import Fade from "react-reveal/Fade";
@@ -96,9 +96,13 @@ export default function Salvajenada(props) {
 
   return (
     <PageClipper unPadded>
-      <Head>
-        <title>Case Study | Salvajenada</title>
-      </Head>
+      <Head
+        title={"Where playlists meet strategy | Salvajenada & Acueducto"}
+        description={
+          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+        }
+        canonical={"https://acueducto.studio/work/salvajenada"}
+      />
       <Fade>
         <Land>
           <LogoSalvaje />
@@ -110,7 +114,7 @@ export default function Salvajenada(props) {
         <Column>
           <H2>{t.intro_section.title}</H2>
           <p>{t.intro_section.p}</p>
-          <Graphic>
+          <WolfDays>
             <LogoWolf>
               <Wolf />
             </LogoWolf>
@@ -119,7 +123,7 @@ export default function Salvajenada(props) {
               <br />
               {t.intro_section.graphicp}
             </p>
-          </Graphic>
+          </WolfDays>
           <p>{t.intro_section.p2}</p>
         </Column>
       </Intro>
@@ -140,45 +144,24 @@ export default function Salvajenada(props) {
           </Sticky>
         </StickyContainer>
         <Column>
-          <H2>{t.second_section.title}</H2>
+          <H2 className="topUnPadded">{t.second_section.title}</H2>
           <P>{t.second_section.p}</P>
         </Column>
-        <Table>
-          <tbody>
-            <tr>
-              <th>{t.second_section.table[0].label}</th>
-              <th>{t.second_section.table[1].label}</th>
-            </tr>
-            <tr>
-              <Td>{t.second_section.table[0].content}</Td>
-              <Td>{t.second_section.table[1].content}</Td>
-            </tr>
-          </tbody>
-        </Table>
+        <TableStrengths>
+          <p>{t.second_section.table[0].label}</p>
+          <P>{t.second_section.table[0].content}</P>
+          <p>{t.second_section.table[1].label}</p>
+          <P>{t.second_section.table[1].content}</P>
+        </TableStrengths>
         <Column>
           <P>{t.second_section.p2}</P>
-          <P className="bigger">{t.second_section.p3}</P>
         </Column>
-        <Table>
-          <tbody>
-            <tr>
-              <Td colSpan="2">{t.second_section.table2[0].p}</Td>
-            </tr>
-            <tr>
-              <td
-                dangerouslySetInnerHTML={createMarkup(
-                  t.second_section.table2[1].p
-                )}
-              />
-              <td
-                dangerouslySetInnerHTML={createMarkup(
-                  t.second_section.table2[2].p
-                )}
-              />
-            </tr>
-          </tbody>
-        </Table>
-        <Quote quote={t.second_section.quote}/>
+        <TableProposition>
+          <P colSpan="2">{t.second_section.table2[0].p}</P>
+          <P>{t.second_section.table2[1].p}</P>
+          <P>{t.second_section.table2[2].p}</P>
+        </TableProposition>
+        <Quote quote={t.second_section.quote} specialMarginBottom />
       </Second>
       <Third>
         <ThirdBack />
@@ -257,17 +240,17 @@ const Sticky = styled.div`
   span {
     padding: 13px 21px;
     border: ${props =>
-      props.theme.stroke + " solid " + props.theme.colors.foreground};
+      props.theme.stroke + " solid " + props.theme.colors.foreground_low};
     text-align: center;
   }
   div {
     padding: 13px 21px 11px 21px;
     border: ${props =>
-      props.theme.stroke + " solid " + props.theme.colors.foreground};
+      props.theme.stroke + " solid " + props.theme.colors.foreground_low};
     border-top: 0;
     display: flex;
     a {
-      height: 35px;
+      height: 40px;
       &:nth-child(1) {
         padding-right: 8px;
       }
@@ -277,6 +260,7 @@ const Sticky = styled.div`
     }
     svg {
       width: 100%;
+      height: 100%;
       * {
         fill: ${props => props.theme.colors.foreground};
       }
@@ -291,7 +275,33 @@ const StickyContainer = styled.div`
   top: 200px;
   display: flex;
   align-self: flex-end;
-  margin-right: 120px;
+  margin-right: 8%;
+  @media (max-width: 1400px) {
+    margin-right: 3%;
+    ${Sticky} {
+      width: 100px;
+      span {
+        font-size: 1.5rem;
+      }
+      div a {
+        height: 30px;
+      }
+      span,
+      div {
+        padding: 9px;
+      }
+    }
+  }
+  @media (max-width: 1300px) {
+    ${Sticky} {
+      svg a {
+        padding: 0%;
+      }
+    }
+  }
+  @media (max-width: 1250px) {
+    display: none;
+  }
 `;
 
 const StatGrid = styled.div`
@@ -323,9 +333,17 @@ const IberoGrid = styled.div`
   margin: 4% 0 2.5% 0;
   svg {
     max-width: 100px;
+    width: 100%;
   }
   img {
     max-width: 300px;
+    width: 100%;
+  }
+  @media (max-width: 550px) {
+    display: flex;
+    svg {
+      display: none;
+    }
   }
 `;
 
@@ -333,7 +351,7 @@ const ShoutGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: 90%;
-  width: auto;
+  width: 100%;
   align-items: center;
   justify-items: center;
   grid-gap: 5rem;
@@ -341,6 +359,31 @@ const ShoutGrid = styled.div`
   img,
   video {
     max-width: 250px;
+    width: 100%;
+  }
+  @media (max-width: 1100px) {
+    grid-gap: 1rem;
+  }
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+  @media (max-width: 600px) {
+    width: 110%;
+    margin-left: 10%;
+    max-width: unset;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-top: 8%;
+    img,
+    video {
+      max-width: 70%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
   }
 `;
 
@@ -348,29 +391,95 @@ const PlaylistGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 90%;
-  width: auto;
+  width: 100%;
   align-items: center;
   justify-items: center;
   grid-gap: 5rem;
   margin-top: 5rem;
   img {
     max-width: 300px;
+    width: 100%;
+  }
+  @media (max-width: 900px) {
+    max-width: 100%;
+  }
+  @media (max-width: 600px) {
+    width: 110%;
+    margin-left: 10%;
+    max-width: unset;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-top: 8%;
+    img {
+      max-width: 70%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
   }
 `;
 
-const Table = styled.table`
-    text-align: left;
-    width: 90%;
-    max-width: 800px;
-    padding: 2%;
-    border-collapse: collapse;
-    margin: 5%;
-  &,
-  th,
-  td {
-    border: 2px solid ${props => props.theme.colors.foreground_low};
+const Table = styled.div`
+  display: grid;
+  text-align: left;
+  width: 90%;
+  max-width: 800px;
+  margin: 5%;
+  box-shadow: 0 0 0 2px ${props => props.theme.colors.foreground_low};
+  p {
+    box-shadow: 0 0 0 1px ${props => props.theme.colors.foreground_low};
     padding: 25px;
     font-weight: 100;
+    color: ${props => props.theme.colors.foreground};
+  }
+  @media (max-width: 900px) {
+    margin: 10% 5%;
+  }
+  @media (max-width: 700px) {
+    p {
+      padding: 15px;
+    }
+  }
+  @media (max-width: 615px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const TableProposition = styled(Table)`
+  grid-template-columns: 1fr 0.7fr;
+  p {
+    &:nth-child(1) {
+      grid-column: 1 / span 2;
+    }
+  }
+`;
+const TableStrengths = styled(Table)`
+  grid-template-columns: 1fr 1fr;
+  p {
+    &:nth-child(3) {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 1;
+    }
+  }
+  @media (max-width: 500px) {
+    p {
+      &:nth-child(1),
+      &:nth-child(3) {
+        font-weight: 200;
+        color: ${props => props.theme.colors.foreground};
+      }
+      &:nth-child(2),
+      &:nth-child(4) {
+        color: ${props => props.theme.colors.foreground_low};
+      }
+    }
   }
 `;
 
@@ -384,6 +493,7 @@ const CommonTransition = styled.div`
 const FifthBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/fifthBack.svg");
   padding-bottom: 27%;
+  margin: -1px 0;
 `;
 
 const Fifth = styled(CommonSection)`
@@ -429,7 +539,15 @@ const Third = styled(CommonSection)`
 `;
 const ThirdBack = styled(CommonTransition)`
   background-image: url("../static/assets/img/casestudies/salvajenada/thirdBack.svg");
-  padding-bottom: 41%;
+  padding-bottom: 37%;
+  margin-bottom: -1px;
+  margin-top: -1px;
+  @media (max-width: 1100px) {
+    padding-bottom: 50%;
+  }
+  @media (max-width: 700px) {
+    padding-bottom: 70%;
+  }
 `;
 
 const InterBack = styled.div`
@@ -447,6 +565,10 @@ const InterBack = styled.div`
 
 const Second = styled(CommonSection)`
   color: ${props => props.theme.colors.foreground_low};
+  margin-bottom: 15%;
+  h1 {
+    padding-top: 0;
+  }
   h2 {
     color: ${props => props.theme.colors.foreground};
     padding-top: 0;
@@ -467,11 +589,19 @@ const SecondBack = styled(CommonTransition)`
 
 const Column = styled(TextColumn)`
   h3 {
-    padding-top:0;
+    padding-top: 0;
   }
 `;
 
-const Graphic = styled.div`
+const LogoWolf = styled.div`
+  width: 55%;
+  border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const WolfDays = styled.div`
   border: 2px solid black;
   display: flex;
   max-width: 390px;
@@ -486,14 +616,20 @@ const Graphic = styled.div`
     font-weight: 200;
     line-height: 100%;
   }
-`;
-
-const LogoWolf = styled.div`
-  width: 55%;
-  border-right: 2px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: 450px) {
+    b {
+      font-size: 6rem;
+    }
+    ${LogoWolf} {
+      width: 30%;
+      padding: 3% 5%;
+    }
+  }
+  @media (max-width: 350px) {
+    p {
+      font-size: 1.4rem;
+    }
+  }
 `;
 
 const Intro = styled(CommonSection)`

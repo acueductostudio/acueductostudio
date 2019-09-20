@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "../components/Head";
 import Link from "next/link";
 import Fade from "react-reveal/Fade";
 import PageClipper from "../components/PageClipper";
@@ -16,9 +16,13 @@ export default function Privacy(props) {
   }, []);
   return (
     <PageClipper>
-      <Head>
-        <title>Acueducto | Privacy Policy</title>
-      </Head>
+      <Head
+        title={"Privacy Policy | Acueducto"}
+        description={
+          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+        }
+        canonical={"https://acueducto.studio/privacy"}
+      />
       <SimplePinnedSection t={t}>
         <Fade>
           <h2>{b.subtitle1}</h2>

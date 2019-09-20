@@ -23,41 +23,41 @@ export default class MyDocument extends Document {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="../static/assets/favicon/apple-touch-icon.png"
+            href="/static/assets/favicon/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="../static/assets/favicon/favicon-32x32.png"
+            href="/static/assets/favicon/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="../static/assets/favicon/favicon-16x16.png"
+            href="/static/assets/favicon/favicon-16x16.png"
           />
-          <link
-            rel="manifest"
-            href="../static/assets/favicon/site.webmanifest"
-          />
+          <link rel="manifest" href="/static/site.webmanifest" />
           <link
             rel="mask-icon"
-            href="../static/assets/favicon/safari-pinned-tab.svg"
+            href="/static/assets/favicon/safari-pinned-tab.svg"
             color="#1740bf"
           />
-          <link
-            rel="shortcut icon"
-            href="../static/assets/favicon/favicon.ico"
-          />
+          <link rel="shortcut icon" href="/static/assets/favicon/favicon.ico" />
           <meta name="msapplication-TileColor" content="#1740bf" />
           <meta
             name="msapplication-config"
-            content="../static/assets/favicon/browserconfig.xml"
+            content="/static/assets/favicon/browserconfig.xml"
           />
-          <meta name="apple-mobile-web-app-capable" content="yes"/>
-          <meta name="theme-color" content="#ffffff" />
-          <link rel="stylesheet" href="https://use.typekit.net/zdy4yjp.css"></link>
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="theme-color" content="#F4F4F4" />
+          <meta name="geo.region" content="CDMX" />
+          <meta name="geo.placename" content="Acueducto" />
+          <meta
+            name="keywords"
+            content="design, studio, acueducto, cdmx, innovation, strategic design, experience design, product design, brand design, social impact, design strategy, technology"
+          />
+          {/* <link rel="stylesheet" href="https://use.typekit.net/zdy4yjp.css"></link> */}
           <GlobalStyles />
           {this.props.styleTags}
         </Head>

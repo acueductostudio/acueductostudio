@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
-import Head from "next/head";
+import Head from "../components/Head";
 import TitleSection from "../components/TitleSection";
 import PageClipper from "../components/PageClipper";
 import createMarkup from "../helpers/createMarkup";
@@ -26,9 +26,13 @@ export default function About(props) {
 
   return (
     <PageClipper>
-      <Head>
-        <title>Acueducto | About</title>
-      </Head>
+      <Head
+        title={"About Acueducto"}
+        description={
+          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+        }
+        canonical={"https://acueducto.studio/about"}
+      />
       <PinnedSection t={t}>
         <Person>
           <HeadSketch />

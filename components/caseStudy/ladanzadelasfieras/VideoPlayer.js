@@ -25,7 +25,11 @@ function VideoPlayer(props) {
   return (
     <VideoWrapper ratio={props.ratio}>
       <Clicker onClick={() => handlePlay()} hideSvg={isPlaying}>
-        {isPlaying ? <Button>Pause</Button> : <ButtonPlay>Play</ButtonPlay>}
+        {isPlaying ? (
+          <ButtonPause>Pause</ButtonPause>
+        ) : (
+          <ButtonPlay>Play</ButtonPlay>
+        )}
       </Clicker>
       <Fader hide={isPlaying} />
       <OverStill
@@ -111,7 +115,11 @@ const Button = styled.div`
 `;
 
 const ButtonPlay = styled(Button)`
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
+`;
+
+const ButtonPause = styled(Button)`
+  transition: opacity 0.3s ease 0.3;
 `;
 
 const Clicker = styled.div`
@@ -143,6 +151,9 @@ const Clicker = styled.div`
         div {
           animation: ${hidePause} 1.2s;
           animation-fill-mode: forwards;
+          @media (max-width: 450px) {
+            animation: none;
+          }
         }
       }
     `}

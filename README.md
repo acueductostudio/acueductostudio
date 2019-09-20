@@ -10,17 +10,17 @@
 
 ## Jueves:
 
-- Responsive case studies
-- Head
-- review clickable items on mobile (buttons)
-- play pausa en el video lazanza mejor que no se vea la pausa
-- match black introvideo fieras
+- Responsive Salvajenada
 - cookies responsive
 - links desaparecen al reducir tipo (cookie, pero hay mas)
+- h3 en scroller está mal, hacer ul
+- pensar en un listmaker helper
+
+- review clickable items on mobile (buttons)
+- match black introvideo fieras
 - manifesto responsive numero de belief choca con titulo
 - nav breaks on landscape
 - Resize en fondo se rompe -> cambiando de página?
-- Pointer events clipboard mobile
 - Animation icons hovers
 - Links Hovers
 - ScrollBar
@@ -31,9 +31,11 @@
 - Don't expose mail?
 - Lazy load images on case studies
 - Problemón con scroll en mobile
+- Humans.txt
 
 # Next steps
 
+- Head to take title and description from db
 - Language change
 - No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
 - Redesing Potfolio component

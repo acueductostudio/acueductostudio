@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
 import createMarkup from "../helpers/createMarkup";
-import TitleSectionGrid from "./TitleSectionGrid"; 
+import TitleSectionGrid from "./TitleSectionGrid";
 import Logo from "./../static/assets/img/layout/logo.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
@@ -14,6 +14,7 @@ const ContactFooter = props => {
 
   const setHovered = () => {
     setCopying(true);
+    console.log("should appear");
   };
 
   const setUnhovered = () => {
@@ -25,6 +26,7 @@ const ContactFooter = props => {
 
   const doSetCopied = () => {
     setCopied(true);
+    console.log("should copy");
   };
 
   return (
@@ -37,6 +39,7 @@ const ContactFooter = props => {
         onCopy={doSetCopied}
         onMouseEnter={setHovered}
         onMouseLeave={setUnhovered}
+        onClick={setHovered}
       >
         <p>
           {f.p}
@@ -64,6 +67,7 @@ const Grid = styled(TitleSectionGrid)`
     color: ${props => props.theme.colors.foreground};
   }
   p {
+    z-index: 8;
     &:hover {
       b {
         border-bottom: ${props =>
@@ -83,6 +87,21 @@ const Grid = styled(TitleSectionGrid)`
         props.theme.stroke + " solid " + props.theme.colors.foreground};
     }
   }
+  @media (max-width: 600px) {
+    p {
+      max-width: 360px;
+      padding-bottom: 10%;
+    }
+  }
+  @media (max-width: 450px) {
+    p {
+      max-width: 360px;
+      padding-bottom: 20%;
+      b span {
+        bottom: -45px;
+      }
+    }
+  }
 `;
 
 const CopyMessage = styled.span`
@@ -96,8 +115,7 @@ const CopyMessage = styled.span`
   text-align: center;
   border-radius: 4px;
   font-size: 1.5rem;
-  transition: ${props =>
-    props.reveal ? "0.3s ease all 0s" : "0.3s ease all"};
+  transition: ${props => (props.reveal ? "0.3s ease all 0s" : "0.3s ease all")};
   &:before {
     content: " ";
     position: absolute;

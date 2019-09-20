@@ -16,16 +16,21 @@ export default function Cookies(props) {
   }, []);
   return (
     <PageClipper>
-      <Head>
-        <title>Acueducto | Cookie Policy</title>
-      </Head>
+      <Head
+        title={"Cookie Policy | Acueducto"}
+        description={
+          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+        }
+        canonical={"https://acueducto.studio/cookies"}
+      />
       <SimplePinnedSection t={t}>
         <Fade>
           <p>
             {b.p0}
             <Link href="/privacy">
               <a>{b.link0}</a>
-            </Link>.
+            </Link>
+            .
           </p>
           <h2>{b.title1}</h2>
           <p>{b.p1}</p>

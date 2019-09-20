@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Head from "next/head";
+import Head from "../components/Head";
 import { useEffect } from "react";
 import PageClipper from "../components/PageClipper";
 import ContactFooter from "../components/ContactFooter";
@@ -26,9 +26,13 @@ export default function Manifesto(props) {
   });
   return (
     <PageClipper>
-      <Head>
-        <title>Acueducto | Manifesto</title>
-      </Head>
+      <Head
+        title={"Manifesto | What makes us better"}
+        description={
+          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
+        }
+        canonical={"https://acueducto.studio/manifesto"}
+      />
       <PinnedSection t={t}>
         <ol>{beliefs}</ol>
       </PinnedSection>

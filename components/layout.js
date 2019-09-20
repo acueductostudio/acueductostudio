@@ -17,7 +17,6 @@ const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
 
 export default ({
   children,
-  title = "NO TITLE",
   changeTheme,
   checkForConsent,
   consentToCookies,
@@ -44,12 +43,10 @@ export default ({
     }
   }, [router.route]);
 
-
   //not working
   const scrollPage = () => {
     listenScroll
-      ? (
-        (document.getElementById("Wrapper").scrollTop = 300),
+      ? ((document.getElementById("Wrapper").scrollTop = 300),
         window.scrollTo(0, 100),
         console.log(window.scrollTop),
         setListenScroll(false),
@@ -86,9 +83,6 @@ export default ({
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
       <PageWrapper
         id="Wrapper"
         onScroll={showArrow || showConsentMessage ? removeArrow : null}
@@ -134,7 +128,7 @@ export default ({
 const PageWrapper = styled.div`
   width: 100%;
   height: 100%;
-  max-height:100vh;
+  max-height: 100vh;
   position: fixed;
   flex-direction: column;
   overflow: hidden;
