@@ -4,6 +4,7 @@ import Fade from "react-reveal/Fade";
 import createMarkup from "../helpers/createMarkup";
 import TitleSectionGrid from "./TitleSectionGrid";
 import Logo from "./../static/assets/img/layout/logo.svg";
+import Mail from "./../static/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { logEvent } from "../helpers/analytics";
 
@@ -44,7 +45,7 @@ const ContactFooter = props => {
         <p>
           {f.p}
           <b>
-            hola@acueducto.studio
+            <MailPlaceholder />
             <CopyMessage reveal={copying}>
               {copied ? f.copied : f.copy}
             </CopyMessage>
@@ -59,6 +60,17 @@ const ContactFooter = props => {
 };
 
 export default React.memo(ContactFooter);
+
+const MailPlaceholder = styled(Mail)`
+  height: 100%;
+  max-height: 18px;
+  bottom: 0;
+  position: relative;
+  margin-bottom: -4px;
+  @media (max-width: 600px) {
+    max-height: 15px;
+  }
+`;
 
 const Grid = styled(TitleSectionGrid)`
   background-color: ${props => props.theme.colors.accent};
@@ -98,7 +110,7 @@ const Grid = styled(TitleSectionGrid)`
       max-width: 360px;
       padding-bottom: 20%;
       b span {
-        bottom: -45px;
+        bottom: -40px;
       }
     }
   }

@@ -30,9 +30,11 @@ const Wrapper = styled.main`
   }
   @media (max-width: 500px) {
     padding-top: ${props => (props.unPadded ? "0" : "15%")};
-    -webkit-overflow-scrolling: touch;
   }
   @media (max-width: 400px) {
     padding-top: ${props => (props.unPadded ? "0" : "20%")};
+  }
+  @media (max-width: 500px), (max-height: 450px) {
+    -webkit-overflow-scrolling: touch;
   }
 `;

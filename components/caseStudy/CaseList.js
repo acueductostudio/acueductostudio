@@ -142,6 +142,16 @@ const Info = styled.div`
       font-size: 1.4rem;
     }
   }
+  @media (max-width: 600px) {
+    svg {
+      border: 2px solid ${props => props.theme.colors.foreground_low};
+      padding: 10px;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      bottom: -10px;
+    }
+  }
   @media (max-width: 500px) {
     h4 {
       font-size: 2.5rem;

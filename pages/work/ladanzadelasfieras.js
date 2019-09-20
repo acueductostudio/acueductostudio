@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Head from "../../components/Head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import PageClipper from "../../components/PageClipper";
 import Fade from "react-reveal/Fade";
@@ -38,12 +38,14 @@ const ThePlayer = dynamic(
 );
 
 function LaDanzaDeLasFieras(props) {
+  const [loadAssets, setloadAssets] = useState(false);
   let t = props.locale.casestudies.studies.ladanzadelasfieras;
   let f = props.locale.contactfooter;
   let n = props.locale.next_study;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
+    setloadAssets(true);
   }, []);
 
   let initialStats = t.intro_section.stats.map(function(stat, index) {
@@ -90,14 +92,31 @@ function LaDanzaDeLasFieras(props) {
           <H2>{t.second_section.title}</H2>
           <P>{t.second_section.p}</P>
         </TextColumn>
-        <PosterGrid>
-          <PosterLine />
-          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg" />
-          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg" />
-          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg" />
-          <img src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg" />
-          <img src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.png" />
-        </PosterGrid>
+        {loadAssets ? (
+          <PosterGrid>
+            <PosterLine />
+            <img
+              src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"
+              alt="First references for branding"
+            />
+            <img
+              src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
+              alt="First references for branding"
+            />
+            <img
+              src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
+              alt="First references for branding"
+            />
+            <img
+              src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
+              alt="Original sketch of poster design"
+            />
+            <img
+              src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
+              alt="Final poster design with awards"
+            />
+          </PosterGrid>
+        ) : null}
       </SecondSection>
       <Section_Pre>
         <TextColumn>
@@ -128,7 +147,12 @@ function LaDanzaDeLasFieras(props) {
       </Section_Pre>
       <Section_Sub>
         <TransitionWrapper>
-          <img src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg" />
+          {loadAssets ? (
+            <img
+              src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
+              alt="Printed assets for film attendants"
+            />
+          ) : null}
         </TransitionWrapper>
         <TextColumn>
           <H3>{"– " + t.second_section.subtitle}</H3>
@@ -154,7 +178,12 @@ function LaDanzaDeLasFieras(props) {
           number={1}
           color={fierasRed}
         >
-          <Faces src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg" />
+          {loadAssets ? (
+            <Faces
+              src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
+              alt="Contact cards for directors and producers"
+            />
+          ) : null}
         </Insight>
         <Quote
           quote={t.third_section.insights.portfolio.quote}
@@ -166,7 +195,12 @@ function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.press}
           number={2}
         >
-          <MacPress src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg" />
+          {loadAssets ? (
+            <MacPress
+              src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
+              alt="A whole section for the press"
+            />
+          ) : null}
         </Insight>
         <Quote
           quote={t.third_section.insights.press.quote}
@@ -178,13 +212,21 @@ function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.availability}
           number={3}
         >
-          <MacContact src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg" />
+          {loadAssets ? (
+            <MacContact
+              src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
+              alt="A contact component on every page"
+            />
+          ) : null}
         </Insight>
         <TextColumn>
           <H3>{"– " + t.third_section.subtitle2}</H3>
           <P>{t.third_section.p2}</P>
           <AppGrid>
-            <img src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png" />
+            <img
+              src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png"
+              alt="A Progressive Web App"
+            />
             <AppSvg />
           </AppGrid>
         </TextColumn>
@@ -199,17 +241,19 @@ function LaDanzaDeLasFieras(props) {
             <p>{t.fourth_section.stat}</p>
           </Stat>
           <P>{t.fourth_section.p2}</P>
-          <video
-            autoPlay
-            playsInline
-            muted
-            loop
-            poster={
-              "/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
-            }
-          >
-            <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
-          </video>
+          {loadAssets ? (
+            <video
+              autoPlay
+              playsInline
+              muted
+              loop
+              poster={
+                "/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
+              }
+            >
+              <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
+            </video>
+          ) : null}
         </TextColumn>
       </Fourth>
       <Fifth>
@@ -222,7 +266,12 @@ function LaDanzaDeLasFieras(props) {
           color={props => props.theme.colors.background}
         />
         <TextColumn>
-          <img src="../static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg" />
+          {loadAssets ? (
+            <img
+              src="../static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+              alt="Festival awards"
+            />
+          ) : null}
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
       </Fifth>

@@ -10,22 +10,14 @@
 
 ## Jueves:
 
-- review clickable items on mobile (buttons)
-- Links Hovers
-- manifesto responsive numero de belief choca con titulo
-
----
-
-- Alt text images
-- match black introvideo fieras \*vale la pena?
+- está de la verga el mensaje del nav y no hace scroll en pinned sections
 - ScrollBar
 - Animation icons hovers
 
 # Si se arma:
 
 - Font tests
-- Don't expose mail?
-- Lazy load images on case studies
+- match black introvideo fieras \*vale la pena?
 - heads in firefox
 
 # Futuro
@@ -34,7 +26,7 @@
 - Problemón con scroll en mobile
 - Humans.txt
 - Server no carga / y sin /
-- Head to take title and description from db
+- Head to take title and description from db / alt tags?
 - Language change
 - No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
 - Redesing Potfolio component

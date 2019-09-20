@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Head from "../../components/Head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Fade from "react-reveal/Fade";
 import PageClipper from "../../components/PageClipper";
@@ -14,7 +14,6 @@ import Ibero from "../../static/assets/img/casestudies/salvajenada/ibero.svg";
 import Wolf from "../../static/assets/img/casestudies/salvajenada/wolf.svg";
 import Apple from "../../static/assets/img/casestudies/salvajenada/apple.svg";
 import Spotify from "../../static/assets/img/casestudies/salvajenada/spotify.svg";
-import createMarkup from "../../helpers/createMarkup";
 import { H2, H3, P, Td } from "../../components/caseStudy/shared/Dangerously";
 import IntroVideo from "../../components/caseStudy/shared/IntroVideo";
 import Marquee from "../../components/caseStudy/shared/Marquee";
@@ -32,12 +31,14 @@ const FramesEmbed = dynamic(
 const salvajeBlue = "rgb(60, 179, 224)";
 
 export default function Salvajenada(props) {
+  const [loadAssets, setloadAssets] = useState(false);
   let t = props.locale.casestudies.studies.salvajenada;
   let f = props.locale.contactfooter;
   let n = props.locale.next_study;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
+    setloadAssets(true);
   }, []);
 
   const playlistCovers = () => {
@@ -171,13 +172,15 @@ export default function Salvajenada(props) {
         </Column>
 
         <Insight insight={t.third_section.insights.periodicity} number={1}>
-          <PlaylistGrid>{playlistCovers()}</PlaylistGrid>
+          <PlaylistGrid>{loadAssets ? playlistCovers() : null}</PlaylistGrid>
         </Insight>
         <Insight insight={t.third_section.insights.meaningfulness} number={2}>
-          <PlaylistGrid>{playlistDescriptions()}</PlaylistGrid>
+          <PlaylistGrid>
+            {loadAssets ? playlistDescriptions() : null}
+          </PlaylistGrid>
         </Insight>
         <Insight insight={t.third_section.insights.spreadability} number={3}>
-          <ShoutGrid>{artistShout()}</ShoutGrid>
+          <ShoutGrid>{loadAssets ? artistShout() : null}</ShoutGrid>
         </Insight>
         <Insight
           insight={t.third_section.insights.multimedia_development}
@@ -186,10 +189,12 @@ export default function Salvajenada(props) {
         >
           <IberoGrid>
             <Ibero />
-            <img
-              src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
-              alt="salvajenada en Ibero 90.9"
-            />
+            {loadAssets ? (
+              <img
+                src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
+                alt="salvajenada en Ibero 90.9"
+              />
+            ) : null}
           </IberoGrid>
         </Insight>
         <Quote
@@ -221,7 +226,7 @@ export default function Salvajenada(props) {
         <Column>
           <H3>{t.fifth_section.title}</H3>
         </Column>
-        <FramesEmbed />
+        {loadAssets ? <FramesEmbed /> : null}
         <a href="https://www.instagram.com/salvajenada/">
           <Ig />
         </a>

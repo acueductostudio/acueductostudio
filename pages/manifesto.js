@@ -48,13 +48,13 @@ const Belief = styled.li`
   margin-bottom: 25%;
   span {
     color: ${props => props.theme.colors.accent};
-    font-size: 1.5rem;
-    position: absolute;
-    left: -40px;
-    top: 12px;
+    font-weight: 200;
+    left: -3px;
+    font-size: 5rem;
+    position: relative;
   }
   h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
     font-weight: 200;
   }
@@ -62,30 +62,22 @@ const Belief = styled.li`
     h3 {
       font-size: 2.5rem;
     }
-    span {
-      top: 8px;
-    }
   }
   @media (max-width: 1100px) {
     margin-bottom: 15%;
   }
   @media (max-width: 600px) {
-    margin-left: 30px;
-    margin-bottom: 8%;
+    margin-bottom: 12%;
     span {
-      left: -30px;
-      top: 5px;
+      font-size: 4rem;
     }
     h3 {
       font-size: 2.2rem;
     }
   }
   @media (max-width: 400px) {
-    margin-left: 25px;
     span {
-      top: 5px;
-      font-size: 1.2rem;
-      left: -25px;
+      font-size: 3.7rem;
     }
     h3 {
       font-size: 2rem;

@@ -8,16 +8,20 @@ const NextStudy = ({ link, n }) => {
     <Link href={link}>
       <Wrapper>
         <LogoContainer>
-          <Logo
-            style={{
-              backgroundImage: `url(/static/assets/img/casestudies/${link}/portfolio_logo.svg)`
-            }}
-          />
+          <Fade>
+            <Logo
+              style={{
+                backgroundImage: `url(/static/assets/img/casestudies/${link}/portfolio_logo.svg)`
+              }}
+            />
+          </Fade>
         </LogoContainer>
-        <p>{n.p}</p>
-        <ArrowContainer>
-          <Arrow />
-        </ArrowContainer>
+        <Fade>
+          <p>{n.p}</p>
+          <ArrowContainer>
+            <Arrow />
+          </ArrowContainer>
+        </Fade>
       </Wrapper>
     </Link>
   );
@@ -26,7 +30,7 @@ const NextStudy = ({ link, n }) => {
 export default React.memo(NextStudy);
 
 const ArrowContainer = styled.div`
-  margin-top: 1%;
+  margin-top: 10%;
 `;
 
 const LogoContainer = styled.div`
@@ -73,6 +77,19 @@ const Wrapper = styled.div`
   }
   @media (max-width: 900px) {
     padding-top: 15%;
+  }
+  @media (max-width: 600px) {
+    &:hover svg * {
+      stroke: ${props => props.theme.colors.foreground};
+    }
+    svg {
+      border: 2px solid ${props => props.theme.colors.foreground_low};
+      padding: 10px;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      bottom: -10px;
+    }
   }
   @media (max-width: 450px) {
     ${Logo} {

@@ -27,6 +27,10 @@ const Meta = props => {
           content="https://acueducto.studio/static/assets/img/og/og_main.png"
         />
       )}
+      <meta
+        property="og:image:alt"
+        content="Acueducto is a strategic design and technology studio"
+      />
       {props.canonical && <link rel="canonical" href={`${props.canonical}`} />}
     </Head>
   );
