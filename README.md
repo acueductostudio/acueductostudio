@@ -8,17 +8,21 @@
 
 - Fotos ibero
 
-## Jueves:
+## Responsive:
 
 - está de la verga el mensaje del nav y no hace scroll en pinned sections
-- ScrollBar
-- Animation icons hovers
+- heads in firefox
 
-# Si se arma:
+## Optimizar:
+
+- Importar fondos de salvajenada
+
+## Detalles:
 
 - Font tests
+- ScrollBar
+- Animation icons hovers
 - match black introvideo fieras \*vale la pena?
-- heads in firefox
 
 # Futuro
 

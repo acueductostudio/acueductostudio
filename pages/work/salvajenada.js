@@ -191,7 +191,7 @@ export default function Salvajenada(props) {
             <Ibero />
             {loadAssets ? (
               <img
-                src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
+                src="/static/assets/img/casestudies/salvajenada/ibero.png"
                 alt="salvajenada en Ibero 90.9"
               />
             ) : null}
@@ -406,23 +406,15 @@ const StatGrid = styled.div`
 `;
 
 const IberoGrid = styled.div`
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 4% 0 2.5% 0;
-  svg {
-    max-width: 100px;
-    width: 100%;
-  }
+  margin: 5rem 0 2.5% 0;
   img {
-    max-width: 300px;
+    max-width: 850px;
     width: 100%;
   }
-  @media (max-width: 550px) {
-    display: flex;
-    svg {
-      display: none;
-    }
+  @media (max-width: 600px) {
+    margin-top: 8%;
   }
 `;
 
