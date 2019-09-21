@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal";
+import Fade from "react-reveal/Fade";
 import shade from "./shade";
 import P5Wrapper from "react-p5-wrapper";
 
@@ -7,7 +7,7 @@ export default function HomeSketch() {
   return (
     <SketchContainer>
       <Fade>
-      <P5Wrapper sketch={shade} id="Frame"/>
+        <P5Wrapper sketch={shade} id="Frame" />
       </Fade>
     </SketchContainer>
   );

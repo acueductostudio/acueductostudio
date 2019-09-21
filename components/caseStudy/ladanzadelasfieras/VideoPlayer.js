@@ -1,5 +1,5 @@
 import { useState } from "react";
-import YouTubePlayer from "react-player";
+import YouTubePlayer from "react-player/lib/players/YouTube";
 import styled, { css, keyframes } from "styled-components";
 
 const fierasRed = "rgb(201,32,26)";

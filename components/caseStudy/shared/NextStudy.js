@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal";
+import Fade from "react-reveal/Fade";
 import Link from "next/link";
 import Arrow from "./../../Arrow";
 
