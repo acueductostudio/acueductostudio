@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import createMarkup from "../../helpers/createMarkup";
 import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
@@ -17,18 +17,32 @@ const SingleCase = props => {
               <Logo
                 src={`static/assets/img/casestudies${props.link}/portfolio_logo.svg`}
               />
-              <video
-                ref={video}
-                autoPlay
-                playsInline
-                muted
-                loop
-                poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
-              >
-                <source
-                  src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
-                />
-              </video>
+              {props.noPlay ? (
+                <video
+                  ref={video}
+                  playsInline
+                  muted
+                  loop
+                  poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+                >
+                  <source
+                    src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
+                  />
+                </video>
+              ) : (
+                <video
+                  ref={video}
+                  playsInline
+                  autoPlay
+                  muted
+                  loop
+                  poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+                >
+                  <source
+                    src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
+                  />
+                </video>
+              )}
             </VidContainer>
           </Fade>
         </a>
@@ -70,6 +84,7 @@ const CaseList = props => {
           link={study.link}
           video={study.video}
           logo={study.logo}
+          noPlay={props.noPlay}
         />
       );
     }

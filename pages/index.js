@@ -78,7 +78,7 @@ export default function Index(props) {
         </ImageGalleryRemovable>
         <Divider />
         <Process p={p} />
-        <CaseStudiesPreview c={c} cpage={t.studies} />
+        <CaseStudiesPreview c={c} cpage={t.studies} noPlay />
         <Services s={s} />
         <ContactFooter f={f} />
       </PageClipper>

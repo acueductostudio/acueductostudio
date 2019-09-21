@@ -191,7 +191,7 @@ export default function Salvajenada(props) {
             <Ibero />
             {loadAssets ? (
               <img
-                src="/static/assets/img/casestudies/salvajenada/ibero.png"
+                src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
                 alt="salvajenada en Ibero 90.9"
               />
             ) : null}

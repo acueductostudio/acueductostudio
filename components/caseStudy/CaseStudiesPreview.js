@@ -7,8 +7,12 @@ const CaseStudiesPreview = props => {
   let cpage = props.cpage;
   return (
     <CaseStudiesPreviewWrapper>
-      <TitleSection title={cpage? cpage.title : c.intro.title} text={cpage? cpage.p : c.intro.p} borderTop/>
-      <CaseList c={c.studies} limit={2}/>
+      <TitleSection
+        title={cpage ? cpage.title : c.intro.title}
+        text={cpage ? cpage.p : c.intro.p}
+        borderTop
+      />
+      <CaseList c={c.studies} limit={2} noPlay={props.noPlay} />
     </CaseStudiesPreviewWrapper>
   );
 };
