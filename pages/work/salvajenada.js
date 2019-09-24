@@ -172,15 +172,13 @@ export default function Salvajenada(props) {
         </Column>
 
         <Insight insight={t.third_section.insights.periodicity} number={1}>
-          <PlaylistGrid>{loadAssets ? playlistCovers() : null}</PlaylistGrid>
+          <PlaylistGrid>{loadAssets && playlistCovers()}</PlaylistGrid>
         </Insight>
         <Insight insight={t.third_section.insights.meaningfulness} number={2}>
-          <PlaylistGrid>
-            {loadAssets ? playlistDescriptions() : null}
-          </PlaylistGrid>
+          <PlaylistGrid>{loadAssets && playlistDescriptions()}</PlaylistGrid>
         </Insight>
         <Insight insight={t.third_section.insights.spreadability} number={3}>
-          <ShoutGrid>{loadAssets ? artistShout() : null}</ShoutGrid>
+          <ShoutGrid>{loadAssets && artistShout()}</ShoutGrid>
         </Insight>
         <Insight
           insight={t.third_section.insights.multimedia_development}
@@ -189,12 +187,12 @@ export default function Salvajenada(props) {
         >
           <IberoGrid>
             <Ibero />
-            {loadAssets ? (
+            {loadAssets && (
               <img
                 src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
                 alt="salvajenada en Ibero 90.9"
               />
-            ) : null}
+            )}
           </IberoGrid>
         </Insight>
         <Quote
@@ -226,7 +224,7 @@ export default function Salvajenada(props) {
         <Column>
           <H3>{t.fifth_section.title}</H3>
         </Column>
-        {loadAssets ? <FramesEmbed /> : null}
+        {loadAssets && <FramesEmbed />}
         <a href="https://www.instagram.com/salvajenada/">
           <Ig />
         </a>

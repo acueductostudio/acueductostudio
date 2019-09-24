@@ -81,7 +81,7 @@ function LaDanzaDeLasFieras(props) {
           <P>{t.intro_section.p}</P>
           <LaurelNumbers>
             <Laurel />
-            {initialStats}
+            <ul>{initialStats}</ul>
             <Laurel />
           </LaurelNumbers>
           <p>{t.intro_section.p2}</p>
@@ -92,7 +92,7 @@ function LaDanzaDeLasFieras(props) {
           <H2>{t.second_section.title}</H2>
           <P>{t.second_section.p}</P>
         </TextColumn>
-        {loadAssets ? (
+        {loadAssets && (
           <PosterGrid>
             <PosterLine />
             <img
@@ -116,7 +116,7 @@ function LaDanzaDeLasFieras(props) {
               alt="Final poster design with awards"
             />
           </PosterGrid>
-        ) : null}
+        )}
       </SecondSection>
       <Section_Pre>
         <TextColumn>
@@ -147,25 +147,27 @@ function LaDanzaDeLasFieras(props) {
       </Section_Pre>
       <Section_Sub>
         <TransitionWrapper>
-          {loadAssets ? (
+          {loadAssets && (
             <img
               src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
               alt="Printed assets for film attendants"
             />
-          ) : null}
+          )}
         </TransitionWrapper>
         <TextColumn>
           <H3>{"– " + t.second_section.subtitle}</H3>
           <P>{t.second_section.p2}</P>
         </TextColumn>
         <SequenceContainer>
-          <ThePlayer
-            url={"https://www.youtube.com/embed/AJMXiE16gtc"}
-            still={
-              "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
-            }
-            ratio={"50.62%"}
-          />
+          {loadAssets && (
+            <ThePlayer
+              url={"https://www.youtube.com/watch?v=AJMXiE16gtc"}
+              still={
+                "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
+              }
+              ratio={"50.62%"}
+            />
+          )}
         </SequenceContainer>
       </Section_Sub>
       <Third>
@@ -178,12 +180,12 @@ function LaDanzaDeLasFieras(props) {
           number={1}
           color={fierasRed}
         >
-          {loadAssets ? (
+          {loadAssets && (
             <Faces
               src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
               alt="Contact cards for directors and producers"
             />
-          ) : null}
+          )}
         </Insight>
         <Quote
           quote={t.third_section.insights.portfolio.quote}
@@ -195,12 +197,12 @@ function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.press}
           number={2}
         >
-          {loadAssets ? (
+          {loadAssets && (
             <MacPress
               src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
               alt="A whole section for the press"
             />
-          ) : null}
+          )}
         </Insight>
         <Quote
           quote={t.third_section.insights.press.quote}
@@ -212,12 +214,12 @@ function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.availability}
           number={3}
         >
-          {loadAssets ? (
+          {loadAssets && (
             <MacContact
               src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
               alt="A contact component on every page"
             />
-          ) : null}
+          )}
         </Insight>
         <TextColumn>
           <H3>{"– " + t.third_section.subtitle2}</H3>
@@ -241,7 +243,7 @@ function LaDanzaDeLasFieras(props) {
             <p>{t.fourth_section.stat}</p>
           </Stat>
           <P>{t.fourth_section.p2}</P>
-          {loadAssets ? (
+          {loadAssets && (
             <video
               autoPlay
               playsInline
@@ -253,7 +255,7 @@ function LaDanzaDeLasFieras(props) {
             >
               <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
             </video>
-          ) : null}
+          )}
         </TextColumn>
       </Fourth>
       <Fifth>
@@ -266,12 +268,12 @@ function LaDanzaDeLasFieras(props) {
           color={props => props.theme.colors.background}
         />
         <TextColumn>
-          {loadAssets ? (
+          {loadAssets && (
             <img
               src="../static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
               alt="Festival awards"
             />
-          ) : null}
+          )}
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
       </Fifth>
@@ -680,6 +682,13 @@ const LaurelNumbers = styled.div`
   margin: 10% auto;
   justify-content: space-between;
   align-items: center;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    width: 100%;
+  }
   li {
     list-style: none;
     text-align: center;
@@ -706,6 +715,9 @@ const LaurelNumbers = styled.div`
     line-height: 100%;
   }
   @media (max-width: 700px) {
+    ul {
+      padding: 0 5%;
+    }
     b {
       font-size: 10rem;
     }
@@ -731,6 +743,9 @@ const LaurelNumbers = styled.div`
     }
   }
   @media (max-width: 400px) {
+    ul {
+      padding: 0;
+    }
     p {
       margin-top: 0px;
       font-size: 1.3rem;
