@@ -1,12 +1,22 @@
 import styled from "styled-components";
+import Link from "next/link";
 import Language from "../static/assets/img/layout/language.svg";
+import { useEffect } from "react";
 
-const LanguageToggler = ({ hasLoaded, doChangeTheme }) => (
-  <Toggler reveal={hasLoaded}>
-    <Language onClick={doChangeTheme} />
-  </Toggler>
-);
-
+function LanguageToggler({ hasLoaded, locale }) {
+  useEffect(() => {
+    console.log("locale changed on language toggler and is: " + locale.lang);
+  }, [locale]);
+  return (
+    <Toggler reveal={hasLoaded}>
+      <Link href={locale.lang === "en" ? "/" : "/en"} passHref>
+        <a>
+          <Language />
+        </a>
+      </Link>
+    </Toggler>
+  );
+}
 export default LanguageToggler;
 
 const Toggler = styled.div`
@@ -29,9 +39,6 @@ const Toggler = styled.div`
   max-width: 1500px;
   opacity: ${props => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
-
-  /* TO CHANGE ON LANGUAGE */
-  opacity: 0;
 
   svg {
     width: 33px;

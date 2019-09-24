@@ -16,7 +16,7 @@ const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
 
 export default ({
   children,
-  changeTheme,
+  toggleEnglish,
   checkForConsent,
   consentToCookies,
   hasToConsent,
@@ -36,7 +36,7 @@ export default ({
       window.GA_INITIALIZED = true;
     }
     logPageView();
-    if (router.route === "/") {
+    if (router.route === "/" || router.route === "/en") {
       setShowSketch(true);
       setShowArrow(true);
     } else {
@@ -51,10 +51,6 @@ export default ({
 
   const closeNav = () => {
     setOpen(false);
-  };
-
-  const doChangeTheme = () => {
-    changeTheme();
   };
 
   const doConsentToCookies = () => {
@@ -75,8 +71,8 @@ export default ({
         id="Wrapper"
         onScroll={showArrow || showConsentMessage ? removeArrow : null}
       >
-        {showSketch ? <HomeSketch /> : ""}
-        {/* {showSketch ? <Background /> : ""} */}
+        {/* {showSketch && <HomeSketch />} */}
+        {showSketch && <Background />}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}
@@ -88,6 +84,7 @@ export default ({
           headerTitle={headerTitle}
           hasLoaded={hasLoaded}
           closeNav={closeNav}
+          locale={locale}
         />
         <Nav
           locale={locale}
@@ -96,7 +93,7 @@ export default ({
           isOpen={isOpen}
         />
         {React.cloneElement(children, { setTitle: setTitle })}
-        <LanguageToggler doChangeTheme={doChangeTheme} hasLoaded={hasLoaded} />
+        <LanguageToggler locale={locale} hasLoaded={hasLoaded} />
         <ScrollIncentive
           hasLoaded={hasLoaded}
           showArrow={showArrow}

@@ -4,27 +4,52 @@ import { ThemeProvider } from "styled-components";
 import Layout from "../components/layout";
 import theme from "../styles/theme";
 import Cookies from "js-cookie/src/js.cookie";
-import en from "../static/locales/en.json";
+import en from "../static/locales/en/common.json";
+import es from "../static/locales/es/common.json";
 import { hotjar } from "react-hotjar";
 
 export default class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
-      isDarkMode: false,
+      isEnglish: false,
       hasToConsent: false,
       hasLoaded: false
     };
-    this.changeTheme = this.changeTheme.bind(this);
+    this.toggleEnglish = this.toggleEnglish.bind(this);
     this.consentToCookies = this.consentToCookies.bind(this);
     this.checkForConsent = this.checkForConsent.bind(this);
+  }
+
+  static async getInitialProps({
+    // Component,
+    router
+    // , ctx
+  }) {
+    let locale;
+    console.log(`get initial with router ${router.pathname}`);
+    if (router.pathname.includes("/en")) {
+      locale = en;
+      console.log("it includes /en");
+    } else {
+      locale = es;
+      console.log("uses default es");
+    }
+    // let pageProps = {};
+
+    // if (Component.getInitialProps) {
+    //   pageProps = await Component.getInitialProps(ctx);
+    // }
+
+    return {
+      // pageProps,
+      locale: locale
+    };
   }
 
   authenticate() {
     return new Promise(resolve => setTimeout(resolve, 1500)); //1500
   }
-
-  //añadir el should component update para que no cambie a menos que cambie el locale
 
   componentDidMount() {
     // Load Animation
@@ -77,10 +102,10 @@ export default class MyApp extends App {
     this.setState({ hasToConsent: false });
   }
 
-  changeTheme() {
+  toggleEnglish() {
     console.log("change language");
     this.setState({
-      isDarkMode: !this.state.isDarkMode
+      isEnglish: true
     });
   }
 
@@ -89,14 +114,18 @@ export default class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <Layout
-          locale={en}
-          changeTheme={this.changeTheme}
+          locale={this.props.locale}
+          toggleEnglish={this.toggleEnglish}
           checkForConsent={this.checkForConsent}
           consentToCookies={this.consentToCookies}
           hasToConsent={this.state.hasToConsent}
           hasLoaded={this.state.hasLoaded}
         >
-          <Component locale={en} {...pageProps} />
+          <Component
+            locale={this.props.locale}
+            {...pageProps}
+            toggleEnglish={this.toggleEnglish}
+          />
         </Layout>
       </ThemeProvider>
     );

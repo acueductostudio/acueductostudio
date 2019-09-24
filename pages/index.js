@@ -20,17 +20,16 @@ export default function Index(props) {
   let f = props.locale.contactfooter;
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
+    props.setTitle(t.header_title);
+    props.english ? props.toggleEnglish() : null;
   }, []);
 
   return (
     <>
       <PageClipper unPadded>
         <Head
-          title={"Acueducto, a strategic design & technology studio."}
-          description={
-            "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-          }
+          title={t.page_title}
+          description={t.meta_description}
           canonical={"https://acueducto.studio/"}
         />
         <Land>

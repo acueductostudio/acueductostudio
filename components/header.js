@@ -2,10 +2,10 @@ import Link from "next/link";
 import styled from "styled-components";
 import Logo from "./../static/assets/img/layout/logo.svg";
 
-export default function Header({ hasLoaded, headerTitle, isOpen, closeNav }) {
+function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale }) {
   return (
     <TopHeader reveal={hasLoaded}>
-      <Link href="/">
+      <Link href={locale.lang === "en" ? "/en" : "/"} passHref>
         <Logotype onClick={closeNav}>
           <h1>acueducto</h1>
           <Logo />
@@ -15,6 +15,7 @@ export default function Header({ hasLoaded, headerTitle, isOpen, closeNav }) {
     </TopHeader>
   );
 }
+export default React.memo(Header);
 
 const HeaderTitle = styled.div`
   position: absolute;

@@ -3,6 +3,12 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 module.exports = withBundleAnalyzer({
+  // exportPathMap: function() {
+  //   return {
+  //     "/": { page: "/" },
+  //     "/en/manifesto": { page: "/en/manifesto" }
+  //   };
+  // },
   webpack(config, options) {
     // access to webpack config here
     config.module.rules.push({

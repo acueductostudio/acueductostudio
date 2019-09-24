@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import TitleSection from "../components/TitleSection";
 import createMarkup from "../helpers/createMarkup";
-import Envision from "../static/assets/img/layout/steps/envision.svg";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
 
@@ -16,7 +15,7 @@ const StepContainer = props => {
     <Step>
       <Fade>
         <span>0{props.index}</span>
-        <Icon/>
+        <Icon />
         <h3>{props.title}</h3>
         <p dangerouslySetInnerHTML={createMarkup(props.p)} />
       </Fade>
@@ -57,7 +56,7 @@ const Step = styled.div`
   h3 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    font-weight:200;
+    font-weight: 200;
   }
   span {
     color: ${props => props.theme.colors.accent};

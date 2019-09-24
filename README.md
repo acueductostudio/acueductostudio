@@ -8,6 +8,7 @@
 
 - está de la verga el mensaje del nav
 - heads in firefox
+- sitemap
 
 ## Optimizar:
 
@@ -16,7 +17,6 @@
 
 ## Detalles:
 
-- Nombre en manifest aparece todo el título -> revisar
 - Font tests
 - ScrollBar
 - Animation icons hovers

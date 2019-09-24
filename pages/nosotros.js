@@ -21,7 +21,7 @@ export default function About(props) {
   let f = props.locale.contactfooter;
 
   useEffect(() => {
-    props.setTitle("About");
+    props.setTitle(t.headerTitle);
   }, []);
 
   return (

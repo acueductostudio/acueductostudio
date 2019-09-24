@@ -15,7 +15,7 @@ const SingleCase = props => {
           <Fade>
             <VidContainer>
               <Logo
-                src={`static/assets/img/casestudies${props.link}/portfolio_logo.svg`}
+                src={`../../static/assets/img/casestudies${props.link}/portfolio_logo.svg`}
               />
               {props.noPlay ? (
                 <video

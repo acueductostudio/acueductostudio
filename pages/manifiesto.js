@@ -7,6 +7,7 @@ import PinnedSection from "../components/PinnedSection";
 import CaseStudiesPreview from "../components/caseStudy/CaseStudiesPreview";
 
 export default function Manifesto(props) {
+  // props.english ? props.toggleEnglish() : null;
   let t = props.locale.manifesto_page;
   let f = props.locale.contactfooter;
   let c = props.locale.casestudies;
