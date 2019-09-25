@@ -62,16 +62,16 @@ let theStyles = `
 @font-face {
   font-family: 'Wide';
   font-display: block;
-  src: url('../static/assets/font/Bold.woff2') format('woff2'),
-      url('../static/assets/font/Bold.woff') format('woff');
+  src: url('/static/assets/font/Bold.woff2') format('woff2'),
+      url('/static/assets/font/Bold.woff') format('woff');
   font-weight: 200;
   font-style: bold;
 }
 @font-face {
   font-family: 'Wide';
   font-display: block;
-  src: url('../static/assets/font/Normal.woff2') format('woff2'),
-      url('../static/assets/font/Normal.woff') format('woff');
+  src: url('/static/assets/font/Normal.woff2') format('woff2'),
+      url('/static/assets/font/Normal.woff') format('woff');
   font-weight: 100;
   font-style: normal;
 }

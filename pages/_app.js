@@ -7,48 +7,43 @@ import Cookies from "js-cookie/src/js.cookie";
 import en from "../static/locales/en/common.json";
 import es from "../static/locales/es/common.json";
 import { hotjar } from "react-hotjar";
+import Router from "next/router";
 
 export default class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
-      isEnglish: false,
+      locale: this.props.locale,
       hasToConsent: false,
       hasLoaded: false
     };
-    this.toggleEnglish = this.toggleEnglish.bind(this);
     this.consentToCookies = this.consentToCookies.bind(this);
     this.checkForConsent = this.checkForConsent.bind(this);
   }
 
-  static async getInitialProps({
-    // Component,
-    router
-    // , ctx
-  }) {
-    let locale;
-    console.log(`get initial with router ${router.pathname}`);
+  static async getInitialProps({ router }) {
     if (router.pathname.includes("/en")) {
-      locale = en;
-      console.log("it includes /en");
+      return { locale: en };
     } else {
-      locale = es;
-      console.log("uses default es");
+      return { locale: es };
     }
-    // let pageProps = {};
-
-    // if (Component.getInitialProps) {
-    //   pageProps = await Component.getInitialProps(ctx);
-    // }
-
-    return {
-      // pageProps,
-      locale: locale
-    };
   }
 
   authenticate() {
     return new Promise(resolve => setTimeout(resolve, 1500)); //1500
+  }
+
+  componentDidUpdate() {
+    if (Router.pathname.includes("/en") && this.state.locale !== en) {
+      this.setState({
+        locale: en
+      });
+    }
+    if (!Router.pathname.includes("/en") && this.state.locale !== es) {
+      this.setState({
+        locale: es
+      });
+    }
   }
 
   componentDidMount() {
@@ -102,29 +97,21 @@ export default class MyApp extends App {
     this.setState({ hasToConsent: false });
   }
 
-  toggleEnglish() {
-    console.log("change language");
-    this.setState({
-      isEnglish: true
-    });
-  }
-
   render() {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <Layout
-          locale={this.props.locale}
-          toggleEnglish={this.toggleEnglish}
+          locale={this.state.locale}
           checkForConsent={this.checkForConsent}
           consentToCookies={this.consentToCookies}
           hasToConsent={this.state.hasToConsent}
           hasLoaded={this.state.hasLoaded}
         >
           <Component
-            locale={this.props.locale}
+            locale={this.state.locale}
             {...pageProps}
-            toggleEnglish={this.toggleEnglish}
+            lang={this.state.locale.lang}
           />
         </Layout>
       </ThemeProvider>

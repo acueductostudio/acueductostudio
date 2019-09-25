@@ -1,28 +1,26 @@
 import styled from "styled-components";
-import Head from "../../components/Head";
+import Head from "components/Head";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import PageClipper from "../../components/PageClipper";
+import PageClipper from "components/PageClipper";
 import Fade from "react-reveal/Fade";
-import ContactFooter from "../../components/ContactFooter";
-import NextStudy from "../../components/caseStudy/shared/NextStudy";
-import LogoDanza from "../../static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
-import Laurel from "../../static/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
-import PosterLine from "../../static/assets/img/casestudies/ladanzadelasfieras/line.svg";
-import LogoF from "../../static/assets/img/casestudies/ladanzadelasfieras/logoF.svg";
-import Type_1 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_1.svg";
-import Type_2 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
-import Type_3 from "../../static/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
-import AppSvg from "../../static/assets/img/casestudies/ladanzadelasfieras/app.svg";
-import { H2, H3, P } from "../../components/caseStudy/shared/Dangerously";
-import IntroVideo from "../../components/caseStudy/shared/IntroVideo";
-import Marquee from "../../components/caseStudy/shared/Marquee";
-import Quote from "../../components/caseStudy/shared/Quote";
-import Insight from "../../components/caseStudy/shared/Insight";
-import TextColumn from "../../components/caseStudy/shared/TextColumn";
-import CommonSection from "../../components/caseStudy/shared/CommonSection";
-
-// import VideoPlayer from "../../components/caseStudy/ladanzadelasfieras/VideoPlayer";
+import ContactFooter from "components/ContactFooter";
+import NextStudy from "components/caseStudy/shared/NextStudy";
+import LogoDanza from "static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
+import Laurel from "static/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
+import PosterLine from "static/assets/img/casestudies/ladanzadelasfieras/line.svg";
+import LogoF from "static/assets/img/casestudies/ladanzadelasfieras/logoF.svg";
+import Type_1 from "static/assets/img/casestudies/ladanzadelasfieras/type_1.svg";
+import Type_2 from "static/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
+import Type_3 from "static/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
+import AppSvg from "static/assets/img/casestudies/ladanzadelasfieras/app.svg";
+import { H2, H3, P } from "components/caseStudy/shared/Dangerously";
+import IntroVideo from "components/caseStudy/shared/IntroVideo";
+import Marquee from "components/caseStudy/shared/Marquee";
+import Quote from "components/caseStudy/shared/Quote";
+import Insight from "components/caseStudy/shared/Insight";
+import TextColumn from "components/caseStudy/shared/TextColumn";
+import CommonSection from "components/caseStudy/shared/CommonSection";
 
 // const originalRed = "#C64028";
 // const YoutubeFirstRed = "rgb(221, 56, 20)";
@@ -30,7 +28,7 @@ import CommonSection from "../../components/caseStudy/shared/CommonSection";
 const fierasRed = "rgb(201,32,26)";
 
 const ThePlayer = dynamic(
-  import("../../components/caseStudy/ladanzadelasfieras/VideoPlayer"),
+  import("components/caseStudy/ladanzadelasfieras/VideoPlayer"),
   {
     loading: () => <p>Loading player...</p>,
     ssr: false
@@ -270,7 +268,7 @@ function LaDanzaDeLasFieras(props) {
         <TextColumn>
           {loadAssets && (
             <img
-              src="../static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+              src="/static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
               alt="Festival awards"
             />
           )}
@@ -586,7 +584,7 @@ const Stat = styled.div`
 const Sixth = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/sixthBack.svg");
+  background-image: url("/static/assets/img/casestudies/ladanzadelasfieras/sixthBack.svg");
   background-position: center bottom;
   background-size: cover;
   a {
@@ -773,7 +771,7 @@ const FirstSection = styled(CommonSection)`
 const LandSection = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("../static/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
+  background-image: url("/static/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
   background-position: center bottom;
   background-size: cover;
   svg {

@@ -7,10 +7,16 @@ import Link from "next/link";
 
 const SingleCase = props => {
   const video = useRef(null);
-
   return (
     <Case>
-      <Link href={"work" + props.link} passHref>
+      <Link
+        href={
+          props.lang === "en"
+            ? "/en/work" + props.link
+            : "portafolio" + props.link
+        }
+        passHref
+      >
         <a>
           <Fade>
             <VidContainer>
@@ -49,15 +55,31 @@ const SingleCase = props => {
       </Link>
       <Info>
         <Fade>
-          <Link href={"work" + props.link} passHref>
-            <h4>{props.title}</h4>
+          <Link
+            href={
+              props.lang === "en"
+                ? "/en/work" + props.link
+                : "portafolio" + props.link
+            }
+            passHref
+          >
+            <a>
+              <h4>{props.title}</h4>
+            </a>
           </Link>
         </Fade>
         <Flexed>
           <Fade>
             <p dangerouslySetInnerHTML={createMarkup(props.tags)} />
           </Fade>
-          <Link href={"work" + props.link} passHref>
+          <Link
+            href={
+              props.lang === "en"
+                ? "/en/work" + props.link
+                : "portafolio" + props.link
+            }
+            passHref
+          >
             <a>
               <Arrow />
             </a>
@@ -70,7 +92,6 @@ const SingleCase = props => {
 
 const CaseList = props => {
   let c = props.c;
-
   let cases = Object.entries(c).map(function(study, index) {
     study = study[1];
     if (props.limit !== undefined && index + 1 > props.limit) {
@@ -85,6 +106,7 @@ const CaseList = props => {
           video={study.video}
           logo={study.logo}
           noPlay={props.noPlay}
+          lang={props.lang}
         />
       );
     }
@@ -92,7 +114,7 @@ const CaseList = props => {
   return <CaseStudiesWrapper>{cases}</CaseStudiesWrapper>;
 };
 
-export default CaseList;
+export default React.memo(CaseList);
 
 const Logo = styled.img`
   width: 70%;
@@ -121,6 +143,9 @@ const Info = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
   h4 {
     font-size: 4.5rem;
     font-weight: 200;

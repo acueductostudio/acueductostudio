@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Language from "../static/assets/img/layout/language.svg";
-import { useEffect } from "react";
 
 function LanguageToggler({ hasLoaded, locale }) {
-  useEffect(() => {
-    console.log("locale changed on language toggler and is: " + locale.lang);
-  }, [locale]);
   return (
     <Toggler reveal={hasLoaded}>
       <Link href={locale.lang === "en" ? "/" : "/en"} passHref>

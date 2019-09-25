@@ -12,7 +12,12 @@ const CaseStudiesPreview = props => {
         text={cpage ? cpage.p : c.intro.p}
         borderTop
       />
-      <CaseList c={c.studies} limit={2} noPlay={props.noPlay} />
+      <CaseList
+        c={c.studies}
+        limit={2}
+        noPlay={props.noPlay}
+        lang={props.lang}
+      />
     </CaseStudiesPreviewWrapper>
   );
 };

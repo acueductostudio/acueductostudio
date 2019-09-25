@@ -29,7 +29,7 @@ export default function Work(props) {
         text={t.intro.p}
         link={t.intro.link}
       />
-      <CaseList c={c} />
+      <CaseList c={c} lang={props.locale.lang} />
       <ContactFooter f={f} />
     </PageClipperPadded>
   );

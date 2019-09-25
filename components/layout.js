@@ -16,7 +16,6 @@ const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
 
 export default ({
   children,
-  toggleEnglish,
   checkForConsent,
   consentToCookies,
   hasToConsent,
@@ -148,6 +147,6 @@ const Background = styled.div`
   right: 0;
   bottom: 0;
   top: 0%;
-  background-image: url("../static/assets/img/layout/fond.jpg");
+  background-image: url("/static/assets/img/layout/fond.jpg");
   background-size: cover;
 `;
