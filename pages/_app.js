@@ -17,6 +17,7 @@ export default class MyApp extends App {
       hasToConsent: false,
       hasLoaded: false
     };
+    this.toggleLang = this.toggleLang.bind(this);
     this.consentToCookies = this.consentToCookies.bind(this);
     this.checkForConsent = this.checkForConsent.bind(this);
   }
@@ -33,17 +34,11 @@ export default class MyApp extends App {
     return new Promise(resolve => setTimeout(resolve, 1500)); //1500
   }
 
-  componentDidUpdate() {
-    if (Router.pathname.includes("/en") && this.state.locale !== en) {
-      this.setState({
-        locale: en
-      });
-    }
-    if (!Router.pathname.includes("/en") && this.state.locale !== es) {
-      this.setState({
-        locale: es
-      });
-    }
+  toggleLang(lang) {
+    let language = lang === "en" ? en : es;
+    this.setState({
+      locale: language
+    });
   }
 
   componentDidMount() {
@@ -107,6 +102,7 @@ export default class MyApp extends App {
           consentToCookies={this.consentToCookies}
           hasToConsent={this.state.hasToConsent}
           hasLoaded={this.state.hasLoaded}
+          toggleLang={this.toggleLang}
         >
           <Component
             locale={this.state.locale}

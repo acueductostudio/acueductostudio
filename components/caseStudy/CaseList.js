@@ -7,21 +7,24 @@ import Link from "next/link";
 
 const SingleCase = props => {
   const video = useRef(null);
+  console.log(props.lang);
   return (
     <Case>
       <Link
         href={
           props.lang === "en"
-            ? "/en/work" + props.link
-            : "portafolio" + props.link
+            ? "/en/work/" + props.link
+            : "/portafolio/" + props.link
         }
         passHref
       >
         <a>
           <Fade>
             <VidContainer>
+              {props.lang === "en" ? "go to project" : "visitar proyecto"}
               <Logo
-                src={`../../static/assets/img/casestudies${props.link}/portfolio_logo.svg`}
+                src={`/static/assets/img/casestudies/${props.link}/portfolio_logo.svg`}
+                alt={`logo_${props.link}`}
               />
               {props.noPlay ? (
                 <video
@@ -29,10 +32,10 @@ const SingleCase = props => {
                   playsInline
                   muted
                   loop
-                  poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+                  poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
                 >
                   <source
-                    src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
+                    src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
                   />
                 </video>
               ) : (
@@ -42,10 +45,10 @@ const SingleCase = props => {
                   autoPlay
                   muted
                   loop
-                  poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+                  poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
                 >
                   <source
-                    src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
+                    src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
                   />
                 </video>
               )}
@@ -58,8 +61,8 @@ const SingleCase = props => {
           <Link
             href={
               props.lang === "en"
-                ? "/en/work" + props.link
-                : "portafolio" + props.link
+                ? "/en/work/" + props.link
+                : "/portafolio/" + props.link
             }
             passHref
           >
@@ -75,12 +78,13 @@ const SingleCase = props => {
           <Link
             href={
               props.lang === "en"
-                ? "/en/work" + props.link
-                : "portafolio" + props.link
+                ? "/en/work/" + props.link
+                : "/portafolio/" + props.link
             }
             passHref
           >
             <a>
+              {props.lang === "en" ? "go to project" : "visitar proyecto"}
               <Arrow />
             </a>
           </Link>
@@ -134,6 +138,7 @@ const Flexed = styled.div`
   a {
     justify-content: flex-end;
     display: flex;
+    font-size: 0;
   }
 `;
 
@@ -208,6 +213,7 @@ const VidContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  font-size: 0;
   video {
     position: absolute;
     top: 0;

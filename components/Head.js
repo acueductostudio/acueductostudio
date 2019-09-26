@@ -31,7 +31,18 @@ const Meta = props => {
         property="og:image:alt"
         content="Acueducto is a strategic design and technology studio"
       />
-      {props.canonical && <link rel="canonical" href={`${props.canonical}`} />}
+      {props.canonical &&
+        (props.lang == "es" ? (
+          <>
+            <link rel="canonical" href={props.canonical} />
+            <link rel="alternate" hreflang="en" href={props.en_canonical} />
+          </>
+        ) : (
+          <>
+            <link rel="canonical" href={props.en_canonical} />
+            <link rel="alternate" hreflang="es" href={props.canonical} />
+          </>
+        ))}
     </Head>
   );
 };

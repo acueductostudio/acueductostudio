@@ -5,7 +5,7 @@ import Arrow from "./../../Arrow";
 
 const NextStudy = ({ link, n }) => {
   return (
-    <Link href={link}>
+    <Link href={link} passHref>
       <Wrapper>
         <LogoContainer>
           <Fade>
@@ -49,7 +49,7 @@ const Logo = styled.div`
   transform-origin: 50% 0;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -60,6 +60,8 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 9% 7% 8%;
   cursor: pointer;
+  text-decoration: none;
+  color: ${props => props.theme.colors.foreground};
   p {
     margin-top: 2%;
     border-bottom: 2px solid transparent;

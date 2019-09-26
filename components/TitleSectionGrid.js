@@ -33,11 +33,6 @@ const TitleSectionGrid = styled.div`
       }
     }
   }
-  @media (max-width: 1400px) {
-    p {
-      grid-column: 7 span 5;
-    }
-  }
   @media (max-width: 1100px) {
     p {
       grid-column: 5 / span 6;

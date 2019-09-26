@@ -7,9 +7,11 @@ const IntroVideo = props => (
       playsInline
       muted
       loop
-      poster={`/static/assets/img/casestudies${props.link}/intro_poster.jpg`}
+      poster={`/static/assets/img/casestudies/${props.link}/intro_poster.jpg`}
     >
-      <source src={`/static/assets/video/casestudies${props.link}/intro.mp4`} />
+      <source
+        src={`/static/assets/video/casestudies/${props.link}/intro.mp4`}
+      />
     </Video>
   </VideoWrapper>
 );

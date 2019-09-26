@@ -18,6 +18,7 @@ export default function Error(props) {
         title={`Acueducto | ${
           props.statusCode ? props.statusCode : "Client error"
         }`}
+        lang={props.lang}
       />
       {props.statusCode ? (
         <TitleSection title={t.intro.title} text={t.intro.p} />

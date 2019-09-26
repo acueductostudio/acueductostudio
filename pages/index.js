@@ -21,7 +21,7 @@ export default function Index(props) {
 
   useEffect(() => {
     props.setTitle(t.header_title);
-    props.english ? props.toggleEnglish() : null;
+    // props.english ? props.toggleEnglish() : null;
   }, []);
 
   return (
@@ -31,6 +31,8 @@ export default function Index(props) {
           title={t.page_title}
           description={t.meta_description}
           canonical={"https://acueducto.studio/"}
+          en_canonical={"https://acueducto.studio/en"}
+          lang={props.lang}
         />
         <Land>
           <LandContainer>

@@ -13,7 +13,7 @@ export default function Work(props) {
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
-  }, []);
+  }, [props.locale]);
 
   return (
     <PageClipperPadded>
@@ -22,7 +22,9 @@ export default function Work(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/work"}
+        canonical={"https://acueducto.studio/portafolio"}
+        en_canonical={"https://acueducto.studio/en/work"}
+        lang={props.lang}
       />
       <TitleSection
         title={t.intro.title}

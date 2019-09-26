@@ -102,7 +102,9 @@ export default function Salvajenada(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/work/salvajenada"}
+        canonical={"https://acueducto.studio/portafolio/salvajenada"}
+        en_canonical={"https://acueducto.studio/en/work/salvajenada"}
+        lang={props.lang}
       />
       <Fade>
         <Land>

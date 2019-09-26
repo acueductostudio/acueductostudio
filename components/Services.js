@@ -32,7 +32,7 @@ export default Services;
 
 const Info = styled.div`
   width: auto;
-  h4{
+  h4 {
     font-weight: 200;
   }
 `;
@@ -63,7 +63,6 @@ const Service = styled.div`
     props.theme.stroke +
     " 0"};
   padding: 20%;
-  text-transform: capitalize;
   &:nth-child(3) {
     border-right: 0;
   }

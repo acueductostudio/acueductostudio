@@ -22,7 +22,7 @@ export default function About(props) {
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
-  }, []);
+  }, [props.locale]);
 
   return (
     <PageClipper>
@@ -31,7 +31,9 @@ export default function About(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/about"}
+        canonical={"https://acueducto.studio/nosotros"}
+        en_canonical={"https://acueducto.studio/en/about"}
+        lang={props.lang}
       />
       <PinnedSection t={t}>
         <Person>

@@ -16,6 +16,7 @@ const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
 
 export default ({
   children,
+  toggleLang,
   checkForConsent,
   consentToCookies,
   hasToConsent,
@@ -92,7 +93,12 @@ export default ({
           isOpen={isOpen}
         />
         {React.cloneElement(children, { setTitle: setTitle })}
-        <LanguageToggler locale={locale} hasLoaded={hasLoaded} />
+
+        <LanguageToggler
+          locale={locale}
+          hasLoaded={hasLoaded}
+          toggleLang={toggleLang}
+        />
         <ScrollIncentive
           hasLoaded={hasLoaded}
           showArrow={showArrow}

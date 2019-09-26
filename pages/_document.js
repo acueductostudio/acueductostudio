@@ -3,19 +3,25 @@ import { ServerStyleSheet } from "styled-components";
 import GlobalStyles from "../styles/global";
 
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
+  static getInitialProps({ renderPage, req }) {
+    let lang = "es";
+    if (req.headers.referer) {
+      // console.log(req.headers.referer);
+      // console.log(req.headers.referer.includes("/en") ? "en" : "es");
+      lang = req.headers.referer.includes("/en") ? "en" : "es";
+    }
     const sheet = new ServerStyleSheet();
     const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />)
     );
     const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+    return { ...page, styleTags, lang };
   }
   render() {
     return (
-      <Html>
+      <Html lang={this.props.lang}>
         <Head>
-          <meta charSet="utf-8" />
+          <meta charset="utf-8" key="unique_charset" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"

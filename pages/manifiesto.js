@@ -7,14 +7,13 @@ import PinnedSection from "../components/PinnedSection";
 import CaseStudiesPreview from "../components/caseStudy/CaseStudiesPreview";
 
 export default function Manifesto(props) {
-  // props.english ? props.toggleEnglish() : null;
   let t = props.locale.manifesto_page;
   let f = props.locale.contactfooter;
   let c = props.locale.casestudies;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
-  }, []);
+  }, [props.locale]);
 
   let beliefs = t.beliefs.map(function(belief, index) {
     return (
@@ -32,12 +31,14 @@ export default function Manifesto(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/manifesto"}
+        canonical={"https://acueducto.studio/manifiesto"}
+        en_canonical={"https://acueducto.studio/en/manifesto"}
+        lang={props.lang}
       />
       <PinnedSection t={t}>
         <ol>{beliefs}</ol>
       </PinnedSection>
-      <CaseStudiesPreview c={c} />
+      <CaseStudiesPreview c={c} lang={props.lang} />
       <ContactFooter f={f} />
     </PageClipper>
   );

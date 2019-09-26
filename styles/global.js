@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Theme from "./theme";
 
 let theStyles = `
@@ -65,7 +66,7 @@ let theStyles = `
   src: url('/static/assets/font/Bold.woff2') format('woff2'),
       url('/static/assets/font/Bold.woff') format('woff');
   font-weight: 200;
-  font-style: bold;
+  font-style: normal;
 }
 @font-face {
   font-family: 'Wide';
@@ -75,7 +76,6 @@ let theStyles = `
   font-weight: 100;
   font-style: normal;
 }
-
 
 html {
   font-size: 62.5%;

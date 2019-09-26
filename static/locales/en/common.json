@@ -6,56 +6,60 @@
     { "title": "manifesto", "link": "/en/manifesto" },
     { "title": "contact", "link": "#contact" }
   ],
+  "legal_nav": {
+    "cookies": { "title": "cookie policy", "link": "/en/cookies" },
+    "privacy": { "title": "privacy policy", "link": "/en/privacy" }
+  },
   "lang": "en",
   "process": {
-    "title": "we place strategy</br>at the core",
-    "p": "Let us share a conviction of ours: </br>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.</br></br>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
+    "title": "we place strategy<br/>at the core",
+    "p": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
     "steps": [
       {
         "title": "discover",
-        "p": "Understand the context, audience, needs, and challenges of the project.</br>We get smart.",
+        "p": "Understand the context, audience, needs, and challenges of the project.<br/>We get smart.",
         "icon": "discover.svg"
       },
       {
         "title": "envision",
-        "p": "Here we re-frame the problem to highlight new insights and opportunities.</br>We make sense.",
+        "p": "Here we re-frame the problem to highlight new insights and opportunities.<br/>We make sense.",
         "icon": "envision.svg"
       },
       {
         "title": "build the story",
-        "p": "Create a strategy that guides concepting, prioritization, and co-creation.</br>We create empathy.",
+        "p": "Create a strategy that guides concepting, prioritization, and co-creation.<br/>We create empathy.",
         "icon": "buildstory.svg"
       },
       {
         "title": "design, tech & craft",
-        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.</br>We develop.",
+        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.<br/>We develop.",
         "icon": "craft.svg"
       },
       {
         "title": "launch",
-        "p": "Implement new solutions, support socialization of organizational changes and product innovation.</br>We drive change.",
+        "p": "Implement new solutions, support socialization of organizational changes and product innovation.<br/>We drive change.",
         "icon": "launch.svg"
       },
       {
         "title": "review",
-        "p": "Reflect, document, and iterate on our process and approach.</br>We get better.",
+        "p": "Reflect, document, and iterate on our process and approach.<br/>We get better.",
         "icon": "review.svg"
       }
     ]
   },
   "casestudies": {
     "intro": {
-      "title": "our selected</br> case studies",
-      "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.</br></br>Read about selected projects we have launched alongside our partners."
+      "title": "our selected<br/> case studies",
+      "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.<br/><br/>Read about selected projects we have launched alongside our partners."
     },
     "studies": {
       "ladanzadelasfieras": {
         "headerTitle": "LDDLF",
         "title": "from strategy to production in the filmmaking industry",
-        "tags": "Strategy</br>Communication</br>Branding</br>Animation</br>Web App</br>",
+        "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
         "video": "fieras.mp4",
         "logo": "fieras.svg",
-        "link": "/ladanzadelasfieras",
+        "link": "ladanzadelasfieras",
         "intro_section": {
           "tags": [
             "project strategy",
@@ -69,8 +73,8 @@
             "copywriting"
           ],
           "video": "lddlf_intro.mp4",
-          "title": "<b>Act I</b> </br>Aly’s first </br>feature-length",
-          "p": "Alayde, better known as Aly, is a filmmaker, creative and creative director of her self-founded production company, Antítesis. Fueled by the idea that young artists can make an innovative impact in the film industry, she worked along with film production house Bala Films to create La Danza de las Fieras (The Wild Dance).</br></br>La Danza de las Fieras is a feature-length film that is raising awareness about human trafficking. It’s made up of six short films, each one focused on a different dimension of this topic. The movie was awarded five international film awards, including Best Film, and was selected in 11 film festivals in México and across the globe.",
+          "title": "<b>Act I</b> <br/>Aly’s first <br/>feature-length",
+          "p": "Alayde, better known as Aly, is a filmmaker, creative and creative director of her self-founded production company, Antítesis. Fueled by the idea that young artists can make an innovative impact in the film industry, she worked along with film production house Bala Films to create La Danza de las Fieras (The Wild Dance).<br/><br/>La Danza de las Fieras is a feature-length film that is raising awareness about human trafficking. It’s made up of six short films, each one focused on a different dimension of this topic. The movie was awarded five international film awards, including Best Film, and was selected in 11 film festivals in México and across the globe.",
           "stats": [
             {
               "big": "5",
@@ -88,18 +92,18 @@
           "p2": "Before these amazing results and during the production process, Aly contacted Acueducto in order to review her position. She was also co-directing one of the short films, and because of the multiplicity of directors, views, and film styles she needed a strong branding to fit all the stories under one same package and a powerful website that displayed information about the film."
         },
         "second_section": {
-          "title": "<b>Act II</b></br>A multi-front</br>cohesive experience",
+          "title": "<b>Act II</b><br/>A multi-front<br/>cohesive experience",
           "p": "Creative and research sessions were taken alongside Aly and her team in order to craft a visual identity and branding for the film. Some shorts were documentaries and some fiction; one of them was even narrated from a phone screen. Finding a voice and a cohesive tone was the first task to take on.",
           "font_logo": "Logo + Animation",
           "font_body": "Body text",
           "font_titles": "Titles",
           "red": "Wild Red",
           "subtitle": "First impressions are always paramount",
-          "p2": "Part of the branding included the design and animation for the opening sequence of the film. Everyone involved loved it so much that this application stuck to be reused on the web app.</br></br>Click to watch it, it's only a couple of minutes long (and crank up your speakers, it’s worth it)."
+          "p2": "Part of the branding included the design and animation for the opening sequence of the film. Everyone involved loved it so much that this application stuck to be reused on the web app.<br/><br/>Click to watch it, it's only a couple of minutes long (and crank up your speakers, it’s worth it)."
         },
         "third_section": {
           "subtitle": "Movie portal, the web experience",
-          "p": "Acueducto was tasked with designing a portal that would display information about the film, the filmmakers, and the press articles that would be published about La Danza de las Fieras.</br></br>During the discovery phase, interviews were made with stakeholders, producers, directors, and reporters to look for hidden needs and painpoints. These interviews threw several insights that became the core of the web strategy.",
+          "p": "Acueducto was tasked with designing a portal that would display information about the film, the filmmakers, and the press articles that would be published about La Danza de las Fieras.<br/><br/>During the discovery phase, interviews were made with stakeholders, producers, directors, and reporters to look for hidden needs and painpoints. These interviews threw several insights that became the core of the web strategy.",
           "insights": {
             "portfolio": {
               "title": "Portfolio for everyone",
@@ -114,7 +118,7 @@
               "title": "Press and festivals, welcome",
               "p": "Press often struggles to find the information and resources they need for writing pieces about films. These publications are films’ main media outlets, so it was decided to give the press their own section with access to presskits, imagery, and the movie’s hall of fame with awards and publications. No reporter would need to leave the web app to gather additional information.",
               "quote": {
-                "quote": "Film festivals and media outlets often require a media kit from your film that needs to be organized, translated, and sent away depending on the required information.</br>The way our website was designed greatly simplified us the sharing of that information.",
+                "quote": "Film festivals and media outlets often require a media kit from your film that needs to be organized, translated, and sent away depending on the required information.<br/>The way our website was designed greatly simplified us the sharing of that information.",
                 "name": "Miguel Ángel Fernández",
                 "label": "Editor & Director in La Danza de las fieras"
               }
@@ -125,23 +129,23 @@
             }
           },
           "subtitle2": "And the cherry on top",
-          "p2": "Obsessing with details is worth it, especially when they add real value to the users. That is why Acueducto tailor-coded the web app in-house from the ground up to achieve a lightning-fast, lightweight, and mobile-accessible portal.</br></br>Latest technologies and tools can make users’ life easier, that is why Acueducto gave something extra to the internal distribution team and the filmmakers themselves. The website was turned into a Progressive Web App to enable offline capabilities and in this way allowing anyone to show it around even in poor or null connectivity conditions (without having to install anything from an AppStore!)."
+          "p2": "Obsessing with details is worth it, especially when they add real value to the users. That is why Acueducto tailor-coded the web app in-house from the ground up to achieve a lightning-fast, lightweight, and mobile-accessible portal.<br/><br/>Latest technologies and tools can make users’ life easier, that is why Acueducto gave something extra to the internal distribution team and the filmmakers themselves. The website was turned into a Progressive Web App to enable offline capabilities and in this way allowing anyone to show it around even in poor or null connectivity conditions (without having to install anything from an AppStore!)."
         },
         "fourth_section": {
           "subtitle": "What about the content?",
-          "p": "A powerful web app was built and the film’s premier was getting close. It was time to deliver its message in a clear, concise, and elegant way. But how? Having a unified tone and message throughout the whole experience. With this in mind, alongside the production houses of the film, Acueducto crafted the web-app’s copywriting. That way the whole narrative around the project was controlled; not just on the web app, but also in the press.</br></br>It is a common thing to find throughout press articles that the messages and adjectives of La Danza de las Fieras’ web app were used, most of them word by word.",
+          "p": "A powerful web app was built and the film’s premier was getting close. It was time to deliver its message in a clear, concise, and elegant way. But how? Having a unified tone and message throughout the whole experience. With this in mind, alongside the production houses of the film, Acueducto crafted the web-app’s copywriting. That way the whole narrative around the project was controlled; not just on the web app, but also in the press.<br/><br/>It is a common thing to find throughout press articles that the messages and adjectives of La Danza de las Fieras’ web app were used, most of them word by word.",
           "stat": "of press publications quoted word by word content on the web app or the presskit.",
           "p2": "But, is it not the most valuable result for the filmmakers to actually get people to watch their film? In film festival’s box office listings, they can compete with hundreds of other films for viewers’ attention. Most of them do not have a proper portal to hold their synopsis, credits, and trailer, and this lack of preview assets impacts the film’s viewing rate. This is why SEO for “La Danza de las Fieras” was paramount, a lot of effort was put into so that any search of that combination of words would throw the web app as the first result."
         },
         "fifth_section": {
-          "title": "<b>Act III</b></br>That’s a wrap",
-          "p": "La Danza de las Fieras just ended its film festival tour around the world in more than 12 international film festivals in 6 different countries, and 22 press mentions across the globe endorse the film as an authority on the human trafficking matter.</br></br>The web app was crucial to position the movie in these festivals, and in the film industry in general; the digital strategy made the submissions easier both for the filmmakers and film festival organizers.",
+          "title": "<b>Act III</b><br/>That’s a wrap",
+          "p": "La Danza de las Fieras just ended its film festival tour around the world in more than 12 international film festivals in 6 different countries, and 22 press mentions across the globe endorse the film as an authority on the human trafficking matter.<br/><br/>The web app was crucial to position the movie in these festivals, and in the film industry in general; the digital strategy made the submissions easier both for the filmmakers and film festival organizers.",
           "quote": {
             "quote": "La Danza de las Fieras’ website was the reason Cinema23, the organization responsable for the Iberoamerican Phoenix Film Awards, found all the information needed to consider the film eligible.",
             "name": "Javier Rodríguez",
             "label": "Film festival coordinator"
           },
-          "p2": "La Danza de las Fieras is entering it’s distribution phase as Aly and her team continue to raise awareness on the human trafficking crisis.</br></br>Supported by a powerful branding, web app & content strategy, Aly nailed her first feature-length movie touring around the world, winning visibility and pushing the human trafficking conversation from the screens to the everyday life of movie goers. "
+          "p2": "La Danza de las Fieras is entering it’s distribution phase as Aly and her team continue to raise awareness on the human trafficking crisis.<br/><br/>Supported by a powerful branding, web app & content strategy, Aly nailed her first feature-length movie touring around the world, winning visibility and pushing the human trafficking conversation from the screens to the everyday life of movie goers. "
         },
         "sixth_section": {
           "linkp": "visit"
@@ -150,10 +154,10 @@
       "salvajenada": {
         "headerTitle": "Salvajenada",
         "title": "how do you share music nowadays?",
-        "tags": "Digital consulting</br>Strategy</br>Project administration",
+        "tags": "Digital consulting<br/>Strategy<br/>Project management",
         "video": "salvajenada.mp4",
         "logo": "salvajenada.svg",
-        "link": "/salvajenada",
+        "link": "salvajenada",
         "intro_section": {
           "tags": [
             "project strategy",
@@ -162,35 +166,35 @@
             "copywriting"
           ],
           "video": "salvajevideo.mp4",
-          "title": "<b>Act I</b></br>Death sights",
+          "title": "<b>Act I</b><br/>Death sights",
           "p": "Sebastián Díaz, aka Sebas, and his crew of music tasters -including our own founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
           "graphicp": "days without posting",
           "p2": "But one year before we partnered, Salvajenada was showing death sights. Their social media channels where deserted, their website was outdated and slow, and all its collaborators felt like the project had already given what it had, and nobody was taking any action."
         },
         "second_section": {
-          "title": "<b>Act II</b></br>The crafting of an amazing playlist",
-          "p": "The first thing was reviewing the founding ideas and values of the brand, its last actions, and their responsibilities in order to create a strong digital project. Even though Salvajenada had been afloat for over 5 years, this was the first time they were developing a proper model that framed their whole business model and company values.</br></br>Finding solutions is about making the right choices. A wide-picture perspective is mandatory in order to re-frame the complications of an organization and identify highlights and opportunities.",
+          "title": "<b>Act II</b><br/>The crafting of an amazing playlist",
+          "p": "The first thing was reviewing the founding ideas and values of the brand, its last actions, and their responsibilities in order to create a strong digital project. Even though Salvajenada had been afloat for over 5 years, this was the first time they were developing a proper model that framed their whole business model and company values.<br/><br/>Finding solutions is about making the right choices. A wide-picture perspective is mandatory in order to re-frame the complications of an organization and identify highlights and opportunities.",
           "sticky": "Listen on",
           "table": [
             {
               "label": "Strengths",
-              "content": "- Music discovery team</br>- Brand authority"
+              "content": "- Music discovery team<br/>- Brand authority"
             },
             {
               "label": "Restrictions",
-              "content": "- Collaborators time</br>- Only work on digital context"
+              "content": "- Collaborators time<br/>- Only work on digital context"
             }
           ],
-          "p2": "Context analysis threw a possible solution: bring back to life their new-discoveries playlist known as #CanastaBásica -which is spanish for food basket, an analogy for the basic dietary music needs for a human being- and make it the core product of the organization. </br></br>Collaborators would just drag and drop their daily discoveries into a joint list and the rest of the communication work would be done by three collaborators who formed a team for content creation and moderation.<br><br>But how could this playlist be more special than the plethora of selections you can find on the web? By building a strong value proposition and a solid strategy around it.",
+          "p2": "Context analysis threw a possible solution: bring back to life their new-discoveries playlist known as #CanastaBásica -which is spanish for food basket, an analogy for the basic dietary music needs for a human being- and make it the core product of the organization. <br/><br/>Collaborators would just drag and drop their daily discoveries into a joint list and the rest of the communication work would be done by three collaborators who formed a team for content creation and moderation.<br><br>But how could this playlist be more special than the plethora of selections you can find on the web? By building a strong value proposition and a solid strategy around it.",
           "table2": [
             {
-              "p": "Value proposition</br></br>Playlist updated every 15 days with new and authentic music. A selection of an experienced team of music researchers whose goal is to break with conventional trends and create new experiences."
+              "p": "Value proposition<br/><br/>Playlist updated every 15 days with new and authentic music. A selection of an experienced team of music researchers whose goal is to break with conventional trends and create new experiences."
             },
             {
-              "p": "Customer relationship</br></br>- Reviews, music in context</br>- Playlist update</br>- Authority badges"
+              "p": "Customer relationship<br/><br/>- Reviews, music in context<br/>- Playlist update<br/>- Authority badges"
             },
             {
-              "p": "Channels</br></br>- Social Media</br>- Music Platforms</br>- Radio show"
+              "p": "Channels<br/><br/>- Social Media<br/>- Music Platforms<br/>- Radio show"
             }
           ],
           "quote": {
@@ -200,7 +204,7 @@
         },
         "third_section": {
           "subtitle": "Post, engage and spread",
-          "p": "The discovery phase threw several insights that helped build the communication plan with an incredible playlist at its core. Through conducted research and data analysis Acueducto and the team decided to use Instagram as their main media channel, and publish the playlist updates through Apple Music and Spotify.</br></br>Taking this into consideration, a plan was crafted to reach and engage with the existing audience and new possible users.",
+          "p": "The discovery phase threw several insights that helped build the communication plan with an incredible playlist at its core. Through conducted research and data analysis Acueducto and the team decided to use Instagram as their main media channel, and publish the playlist updates through Apple Music and Spotify.<br/><br/>Taking this into consideration, a plan was crafted to reach and engage with the existing audience and new possible users.",
           "insights": {
             "periodicity": {
               "title": "Periodicity",
@@ -225,7 +229,7 @@
           }
         },
         "fourth_section": {
-          "title": "<b>Act III</b></br>Stats and plans",
+          "title": "<b>Act III</b><br/>Stats and plans",
           "p": "The strategy was implemented and after launch Salvajenada’s profiles on social media and music platforms threw immediate and positive results in areas such as following base, reach and engagement. Take a look at the data collected after the first semester of work:",
           "stats": [
             {
@@ -249,7 +253,7 @@
               "small": "daily email song submissions from listeners, artists, managers and PR agents"
             }
           ],
-          "p2": "Motivated by these results, Salvajenada is now thinking of how to turn their following base into revenue streams, current ideas go from organizing concerts and advertising music releases, to partnering with a vinyl store to offer a suscription-based physical record delivery system.</br></br>Taking over their niche with an amazing concept, Sebastián and his crew are currently working towards reaching and engaging with more people who, just like them, love discovering new music from around the world. </br></br>And taking Acueducto’s digital consultancy and partnership to develop a web experience, a new strategy is being built to offer value to this community of music lovers through content and digital innovation. "
+          "p2": "Motivated by these results, Salvajenada is now thinking of how to turn their following base into revenue streams, current ideas go from organizing concerts and advertising music releases, to partnering with a vinyl store to offer a suscription-based physical record delivery system.<br/><br/>Taking over their niche with an amazing concept, Sebastián and his crew are currently working towards reaching and engaging with more people who, just like them, love discovering new music from around the world. <br/><br/>And taking Acueducto’s digital consultancy and partnership to develop a web experience, a new strategy is being built to offer value to this community of music lovers through content and digital innovation. "
         },
         "fifth_section": {
           "title": "listen to #CanastaBasica"
@@ -259,27 +263,27 @@
   },
   "services": {
     "intro": {
-      "title": "from ideation</br>to launch",
-      "p": "– And everything in between.</br></br> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
+      "title": "from ideation<br/>to launch",
+      "p": "– And everything in between.<br/><br/> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
     },
     "service_categories": [
       {
         "title": "Strategy",
         "tags": [
-          "Project management",
-          "Community management",
-          "Digital marketing"
+          "Project Management",
+          "Community Management",
+          "Digital Marketing"
         ]
       },
       {
-        "title": "Design & content",
+        "title": "Design & Content",
         "tags": [
-          "Transmedia development",
-          "Art direction",
-          "UX design",
-          "Motion design",
+          "Transmedia Development",
+          "Art Direction",
+          "UX Design",
+          "Motion Design",
           "Copywriting",
-          "Impact evaluation"
+          "Impact Evaluation"
         ]
       },
       {
@@ -287,15 +291,15 @@
         "tags": [
           "Prototyping",
           "Development",
-          "User testing",
-          "Platform integration",
+          "User Testing",
+          "Platform Integration",
           "Deployment"
         ]
       }
     ]
   },
   "contactfooter": {
-    "title": "let's be partners,</br> let's talk business",
+    "title": "let's be partners,<br/> let's talk business",
     "p": "We would love to start getting to know you, write us directly at ",
     "copy": "Copy to clipboard",
     "copied": "Copied"
@@ -319,26 +323,26 @@
     },
     "intro": {
       "title": "partnering with impact seeking innovators",
-      "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. </br></br>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
-      "link": ["/about", "about us"],
+      "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. <br/><br/>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
+      "link": ["/en/about", "about us"],
       "linktext": "Read more"
     },
     "studies": {
-      "title": "tackling tough</br>business challenges",
-      "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.</br></br>Read about selected projects we have launched alongside our partners."
+      "title": "tackling complex<br/>business challenges",
+      "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.<br/><br/>Read about selected projects we have launched alongside our partners."
     }
   },
   "about_page": {
     "headerTitle": "About",
     "intro": {
       "title": "a two-part ensemble to grow your business",
-      "p": "Without us knowing, we started this studio 15 years ago when we began to fall in love with technology, music, and alternative & pop culture. Growing up together, and driven by each other’s perspectives, we would always push ourselves forward; and everytime we shared a song, a design, or a business idea, we felt fascinated by the mind of the other.</br></br>Motivated by high standards and innovation, we joined our professional paths in order to create thoughtful and powerful digital experiences.</br></br>Acueducto is not just a studio, is the result of a journey that has taken us many years to build, as our own firendship."
+      "p": "Without us knowing, we started this studio 15 years ago when we began to fall in love with technology, music, and alternative & pop culture. Growing up together, and driven by each other’s perspectives, we would always push ourselves forward; and everytime we shared a song, a design, or a business idea, we felt fascinated by the mind of the other.<br/><br/>Motivated by high standards and innovation, we joined our professional paths in order to create thoughtful and powerful digital experiences.<br/><br/>Acueducto is not just a studio, is the result of a journey that has taken us many years to build, as our own firendship."
     },
     "team": {
       "rodrigo": {
         "name": "rodrigo salmerón",
         "position": "strategy, design & development",
-        "bio": "An interaction, visual, and motion designer and an open-source-passionate developer with an Interaction Design Master of Arts from The Harbour Space University in Barcelona and 7 years of experience as a freelancer. </br></br>He has also worked for several design firms, film production houses, and development companies.</br></br>Rodrigo is also a music producer, composer, and lyricist; and whether it’s about music, coding or human-machine interactions, he’s always looking for new challenges and trying out the latest tools."
+        "bio": "An interaction, visual, and motion designer and an open-source-passionate developer with an Interaction Design Master of Arts from The Harbour Space University in Barcelona and 7 years of experience as a freelancer. <br/><br/>He has also worked for several design firms, film production houses, and development companies.<br/><br/>Rodrigo is also a music producer, composer, and lyricist; and whether it’s about music, coding or human-machine interactions, he’s always looking for new challenges and trying out the latest tools."
       },
       "artemio": {
         "name": "artemio pedraza",
@@ -347,24 +351,24 @@
       }
     },
     "values": {
-      "title": "building better</br> communities",
-      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.</br></br>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.",
-      "link": ["/manifesto", "Manifesto"],
+      "title": "building better<br/> communities",
+      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.",
+      "link": ["/en/manifesto", "Manifesto"],
       "linktext": "Read our"
     }
   },
   "work_page": {
     "headerTitle": "Work",
     "intro": {
-      "title": "our selected</br>case studies",
-      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what can it achieve.</br></br>Read about the selected projects we have launched alongside our partners."
+      "title": "our selected<br/>case studies",
+      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what can it achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
     }
   },
   "manifesto_page": {
     "headerTitle": "Manifesto",
     "intro": {
-      "title": "what makes</br> the work great",
-      "p": "Years of experience have shaped the core values of Acueducto; governed by the following principles, we aim to become better impact-driven business strategists and quality-driven digital experience developers. </br></br>This is our Manifesto."
+      "title": "what makes<br/> the work great",
+      "p": "Years of experience have shaped the core values of Acueducto; governed by the following principles, we aim to become better impact-driven business strategists and quality-driven digital experience developers. <br/><br/>This is our Manifesto."
     },
     "beliefs": [
       {
@@ -409,7 +413,7 @@
     "headerTitle": "Privacy Policy",
     "intro": {
       "title": "privacy policy",
-      "p": "There has never been a more critical time to reflect and act around privacy than now. Between users and technology, practices of data collection and information processes are being made; from data voluntarily provided by users to information collected just by browsing the web. In a world where interests and values vary, it has become a norm to demand a careful, transparent and ethical use of this information. </br></br>In Acueducto (“We”, “Us”, “Our”), we treat the information of the people we interact with responsibly. Here you can read about the data collection and processing practices of our site, as well as where to find the options to opt-out from them. We strongly recommend that you read this section carefully, as you should do with all the other sites you visit. </br></br>If you have any questions regarding these policies, do not hesitate to contact us at <a href='mailto:support@acueducto.studio'>support@acueducto.studio</a>"
+      "p": "There has never been a more critical time to reflect and act around privacy than now. Between users and technology, practices of data collection and information processes are being made; from data voluntarily provided by users to information collected just by browsing the web. In a world where interests and values vary, it has become a norm to demand a careful, transparent and ethical use of this information. <br/><br/>In Acueducto (“We”, “Us”, “Our”), we treat the information of the people we interact with responsibly. Here you can read about the data collection and processing practices of our site, as well as where to find the options to opt-out from them. We strongly recommend that you read this section carefully, as you should do with all the other sites you visit. <br/><br/>If you have any questions regarding these policies, do not hesitate to contact us at <a href='mailto:support@acueducto.studio'>support@acueducto.studio</a>"
     },
     "body": {
       "subtitle1": "about Acueducto",
@@ -420,12 +424,14 @@
       "subtitle3": "how we collect info",
       "p3": "All the information we process is acquired as follows:",
       "listItem1": "The contact links on this Application",
-      "listItem2": "Cookies or similar tactics (Read our ",
-      "listItem2Link": "Cookie Policy",
+      "listItem2": "Emails sent to adresses ending in @acueducto.studio",
+      "listItem3": "Cookies or similar tactics (Read our ",
+      "listItem3Link": "Cookie Policy",
       "subtitle4": "special and/or sensitive information we process",
-      "p4": "Acueducto does not intend to collect data from visitors who are under the age of 16 unless they have permission from their parents or guardians, however, we can not always confirm if our visitors are over 16. If you believe that we have collected data from a minor and you are his or her parent or guardian, contact us at <a href=”mailto:support@acueducto.studio”>support@acueducto.studio</a> and we will immediately delete this information.",
+      "p4": "Acueducto does not intend to collect data from visitors who are under the age of 16 unless they have permission from their parents or guardians, however, we can not always confirm if our visitors are over 16. If you believe that we have collected data from a minor and you are his or her parent or guardian, contact us at <a href='mailto:support@acueducto.studio'>support@acueducto.studio</a> and we will immediately delete this information.",
       "subtitle5": "for what purpose and under what circumstances we process personal information",
-      "list2": "<li>Optimize the operation of its Application</li><li>Contact potential partners</li><li>Improve its application Search Engine Optimization (SEO)</li>",
+      "p5": "Acueducto collects personal information when it intends to:",
+      "list2": "<li>Optimize the operation of our Application</li><li>Contact potential partners</li><li>Improve its application Search Engine Optimization (SEO)</li>",
       "subtitle6": "data protection",
       "p6": "In Acueducto, multiple measures are taken to protect the information it collects, such as safeguarding data in a cloud with passwords that change periodically, however, no measure guarantees that this data can fall into the wrong hands.<br/><br/>Rest assured that if Acueducto suffers from a security breach and your data is acquired by an unauthorized third party, appropriate measures will be taken and you will be notified about the situation.",
       "subtitle7": "changes to these Privacy Policies",
@@ -442,31 +448,31 @@
       "p0": "This Cookie Policy and its practices are governed by our ",
       "link0": "Privacy Policy",
       "title1": "essential cookies for the operation of the Application",
-      "p1": "These are strictly necessary for the proper operation of the Service. This Application uses Cookies that are saved in your session to carry out activities necessary for the operation of the site, for example, traffic distribution, language selection, etc. They do not store any personal or anonymous information about our Users.",
+      "p1": "These are strictly necessary for the proper operation of the Service. This Application uses Cookies that are saved in your browser to carry out activities necessary for the operation of the site, for example, traffic distribution, language selection, etc. They do not store any personal or anonymous information about our Users.",
       "title2": "activities with relations to preferences, optimizations, and statistics",
       "p2": "This Application uses cookies that save browser preferences to optimize your experience. These Cookies, for example, are those used for the analytics of the Application. They help us improve the Service by making us aware of the actions Users anonymously take inside the Application.",
       "subtitle3": "analytics",
       "p3": "This service allows monitoring and analyzing web traffic, and can be used to be aware of the User's behavior.",
       "subsubtitle4": "GOOGLE ANALYTICS (GOOGLE INC.)",
-      "p4": "Google Analytics is a web analysis service provided by Google Inc. (“Google”). Google utilizes the Data collected to track and examine the use of this Application, to prepare reports on its activities and share them with other Google services. Google may use the Data collected to contextualize and personalize the ads of its own advertising network.<br/>Personal Data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a href='https://policies.google.com/privacy'>Privacy Policy</a> – <a href='https://tools.google.com/dlpage/gaoptout'>Opt Out</a>",
+      "p4": "Google Analytics is a web analysis service provided by Google Inc. (“Google”). Google utilizes the data collected to track and examine the use of this Application, to prepare reports on its activities and share them with other Google services. Google may use the data collected to contextualize and personalize the ads of its own advertising network.<br/>Personal data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy'>Privacy Policy</a> – <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout'>Opt Out</a>",
       "subtitle5": "heat mapping and session recording",
-      "p5": "Heat mapping services are used to display the areas of a page where Users most frequently move the mouse or click, they allow us to interpret if our strategies and points of interest are working. These services make it possible to monitor and analyze web traffic and keep track of User behavior. Some of these services may record sessions and make them available for later visual playback.",
+      "p5": "Heat mapping services are used to display the areas of a page where Users most frequently move the mouse or click, they allow us to interpret if our strategies and points of interest are working. These services make it possible to monitor and analyze web traffic while keeping track of User behavior. Some of these services may record sessions and make them available for a later visual playback.",
       "subsubtitle6": "HOTJAR HEAT MAPS & RECORDINGS (HOTJAR LTD.)",
-      "p6": "Hotjar is a session recording and heat mapping service provided by Hotjar Ltd. Hotjar honors generic <i>Do Not Track</i> headers. This means the browser can tell its script not to collect any of the User's data. This is a setting that is available in all major browsers. Find Hotjar’s opt-out information here.<br/>Personal Data collected: Cookies, Usage Data and various types of Data as specified in the privacy policy of the service.<br/>Place of processing: Malta – <a href='https://www.hotjar.com/privacy'>Privacy Policy</a> – <a href='https://www.hotjar.com/legal/compliance/opt-out'>Opt Out.</a>",
+      "p6": "Hotjar is a session recording and heat mapping service provided by Hotjar Ltd. (“Hotjar”). Hotjar honors generic <i>Do Not Track</i> headers. This means the browser can tell its script not to collect any of the User's data. This is a setting that is available in all major browsers. Find Hotjar’s opt-out information here.<br/>Personal Data collected: Cookies, Usage Data and various types of data as specified in their privacy policy.<br/>Place of processing: Malta – <a  target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy'>Privacy Policy</a> – <a  target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/legal/compliance/opt-out'>Opt Out.</a>",
       "subtitle7": "contact management and message sending",
-      "p7": "This type of service makes it possible to manage a database of email contacts, phone contacts or any other contact information to communicate with the User. These services may also collect data concerning the date and time when the message was viewed by the User, as well as when the User interacted with it, such as by clicking on links included in the message.",
+      "p7": "This type of service makes it possible to manage a database of email contacts, phone contacts or any other contact information to communicate with the User. These services may also collect data concerning the date and time when any message sent by the Servicee was viewed by the User, as well as when the User interacted with it, such as by clicking on links included in the message.",
       "subsubtitle8": "MAILCHIMP (THE ROCKET SCIENCE GROUP, LLC).",
-      "p8": "Mailchimp is an email address management and message sending service provided by The Rocket Science Group.</br>Personal Data collected: Cookies, email address, first name, and Usage Data. Place of processing: United States – <a href='https://mailchimp.com/legal/privacy/'>Privacy Policy</a> – Opt Out",
+      "p8": "Mailchimp is an email address management and message sending service provided by The Rocket Science Group LLC. (“MailChimp”). MailChimp allows managing email databases and sending email messages to Users who subscribe to these databases.<br/>Personal Data collected: Cookies, email address, first name, and Usage Data. Place of processing: United States – <a  target='_blank' rel='noopener noreferrer' href='https://mailchimp.com/legal/privacy/'>Privacy Policy</a> – Unsubscribe",
       "subtitle9": "tag management",
       "p9": "This type of service helps the Application manage the tags or scripts needed on this Application in a centralized fashion. This results in the Users' data flowing through tag management services, potentially resulting in the retention of this data.",
       "subsubtitle10": "GOOGLE TAG MANAGER (GOOGLE LLC)",
-      "p10": "Google Tag Manager is a tag management service provided by Google LLC. Personal Data collected: Cookies and Usage Data.</br>Place of processing: United States – <a href='https://policies.google.com/privacy'>Privacy Policy</a>"
+      "p10": "Google Tag Manager is a tag management service provided by Google LLC. Personal Data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy'>Privacy Policy</a>"
     }
   },
   "error_page": {
     "headerTitle": "Error",
     "intro": {
-      "title": "oops!</br> page not found",
+      "title": "oops!<br/> page not found",
       "p": "This page doesn’t exist, please check if the URL is correct. If you think this is a problem on our end please contact us at <a class='inline' href='mailto:support@acueducto.studio'>support@acueducto.studio</a>."
     }
   }

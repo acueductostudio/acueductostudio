@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 export default function Nav(props) {
   let t = props.locale.nav;
+  let l = props.locale.legal_nav;
 
   const ActiveLink = ({ children, ...props }) => {
     const router = useRouter();
@@ -77,12 +78,12 @@ export default function Nav(props) {
               </Hoverable>
             </Social>
             <Policies onClick={props.closeNav}>
-              <Link href="/cookies">
-                <Hoverable>cookie policy</Hoverable>
+              <Link href={l.cookies.link} passHref>
+                <Hoverable>{l.cookies.title}</Hoverable>
               </Link>
               <span> | </span>
-              <Link href="/privacy">
-                <Hoverable>privacy policy</Hoverable>
+              <Link href={l.privacy.link} passHref>
+                <Hoverable>{l.privacy.title}</Hoverable>
               </Link>
             </Policies>
           </BottomNav>

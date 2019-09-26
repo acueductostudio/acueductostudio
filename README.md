@@ -1,8 +1,21 @@
 # Acueducto Web App
 
-## Articles for development
+## Arte:
 
-- [Localization](https://medium.com/@isaachinman/creating-localised-nextjs-apps-with-next-i18next-f01d5e610307)
+- Los tags (preview de portafolio) de salvajenada pueden ser mejores?
+- Grabación de Sesiones no estaba traducido con la nueva policy
+- Google INC o Google LLC (Cookie Policy es en)
+- Google tag manager no describe lo que hace como los demás, importa?
+
+- Caso de estudio o estudio de caso?
+
+## Lang
+
+- Head to take title and description from db / alt tags?
+- html lang no sirve en el export
+- href lang tags head
+- global será styled component? para minimizarse en prod
+- No tiene sentido importar el locale manualmente en cada página, probar ContextProvider (al final es estático el cotorreo)
 
 ## Responsive:
 
@@ -12,8 +25,8 @@
 
 ## Optimizar:
 
+- Robots.txt / meta + sitemap
 - Importar fondos de salvajenada
-- Head to take title and description from db / alt tags?
 
 ## Detalles:
 
@@ -24,11 +37,8 @@
 
 # Futuro
 
-- global será styled component? para minimizarse en prod
 - Problemón con scroll en mobile
 - Humans.txt
 - Server no carga / y sin /
-- Language change
-- html lang
 - No tiene sentido importar el locale manualmente en cada página, probar ContextProvider
 - Redesing Potfolio component
