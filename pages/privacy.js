@@ -21,7 +21,7 @@ export default function Privacy(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/privacy"}
+        canonical={"https://acueducto.studio/privacy/"}
       />
       <SimplePinnedSection t={t}>
         <Fade>

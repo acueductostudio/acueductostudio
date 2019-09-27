@@ -22,7 +22,7 @@ export default function Work(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/work"}
+        canonical={"https://acueducto.studio/work/"}
       />
       <TitleSection
         title={t.intro.title}

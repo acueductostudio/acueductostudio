@@ -4,7 +4,8 @@
     {
       "src": "/(((?!\\?|#|\\.|_next).)*((?!\\?|/|#|\\.).))",
       "status": 301,
-      "headers": { "Location": "/$1/" }
+      "headers": { "Location": "/$1/" },
+      "continue": true
     },
     { "handle": "filesystem" }
   ]
