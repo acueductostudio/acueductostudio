@@ -2,9 +2,9 @@
   "name": "acueducto",
   "routes": [
     {
-      "src": "/(((?!\\?|#|\\.|_next).)*((?!\\?|/|#|\\.).))",
+      "src": "/(.*)/",
       "status": 301,
-      "headers": { "Location": "/$1/" },
+      "headers": { "Location": "/$1" },
       "continue": true
     },
     { "handle": "filesystem" }

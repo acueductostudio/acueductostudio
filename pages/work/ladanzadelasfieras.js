@@ -66,7 +66,7 @@ function LaDanzaDeLasFieras(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/ladanzadelasfieras/"}
+        canonical={"https://acueducto.studio/ladanzadelasfieras"}
       />
       <Fade>
         <LandSection>

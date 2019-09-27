@@ -21,7 +21,7 @@ export default function Cookies(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/cookies/"}
+        canonical={"https://acueducto.studio/cookies"}
       />
       <SimplePinnedSection t={t}>
         <Fade>

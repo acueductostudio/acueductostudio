@@ -31,7 +31,7 @@ export default function Manifesto(props) {
         description={
           "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
         }
-        canonical={"https://acueducto.studio/manifesto/"}
+        canonical={"https://acueducto.studio/manifesto"}
       />
       <PinnedSection t={t}>
         <ol>{beliefs}</ol>

@@ -3,7 +3,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
-  exportTrailingSlash: true,
+  exportTrailingSlash: false,
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
