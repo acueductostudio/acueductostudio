@@ -7,7 +7,6 @@ import Cookies from "js-cookie/src/js.cookie";
 import en from "../static/locales/en/common.json";
 import es from "../static/locales/es/common.json";
 import { hotjar } from "react-hotjar";
-import Router from "next/router";
 
 export default class MyApp extends App {
   constructor(props) {

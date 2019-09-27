@@ -62,18 +62,18 @@
         "link": "ladanzadelasfieras",
         "intro_section": {
           "tags": [
-            "project strategy",
+            "estrategia de proyecto",
             "branding",
-            "web design",
+            "diseño web",
             "ux",
-            "animation",
-            "coding",
-            "content strategy",
-            "digital tov",
+            "animación",
+            "programación",
+            "estrategia de contenido",
+            "tov digital",
             "copywriting"
           ],
           "video": "lddlf_intro.mp4",
-          "title": "<b>Act I</b> <br/>Aly’s first <br/>feature-length",
+          "title": "<b>Acto I</b> <br/>El primer largometraje<br/>de Aly",
           "p": "Alayde, better known as Aly, is a filmmaker, creative and creative director of her self-founded production company, Antítesis. Fueled by the idea that young artists can make an innovative impact in the film industry, she worked along with film production house Bala Films to create La Danza de las Fieras (The Wild Dance).<br/><br/>La Danza de las Fieras is a feature-length film that is raising awareness about human trafficking. It’s made up of six short films, each one focused on a different dimension of this topic. The movie was awarded five international film awards, including Best Film, and was selected in 11 film festivals in México and across the globe.",
           "stats": [
             {
@@ -160,15 +160,15 @@
         "link": "salvajenada",
         "intro_section": {
           "tags": [
-            "project strategy",
-            "content strategy",
-            "digital tov",
+            "estrategia de proyecto",
+            "estrategia de contenido",
+            "tov digital",
             "copywriting"
           ],
           "video": "salvajevideo.mp4",
-          "title": "<b>Act I</b><br/>Death sights",
+          "title": "<b>Acto I</b><br/>Señales de muerte",
           "p": "Sebastián Díaz, aka Sebas, and his crew of music tasters -including our own founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
-          "graphicp": "days without posting",
+          "graphicp": "días sin postear",
           "p2": "But one year before we partnered, Salvajenada was showing death sights. Their social media channels where deserted, their website was outdated and slow, and all its collaborators felt like the project had already given what it had, and nobody was taking any action."
         },
         "second_section": {
@@ -305,10 +305,10 @@
     "copied": "Copiado"
   },
   "cookie_message": {
-    "title": "I’m okay with cookies",
-    "p": "We only use cookies to give you the best experience but you can review our ",
-    "link": "cookie policy",
-    "p_continued": " and opt-out if you wish. If you continue to use this site, we’ll asume you’re okay with it."
+    "title": "cookies bienvenidas",
+    "p": "Solo usamos cookies para brindarte la mejor experiencia en nuestro sitio, pero puedes revisar nuestra ",
+    "link": "política de cookies",
+    "p_continued": " e inhibirlas si prefieres. Si sigues navegando por aquí asumiremos que estás de acuerdo con ellas."
   },
   "next_study": {
     "p": "haz click para ver el siguiente caso de estudio"

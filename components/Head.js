@@ -35,12 +35,12 @@ const Meta = props => {
         (props.lang == "es" ? (
           <>
             <link rel="canonical" href={props.canonical} />
-            <link rel="alternate" hreflang="en" href={props.en_canonical} />
+            <link rel="alternate" hrefLang="en" href={props.en_canonical} />
           </>
         ) : (
           <>
             <link rel="canonical" href={props.en_canonical} />
-            <link rel="alternate" hreflang="es" href={props.canonical} />
+            <link rel="alternate" hrefLang="es" href={props.canonical} />
           </>
         ))}
     </Head>

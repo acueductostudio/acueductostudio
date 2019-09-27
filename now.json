@@ -1,1 +1,1 @@
-{ "name": "acueducto" }
+{ "name": "acueducto", "builds": [{ "src": "**/*.js", "use": "@now/static" }] }

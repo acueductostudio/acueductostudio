@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang={this.props.lang}>
         <Head>
-          <meta charset="utf-8" key="unique_charset" />
+          <meta charSet="utf-8" key="unique_charset" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
