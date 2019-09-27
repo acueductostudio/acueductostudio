@@ -1,1 +1,11 @@
-{ "name": "acueducto" }
+{
+  "name": "acueducto",
+  "routes": [
+    { "handle": "filesystem" },
+    {
+      "src": "/(((?!\\?|#|\\.|_next).)*((?!\\?|/|#|\\.).))",
+      "status": 301,
+      "headers": { "Location": "/$1/" }
+    }
+  ]
+}
