@@ -2,9 +2,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true"
 });
 
-module.exports = withBundleAnalyzer({
-  webpack(config, options) {
-    // access to webpack config here
+const nextConfig = {
+  exportTrailingSlash: true,
+  webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: [
@@ -16,7 +16,8 @@ module.exports = withBundleAnalyzer({
         }
       ]
     });
-
     return config;
   }
-});
+};
+
+module.exports = withBundleAnalyzer(nextConfig);
