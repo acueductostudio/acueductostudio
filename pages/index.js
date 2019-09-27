@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
-import TitleSection from "../components/TitleSection";
-import PageClipper from "../components/PageClipper";
-import Process from "../components/Process";
-import CaseStudiesPreview from "../components/caseStudy/CaseStudiesPreview";
-import ContactFooter from "../components/ContactFooter";
-import createMarkup from "../helpers/createMarkup";
-import Services from "../components/Services";
-import LogoComplete from "../static/assets/img/layout/logoComplete.svg";
-import Holed from "../static/assets/img/layout/holed.svg";
-import Head from "../components/Head";
+import TitleSection from "components/TitleSection";
+import PageClipper from "components/PageClipper";
+import Process from "components/Process";
+import ContactFooter from "components/ContactFooter";
+import { H1, H2 } from "components/shared/Dangerously";
+import Services from "components/Services";
+import LogoComplete from "static/assets/img/layout/logoComplete.svg";
+import Holed from "static/assets/img/layout/holed.svg";
+import CaseList from "components/caseStudy/CaseList";
+import Head from "components/Head";
 
 export default function Index(props) {
   let t = props.locale.home_page;
-  let c = props.locale.casestudies;
+  let c = props.locale.casestudies.studies;
   let s = props.locale.services;
   let p = props.locale.process;
   let f = props.locale.contactfooter;
@@ -29,15 +29,14 @@ export default function Index(props) {
       <PageClipper unPadded>
         <Head
           title={t.page_title}
-          description={t.meta_description}
           canonical={"https://acueducto.studio/"}
           en_canonical={"https://acueducto.studio/en"}
           lang={props.lang}
         />
         <Land>
           <LandContainer>
-            <h1 dangerouslySetInnerHTML={createMarkup(t.landing.heading)} />
-            <h2 dangerouslySetInnerHTML={createMarkup(t.landing.tagline)} />
+            <H1>{t.landing.heading}</H1>
+            <H2>{t.landing.tagline}</H2>
           </LandContainer>
         </Land>
         <Intro id="removeArrow">
@@ -79,7 +78,8 @@ export default function Index(props) {
         </ImageGalleryRemovable>
         <Divider />
         <Process p={p} />
-        <CaseStudiesPreview c={c} cpage={t.studies} noPlay lang={props.lang} />
+        <TitleSection title={t.studies.title} text={t.studies.p} borderTop />
+        <CaseList c={c} lang={props.locale.lang} noPlay />
         <Services s={s} />
         <ContactFooter f={f} />
       </PageClipper>

@@ -13,7 +13,7 @@ import Ibero from "static/assets/img/casestudies/salvajenada/ibero.svg";
 import Wolf from "static/assets/img/casestudies/salvajenada/wolf.svg";
 import Apple from "static/assets/img/casestudies/salvajenada/apple.svg";
 import Spotify from "static/assets/img/casestudies/salvajenada/spotify.svg";
-import { H2, H3, P } from "components/caseStudy/shared/Dangerously";
+import { H2, H3, P } from "components/shared/Dangerously";
 import IntroVideo from "components/caseStudy/shared/IntroVideo";
 import Marquee from "components/caseStudy/shared/Marquee";
 import Insight from "components/caseStudy/shared/Insight";
@@ -98,10 +98,7 @@ export default function Salvajenada(props) {
   return (
     <PageClipper unPadded>
       <Head
-        title={"Where playlists meet strategy | Salvajenada & Acueducto"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
+        title={t.page_title}
         canonical={"https://acueducto.studio/portafolio/salvajenada"}
         en_canonical={"https://acueducto.studio/en/work/salvajenada"}
         lang={props.lang}
@@ -137,10 +134,18 @@ export default function Salvajenada(props) {
           <Sticky>
             <span>{t.second_section.sticky}</span>
             <div>
-              <a href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g"
+              >
                 <Spotify />
               </a>
-              <a href="https://music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP"
+              >
                 <Apple />
               </a>
             </div>
@@ -208,15 +213,17 @@ export default function Salvajenada(props) {
           <H2>{t.fourth_section.title}</H2>
           <P>{t.fourth_section.p}</P>
         </Column>
-        <StatGrid>
-          <Stat stat={t.fourth_section.stats[0]} />
-          <Stat stat={t.fourth_section.stats[1]} />
-          <Stat stat={t.fourth_section.stats[2]} />
-          <Stat stat={t.fourth_section.stats[3]} />
-          <Stat stat={t.fourth_section.stats[4]}>
-            <Wolf />
-          </Stat>
-        </StatGrid>
+        <Fade>
+          <StatGrid>
+            <Stat stat={t.fourth_section.stats[0]} />
+            <Stat stat={t.fourth_section.stats[1]} />
+            <Stat stat={t.fourth_section.stats[2]} />
+            <Stat stat={t.fourth_section.stats[3]} />
+            <Stat stat={t.fourth_section.stats[4]}>
+              <Wolf />
+            </Stat>
+          </StatGrid>
+        </Fade>
         <Column>
           <P>{t.fourth_section.p2}</P>
         </Column>
@@ -227,9 +234,15 @@ export default function Salvajenada(props) {
           <H3>{t.fifth_section.title}</H3>
         </Column>
         {loadAssets && <FramesEmbed />}
-        <a href="https://www.instagram.com/salvajenada/">
-          <Ig />
-        </a>
+        <Fade>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/salvajenada/"
+          >
+            <Ig />
+          </a>
+        </Fade>
       </Fifth>
       <NextStudy n={n} link="ladanzadelasfieras" />
       <ContactFooter f={f} />

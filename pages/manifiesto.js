@@ -4,12 +4,14 @@ import { useEffect } from "react";
 import PageClipper from "../components/PageClipper";
 import ContactFooter from "../components/ContactFooter";
 import PinnedSection from "../components/PinnedSection";
-import CaseStudiesPreview from "../components/caseStudy/CaseStudiesPreview";
+import TitleSection from "components/TitleSection";
+import CaseList from "components/caseStudy/CaseList";
+import Fade from "react-reveal/Fade";
 
 export default function Manifesto(props) {
   let t = props.locale.manifesto_page;
   let f = props.locale.contactfooter;
-  let c = props.locale.casestudies;
+  let c = props.locale.casestudies.studies;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -18,19 +20,18 @@ export default function Manifesto(props) {
   let beliefs = t.beliefs.map(function(belief, index) {
     return (
       <Belief key={"belief" + index}>
-        <span>0{index + 1}</span>
-        <h3>{belief.title}</h3>
-        <p>{belief.p}</p>
+        <Fade>
+          <span>0{index + 1}</span>
+          <h3>{belief.title}</h3>
+          <p>{belief.p}</p>
+        </Fade>
       </Belief>
     );
   });
   return (
     <PageClipper>
       <Head
-        title={"Manifesto | What makes us better"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
+        title={t.page_title}
         canonical={"https://acueducto.studio/manifiesto"}
         en_canonical={"https://acueducto.studio/en/manifesto"}
         lang={props.lang}
@@ -38,7 +39,8 @@ export default function Manifesto(props) {
       <PinnedSection t={t}>
         <ol>{beliefs}</ol>
       </PinnedSection>
-      <CaseStudiesPreview c={c} lang={props.lang} />
+      <TitleSection title={t.cases.title} text={t.cases.p} borderTop />
+      <CaseList c={c} lang={props.locale.lang} />
       <ContactFooter f={f} />
     </PageClipper>
   );

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { useState } from "react";
 import Fade from "react-reveal/Fade";
-import createMarkup from "../helpers/createMarkup";
+import { H1 } from "components/shared/Dangerously";
 import TitleSectionGrid from "./TitleSectionGrid";
-import Logo from "./../static/assets/img/layout/logo.svg";
-import Mail from "./../static/assets/img/layout/mail.svg";
+import Logo from "static/assets/img/layout/logo.svg";
+import Mail from "static/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { logEvent } from "../helpers/analytics";
+import { logEvent } from "utils/analytics";
 
 const ContactFooter = props => {
   let f = props.f;
@@ -32,9 +32,7 @@ const ContactFooter = props => {
 
   return (
     <Grid borderTop={props.borderTop} id="contact">
-      <Fade>
-        <h1 dangerouslySetInnerHTML={createMarkup(f.title)} />
-      </Fade>
+      <H1>{f.title}</H1>
       <CopyToClipboard
         text={"hola@acueducto.studio"}
         onCopy={doSetCopied}

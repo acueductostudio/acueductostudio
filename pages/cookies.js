@@ -1,11 +1,11 @@
-import Head from "next/head";
+import Head from "components/Head";
 import Link from "next/link";
 import Fade from "react-reveal/Fade";
 import { useEffect } from "react";
-import PageClipper from "../components/PageClipper";
-import SimplePinnedSection from "../components/SimplePinnedSection";
-import createMarkup from "../helpers/createMarkup";
-import ContactFooter from "../components/ContactFooter";
+import PageClipper from "components/PageClipper";
+import SimplePinnedSection from "components/SimplePinnedSection";
+import createMarkup from "utils/createMarkup";
+import ContactFooter from "components/ContactFooter";
 
 export default function Cookies(props) {
   let t = props.locale.cookies_page;
@@ -19,10 +19,7 @@ export default function Cookies(props) {
   return (
     <PageClipper>
       <Head
-        title={"Cookie Policy | Acueducto"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
+        title={t.page_title}
         canonical={"https://acueducto.studio/cookies"}
         en_canonical={"https://acueducto.studio/en/cookies"}
         lang={props.lang}

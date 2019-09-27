@@ -1,1 +1,15 @@
-{ "name": "acueducto", "builds": [{ "src": "**/*.js", "use": "@now/static" }] }
+{
+  "name": "acueducto",
+  "routes": [
+    {
+      "src": "/(.*)/",
+      "status": 301,
+      "headers": { "Location": "/$1" },
+      "continue": true
+    },
+    { "handle": "filesystem" },
+    { "src": "/robots.txt", "dest": "/static/robots.txt" },
+    { "src": "/sitemap.xml", "dest": "/static/sitemap.xml" }
+  ],
+  "builds": [{ "src": "**/*.js", "use": "@now/static" }]
+}

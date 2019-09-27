@@ -2,32 +2,32 @@
 
 ## Arte:
 
-- Los tags (preview de portafolio) de salvajenada pueden ser mejores?
 - Grabación de Sesiones no estaba traducido con la nueva policy mi neneeeeeee
-- Google INC o Google LLC (Cookie Policy es en)
-- Google tag manager no describe lo que hace como los demás, importa?
-
-- Caso de estudio o estudio de caso?
-- Work se llama portafolio?
 
 ## Lang
 
-- Head to take title and description from db / alt tags?
-- html lang no sirve en el export
-- está de la verga el mensaje del nav
-- Server no carga / y sin /
+- Salvajenada: design consulting / consultoría de diseño y desarrollo de producto / product development
+- es Caso de estudio
+- Tag manager mismo opt out que el de analytics
+- Es Google LLC (Cookie policy es / en)
+- html lang no sirve en el export\*
+- está de la verga el mensaje del nav\*
 
 - Case studies meter
 - No tiene sentido importar el locale manualmente en cada página, probar ContextProvider (al final es estático el cotorreo)
 
+- logo de acueducto en nav cuando estás en home y scrolleas te regresa arriba
+- componente de portafolio no tiene hover, la foto hace zoom, titulo se subraya, flecha se hace azul
+- cookie y privacy links on nav cannot be opened on another tab
+- descripciones documento en gdocs, descrripción principal
+
 ## Responsive:
 
 - heads in firefox
-- sitemap
 
 ## Optimizar:
 
-- Robots.txt / meta + sitemap
+- Testear robots.txt e incluír el sitemap ahí
 - Importar fondos de salvajenada
 
 ## Detalles:

@@ -1,10 +1,10 @@
-import Head from "../components/Head";
+import Head from "components/Head";
 import Link from "next/link";
 import Fade from "react-reveal/Fade";
-import PageClipper from "../components/PageClipper";
-import SimplePinnedSection from "../components/SimplePinnedSection";
-import createMarkup from "../helpers/createMarkup";
-import ContactFooter from "../components/ContactFooter";
+import PageClipper from "components/PageClipper";
+import SimplePinnedSection from "components/SimplePinnedSection";
+import createMarkup from "utils/createMarkup";
+import ContactFooter from "components/ContactFooter";
 import { useEffect } from "react";
 
 export default function Privacy(props) {
@@ -19,10 +19,7 @@ export default function Privacy(props) {
   return (
     <PageClipper>
       <Head
-        title={"Privacy Policy | Acueducto"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
+        title={t.page_title}
         canonical={"https://acueducto.studio/privacidad"}
         en_canonical={"https://acueducto.studio/en/privacy"}
         lang={props.lang}

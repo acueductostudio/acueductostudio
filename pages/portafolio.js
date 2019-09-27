@@ -1,10 +1,10 @@
-import Head from "../components/Head";
+import Head from "components/Head";
 import styled from "styled-components";
 import { useEffect } from "react";
-import TitleSection from "../components/TitleSection";
-import CaseList from "../components/caseStudy/CaseList";
-import PageClipper from "../components/PageClipper";
-import ContactFooter from "../components/ContactFooter";
+import TitleSection from "components/TitleSection";
+import CaseList from "components/caseStudy/CaseList";
+import PageClipper from "components/PageClipper";
+import ContactFooter from "components/ContactFooter";
 
 export default function Work(props) {
   let t = props.locale.work_page;
@@ -18,19 +18,12 @@ export default function Work(props) {
   return (
     <PageClipperPadded>
       <Head
-        title={"Our Work | Let's build amazing things together"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
+        title={t.page_title}
         canonical={"https://acueducto.studio/portafolio"}
         en_canonical={"https://acueducto.studio/en/work"}
         lang={props.lang}
       />
-      <TitleSection
-        title={t.intro.title}
-        text={t.intro.p}
-        link={t.intro.link}
-      />
+      <TitleSection title={t.intro.title} text={t.intro.p} />
       <CaseList c={c} lang={props.locale.lang} />
       <ContactFooter f={f} />
     </PageClipperPadded>

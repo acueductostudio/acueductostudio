@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import MarqueeHelper from "../../../helpers/react-double-marquee";
+import Fade from "react-reveal/Fade";
+import MarqueeHelper from "utils/react-double-marquee";
 
 const Marquee = ({ tags, amount }) => {
   let tagList = tags.map(function(tag, index) {
@@ -9,10 +10,12 @@ const Marquee = ({ tags, amount }) => {
   let list = <ul>{tagList}</ul>;
   return (
     <TagScroll>
-      <MarqueeHelper delay={0} childMargin={0}>
-        {list}
-        {amount === 2 ? list : null}
-      </MarqueeHelper>
+      <Fade>
+        <MarqueeHelper delay={0} childMargin={0}>
+          {list}
+          {amount === 2 ? list : null}
+        </MarqueeHelper>
+      </Fade>
     </TagScroll>
   );
 };

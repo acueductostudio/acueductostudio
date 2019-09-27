@@ -1,49 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://acueducto.studio/</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://acueducto.studio/about</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://acueducto.studio/work</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://acueducto.studio/manifesto</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://acueducto.studio/work/ladanzadelasfieras</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://acueducto.studio/work/salvajenada</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://acueducto.studio/cookies</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>0.50</priority>
-</url>
-<url>
-  <loc>https://acueducto.studio/privacy</loc>
-  <lastmod>2019-09-24T12:35:04+00:00</lastmod>
-  <priority>0.50</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://acueducto.studio</loc>
+    <lastmod>2019-08-26</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio"/>
+  </url>, 
+  <url>
+    <loc>https://acueducto.studio/nosotros</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>, 
+  <url>
+    <loc>https://acueducto.studio/portafolio</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,   
+  <url>
+    <loc>https://acueducto.studio/manifiesto</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,   
+  <url>
+    <loc>https://acueducto.studio/portafolio/ladanzadelasfieras</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>, 
+  <url>
+    <loc>https://acueducto.studio/portafolio/salvajenada</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,
+  <url>
+    <loc>https://acueducto.studio/privacidad</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,
+  <url>
+    <loc>https://acueducto.studio/cookies</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,   
+  <url>
+    <loc>https://acueducto.studio/en</loc>
+    <lastmod>2019-08-26</lastmod>
+  </url>,
+  <url>
+    <loc>https://acueducto.studio/en/about</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,   
+  <url>
+    <loc>https://acueducto.studio/en/manifesto</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,  
+  <url>
+    <loc>https://acueducto.studio/en/work</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,
+  <url>
+    <loc>https://acueducto.studio/en/work/ladanzadelasfieras</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,  
+  <url>
+    <loc>https://acueducto.studio/en/work/salvajenada</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,
+  <url>
+    <loc>https://acueducto.studio/en/cookies</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>,  
+  <url>
+    <loc>https://acueducto.studio/en/privacy</loc>
+    <lastmod>2019-09-27</lastmod>
+  </url>
 </urlset>

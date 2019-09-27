@@ -1,14 +1,10 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
-import createMarkup from "../helpers/createMarkup";
-import BorderedLink from "./styles/BorderedLink";
+import { H1, P } from "components/shared/Dangerously";
 
 const PinnedSection = ({ t, children, className }) => (
   <Pinned className={className}>
-    <Fade>
-      <h1 dangerouslySetInnerHTML={createMarkup(t.intro.title)} />
-      <p dangerouslySetInnerHTML={createMarkup(t.intro.p)} />
-    </Fade>
+    <H1>{t.intro.title}</H1>
+    <P>{t.intro.p}</P>
     <ScrollDown>{children}</ScrollDown>
   </Pinned>
 );

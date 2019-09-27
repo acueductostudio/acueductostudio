@@ -12,48 +12,45 @@
   },
   "lang": "es",
   "process": {
-    "title": "ponemos la estrategia en el núcleo",
-    "p": "Compartiremos una convicción contigo:<br/>La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles y las mejores formas de resolverlos.<br/><br/>En Acueducto vemos los problemas como oportunidades; paso a paso, junto a nuestros socios, usamos tecnología y desarrollamos estrategias para entregar los mejores resultados para ellos y sus usuarios.",
+    "title": "con la estrategia<br/>en el núcleo",
+    "p": "Compartiremos una convicción contigo:</br>La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles y áreas de oportunidad, así como la mejor forma de resolverlos. <br/><br/>En Acueducto vemos los problemas como oportunidades; paso a paso, y de la mano con nuestros socios, desarrollamos estrategias y usamos la tecnología para entregar los mejores resultados para ellos y sus usuarios.",
     "steps": [
       {
-        "title": "descubre",
-        "p": "Entiende el contexto, la audiencia, sus necesidades y los retos del proyecto.<br/>Informémonos",
+        "title": "descubrimiento",
+        "p": "Entendemos el contexto, la audiencia, las necesidades y retos del proyecto.<br/> Nos informamos.",
         "icon": "discover.svg"
       },
       {
-        "title": "visualiza",
-        "p": "Replantea el problema para resaltar nuevos conocimientos y oportunidades.<br/>Entremos en sentido.",
+        "title": "visualización",
+        "p": "Replanteamos el problema para resaltar nuevos hallazgos y oportunidades.</br>Fijamos el trayecto.",
         "icon": "envision.svg"
       },
       {
-        "title": "construye la historia",
-        "p": "Crea una estrategia que guíe el concepto, la priorización y co-creación.<br/>Creemos empatía",
+        "title": "narrativa",
+        "p": "Creamos una estrategia que guíe la conceptualización, priorización y co-creación.</br>Creamos empatía.",
         "icon": "buildstory.svg"
       },
       {
-        "title": "diseña, programa y crea",
-        "p": "Crea prototipos, copys y procesos. Pule el diseño, código y prueba el producto.<br/>Desarrollemos.",
+        "title": "diseño, código y ensamble",
+        "p": "Diseñamos prototipos, procesos y copywriting. Refinamos, programamos y verificamos la usabilidad del producto.</br>Desarrollamos.",
         "icon": "craft.svg"
       },
       {
-        "title": "lanza",
-        "p": "Implementa nuevas soluciones, administra el cambio organizacional y la innovación del producto.<br/>Guíemos el cambio.",
+        "title": "lanzamiento",
+        "p": "Implementamos las nuevas soluciones, apoyamos la adopción de cambios organizacionales y de inovación.</br>Guiamos el cambio.",
         "icon": "launch.svg"
       },
       {
-        "title": "evalúa",
-        "p": "Reflexiona, documenta e itera en el proceso y acercamiento.<br/>Mejoremos",
+        "title": "evaluación",
+        "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.</br>Nos volvemos mejores",
         "icon": "review.svg"
       }
     ]
   },
   "casestudies": {
-    "intro": {
-      "title": "nuestros estudios<br/> de caso",
-      "p": "Construimos estos casos de estudio para mostrar cómo una sólida y considerada estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos trabajado con nuestros socios."
-    },
     "studies": {
       "ladanzadelasfieras": {
+        "page_title": "Estrategia y producción cinematográfica | La Danza de las Fieras & Acueducto",
         "headerTitle": "LDDLF",
         "title": "estrategia y producción en la industria del cine",
         "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Animación<br/>Web App<br/>",
@@ -152,6 +149,7 @@
         }
       },
       "salvajenada": {
+        "page_title": "Difusión musical estratégica | Salvajenada & Acueducto",
         "headerTitle": "Salvajenada",
         "title": "¿cómo compartir música hoy en día?",
         "tags": "Consultoría digital<br/>Estrategia<br/>Project management",
@@ -263,8 +261,8 @@
   },
   "services": {
     "intro": {
-      "title": "desde la gestión de una idea hasta su lanzamiento",
-      "p": "– Y todo lo que hay en medio.<br/><br/>Nuestro proyectos favoritos son los que construimos desde cero con nuestro socios, por eso ofrecemos todas las etapas del desarrollo de una experiencia digital."
+      "title": "de la ideación<br/>al lanzamiento",
+      "p": "– Y todo lo que involucra.<br/><br/>Nuestros proyectos preferidos son los que construimos desde el inicio con nuestro socios, por eso ofrecemos todas las etapas del desarrollo de una experiencia digital."
     },
     "service_categories": [
       {
@@ -299,8 +297,8 @@
     ]
   },
   "contactfooter": {
-    "title": "seamos socios<br/>hablemos de negocios",
-    "p": "Nos encantaría conocerte, escríbenos a ",
+    "title": "asociémonos y elevemos tu negocio.",
+    "p": "Nos encantaría conocerte, escríbenos directamente a ",
     "copy": "Copiar al clipboard",
     "copied": "Copiado"
   },
@@ -308,31 +306,31 @@
     "title": "cookies bienvenidas",
     "p": "Solo usamos cookies para brindarte la mejor experiencia en nuestro sitio, pero puedes revisar nuestra ",
     "link": "política de cookies",
-    "p_continued": " e inhibirlas si prefieres. Si sigues navegando por aquí asumiremos que estás de acuerdo con ellas."
+    "p_continued": " e inhibirlas si prefieres. Si sigues navegando por el sitio asumiremos que estás de acuerdo con ellas."
   },
   "next_study": {
     "p": "haz click para ver el siguiente caso de estudio"
   },
   "home_page": {
-    "page_title": "Acueducto, estudio estrategico",
-    "meta_description": "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds.",
+    "page_title": "Acueducto, estudio de diseño estrategico y tecnología",
     "header_title": " ",
     "landing": {
       "heading": "buscamos la siguiente gran idea digital",
-      "tagline": "<b>acueducto</b> es un estudio de diseño estratégico y tecnología en CDMX."
+      "tagline": "<b>Acueducto</b> es un estudio de diseño estratégico y tecnología en CDMX."
     },
     "intro": {
       "title": "asociándonos con innovadores que buscan generar un impacto",
-      "p": "Como socios de Acueducto somos testigos de los enormes beneficios de la co-creación y la colaboración cercana; celebramos la importancia de las asociaciones y eso ofrecemos a nuestros clientes. Trabajar unidos de forma cercana, desde la gestión de una idea hasta su lanzamiento, para producir experiencias digitales que conecten realmente con audiencias y que tengan un impacto positivo en marcas, negocios y comunidades.<br/><br/>Nos emocionan los nuevos retos y las conexiones que conllevan. Así como los retos se convierten en proyectos, los socios terminan por ser amigos.",
+      "p": "Como socios de Acueducto somos testigos de los enormes beneficios de la co-creación y la estrecha colaboración; por ello celebramos la importancia de las asociaciones y esto ofrecemos a nuestros clientes. Trabajando juntos, desde la  ideación hasta el lanzamiento, logramos producir experiencias digitales que verdaderamente conectan con sus audiencias y provocan un impacto positivo en marcas, negocios y comunidades por igual.<br/><br/>Nos emocionan los nuevos retos y las conexiones que conllevan. Así como los retos se convierten en proyectos, nuestros socios se vuelven amigos.",
       "link": ["/nosotros", "nosotros"],
       "linktext": "Lee más sobre"
     },
     "studies": {
-      "title": "resolvemos complejos retos de negocio",
-      "p": "Construimos estos casos de estudio para mostrar cómo una sólida y considerada estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos trabajado con nuestros socios."
+      "title": "resolvemos desafiantes retos de negocio",
+      "p": "Elaboramos estos casos de estudio para mostrar cómo una sólida y esmerada estrategia digital agrega un valor extraordinario a cualquier idea.</br></br>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
     }
   },
   "about_page": {
+    "page_title": "Acerca de Acueducto",
     "headerTitle": "Nosotros",
     "intro": {
       "title": "un ensamble de dos partes que hace crecer tu negocio",
@@ -358,58 +356,65 @@
     }
   },
   "work_page": {
+    "page_title": "Nuestro trabajo - Construyamos productos increíbles, juntos",
     "headerTitle": "Portafolio",
     "intro": {
       "title": "casos de estudio seleccionados",
-      "p": "Cada proyecto que desarrollamos es único, así que escogimos estos casos de estudio para mostrar el trabajo que se hace en Acueducto y las cosas que puede lograr.<br/><br/>Lee sobre los proyectos seleccionados que hemos trabajado con nuestros socios."
+      "p": "Cada proyecto que desarrollamos es único, así que elegimos estos casos de estudio para retratar cómo trabaja Acueducto y lo que puede lograr.</br></br>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
     }
   },
   "manifesto_page": {
+    "page_title": "Manifiesto | Lo que nos hace mejores",
     "headerTitle": "Manifiesto",
     "intro": {
-      "title": "lo que hace nuestro trabajo sobresaliente",
-      "p": "Años de experiencia dieron vida a los valores fundamentales de Acueducto. Bajo estos principios, en cada proyecto buscamos ser mejores estrategas de negocios y desarrolladores de experiencias digitales de calidad.<br/><br/>Este es nuestro Manifiesto."
+      "title": "¿qué nos hace distintos?",
+      "p": "Años de experiencia han dado vida a los valores fundamentales de Acueducto. Siguiendo estos principios, en cada proyecto buscamos ser mejores estrategas de negocios y desarrolladores de experiencias digitales de calidad.<br/><br/>Este es nuestro manifiesto."
     },
     "beliefs": [
       {
-        "title": "Nos asociamos contigo",
-        "p": "Confía en nosotros, las alianzas llegan a los mejores resultados."
+        "title": "nos asociamos contigo",
+        "p": "Confía en nosotros, estas alianzas consiguen los mejores resultados."
       },
       {
-        "title": "Resolvemos tus problemas",
-        "p": "Trabajamos mejor si nos dejas analizarlos."
+        "title": "amamos los retos",
+        "p": "Trabajamos mejor si nos dejas analizar tus problemas."
       },
       {
-        "title": "Nos obsesiona la calidad",
-        "p": "Nuestro trabajo tiene que ser increíble ¿qué sentido tendría hacerlo si no es así?"
+        "title": "nos obsesiona la calidad",
+        "p": "Nuestro trabajo tiene que ser impecable ¿si no, para qué hacerlo?"
       },
       {
-        "title": "Somos humanos",
+        "title": "somos humanos",
         "p": "Ponemos primero la calidad humana, trabajamos con respeto y con clientes respetuosos."
       },
       {
-        "title": "Trabajamos para tus usuarios",
-        "p": "Habrá momentos que estaremos de su lado."
+        "title": "trabajamos para tus usuarios",
+        "p": "Habrá momentos en los que nos pondremos de su lado."
       },
       {
-        "title": "Somos románticos de la tecnología",
+        "title": "somos románticos de la tecnología",
         "p": "Siempre a la vanguardia, ofrecemos soluciones para el futuro."
       },
       {
-        "title": "Somos justos",
+        "title": "somos justos",
         "p": "Valuamos nuestro trabajo según el valor que agregamos a tu negocio."
       },
       {
-        "title": "Nos encanta aprender",
+        "title": "nos encanta aprender",
         "p": "Aceptamos el cambio, pues muchas veces es parte de la solución."
       },
       {
-        "title": "Somos accesibles",
+        "title": "somos accesibles",
         "p": "Escuchar tu opinión es parte fundamental de nuestro proceso."
       }
-    ]
+    ],
+    "cases": {
+      "title": "casos de estudio seleccionados",
+      "p": "Cada proyecto que desarrollamos es único, así que elegimos estos casos de estudio para retratar cómo trabaja Acueducto y lo que puede lograr.</br></br>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
+    }
   },
   "privacy_page": {
+    "page_title": "Política de Privacidad | Acueducto",
     "headerTitle": "privacidad",
     "intro": {
       "title": "política de privacidad",
@@ -439,6 +444,7 @@
     }
   },
   "cookies_page": {
+    "page_title": "Política de Cookies | Acueducto",
     "headerTitle": "cookies",
     "intro": {
       "title": "política de cookies",

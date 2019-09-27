@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import createMarkup from "../../../helpers/createMarkup";
+import { B } from "components/shared/Dangerously";
 
 const Stat = ({ stat, children }) => {
   return (
     <StatWrapper>
       <p>
-        <b dangerouslySetInnerHTML={createMarkup(stat.big)} />
+        <B>{stat.big}</B>
         {stat.small}
       </p>
       {children}

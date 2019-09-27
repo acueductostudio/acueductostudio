@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useRef } from "react";
-import createMarkup from "../../helpers/createMarkup";
+import { P } from "components/shared/Dangerously";
 import Fade from "react-reveal/Fade";
 import Arrow from "../../static/assets/img/layout/arrow.svg";
 import Link from "next/link";
@@ -73,7 +73,7 @@ const SingleCase = props => {
         </Fade>
         <Flexed>
           <Fade>
-            <p dangerouslySetInnerHTML={createMarkup(props.tags)} />
+            <P>{props.tags}</P>
           </Fade>
           <Link
             href={

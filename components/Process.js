@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import TitleSection from "../components/TitleSection";
-import createMarkup from "../helpers/createMarkup";
+import { P } from "components/shared/Dangerously";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
 
@@ -17,7 +17,7 @@ const StepContainer = props => {
         <span>0{props.index}</span>
         <Icon />
         <h3>{props.title}</h3>
-        <p dangerouslySetInnerHTML={createMarkup(props.p)} />
+        <P>{props.p}</P>
       </Fade>
     </Step>
   );

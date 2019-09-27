@@ -14,7 +14,7 @@ import Type_1 from "static/assets/img/casestudies/ladanzadelasfieras/type_1.svg"
 import Type_2 from "static/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
 import Type_3 from "static/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
 import AppSvg from "static/assets/img/casestudies/ladanzadelasfieras/app.svg";
-import { H2, H3, P } from "components/caseStudy/shared/Dangerously";
+import { H2, H3, P } from "components/shared/Dangerously";
 import IntroVideo from "components/caseStudy/shared/IntroVideo";
 import Marquee from "components/caseStudy/shared/Marquee";
 import Quote from "components/caseStudy/shared/Quote";
@@ -58,12 +58,7 @@ function LaDanzaDeLasFieras(props) {
   return (
     <PageClipper unPadded>
       <Head
-        title={
-          "From strategy to production | La Danza de las Fieras & Acueducto"
-        }
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
+        title={t.page_title}
         canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
         en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
         lang={props.lang}
@@ -81,10 +76,12 @@ function LaDanzaDeLasFieras(props) {
           <P>{t.intro_section.p}</P>
           <LaurelNumbers>
             <Laurel />
-            <ul>{initialStats}</ul>
+            <Fade>
+              <ul>{initialStats}</ul>
+            </Fade>
             <Laurel />
           </LaurelNumbers>
-          <p>{t.intro_section.p2}</p>
+          <P>{t.intro_section.p2}</P>
         </TextColumn>
       </FirstSection>
       <SecondSection>
@@ -95,37 +92,39 @@ function LaDanzaDeLasFieras(props) {
         {loadAssets && (
           <PosterGrid>
             <PosterLine />
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"
-              alt="First references for branding"
-            />
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
-              alt="First references for branding"
-            />
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
-              alt="First references for branding"
-            />
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
-              alt="Original sketch of poster design"
-            />
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
-              alt="Final poster design with awards"
-            />
+            <Fade>
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"
+                alt="First references for branding"
+              />
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
+                alt="First references for branding"
+              />
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
+                alt="First references for branding"
+              />
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
+                alt="Original sketch of poster design"
+              />
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
+                alt="Final poster design with awards"
+              />
+            </Fade>
           </PosterGrid>
         )}
       </SecondSection>
       <Section_Pre>
         <TextColumn>
           <Type>
-            <p>{t.second_section.font_logo}</p>
+            <P>{t.second_section.font_logo}</P>
             <Type_1 />
             <TypeGrid>
               <div>
-                <p>{t.second_section.font_body}</p>
+                <P>{t.second_section.font_body}</P>
                 <Type_2 />
               </div>
               <div>
@@ -148,10 +147,12 @@ function LaDanzaDeLasFieras(props) {
       <Section_Sub>
         <TransitionWrapper>
           {loadAssets && (
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
-              alt="Printed assets for film attendants"
-            />
+            <Fade>
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
+                alt="Printed assets for film attendants"
+              />
+            </Fade>
           )}
         </TransitionWrapper>
         <TextColumn>
@@ -160,13 +161,15 @@ function LaDanzaDeLasFieras(props) {
         </TextColumn>
         <SequenceContainer>
           {loadAssets && (
-            <ThePlayer
-              url={"https://www.youtube.com/watch?v=AJMXiE16gtc"}
-              still={
-                "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
-              }
-              ratio={"50.62%"}
-            />
+            <Fade>
+              <ThePlayer
+                url={"https://www.youtube.com/watch?v=AJMXiE16gtc"}
+                still={
+                  "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
+                }
+                ratio={"50.62%"}
+              />
+            </Fade>
           )}
         </SequenceContainer>
       </Section_Sub>
@@ -181,10 +184,12 @@ function LaDanzaDeLasFieras(props) {
           color={fierasRed}
         >
           {loadAssets && (
-            <Faces
-              src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
-              alt="Contact cards for directors and producers"
-            />
+            <Fade>
+              <Faces
+                src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
+                alt="Contact cards for directors and producers"
+              />
+            </Fade>
           )}
         </Insight>
         <Quote
@@ -198,10 +203,12 @@ function LaDanzaDeLasFieras(props) {
           number={2}
         >
           {loadAssets && (
-            <MacPress
-              src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
-              alt="A whole section for the press"
-            />
+            <Fade>
+              <MacPress
+                src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
+                alt="A whole section for the press"
+              />
+            </Fade>
           )}
         </Insight>
         <Quote
@@ -215,20 +222,24 @@ function LaDanzaDeLasFieras(props) {
           number={3}
         >
           {loadAssets && (
-            <MacContact
-              src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
-              alt="A contact component on every page"
-            />
+            <Fade>
+              <MacContact
+                src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
+                alt="A contact component on every page"
+              />
+            </Fade>
           )}
         </Insight>
         <TextColumn>
           <H3>{"– " + t.third_section.subtitle2}</H3>
           <P>{t.third_section.p2}</P>
           <AppGrid>
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png"
-              alt="A Progressive Web App"
-            />
+            <Fade>
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png"
+                alt="A Progressive Web App"
+              />
+            </Fade>
             <AppSvg />
           </AppGrid>
         </TextColumn>
@@ -239,22 +250,26 @@ function LaDanzaDeLasFieras(props) {
           <P>{t.fourth_section.p}</P>
           <Stat>
             <LogoF />
-            <b>81%</b>
-            <p>{t.fourth_section.stat}</p>
+            <Fade>
+              <b>81%</b>
+              <p>{t.fourth_section.stat}</p>
+            </Fade>
           </Stat>
           <P>{t.fourth_section.p2}</P>
           {loadAssets && (
-            <video
-              autoPlay
-              playsInline
-              muted
-              loop
-              poster={
-                "/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
-              }
-            >
-              <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
-            </video>
+            <Fade>
+              <video
+                autoPlay
+                playsInline
+                muted
+                loop
+                poster={
+                  "/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
+                }
+              >
+                <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
+              </video>
+            </Fade>
           )}
         </TextColumn>
       </Fourth>
@@ -269,18 +284,26 @@ function LaDanzaDeLasFieras(props) {
         />
         <TextColumn>
           {loadAssets && (
-            <img
-              src="/static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
-              alt="Festival awards"
-            />
+            <Fade>
+              <img
+                src="/static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+                alt="Festival awards"
+              />
+            </Fade>
           )}
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
       </Fifth>
       <Sixth>
-        <a href="https://ladanzadelasfieras.com">
-          {t.sixth_section.linkp} ladanzadelasfieras.com
-        </a>
+        <Fade>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://ladanzadelasfieras.com"
+          >
+            {t.sixth_section.linkp} ladanzadelasfieras.com
+          </a>
+        </Fade>
       </Sixth>
       <NextStudy n={n} link="salvajenada" />
       <ContactFooter f={f} />

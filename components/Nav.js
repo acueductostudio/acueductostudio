@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import Fade from "react-reveal/Fade";
-import Hoverable from "./styles/BorderedLink";
+import Hoverable from "components/shared/BorderedLink";
 import { useRouter } from "next/router";
 
 export default function Nav(props) {
@@ -60,18 +60,21 @@ export default function Nav(props) {
             <Social>
               <Hoverable
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.facebook.com/acueducto.co/"
               >
                 facebook
               </Hoverable>
               <Hoverable
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/acueducto.co/"
               >
                 instagram
               </Hoverable>
               <Hoverable
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/acueducto-co/"
               >
                 linkedin

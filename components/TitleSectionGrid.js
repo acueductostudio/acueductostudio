@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const TitleSectionGrid = styled.div`
+  background-color: ${props => props.theme.colors.background};
   border-top: ${props =>
     props.borderTop
       ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`

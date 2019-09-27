@@ -49,12 +49,9 @@
     ]
   },
   "casestudies": {
-    "intro": {
-      "title": "our selected<br/> case studies",
-      "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.<br/><br/>Read about selected projects we have launched alongside our partners."
-    },
     "studies": {
       "ladanzadelasfieras": {
+        "page_title": "From strategy to production | La Danza de las Fieras & Acueducto",
         "headerTitle": "LDDLF",
         "title": "from strategy to production in the filmmaking industry",
         "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
@@ -153,9 +150,10 @@
         }
       },
       "salvajenada": {
+        "page_title": "Where playlists meet strategy | Salvajenada & Acueducto",
         "headerTitle": "Salvajenada",
         "title": "how do you share music nowadays?",
-        "tags": "Digital consulting<br/>Strategy<br/>Project management",
+        "tags": "Digital consulting<br/>Design consulting<br/>Strategy<br/>Project development<br/>Project management",
         "video": "salvajenada.mp4",
         "logo": "salvajenada.svg",
         "link": "salvajenada",
@@ -163,7 +161,9 @@
           "tags": [
             "project strategy",
             "content strategy",
+            "product development",
             "digital tov",
+            "design consulting",
             "copywriting"
           ],
           "video": "salvajevideo.mp4",
@@ -316,7 +316,6 @@
   },
   "home_page": {
     "page_title": "Acueducto, a strategic design & technology studio.",
-    "meta_description": "We partner with innovators around the globe to develop experiences that tell compelling stories, inspire communities and build meaningful bonds.",
     "header_title": " ",
     "landing": {
       "heading": "we look for the next great digital idea",
@@ -334,6 +333,8 @@
     }
   },
   "about_page": {
+    "page_title": "About Acueducto",
+    "meta_description": "We partner with innovators around the globe to develop experiences that tell compelling stories, inspire communities and build meaningful bonds.",
     "headerTitle": "About",
     "intro": {
       "title": "a two-part ensemble to grow your business",
@@ -359,6 +360,7 @@
     }
   },
   "work_page": {
+    "page_title": "Our Work | Let's build amazing things together",
     "headerTitle": "Work",
     "intro": {
       "title": "our selected<br/>case studies",
@@ -366,6 +368,7 @@
     }
   },
   "manifesto_page": {
+    "page_title": "Manifesto | What makes us better",
     "headerTitle": "Manifesto",
     "intro": {
       "title": "what makes<br/> the work great",
@@ -408,9 +411,14 @@
         "title": "We are always open",
         "p": "We love feedback, hearing what you have to say is a fundamental part of our process."
       }
-    ]
+    ],
+    "cases": {
+      "title": "our selected<br/>case studies",
+      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what can it achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
+    }
   },
   "privacy_page": {
+    "page_title": "Privacy Policy | Acueducto",
     "headerTitle": "Privacy Policy",
     "intro": {
       "title": "privacy policy",
@@ -440,6 +448,7 @@
     }
   },
   "cookies_page": {
+    "page_title": "Cookie Policy | Acueducto",
     "headerTitle": "Cookie Policy",
     "intro": {
       "title": "cookie policy",

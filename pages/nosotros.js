@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
-import Head from "../components/Head";
-import TitleSection from "../components/TitleSection";
-import PageClipper from "../components/PageClipper";
-import createMarkup from "../helpers/createMarkup";
-import ContactFooter from "../components/ContactFooter";
-import PinnedSection from "../components/PinnedSection";
+import Head from "components/Head";
+import TitleSection from "components/TitleSection";
+import PageClipper from "components/PageClipper";
+import ContactFooter from "components/ContactFooter";
+import PinnedSection from "components/PinnedSection";
+import { P } from "components/shared/Dangerously";
 
 const HeadSketch = dynamic(import("../components/headSketch/HeadSketch"), {
   loading: () => (
@@ -27,10 +27,7 @@ export default function About(props) {
   return (
     <PageClipper>
       <Head
-        title={"About Acueducto"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
+        title={t.page_title}
         canonical={"https://acueducto.studio/nosotros"}
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
@@ -41,16 +38,16 @@ export default function About(props) {
           <Fade>
             <h4>{t.team.rodrigo.name}</h4>
             <span>{t.team.rodrigo.position}</span>
-            <p dangerouslySetInnerHTML={createMarkup(t.team.rodrigo.bio)} />
           </Fade>
+          <P>{t.team.rodrigo.bio}</P>
         </Person>
         <Person>
           <HeadSketch second rotationStart={50} invertRotation />
           <Fade>
             <h4>{t.team.artemio.name}</h4>
             <span>{t.team.artemio.position}</span>
-            <p dangerouslySetInnerHTML={createMarkup(t.team.artemio.bio)} />
           </Fade>
+          <P>{t.team.artemio.bio}</P>
         </Person>
       </PinnedSection>
       <TitleSection

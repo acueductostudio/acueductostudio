@@ -15,15 +15,13 @@ export default function Error(props) {
   return (
     <PageClipper>
       <Head
-        title={`Acueducto | ${
-          props.statusCode ? props.statusCode : "Client error"
-        }`}
+        title={`Acueducto | ${props.statusCode ? props.statusCode : "404"}`}
         lang={props.lang}
       />
       {props.statusCode ? (
         <TitleSection title={t.intro.title} text={t.intro.p} />
       ) : (
-        "An error occurred on client"
+        <TitleSection title={t.intro.title} text={t.intro.p} />
       )}
       <ContactFooter f={f} />
     </PageClipper>

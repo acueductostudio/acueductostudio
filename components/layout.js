@@ -8,7 +8,7 @@ import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
 import CookieMessage from "./CookieMessage";
 import ScrollIncentive from "./ScrollIncentive";
-import { initGA, logPageView } from "../helpers/analytics";
+import { initGA, logPageView } from "utils/analytics";
 
 const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
   ssr: false

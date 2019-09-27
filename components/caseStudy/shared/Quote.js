@@ -1,22 +1,25 @@
 import styled from "styled-components";
-import createMarkup from "../../../helpers/createMarkup";
-import Mark from "../../../static/assets/img/layout/quoteMark.svg";
+import { Blockquote } from "components/shared/Dangerously";
+import Mark from "static/assets/img/layout/quoteMark.svg";
+import Fade from "react-reveal/Fade";
 
 const Quote = props => (
-  <QuoteWrapper
-    passedColor={props.color}
-    noMargin={props.noMargin}
-    specialMarginBottom={props.specialMarginBottom}
-  >
-    <QuoteLimiter>
-      <QuoteMark passedColor={props.color}>
-        <Mark />
-      </QuoteMark>
-      <blockquote dangerouslySetInnerHTML={createMarkup(props.quote.quote)} />
-      <Author>– {props.quote.name}</Author>
-      {props.quote.label ? <Label>{props.quote.label}</Label> : null}
-    </QuoteLimiter>
-  </QuoteWrapper>
+  <Fade>
+    <QuoteWrapper
+      passedColor={props.color}
+      noMargin={props.noMargin}
+      specialMarginBottom={props.specialMarginBottom}
+    >
+      <QuoteLimiter>
+        <QuoteMark passedColor={props.color}>
+          <Mark />
+        </QuoteMark>
+        <Blockquote>{props.quote.quote}</Blockquote>
+        <Author>– {props.quote.name}</Author>
+        {props.quote.label ? <Label>{props.quote.label}</Label> : null}
+      </QuoteLimiter>
+    </QuoteWrapper>
+  </Fade>
 );
 
 export default Quote;
