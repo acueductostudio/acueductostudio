@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import head from "./head";
-import P5Wrapper from "react-p5-wrapper";
+import P5Wrapper from "utils/P5Wrapper";
 
 export default function HeadSketch(props) {
   return (

@@ -10,8 +10,6 @@ import Fade from "react-reveal/Fade";
 
 export default function Manifesto(props) {
   let t = props.locale.manifesto_page;
-  let f = props.locale.contactfooter;
-  let c = props.locale.casestudies.studies;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -32,6 +30,7 @@ export default function Manifesto(props) {
     <PageClipper>
       <Head
         title={t.page_title}
+        description={t.meta_description}
         canonical={"https://acueducto.studio/manifiesto"}
         en_canonical={"https://acueducto.studio/en/manifesto"}
         lang={props.lang}
@@ -40,8 +39,8 @@ export default function Manifesto(props) {
         <ol>{beliefs}</ol>
       </PinnedSection>
       <TitleSection title={t.cases.title} text={t.cases.p} borderTop />
-      <CaseList c={c} lang={props.locale.lang} />
-      <ContactFooter f={f} />
+      <CaseList />
+      <ContactFooter />
     </PageClipper>
   );
 }

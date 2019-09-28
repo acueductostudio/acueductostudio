@@ -8,8 +8,6 @@ import ContactFooter from "components/ContactFooter";
 
 export default function Work(props) {
   let t = props.locale.work_page;
-  let c = props.locale.casestudies.studies;
-  let f = props.locale.contactfooter;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -19,13 +17,14 @@ export default function Work(props) {
     <PageClipperPadded>
       <Head
         title={t.page_title}
+        description={t.meta_description}
         canonical={"https://acueducto.studio/portafolio"}
         en_canonical={"https://acueducto.studio/en/work"}
         lang={props.lang}
       />
       <TitleSection title={t.intro.title} text={t.intro.p} />
-      <CaseList c={c} lang={props.locale.lang} />
-      <ContactFooter f={f} />
+      <CaseList />
+      <ContactFooter />
     </PageClipperPadded>
   );
 }

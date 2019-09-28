@@ -10,7 +10,6 @@ import { useEffect } from "react";
 export default function Privacy(props) {
   let t = props.locale.privacy_page;
   let b = t.body;
-  let f = props.locale.contactfooter;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -57,7 +56,7 @@ export default function Privacy(props) {
           <p>{b.p7}</p>
         </Fade>
       </SimplePinnedSection>
-      <ContactFooter f={f} />
+      <ContactFooter />
     </PageClipper>
   );
 }

@@ -33,8 +33,6 @@ const salvajeBlue = "rgb(60, 179, 224)";
 export default function Salvajenada(props) {
   const [loadAssets, setloadAssets] = useState(false);
   let t = props.locale.casestudies.studies.salvajenada;
-  let f = props.locale.contactfooter;
-  let n = props.locale.next_study;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -99,6 +97,7 @@ export default function Salvajenada(props) {
     <PageClipper unPadded>
       <Head
         title={t.page_title}
+        description={t.meta_description}
         canonical={"https://acueducto.studio/portafolio/salvajenada"}
         en_canonical={"https://acueducto.studio/en/work/salvajenada"}
         lang={props.lang}
@@ -244,8 +243,8 @@ export default function Salvajenada(props) {
           </a>
         </Fade>
       </Fifth>
-      <NextStudy n={n} link="ladanzadelasfieras" />
-      <ContactFooter f={f} />
+      <NextStudy link="ladanzadelasfieras" />
+      <ContactFooter />
     </PageClipper>
   );
 }

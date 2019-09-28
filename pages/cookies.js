@@ -10,7 +10,6 @@ import ContactFooter from "components/ContactFooter";
 export default function Cookies(props) {
   let t = props.locale.cookies_page;
   let b = t.body;
-  let f = props.locale.contactfooter;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -58,7 +57,7 @@ export default function Cookies(props) {
           <p dangerouslySetInnerHTML={createMarkup(b.p10)} />
         </Fade>
       </SimplePinnedSection>
-      <ContactFooter f={f} />
+      <ContactFooter />
     </PageClipper>
   );
 }

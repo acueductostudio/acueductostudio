@@ -2,11 +2,17 @@ import Link from "next/link";
 import styled from "styled-components";
 import Logo from "./../static/assets/img/layout/logo.svg";
 
-function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale }) {
+function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
+  const backUp = e => {
+    (route === "/" || route === "/en") &&
+      (e.preventDefault(),
+      document.getElementById("land").scrollIntoView({ behavior: "smooth" }));
+  };
+
   return (
     <TopHeader reveal={hasLoaded}>
       <Link href={locale.lang === "en" ? "/en" : "/"} passHref>
-        <Logotype onClick={closeNav}>
+        <Logotype onClick={(closeNav, backUp)}>
           <h1>acueducto</h1>
           <Logo />
         </Logotype>

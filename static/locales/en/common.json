@@ -18,33 +18,27 @@
     "steps": [
       {
         "title": "discover",
-        "p": "Understand the context, audience, needs, and challenges of the project.<br/>We get smart.",
-        "icon": "discover.svg"
+        "p": "Understand the context, audience, needs, and challenges of the project.<br/>We get smart."
       },
       {
         "title": "envision",
-        "p": "Here we re-frame the problem to highlight new insights and opportunities.<br/>We make sense.",
-        "icon": "envision.svg"
+        "p": "Here we re-frame the problem to highlight new insights and opportunities.<br/>We make sense."
       },
       {
         "title": "build the story",
-        "p": "Create a strategy that guides concepting, prioritization, and co-creation.<br/>We create empathy.",
-        "icon": "buildstory.svg"
+        "p": "Create a strategy that guides concepting, prioritization, and co-creation.<br/>We create empathy."
       },
       {
         "title": "design, tech & craft",
-        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.<br/>We develop.",
-        "icon": "craft.svg"
+        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.<br/>We develop."
       },
       {
         "title": "launch",
-        "p": "Implement new solutions, support socialization of organizational changes and product innovation.<br/>We drive change.",
-        "icon": "launch.svg"
+        "p": "Implement new solutions, support socialization of organizational changes and product innovation.<br/>We drive change."
       },
       {
         "title": "review",
-        "p": "Reflect, document, and iterate on our process and approach.<br/>We get better.",
-        "icon": "review.svg"
+        "p": "Reflect, document, and iterate on our process and approach.<br/>We get better."
       }
     ]
   },
@@ -52,6 +46,7 @@
     "studies": {
       "ladanzadelasfieras": {
         "page_title": "From strategy to production | La Danza de las Fieras & Acueducto",
+        "meta_description": "A compelling digital experience story through cinema, web, and press.",
         "headerTitle": "LDDLF",
         "title": "from strategy to production in the filmmaking industry",
         "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
@@ -151,6 +146,7 @@
       },
       "salvajenada": {
         "page_title": "Where playlists meet strategy | Salvajenada & Acueducto",
+        "meta_description": "How to distinguish your playlist from the plethora of selections on the web?",
         "headerTitle": "Salvajenada",
         "title": "how do you share music nowadays?",
         "tags": "Digital consulting<br/>Design consulting<br/>Strategy<br/>Project development<br/>Project management",
@@ -168,13 +164,13 @@
           ],
           "video": "salvajevideo.mp4",
           "title": "<b>Act I</b><br/>Death sights",
-          "p": "Sebastián Díaz, aka Sebas, and his crew of music tasters -including our own founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
+          "p": "Sebastián Díaz, aka Sebas, and his crew of music tasters -including our own co-founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
           "graphicp": "days without posting",
           "p2": "But one year before we partnered, Salvajenada was showing death sights. Their social media channels where deserted, their website was outdated and slow, and all its collaborators felt like the project had already given what it had, and nobody was taking any action."
         },
         "second_section": {
           "title": "<b>Act II</b><br/>The crafting of an amazing playlist",
-          "p": "The first thing was reviewing the founding ideas and values of the brand, its last actions, and their responsibilities in order to create a strong digital project. Even though Salvajenada had been afloat for over 5 years, this was the first time they were developing a proper model that framed their whole business model and company values.<br/><br/>Finding solutions is about making the right choices. A wide-picture perspective is mandatory in order to re-frame the complications of an organization and identify highlights and opportunities.",
+          "p": "The first thing was reviewing the founding ideas and values of the brand, its last actions, and their responsibilities in order to create a strong digital project. Even though Salvajenada had been afloat for over 5 years, this was the first time they developed a proper model that framed their whole business model and company values.<br/><br/>Finding solutions is about making the right choices. A wide-picture perspective is mandatory in order to re-frame the complications of an organization and identify highlights and opportunities.",
           "sticky": "Listen on",
           "table": [
             {
@@ -223,7 +219,7 @@
               "title": "Multimedia development",
               "p": "The playlist was pitched to the editorial team of Ibero 90.9 FM, the biggest college radio in Mexico, and from that moment on, every time the playlist updates the team of Salvajenada is invited to play and discuss their featured themes live on air.",
               "quote": {
-                "quote": "We don’t own just a playlist that users can listen to, it’s the branded concept of sharing new music, a collection of songs that you might be able to find on your own, but you might not have the time to search for. #CanastaBasica solves that problem and also serves as a place where you can learn about the context of the new music you discover (and love).",
+                "quote": "We don’t just own a playlist that users can listen to, it’s the branded concept of sharing new music, a collection of songs that you might be able to find on your own, but you might not have the time to search for. #CanastaBasica solves that problem and also serves as a place where you can learn about the context of the new music you discover (and love).",
                 "name": "Sebastián Díaz"
               }
             }
@@ -299,7 +295,7 @@
       }
     ]
   },
-  "contactfooter": {
+  "contact_footer": {
     "title": "let's be partners,<br/> let's talk business",
     "p": "We would love to start getting to know you, write us directly at ",
     "copy": "Copy to clipboard",
@@ -334,7 +330,7 @@
   },
   "about_page": {
     "page_title": "About Acueducto",
-    "meta_description": "We partner with innovators around the globe to develop experiences that tell compelling stories, inspire communities and build meaningful bonds.",
+    "meta_description": "Get to know us better. Read about us.",
     "headerTitle": "About",
     "intro": {
       "title": "a two-part ensemble to grow your business",
@@ -361,6 +357,7 @@
   },
   "work_page": {
     "page_title": "Our Work | Let's build amazing things together",
+    "meta_description": "Take a look at how we work and what can we achieve through solid strategies and innovative development.",
     "headerTitle": "Work",
     "intro": {
       "title": "our selected<br/>case studies",
@@ -369,6 +366,7 @@
   },
   "manifesto_page": {
     "page_title": "Manifesto | What makes us better",
+    "meta_description": "We follow these principles in every piece we create.",
     "headerTitle": "Manifesto",
     "intro": {
       "title": "what makes<br/> the work great",
@@ -463,20 +461,20 @@
       "p2": "This Application uses cookies that save browser preferences to optimize your experience. These Cookies, for example, are those used for the analytics of the Application. They help us improve the Service by making us aware of the actions Users anonymously take inside the Application.",
       "subtitle3": "analytics",
       "p3": "This service allows monitoring and analyzing web traffic, and can be used to be aware of the User's behavior.",
-      "subsubtitle4": "GOOGLE ANALYTICS (GOOGLE INC.)",
-      "p4": "Google Analytics is a web analysis service provided by Google Inc. (“Google”). Google utilizes the data collected to track and examine the use of this Application, to prepare reports on its activities and share them with other Google services. Google may use the data collected to contextualize and personalize the ads of its own advertising network.<br/>Personal data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy'>Privacy Policy</a> – <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout'>Opt Out</a>",
+      "subsubtitle4": "GOOGLE ANALYTICS (GOOGLE LLC)",
+      "p4": "Google Analytics is a web analysis service provided by Google LLC. (“Google”). Google utilizes the data collected to track and examine the use of this Application, to prepare reports on its activities and share them with other Google services. Google may use the data collected to contextualize and personalize the ads of its own advertising network.<br/>Personal data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy'>Privacy Policy</a> – <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout'>Opt Out</a>",
       "subtitle5": "heat mapping and session recording",
       "p5": "Heat mapping services are used to display the areas of a page where Users most frequently move the mouse or click, they allow us to interpret if our strategies and points of interest are working. These services make it possible to monitor and analyze web traffic while keeping track of User behavior. Some of these services may record sessions and make them available for a later visual playback.",
-      "subsubtitle6": "HOTJAR HEAT MAPS & RECORDINGS (HOTJAR LTD.)",
+      "subsubtitle6": "HOTJAR HEAT MAPS & RECORDINGS (HOTJAR LTD)",
       "p6": "Hotjar is a session recording and heat mapping service provided by Hotjar Ltd. (“Hotjar”). Hotjar honors generic <i>Do Not Track</i> headers. This means the browser can tell its script not to collect any of the User's data. This is a setting that is available in all major browsers. Find Hotjar’s opt-out information here.<br/>Personal Data collected: Cookies, Usage Data and various types of data as specified in their privacy policy.<br/>Place of processing: Malta – <a  target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy'>Privacy Policy</a> – <a  target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/legal/compliance/opt-out'>Opt Out.</a>",
       "subtitle7": "contact management and message sending",
       "p7": "This type of service makes it possible to manage a database of email contacts, phone contacts or any other contact information to communicate with the User. These services may also collect data concerning the date and time when any message sent by the Servicee was viewed by the User, as well as when the User interacted with it, such as by clicking on links included in the message.",
-      "subsubtitle8": "MAILCHIMP (THE ROCKET SCIENCE GROUP, LLC).",
+      "subsubtitle8": "MAILCHIMP (THE ROCKET SCIENCE GROUP, LLC)",
       "p8": "Mailchimp is an email address management and message sending service provided by The Rocket Science Group LLC. (“MailChimp”). MailChimp allows managing email databases and sending email messages to Users who subscribe to these databases.<br/>Personal Data collected: Cookies, email address, first name, and Usage Data. Place of processing: United States – <a  target='_blank' rel='noopener noreferrer' href='https://mailchimp.com/legal/privacy/'>Privacy Policy</a> – Unsubscribe",
       "subtitle9": "tag management",
       "p9": "This type of service helps the Application manage the tags or scripts needed on this Application in a centralized fashion. This results in the Users' data flowing through tag management services, potentially resulting in the retention of this data.",
       "subsubtitle10": "GOOGLE TAG MANAGER (GOOGLE LLC)",
-      "p10": "Google Tag Manager is a tag management service provided by Google LLC. Personal Data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy'>Privacy Policy</a>"
+      "p10": "Google Tag Manager is a tag management service provided by Google LLC. (“Google”). Personal Data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy'>Privacy Policy</a> - <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout?hl=en'>Opt Out</a>"
     }
   },
   "error_page": {

@@ -38,8 +38,6 @@ const ThePlayer = dynamic(
 function LaDanzaDeLasFieras(props) {
   const [loadAssets, setloadAssets] = useState(false);
   let t = props.locale.casestudies.studies.ladanzadelasfieras;
-  let f = props.locale.contactfooter;
-  let n = props.locale.next_study;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -59,6 +57,7 @@ function LaDanzaDeLasFieras(props) {
     <PageClipper unPadded>
       <Head
         title={t.page_title}
+        description={t.meta_description}
         canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
         en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
         lang={props.lang}
@@ -305,8 +304,8 @@ function LaDanzaDeLasFieras(props) {
           </a>
         </Fade>
       </Sixth>
-      <NextStudy n={n} link="salvajenada" />
-      <ContactFooter f={f} />
+      <NextStudy link="salvajenada" />
+      <ContactFooter />
     </PageClipper>
   );
 }

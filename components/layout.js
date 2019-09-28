@@ -71,8 +71,8 @@ export default ({
         id="Wrapper"
         onScroll={showArrow || showConsentMessage ? removeArrow : null}
       >
-        {/* {showSketch && <HomeSketch />} */}
-        {showSketch && <Background />}
+        {showSketch && <HomeSketch />}
+        {/* {showSketch && <Background />} */}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}
@@ -85,6 +85,7 @@ export default ({
           hasLoaded={hasLoaded}
           closeNav={closeNav}
           locale={locale}
+          route={router.route}
         />
         <Nav
           locale={locale}

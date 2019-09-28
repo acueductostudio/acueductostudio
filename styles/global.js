@@ -1,4 +1,5 @@
 import Theme from "./theme";
+import { css } from "styled-components";
 
 const styles = `
   #revealer {
@@ -158,8 +159,10 @@ const styles = `
     overflow: hidden;
     letter-spacing: 0.02px;
   }
-  @media only screen and (max-width: 600px) {
-    body{font-size: 1.5rem;}
+  @media (max-width: 600px) {
+    body {
+      font-size: 1.5rem;
+    }
   }
 
   #__next {
@@ -203,13 +206,13 @@ const styles = `
   }
 `;
 
-function createMarkup() {
+function renderStyles() {
   return {
     __html: styles
       .replace(/(\r\n|\n|\r)/gm, "") // removes all new lines
       .replace(/ +(?= )/g, "") // removes all multiple spaces (indenting)
-      .replace(/.}/g, "}\n") // adds new line after every } charracter
+    // .replace(/.}/g, "}\n") // adds new line after every } charracter
   };
 }
 
-export default () => <style dangerouslySetInnerHTML={createMarkup()} />;
+export default () => <style dangerouslySetInnerHTML={renderStyles()} />;

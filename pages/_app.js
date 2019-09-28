@@ -1,12 +1,13 @@
 import React from "react";
 import App from "next/app";
 import { ThemeProvider } from "styled-components";
-import Layout from "../components/layout";
-import theme from "../styles/theme";
+import Layout from "components/layout";
+import theme from "styles/theme";
 import Cookies from "js-cookie/src/js.cookie";
-import en from "../static/locales/en/common.json";
-import es from "../static/locales/es/common.json";
+import en from "static/locales/en/common.json";
+import es from "static/locales/es/common.json";
 import { hotjar } from "react-hotjar";
+import { LangProvider } from "utils/LangContext";
 
 export default class MyApp extends App {
   constructor(props) {
@@ -95,20 +96,22 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <Layout
-          locale={this.state.locale}
-          checkForConsent={this.checkForConsent}
-          consentToCookies={this.consentToCookies}
-          hasToConsent={this.state.hasToConsent}
-          hasLoaded={this.state.hasLoaded}
-          toggleLang={this.toggleLang}
-        >
-          <Component
+        <LangProvider value={this.state.locale}>
+          <Layout
             locale={this.state.locale}
-            {...pageProps}
-            lang={this.state.locale.lang}
-          />
-        </Layout>
+            checkForConsent={this.checkForConsent}
+            consentToCookies={this.consentToCookies}
+            hasToConsent={this.state.hasToConsent}
+            hasLoaded={this.state.hasLoaded}
+            toggleLang={this.toggleLang}
+          >
+            <Component
+              locale={this.state.locale}
+              {...pageProps}
+              lang={this.state.locale.lang}
+            />
+          </Layout>
+        </LangProvider>
       </ThemeProvider>
     );
   }

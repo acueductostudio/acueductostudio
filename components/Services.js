@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import TitleSection from "./TitleSection";
 import Fade from "react-reveal/Fade";
+import LangContext from "utils/LangContext";
 
-const Services = props => {
-  let s = props.s;
+const Services = () => {
+  const context = useContext(LangContext);
+  let s = context.services;
   let services = s.service_categories.map(function(service, index) {
     return (
       <Service key={"service" + index}>
@@ -28,7 +31,7 @@ const Services = props => {
   );
 };
 
-export default Services;
+export default React.memo(Services);
 
 const Info = styled.div`
   width: auto;

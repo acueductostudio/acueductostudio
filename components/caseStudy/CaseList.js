@@ -1,13 +1,15 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 import { P } from "components/shared/Dangerously";
+import { BorderLink } from "components/shared/BorderedLink";
 import Fade from "react-reveal/Fade";
-import Arrow from "../../static/assets/img/layout/arrow.svg";
+import Arrow from "static/assets/img/layout/arrow.svg";
 import Link from "next/link";
+import LangContext from "utils/LangContext";
 
 const SingleCase = props => {
   const video = useRef(null);
-  console.log(props.lang);
   return (
     <Case>
       <Link
@@ -67,14 +69,12 @@ const SingleCase = props => {
             passHref
           >
             <a>
-              <h4>{props.title}</h4>
+              <Hoverable>{props.title}</Hoverable>
             </a>
           </Link>
         </Fade>
         <Flexed>
-          <Fade>
-            <P>{props.tags}</P>
-          </Fade>
+          <P>{props.tags}</P>
           <Link
             href={
               props.lang === "en"
@@ -94,11 +94,14 @@ const SingleCase = props => {
   );
 };
 
-const CaseList = props => {
-  let c = props.c;
-  let cases = Object.entries(c).map(function(study, index) {
+const CaseList = ({ limit, noPlay }) => {
+  const context = useContext(LangContext);
+  let cases = Object.entries(context.casestudies.studies).map(function(
+    study,
+    index
+  ) {
     study = study[1];
-    if (props.limit !== undefined && index + 1 > props.limit) {
+    if (limit !== undefined && index + 1 > limit) {
       return;
     } else {
       return (
@@ -109,8 +112,8 @@ const CaseList = props => {
           link={study.link}
           video={study.video}
           logo={study.logo}
-          noPlay={props.noPlay}
-          lang={props.lang}
+          noPlay={noPlay}
+          lang={context.lang}
         />
       );
     }
@@ -119,6 +122,10 @@ const CaseList = props => {
 };
 
 export default React.memo(CaseList);
+
+const Hoverable = styled.h4`
+  ${BorderLink(false, "0 4rem")}
+`;
 
 const Logo = styled.img`
   width: 70%;
@@ -129,6 +136,7 @@ const Logo = styled.img`
   position: absolute;
   z-index: 1;
   top: 50%;
+  transform-origin: 50% 50%;
 `;
 
 const Flexed = styled.div`
@@ -139,6 +147,9 @@ const Flexed = styled.div`
     justify-content: flex-end;
     display: flex;
     font-size: 0;
+  }
+  p {
+    margin-top: 4%;
   }
 `;
 
@@ -154,12 +165,19 @@ const Info = styled.div`
   h4 {
     font-size: 4.5rem;
     font-weight: 200;
-    line-height: 110%;
+    line-height: 115%;
     max-width: 500px;
     cursor: pointer;
   }
   p {
     color: ${props => props.theme.colors.foreground_low};
+  }
+  a {
+    &:hover {
+      svg {
+        stroke: ${props => props.theme.colors.accent};
+      }
+    }
   }
   svg {
     align-self: flex-end;
@@ -168,6 +186,7 @@ const Info = styled.div`
     fill: none;
     stroke: ${props => props.theme.colors.foreground};
     stroke-width: ${props => props.theme.stroke};
+    transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   @media (max-width: 1160px) {
     h4 {
@@ -214,6 +233,19 @@ const VidContainer = styled.div`
   display: flex;
   justify-content: center;
   font-size: 0;
+  &:hover {
+    video {
+      transform: scale(0.98);
+      opacity: 0.92;
+    }
+    img {
+      transform: translateZ(1px) translateY(-50%) scale(1.02);
+    }
+  }
+  img {
+    transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    will-change: transform;
+  }
   video {
     position: absolute;
     top: 0;
@@ -221,6 +253,9 @@ const VidContainer = styled.div`
     bottom: 0;
     right: 0;
     width: 100%;
+    will-change: transform, opacity;
+    transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      opacity 0.5s ease;
   }
 `;
 

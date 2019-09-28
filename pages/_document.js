@@ -3,13 +3,8 @@ import { ServerStyleSheet } from "styled-components";
 import GlobalStyles from "../styles/global";
 
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage, req }) {
-    let lang = "es";
-    if (req.headers.referer) {
-      // console.log(req.headers.referer);
-      // console.log(req.headers.referer.includes("/en") ? "en" : "es");
-      lang = req.headers.referer.includes("/en") ? "en" : "es";
-    }
+  static getInitialProps({ renderPage, pathname }) {
+    let lang = pathname.includes("/en") ? "en" : "es";
     const sheet = new ServerStyleSheet();
     const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />)

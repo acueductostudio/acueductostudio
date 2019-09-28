@@ -14,14 +14,9 @@ import Head from "components/Head";
 
 export default function Index(props) {
   let t = props.locale.home_page;
-  let c = props.locale.casestudies.studies;
-  let s = props.locale.services;
-  let p = props.locale.process;
-  let f = props.locale.contactfooter;
 
   useEffect(() => {
     props.setTitle(t.header_title);
-    // props.english ? props.toggleEnglish() : null;
   }, []);
 
   return (
@@ -33,7 +28,7 @@ export default function Index(props) {
           en_canonical={"https://acueducto.studio/en"}
           lang={props.lang}
         />
-        <Land>
+        <Land id="land">
           <LandContainer>
             <H1>{t.landing.heading}</H1>
             <H2>{t.landing.tagline}</H2>
@@ -77,11 +72,11 @@ export default function Index(props) {
           </Boxed>
         </ImageGalleryRemovable>
         <Divider />
-        <Process p={p} />
+        <Process />
         <TitleSection title={t.studies.title} text={t.studies.p} borderTop />
-        <CaseList c={c} lang={props.locale.lang} noPlay />
-        <Services s={s} />
-        <ContactFooter f={f} />
+        <CaseList noPlay />
+        <Services />
+        <ContactFooter />
       </PageClipper>
     </>
   );

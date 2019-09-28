@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import { useContext } from "react";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
-import Arrow from "./../../Arrow";
+import Arrow from "components/Arrow";
+import LangContext from "utils/LangContext";
 
-const NextStudy = ({ link, n }) => {
+const NextStudy = ({ link }) => {
+  const context = useContext(LangContext);
+  let n = context.next_study;
   return (
     <Link href={link} passHref>
       <Wrapper>

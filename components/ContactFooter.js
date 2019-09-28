@@ -1,15 +1,16 @@
 import styled from "styled-components";
-import { useState } from "react";
-import Fade from "react-reveal/Fade";
+import { useState, useContext } from "react";
 import { H1 } from "components/shared/Dangerously";
 import TitleSectionGrid from "./TitleSectionGrid";
 import Logo from "static/assets/img/layout/logo.svg";
 import Mail from "static/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { logEvent } from "utils/analytics";
+import LangContext from "utils/LangContext";
 
 const ContactFooter = props => {
-  let f = props.f;
+  const context = useContext(LangContext);
+  let f = context.contact_footer;
 
   const [copied, setCopied] = useState(false);
   const [copying, setCopying] = useState(false);

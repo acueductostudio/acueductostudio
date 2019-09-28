@@ -2,9 +2,9 @@ import Head from "next/head";
 
 const Meta = props => {
   const es_default =
-    "Nos asociamos con innovadores al rededor del mundo para desarrollar experiencias digitales que cuenten historias convincentes, inspiren comunidades y forjen vínculos significativos.";
+    "Nos asociamos con innovadores al rededor del mundo para desarrollar estrategias y experiencias digitales que cuenten historias convincentes, inspiren comunidades y forjen vínculos significativos.";
   const en_default =
-    "We partner with innovators around the globe to develop experiences that tell compelling stories, inspire communities and build meaningful bonds.";
+    "We partner with innovators around the globe to develop digital strategies and experiences that tell compelling stories, inspire communities and build meaningful bonds.";
   return (
     <Head>
       <title>{props.title}</title>
@@ -63,22 +63,30 @@ const Meta = props => {
         />
       )}
       <meta property="og:image:alt" content="Acueducto Logo" />
-      {
-        (props.canonical && (
-          <meta property="og:url" content={`${props.canonical}`} />
-        ),
-        props.lang == "es" ? (
+      {props.canonical &&
+        (props.lang == "es" ? (
           <>
             <link rel="canonical" href={props.canonical} />
             <link rel="alternate" hrefLang="en" href={props.en_canonical} />
+            <link
+              rel="alternate"
+              href={props.en_canonical}
+              hrefLang="x-default"
+            />
+            <meta property="og:url" content={props.canonical} />
           </>
         ) : (
           <>
             <link rel="canonical" href={props.en_canonical} />
             <link rel="alternate" hrefLang="es" href={props.canonical} />
+            <link
+              rel="alternate"
+              href={props.en_canonical}
+              hrefLang="x-default"
+            />
+            <meta property="og:url" content={props.canonical} />
           </>
-        ))
-      }
+        ))}
     </Head>
   );
 };

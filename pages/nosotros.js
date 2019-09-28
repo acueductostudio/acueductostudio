@@ -9,16 +9,15 @@ import ContactFooter from "components/ContactFooter";
 import PinnedSection from "components/PinnedSection";
 import { P } from "components/shared/Dangerously";
 
-const HeadSketch = dynamic(import("../components/headSketch/HeadSketch"), {
+const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
-    <HeadLoader src="./../static/assets/img/layout/headPlacerHolder.jpg" />
+    <HeadLoader src="/static/assets/img/layout/headPlacerHolder.jpg" />
   ),
   ssr: false
 });
 
 export default function About(props) {
   let t = props.locale.about_page;
-  let f = props.locale.contactfooter;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -28,6 +27,7 @@ export default function About(props) {
     <PageClipper>
       <Head
         title={t.page_title}
+        description={t.meta_description}
         canonical={"https://acueducto.studio/nosotros"}
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
@@ -57,7 +57,7 @@ export default function About(props) {
         linktext={t.values.linktext}
         borderTop
       />
-      <ContactFooter f={f} />
+      <ContactFooter />
     </PageClipper>
   );
 }
