@@ -7,9 +7,8 @@
       "headers": { "Location": "/$1" },
       "continue": true
     },
-    { "handle": "filesystem" },
     { "src": "/robots.txt", "dest": "/static/robots.txt" },
-    { "src": "/sitemap.xml", "dest": "/static/sitemap.xml" }
-  ],
-  "builds": [{ "src": "**/*.js", "use": "@now/static" }]
+    { "src": "/sitemap.xml", "dest": "/static/sitemap.xml" },
+    { "handle": "filesystem" }
+  ]
 }

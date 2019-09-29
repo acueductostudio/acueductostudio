@@ -20,6 +20,11 @@ import Insight from "components/caseStudy/shared/Insight";
 import LogoSalvaje from "static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
 import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
+import SecondBackImg from "static/assets/img/casestudies/salvajenada/secondBack.svg";
+import ThirdBackImg from "static/assets/img/casestudies/salvajenada/thirdBack.svg";
+import FourthBackImg from "static/assets/img/casestudies/salvajenada/fourthBack.svg";
+import FifthBackImg from "static/assets/img/casestudies/salvajenada/fifthBack.svg";
+import InterBackImg from "static/assets/img/casestudies/salvajenada/interBack.svg";
 
 const FramesEmbed = dynamic(
   import("components/caseStudy/salvajenada/FramesEmbed"),
@@ -127,8 +132,12 @@ export default function Salvajenada(props) {
         </Column>
       </Intro>
       <Second>
-        <SecondBack />
-        <InterBack />
+        <SecondBack>
+          <SecondBackImg />
+        </SecondBack>
+        <InterBack>
+          <InterBackImg />
+        </InterBack>
         <StickyContainer>
           <Sticky>
             <span>{t.second_section.sticky}</span>
@@ -171,7 +180,9 @@ export default function Salvajenada(props) {
         <Quote quote={t.second_section.quote} specialMarginBottom />
       </Second>
       <Third>
-        <ThirdBack />
+        <ThirdBack>
+          <ThirdBackImg />
+        </ThirdBack>
         <Column>
           <H3>{"– " + t.third_section.subtitle}</H3>
           <P>{t.third_section.p}</P>
@@ -207,7 +218,9 @@ export default function Salvajenada(props) {
         />
       </Third>
       <Fourth>
-        <FourthBack />
+        <FourthBack>
+          <FourthBackImg />
+        </FourthBack>
         <Column>
           <H2>{t.fourth_section.title}</H2>
           <P>{t.fourth_section.p}</P>
@@ -228,7 +241,9 @@ export default function Salvajenada(props) {
         </Column>
       </Fourth>
       <Fifth>
-        <FifthBack />
+        <FifthBack>
+          <FifthBackImg />
+        </FifthBack>
         <Column>
           <H3>{t.fifth_section.title}</H3>
         </Column>
@@ -239,6 +254,7 @@ export default function Salvajenada(props) {
             rel="noopener noreferrer"
             href="https://www.instagram.com/salvajenada/"
           >
+            instagram
             <Ig />
           </a>
         </Fade>
@@ -568,14 +584,21 @@ const TableStrengths = styled(Table)`
 
 const CommonTransition = styled.div`
   width: 100%;
-  background-position: center bottom;
-  background-size: cover;
   height: 0;
   margin: -1px 0;
+  position: relative;
+  svg {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    bottom: 0;
+    top: 0%;
+    height: 100%;
+  }
 `;
 
 const FifthBack = styled(CommonTransition)`
-  background-image: url("/static/assets/img/casestudies/salvajenada/fifthBack.svg");
   padding-bottom: 28%;
   @media (max-width: 1300px) {
     padding-bottom: 40%;
@@ -589,16 +612,18 @@ const Fifth = styled(CommonSection)`
   background-color: ${salvajeBlue};
   color: ${props => props.theme.colors.background};
   padding-bottom: 10%;
-  svg {
-    width: 50px;
-    * {
-      fill: ${props => props.theme.colors.background};
+  a {
+    font-size: 0;
+    svg {
+      width: 50px;
+      * {
+        fill: ${props => props.theme.colors.background};
+      }
     }
   }
 `;
 
 const FourthBack = styled(CommonTransition)`
-  background-image: url("/static/assets/img/casestudies/salvajenada/fourthBack.svg");
   padding-bottom: 48%;
   @media (max-width: 1300px) {
     padding-bottom: 55%;
@@ -635,10 +660,7 @@ const Third = styled(CommonSection)`
   }
 `;
 const ThirdBack = styled(CommonTransition)`
-  background-image: url("/static/assets/img/casestudies/salvajenada/thirdBack.svg");
-  padding-bottom: 37%;
-  margin-bottom: -1px;
-  margin-top: -1px;
+  padding-bottom: 39%;
   @media (max-width: 1100px) {
     padding-bottom: 50%;
   }
@@ -648,8 +670,6 @@ const ThirdBack = styled(CommonTransition)`
 `;
 
 const InterBack = styled.div`
-  background-image: url("/static/assets/img/casestudies/salvajenada/interBack.svg");
-  background-size: cover;
   height: 0px;
   width: 50%;
   padding-bottom: 96%;
@@ -658,6 +678,15 @@ const InterBack = styled.div`
   position: absolute;
   right: 0;
   z-index: -1;
+  svg {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    bottom: 0;
+    top: 0%;
+    height: 100%;
+  }
 `;
 
 const Second = styled(CommonSection)`
@@ -679,7 +708,6 @@ const Second = styled(CommonSection)`
 `;
 
 const SecondBack = styled(CommonTransition)`
-  background-image: url("/static/assets/img/casestudies/salvajenada/secondBack.svg");
   padding-bottom: 46%;
   margin-bottom: 10%;
   @media (max-width: 1300px) {

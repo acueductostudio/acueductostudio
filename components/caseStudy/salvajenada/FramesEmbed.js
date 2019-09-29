@@ -4,6 +4,7 @@ const FramesEmbed = () => (
   <FramesWrapper>
     <Frame>
       <iframe
+        title="Apple Music Player"
         allow="autoplay *; encrypted-media *;"
         frameBorder="0"
         height="400"
@@ -13,6 +14,7 @@ const FramesEmbed = () => (
     </Frame>
     <Frame>
       <iframe
+        title="Spotify Player"
         src="https://open.spotify.com/embed/playlist/4GjrIoPOl6xNo9ZPOhF3tz"
         width="300"
         height="400"

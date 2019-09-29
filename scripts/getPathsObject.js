@@ -8,6 +8,9 @@ module.exports = () => {
     const files = fs.readdirSync(dir);
     files.forEach(file => {
       // Construct whole file-path & retrieve file's stats
+      if (file.includes("_")) {
+        return;
+      }
       const filePath = `${dir}${file}`;
       const fileStat = fs.statSync(filePath);
 

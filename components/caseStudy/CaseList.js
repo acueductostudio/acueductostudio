@@ -191,16 +191,19 @@ const Info = styled.div`
   @media (max-width: 1160px) {
     h4 {
       font-size: 4rem;
+      background-position: 0 3.6rem;
     }
   }
   @media (max-width: 950px) {
     h4 {
       font-size: 3.5rem;
+      background-position: 0 3.2rem;
     }
   }
   @media (max-width: 780px) {
     h4 {
       font-size: 3rem;
+      background-position: 0 2.7rem;
     }
     p {
       font-size: 1.4rem;
@@ -219,6 +222,7 @@ const Info = styled.div`
   @media (max-width: 500px) {
     h4 {
       font-size: 2.5rem;
+      background-position: 0 2.2rem;
     }
   }
 `;

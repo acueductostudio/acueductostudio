@@ -1,28 +1,22 @@
 # Acueducto Web App
 
-## Lang
-
-- está de la verga el mensaje del nav\*
-- hov en caselist esta mal en pequeñas pantallas
-
-* Case studies meter
-
 ## Responsive:
 
-- heads in firefox
+- está de la verga el mensaje del nav
+- Problemón con scroll en mobile
+- Heads in firefox
 
-## Optimizar:
+## SEO:
 
-- Testear robots.txt e incluír el sitemap ahí
-- Importar fondos de salvajenada
+- Testear robots.txt e incluír el sitemap en él
 
 ## Detalles:
 
 - Font tests
+- Easing en mouse shader del home
 - ScrollBar
-- match black introvideo fieras \*vale la pena?
 
-# Futuro
+## Contenido
 
-- Problemón con scroll en mobile
-- Redesing Potfolio component
+- Ambos case studies
+- Descripciones en español
