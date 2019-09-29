@@ -8,6 +8,7 @@
       "continue": true
     },
     { "src": "/robots.txt", "dest": "/static/robots.txt" },
+    { "src": "/humans.txt", "dest": "/static/humans.txt" },
     { "src": "/sitemap.xml", "dest": "/static/sitemap.xml" },
     { "handle": "filesystem" }
   ]

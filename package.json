@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "node scripts/generateSitemap.js && next build",
     "start": "next start",
     "export": "next export",
     "analyze": "ANALYZE=true yarn build",
@@ -15,26 +15,22 @@
   "dependencies": {
     "@next/bundle-analyzer": "^9.0.6",
     "@svgr/webpack": "^4.3.2",
-    "global": "^4.4.0",
-    "isomorphic-unfetch": "^3.0.0",
     "js-cookie": "^2.2.1",
-    "next": "^9.0.6",
+    "next": "^9.0.7",
     "p5": "^0.9.0",
     "react": "^16.9.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.9.0",
-    "react-double-marquee": "^0.3.4",
     "react-ga": "^2.6.0",
     "react-hotjar": "^2.0.2",
-    "react-p5-wrapper": "^2.0.0",
     "react-player": "^1.12.0",
     "react-reveal": "^1.2.2",
-    "serve": "^11.1.0",
     "styled-components": "^5.0.0-beta.8"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
     "fs-extra": "^8.1.0",
+    "serve": "^11.1.0",
     "webpack-bundle-analyzer": "^3.5.1"
   },
   "engines": {

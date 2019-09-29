@@ -8,26 +8,19 @@ import en from "static/locales/en/common.json";
 import es from "static/locales/es/common.json";
 import { hotjar } from "react-hotjar";
 import { LangProvider } from "utils/LangContext";
+import { withRouter } from "next/router";
 
-export default class MyApp extends App {
+class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
-      locale: this.props.locale,
+      locale: props.router.route.includes("/en") ? en : es,
       hasToConsent: false,
       hasLoaded: false
     };
     this.toggleLang = this.toggleLang.bind(this);
     this.consentToCookies = this.consentToCookies.bind(this);
     this.checkForConsent = this.checkForConsent.bind(this);
-  }
-
-  static async getInitialProps({ router }) {
-    if (router.pathname.includes("/en")) {
-      return { locale: en };
-    } else {
-      return { locale: es };
-    }
   }
 
   authenticate() {
@@ -116,3 +109,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+export default withRouter(MyApp);
