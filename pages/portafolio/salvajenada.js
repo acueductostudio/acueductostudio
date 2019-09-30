@@ -403,6 +403,7 @@ const StatGrid = styled.div`
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     margin-top: 8%;
     margin-left: 6%;
     padding-left: 0px;
@@ -471,6 +472,7 @@ const ShoutGrid = styled.div`
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     margin-top: 8%;
     img,
     video {
@@ -507,6 +509,7 @@ const PlaylistGrid = styled.div`
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     margin-top: 8%;
     img {
       max-width: 70%;
@@ -612,6 +615,7 @@ const Fifth = styled(CommonSection)`
   padding-bottom: 10%;
   h3 {
     padding: 0;
+    line-height: 1;
   }
   a {
     font-size: 0;

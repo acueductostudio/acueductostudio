@@ -239,18 +239,20 @@ const VidContainer = styled.div`
   display: flex;
   justify-content: center;
   font-size: 0;
-  &:hover {
-    video {
-      transform: scale(0.98);
-      opacity: 0.92;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      video {
+        transform: scale(0.98);
+        opacity: 0.92;
+      }
+      img {
+        transform: translateZ(1px) translateY(-50%) translateX(-50%) scale(1.02);
+      }
     }
     img {
-      transform: translateZ(1px) translateY(-50%) translateX(-50%) scale(1.02);
+      transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      will-change: transform;
     }
-  }
-  img {
-    transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    will-change: transform;
   }
   video {
     position: absolute;

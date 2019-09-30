@@ -5407,6 +5407,11 @@ react-reveal@^1.2.2:
   dependencies:
     prop-types "^15.5.10"
 
+react-top-loading-bar@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-top-loading-bar/-/react-top-loading-bar-1.1.1.tgz#9ad91cf83947696874e4799a247d7165371d3cd4"
+  integrity sha512-er4RlBmOAaTetVgpQSW0NKEIYYa/7Jx3yV+rd7kBbEGL/kLLj0bTDADyBI6yUaVKtusnqyf8AeZFOlSjFZ3Shg==
+
 react@^16.9.0:
   version "16.10.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.10.1.tgz#967c1e71a2767dfa699e6ba702a00483e3b0573f"

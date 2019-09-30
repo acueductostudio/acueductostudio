@@ -2,6 +2,10 @@ export default function shade(p) {
   var noctaves, c, LDShader;
   var gl;
 
+  let x = 0;
+  let y = 0;
+  let easing = 0.1;
+
   p.preload = function() {
     LDShader = p.loadShader(
       "/static/assets/shader/shader.vert",
@@ -52,9 +56,19 @@ export default function shade(p) {
   };
 
   p.draw = function() {
+    //easing on cursor
+    let targetX = p.round(p.mouseX - p.windowHeight / 2);
+    let dx = targetX - x;
+    x += dx * easing;
+
+    let targetY = p.round(p.mouseY - p.windowWidth / 2);
+    let dy = targetY - y;
+    y += dy * easing;
+
     LDShader.setUniform("iResolution", [p.width, p.height]); //pass some values to the shader
     LDShader.setUniform("iTime", p.millis() * 0.001);
-    LDShader.setUniform("iMouse", [p.mouseX - 30, p.mouseY - 10]);
+    LDShader.setUniform("iMouse", [x, y]);
+    // LDShader.setUniform("iMouse", [p.mouseX - 30, p.mouseY - 10]);
     LDShader.setUniform("noctaves", noctaves);
     LDShader.setUniform("c", c);
     p.shader(LDShader);

@@ -1,6 +1,8 @@
 import React from "react";
 import App from "next/app";
+import Router from "next/router";
 import { ThemeProvider } from "styled-components";
+import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout";
 import theme from "styles/theme";
 import Cookies from "js-cookie/src/js.cookie";
@@ -9,11 +11,7 @@ import es from "static/locales/es/common.json";
 import { hotjar } from "react-hotjar";
 import { LangProvider } from "utils/LangContext";
 import { withRouter } from "next/router";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks
-} from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 class MyApp extends App {
   constructor(props) {
@@ -40,12 +38,32 @@ class MyApp extends App {
     });
   }
 
+  handleRouteComplete = url => {
+    var _myself = this;
+    setTimeout(function() {
+      _myself.LoadingBar.complete();
+    }, 300);
+  };
+
+  handleRouteStart = url => {
+    this.LoadingBar.continuousStart();
+  };
+
+  handleRouteError = (err, url) => {
+    setTimeout(function() {
+      if (err.cancelled) {
+        console.log(`Route to ${url} was cancelled!`);
+      }
+      this.LoadingBar.complete();
+      console.log("complete Error " + err);
+    }, 300);
+  };
+
   componentDidMount() {
     // Disable scroll
 
     const targetElement = document.querySelector("#contact"); //dummy
     disableBodyScroll(targetElement);
-    console.log("disabled scrolling");
 
     // Load Animation
     this.authenticate().then(() => {
@@ -79,24 +97,31 @@ class MyApp extends App {
         }, 500);
       }
     });
+    // router event listeners for loadingBar
+    Router.events.on("routeChangeStart", this.handleRouteStart);
+    Router.events.on("routeChangeComplete", this.handleRouteComplete);
+    Router.events.on("routeChangeError", this.handleRouteError);
     // init HotJar
     hotjar.initialize(1494703, 6);
+  }
+
+  componentWillUnmount() {
+    Router.events.off("routeChangeStart", this.handleRouteStart);
+    Router.events.off("routeChangeComplete", this.handleRouteComplete);
+    Router.events.off("routeChangeError", this.handleRouteError);
   }
 
   checkForConsent() {
     // Check if cookie message has been closed before
     var _C = Cookies.get("showCookieMessage");
     if (_C === undefined) {
-      console.log("cookies: hasn't consented before");
       this.setState({ hasToConsent: true });
     } else if (_C === "false") {
-      console.log("cookies: has consented before");
       this.setState({ hasToConsent: false });
     }
   }
 
   consentToCookies() {
-    console.log("Remove the cookie message");
     Cookies.set("showCookieMessage", "false");
     this.setState({ hasToConsent: false });
   }
@@ -106,6 +131,12 @@ class MyApp extends App {
     return (
       <ThemeProvider theme={theme}>
         <LangProvider value={this.state.locale}>
+          <LoadingBar
+            onRef={ref => (this.LoadingBar = ref)}
+            height={3}
+            color={theme.colors.accent}
+            className="TopBar"
+          />
           <Layout
             locale={this.state.locale}
             checkForConsent={this.checkForConsent}

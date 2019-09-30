@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Link from "next/link";
-import Language from "../static/assets/img/layout/language.svg";
+import Arrows from "static/assets/img/layout/language.svg";
+import EN from "static/assets/img/layout/en.svg";
 import Router, { useRouter } from "next/router";
 
 function LanguageToggler({ hasLoaded, locale, toggleLang }) {
@@ -68,15 +68,72 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
 
   return (
     <Toggler reveal={hasLoaded}>
-      {/* <Link href={link} scroll={false} passHref> */}
       <a onClick={handleLink}>
-        <Language />
+        <English>
+          {/* <EN /> */}
+          <span>switch language</span>
+          {locale.lang === "es" ? "english" : "español"}
+        </English>
+
+        <Stable>
+          <Arrows />
+        </Stable>
       </a>
-      {/* </Link> */}
     </Toggler>
   );
 }
 export default LanguageToggler;
+
+const English = styled.div`
+  background-color: ${props => props.theme.colors.accent};
+  border: 2px solid ${props => props.theme.colors.foreground};
+  padding: 10px;
+  position: absolute;
+  margin-top: -13px;
+  margin-left: -8px;
+  border-radius: 50% 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 100;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.5rem;
+  span {
+    font-size: 1.1rem;
+    line-height: 1;
+    width: 100%;
+    color: ${props => props.theme.colors.background};
+    font-weight: 200;
+  }
+  svg {
+    width: 33px;
+    padding: 15px;
+    box-sizing: content-box;
+    * {
+      fill: ${props => props.theme.colors.white};
+      font-family: inherit;
+      font-weight: 200;
+    }
+  }
+`;
+
+const Stable = styled.div`
+  svg {
+    width: 33px;
+    padding: 15px;
+    box-sizing: content-box;
+    * {
+      fill: none;
+      stroke-width: ${props => props.theme.stroke};
+      stroke: ${props => props.theme.colors.white};
+    }
+  }
+`;
 
 const Toggler = styled.div`
   cursor: pointer;
@@ -98,6 +155,14 @@ const Toggler = styled.div`
   max-width: 1500px;
   opacity: ${props => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      mix-blend-mode: none;
+      ${English} {
+        opacity: 1;
+      }
+    }
+  }
 
   svg {
     width: 33px;

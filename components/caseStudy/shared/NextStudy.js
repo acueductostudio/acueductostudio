@@ -84,6 +84,10 @@ const Wrapper = styled.a`
     padding-top: 15%;
   }
   @media (max-width: 600px) {
+    p {
+      max-width: 220px;
+      text-align: center;
+    }
     &:hover svg * {
       stroke: ${props => props.theme.colors.foreground};
     }

@@ -139,6 +139,9 @@ export default ({
 };
 
 const BodyOverflow = createGlobalStyle`
+  .TopBar{
+    box-shadow: 1px 1px 4px ${props => props.theme.colors.accent};
+  }
   @media (max-width: 600px) {
     .react-reveal {
     animation: none !important;

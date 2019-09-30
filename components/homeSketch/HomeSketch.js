@@ -64,6 +64,6 @@ const Background = styled.div`
   bottom: 0;
   top: 0;
   height: 100%;
-  background-image: url("/static/assets/img/layout/fond.jpg");
+  background-image: url("/static/assets/img/layout/fond.webp");
   background-size: cover;
 `;
