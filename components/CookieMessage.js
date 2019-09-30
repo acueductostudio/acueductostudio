@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
-import Cross from "./../static/assets/img/layout/cross.svg";
+import Cross from "static/assets/img/layout/cross.svg";
+import BorderLink from "components/shared/BorderedLink";
 
 const CookieMessage = props => {
   let t = props.locale.cookie_message;
@@ -19,7 +20,7 @@ const CookieMessage = props => {
         <p>
           {t.p}
           <Link href="/cookies" passHref>
-            <a>{t.link}</a>
+            <Hoverable>{t.link}</Hoverable>
           </Link>
           {t.p_continued}
         </p>
@@ -30,6 +31,10 @@ const CookieMessage = props => {
 
 export default CookieMessage;
 
+const Hoverable = styled.a`
+  ${BorderLink({ showLink: true })}
+`;
+
 const Border = styled.div`
   border: ${props => props.theme.stroke} solid
     ${props => props.theme.colors.foreground};
@@ -37,7 +42,7 @@ const Border = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 15px 0% 11px 0%;
+  padding: 14px 0%;
   text-align: center;
   width: calc(100% - 45px);
   background-color: ${props => props.theme.colors.accent};
@@ -90,15 +95,7 @@ const Wrapper = styled.div`
   z-index: 12;
   p {
     font-size: 1.2rem;
-    padding: 2.5% 4%;
-  }
-  a {
-    text-decoration: none;
-    border-bottom: 1.2px solid ${props => props.theme.colors.foreground};
-    transition: 0.3s ease all;
-    &:hover {
-      border-bottom: 1.2px solid ${props => props.theme.colors.accent};
-    }
+    padding: 2.5% 4% 3% 4%;
   }
   @media (max-width: 600px) {
     left: 0;

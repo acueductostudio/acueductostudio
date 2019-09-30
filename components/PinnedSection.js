@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { H1, P } from "components/shared/Dangerously";
+import BorderLink from "components/shared/BorderedLink";
 
 const PinnedSection = ({ t, children, className }) => (
   <Pinned className={className}>
@@ -14,6 +15,12 @@ const ScrollDown = styled.div`
   grid-column: 7 / span 5;
   display: flex;
   flex-direction: column;
+  p {
+    margin-top: 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
 `;
 
 const Pinned = styled.div`
@@ -29,7 +36,7 @@ const Pinned = styled.div`
   h1 {
     grid-column: 2 / span 5;
     position: sticky;
-    top: 17.5%;
+    top: 17%;
     letter-spacing: 0px;
     line-height: 100%;
     font-size: 7rem;
@@ -40,6 +47,9 @@ const Pinned = styled.div`
     color: ${props => props.theme.colors.foreground_low};
     margin-bottom: 5%;
     max-width: 445px;
+    &:first-of-type {
+      margin-top: 10px;
+    }
   }
   @media (max-width: 1300px) {
     ${ScrollDown}, p {
@@ -89,22 +99,15 @@ const Pinned = styled.div`
     h1 {
       margin-bottom: 0;
     }
+    a {
+      background-position: 0 2rem;
+      padding-bottom: 3px;
+    }
   }
   a {
     color: ${props => props.theme.colors.foreground};
-    text-decoration: none;
-    background-repeat: repeat-x;
-    background-size: 1px 1px;
-    background-position: 0 calc(1rem + 7px);
-    transition: 0.3s ease all;
-    padding-bottom: 2px;
-    @media (max-width: 600px) {
-      padding-bottom: 3px;
-    }
-    background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 1)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
-    &:hover {
-      background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 2 2" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="2" y2="2" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
-      background-size: 2px 2px;
-    }
+    background-position: 0 2.3rem;
+    background-position: 0 90%;
+    ${BorderLink({ showLink: true })}
   }
 `;

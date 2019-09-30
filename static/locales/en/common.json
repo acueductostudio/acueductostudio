@@ -149,7 +149,7 @@
         "meta_description": "How to distinguish your playlist from the plethora of selections on the web?",
         "headerTitle": "Salvajenada",
         "title": "how do you share music nowadays?",
-        "tags": "Digital consulting<br/>Design consulting<br/>Strategy<br/>Project development<br/>Project management",
+        "tags": "Strategy<br/>Product development<br/>Design & digital consulting<br/>Project management",
         "video": "salvajenada.mp4",
         "logo": "salvajenada.svg",
         "link": "salvajenada",
@@ -315,7 +315,7 @@
     "header_title": " ",
     "landing": {
       "heading": "we look for the next great digital idea",
-      "tagline": "<b>acueducto</b> is a strategic design & technology studio based in CDMX."
+      "tagline": "Acueducto is a strategic design & technology studio based in CDMX."
     },
     "intro": {
       "title": "partnering with impact seeking innovators",
@@ -361,7 +361,7 @@
     "headerTitle": "Work",
     "intro": {
       "title": "our selected<br/>case studies",
-      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what can it achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
+      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what it can  achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
     }
   },
   "manifesto_page": {
@@ -412,7 +412,7 @@
     ],
     "cases": {
       "title": "our selected<br/>case studies",
-      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what can it achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
+      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what it can achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
     }
   },
   "privacy_page": {

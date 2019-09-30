@@ -3,29 +3,67 @@ import Fade from "react-reveal/Fade";
 import shade from "./shade";
 import P5Wrapper from "utils/P5Wrapper";
 
-export default function HomeSketch() {
+const HomeSketch = ({ hide }) => {
   return (
     <SketchContainer>
-      <Fade>
-        <P5Wrapper sketch={shade} id="Frame" />
-      </Fade>
+      {hide ? (
+        <Fade>
+          <Background />
+        </Fade>
+      ) : (
+        <Fade>
+          <P5Wrapper sketch={shade} id="Frame" />
+        </Fade>
+      )}
     </SketchContainer>
   );
-}
+};
+
+export default React.memo(HomeSketch);
 
 const SketchContainer = styled.div`
   width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: 10;
+  height: 110vh;
+  position: fixed;
   z-index: 0;
   pointer-events: none;
+  &:before {
+    content: " ";
+    height: 100vh;
+    width: 18px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: ${props => props.theme.colors.background};
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+  }
   canvas {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: -20px;
+    bottom: -30px;
     pointer-events: none;
     overflow: hidden;
   }
+  @media (max-width: 600px) {
+    margin: 0 20px;
+    overflow: hidden;
+    &:before {
+      opacity: 1;
+    }
+  }
+`;
+
+const Background = styled.div`
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  background-image: url("/static/assets/img/layout/fond.jpg");
+  background-size: cover;
 `;

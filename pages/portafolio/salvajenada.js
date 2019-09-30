@@ -225,17 +225,15 @@ export default function Salvajenada(props) {
           <H2>{t.fourth_section.title}</H2>
           <P>{t.fourth_section.p}</P>
         </Column>
-        <Fade>
-          <StatGrid>
-            <Stat stat={t.fourth_section.stats[0]} />
-            <Stat stat={t.fourth_section.stats[1]} />
-            <Stat stat={t.fourth_section.stats[2]} />
-            <Stat stat={t.fourth_section.stats[3]} />
-            <Stat stat={t.fourth_section.stats[4]}>
-              <Wolf />
-            </Stat>
-          </StatGrid>
-        </Fade>
+        <StatGrid>
+          <Stat stat={t.fourth_section.stats[0]} />
+          <Stat stat={t.fourth_section.stats[1]} />
+          <Stat stat={t.fourth_section.stats[2]} />
+          <Stat stat={t.fourth_section.stats[3]} />
+          <Stat stat={t.fourth_section.stats[4]}>
+            <Wolf />
+          </Stat>
+        </StatGrid>
         <Column>
           <P>{t.fourth_section.p2}</P>
         </Column>
@@ -259,7 +257,7 @@ export default function Salvajenada(props) {
           </a>
         </Fade>
       </Fifth>
-      <NextStudy link="ladanzadelasfieras" />
+      <NextStudy link="ladanzadelasfieras" margined />
       <ContactFooter />
     </PageClipper>
   );
@@ -422,7 +420,7 @@ const StatGrid = styled.div`
         scroll-snap-align: center;
         scroll-snap-stop: always;
         text-align: center;
-        padding: 2%;
+        padding: 1% 4% 4.5% 4%;
         align-items: center;
         justify-content: center;
       }
@@ -612,6 +610,9 @@ const Fifth = styled(CommonSection)`
   background-color: ${salvajeBlue};
   color: ${props => props.theme.colors.background};
   padding-bottom: 10%;
+  h3 {
+    padding: 0;
+  }
   a {
     font-size: 0;
     svg {
@@ -741,14 +742,14 @@ const WolfDays = styled.div`
   max-width: 390px;
   margin: 10% auto;
   p {
-    padding: 6%;
+    padding: 1% 6% 6% 6%;
     width: 100%;
     line-height: 85%;
   }
   b {
     font-size: 8rem;
     font-weight: 200;
-    line-height: 100%;
+    line-height: 110%;
   }
   @media (max-width: 450px) {
     b {

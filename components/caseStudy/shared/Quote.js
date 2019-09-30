@@ -4,12 +4,12 @@ import Mark from "static/assets/img/layout/quoteMark.svg";
 import Fade from "react-reveal/Fade";
 
 const Quote = props => (
-  <Fade>
-    <QuoteWrapper
-      passedColor={props.color}
-      noMargin={props.noMargin}
-      specialMarginBottom={props.specialMarginBottom}
-    >
+  <QuoteWrapper
+    passedColor={props.color}
+    noMargin={props.noMargin}
+    specialMarginBottom={props.specialMarginBottom}
+  >
+    <Fade>
       <QuoteLimiter>
         <QuoteMark passedColor={props.color}>
           <Mark />
@@ -18,8 +18,8 @@ const Quote = props => (
         <Author>– {props.quote.name}</Author>
         {props.quote.label ? <Label>{props.quote.label}</Label> : null}
       </QuoteLimiter>
-    </QuoteWrapper>
-  </Fade>
+    </Fade>
+  </QuoteWrapper>
 );
 
 export default Quote;
@@ -74,6 +74,7 @@ const QuoteWrapper = styled.div`
   blockquote {
     margin: 0;
     position: relative;
+    line-height: 123%;
   }
   @media (max-width: 1000px) {
     font-size: 2.5rem;

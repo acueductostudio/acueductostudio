@@ -27,6 +27,7 @@ const SimplePinnedSection = styled(PinnedSection)`
       margin-top: 10%;
       color: ${props => props.theme.colors.foreground};
       margin-bottom: 2%;
+      line-height: 120%;
     }
     h3 {
       font-size: 2.5rem;

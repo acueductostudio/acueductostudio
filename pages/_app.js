@@ -9,6 +9,11 @@ import es from "static/locales/es/common.json";
 import { hotjar } from "react-hotjar";
 import { LangProvider } from "utils/LangContext";
 import { withRouter } from "next/router";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from "body-scroll-lock";
 
 class MyApp extends App {
   constructor(props) {
@@ -16,7 +21,8 @@ class MyApp extends App {
     this.state = {
       locale: props.router.route.includes("/en") ? en : es,
       hasToConsent: false,
-      hasLoaded: false
+      hasLoaded: false,
+      readyToScroll: false
     };
     this.toggleLang = this.toggleLang.bind(this);
     this.consentToCookies = this.consentToCookies.bind(this);
@@ -35,6 +41,12 @@ class MyApp extends App {
   }
 
   componentDidMount() {
+    // Disable scroll
+
+    const targetElement = document.querySelector("#contact"); //dummy
+    disableBodyScroll(targetElement);
+    console.log("disabled scrolling");
+
     // Load Animation
     this.authenticate().then(() => {
       const bordered = document.getElementById("bordered");
@@ -51,7 +63,11 @@ class MyApp extends App {
           setTimeout(() => {
             revealer.style.opacity = "0";
             revealer.style.pointerEvents = "none";
-            this.setState({ hasLoaded: true });
+            this.setState(
+              { hasLoaded: true },
+              () => console.log("has loaded set to true"),
+              enableBodyScroll(targetElement)
+            );
           }, 500);
 
           setTimeout(() => {

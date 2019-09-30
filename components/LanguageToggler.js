@@ -7,7 +7,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   const router = useRouter();
 
   const handleLink = () => {
-    // console.log(router);
     if (locale.lang == "en") {
       switch (router.asPath) {
         case "/en/work/ladanzadelasfieras":

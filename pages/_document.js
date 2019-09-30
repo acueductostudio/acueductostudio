@@ -58,7 +58,10 @@ export default class MyDocument extends Document {
             name="keywords"
             content="design, studio, acueducto, cdmx, innovation, strategic design, experience design, product design, brand design, social impact, design strategy, technology"
           />
-          {/* <link rel="stylesheet" href="https://use.typekit.net/zdy4yjp.css"></link> */}
+          {/* <link
+            rel="stylesheet"
+            href="https://use.typekit.net/zdy4yjp.css"
+          ></link> */}
           <GlobalStyles />
           {this.props.styleTags}
         </Head>

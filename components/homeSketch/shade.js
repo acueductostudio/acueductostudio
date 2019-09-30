@@ -4,13 +4,13 @@ export default function shade(p) {
 
   p.preload = function() {
     LDShader = p.loadShader(
-      "static/assets/shader/shader.vert",
-      "static/assets/shader/shader.frag"
+      "/static/assets/shader/shader.vert",
+      "/static/assets/shader/shader.frag"
     );
   };
 
   p.setup = function() {
-    p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
+    p.createCanvas(p.windowWidth + 20, p.windowHeight + 20, p.WEBGL);
     // disable DEPTH_TEST
     gl = this.canvas.getContext(p.WEBGL);
     gl.disable(gl.DEPTH_TEST);
@@ -48,7 +48,7 @@ export default function shade(p) {
   };
 
   p.windowResized = function() {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.resizeCanvas(p.windowWidth + 20, p.windowHeight + 20);
   };
 
   p.draw = function() {

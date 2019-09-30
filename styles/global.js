@@ -3,8 +3,8 @@ import { css } from "styled-components";
 
 const styles = `
   #revealer {
-    position: absolute;
-    z-index: 100;
+    position: fixed;
+    z-index: 101;
     left: 0;
     right: 0;
     bottom: 0;
@@ -19,7 +19,7 @@ const styles = `
     height: calc(100% - 42px);
     max-width: 1500px;
     margin: 0 auto;
-    position: absolute;
+    position: fixed;
     pointer-events: none;
     left: 20px;
     top: 20px;
@@ -63,6 +63,11 @@ const styles = `
     100% {
       transform: translateX(100%);
     }
+  }
+
+  #Wrapper{
+    overflow:hidden;
+    height:100%;
   }
 
   /* normalize */
@@ -116,16 +121,16 @@ const styles = `
   @font-face {
     font-family: "Wide";
     font-display: block;
-    src: url("/static/assets/font/Bold.woff2") format("woff2"),
-      url("/static/assets/font/Bold.woff") format("woff");
+    src: url("/static/assets/font/500.woff2") format("woff2"),
+      url("/static/assets/font/500.woff") format("woff");
     font-weight: 200;
     font-style: normal;
   }
   @font-face {
     font-family: "Wide";
     font-display: block;
-    src: url("/static/assets/font/Normal.woff2") format("woff2"),
-      url("/static/assets/font/Normal.woff") format("woff");
+    src: url("/static/assets/font/300.woff2") format("woff2"),
+      url("/static/assets/font/300.woff") format("woff");
     font-weight: 100;
     font-style: normal;
   }

@@ -2,15 +2,14 @@
 
 ## Responsive:
 
-- Font tests
-- está de la verga el mensaje del nav
-- Problemón con scroll en mobile
+- hoverable lang
+- Diseñar el nuevo nav en mobile
 - Heads in firefox
 
 ## Detalles:
 
 - Easing en mouse shader del home
-- ScrollBar // maybe not
+- ScrollBar // depende del scroll
 
 ## Contenido
 

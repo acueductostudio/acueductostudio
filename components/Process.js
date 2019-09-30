@@ -4,6 +4,7 @@ import TitleSection from "../components/TitleSection";
 import { P } from "components/shared/Dangerously";
 import Fade from "react-reveal/Fade";
 import LangContext from "utils/LangContext";
+import createMarkup from "utils/createMarkup";
 import i1 from "static/assets/img/layout/steps/discover.svg";
 import i2 from "static/assets/img/layout/steps/envision.svg";
 import i3 from "static/assets/img/layout/steps/buildstory.svg";
@@ -17,12 +18,12 @@ const StepContainer = props => {
   const Icon = iconArray[props.index];
   return (
     <Step>
+      <span>0{props.index + 1}</span>
       <Fade>
-        <span>0{props.index + 1}</span>
         <Icon />
         <h3>{props.title}</h3>
-        <P>{props.p}</P>
       </Fade>
+      <p dangerouslySetInnerHTML={createMarkup(props.p)} />
     </Step>
   );
 };
@@ -80,7 +81,8 @@ const Step = styled.div`
   h3 {
     font-size: 2.5rem;
     opacity: 1;
-    margin-bottom: 10px;
+    line-height: 125%;
+    margin-bottom: 16px;
     font-weight: 200;
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }

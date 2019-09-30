@@ -121,7 +121,7 @@ const CopyMessage = styled.span`
   bottom: -40px;
   left: 0;
   width: 100%;
-  padding: 10px 10px 5px;
+  padding: 8px 10px;
   background-color: ${props => props.theme.colors.background};
   text-align: center;
   border-radius: 4px;

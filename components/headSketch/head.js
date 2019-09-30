@@ -18,12 +18,12 @@ export default function head(p) {
   let teapot;
 
   p.preload = () => {
-    // Load model with normalise parameter set to true
+    // Load model with normalise (size of model is normalized)
     teapot = p.loadModel("./../../static/assets/3d/male_head.obj", true);
   };
 
   p.myCustomRedrawAccordingToNewPropsHandler = props => {
-    if (props.invertRotation !== undefined){
+    if (props.invertRotation !== undefined) {
       rotate = -0.006;
     }
     if (props.second !== undefined) {
@@ -37,7 +37,6 @@ export default function head(p) {
 
   p.setup = () => {
     p.createCanvas(width, height, p.WEBGL);
-    // p.perspective(45, width/height, 200, 500)
     p.noStroke(); //eliminate wireframes
   };
 
@@ -59,7 +58,14 @@ export default function head(p) {
     // actual light
     p.pointLight(mainColor[0], mainColor[1], mainColor[2], x, y, 200);
 
-    p.directionalLight(secondaryColor[0], secondaryColor[1], secondaryColor[2], 1500,-1500, 200); //luz rosa
+    p.directionalLight(
+      secondaryColor[0],
+      secondaryColor[1],
+      secondaryColor[2],
+      1500,
+      -1500,
+      200
+    ); //Pink light
 
     p.scale(1.5); // Scaled to make model fit into canvas
     p.rotateY(startRotation + p.frameCount * rotate);

@@ -46,7 +46,7 @@ const FramesWrapper = styled.div`
   grid-gap: 10rem;
   max-width: 85%;
   width: 100%;
-  margin: 5% 0;
+  margin: 2% 0 5% 0;
   padding: 0 5%;
   @media (max-width: 1200px) {
     max-width: 100%;

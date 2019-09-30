@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import Fade from "react-reveal/Fade";
-import Hoverable from "components/shared/BorderedLink";
+import BorderLink from "components/shared/BorderedLink";
 import { useRouter } from "next/router";
 
 export default function Nav(props) {
@@ -98,6 +98,10 @@ export default function Nav(props) {
   );
 }
 
+const Hoverable = styled.a`
+  ${BorderLink({ showLink: false })}
+`;
+
 const NavLandscapeHider = styled.div`
   display: flex;
   align-items: center;
@@ -131,7 +135,7 @@ const NavLink = styled.a`
       : `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`};
   background-repeat: repeat-x;
   background-size: 1px 2px;
-  background-position: 0 100%;
+  background-position: 0 90%;
   &:hover {
     background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
   }
@@ -357,6 +361,9 @@ const NavWrapper = styled.div`
       transition: opacity 0.3s ease;
     `}
   @media (max-width: 800px) {
+    ${NavLink} {
+      background-position: 0 93%;
+    }
     padding-bottom: 15%;
   }
   @media (max-width: 450) {

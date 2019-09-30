@@ -84,7 +84,8 @@ const Person = styled.div`
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 3.5px;
-    margin-bottom: 6%;
+    margin-bottom: 4%;
+    font-weight: 200;
   }
   @media (max-width: 1250px) {
     h4 {

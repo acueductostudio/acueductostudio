@@ -328,7 +328,7 @@ const MacContact = styled.img`
 
 const Faces = styled.img`
   max-width: 670px;
-  margin: 4% 0px 1%;
+  margin: 8% 0 0;
   position: relative;
   width: 100%;
   @media (max-width: 700px) {
@@ -338,13 +338,13 @@ const Faces = styled.img`
 
 const MacPress = styled.img`
   max-width: 830px;
-  width: 90%;
-  margin: 4% 5% -9% 5%;
+  width: 100%;
+  margin: 4% 0 -9% 0;
   @media (max-width: 1050px) {
-    margin: 8% 5% -9% 5%;
+    margin: 8% 0 -9% 0;
   }
   @media (max-width: 450px) {
-    margin: 8% 5% -7% 5%;
+    margin: 8% 0 -7% 0;
   }
 `;
 
@@ -539,7 +539,7 @@ const PosterGrid = styled.div`
   }
   @media (max-width: 450px) {
     grid-template-rows: 1fr 1fr 5fr;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     svg {
       display: none;
     }
@@ -568,10 +568,11 @@ const Stat = styled.div`
   b {
     font-size: 8rem;
     font-weight: 200;
-    line-height: 80%;
     display: block;
     text-align: center;
     z-index: 1;
+    line-height: 1.1;
+    margin-top: -20px;
   }
   p {
     z-index: 1;
@@ -613,7 +614,7 @@ const Sixth = styled(CommonSection)`
   background-size: cover;
   a {
     font-size: 4.5rem;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     text-decoration: none;
     line-height: 100%;
     border-bottom: 3px solid ${props => props.theme.colors.foreground};
@@ -714,6 +715,7 @@ const LaurelNumbers = styled.div`
   li {
     list-style: none;
     text-align: center;
+    margin-top: -20px;
   }
   svg {
     width: 20%;
@@ -727,14 +729,13 @@ const LaurelNumbers = styled.div`
     }
   }
   p {
-    margin-top: -15px;
     width: 100%;
-    line-height: 85%;
+    line-height: 1;
   }
   b {
     font-size: 11.7rem;
     font-weight: 200;
-    line-height: 100%;
+    line-height: 1;
   }
   @media (max-width: 700px) {
     ul {

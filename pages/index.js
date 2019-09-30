@@ -135,7 +135,7 @@ const ImageGallery = styled.div`
 `;
 
 const Land = styled.section`
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);

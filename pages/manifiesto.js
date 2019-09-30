@@ -51,7 +51,7 @@ const Belief = styled.li`
   margin-bottom: 25%;
   span {
     color: ${props => props.theme.colors.accent};
-    font-weight: 200;
+    font-weight: 100;
     left: -3px;
     font-size: 5rem;
     position: relative;

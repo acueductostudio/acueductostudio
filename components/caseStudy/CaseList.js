@@ -2,7 +2,7 @@ import { useContext } from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 import { P } from "components/shared/Dangerously";
-import { BorderLink } from "components/shared/BorderedLink";
+import BorderLink from "components/shared/BorderedLink";
 import Fade from "react-reveal/Fade";
 import Arrow from "static/assets/img/layout/arrow.svg";
 import Link from "next/link";
@@ -124,18 +124,19 @@ const CaseList = ({ limit, noPlay }) => {
 export default React.memo(CaseList);
 
 const Hoverable = styled.h4`
-  ${BorderLink(false, "0 4rem")}
+  ${BorderLink({ showLink: false })}
 `;
 
 const Logo = styled.img`
   width: 70%;
-  transform: translateZ(1px) translateY(-50%);
+  transform: translateZ(1px) translateX(-50%) translateY(-50%);
   align-self: center;
   justify-self: center;
   display: flex;
   position: absolute;
   z-index: 1;
   top: 50%;
+  left: 50%;
   transform-origin: 50% 50%;
 `;
 
@@ -168,6 +169,7 @@ const Info = styled.div`
     line-height: 115%;
     max-width: 500px;
     cursor: pointer;
+    background-position: 0 5.8rem;
   }
   p {
     color: ${props => props.theme.colors.foreground_low};
@@ -191,19 +193,19 @@ const Info = styled.div`
   @media (max-width: 1160px) {
     h4 {
       font-size: 4rem;
-      background-position: 0 3.6rem;
+      background-position: 0 5.1rem;
     }
   }
   @media (max-width: 950px) {
     h4 {
       font-size: 3.5rem;
-      background-position: 0 3.2rem;
+      background-position: 0 4.4rem;
     }
   }
   @media (max-width: 780px) {
     h4 {
       font-size: 3rem;
-      background-position: 0 2.7rem;
+      background-position: 0 3.8rem;
     }
     p {
       font-size: 1.4rem;
@@ -222,7 +224,7 @@ const Info = styled.div`
   @media (max-width: 500px) {
     h4 {
       font-size: 2.5rem;
-      background-position: 0 2.2rem;
+      background-position: 0 3.1rem;
     }
   }
 `;
@@ -243,7 +245,7 @@ const VidContainer = styled.div`
       opacity: 0.92;
     }
     img {
-      transform: translateZ(1px) translateY(-50%) scale(1.02);
+      transform: translateZ(1px) translateY(-50%) translateX(-50%) scale(1.02);
     }
   }
   img {
@@ -268,6 +270,9 @@ const Case = styled.div`
   border-top: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   grid-template-columns: repeat(2, 1fr);
+  a {
+    cursor: pointer;
+  }
   @media (max-width: 700px) {
     display: flex;
     flex-direction: column;

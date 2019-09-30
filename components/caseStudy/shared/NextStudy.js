@@ -4,13 +4,14 @@ import Fade from "react-reveal/Fade";
 import Link from "next/link";
 import Arrow from "components/Arrow";
 import LangContext from "utils/LangContext";
+import { P } from "components/shared/Dangerously";
 
-const NextStudy = ({ link }) => {
+const NextStudy = ({ link, margined }) => {
   const context = useContext(LangContext);
   let n = context.next_study;
   return (
     <Link href={link} passHref>
-      <Wrapper>
+      <Wrapper margined={margined}>
         <LogoContainer>
           <Fade>
             <Logo
@@ -20,8 +21,8 @@ const NextStudy = ({ link }) => {
             />
           </Fade>
         </LogoContainer>
+        <p>{n.p}</p>
         <Fade>
-          <p>{n.p}</p>
           <ArrowContainer>
             <Arrow />
           </ArrowContainer>
@@ -67,7 +68,8 @@ const Wrapper = styled.a`
   text-decoration: none;
   color: ${props => props.theme.colors.foreground};
   p {
-    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-top: ${props => (props.margined ? "1%" : "0")};
     border-bottom: 2px solid transparent;
     transition: 0.3s ease all;
   }

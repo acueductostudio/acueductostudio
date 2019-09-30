@@ -2,11 +2,11 @@ import styled, { keyframes } from "styled-components";
 import Arrow from "../components/Arrow";
 
 const ScrollIncentive = ({ hasLoaded, showArrow }) => (
-    <Container reveal={hasLoaded} showArrow={showArrow}>
-      <Jumper>
-        <Arrow />
-      </Jumper>
-    </Container>
+  <Container reveal={hasLoaded} showArrow={showArrow}>
+    <Jumper>
+      <Arrow />
+    </Jumper>
+  </Container>
 );
 
 export default ScrollIncentive;
@@ -61,9 +61,9 @@ const Container = styled.div`
   padding-bottom: 65px;
   margin: 0px auto;
   max-width: 1500px;
-  opacity: ${props => (props.reveal && props.showArrow? 1 : 0)};
+  opacity: ${props => (props.reveal && props.showArrow ? 1 : 0)};
   transition: opacity 0.3s ease 1s;
-  @media (max-width:550px){
+  @media (max-width: 600px) {
     padding-left: 25px;
     justify-content: flex-start;
     padding-bottom: 40px;
