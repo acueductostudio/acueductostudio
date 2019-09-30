@@ -18,12 +18,12 @@ const StepContainer = props => {
   const Icon = iconArray[props.index];
   return (
     <Step>
-      <span>0{props.index + 1}</span>
       <Fade>
+        <span>0{props.index + 1}</span>
         <Icon />
         <h3>{props.title}</h3>
+        <p dangerouslySetInnerHTML={createMarkup(props.p)} />
       </Fade>
-      <p dangerouslySetInnerHTML={createMarkup(props.p)} />
     </Step>
   );
 };
@@ -89,18 +89,18 @@ const Step = styled.div`
   span {
     color: ${props => props.theme.colors.accent};
     font-size: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    /* transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); */
   }
   p {
     font-size: 1.5rem;
     color: ${props => props.theme.colors.foreground_low};
-    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   svg {
     max-width: 100px;
     margin: 22% auto;
     display: block;
-    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     * {
       vector-effect: non-scaling-stroke;
       stroke-width: ${props => props.theme.stroke};
@@ -108,7 +108,7 @@ const Step = styled.div`
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
-      transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
     .accent,
     .accentdisco,

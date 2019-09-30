@@ -21,7 +21,7 @@ const NextStudy = ({ link, margined }) => {
             />
           </Fade>
         </LogoContainer>
-        <p>{n.p}</p>
+        <P>{n.p}</P>
         <Fade>
           <ArrowContainer>
             <Arrow />
@@ -48,7 +48,7 @@ const Logo = styled.div`
   padding-bottom: 20%;
   background-size: 90%;
   background-position: 50% 50%;
-  transition: 0.3s ease all;
+  transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-repeat: no-repeat;
   transform: scale(0.97);
   transform-origin: 50% 0;
@@ -71,16 +71,13 @@ const Wrapper = styled.a`
     margin-bottom: 1%;
     margin-top: ${props => (props.margined ? "1%" : "0")};
     border-bottom: 2px solid transparent;
-    transition: 0.3s ease all;
   }
   &:hover {
     ${Logo} {
       transform: scale(1);
     }
     svg {
-      * {
-        stroke: ${props => props.theme.colors.accent};
-      }
+      stroke: ${props => props.theme.colors.accent};
     }
   }
   @media (max-width: 900px) {
