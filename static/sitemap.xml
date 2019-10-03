@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
   <url>
-    <loc>https://acueducto.studio/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/"/>
+    <loc>https://acueducto.studio</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en"/>
     <priority>1</priority>
@@ -11,7 +11,7 @@
   <url>
     <loc>https://acueducto.studio/en</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en"/>
     <priority>1</priority>
     <lastmod>2019-10-03</lastmod>

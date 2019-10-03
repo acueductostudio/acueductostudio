@@ -5,7 +5,7 @@ const url = "https://acueducto.studio";
 
 const routes = [
   {
-    es: "/",
+    es: "",
     en: "/en",
     priority: 1
   },
