@@ -1,0 +1,3 @@
+Sitemap: https://acueducto.studio/sitemap.xml
+User-agent: *
+Disallow:

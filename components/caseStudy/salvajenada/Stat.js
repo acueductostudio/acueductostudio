@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import createMarkup from "../../../helpers/createMarkup";
+import Fade from "react-reveal/Fade";
+import { B } from "components/shared/Dangerously";
 
 const Stat = ({ stat, children }) => {
   return (
     <StatWrapper>
-      <p>
-        <b dangerouslySetInnerHTML={createMarkup(stat.big)} />
-        {stat.small}
-      </p>
+      <Fade>
+        <p>
+          <B>{stat.big}</B>
+          {stat.small}
+        </p>
+      </Fade>
       {children}
     </StatWrapper>
   );
@@ -19,7 +22,7 @@ const StatWrapper = styled.div`
   border: 2px solid white;
   display: flex;
   flex-direction: column;
-  padding: 7% 5% 5% 10%;
+  padding: 3% 5% 5% 10%;
   i {
     font-size: 3.4rem;
     font-style: normal;
@@ -36,6 +39,7 @@ const StatWrapper = styled.div`
     color: ${props => props.theme.colors.foreground};
   }
   @media (max-width: 1000px) {
+    padding-top: 2%;
     b {
       font-size: 7rem;
     }

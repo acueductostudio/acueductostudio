@@ -1,42 +1,37 @@
 import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
-import TitleSection from "../components/TitleSection";
-import PageClipper from "../components/PageClipper";
-import Process from "../components/Process";
-import CaseStudiesPreview from "../components/caseStudy/CaseStudiesPreview";
-import ContactFooter from "../components/ContactFooter";
-import createMarkup from "../helpers/createMarkup";
-import Services from "../components/Services";
-import LogoComplete from "../static/assets/img/layout/logoComplete.svg";
-import Holed from "../static/assets/img/layout/holed.svg";
-import Head from "../components/Head";
+import TitleSection from "components/TitleSection";
+import PageClipper from "components/PageClipper";
+import Process from "components/Process";
+import ContactFooter from "components/ContactFooter";
+import { H1, H2 } from "components/shared/Dangerously";
+import Services from "components/Services";
+import LogoComplete from "static/assets/img/layout/logoComplete.svg";
+import Holed from "static/assets/img/layout/holed.svg";
+import CaseList from "components/caseStudy/CaseList";
+import Head from "components/Head";
 
 export default function Index(props) {
   let t = props.locale.home_page;
-  let c = props.locale.casestudies;
-  let s = props.locale.services;
-  let p = props.locale.process;
-  let f = props.locale.contactfooter;
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
+    props.setTitle(t.header_title);
   }, []);
 
   return (
     <>
       <PageClipper unPadded>
         <Head
-          title={"Acueducto, a strategic design & technology studio."}
-          description={
-            "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-          }
-          canonical={"https://acueducto.studio"}
+          title={t.page_title}
+          canonical={"https://acueducto.studio/"}
+          en_canonical={"https://acueducto.studio/en"}
+          lang={props.lang}
         />
-        <Land>
+        <Land id="land">
           <LandContainer>
-            <h1 dangerouslySetInnerHTML={createMarkup(t.landing.heading)} />
-            <h2 dangerouslySetInnerHTML={createMarkup(t.landing.tagline)} />
+            <H1>{t.landing.heading}</H1>
+            <H2>{t.landing.tagline}</H2>
           </LandContainer>
         </Land>
         <Intro id="removeArrow">
@@ -77,10 +72,11 @@ export default function Index(props) {
           </Boxed>
         </ImageGalleryRemovable>
         <Divider />
-        <Process p={p} />
-        <CaseStudiesPreview c={c} cpage={t.studies} noPlay />
-        <Services s={s} />
-        <ContactFooter f={f} />
+        <Process />
+        <TitleSection title={t.studies.title} text={t.studies.p} borderTop />
+        <CaseList noPlay />
+        <Services />
+        <ContactFooter />
       </PageClipper>
     </>
   );
@@ -139,7 +135,7 @@ const ImageGallery = styled.div`
 `;
 
 const Land = styled.section`
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -155,16 +151,31 @@ const Land = styled.section`
     color: ${props => props.theme.colors.white};
     line-height: 100%;
     font-size: 7rem;
-    max-width: 800px;
+    max-width: 830px;
     /* font-size: 6rem;
     font-weight: 900;
     text-transform: uppercase;
     font-family: "acumin-pro-wide";
     letter-spacing: -2px; */
   }
+  @media (max-width: 1115px) {
+    h1 {
+      font-size: 6.7rem;
+    }
+  }
+  @media (max-width: 1070px) {
+    h1 {
+      font-size: 6.4rem;
+    }
+  }
+  @media (max-width: 1025px) {
+    h1 {
+      font-size: 6.2rem;
+    }
+  }
   @media (max-width: 1000px) {
     h1 {
-      font-size: 6rem;
+      font-size: 5.9rem;
     }
   }
   @media (max-width: 900px) {
@@ -182,12 +193,12 @@ const Land = styled.section`
   }
   @media (max-width: 520px) {
     h1 {
-      max-width: 290px;
+      max-width: 300px;
     }
   }
   @media (max-width: 420px) {
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.35rem;
       max-width: 250px;
     }
     h2 {

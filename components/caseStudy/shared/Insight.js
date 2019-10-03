@@ -1,13 +1,17 @@
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
+import { P } from "components/shared/Dangerously";
 
 const Insight = props => (
   <InsightWrapper color={props.color}>
     <Limiter>
-      <h4>
-        <span>0{props.number}</span>
-        {props.insight.title}
-      </h4>
-      <p>{props.insight.p}</p>
+      <Fade>
+        <h4>
+          <span>0{props.number}</span>
+          {props.insight.title}
+        </h4>
+      </Fade>
+      <P>{props.insight.p}</P>
     </Limiter>
     {props.children}
   </InsightWrapper>

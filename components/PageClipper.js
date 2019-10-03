@@ -28,13 +28,17 @@ const Wrapper = styled.main`
   @media (max-width: 700px) {
     padding-top: ${props => (props.unPadded ? "0" : "10%")};
   }
+  @media (max-width: 600px), (max-height: 450px) {
+    overflow-y: auto;
+    position: relative;
+    left: 0px;
+    padding-bottom: 20px;
+    top: 17px;
+  }
   @media (max-width: 500px) {
     padding-top: ${props => (props.unPadded ? "0" : "15%")};
   }
   @media (max-width: 400px) {
     padding-top: ${props => (props.unPadded ? "0" : "20%")};
-  }
-  @media (max-width: 500px), (max-height: 450px) {
-    -webkit-overflow-scrolling: touch;
   }
 `;

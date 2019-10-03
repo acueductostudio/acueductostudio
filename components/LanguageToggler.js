@@ -1,13 +1,137 @@
 import styled from "styled-components";
-import Language from "../static/assets/img/layout/language.svg";
+import Arrows from "static/assets/img/layout/language.svg";
+import Router, { useRouter } from "next/router";
 
-const LanguageToggler = ({ hasLoaded, doChangeTheme }) => (
-  <Toggler reveal={hasLoaded}>
-    <Language onClick={doChangeTheme} />
-  </Toggler>
-);
+function LanguageToggler({ hasLoaded, locale, toggleLang }) {
+  const router = useRouter();
 
+  const handleLink = () => {
+    if (locale.lang == "en") {
+      switch (router.asPath) {
+        case "/en/work/ladanzadelasfieras":
+          Router.push(router.route, "/portafolio/ladanzadelasfieras");
+          break;
+        case "/en/work/salvajenada":
+          Router.push(router.route, "/portafolio/salvajenada");
+          break;
+        case "/en/work":
+          Router.push(router.route, "/portafolio");
+          break;
+        case "/en/about":
+          Router.push(router.route, "/nosotros");
+          break;
+        case "/en/manifesto":
+          Router.push(router.route, "/manifiesto");
+          break;
+        case "/en/cookies":
+          Router.push(router.route, "/cookies");
+          break;
+        case "/en/privacy":
+          Router.push(router.route, "/privacidad");
+          break;
+        default:
+          Router.push(router.route, "/");
+      }
+      document.querySelector("html").lang = "es";
+      toggleLang("es");
+    } else {
+      switch (router.asPath) {
+        case "/portafolio/ladanzadelasfieras":
+          Router.push(router.route, "/en/work/ladanzadelasfieras");
+          break;
+        case "/portafolio/salvajenada":
+          Router.push(router.route, "/en/work/salvajenada");
+          break;
+        case "/portafolio":
+          Router.push(router.route, "/en/work");
+          break;
+        case "/nosotros":
+          Router.push(router.route, "/en/about");
+          break;
+        case "/manifiesto":
+          Router.push(router.route, "/en/manifesto");
+          break;
+        case "/cookies":
+          Router.push(router.route, "/en/cookies");
+          break;
+        case "/privacidad":
+          Router.push(router.route, "/en/privacy");
+          break;
+        default:
+          Router.push(router.route, "/en");
+      }
+      document.querySelector("html").lang = "en";
+      toggleLang("en");
+    }
+  };
+
+  return (
+    <Toggler reveal={hasLoaded}>
+      <a onClick={handleLink}>
+        <English>
+          <span>switch language</span>
+          {locale.lang === "es" ? "english" : "español"}
+        </English>
+
+        <Stable>
+          <Arrows />
+        </Stable>
+      </a>
+    </Toggler>
+  );
+}
 export default LanguageToggler;
+
+const English = styled.div`
+  background-color: ${props => props.theme.colors.accent};
+  border: 2px solid ${props => props.theme.colors.foreground};
+  padding: 10px;
+  position: absolute;
+  margin-top: -13px;
+  margin-left: -8px;
+  border-radius: 50% 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 100;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.5rem;
+  span {
+    font-size: 1.1rem;
+    line-height: 1;
+    width: 100%;
+    color: ${props => props.theme.colors.background};
+    font-weight: 200;
+  }
+  svg {
+    width: 33px;
+    padding: 15px;
+    box-sizing: content-box;
+    * {
+      fill: ${props => props.theme.colors.white};
+      font-family: inherit;
+      font-weight: 200;
+    }
+  }
+`;
+
+const Stable = styled.div`
+  svg {
+    width: 33px;
+    padding: 15px;
+    box-sizing: content-box;
+    * {
+      fill: none;
+      stroke-width: ${props => props.theme.stroke};
+      stroke: ${props => props.theme.colors.white};
+    }
+  }
+`;
 
 const Toggler = styled.div`
   cursor: pointer;
@@ -29,9 +153,14 @@ const Toggler = styled.div`
   max-width: 1500px;
   opacity: ${props => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
-
-  /* TO CHANGE ON LANGUAGE */
-  opacity: 0;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      mix-blend-mode: unset;
+      ${English} {
+        opacity: 1;
+      }
+    }
+  }
 
   svg {
     width: 33px;
@@ -49,14 +178,19 @@ const Toggler = styled.div`
   }
   @media (max-width: 600px) {
     align-items: flex-start;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-right: calc(22px + 1%);
   }
   @media (max-width: 450px) {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-right: 23px;
   }
-  @media (max-height: 400px) and (max-width: 600px) {
-    padding-top: 30px;
+  @media (max-height: 450px) {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  @media (max-height: 450px) and (max-width: 600px) {
+    align-items: flex-start;
+    padding-top: 20px;
   }
 `;

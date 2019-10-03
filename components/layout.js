@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import styled from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import Header from "./header";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
@@ -8,7 +8,12 @@ import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
 import CookieMessage from "./CookieMessage";
 import ScrollIncentive from "./ScrollIncentive";
-import { initGA, logPageView } from "../helpers/analytics";
+import { initGA, logPageView } from "utils/analytics";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks
+} from "body-scroll-lock";
 
 const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
   ssr: false
@@ -16,7 +21,7 @@ const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
 
 export default ({
   children,
-  changeTheme,
+  toggleLang,
   checkForConsent,
   consentToCookies,
   hasToConsent,
@@ -36,7 +41,7 @@ export default ({
       window.GA_INITIALIZED = true;
     }
     logPageView();
-    if (router.route === "/") {
+    if (router.route === "/" || router.route === "/en") {
       setShowSketch(true);
       setShowArrow(true);
     } else {
@@ -44,6 +49,39 @@ export default ({
       setShowArrow(false);
     }
   }, [router.route]);
+
+  useEffect(() => {
+    if (showArrow || showConsentMessage) {
+      document.body.onscroll = function() {
+        checkScroll();
+      };
+      document.querySelector("#Clipper").onscroll = function() {
+        checkScroll();
+      };
+    }
+  }, [showArrow]);
+
+  useEffect(() => {
+    let targetElement = document.querySelector("#Nav");
+    if (isOpen) {
+      disableBodyScroll(targetElement);
+    } else {
+      enableBodyScroll(targetElement);
+    }
+  }, [isOpen]);
+
+  const checkScroll = () => {
+    if (
+      document.getElementById("Clipper").scrollTop > 100 ||
+      window.scrollY > 100
+    ) {
+      document.body.onscroll = null;
+      document.querySelector("#Clipper").onscroll = null;
+      setShowArrow(false);
+      checkForConsent();
+      setShowConsentMessage(false);
+    }
+  };
 
   const toggleNav = () => {
     setOpen(!isOpen);
@@ -53,30 +91,14 @@ export default ({
     setOpen(false);
   };
 
-  const doChangeTheme = () => {
-    changeTheme();
-  };
-
   const doConsentToCookies = () => {
     consentToCookies();
   };
 
-  const removeArrow = () => {
-    if (document.getElementById("Clipper").scrollTop > 100) {
-      setShowArrow(false);
-      checkForConsent();
-      setShowConsentMessage(false);
-    }
-  };
-
   return (
     <>
-      <PageWrapper
-        id="Wrapper"
-        onScroll={showArrow || showConsentMessage ? removeArrow : null}
-      >
-        {showSketch ? <HomeSketch /> : ""}
-        {/* {showSketch ? <Background /> : ""} */}
+      <PageWrapper id="Wrapper">
+        {showSketch && <HomeSketch hide={true} />}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}
@@ -88,6 +110,8 @@ export default ({
           headerTitle={headerTitle}
           hasLoaded={hasLoaded}
           closeNav={closeNav}
+          locale={locale}
+          route={router.route}
         />
         <Nav
           locale={locale}
@@ -96,29 +120,61 @@ export default ({
           isOpen={isOpen}
         />
         {React.cloneElement(children, { setTitle: setTitle })}
-        <LanguageToggler doChangeTheme={doChangeTheme} hasLoaded={hasLoaded} />
-        <ScrollIncentive
+
+        <LanguageToggler
+          locale={locale}
           hasLoaded={hasLoaded}
-          showArrow={showArrow}
-          isOpen={isOpen}
+          toggleLang={toggleLang}
         />
+        <ScrollIncentive hasLoaded={hasLoaded} showArrow={showArrow} />
         <CookieMessage
           locale={locale}
           doConsentToCookies={doConsentToCookies}
           hasToConsent={hasToConsent}
         />
+        <BodyOverflow isOpen={isOpen} hasLoaded={hasLoaded} />
       </PageWrapper>
     </>
   );
 };
 
+const BodyOverflow = createGlobalStyle`
+  .TopBar{
+    box-shadow: 1px 1px 4px ${props => props.theme.colors.accent};
+  }
+  @media (max-width: 600px), (max-height:450px) {
+    .react-reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    }
+    #Wrapper{
+      overflow: ${props => (props.hasLoaded ? "unset" : "hidden")};
+      height:${props => (props.hasLoaded ? "unset" : "100%")};
+    }
+    body {
+    overflow-y: ${props => (props.hasLoaded ? "auto" : "hidden")};
+      &:after,&:before{
+        content: " ";
+        position: fixed;
+        right: 0;
+        left: 0;
+        height: 18px;
+        z-index:100;
+        background-color: ${props => props.theme.colors.background};
+      }
+      &:before {
+        top:0;
+      }
+      &:after {
+        bottom:0;
+      }
+    }  
+  }
+`;
+
 const PageWrapper = styled.div`
   width: 100%;
-  height: 100%;
-  max-height: 100vh;
-  position: fixed;
   flex-direction: column;
-  overflow: hidden;
   display: flex;
   justify-content: flex-start;
   color: ${props => props.theme.colors.foreground};
@@ -143,14 +199,7 @@ const Border = styled.div`
   transition: opacity 0.3s ease-in, border 0.3s ease-in;
   border: ${props =>
     `${props.theme.stroke} solid ${props.theme.colors.foreground}`};
-`;
-
-const Background = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0%;
-  background-image: url("../static/assets/img/layout/fond.jpg");
-  background-size: cover;
+  @media (max-width: 600px), (max-height: 450px) {
+    mix-blend-mode: normal;
+  }
 `;

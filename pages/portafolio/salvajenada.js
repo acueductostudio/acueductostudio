@@ -1,28 +1,33 @@
 import styled from "styled-components";
-import Head from "../../components/Head";
+import Head from "components/Head";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import Fade from "react-reveal/Fade";
-import PageClipper from "../../components/PageClipper";
-import ContactFooter from "../../components/ContactFooter";
-import NextStudy from "../../components/caseStudy/shared/NextStudy";
-import Quote from "../../components/caseStudy/shared/Quote";
-import Stat from "../../components/caseStudy/salvajenada/Stat";
-import LogoSalvaje from "../../static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
-import Ig from "../../static/assets/img/casestudies/salvajenada/ig.svg";
-import Ibero from "../../static/assets/img/casestudies/salvajenada/ibero.svg";
-import Wolf from "../../static/assets/img/casestudies/salvajenada/wolf.svg";
-import Apple from "../../static/assets/img/casestudies/salvajenada/apple.svg";
-import Spotify from "../../static/assets/img/casestudies/salvajenada/spotify.svg";
-import { H2, H3, P, Td } from "../../components/caseStudy/shared/Dangerously";
-import IntroVideo from "../../components/caseStudy/shared/IntroVideo";
-import Marquee from "../../components/caseStudy/shared/Marquee";
-import Insight from "../../components/caseStudy/shared/Insight";
-import TextColumn from "../../components/caseStudy/shared/TextColumn";
-import CommonSection from "../../components/caseStudy/shared/CommonSection";
+import PageClipper from "components/PageClipper";
+import dynamic from "next/dynamic";
+import ContactFooter from "components/ContactFooter";
+import NextStudy from "components/caseStudy/shared/NextStudy";
+import Quote from "components/caseStudy/shared/Quote";
+import Stat from "components/caseStudy/salvajenada/Stat";
+import Ig from "static/assets/img/casestudies/salvajenada/ig.svg";
+import Ibero from "static/assets/img/casestudies/salvajenada/ibero.svg";
+import Wolf from "static/assets/img/casestudies/salvajenada/wolf.svg";
+import Apple from "static/assets/img/casestudies/salvajenada/apple.svg";
+import Spotify from "static/assets/img/casestudies/salvajenada/spotify.svg";
+import { H2, H3, P } from "components/shared/Dangerously";
+import IntroVideo from "components/caseStudy/shared/IntroVideo";
+import Marquee from "components/caseStudy/shared/Marquee";
+import Insight from "components/caseStudy/shared/Insight";
+import LogoSalvaje from "static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
+import TextColumn from "components/caseStudy/shared/TextColumn";
+import CommonSection from "components/caseStudy/shared/CommonSection";
+import SecondBackImg from "static/assets/img/casestudies/salvajenada/secondBack.svg";
+import ThirdBackImg from "static/assets/img/casestudies/salvajenada/thirdBack.svg";
+import FourthBackImg from "static/assets/img/casestudies/salvajenada/fourthBack.svg";
+import FifthBackImg from "static/assets/img/casestudies/salvajenada/fifthBack.svg";
+import InterBackImg from "static/assets/img/casestudies/salvajenada/interBack.svg";
 
 const FramesEmbed = dynamic(
-  import("../../components/caseStudy/salvajenada/FramesEmbed"),
+  import("components/caseStudy/salvajenada/FramesEmbed"),
   {
     loading: () => <span style={{ height: "500px" }}>Loading frames...</span>
   }
@@ -33,8 +38,6 @@ const salvajeBlue = "rgb(60, 179, 224)";
 export default function Salvajenada(props) {
   const [loadAssets, setloadAssets] = useState(false);
   let t = props.locale.casestudies.studies.salvajenada;
-  let f = props.locale.contactfooter;
-  let n = props.locale.next_study;
 
   useEffect(() => {
     props.setTitle(t.headerTitle);
@@ -98,11 +101,11 @@ export default function Salvajenada(props) {
   return (
     <PageClipper unPadded>
       <Head
-        title={"Where playlists meet strategy | Salvajenada & Acueducto"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
-        canonical={"https://acueducto.studio/work/salvajenada"}
+        title={t.page_title}
+        description={t.meta_description}
+        canonical={"https://acueducto.studio/portafolio/salvajenada"}
+        en_canonical={"https://acueducto.studio/en/work/salvajenada"}
+        lang={props.lang}
       />
       <Fade>
         <Land>
@@ -110,11 +113,11 @@ export default function Salvajenada(props) {
         </Land>
       </Fade>
       <Intro>
-        <Marquee tags={t.intro_section.tags} amount={2} />
+        <Marquee tags={t.intro_section.tags} />
         <IntroVideo link={t.link} />
         <Column>
           <H2>{t.intro_section.title}</H2>
-          <p>{t.intro_section.p}</p>
+          <P>{t.intro_section.p}</P>
           <WolfDays>
             <LogoWolf>
               <Wolf />
@@ -129,16 +132,28 @@ export default function Salvajenada(props) {
         </Column>
       </Intro>
       <Second>
-        <SecondBack />
-        <InterBack />
+        <SecondBack>
+          <SecondBackImg />
+        </SecondBack>
+        <InterBack>
+          <InterBackImg />
+        </InterBack>
         <StickyContainer>
           <Sticky>
             <span>{t.second_section.sticky}</span>
             <div>
-              <a href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g"
+              >
                 <Spotify />
               </a>
-              <a href="https://music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP"
+              >
                 <Apple />
               </a>
             </div>
@@ -158,14 +173,15 @@ export default function Salvajenada(props) {
           <P>{t.second_section.p2}</P>
         </Column>
         <TableProposition>
-          <P colSpan="2">{t.second_section.table2[0].p}</P>
-          <P>{t.second_section.table2[1].p}</P>
-          <P>{t.second_section.table2[2].p}</P>
+          <p>{t.second_section.table2[0].label}</p>
+          <p>{t.second_section.table2[0].content}</p>
         </TableProposition>
         <Quote quote={t.second_section.quote} specialMarginBottom />
       </Second>
       <Third>
-        <ThirdBack />
+        <ThirdBack>
+          <ThirdBackImg />
+        </ThirdBack>
         <Column>
           <H3>{"– " + t.third_section.subtitle}</H3>
           <P>{t.third_section.p}</P>
@@ -201,7 +217,9 @@ export default function Salvajenada(props) {
         />
       </Third>
       <Fourth>
-        <FourthBack />
+        <FourthBack>
+          <FourthBackImg />
+        </FourthBack>
         <Column>
           <H2>{t.fourth_section.title}</H2>
           <P>{t.fourth_section.p}</P>
@@ -220,17 +238,26 @@ export default function Salvajenada(props) {
         </Column>
       </Fourth>
       <Fifth>
-        <FifthBack />
+        <FifthBack>
+          <FifthBackImg />
+        </FifthBack>
         <Column>
           <H3>{t.fifth_section.title}</H3>
         </Column>
         {loadAssets && <FramesEmbed />}
-        <a href="https://www.instagram.com/salvajenada/">
-          <Ig />
-        </a>
+        <Fade>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/salvajenada/"
+          >
+            instagram
+            <Ig />
+          </a>
+        </Fade>
       </Fifth>
-      <NextStudy n={n} link="ladanzadelasfieras" />
-      <ContactFooter f={f} />
+      <NextStudy link="ladanzadelasfieras" margined />
+      <ContactFooter />
     </PageClipper>
   );
 }
@@ -375,6 +402,7 @@ const StatGrid = styled.div`
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     margin-top: 8%;
     margin-left: 6%;
     padding-left: 0px;
@@ -392,7 +420,7 @@ const StatGrid = styled.div`
         scroll-snap-align: center;
         scroll-snap-stop: always;
         text-align: center;
-        padding: 2%;
+        padding: 1% 4% 4.5% 4%;
         align-items: center;
         justify-content: center;
       }
@@ -443,6 +471,7 @@ const ShoutGrid = styled.div`
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     margin-top: 8%;
     img,
     video {
@@ -479,6 +508,7 @@ const PlaylistGrid = styled.div`
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     margin-top: 8%;
     img {
       max-width: 70%;
@@ -522,13 +552,20 @@ const Table = styled.div`
 `;
 
 const TableProposition = styled(Table)`
-  grid-template-columns: 1fr 0.7fr;
-  p {
-    &:nth-child(1) {
-      grid-column: 1 / span 2;
+  grid-template-columns: 1fr;
+  @media (max-width: 500px) {
+    p {
+      &:nth-child(1) {
+        font-weight: 200;
+        color: ${props => props.theme.colors.foreground};
+      }
+      &:nth-child(2) {
+        color: ${props => props.theme.colors.foreground_low};
+      }
     }
   }
 `;
+
 const TableStrengths = styled(Table)`
   grid-template-columns: 1fr 1fr;
   p {
@@ -554,14 +591,21 @@ const TableStrengths = styled(Table)`
 
 const CommonTransition = styled.div`
   width: 100%;
-  background-position: center bottom;
-  background-size: cover;
   height: 0;
   margin: -1px 0;
+  position: relative;
+  svg {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    bottom: 0;
+    top: 0%;
+    height: 100%;
+  }
 `;
 
 const FifthBack = styled(CommonTransition)`
-  background-image: url("../static/assets/img/casestudies/salvajenada/fifthBack.svg");
   padding-bottom: 28%;
   @media (max-width: 1300px) {
     padding-bottom: 40%;
@@ -575,16 +619,22 @@ const Fifth = styled(CommonSection)`
   background-color: ${salvajeBlue};
   color: ${props => props.theme.colors.background};
   padding-bottom: 10%;
-  svg {
-    width: 50px;
-    * {
-      fill: ${props => props.theme.colors.background};
+  h3 {
+    padding: 0;
+    line-height: 1;
+  }
+  a {
+    font-size: 0;
+    svg {
+      width: 50px;
+      * {
+        fill: ${props => props.theme.colors.background};
+      }
     }
   }
 `;
 
 const FourthBack = styled(CommonTransition)`
-  background-image: url("../static/assets/img/casestudies/salvajenada/fourthBack.svg");
   padding-bottom: 48%;
   @media (max-width: 1300px) {
     padding-bottom: 55%;
@@ -621,10 +671,7 @@ const Third = styled(CommonSection)`
   }
 `;
 const ThirdBack = styled(CommonTransition)`
-  background-image: url("../static/assets/img/casestudies/salvajenada/thirdBack.svg");
-  padding-bottom: 37%;
-  margin-bottom: -1px;
-  margin-top: -1px;
+  padding-bottom: 39%;
   @media (max-width: 1100px) {
     padding-bottom: 50%;
   }
@@ -634,8 +681,6 @@ const ThirdBack = styled(CommonTransition)`
 `;
 
 const InterBack = styled.div`
-  background-image: url("../static/assets/img/casestudies/salvajenada/interBack.svg");
-  background-size: cover;
   height: 0px;
   width: 50%;
   padding-bottom: 96%;
@@ -644,6 +689,15 @@ const InterBack = styled.div`
   position: absolute;
   right: 0;
   z-index: -1;
+  svg {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    bottom: 0;
+    top: 0%;
+    height: 100%;
+  }
 `;
 
 const Second = styled(CommonSection)`
@@ -662,10 +716,15 @@ const Second = styled(CommonSection)`
   table {
     color: ${props => props.theme.colors.foreground};
   }
+  p {
+    b {
+      color: ${props => props.theme.colors.foreground};
+      font-weight: 100;
+    }
+  }
 `;
 
 const SecondBack = styled(CommonTransition)`
-  background-image: url("../static/assets/img/casestudies/salvajenada/secondBack.svg");
   padding-bottom: 46%;
   margin-bottom: 10%;
   @media (max-width: 1300px) {
@@ -699,14 +758,14 @@ const WolfDays = styled.div`
   max-width: 390px;
   margin: 10% auto;
   p {
-    padding: 6%;
+    padding: 1% 6% 6% 6%;
     width: 100%;
     line-height: 85%;
   }
   b {
     font-size: 8rem;
     font-weight: 200;
-    line-height: 100%;
+    line-height: 110%;
   }
   @media (max-width: 450px) {
     b {
@@ -737,7 +796,7 @@ const Intro = styled(CommonSection)`
 const Land = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("../static/assets/img/casestudies/salvajenada/landBack.svg");
+  background-image: url("/static/assets/img/casestudies/salvajenada/landBack.svg");
   background-position: center bottom;
   background-size: cover;
   svg {

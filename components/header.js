@@ -2,11 +2,17 @@ import Link from "next/link";
 import styled from "styled-components";
 import Logo from "./../static/assets/img/layout/logo.svg";
 
-export default function Header({ hasLoaded, headerTitle, isOpen, closeNav }) {
+function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
+  const backUp = e => {
+    closeNav();
+    (route === "/" || route === "/en") &&
+      (e.preventDefault(),
+      document.getElementById("land").scrollIntoView({ behavior: "smooth" }));
+  };
   return (
     <TopHeader reveal={hasLoaded}>
-      <Link href="/">
-        <Logotype onClick={closeNav}>
+      <Link href={locale.lang === "en" ? "/en" : "/"} passHref>
+        <Logotype onClick={backUp}>
           <h1>acueducto</h1>
           <Logo />
         </Logotype>
@@ -15,6 +21,7 @@ export default function Header({ hasLoaded, headerTitle, isOpen, closeNav }) {
     </TopHeader>
   );
 }
+export default React.memo(Header);
 
 const HeaderTitle = styled.div`
   position: absolute;
@@ -24,7 +31,7 @@ const HeaderTitle = styled.div`
   font-size: 1.4rem;
   letter-spacing: 4px;
   z-index: 2;
-  top: 66px;
+  top: 61px;
   mix-blend-mode: exclusion;
   opacity: ${props => (props.hide ? 0 : 1)};
   transition: opacity 0.2s ease;
@@ -52,7 +59,6 @@ const TopHeader = styled.header`
   @media (max-width: 800px) {
     flex-direction: column;
     ${HeaderTitle} {
-      margin-top: 5px;
       transform: none;
       left: 0;
       position: relative;

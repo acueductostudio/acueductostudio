@@ -2,36 +2,35 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
-import Head from "../components/Head";
-import TitleSection from "../components/TitleSection";
-import PageClipper from "../components/PageClipper";
-import createMarkup from "../helpers/createMarkup";
-import ContactFooter from "../components/ContactFooter";
-import PinnedSection from "../components/PinnedSection";
+import Head from "components/Head";
+import TitleSection from "components/TitleSection";
+import PageClipper from "components/PageClipper";
+import ContactFooter from "components/ContactFooter";
+import PinnedSection from "components/PinnedSection";
+import { P } from "components/shared/Dangerously";
 
-const HeadSketch = dynamic(import("../components/headSketch/HeadSketch"), {
+const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
-    <HeadLoader src="./../static/assets/img/layout/headPlacerHolder.jpg" />
+    <HeadLoader src="/static/assets/img/layout/headPlacerHolder.jpg" />
   ),
   ssr: false
 });
 
 export default function About(props) {
   let t = props.locale.about_page;
-  let f = props.locale.contactfooter;
 
   useEffect(() => {
-    props.setTitle("About");
-  }, []);
+    props.setTitle(t.headerTitle);
+  }, [props.locale]);
 
   return (
     <PageClipper>
       <Head
-        title={"About Acueducto"}
-        description={
-          "We partner with innovators around the globe to develop experiences that tell stories, inspire communities and build meaningful bonds."
-        }
-        canonical={"https://acueducto.studio/about"}
+        title={t.page_title}
+        description={t.meta_description}
+        canonical={"https://acueducto.studio/nosotros"}
+        en_canonical={"https://acueducto.studio/en/about"}
+        lang={props.lang}
       />
       <PinnedSection t={t}>
         <Person>
@@ -39,16 +38,16 @@ export default function About(props) {
           <Fade>
             <h4>{t.team.rodrigo.name}</h4>
             <span>{t.team.rodrigo.position}</span>
-            <p dangerouslySetInnerHTML={createMarkup(t.team.rodrigo.bio)} />
           </Fade>
+          <P>{t.team.rodrigo.bio}</P>
         </Person>
         <Person>
           <HeadSketch second rotationStart={50} invertRotation />
           <Fade>
             <h4>{t.team.artemio.name}</h4>
             <span>{t.team.artemio.position}</span>
-            <p dangerouslySetInnerHTML={createMarkup(t.team.artemio.bio)} />
           </Fade>
+          <P>{t.team.artemio.bio}</P>
         </Person>
       </PinnedSection>
       <TitleSection
@@ -58,7 +57,7 @@ export default function About(props) {
         linktext={t.values.linktext}
         borderTop
       />
-      <ContactFooter f={f} />
+      <ContactFooter />
     </PageClipper>
   );
 }
@@ -85,7 +84,8 @@ const Person = styled.div`
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 3.5px;
-    margin-bottom: 6%;
+    margin-bottom: 4%;
+    font-weight: 200;
   }
   @media (max-width: 1250px) {
     h4 {

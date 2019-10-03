@@ -1,22 +1,26 @@
 import styled from "styled-components";
+import { useContext } from "react";
 import TitleSection from "../components/TitleSection";
-import createMarkup from "../helpers/createMarkup";
-import Envision from "../static/assets/img/layout/steps/envision.svg";
+import { P } from "components/shared/Dangerously";
 import Fade from "react-reveal/Fade";
-import dynamic from "next/dynamic";
+import LangContext from "utils/LangContext";
+import createMarkup from "utils/createMarkup";
+import i1 from "static/assets/img/layout/steps/discover.svg";
+import i2 from "static/assets/img/layout/steps/envision.svg";
+import i3 from "static/assets/img/layout/steps/buildstory.svg";
+import i4 from "static/assets/img/layout/steps/craft.svg";
+import i5 from "static/assets/img/layout/steps/launch.svg";
+import i6 from "static/assets/img/layout/steps/review.svg";
+
+const iconArray = [i1, i2, i3, i4, i5, i6];
 
 const StepContainer = props => {
-  const Icon = dynamic(
-    import(`../static/assets/img/layout/steps/${props.icon}`),
-    {
-      loading: () => <p>Loading icon...</p>
-    }
-  );
+  const Icon = iconArray[props.index];
   return (
     <Step>
       <Fade>
-        <span>0{props.index}</span>
-        <Icon/>
+        <span>0{props.index + 1}</span>
+        <Icon />
         <h3>{props.title}</h3>
         <p dangerouslySetInnerHTML={createMarkup(props.p)} />
       </Fade>
@@ -24,14 +28,14 @@ const StepContainer = props => {
   );
 };
 
-const Process = props => {
-  let p = props.p;
+const Process = () => {
+  const context = useContext(LangContext);
+  let p = context.home_page.process;
   var steps = p.steps.map(function(step, index) {
     return (
       <StepContainer
         key={"step" + index}
-        icon={step.icon}
-        index={index + 1}
+        index={index}
         title={step.title}
         p={step.p}
       />
@@ -45,7 +49,7 @@ const Process = props => {
   );
 };
 
-export default Process;
+export default React.memo(Process);
 
 const Step = styled.div`
   padding: 10%;
@@ -54,23 +58,49 @@ const Step = styled.div`
   border: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
+  &:hover {
+    svg {
+      transform: scale(1.05);
+      .accentdisco {
+        transform: translate(18px, -4px) scale(0.92);
+      }
+      .accent {
+        transform: translateY(-10px) scale(1.02);
+      }
+      .accentcubo {
+        transform: translate(-4px, -9px);
+      }
+      .accentrock {
+        transform: translateY(-10px) scale(1.05);
+      }
+    }
+    p {
+      color: ${props => props.theme.colors.foreground};
+    }
+  }
   h3 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    font-weight:200;
+    opacity: 1;
+    line-height: 125%;
+    margin-bottom: 16px;
+    font-weight: 200;
+    transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {
     color: ${props => props.theme.colors.accent};
     font-size: 1.5rem;
+    /* transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); */
   }
   p {
     font-size: 1.5rem;
     color: ${props => props.theme.colors.foreground_low};
+    transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   svg {
     max-width: 100px;
     margin: 22% auto;
     display: block;
+    transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     * {
       vector-effect: non-scaling-stroke;
       stroke-width: ${props => props.theme.stroke};
@@ -78,9 +108,14 @@ const Step = styled.div`
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
+      transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
-    .accent {
+    .accent,
+    .accentdisco,
+    .accentcubo,
+    .accentrock {
       stroke: ${props => props.theme.colors.accent};
+      will-change: transform;
     }
   }
   @media (max-width: 1000px) {

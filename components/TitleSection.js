@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import createMarkup from "../helpers/createMarkup";
+import { P, H1 } from "components/shared/Dangerously";
 import Link from "next/link";
 import Arrow from "../components/Arrow";
 import Grid from "./TitleSectionGrid";
@@ -10,9 +10,9 @@ const TitleSection = props => {
 
   return (
     <Grid borderTop={props.borderTop}>
+      <H1>{title}</H1>
+      <P>{text}</P>
       <Fade>
-        <h1 dangerouslySetInnerHTML={createMarkup(title)} />
-        <p dangerouslySetInnerHTML={createMarkup(text)} />
         {link ? (
           <p>
             <Link href={link[0]} passHref>

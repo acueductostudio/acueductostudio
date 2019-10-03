@@ -1,21 +1,32 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import { useRef } from "react";
-import createMarkup from "../../helpers/createMarkup";
+import { P } from "components/shared/Dangerously";
+import BorderLink from "components/shared/BorderedLink";
 import Fade from "react-reveal/Fade";
-import Arrow from "../../static/assets/img/layout/arrow.svg";
+import Arrow from "static/assets/img/layout/arrow.svg";
 import Link from "next/link";
+import LangContext from "utils/LangContext";
 
 const SingleCase = props => {
   const video = useRef(null);
-
   return (
     <Case>
-      <Link href={"work" + props.link} passHref>
+      <Link
+        href={
+          props.lang === "en"
+            ? "/en/work/" + props.link
+            : "/portafolio/" + props.link
+        }
+        passHref
+      >
         <a>
           <Fade>
             <VidContainer>
+              {props.lang === "en" ? "go to project" : "visitar proyecto"}
               <Logo
-                src={`static/assets/img/casestudies${props.link}/portfolio_logo.svg`}
+                src={`/static/assets/img/casestudies/${props.link}/portfolio_logo.svg`}
+                alt={`logo_${props.link}`}
               />
               {props.noPlay ? (
                 <video
@@ -23,10 +34,10 @@ const SingleCase = props => {
                   playsInline
                   muted
                   loop
-                  poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+                  poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
                 >
                   <source
-                    src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
+                    src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
                   />
                 </video>
               ) : (
@@ -36,10 +47,10 @@ const SingleCase = props => {
                   autoPlay
                   muted
                   loop
-                  poster={`../static/assets/img/casestudies${props.link}/portfolio_poster.svg`}
+                  poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
                 >
                   <source
-                    src={`../static/assets/video/casestudies${props.link}/portfolio.mp4`}
+                    src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
                   />
                 </video>
               )}
@@ -49,16 +60,31 @@ const SingleCase = props => {
       </Link>
       <Info>
         <Fade>
-          <Link href={"work" + props.link} passHref>
-            <h4>{props.title}</h4>
+          <Link
+            href={
+              props.lang === "en"
+                ? "/en/work/" + props.link
+                : "/portafolio/" + props.link
+            }
+            passHref
+          >
+            <a>
+              <Hoverable>{props.title}</Hoverable>
+            </a>
           </Link>
         </Fade>
         <Flexed>
-          <Fade>
-            <p dangerouslySetInnerHTML={createMarkup(props.tags)} />
-          </Fade>
-          <Link href={"work" + props.link} passHref>
+          <P>{props.tags}</P>
+          <Link
+            href={
+              props.lang === "en"
+                ? "/en/work/" + props.link
+                : "/portafolio/" + props.link
+            }
+            passHref
+          >
             <a>
+              {props.lang === "en" ? "go to project" : "visitar proyecto"}
               <Arrow />
             </a>
           </Link>
@@ -68,12 +94,14 @@ const SingleCase = props => {
   );
 };
 
-const CaseList = props => {
-  let c = props.c;
-
-  let cases = Object.entries(c).map(function(study, index) {
+const CaseList = ({ limit, noPlay }) => {
+  const context = useContext(LangContext);
+  let cases = Object.entries(context.casestudies.studies).map(function(
+    study,
+    index
+  ) {
     study = study[1];
-    if (props.limit !== undefined && index + 1 > props.limit) {
+    if (limit !== undefined && index + 1 > limit) {
       return;
     } else {
       return (
@@ -84,7 +112,8 @@ const CaseList = props => {
           link={study.link}
           video={study.video}
           logo={study.logo}
-          noPlay={props.noPlay}
+          noPlay={noPlay}
+          lang={context.lang}
         />
       );
     }
@@ -92,17 +121,23 @@ const CaseList = props => {
   return <CaseStudiesWrapper>{cases}</CaseStudiesWrapper>;
 };
 
-export default CaseList;
+export default React.memo(CaseList);
+
+const Hoverable = styled.h4`
+  ${BorderLink({ showLink: false })}
+`;
 
 const Logo = styled.img`
   width: 70%;
-  transform: translateZ(1px) translateY(-50%);
+  transform: translateZ(1px) translateX(-50%) translateY(-50%);
   align-self: center;
   justify-self: center;
   display: flex;
   position: absolute;
   z-index: 1;
   top: 50%;
+  left: 50%;
+  transform-origin: 50% 50%;
 `;
 
 const Flexed = styled.div`
@@ -112,6 +147,10 @@ const Flexed = styled.div`
   a {
     justify-content: flex-end;
     display: flex;
+    font-size: 0;
+  }
+  p {
+    margin-top: 4%;
   }
 `;
 
@@ -121,15 +160,26 @@ const Info = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  a {
+    text-decoration: none;
+  }
   h4 {
     font-size: 4.5rem;
     font-weight: 200;
-    line-height: 110%;
+    line-height: 115%;
     max-width: 500px;
     cursor: pointer;
+    background-position: 0 5.8rem;
   }
   p {
     color: ${props => props.theme.colors.foreground_low};
+  }
+  a {
+    &:hover {
+      svg {
+        stroke: ${props => props.theme.colors.accent};
+      }
+    }
   }
   svg {
     align-self: flex-end;
@@ -138,20 +188,24 @@ const Info = styled.div`
     fill: none;
     stroke: ${props => props.theme.colors.foreground};
     stroke-width: ${props => props.theme.stroke};
+    transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   @media (max-width: 1160px) {
     h4 {
       font-size: 4rem;
+      background-position: 0 5.1rem;
     }
   }
   @media (max-width: 950px) {
     h4 {
       font-size: 3.5rem;
+      background-position: 0 4.4rem;
     }
   }
   @media (max-width: 780px) {
     h4 {
       font-size: 3rem;
+      background-position: 0 3.8rem;
     }
     p {
       font-size: 1.4rem;
@@ -167,9 +221,10 @@ const Info = styled.div`
       bottom: -10px;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 500px), (max-height: 450px) {
     h4 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
+      background-position: 0 3.1rem;
     }
   }
 `;
@@ -183,6 +238,22 @@ const VidContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  font-size: 0;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      video {
+        transform: scale(0.98);
+        opacity: 0.92;
+      }
+      img {
+        transform: translateZ(1px) translateY(-50%) translateX(-50%) scale(1.02);
+      }
+    }
+    img {
+      transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      will-change: transform;
+    }
+  }
   video {
     position: absolute;
     top: 0;
@@ -190,6 +261,9 @@ const VidContainer = styled.div`
     bottom: 0;
     right: 0;
     width: 100%;
+    will-change: transform, opacity;
+    transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      opacity 0.5s ease;
   }
 `;
 
@@ -198,11 +272,14 @@ const Case = styled.div`
   border-top: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   grid-template-columns: repeat(2, 1fr);
+  a {
+    cursor: pointer;
+  }
   @media (max-width: 700px) {
     display: flex;
     flex-direction: column;
     ${VidContainer} {
-      margin: 5% 5% 25px 5%;
+      margin: 5% 5% 10px 5%;
       width: 90%;
       padding-bottom: 45%;
       video {
@@ -211,9 +288,12 @@ const Case = styled.div`
     }
     ${Info} {
       padding: 0 5% 5% 5%;
-    }
-    h4 {
-      margin-bottom: 20px;
+      div:nth-of-type(2) {
+        margin-top: 5px;
+      }
+      h4 {
+        margin-bottom: 20px;
+      }
     }
   }
 `;

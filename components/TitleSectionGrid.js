@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const TitleSectionGrid = styled.div`
+  background-color: ${props => props.theme.colors.background};
   border-top: ${props =>
     props.borderTop
       ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`
@@ -31,11 +32,6 @@ const TitleSectionGrid = styled.div`
           stroke: ${props => props.theme.colors.accent};
         }
       }
-    }
-  }
-  @media (max-width: 1400px) {
-    p {
-      grid-column: 7 span 5;
     }
   }
   @media (max-width: 1100px) {
@@ -69,6 +65,7 @@ const TitleSectionGrid = styled.div`
     }
     h1 {
       margin-bottom: 0;
+      font-size: 3.4rem;
     }
     p:nth-child(3):hover svg * {
       stroke: ${props => props.theme.colors.foreground};

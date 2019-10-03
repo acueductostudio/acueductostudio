@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import TitleSection from "./TitleSection";
 import Fade from "react-reveal/Fade";
+import LangContext from "utils/LangContext";
 
-const Services = props => {
-  let s = props.s;
+const Services = () => {
+  const context = useContext(LangContext);
+  let s = context.home_page.services;
   let services = s.service_categories.map(function(service, index) {
     return (
       <Service key={"service" + index}>
@@ -28,11 +31,11 @@ const Services = props => {
   );
 };
 
-export default Services;
+export default React.memo(Services);
 
 const Info = styled.div`
   width: auto;
-  h4{
+  h4 {
     font-weight: 200;
   }
 `;
@@ -63,7 +66,6 @@ const Service = styled.div`
     props.theme.stroke +
     " 0"};
   padding: 20%;
-  text-transform: capitalize;
   &:nth-child(3) {
     border-right: 0;
   }
@@ -74,12 +76,21 @@ const Service = styled.div`
     list-style: none;
     line-height: 135%;
     color: ${props => props.theme.colors.foreground_low};
+    &:before {
+      content: "– ";
+      font-weight: 200;
+      color: ${props => props.theme.colors.accent};
+      margin-left: -16px;
+    }
   }
   @media (max-width: 1000px) {
     padding: 12%;
     align-items: flex-start;
     ul li {
       font-size: 1.5rem;
+      &:before {
+        margin-left: 0px;
+      }
     }
   }
   @media (max-width: 800px) {
@@ -96,6 +107,9 @@ const Service = styled.div`
       margin-top: 8px;
       li {
         font-size: 1.6rem;
+        &:before {
+          content: "";
+        }
       }
     }
   }
@@ -103,6 +117,7 @@ const Service = styled.div`
     padding: 5% 0 5% 5%;
     h4 {
       text-transform: lowercase;
+      font-size: 2.3rem;
     }
   }
 `;

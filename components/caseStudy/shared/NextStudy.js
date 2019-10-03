@@ -1,12 +1,17 @@
 import styled from "styled-components";
+import { useContext } from "react";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
-import Arrow from "./../../Arrow";
+import Arrow from "components/Arrow";
+import LangContext from "utils/LangContext";
+import { P } from "components/shared/Dangerously";
 
-const NextStudy = ({ link, n }) => {
+const NextStudy = ({ link, margined }) => {
+  const context = useContext(LangContext);
+  let n = context.next_study;
   return (
-    <Link href={link}>
-      <Wrapper>
+    <Link href={link} passHref>
+      <Wrapper margined={margined}>
         <LogoContainer>
           <Fade>
             <Logo
@@ -16,8 +21,8 @@ const NextStudy = ({ link, n }) => {
             />
           </Fade>
         </LogoContainer>
+        <P>{n.p}</P>
         <Fade>
-          <p>{n.p}</p>
           <ArrowContainer>
             <Arrow />
           </ArrowContainer>
@@ -43,13 +48,13 @@ const Logo = styled.div`
   padding-bottom: 20%;
   background-size: 90%;
   background-position: 50% 50%;
-  transition: 0.3s ease all;
+  transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   background-repeat: no-repeat;
   transform: scale(0.97);
   transform-origin: 50% 0;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -60,25 +65,29 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 9% 7% 8%;
   cursor: pointer;
+  text-decoration: none;
+  color: ${props => props.theme.colors.foreground};
   p {
-    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-top: ${props => (props.margined ? "1%" : "0")};
     border-bottom: 2px solid transparent;
-    transition: 0.3s ease all;
   }
   &:hover {
     ${Logo} {
       transform: scale(1);
     }
     svg {
-      * {
-        stroke: ${props => props.theme.colors.accent};
-      }
+      stroke: ${props => props.theme.colors.accent};
     }
   }
   @media (max-width: 900px) {
     padding-top: 15%;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 600px), (max-height: 450px) {
+    p {
+      max-width: 220px;
+      text-align: center;
+    }
     &:hover svg * {
       stroke: ${props => props.theme.colors.foreground};
     }

@@ -1,6 +1,7 @@
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true"
 });
+const path = require("path");
 
 const nextConfig = {
   exportTrailingSlash: false,
@@ -16,6 +17,8 @@ const nextConfig = {
         }
       ]
     });
+    config.resolve.modules.push(path.resolve("./"));
+
     return config;
   }
 };

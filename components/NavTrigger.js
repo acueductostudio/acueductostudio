@@ -55,7 +55,7 @@ const TriggerContainer = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  padding: 60px 50px;
+  padding: 55px 50px;
   z-index: 12;
   margin: 0px auto;
   max-width: 1500px;
