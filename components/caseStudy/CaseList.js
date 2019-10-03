@@ -221,9 +221,9 @@ const Info = styled.div`
       bottom: -10px;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 500px), (max-height: 450px) {
     h4 {
-      font-size: 2.5rem;
+      font-size: 2.4rem;
       background-position: 0 3.1rem;
     }
   }
@@ -279,7 +279,7 @@ const Case = styled.div`
     display: flex;
     flex-direction: column;
     ${VidContainer} {
-      margin: 5% 5% 25px 5%;
+      margin: 5% 5% 10px 5%;
       width: 90%;
       padding-bottom: 45%;
       video {
@@ -288,9 +288,12 @@ const Case = styled.div`
     }
     ${Info} {
       padding: 0 5% 5% 5%;
-    }
-    h4 {
-      margin-bottom: 20px;
+      div:nth-of-type(2) {
+        margin-top: 5px;
+      }
+      h4 {
+        margin-bottom: 20px;
+      }
     }
   }
 `;

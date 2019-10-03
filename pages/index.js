@@ -151,16 +151,31 @@ const Land = styled.section`
     color: ${props => props.theme.colors.white};
     line-height: 100%;
     font-size: 7rem;
-    max-width: 800px;
+    max-width: 830px;
     /* font-size: 6rem;
     font-weight: 900;
     text-transform: uppercase;
     font-family: "acumin-pro-wide";
     letter-spacing: -2px; */
   }
+  @media (max-width: 1115px) {
+    h1 {
+      font-size: 6.7rem;
+    }
+  }
+  @media (max-width: 1070px) {
+    h1 {
+      font-size: 6.4rem;
+    }
+  }
+  @media (max-width: 1025px) {
+    h1 {
+      font-size: 6.2rem;
+    }
+  }
   @media (max-width: 1000px) {
     h1 {
-      font-size: 6rem;
+      font-size: 5.9rem;
     }
   }
   @media (max-width: 900px) {
@@ -178,12 +193,12 @@ const Land = styled.section`
   }
   @media (max-width: 520px) {
     h1 {
-      max-width: 290px;
+      max-width: 300px;
     }
   }
   @media (max-width: 420px) {
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.35rem;
       max-width: 250px;
     }
     h2 {

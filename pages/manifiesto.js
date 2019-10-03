@@ -78,12 +78,16 @@ const Belief = styled.li`
       font-size: 2.2rem;
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 400px), (max-height: 450px) {
     span {
       font-size: 3.7rem;
     }
     h3 {
       font-size: 2rem;
+      margin-bottom: 5px;
+    }
+    p:first-of-type {
+      margin-top: 0;
     }
   }
 `;

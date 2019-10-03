@@ -62,7 +62,7 @@ export default ({
   }, [showArrow]);
 
   useEffect(() => {
-    let targetElement = document.querySelector("#contact"); //dummy
+    let targetElement = document.querySelector("#Nav");
     if (isOpen) {
       disableBodyScroll(targetElement);
     } else {
@@ -142,7 +142,7 @@ const BodyOverflow = createGlobalStyle`
   .TopBar{
     box-shadow: 1px 1px 4px ${props => props.theme.colors.accent};
   }
-  @media (max-width: 600px) {
+  @media (max-width: 600px), (max-height:450px) {
     .react-reveal {
     animation: none !important;
     opacity: 1 !important;
@@ -199,7 +199,7 @@ const Border = styled.div`
   transition: opacity 0.3s ease-in, border 0.3s ease-in;
   border: ${props =>
     `${props.theme.stroke} solid ${props.theme.colors.foreground}`};
-  @media (max-width: 600px) {
+  @media (max-width: 600px), (max-height: 450px) {
     mix-blend-mode: normal;
   }
 `;

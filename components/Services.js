@@ -6,7 +6,7 @@ import LangContext from "utils/LangContext";
 
 const Services = () => {
   const context = useContext(LangContext);
-  let s = context.services;
+  let s = context.home_page.services;
   let services = s.service_categories.map(function(service, index) {
     return (
       <Service key={"service" + index}>
@@ -76,12 +76,21 @@ const Service = styled.div`
     list-style: none;
     line-height: 135%;
     color: ${props => props.theme.colors.foreground_low};
+    &:before {
+      content: "– ";
+      font-weight: 200;
+      color: ${props => props.theme.colors.accent};
+      margin-left: -16px;
+    }
   }
   @media (max-width: 1000px) {
     padding: 12%;
     align-items: flex-start;
     ul li {
       font-size: 1.5rem;
+      &:before {
+        margin-left: 0px;
+      }
     }
   }
   @media (max-width: 800px) {
@@ -98,6 +107,9 @@ const Service = styled.div`
       margin-top: 8px;
       li {
         font-size: 1.6rem;
+        &:before {
+          content: "";
+        }
       }
     }
   }
@@ -105,6 +117,7 @@ const Service = styled.div`
     padding: 5% 0 5% 5%;
     h4 {
       text-transform: lowercase;
+      font-size: 2.3rem;
     }
   }
 `;

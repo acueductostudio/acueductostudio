@@ -113,11 +113,11 @@ export default function Salvajenada(props) {
         </Land>
       </Fade>
       <Intro>
-        <Marquee tags={t.intro_section.tags} amount={2} />
+        <Marquee tags={t.intro_section.tags} />
         <IntroVideo link={t.link} />
         <Column>
           <H2>{t.intro_section.title}</H2>
-          <p>{t.intro_section.p}</p>
+          <P>{t.intro_section.p}</P>
           <WolfDays>
             <LogoWolf>
               <Wolf />
@@ -173,9 +173,8 @@ export default function Salvajenada(props) {
           <P>{t.second_section.p2}</P>
         </Column>
         <TableProposition>
-          <P colSpan="2">{t.second_section.table2[0].p}</P>
-          <P>{t.second_section.table2[1].p}</P>
-          <P>{t.second_section.table2[2].p}</P>
+          <p>{t.second_section.table2[0].label}</p>
+          <p>{t.second_section.table2[0].content}</p>
         </TableProposition>
         <Quote quote={t.second_section.quote} specialMarginBottom />
       </Second>
@@ -553,13 +552,20 @@ const Table = styled.div`
 `;
 
 const TableProposition = styled(Table)`
-  grid-template-columns: 1fr 0.7fr;
-  p {
-    &:nth-child(1) {
-      grid-column: 1 / span 2;
+  grid-template-columns: 1fr;
+  @media (max-width: 500px) {
+    p {
+      &:nth-child(1) {
+        font-weight: 200;
+        color: ${props => props.theme.colors.foreground};
+      }
+      &:nth-child(2) {
+        color: ${props => props.theme.colors.foreground_low};
+      }
     }
   }
 `;
+
 const TableStrengths = styled(Table)`
   grid-template-columns: 1fr 1fr;
   p {
@@ -709,6 +715,12 @@ const Second = styled(CommonSection)`
   }
   table {
     color: ${props => props.theme.colors.foreground};
+  }
+  p {
+    b {
+      color: ${props => props.theme.colors.foreground};
+      font-weight: 100;
+    }
   }
 `;
 

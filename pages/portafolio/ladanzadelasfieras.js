@@ -251,8 +251,8 @@ function LaDanzaDeLasFieras(props) {
             <LogoF />
             <Fade>
               <b>81%</b>
-              <p>{t.fourth_section.stat}</p>
             </Fade>
+            <P>{t.fourth_section.stat}</P>
           </Stat>
           <P>{t.fourth_section.p2}</P>
           {loadAssets && (
@@ -630,11 +630,12 @@ const Sixth = styled(CommonSection)`
       font-size: 2rem;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 500px), (max-height: 450px) {
     a {
       font-size: 1.5rem;
       padding: 5%;
       border-radius: 4px;
+      background-color: ${fierasRed};
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
       border: 0;
     }
@@ -767,7 +768,10 @@ const LaurelNumbers = styled.div`
   }
   @media (max-width: 400px) {
     ul {
-      padding: 0;
+      padding: 0 10px;
+      li {
+        margin-top: -10px;
+      }
     }
     p {
       margin-top: 0px;

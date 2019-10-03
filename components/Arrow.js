@@ -18,8 +18,8 @@ const ArrowContainer = styled.span`
     stroke: ${props => props.theme.colors.foreground};
     stroke-width: ${props => props.theme.stroke};
     transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    /* * {
+    * {
       transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    } */
+    }
   }
 `;

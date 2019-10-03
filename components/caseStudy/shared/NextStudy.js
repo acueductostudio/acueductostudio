@@ -83,7 +83,7 @@ const Wrapper = styled.a`
   @media (max-width: 900px) {
     padding-top: 15%;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 600px), (max-height: 450px) {
     p {
       max-width: 220px;
       text-align: center;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Arrows from "static/assets/img/layout/language.svg";
-import EN from "static/assets/img/layout/en.svg";
 import Router, { useRouter } from "next/router";
 
 function LanguageToggler({ hasLoaded, locale, toggleLang }) {
@@ -70,7 +69,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
     <Toggler reveal={hasLoaded}>
       <a onClick={handleLink}>
         <English>
-          {/* <EN /> */}
           <span>switch language</span>
           {locale.lang === "es" ? "english" : "español"}
         </English>
@@ -157,7 +155,7 @@ const Toggler = styled.div`
   transition: opacity 0.3s ease 0.3s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      mix-blend-mode: none;
+      mix-blend-mode: unset;
       ${English} {
         opacity: 1;
       }
@@ -180,14 +178,19 @@ const Toggler = styled.div`
   }
   @media (max-width: 600px) {
     align-items: flex-start;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-right: calc(22px + 1%);
   }
   @media (max-width: 450px) {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-right: 23px;
   }
-  @media (max-height: 400px) and (max-width: 600px) {
-    padding-top: 30px;
+  @media (max-height: 450px) {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  @media (max-height: 450px) and (max-width: 600px) {
+    align-items: flex-start;
+    padding-top: 20px;
   }
 `;

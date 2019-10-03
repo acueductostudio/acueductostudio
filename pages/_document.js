@@ -14,13 +14,9 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html lang={this.props.lang}>
+      <Html lang={this.props.lang} dir="ltr">
         <Head>
-          <meta charSet="utf-8" key="unique_charset" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
-          />
+          <meta charSet="utf-8" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -58,10 +54,6 @@ export default class MyDocument extends Document {
             name="keywords"
             content="design, studio, acueducto, cdmx, innovation, strategic design, experience design, product design, brand design, social impact, design strategy, technology"
           />
-          {/* <link
-            rel="stylesheet"
-            href="https://use.typekit.net/zdy4yjp.css"
-          ></link> */}
           <GlobalStyles />
           {this.props.styleTags}
         </Head>

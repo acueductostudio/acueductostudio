@@ -70,7 +70,7 @@ const Pinned = styled.div`
       max-width: 670px;
     }
     ${ScrollDown}, p {
-      grid-column: 5 / span 6;
+      grid-column: 5 / span 7;
     }
   }
   @media (max-width: 950px) {

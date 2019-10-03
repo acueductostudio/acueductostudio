@@ -46,12 +46,9 @@ export default function Nav(props) {
     );
   });
   return (
-    <NavWrapper open={props.isOpen}>
-      {props.isOpen ? (
+    <NavWrapper open={props.isOpen} id="Nav">
+      {props.isOpen && (
         <>
-          <NavLandscapeHider>
-            Please turn your phone around to see the menu
-          </NavLandscapeHider>
           <NavList onClick={props.closeNav} open={props.isOpen}>
             <ul>{navItems}</ul>
           </NavList>
@@ -61,23 +58,26 @@ export default function Nav(props) {
               <Hoverable
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.facebook.com/acueducto.co/"
+                href="https://www.facebook.com/acueductostudio/"
               >
                 facebook
+                <span>fb</span>
               </Hoverable>
               <Hoverable
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/acueducto.co/"
+                href="https://www.instagram.com/acueductostudio/"
               >
                 instagram
+                <span>in</span>
               </Hoverable>
               <Hoverable
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.linkedin.com/company/acueducto-co/"
+                href="https://www.linkedin.com/company/acueductostudio/"
               >
                 linkedin
+                <span>ln</span>
               </Hoverable>
             </Social>
             <Policies onClick={props.closeNav}>
@@ -91,8 +91,6 @@ export default function Nav(props) {
             </Policies>
           </BottomNav>
         </>
-      ) : (
-        ""
       )}
     </NavWrapper>
   );
@@ -100,29 +98,6 @@ export default function Nav(props) {
 
 const Hoverable = styled.a`
   ${BorderLink({ showLink: false })}
-`;
-
-const NavLandscapeHider = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: ${props => props.theme.colors.background};
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0;
-  font-size: 0;
-  transition: opacity 0.5s ease;
-  @media (max-height: 450px) {
-    pointer-events: auto;
-    opacity: 1;
-    font-size: inherit;
-    transition: none;
-  }
 `;
 
 const NavLink = styled.a`
@@ -147,7 +122,7 @@ const Registered = styled.div`
 `;
 
 const Policies = styled.div`
-  grid-column: 9 / span 4;
+  grid-column: 8 / span 5;
   text-align: right;
   span {
     opacity: 0.5;
@@ -155,9 +130,9 @@ const Policies = styled.div`
 `;
 
 const Social = styled.div`
-  grid-column: 5 / span 4;
-  @media (max-width: 1200px) {
-    grid-column-start: 4;
+  grid-column: 5 / span 3;
+  span {
+    display: none;
   }
   a {
     margin-right: 10%;
@@ -181,80 +156,78 @@ const BottomNav = styled.div`
   color: ${props => props.theme.colors.foreground_low};
   font-weight: 100;
   max-height: 120px;
-  @media (max-width: 950px) {
+  @media (max-width: 1300px) {
+    ${Social} {
+      grid-column: 4 / span 4;
+    }
+  }
+  @media (max-width: 1100px) {
     font-size: 1.5rem;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 950px) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     span {
       display: none;
     }
-    ${Social}, ${Policies} {
+    ${Policies} {
       display: flex;
       flex-direction: column;
-      & > * :not(:last-child) {
-        padding-bottom: 10px;
-        margin-right: 0;
+      align-items: flex-end;
+      a {
+        display: inline;
+        background-position: 0 2rem;
       }
     }
     ${Social} {
+      display: flex;
       text-align: center;
       align-items: center;
-    }
-  }
-  @media (max-width: 600px) {
-    display: grid;
-    padding: 4% 8%;
-    grid-gap: 0;
-    ${Policies} {
-      grid-column: 1 / span 12;
-      grid-row: 1;
-      flex-direction: row;
-      justify-content: space-between;
-      & > * :not(:last-child) {
-        padding-bottom: 20px;
+      font-size: 0;
+      ${Hoverable}:hover {
+        background-image: none;
       }
       span {
+        font-size: 1.5rem;
         display: flex;
+        border: 2px solid ${props => props.theme.colors.foreground_low};
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2px;
+        padding-left: 1px;
+      }
+    }
+  }
+  @media (max-width: 600px), (max-height: 450px) {
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-top: 0;
+    position: relative;
+    width: 100%;
+    padding: 2.4% 0 0 0;
+    max-height: unset;
+    height: auto;
+    flex: 0 0 auto;
+    ${Policies} {
+      align-items: flex-start;
+      a {
+        padding-bottom: 15px;
       }
     }
     ${Social} {
-      grid-column: 1 / span 8;
       display: flex;
-      text-align: left;
-      flex-direction: row;
-      grid-row: 2;
-      flex-wrap: wrap;
-      width: 100%;
-      & > * :not(:last-child) {
-        padding-bottom: 20px;
-      }
-      a {
-        width: 50%;
-        &:nth-child(3) {
-          padding-left: 50%;
-          width: 100%;
-        }
-      }
+      padding-top: 10px;
     }
     ${Registered} {
-      grid-column: 1 / span 12;
-      margin-top: 3%;
       font-size: 1.2rem;
       opacity: 0.7;
-      position: absolute;
-      grid-row: last;
-      margin-top: 0;
-      margin-bottom: 5.5%;
-      bottom: 0;
-      align-self: flex-end;
-      justify-content: flex-end;
-    }
-  }
-  @media (max-width: 350px) {
-    ${Registered} {
-      margin-bottom: 6%;
+      padding-top: 15px;
     }
   }
 `;
@@ -267,61 +240,46 @@ const NavList = styled.nav`
     list-style: none;
     li {
       font-size: 6rem;
-      line-height: 160%;
       position: relative;
+      padding-bottom: 5%;
       span {
         color: ${props => props.theme.colors.accent};
         font-size: 1.5rem;
         position: absolute;
-        left: -55px;
-        bottom: -10px;
+        left: -45px;
+        top: 49px;
         pointer-events: none;
       }
     }
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1300px) {
     grid-column-start: 4;
   }
-  @media (max-width: 800px) {
-    grid-column-start: 3;
-  }
-  @media (max-width: 800px), (max-height: 660px) {
-    ul li {
-      font-size: 5rem;
-      span {
-        font-size: 1.3rem;
-        left: -35px;
-        bottom: -9px;
-      }
-    }
-  }
-  @media (max-width: 500px) {
-    grid-column-start: 3;
-  }
-  @media (max-width: 450px), (max-height: 600px) {
-    ul li {
-      font-size: 3.5rem;
-      padding-bottom: 10px;
-      span {
-        font-size: 1.1rem;
-        bottom: 4px;
-        left: -25px;
-      }
-    }
-  }
-
-  @media (max-height: 450px) {
-    grid-column-end: span 7;
-    padding-top: 10%;
+  @media (max-width: 600px), (max-height: 450px) {
+    width: 100%;
+    position: relative;
+    flex: 0 0 auto;
     ul {
-      column-count: 2;
+      display: flex;
+      flex-direction: column;
       li {
-        font-size: 3.5rem;
-        /* span {
-          font-size: 1.1rem;
-          bottom: 4px;
-          left: -25px;
-        } */
+        font-size: 5rem;
+        display: inline-block;
+        flex-direction: column;
+        span {
+          position: absolute;
+          left: 0;
+          top: 6px;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    ul li {
+      font-size: 4rem;
+      span {
+        top: 0;
+        font-size: 1.2rem;
       }
     }
   }
@@ -364,9 +322,17 @@ const NavWrapper = styled.div`
     ${NavLink} {
       background-position: 0 93%;
     }
-    padding-bottom: 15%;
   }
-  @media (max-width: 450) {
-    padding-bottom: 20%;
+  @media (max-width: 600px), (max-height: 450px) {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20% 4% 20px 4%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  @media (max-height: 439px) {
+    padding-top: 13%;
   }
 `;

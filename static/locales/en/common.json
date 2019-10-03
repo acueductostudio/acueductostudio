@@ -1,6 +1,5 @@
 {
   "nav": [
-    { "title": "home", "link": "/en" },
     { "title": "about", "link": "/en/about" },
     { "title": "work", "link": "/en/work" },
     { "title": "manifesto", "link": "/en/manifesto" },
@@ -11,37 +10,6 @@
     "privacy": { "title": "privacy policy", "link": "/en/privacy" }
   },
   "lang": "en",
-  "process": {
-    "title": "we place strategy<br/>at the core",
-    "p": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>At Acueducto we approach problems using strategic design, this means we work along with our partners, step by step, to develop strategies that deliver the best results for them and their users.",
-    "p_past": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
-    "steps": [
-      {
-        "title": "discover",
-        "p": "Understand the context, audience, needs, and challenges of the project.<br/>We get smart."
-      },
-      {
-        "title": "envision",
-        "p": "Here we re-frame the problem to highlight new insights and opportunities.<br/>We make sense."
-      },
-      {
-        "title": "build the story",
-        "p": "Create a strategy that guides concepting, prioritization, and co-creation.<br/>We create empathy."
-      },
-      {
-        "title": "design, tech & craft",
-        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.<br/>We develop."
-      },
-      {
-        "title": "launch",
-        "p": "Implement new solutions, support socialization of organizational changes and product innovation.<br/>We drive change."
-      },
-      {
-        "title": "review",
-        "p": "Reflect, document, and iterate on our process and approach.<br/>We get better."
-      }
-    ]
-  },
   "casestudies": {
     "studies": {
       "ladanzadelasfieras": {
@@ -113,7 +81,7 @@
               "quote": {
                 "quote": "Film festivals and media outlets often require a media kit from your film that needs to be organized, translated, and sent away depending on the required information.<br/>The way our website was designed greatly simplified us the sharing of that information.",
                 "name": "Miguel Ángel Fernández",
-                "label": "Editor & Director in La Danza de las fieras"
+                "label": "Editor, Writer & Director in La Danza de las fieras"
               }
             },
             "availability": {
@@ -138,7 +106,7 @@
             "name": "Javier Rodríguez",
             "label": "Film festival coordinator"
           },
-          "p2": "La Danza de las Fieras is entering it’s distribution phase as Aly and her team continue to raise awareness on the human trafficking crisis.<br/><br/>Supported by a powerful branding, web app & content strategy, Aly nailed her first feature-length movie touring around the world, winning visibility and pushing the human trafficking conversation from the screens to the everyday life of movie goers. "
+          "p2": "La Danza de las Fieras is entering it’s distribution phase as Aly and her team continue to raise awareness on the human trafficking crisis.<br/><br/>Supported by a powerful branding, web app & content strategy, Aly nailed her first feature-length movie touring around the world, winning visibility and pushing the human trafficking conversation from the screens to the everyday life of movie goers."
         },
         "sixth_section": {
           "linkp": "visit"
@@ -164,9 +132,9 @@
           ],
           "video": "salvajevideo.mp4",
           "title": "<b>Act I</b><br/>Death sights",
-          "p": "Sebastián Díaz, aka Sebas, and his crew of music tasters -including our own co-founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.",
+          "p": "Sebastián Díaz, aka Sebas, and his crew of music tasters -including our own co-founder Artemio Pedraza- have been sharing music from around the globe for more than six years. Their canny taste has spotted breaking artists such as Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels and many more before they turned into indie stars. As a music-lovers non-profit organization, they have gone from blogging to arranging local gigs; from sharing news to partnering with music festivals; and they’ve done interviews, articles, and many more activities to keep their channels fueled.<br/><br/>But one year before we partnered, Salvajenada was showing death sights. Their social media channels where deserted, their website was outdated and slow, and all its collaborators felt like the project had already given what it had, and nobody was taking any action.",
           "graphicp": "days without posting",
-          "p2": "But one year before we partnered, Salvajenada was showing death sights. Their social media channels where deserted, their website was outdated and slow, and all its collaborators felt like the project had already given what it had, and nobody was taking any action."
+          "p2": "Everyone except Sebas, who’s career focused in digital contexts due to his excitement and experience in Salvajenada; he knew he had a unique concept and brand in his hands, so he met with Acueducto to explore possible solutions."
         },
         "second_section": {
           "title": "<b>Act II</b><br/>The crafting of an amazing playlist",
@@ -185,13 +153,8 @@
           "p2": "Context analysis threw a possible solution: bring back to life their new-discoveries playlist known as #CanastaBásica -which is spanish for food basket, an analogy for the basic dietary music needs for a human being- and make it the core product of the organization. <br/><br/>Collaborators would just drag and drop their daily discoveries into a joint list and the rest of the communication work would be done by three collaborators who formed a team for content creation and moderation.<br><br>But how could this playlist be more special than the plethora of selections you can find on the web? By building a strong value proposition and a solid strategy around it.",
           "table2": [
             {
-              "p": "Value proposition<br/><br/>Playlist updated every 15 days with new and authentic music. A selection of an experienced team of music researchers whose goal is to break with conventional trends and create new experiences."
-            },
-            {
-              "p": "Customer relationship<br/><br/>- Reviews, music in context<br/>- Playlist update<br/>- Authority badges"
-            },
-            {
-              "p": "Channels<br/><br/>- Social Media<br/>- Music Platforms<br/>- Radio show"
+              "label": "Value proposition",
+              "content": "Playlist updated every 15 days with new and authentic releases. An experienced team of music researchers’ selection whose goal is to break with conventional trends and create new experiences."
             }
           ],
           "quote": {
@@ -219,7 +182,7 @@
               "title": "Multimedia development",
               "p": "The playlist was pitched to the editorial team of Ibero 90.9 FM, the biggest college radio in Mexico, and from that moment on, every time the playlist updates the team of Salvajenada is invited to play and discuss their featured themes live on air.",
               "quote": {
-                "quote": "We don’t just own a playlist that users can listen to, it’s the branded concept of sharing new music, a collection of songs that you might be able to find on your own, but you might not have the time to search for. #CanastaBasica solves that problem and also serves as a place where you can learn about the context of the new music you discover (and love).",
+                "quote": "We don’t own just a playlist that users can listen to, it’s the branded concept of sharing new music, a collection of songs that also serves as a place where you can contextualize the new music you discover (and love).",
                 "name": "Sebastián Díaz"
               }
             }
@@ -230,7 +193,7 @@
           "p": "The strategy was implemented and after launch Salvajenada’s profiles on social media and music platforms threw immediate and positive results in areas such as following base, reach and engagement. Take a look at the data collected after the first semester of work:",
           "stats": [
             {
-              "big": "<i>+</i>950",
+              "big": "<i>+</i>1k",
               "small": "organic playlist growth"
             },
             {
@@ -248,6 +211,9 @@
             {
               "big": "6<i>+</i>",
               "small": "daily email song submissions from listeners, artists, managers and PR agents"
+            },
+            {
+              "small": "Followed by Apple Music’s and Spotify’s editorial teams"
             }
           ],
           "p2": "Motivated by these results, Salvajenada is now thinking of how to turn their following base into revenue streams, current ideas go from organizing concerts and advertising music releases, to partnering with a vinyl store to offer a suscription-based physical record delivery system.<br/><br/>Taking over their niche with an amazing concept, Sebastián and his crew are currently working towards reaching and engaging with more people who, just like them, love discovering new music from around the world. <br/><br/>And taking Acueducto’s digital consultancy and partnership to develop a web experience, a new strategy is being built to offer value to this community of music lovers through content and digital innovation. "
@@ -257,43 +223,6 @@
         }
       }
     }
-  },
-  "services": {
-    "intro": {
-      "title": "from ideation<br/>to launch",
-      "p": "– And everything in between.<br/><br/> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
-    },
-    "service_categories": [
-      {
-        "title": "Strategy",
-        "tags": [
-          "Project Management",
-          "Community Management",
-          "Digital Marketing"
-        ]
-      },
-      {
-        "title": "Design & Content",
-        "tags": [
-          "Transmedia Development",
-          "Art Direction",
-          "UX Design",
-          "Motion Design",
-          "Copywriting",
-          "Impact Evaluation"
-        ]
-      },
-      {
-        "title": "Development",
-        "tags": [
-          "Prototyping",
-          "Development",
-          "User Testing",
-          "Platform Integration",
-          "Deployment"
-        ]
-      }
-    ]
   },
   "contact_footer": {
     "title": "let's be partners,<br/> let's talk business",
@@ -323,9 +252,77 @@
       "link": ["/en/about", "about us"],
       "linktext": "Read more"
     },
+    "process": {
+      "title": "we place strategy<br/>at the core",
+      "p": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>At Acueducto we approach challenges through strategic design, this means we work not only by ourselves but along with our partners, step by step, to develop strategies that deliver the best results for them and their users.",
+      "p_past": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
+      "steps": [
+        {
+          "title": "discover",
+          "p": "Understand the context, audience, needs, and challenges of the project.<br/>We get smart."
+        },
+        {
+          "title": "envision",
+          "p": "Here we re-frame the problem to highlight new insights and opportunities.<br/>We make sense."
+        },
+        {
+          "title": "build the story",
+          "p": "Create a strategy that guides concepting, prioritization, and co-creation.<br/>We create empathy."
+        },
+        {
+          "title": "design, tech & craft",
+          "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.<br/>We develop."
+        },
+        {
+          "title": "launch",
+          "p": "Implement new solutions, support socialization of organizational changes and product innovation.<br/>We drive change."
+        },
+        {
+          "title": "review",
+          "p": "Reflect, document, and iterate on our process and approach.<br/>We get better."
+        }
+      ]
+    },
     "studies": {
       "title": "tackling complex<br/>business challenges",
       "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.<br/><br/>Read about selected projects we have launched alongside our partners."
+    },
+    "services": {
+      "intro": {
+        "title": "from ideation<br/>to launch",
+        "p": "– And everything in between.<br/><br/> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
+      },
+      "service_categories": [
+        {
+          "title": "Strategy",
+          "tags": [
+            "Project Management",
+            "Community Management",
+            "Digital Marketing"
+          ]
+        },
+        {
+          "title": "Design & Content",
+          "tags": [
+            "Transmedia Development",
+            "Art Direction",
+            "UX Design",
+            "Motion Design",
+            "Copywriting",
+            "Impact Evaluation"
+          ]
+        },
+        {
+          "title": "Development",
+          "tags": [
+            "Prototyping",
+            "Development",
+            "User Testing",
+            "Platform Integration",
+            "Deployment"
+          ]
+        }
+      ]
     }
   },
   "about_page": {
@@ -378,7 +375,7 @@
         "p": "Trust us, working in partnership gets the best results."
       },
       {
-        "title": "We love problems",
+        "title": "We love challenges",
         "p": "And amazing work can happen if we analyze them together."
       },
       {
@@ -420,7 +417,7 @@
     "headerTitle": "Privacy Policy",
     "intro": {
       "title": "privacy policy",
-      "p": "There has never been a more critical time to reflect and act around privacy than now. Between users and technology, practices of data collection and information processes are being made; from data voluntarily provided by users to information collected just by browsing the web. In a world where interests and values vary, it has become a norm to demand a careful, transparent and ethical use of this information. <br/><br/>In Acueducto (“We”, “Us”, “Our”), we treat the information of the people we interact with responsibly. Here you can read about the data collection and processing practices of our site, as well as where to find the options to opt-out from them. We strongly recommend that you read this section carefully, as you should do with all the other sites you visit. <br/><br/>If you have any questions regarding these policies, do not hesitate to contact us at <a href='mailto:support@acueducto.studio'>support@acueducto.studio</a>"
+      "p": "There has never been a more critical time to reflect and act around privacy than now. Between users and technology, practices of data collection and information processes are being made; from data voluntarily provided by users to information collected just by browsing the web. In a world where interests and values vary, it has become a norm to demand a careful, transparent and ethical use of this information. <br/><br/>In Acueducto (“We”, “Us”, “Our”), we treat the information of the people we interact with responsibly. Here you can read about the data collection and processing practices of our site, as well as where to find the options to opt-out from them. We strongly recommend that you read this section carefully, as you should do with all the other sites you visit. <br/><br/>If you have any questions regarding these policies, do not hesitate to contact us at <a href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>"
     },
     "body": {
       "subtitle1": "about Acueducto",
@@ -435,7 +432,7 @@
       "listItem3": "Cookies or similar tactics (Read our ",
       "listItem3Link": "Cookie Policy",
       "subtitle4": "special and/or sensitive information we process",
-      "p4": "Acueducto does not intend to collect data from visitors who are under the age of 16 unless they have permission from their parents or guardians, however, we can not always confirm if our visitors are over 16. If you believe that we have collected data from a minor and you are his or her parent or guardian, contact us at <a href='mailto:support@acueducto.studio'>support@acueducto.studio</a> and we will immediately delete this information.",
+      "p4": "Acueducto does not intend to collect data from visitors who are under the age of 16 unless they have permission from their parents or guardians, however, we can not always confirm if our visitors are over 16. If you believe that we have collected data from a minor and you are his or her parent or guardian, contact us at <a href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a> and we will immediately delete this information.",
       "subtitle5": "for what purpose and under what circumstances we process personal information",
       "p5": "Acueducto collects personal information when it intends to:",
       "list2": "<li>Optimize the operation of our Application</li><li>Contact potential partners</li><li>Improve its application Search Engine Optimization (SEO)</li>",
@@ -481,7 +478,7 @@
     "headerTitle": "Error",
     "intro": {
       "title": "oops!<br/> page not found",
-      "p": "This page doesn’t exist, please check if the URL is correct. If you think this is a problem on our end please contact us at <a class='inline' href='mailto:support@acueducto.studio'>support@acueducto.studio</a>."
+      "p": "This page doesn’t exist, please check if the URL is correct. If you think this is a problem on our end please contact us at <a class='inline' href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>."
     }
   }
 }

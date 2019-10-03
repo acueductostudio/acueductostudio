@@ -50,12 +50,12 @@ class MyApp extends App {
   };
 
   handleRouteError = (err, url) => {
+    var _myself = this;
     setTimeout(function() {
       if (err.cancelled) {
-        console.log(`Route to ${url} was cancelled!`);
+        // console.log(`${err} on route to ${url}`);
       }
-      this.LoadingBar.complete();
-      console.log("complete Error " + err);
+      _myself.LoadingBar.complete();
     }, 300);
   };
 

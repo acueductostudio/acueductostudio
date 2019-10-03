@@ -65,6 +65,7 @@ const TitleSectionGrid = styled.div`
     }
     h1 {
       margin-bottom: 0;
+      font-size: 3.4rem;
     }
     p:nth-child(3):hover svg * {
       stroke: ${props => props.theme.colors.foreground};

@@ -2,11 +2,16 @@ import Head from "next/head";
 
 const Meta = props => {
   const es_default =
-    "Nos asociamos con innovadores al rededor del mundo para desarrollar estrategias y experiencias digitales que cuenten historias convincentes, inspiren comunidades y forjen vínculos significativos.";
+    "Nos asociamos con innovadores alrededor del mundo para desarrollar estrategias y experiencias digitales que cuentan historias convincentes, inspiran comunidades y forjen vínculos significativos.";
   const en_default =
     "We partner with innovators around the globe to develop digital strategies and experiences that tell compelling stories, inspire communities and build meaningful bonds.";
   return (
     <Head>
+      <meta charSet="utf-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
+      />
       <title>{props.title}</title>
       {props.description && (
         <>

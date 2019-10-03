@@ -30,7 +30,7 @@ const StepContainer = props => {
 
 const Process = () => {
   const context = useContext(LangContext);
-  let p = context.process;
+  let p = context.home_page.process;
   var steps = p.steps.map(function(step, index) {
     return (
       <StepContainer

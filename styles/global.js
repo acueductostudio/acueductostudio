@@ -129,6 +129,14 @@ const styles = `
   @font-face {
     font-family: "Wide";
     font-display: block;
+    src: url("/static/assets/font/400.woff2") format("woff2"),
+      url("/static/assets/font/400.woff") format("woff");
+    font-weight: 150;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Wide";
+    font-display: block;
     src: url("/static/assets/font/300.woff2") format("woff2"),
       url("/static/assets/font/300.woff") format("woff");
     font-weight: 100;
@@ -164,7 +172,7 @@ const styles = `
     overflow: hidden;
     letter-spacing: 0.02px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 600px), (max-height: 450px) {
     body {
       font-size: 1.5rem;
     }
