@@ -24,7 +24,7 @@ export default function Index(props) {
       <PageClipper unPadded>
         <Head
           title={t.page_title}
-          canonical={"https://acueducto.studio/"}
+          canonical={"https://acueducto.studio"}
           en_canonical={"https://acueducto.studio/en"}
           lang={props.lang}
         />
