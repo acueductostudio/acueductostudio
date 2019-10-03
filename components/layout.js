@@ -98,7 +98,7 @@ export default ({
   return (
     <>
       <PageWrapper id="Wrapper">
-        {showSketch && <HomeSketch hide={true} />}
+        {showSketch && <HomeSketch hide={false} />}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}
