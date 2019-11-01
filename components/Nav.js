@@ -58,7 +58,7 @@ export default function Nav(props) {
               <Hoverable
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.facebook.com/acueductostudio/"
+                href="https://www.facebook.com/acueducto.studio/"
               >
                 facebook
                 <span>fb</span>
@@ -66,7 +66,7 @@ export default function Nav(props) {
               <Hoverable
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/acueductostudio/"
+                href="https://www.instagram.com/acueducto.studio/"
               >
                 instagram
                 <span>in</span>
