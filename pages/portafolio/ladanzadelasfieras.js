@@ -571,7 +571,7 @@ const Stat = styled.div`
     display: block;
     text-align: center;
     z-index: 1;
-    line-height: 1.1;
+    line-height: 1.3;
     margin-top: -20px;
   }
   p {
@@ -580,11 +580,11 @@ const Stat = styled.div`
   svg {
     position: absolute;
     margin: 0 auto;
-    width: 20%;
+    width: 15%;
     display: flex;
     z-index: 0;
     align-self: center;
-    top: -30px;
+    top: -12px;
   }
   @media (max-width: 700px) {
     max-width: 330px;
@@ -597,8 +597,7 @@ const Stat = styled.div`
       font-size: 6rem;
     }
     svg {
-      width: 15%;
-      top: -18px;
+      width: 13%;
     }
   }
   @media (max-width: 400px) {
