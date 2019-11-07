@@ -24,7 +24,7 @@ const Services = () => {
     );
   });
   return (
-    <ServicesSection>
+    <ServicesSection id={context.lang == "en" ? "services" : "servicios"}>
       <TitleSection title={s.intro.title} text={s.intro.p} borderTop />
       <ServiceGrid>{services}</ServiceGrid>
     </ServicesSection>
