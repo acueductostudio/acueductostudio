@@ -9,3 +9,4 @@
   Flecha debería bajar x píxeles en home
   Hovers en home: cookies + títulos de proyecto, quitar, estorban
   Partnering w impact seeking falta guion
+- accesibility blue
