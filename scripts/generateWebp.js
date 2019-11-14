@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { execSync } = require("child_process");
 
-const lossyMinSizeReduction = 0.3; // 30% deduction minimum
+const lossyMinSizeReduction = 0.35; // 30% deduction minimum
 
 const createLossyIfNotExists = file => {
   const baseName = file.substring(0, file.lastIndexOf("."));
@@ -17,7 +17,7 @@ const createLossyIfNotExists = file => {
   if (fs.existsSync(webpLossyFile)) return;
 
   execSync(`cwebp ${file} -f 50 -size ${sizeWebp} -o ${webpLossyFileS70}`);
-  execSync(`cwebp ${file} -q 95 -o ${webpLossyFileQ95}`);
+  execSync(`cwebp ${file} -q 85 -o ${webpLossyFileQ95}`);
 
   if (fs.statSync(webpLossyFileQ95).size < fs.statSync(webpLossyFileS70).size) {
     fs.renameSync(webpLossyFileQ95, webpLossyFile);
@@ -31,11 +31,11 @@ const createLossyIfNotExists = file => {
 const createLossyAlphaIfNotExists = file => {
   const baseName = file.substring(0, file.lastIndexOf("."));
 
-  const webpLossyAlphaFile = `${baseName}_lossyalpha.webp`;
+  const webpLossyAlphaFile = `${baseName}.webp`;
 
   if (fs.existsSync(webpLossyAlphaFile)) return;
 
-  execSync(`cwebp ${file} -q 95 -alpha_q 100 -m 6 -o ${webpLossyAlphaFile}`);
+  execSync(`cwebp ${file} -q 85 -alpha_q 98 -m 6 -o ${webpLossyAlphaFile}`);
 };
 
 const createLosslessIfNotExists = file => {
@@ -45,7 +45,7 @@ const createLosslessIfNotExists = file => {
 
   if (fs.existsSync(webpLosslessFile)) return;
 
-  execSync(`cwebp ${file} -lossless -m 6 -q 100 -o ${webpLosslessFile}`);
+  execSync(`cwebp ${file} -lossless -m 6 -q 95 -o ${webpLosslessFile}`);
 };
 
 const walk = dir => {

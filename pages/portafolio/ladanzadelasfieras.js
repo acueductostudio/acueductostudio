@@ -92,29 +92,26 @@ function LaDanzaDeLasFieras(props) {
         {loadAssets && (
           <PosterGrid>
             <PosterLine />
-            <Fade>
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"
-                alt="First references for branding"
-              />
-              <Picture></Picture>
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
-                alt="First references for branding"
-              />
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
-                alt="First references for branding"
-              />
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
-                alt="Original sketch of poster design"
-              />
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
-                alt="Final poster design with awards"
-              />
-            </Fade>
+            <Picture
+              src={"/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"}
+              alt="First references for branding"
+            />
+            <Picture
+              src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
+              alt="First references for branding"
+            />
+            <Picture
+              src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
+              alt="First references for branding"
+            />
+            <Picture
+              src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
+              alt="Original sketch of poster design"
+            />
+            <Picture
+              src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
+              alt="Final poster design with awards"
+            />
           </PosterGrid>
         )}
       </SecondSection>
@@ -148,12 +145,10 @@ function LaDanzaDeLasFieras(props) {
       <Section_Sub>
         <TransitionWrapper>
           {loadAssets && (
-            <Fade>
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
-                alt="Printed assets for film attendants"
-              />
-            </Fade>
+            <Picture
+              src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
+              alt="Printed assets for film attendants"
+            />
           )}
         </TransitionWrapper>
         <TextColumn>
@@ -204,12 +199,10 @@ function LaDanzaDeLasFieras(props) {
           number={2}
         >
           {loadAssets && (
-            <Fade>
-              <MacPress
-                src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
-                alt="A whole section for the press"
-              />
-            </Fade>
+            <MacPress
+              src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
+              alt="A whole section for the press"
+            />
           )}
         </Insight>
         <Quote
@@ -223,24 +216,20 @@ function LaDanzaDeLasFieras(props) {
           number={3}
         >
           {loadAssets && (
-            <Fade>
-              <MacContact
-                src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
-                alt="A contact component on every page"
-              />
-            </Fade>
+            <MacContact
+              src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
+              alt="A contact component on every page"
+            />
           )}
         </Insight>
         <TextColumn>
           <H3>{"– " + t.third_section.subtitle2}</H3>
           <P>{t.third_section.p2}</P>
           <AppGrid>
-            <Fade>
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png"
-                alt="A Progressive Web App"
-              />
-            </Fade>
+            <Picture
+              src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png"
+              alt="A Progressive Web App"
+            />
             <AppSvg />
           </AppGrid>
         </TextColumn>
@@ -285,12 +274,10 @@ function LaDanzaDeLasFieras(props) {
         />
         <TextColumn>
           {loadAssets && (
-            <Fade>
-              <img
-                src="/static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
-                alt="Festival awards"
-              />
-            </Fade>
+            <Picture
+              src="/static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+              alt="Festival awards"
+            />
           )}
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
@@ -320,7 +307,7 @@ const SequenceContainer = styled.div`
   margin: 4% auto;
 `;
 
-const MacContact = styled.img`
+const MacContact = styled(Picture)`
   max-width: 670px;
   margin: 5% 0;
   @media (max-width: 500px) {
@@ -328,7 +315,7 @@ const MacContact = styled.img`
   }
 `;
 
-const Faces = styled.img`
+const Faces = styled(Picture)`
   max-width: 670px;
   margin: 8% 0 0;
   position: relative;
@@ -338,7 +325,7 @@ const Faces = styled.img`
   }
 `;
 
-const MacPress = styled.img`
+const MacPress = styled(Picture)`
   max-width: 830px;
   width: 100%;
   margin: 4% 0 -9% 0;

@@ -25,6 +25,7 @@ import ThirdBackImg from "static/assets/img/casestudies/salvajenada/thirdBack.sv
 import FourthBackImg from "static/assets/img/casestudies/salvajenada/fourthBack.svg";
 import FifthBackImg from "static/assets/img/casestudies/salvajenada/fifthBack.svg";
 import InterBackImg from "static/assets/img/casestudies/salvajenada/interBack.svg";
+import Picture from "components/caseStudy/shared/Picture";
 
 const FramesEmbed = dynamic(
   import("components/caseStudy/salvajenada/FramesEmbed"),
@@ -48,7 +49,7 @@ export default function Salvajenada(props) {
     let covers = [];
     for (let i = 1; i < 7; i++) {
       covers.push(
-        <img
+        <Picture
           key={"c_" + i}
           alt={"salvajenada_release " + i}
           src={`/static/assets/img/casestudies/salvajenada/c_${i}.jpg`}
@@ -62,7 +63,7 @@ export default function Salvajenada(props) {
     let descriptions = [];
     for (let i = 1; i < 7; i++) {
       descriptions.push(
-        <img
+        <Picture
           key={"d_" + i}
           alt={"salvajenada_writing " + i}
           src={`/static/assets/img/casestudies/salvajenada/d_${i}.png`}
@@ -88,7 +89,7 @@ export default function Salvajenada(props) {
     );
     for (let i = 1; i < 4; i++) {
       x.push(
-        <img
+        <Picture
           key={"p_" + i}
           alt={"salvajenada_shoutout " + i}
           src={`/static/assets/img/casestudies/salvajenada/p_${i}.jpg`}
@@ -204,7 +205,7 @@ export default function Salvajenada(props) {
           <IberoGrid>
             <Ibero />
             {loadAssets && (
-              <img
+              <Picture
                 src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
                 alt="salvajenada en Ibero 90.9"
               />
