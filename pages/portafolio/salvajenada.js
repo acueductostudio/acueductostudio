@@ -8,24 +8,25 @@ import ContactFooter from "components/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import Quote from "components/caseStudy/shared/Quote";
 import Stat from "components/caseStudy/salvajenada/Stat";
+import { H2, H3, P } from "components/shared/Dangerously";
+import Picture from "components/caseStudy/shared/Picture";
+import IntroVideo from "components/caseStudy/shared/IntroVideo";
+import Marquee from "components/caseStudy/shared/Marquee";
+import Insight from "components/caseStudy/shared/Insight";
+import TextColumn from "components/caseStudy/shared/TextColumn";
+import CommonSection from "components/caseStudy/shared/CommonSection";
+
 import Ig from "static/assets/img/casestudies/salvajenada/ig.svg";
 import Ibero from "static/assets/img/casestudies/salvajenada/ibero.svg";
 import Wolf from "static/assets/img/casestudies/salvajenada/wolf.svg";
 import Apple from "static/assets/img/casestudies/salvajenada/apple.svg";
 import Spotify from "static/assets/img/casestudies/salvajenada/spotify.svg";
-import { H2, H3, P } from "components/shared/Dangerously";
-import IntroVideo from "components/caseStudy/shared/IntroVideo";
-import Marquee from "components/caseStudy/shared/Marquee";
-import Insight from "components/caseStudy/shared/Insight";
 import LogoSalvaje from "static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
-import TextColumn from "components/caseStudy/shared/TextColumn";
-import CommonSection from "components/caseStudy/shared/CommonSection";
 import SecondBackImg from "static/assets/img/casestudies/salvajenada/secondBack.svg";
 import ThirdBackImg from "static/assets/img/casestudies/salvajenada/thirdBack.svg";
 import FourthBackImg from "static/assets/img/casestudies/salvajenada/fourthBack.svg";
 import FifthBackImg from "static/assets/img/casestudies/salvajenada/fifthBack.svg";
 import InterBackImg from "static/assets/img/casestudies/salvajenada/interBack.svg";
-import Picture from "components/caseStudy/shared/Picture";
 
 const FramesEmbed = dynamic(
   import("components/caseStudy/salvajenada/FramesEmbed"),
@@ -474,7 +475,19 @@ const ShoutGrid = styled.div`
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 8%;
-    img,
+    picture {
+      min-width: 70%;
+      padding-bottom: 117%;
+      margin-right: 5%;
+      margin-bottom: 5%;
+      height: 0;
+    }
+    img {
+      max-width: 100%;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
     video {
       max-width: 70%;
       margin-right: 5%;
@@ -503,18 +516,23 @@ const PlaylistGrid = styled.div`
     max-width: 100%;
   }
   @media (max-width: 600px) {
-    width: 110%;
-    margin-left: 10%;
+    width: 105%;
+    margin-left: 7%;
     max-width: unset;
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 8%;
-    img {
-      max-width: 70%;
+    picture {
+      min-width: 70%;
+      padding-bottom: 70%;
       margin-right: 5%;
       margin-bottom: 5%;
+      height: 0;
+    }
+    img {
+      max-width: 100%;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
       scroll-snap-align: start;
       scroll-snap-stop: always;
