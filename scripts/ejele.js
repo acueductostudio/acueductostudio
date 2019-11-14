@@ -1,3 +1,322 @@
+import { useEffect, useState } from "react";
+import styled from "styled-components";
+import Head from "components/Head";
+import dynamic from "next/dynamic";
+import PageClipper from "components/PageClipper";
+import Fade from "react-reveal/Fade";
+import ContactFooter from "components/ContactFooter";
+import NextStudy from "components/caseStudy/shared/NextStudy";
+import { H2, H3, P, SVG } from "components/shared/Dangerously";
+import IntroVideo from "components/caseStudy/shared/IntroVideo";
+import Marquee from "components/caseStudy/shared/Marquee";
+import Quote from "components/caseStudy/shared/Quote";
+import Insight from "components/caseStudy/shared/Insight";
+import TextColumn from "components/caseStudy/shared/TextColumn";
+import CommonSection from "components/caseStudy/shared/CommonSection";
+import Picture from "components/caseStudy/shared/Picture";
+
+// const originalRed = "#C64028";
+// const YoutubeFirstRed = "rgb(221, 56, 20)";
+
+const fierasRed = "rgb(201,32,26)";
+
+const ThePlayer = dynamic(
+  import("components/caseStudy/ladanzadelasfieras/VideoPlayer"),
+  {
+    loading: () => <p>Loading player...</p>,
+    ssr: false
+  }
+);
+
+function LaDanzaDeLasFieras(props) {
+  const [loadAssets, setloadAssets] = useState(false);
+  let t = props.locale.casestudies.studies.ladanzadelasfieras;
+
+  useEffect(() => {
+    props.setTitle(t.headerTitle);
+    setloadAssets(true);
+  }, []);
+
+  let initialStats = t.intro_section.stats.map(function(stat, index) {
+    return (
+      <li key={"stat_" + index}>
+        <b>{stat.big}</b>
+        <p>{stat.small}</p>
+      </li>
+    );
+  });
+
+  return (
+    <PageClipper unPadded>
+      <Head
+        title={t.page_title}
+        description={t.meta_description}
+        canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
+        en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
+        lang={props.lang}
+      />
+      <Fade>
+        <LandSection>
+          <SVG
+            src={require("static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg?include")}
+          />
+        </LandSection>
+      </Fade>
+      <FirstSection>
+        <Marquee tags={t.intro_section.tags} />
+        <IntroVideo link={t.link} />
+        <TextColumn>
+          <H2>{t.intro_section.title}</H2>
+          <P>{t.intro_section.p}</P>
+          <LaurelNumbers>
+            <SVG
+              src={require("static/assets/img/casestudies/ladanzadelasfieras/laurel.svg?include")}
+            />
+            <Fade>
+              <ul>{initialStats}</ul>
+            </Fade>
+            <SVG
+              src={require("static/assets/img/casestudies/ladanzadelasfieras/laurel.svg?include")}
+            />
+          </LaurelNumbers>
+          <P>{t.intro_section.p2}</P>
+        </TextColumn>
+      </FirstSection>
+      <SecondSection>
+        <TextColumn>
+          <H2>{t.second_section.title}</H2>
+          <P>{t.second_section.p}</P>
+        </TextColumn>
+        {loadAssets && (
+          <PosterGrid>
+            <SVG
+              src={require("static/assets/img/casestudies/ladanzadelasfieras/line.svg?include")}
+            />
+            <Picture
+              src={"casestudies/ladanzadelasfieras/p_1.jpg"}
+              alt="First references for branding"
+            />
+            <Picture
+              src={"casestudies/ladanzadelasfieras/p_2.jpg"}
+              alt="First references for branding"
+            />
+            <Picture
+              src={"casestudies/ladanzadelasfieras/p_3.jpg"}
+              alt="First references for branding"
+            />
+            <Picture
+              src={"casestudies/ladanzadelasfieras/boceto.jpg"}
+              alt="Original sketch of poster design"
+            />
+            <Picture
+              src={"casestudies/ladanzadelasfieras/p_5.jpg"}
+              alt="Final poster design with awards"
+            />
+          </PosterGrid>
+        )}
+      </SecondSection>
+      <Section_Pre>
+        <TextColumn>
+          <Type>
+            <P>{t.second_section.font_logo}</P>
+            <SVG
+              src={require("static/assets/img/casestudies/ladanzadelasfieras/type_1.svg?include")}
+            />
+            <TypeGrid>
+              <div>
+                <P>{t.second_section.font_body}</P>
+                <SVG
+                  src={require("static/assets/img/casestudies/ladanzadelasfieras/type_2.svg?include")}
+                />
+              </div>
+              <div>
+                <p>{t.second_section.font_titles}</p>
+                <SVG
+                  src={require("static/assets/img/casestudies/ladanzadelasfieras/type_3.svg?include")}
+                />
+              </div>
+            </TypeGrid>
+            <ColorGrid>
+              <div>
+                {t.second_section.red}
+                <br />
+                #DD3814
+              </div>
+              <div>#080B0C</div>
+              <div>#F4F4F4</div>
+            </ColorGrid>
+          </Type>
+        </TextColumn>
+      </Section_Pre>
+      <Section_Sub>
+        <TransitionWrapper>
+          {loadAssets && (
+            <Picture
+              src={"casestudies/ladanzadelasfieras/materials.jpg"}
+              alt="Printed assets for film attendants"
+            />
+          )}
+        </TransitionWrapper>
+        <TextColumn>
+          <H3>{"– " + t.second_section.subtitle}</H3>
+          <P>{t.second_section.p2}</P>
+        </TextColumn>
+        <SequenceContainer>
+          {loadAssets && (
+            <Fade>
+              <ThePlayer
+                url={"https://www.youtube.com/watch?v=AJMXiE16gtc"}
+                still={
+                  "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
+                }
+                ratio={"50.62%"}
+              />
+            </Fade>
+          )}
+        </SequenceContainer>
+      </Section_Sub>
+      <Third>
+        <TextColumn>
+          <H3>{"– " + t.third_section.subtitle}</H3>
+          <P>{t.third_section.p}</P>
+        </TextColumn>
+        <Insight
+          insight={t.third_section.insights.portfolio}
+          number={1}
+          color={fierasRed}
+        >
+          {loadAssets && (
+            <Faces>
+              <Picture
+                src={"casestudies/ladanzadelasfieras/d_1.jpg"}
+                alt="Contact cards for directors and producers"
+              />
+            </Faces>
+          )}
+        </Insight>
+        <Quote
+          quote={t.third_section.insights.portfolio.quote}
+          color={props => props.theme.colors.background}
+          noMargin
+        />
+        <Insight
+          color={fierasRed}
+          insight={t.third_section.insights.press}
+          number={2}
+        >
+          {loadAssets && (
+            <MacPress>
+              <Picture
+                src={"casestudies/ladanzadelasfieras/i_1.jpg"}
+                alt="A whole section for the press"
+              />
+            </MacPress>
+          )}
+        </Insight>
+        <Quote
+          quote={t.third_section.insights.press.quote}
+          color={props => props.theme.colors.background}
+          noMargin
+        />
+        <Insight
+          color={fierasRed}
+          insight={t.third_section.insights.availability}
+          number={3}
+        >
+          {loadAssets && (
+            <MacContact>
+              <Picture
+                src={"casestudies/ladanzadelasfieras/i_3.jpg"}
+                alt="A contact component on every page"
+              />
+            </MacContact>
+          )}
+        </Insight>
+        <TextColumn>
+          <H3>{"– " + t.third_section.subtitle2}</H3>
+          <P>{t.third_section.p2}</P>
+          <AppGrid>
+            {loadAssets && (
+              <Picture
+                src={"casestudies/ladanzadelasfieras/webapp.png"}
+                alt="Contact cards for directors and producers"
+              />
+            )}
+            <SVG
+              src={require("static/assets/img/casestudies/ladanzadelasfieras/app.svg?include")}
+            />
+          </AppGrid>
+        </TextColumn>
+      </Third>
+      <Fourth>
+        <TextColumn>
+          <H3>{"– " + t.fourth_section.subtitle}</H3>
+          <P>{t.fourth_section.p}</P>
+          <Stat>
+            <SVG
+              src={require("static/assets/img/casestudies/ladanzadelasfieras/logoF.svg?include")}
+            />
+            <Fade>
+              <b>81%</b>
+            </Fade>
+            <P>{t.fourth_section.stat}</P>
+          </Stat>
+          <P>{t.fourth_section.p2}</P>
+          {loadAssets && (
+            <Fade>
+              <video
+                autoPlay
+                playsInline
+                muted
+                loop
+                poster={
+                  "/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
+                }
+              >
+                <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
+              </video>
+            </Fade>
+          )}
+        </TextColumn>
+      </Fourth>
+      <Fifth>
+        <TextColumn>
+          <H2>{t.fifth_section.title}</H2>
+          <P>{t.fifth_section.p}</P>
+        </TextColumn>
+        <Quote
+          quote={t.fifth_section.quote}
+          color={props => props.theme.colors.background}
+        />
+        <TextColumn>
+          {loadAssets && (
+            <Picture
+              src={"casestudies/ladanzadelasfieras/l_1.jpg"}
+              alt="Festival awards"
+            />
+          )}
+          <P>{t.fifth_section.p2}</P>
+        </TextColumn>
+      </Fifth>
+      <Sixth>
+        <Fade>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://ladanzadelasfieras.com"
+          >
+            {t.sixth_section.linkp} ladanzadelasfieras.com
+          </a>
+        </Fade>
+      </Sixth>
+      <NextStudy link="salvajenada" />
+      <ContactFooter />
+    </PageClipper>
+  );
+}
+
+export default React.memo(LaDanzaDeLasFieras);
+
 const SequenceContainer = styled.div`
   max-width: 1300px;
   width: 100%;

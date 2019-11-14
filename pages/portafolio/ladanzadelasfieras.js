@@ -180,10 +180,12 @@ function LaDanzaDeLasFieras(props) {
           color={fierasRed}
         >
           {loadAssets && (
-            <Faces
-              src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
-              alt="Contact cards for directors and producers"
-            />
+            <Faces>
+              <Picture
+                src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
+                alt="Contact cards for directors and producers"
+              />
+            </Faces>
           )}
         </Insight>
         <Quote
@@ -197,10 +199,12 @@ function LaDanzaDeLasFieras(props) {
           number={2}
         >
           {loadAssets && (
-            <MacPress
-              src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
-              alt="A whole section for the press"
-            />
+            <MacPress>
+              <Picture
+                src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
+                alt="A whole section for the press"
+              />
+            </MacPress>
           )}
         </Insight>
         <Quote
@@ -214,10 +218,12 @@ function LaDanzaDeLasFieras(props) {
           number={3}
         >
           {loadAssets && (
-            <MacContact
-              src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
-              alt="A contact component on every page"
-            />
+            <MacContact>
+              <Picture
+                src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
+                alt="A contact component on every page"
+              />
+            </MacContact>
           )}
         </Insight>
         <TextColumn>
@@ -305,15 +311,19 @@ const SequenceContainer = styled.div`
   margin: 4% auto;
 `;
 
-const MacContact = styled(Picture)`
+const MacContact = styled.div`
   max-width: 670px;
   margin: 5% 0;
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
   @media (max-width: 500px) {
     max-width: 480px;
   }
 `;
 
-const Faces = styled(Picture)`
+const Faces = styled.div`
   max-width: 670px;
   margin: 8% 0 0;
   position: relative;
@@ -326,10 +336,14 @@ const Faces = styled(Picture)`
   }
 `;
 
-const MacPress = styled(Picture)`
+const MacPress = styled.div`
   max-width: 830px;
   width: 100%;
   margin: 4% 0 -9% 0;
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
   @media (max-width: 1050px) {
     margin: 8% 0 -9% 0;
   }
@@ -465,12 +479,16 @@ const TransitionWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  img {
+  picture {
     max-width: 1300px;
     padding: 0 5%;
     width: 100%;
     margin: 0 auto;
     z-index: 1;
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
   }
   &:before {
     content: " ";
