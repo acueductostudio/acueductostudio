@@ -5,11 +5,9 @@ import Link from "next/link";
 import Arrow from "../components/Arrow";
 import Grid from "./TitleSectionGrid";
 
-const TitleSection = props => {
-  const { title, text, link, linktext } = props;
-
+const TitleSection = ({ title, text, link, linktext, borderTop }) => {
   return (
-    <Grid borderTop={props.borderTop}>
+    <Grid borderTop={borderTop}>
       <H1>{title}</H1>
       <P>{text}</P>
       <Fade>
@@ -31,7 +29,7 @@ const TitleSection = props => {
   );
 };
 
-export default TitleSection;
+export default React.memo(TitleSection);
 
 const WidthLink = styled.a`
   grid-column: 7 / span 5;

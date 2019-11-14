@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrowSvg from "../static/assets/img/layout/arrow.svg";
+import ArrowSvg from "static/assets/img/layout/arrow.svg";
 
 const Arrow = () => (
   <ArrowContainer>
@@ -7,7 +7,7 @@ const Arrow = () => (
   </ArrowContainer>
 );
 
-export default Arrow;
+export default React.memo(Arrow);
 
 const ArrowContainer = styled.span`
   svg {

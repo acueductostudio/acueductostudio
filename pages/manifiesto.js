@@ -8,7 +8,7 @@ import TitleSection from "components/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
 import Fade from "react-reveal/Fade";
 
-export default function Manifesto(props) {
+function Manifesto(props) {
   let t = props.locale.manifesto_page;
 
   useEffect(() => {
@@ -44,6 +44,7 @@ export default function Manifesto(props) {
     </PageClipper>
   );
 }
+export default React.memo(Manifesto);
 
 const Belief = styled.li`
   list-style: none;

@@ -12,10 +12,10 @@ function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
   return (
     <TopHeader reveal={hasLoaded}>
       <Link href={locale.lang === "en" ? "/en" : "/"} passHref>
-        <Logotype onClick={backUp}>
+        <LogoLink onClick={backUp}>
           <h1>acueducto</h1>
           <Logo />
-        </Logotype>
+        </LogoLink>
       </Link>
       <HeaderTitle hide={isOpen}>{headerTitle}</HeaderTitle>
     </TopHeader>
@@ -79,7 +79,7 @@ const TopHeader = styled.header`
   }
 `;
 
-const Logotype = styled.a`
+const LogoLink = styled.a`
   display: flex;
   grid-column: 1 / span 2;
   max-width: 130px;
@@ -92,6 +92,8 @@ const Logotype = styled.a`
     font-size: 0;
   }
   svg {
+    max-width: 130px;
+    width: 100%;
     path {
       fill: ${props => props.theme.colors.white};
     }

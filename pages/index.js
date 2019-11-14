@@ -12,7 +12,7 @@ import Holed from "static/assets/img/layout/holed.svg";
 import CaseList from "components/caseStudy/CaseList";
 import Head from "components/Head";
 
-export default function Index(props) {
+function Index(props) {
   let t = props.locale.home_page;
 
   useEffect(() => {
@@ -81,6 +81,8 @@ export default function Index(props) {
     </>
   );
 }
+
+export default React.memo(Index);
 
 const Divider = styled.div`
   width: 100%;
@@ -152,11 +154,6 @@ const Land = styled.section`
     line-height: 100%;
     font-size: 7rem;
     max-width: 830px;
-    /* font-size: 6rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-family: "acumin-pro-wide";
-    letter-spacing: -2px; */
   }
   @media (max-width: 1115px) {
     h1 {

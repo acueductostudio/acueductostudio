@@ -80,7 +80,7 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
     </Toggler>
   );
 }
-export default LanguageToggler;
+export default React.memo(LanguageToggler);
 
 const English = styled.div`
   background-color: ${props => props.theme.colors.accent};

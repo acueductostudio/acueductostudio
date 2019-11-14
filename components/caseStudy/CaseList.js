@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { P } from "components/shared/Dangerously";
 import BorderLink from "components/shared/BorderedLink";
 import Fade from "react-reveal/Fade";
-import Arrow from "static/assets/img/layout/arrow.svg";
+import Arrow from "components/Arrow";
 import Link from "next/link";
 import LangContext from "utils/LangContext";
 
@@ -181,14 +181,17 @@ const Info = styled.div`
       }
     }
   }
-  svg {
+  span {
     align-self: flex-end;
-    width: 50px;
-    height: 40px;
-    fill: none;
-    stroke: ${props => props.theme.colors.foreground};
-    stroke-width: ${props => props.theme.stroke};
-    transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    svg {
+      align-self: flex-end;
+      width: 50px;
+      height: 40px;
+      fill: none;
+      stroke: ${props => props.theme.colors.foreground};
+      stroke-width: ${props => props.theme.stroke};
+      transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
   }
   @media (max-width: 1160px) {
     h4 {
@@ -216,8 +219,8 @@ const Info = styled.div`
       border: 2px solid ${props => props.theme.colors.foreground_low};
       padding: 10px;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
+      width: 48px;
+      height: 48px;
       bottom: -10px;
     }
   }

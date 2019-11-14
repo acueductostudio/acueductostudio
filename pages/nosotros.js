@@ -8,15 +8,19 @@ import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
 import PinnedSection from "components/PinnedSection";
 import { P } from "components/shared/Dangerously";
+import Picture from "components/caseStudy/shared/Picture";
 
 const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
-    <HeadLoader src="/static/assets/img/layout/headPlacerHolder.jpg" />
+    <HeadLoader
+      src="/static/assets/img/layout/headPlacerHolder.jpg"
+      alt="3DScan"
+    />
   ),
   ssr: false
 });
 
-export default function About(props) {
+function About(props) {
   let t = props.locale.about_page;
 
   useEffect(() => {
@@ -62,7 +66,9 @@ export default function About(props) {
   );
 }
 
-const HeadLoader = styled.img`
+export default React.memo(About);
+
+const HeadLoader = styled(Picture)`
   width: 100%;
   height: auto;
   max-width: 400px;

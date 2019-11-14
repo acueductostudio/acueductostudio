@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import Hamburger from "../static/assets/img/layout/hamburger.svg";
+import Hamburger from "static/assets/img/layout/hamburger.svg";
 
 const NavTrigger = props => (
   <TriggerContainer visible={props.hasLoaded}>

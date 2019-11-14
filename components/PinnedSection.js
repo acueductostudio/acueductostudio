@@ -9,7 +9,7 @@ const PinnedSection = ({ t, children, className }) => (
     <ScrollDown>{children}</ScrollDown>
   </Pinned>
 );
-export default PinnedSection;
+export default React.memo(PinnedSection);
 
 const ScrollDown = styled.div`
   grid-column: 7 / span 5;
