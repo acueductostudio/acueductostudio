@@ -21,6 +21,7 @@ import Quote from "components/caseStudy/shared/Quote";
 import Insight from "components/caseStudy/shared/Insight";
 import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
+import Picture from "components/caseStudy/shared/Picture";
 
 // const originalRed = "#C64028";
 // const YoutubeFirstRed = "rgb(221, 56, 20)";
@@ -96,6 +97,7 @@ function LaDanzaDeLasFieras(props) {
                 src="/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"
                 alt="First references for branding"
               />
+              <Picture></Picture>
               <img
                 src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
                 alt="First references for branding"
