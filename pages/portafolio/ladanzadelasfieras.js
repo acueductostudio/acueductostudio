@@ -180,12 +180,10 @@ function LaDanzaDeLasFieras(props) {
           color={fierasRed}
         >
           {loadAssets && (
-            <Fade>
-              <Faces
-                src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
-                alt="Contact cards for directors and producers"
-              />
-            </Fade>
+            <Faces
+              src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
+              alt="Contact cards for directors and producers"
+            />
           )}
         </Insight>
         <Quote
@@ -320,6 +318,9 @@ const Faces = styled(Picture)`
   margin: 8% 0 0;
   position: relative;
   width: 100%;
+  img {
+    width: 100%;
+  }
   @media (max-width: 700px) {
     margin: 8% 0 5%;
   }
@@ -503,10 +504,14 @@ const PosterGrid = styled.div`
       stroke-width: ${props => props.theme.stroke};
     }
   }
-  img {
+  picture {
     z-index: 1;
     max-width: 100%;
     width: 100%;
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
     &:nth-of-type(4) {
       grid-column: 2 / span 3;
       grid-row: 2 / span 1;
@@ -517,7 +522,7 @@ const PosterGrid = styled.div`
     }
   }
   @media (max-width: 900px) {
-    img {
+    picture {
       &:nth-of-type(4) {
         grid-column: 1 / span 3;
       }
@@ -532,7 +537,7 @@ const PosterGrid = styled.div`
     svg {
       display: none;
     }
-    img {
+    picture {
       grid-column-end: span 2;
       &:nth-of-type(4) {
         grid-row: 1 / span 2;
