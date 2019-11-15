@@ -4,7 +4,7 @@ export default function shade(p) {
 
   let x = 0;
   let y = 0;
-  let easing = 0.1;
+  let easing = 0.3;
 
   p.preload = function() {
     LDShader = p.loadShader(
@@ -14,14 +14,14 @@ export default function shade(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
+    p.createCanvas(p.windowWidth + 200, p.windowHeight + 200, p.WEBGL);
     // disable DEPTH_TEST
     gl = this.canvas.getContext(p.WEBGL);
     gl.disable(gl.DEPTH_TEST);
 
     p.mouseX = p.width;
     p.mouseY = 1;
-    noctaves = 5.4;
+    noctaves = 4.0;
     c = [];
     c = [
       0,
@@ -52,7 +52,7 @@ export default function shade(p) {
   };
 
   p.windowResized = function() {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.resizeCanvas(p.windowWidth + 200, p.windowHeight + 200);
   };
 
   p.draw = function() {

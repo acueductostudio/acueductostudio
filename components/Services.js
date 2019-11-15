@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
-import TitleSection from "./TitleSection";
+import TitleSection from "components/shared/TitleSection";
 import Fade from "react-reveal/Fade";
 import LangContext from "utils/LangContext";
 

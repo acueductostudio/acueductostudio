@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { P, H1 } from "components/shared/Dangerously";
 import Link from "next/link";
-import Arrow from "../components/Arrow";
+import Arrow from "./Arrow";
 import Grid from "./TitleSectionGrid";
 
 const TitleSection = ({ title, text, link, linktext, borderTop }) => {

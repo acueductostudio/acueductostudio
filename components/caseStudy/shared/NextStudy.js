@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useContext } from "react";
 import Fade from "react-reveal/Fade";
 import Link from "next/link";
-import Arrow from "components/Arrow";
+import Arrow from "components/shared/Arrow";
 import LangContext from "utils/LangContext";
 import { P } from "components/shared/Dangerously";
 

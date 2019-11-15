@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
 import Link from "next/link";
 import Cross from "static/assets/img/layout/cross.svg";
 import BorderLink from "components/shared/BorderedLink";
@@ -54,11 +53,13 @@ const Button = styled.button`
     ${props => props.theme.colors.foreground};
   cursor: pointer;
   transition: 0.3s ease all;
-  &:hover {
-    background-color: #27ae60;
-    color: ${props => props.theme.colors.background};
-    span {
-      background-size: 0 0;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: #27ae60;
+      color: ${props => props.theme.colors.background};
+      span {
+        background-size: 0 0;
+      }
     }
   }
 `;

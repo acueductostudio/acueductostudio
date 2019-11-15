@@ -2,7 +2,7 @@ import Head from "components/Head";
 import Link from "next/link";
 import Fade from "react-reveal/Fade";
 import PageClipper from "components/PageClipper";
-import SimplePinnedSection from "components/SimplePinnedSection";
+import SimplePinnedSection from "components/shared/SimplePinnedSection";
 import createMarkup from "utils/createMarkup";
 import ContactFooter from "components/ContactFooter";
 import { useEffect } from "react";

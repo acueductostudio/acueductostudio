@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { P } from "components/shared/Dangerously";
 import BorderLink from "components/shared/BorderedLink";
 import Fade from "react-reveal/Fade";
-import Arrow from "components/Arrow";
+import Arrow from "components/shared/Arrow";
 import Link from "next/link";
 import LangContext from "utils/LangContext";
 
@@ -175,9 +175,11 @@ const Info = styled.div`
     color: ${props => props.theme.colors.foreground_low};
   }
   a {
-    &:hover {
-      svg {
-        stroke: ${props => props.theme.colors.accent};
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        svg {
+          stroke: ${props => props.theme.colors.accent};
+        }
       }
     }
   }
@@ -215,7 +217,7 @@ const Info = styled.div`
     }
   }
   @media (max-width: 600px) {
-    svg {
+    span svg {
       border: 2px solid ${props => props.theme.colors.foreground_low};
       padding: 10px;
       border-radius: 50%;

@@ -1,9 +1,14 @@
 import styled, { keyframes } from "styled-components";
-import Arrow from "../components/Arrow";
+import Arrow from "components/shared/Arrow";
+
+const scrollToNext = e => {
+  e.preventDefault();
+  document.getElementById("removeArrow").scrollIntoView({ behavior: "smooth" });
+};
 
 const ScrollIncentive = ({ hasLoaded, showArrow }) => (
   <Container reveal={hasLoaded} showArrow={showArrow}>
-    <Jumper>
+    <Jumper onClick={scrollToNext}>
       <Arrow />
     </Jumper>
   </Container>
@@ -41,6 +46,8 @@ const Jumper = styled.div`
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: normal;
+  pointer-events: auto;
+  cursor: pointer;
 `;
 
 const Container = styled.div`

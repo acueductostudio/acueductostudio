@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState, useContext } from "react";
 import { H1 } from "components/shared/Dangerously";
-import TitleSectionGrid from "./TitleSectionGrid";
+import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import Logo from "static/assets/img/layout/logo.svg";
 import Mail from "static/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -79,6 +79,7 @@ const Grid = styled(TitleSectionGrid)`
   }
   p {
     z-index: 8;
+    color: ${props => props.theme.colors.foreground_low};
     &:hover {
       b {
         border-bottom: ${props =>

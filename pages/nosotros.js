@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import dynamic from "next/dynamic";
 import Head from "components/Head";
-import TitleSection from "components/TitleSection";
+import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
-import PinnedSection from "components/PinnedSection";
+import PinnedSection from "components/shared/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import Picture from "components/caseStudy/shared/Picture";
 

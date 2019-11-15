@@ -1,7 +1,7 @@
 import Head from "components/Head";
 import styled from "styled-components";
 import { useEffect } from "react";
-import TitleSection from "components/TitleSection";
+import TitleSection from "components/shared/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";

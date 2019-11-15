@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Head from "../components/Head";
 import { useEffect } from "react";
-import PageClipper from "../components/PageClipper";
-import ContactFooter from "../components/ContactFooter";
-import PinnedSection from "../components/PinnedSection";
-import TitleSection from "components/TitleSection";
+import PageClipper from "components/PageClipper";
+import ContactFooter from "components/ContactFooter";
+import PinnedSection from "components/shared/PinnedSection";
+import TitleSection from "components/shared/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
 import Fade from "react-reveal/Fade";
 

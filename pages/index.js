@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import styled from "styled-components";
-import TitleSection from "components/TitleSection";
+import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
 import Process from "components/Process";
 import ContactFooter from "components/ContactFooter";

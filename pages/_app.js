@@ -33,6 +33,7 @@ class MyApp extends App {
 
   toggleLang(lang) {
     let language = lang === "en" ? en : es;
+    Cookies.set("chosenLang", lang);
     this.setState({
       locale: language
     });
@@ -60,8 +61,13 @@ class MyApp extends App {
   };
 
   componentDidMount() {
-    // Disable scroll
+    // Check for cookie language !messes with routing
+    // var _C = Cookies.get("chosenLang");
+    // if (_C !== undefined) {
+    //   this.toggleLang(_C);
+    // }
 
+    // Disable scroll
     const targetElement = document.querySelector("#contact"); //dummy
     disableBodyScroll(targetElement);
 

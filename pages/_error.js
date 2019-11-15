@@ -1,8 +1,8 @@
 import Head from "../components/Head";
 import { useEffect } from "react";
-import PageClipper from "../components/PageClipper";
-import TitleSection from "../components/TitleSection";
-import ContactFooter from "../components/ContactFooter";
+import PageClipper from "components/PageClipper";
+import TitleSection from "components/shared/TitleSection";
+import ContactFooter from "components/ContactFooter";
 
 export default function Error(props) {
   let t = props.locale.error_page;

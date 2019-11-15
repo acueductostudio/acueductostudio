@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useContext } from "react";
-import TitleSection from "../components/TitleSection";
-import { P } from "components/shared/Dangerously";
+import TitleSection from "components/shared/TitleSection";
 import Fade from "react-reveal/Fade";
 import LangContext from "utils/LangContext";
 import createMarkup from "utils/createMarkup";
@@ -58,24 +57,26 @@ const Step = styled.div`
   border: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
-  &:hover {
-    svg {
-      transform: scale(1.05);
-      .accentdisco {
-        transform: translate(18px, -4px) scale(0.92);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg {
+        transform: scale(1.05);
+        .accentdisco {
+          transform: translate(18px, -4px) scale(0.92);
+        }
+        .accent {
+          transform: translateY(-10px) scale(1.02);
+        }
+        .accentcubo {
+          transform: translate(-4px, -9px);
+        }
+        .accentrock {
+          transform: translateY(-10px) scale(1.05);
+        }
       }
-      .accent {
-        transform: translateY(-10px) scale(1.02);
+      p {
+        color: ${props => props.theme.colors.foreground};
       }
-      .accentcubo {
-        transform: translate(-4px, -9px);
-      }
-      .accentrock {
-        transform: translateY(-10px) scale(1.05);
-      }
-    }
-    p {
-      color: ${props => props.theme.colors.foreground};
     }
   }
   h3 {
@@ -87,7 +88,7 @@ const Step = styled.div`
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {
-    color: ${props => props.theme.colors.accent};
+    color: ${props => props.theme.colors.accent_smalltext};
     font-size: 1.5rem;
     /* transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); */
   }
