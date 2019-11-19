@@ -5,16 +5,16 @@ import P5Wrapper from "utils/P5Wrapper";
 
 export default function HeadSketch(props) {
   return (
-    <SketchContainer>
-      <Fade>
+    <Fade>
+      <SketchContainer>
         <P5Wrapper
           sketch={head}
           second={props.second}
           rotationStart={props.rotationStart}
           invertRotation={props.invertRotation}
         />
-      </Fade>
-    </SketchContainer>
+      </SketchContainer>
+    </Fade>
   );
 }
 
