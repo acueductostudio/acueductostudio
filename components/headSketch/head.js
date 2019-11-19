@@ -70,7 +70,10 @@ export default function head(p) {
     p.scale(1.5); // Scaled to make model fit into canvas
     p.rotateY(startRotation + p.frameCount * rotate);
 
-    p.ambientMaterial(255, 255, 255); // For effect
+    // p.ambientMaterial(255); // For effect
+    // p.specularMaterial(250);
+    // p.normalMaterial();
+
     p.model(teapot);
   };
 }

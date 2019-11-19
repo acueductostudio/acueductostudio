@@ -1,7 +1,6 @@
-# Acueducto Web App
+# Acueducto Web Portal
 
 # After
 
-- Heads in firefox && iphoneX
+- Heads in iphoneX
 - meta charset duplicate
-- Hacerla WPA
