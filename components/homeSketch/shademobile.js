@@ -14,7 +14,7 @@ export default function shade(p) {
   };
 
   p.setup = function() {
-    p.createCanvas(p.windowWidth + 200, p.windowHeight + 200, p.WEBGL);
+    p.createCanvas(p.windowWidth + 250, p.windowHeight + 250, p.WEBGL);
     // disable DEPTH_TEST
     gl = this.canvas.getContext(p.WEBGL);
     gl.disable(gl.DEPTH_TEST);
@@ -52,7 +52,7 @@ export default function shade(p) {
   };
 
   p.windowResized = function() {
-    p.resizeCanvas(p.windowWidth + 200, p.windowHeight + 200);
+    p.resizeCanvas(p.windowWidth + 250, p.windowHeight + 250);
   };
 
   p.draw = function() {

@@ -8,7 +8,7 @@ const nextConfig = {
   //start of WPA config
   target: "serverless",
   transformManifest: manifest => ["/"].concat(manifest),
-  generateInDevMode: true,
+  // generateInDevMode: true,
   workboxOpts: {
     swDest: "static/service-worker.js",
     runtimeCaching: [
