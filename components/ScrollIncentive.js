@@ -46,7 +46,8 @@ const Jumper = styled.div`
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  pointer-events: ${props => (props.reveal && props.showArrow ? auto : none)};
+  pointer-events: ${props =>
+    props.reveal && props.showArrow ? "auto" : "none"};
   cursor: pointer;
 `;
 
