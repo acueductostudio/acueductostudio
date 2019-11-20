@@ -8,7 +8,7 @@ const scrollToNext = e => {
 
 const ScrollIncentive = ({ hasLoaded, showArrow }) => (
   <Container reveal={hasLoaded} showArrow={showArrow}>
-    <Jumper onClick={scrollToNext}>
+    <Jumper onClick={scrollToNext} showArrow={showArrow}>
       <Arrow />
     </Jumper>
   </Container>
@@ -46,7 +46,7 @@ const Jumper = styled.div`
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  pointer-events: auto;
+  pointer-events: ${props => (props.reveal && props.showArrow ? auto : none)};
   cursor: pointer;
 `;
 
