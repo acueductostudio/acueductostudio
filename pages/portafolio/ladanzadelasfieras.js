@@ -159,7 +159,7 @@ function LaDanzaDeLasFieras(props) {
           {loadAssets && (
             <Fade>
               <ThePlayer
-                url={"https://www.youtube.com/watch?v=AJMXiE16gtc"}
+                url={"https://www.youtube.com/watch?v=11aYNilxhko"}
                 still={
                   "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
                 }

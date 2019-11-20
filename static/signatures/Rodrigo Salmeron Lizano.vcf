@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:4.0
+N:Salmeron Lizano;Rodrigo;;
+FN:Rodrigo Salmeron Lizano
+ORG:Acueducto
+TITLE:Director de Estrategia\, Dise&ntilde;o y Desarrollo
+EMAIL:rodrigo@acueducto.studio
+LOGO;MEDIATYPE=image/png:https://acueducto.studio/static/signatures/vcard.png
+TEL;TYPE=work,text,voice;VALUE=uri:tel:+52-55-7917-8604
+URL:https://acueducto.studio/
+REV:2019-11-20T16:20:00.259Z
+END:VCARD
