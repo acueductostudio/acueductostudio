@@ -703,7 +703,7 @@ const InterBack = styled.div`
   height: 0px;
   width: 50%;
   padding-bottom: 96%;
-  top: 50%;
+  top: 70%;
   transform: translateY(-50%);
   position: absolute;
   right: 0;
