@@ -1,6 +1,8 @@
 export default function shade(p) {
+  p.disableFriendlyErrors = true; // disables FES
   var noctaves, c, LDShader;
   var gl;
+  // let myFont;
 
   let x = 0;
   let y = 0;
@@ -11,6 +13,7 @@ export default function shade(p) {
       "/static/assets/shader/shader.vert",
       "/static/assets/shader/shader.frag"
     );
+    // myFont = p.loadFont("/static/assets/font/300.woff");
   };
 
   p.setup = function() {
@@ -18,6 +21,10 @@ export default function shade(p) {
     // disable DEPTH_TEST
     gl = this.canvas.getContext(p.WEBGL);
     gl.disable(gl.DEPTH_TEST);
+
+    p.frameRate(30);
+    // p.textSize(10);
+    // p.textFont(myFont);
 
     p.mouseX = p.width;
     p.mouseY = 1;
@@ -57,22 +64,28 @@ export default function shade(p) {
 
   p.draw = function() {
     //easing on cursor
-    let targetX = p.round(p.mouseX - p.windowHeight / 2);
+    let targetX = p.mouseX - p.windowHeight / 2;
     let dx = targetX - x;
     x += dx * easing;
+    x = Math.round(x);
 
-    let targetY = p.round(p.mouseY - p.windowWidth / 2);
+    let targetY = p.mouseY - p.windowWidth / 2;
     let dy = targetY - y;
     y += dy * easing;
+    y = Math.round(y);
 
     LDShader.setUniform("iResolution", [p.width, p.height]); //pass some values to the shader
     LDShader.setUniform("iTime", p.millis() * 0.001);
     LDShader.setUniform("iMouse", [x, y]);
-    // LDShader.setUniform("iMouse", [p.mouseX - 30, p.mouseY - 10]);
     LDShader.setUniform("noctaves", noctaves);
     LDShader.setUniform("c", c);
     p.shader(LDShader);
     p.box(p.width);
+
+    // DISPLAY FRAMERATE
+    // p.fill(255);
+    // p.text("FRate " + p.int(p.getFrameRate()), 0, 300, 10);
+    // console.log(p.int(p.getFrameRate()));
   };
 }
 
