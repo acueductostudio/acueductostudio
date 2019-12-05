@@ -44,7 +44,7 @@ const Carousel = () => {
   }, [manualMode]);
 
   const nextIndex = () => {
-    if (activeIndex + 1 > 6) {
+    if (activeIndex + 1 > 5) {
       setIndex(0);
     } else {
       setIndex(activeIndex + 1);
