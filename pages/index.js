@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Fade from "react-reveal/Fade";
 import styled from "styled-components";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
@@ -7,10 +6,9 @@ import Process from "components/Process";
 import ContactFooter from "components/ContactFooter";
 import { H1, H2 } from "components/shared/Dangerously";
 import Services from "components/Services";
-import LogoComplete from "static/assets/img/layout/logoComplete.svg";
-import Holed from "static/assets/img/layout/holed.svg";
 import CaseList from "components/caseStudy/CaseList";
 import Head from "components/Head";
+import Carousel from "components/Carousel";
 
 function Index(props) {
   let t = props.locale.home_page;
@@ -42,36 +40,8 @@ function Index(props) {
             linktext={t.intro.linktext}
             borderTop
           />
-          {/* <ImageGallery>
-              <Image
-                columnStart={5}
-                columnEnd={8}
-                ratio={60}
-                style={{
-                  backgroundImage: "url(https://source.unsplash.com/collection/253848)"
-                }}
-              />
-              <Image
-                columnStart={1}
-                columnEnd={6}
-                ratio={80}
-                style={{
-                  backgroundImage:
-                    "url(https://source.unsplash.com/user/realla)",
-                  transform: "translateY(-70%)"
-                }}
-              />
-            </ImageGallery> */}
         </Intro>
-        <ImageGalleryRemovable>
-          <Holed />
-          <Boxed>
-            <Fade>
-              <LogoComplete />
-            </Fade>
-          </Boxed>
-        </ImageGalleryRemovable>
-        <Divider />
+        <Carousel />
         <Process />
         <TitleSection title={t.studies.title} text={t.studies.p} borderTop />
         <CaseList noPlay />
@@ -83,58 +53,6 @@ function Index(props) {
 }
 
 export default React.memo(Index);
-
-const Divider = styled.div`
-  width: 100%;
-  padding-bottom: 12%;
-  background-color: ${props => props.theme.colors.background};
-`;
-
-const Boxed = styled.div`
-  position: absolute;
-  max-width: 350px;
-  width: 40%;
-`;
-
-const ImageGalleryRemovable = styled.div`
-  width: 100%;
-  display: flex;
-  flex: 0 0 auto;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  margin: -1px 0;
-  svg {
-    width: 100%;
-  }
-`;
-
-const Image = styled.figure`
-  height: 0;
-  padding-bottom: ${props => (props.ratio ? props.ratio + "%" : "60%")};
-  background-size: 104%;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-size 0.5s ease, margin 0.3s ease;
-  grid-column: ${props => (props.columnStart ? props.columnStart : 1)} / span
-    ${props => (props.columnEnd ? props.columnEnd : 5)};
-  &:hover {
-    background-size: 100%;
-    margin: 0 10px;
-    z-index: 0;
-  }
-`;
-
-const ImageGallery = styled.div`
-  width: 100%;
-  display: grid;
-  grid-gap: 2.2rem;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 300px;
-  padding: 0 4%;
-`;
 
 const Land = styled.section`
   min-height: 100vh;

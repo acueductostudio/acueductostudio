@@ -247,15 +247,22 @@
       "tagline": "Acueducto is a strategic design & technology studio based in CDMX."
     },
     "intro": {
-      "title": "partnering with impact-seeking innovators",
-      "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration; that’s why we cherish the importance of partnerships, and it is what we offer to our clients. Working closely together, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic. <br/><br/>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
+      "title": "working with partners, not for clients",
+      "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration. That’s why we cherish the importance of partnerships; which, unlike other studios and agencies, allow us to get deeply involved in every project. Working closely together with our partners, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic.<br/><br/>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
       "link": ["/en/about", "about us"],
       "linktext": "Read more"
     },
+    "carousel": [
+      "digital experiences",
+      "websites",
+      "apps",
+      "digital products and services",
+      "marketing strategies",
+      "digital branding"
+    ],
     "process": {
       "title": "we place strategy<br/>at the core",
-      "p": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>At Acueducto we approach challenges through strategic design, this means we work not only by ourselves but along with our partners, step by step, to develop strategies that deliver the best results for them and their users.",
-      "p_past": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>At Acueducto we see problems as opportunities; step by step, and along with our partners, we use technology and develop strategies to deliver the best results for them and their users.",
+      "p": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>Approaching challenges through Strategic Design means working not only by ourselves but alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.<br/><br/><b>Discover our process.</b>",
       "steps": [
         {
           "title": "discover",
@@ -296,9 +303,10 @@
         {
           "title": "Strategy",
           "tags": [
+            "Digital Consulting",
             "Project Management",
-            "Community Management",
-            "Digital Marketing"
+            "Digital Marketing",
+            "Community Management"
           ]
         },
         {

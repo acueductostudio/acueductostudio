@@ -18,7 +18,7 @@ const TitleSectionGrid = styled.div`
     line-height: 100%;
     font-size: 7rem;
     margin-bottom: 5%;
-    max-width: 800px;
+    max-width: 810px;
     color: ${props => props.theme.colors.accent};
   }
   p {
@@ -32,6 +32,10 @@ const TitleSectionGrid = styled.div`
           stroke: ${props => props.theme.colors.accent};
         }
       }
+    }
+    b {
+      color: ${props => props.theme.colors.foreground};
+      font-weight: 100;
     }
   }
   @media (max-width: 1100px) {

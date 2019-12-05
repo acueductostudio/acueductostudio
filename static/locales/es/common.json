@@ -247,14 +247,22 @@
       "tagline": "Acueducto es un estudio de diseño estratégico y tecnología en CDMX."
     },
     "intro": {
-      "title": "nos asociamos con innovadores para generar un impacto",
-      "p": "Como socios de Acueducto somos testigos de los enormes beneficios de la co-creación y la estrecha colaboración; por ello celebramos la importancia de las asociaciones y esto ofrecemos a nuestros clientes. Trabajamos juntos, desde la ideación hasta el lanzamiento, para producir experiencias digitales que verdaderamente conecten con sus audiencias y causen un impacto positivo en marcas, negocios y comunidades por igual.<br/><br/>Siempre nos emocionan los nuevos retos y las conexiones que generan. Así como los problemas se convierten en proyectos, nuestros socios en amigos.",
+      "title": "trabajando con socios, no para clientes",
+      "p": "En Acueducto somos testigos de los enormes beneficios de la co-creación y la estrecha colaboración. Por ello celebramos la importancia de las asociaciones; que a diferencia de otros estudios y agencias, nos permiten involucrarnos estructuralmente en cada proyecto. Junto a nuestros socios, trabajando desde la estrategia hasta el lanzamiento, logramos producir experiencias digitales que verdaderamente conectan con sus audiencias y causan un impacto positivo en marcas, negocios y comunidades por igual.<br/><br/>Siempre nos emocionan los nuevos retos y las conexiones que generan. Así como los problemas se convierten en proyectos, nuestros socios en amigos.",
       "link": ["/nosotros", "nosotros"],
       "linktext": "Lee más sobre"
     },
+    "carousel": [
+      "experiencias digitales",
+      "sitios web",
+      "apps",
+      "productos y servicios digitales",
+      "estrategias de marketing",
+      "branding digital"
+    ],
     "process": {
       "title": "con la estrategia<br/>en el núcleo",
-      "p": "Compartiremos una convicción contigo:<br/>La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles y áreas de oportunidad, así como la mejor forma de resolverlos. <br/><br/>En Acueducto abordamos los problemas desde el Diseño Estratégico. Paso a paso, junto con nuestro socios, desarrollamos estrategias que buscan los mejores resultados para ellos y sus usuarios.",
+      "p": "Compartiremos una convicción contigo:<br/>La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles y áreas de oportunidad, así como la mejor forma de resolverlos.<br/><br/>Abordar los problemas desde el Diseño Estratégico significa desarrollar desde el inicio de cada proyecto, junto con nuestros socios, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
       "steps": [
         {
           "title": "descubre",
@@ -295,9 +303,10 @@
         {
           "title": "Estrategia",
           "tags": [
+            "Consultoría Digital",
             "Administración de Proyectos",
-            "Community Management",
-            "Marketing Digital"
+            "Marketing Digital",
+            "Community Management"
           ]
         },
         {

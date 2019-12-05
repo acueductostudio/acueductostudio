@@ -24,6 +24,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.11.0",
     "react-ga": "^2.6.0",
+    "react-hook-inview": "^4.1.2",
     "react-hotjar": "^2.0.2",
     "react-player": "^1.12.0",
     "react-reveal": "^1.2.2",

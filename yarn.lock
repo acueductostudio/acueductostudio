@@ -5583,6 +5583,11 @@ react-ga@^2.6.0:
   resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.7.0.tgz#24328f157f31e8cffbf4de74a3396536679d8d7c"
   integrity sha512-AjC7UOZMvygrWTc2hKxTDvlMXEtbmA0IgJjmkhgmQQ3RkXrWR11xEagLGFGaNyaPnmg24oaIiaNPnEoftUhfXA==
 
+react-hook-inview@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/react-hook-inview/-/react-hook-inview-4.1.2.tgz#0d0ecdf6f2c0255842debe95f5567702fc2b4083"
+  integrity sha512-+NO6NKSYWEtc2vAWfaJMoeBVqt9NbncPygoCrSPJGLxu/UpiPWnsybX2lOfqQMrwIAXkQmrGTx0hnnRFXUfuzw==
+
 react-hotjar@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/react-hotjar/-/react-hotjar-2.0.2.tgz#3c98594e5708f59c6459e4df88338fa3bbca5e89"
