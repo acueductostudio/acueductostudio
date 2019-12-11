@@ -1,7 +1,6 @@
 export default function shade(p) {
   p.disableFriendlyErrors = true; // disables FES
-  var noctaves, c, LDShader;
-  var gl;
+  let noctaves, c, LDShader, gl;
   // let myFont;
 
   let x = 0;

@@ -69,7 +69,9 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
     <Toggler reveal={hasLoaded}>
       <a onClick={handleLink}>
         <English>
-          <span>switch language</span>
+          <span>
+            {locale.lang === "es" ? "switch language" : "cambiar idioma"}
+          </span>
           {locale.lang === "es" ? "english" : "español"}
         </English>
 

@@ -1,6 +1,6 @@
 export default function shade(p) {
-  var noctaves, c, LDShader;
-  var gl;
+  p.disableFriendlyErrors = true; // disables FES
+  var noctaves, c, LDShader, gl;
 
   let x = 0;
   let y = 0;
@@ -22,7 +22,6 @@ export default function shade(p) {
     p.mouseX = p.width;
     p.mouseY = 1;
     noctaves = 4.0;
-    c = [];
     c = [
       0,
       2,

@@ -9,7 +9,6 @@ import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoDanza from "static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
 import Laurel from "static/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
 import PosterLine from "static/assets/img/casestudies/ladanzadelasfieras/line.svg";
-import LogoF from "static/assets/img/casestudies/ladanzadelasfieras/logoF.svg";
 import Type_1 from "static/assets/img/casestudies/ladanzadelasfieras/type_1.svg";
 import Type_2 from "static/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
 import Type_3 from "static/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
@@ -243,9 +242,10 @@ function LaDanzaDeLasFieras(props) {
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
           <Stat>
-            <LogoF />
             <Fade>
-              <b>81%</b>
+              <span>
+                81<b>%</b>
+              </span>
             </Fade>
             <P>{t.fourth_section.stat}</P>
           </Stat>
@@ -577,7 +577,7 @@ const Stat = styled.div`
   display: flex;
   flex-direction: column;
   color: ${props => props.theme.colors.foreground};
-  b {
+  span {
     font-size: 8rem;
     font-weight: 200;
     display: block;
@@ -585,6 +585,9 @@ const Stat = styled.div`
     z-index: 1;
     line-height: 1.3;
     margin-top: -20px;
+    b {
+      color: ${fierasRed};
+    }
   }
   p {
     z-index: 1;

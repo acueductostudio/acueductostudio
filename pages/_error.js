@@ -12,6 +12,7 @@ export default function Error(props) {
       t.headerTitle + " " + (props.statusCode ? props.statusCode : "Client")
     );
   }, []);
+  console.log(props.lang);
   return (
     <PageClipper>
       <Head

@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import styled, { createGlobalStyle, css } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import Nav from "./Nav";
 import { useEffect, useState } from "react";
@@ -9,13 +9,9 @@ import { useRouter } from "next/router";
 import CookieMessage from "./CookieMessage";
 import ScrollIncentive from "./ScrollIncentive";
 import { initGA, logPageView } from "utils/analytics";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks
-} from "body-scroll-lock";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
+const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch2"), {
   ssr: false
 });
 
