@@ -1,145 +1,66 @@
 import styled from "styled-components";
-import { useRef, useMemo } from "react";
+import { useRef, useEffect } from "react";
 import Fade from "react-reveal/Fade";
-import { Canvas, useFrame, useThree } from "react-three-fiber";
+import { Canvas, useThree, useFrame, extend } from "react-three-fiber";
+import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
+import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass";
+import ShapeShiftShader from "./ShapeShiftShader";
 
-const noctaves = 5.4;
-const c = [
-  0,
-  2,
-  3,
-  4,
-  -1,
-  3,
-  4,
-  0,
-  -3,
-  3,
-  -2,
-  2,
-  1,
-  -2,
-  4,
-  -4,
-  2,
-  -2,
-  0,
-  -1,
-  -4,
-  1
-];
+extend({ EffectComposer, ShaderPass });
 
-const fragmentShader = `
-#ifdef GL_ES
-precision mediump float;
-#endif
+const Effects = React.memo(({ mouse }) => {
+  const { gl, size } = useThree();
+  const composer = useRef();
+  const background = useRef();
+  const easing = 0.05;
+  const actualMouse = useRef([0, 0]);
 
-uniform vec2 iResolution;
-uniform vec2 iMouse;
-uniform float iTime;
-uniform int noctaves;
-uniform float c[22];
-float mousefactor;
+  // useEffect(() => {
+  //   composer.current.setSize(size.width, size.height);
+  // }, [size]);
 
-float noise( in vec2 x )
-{
-	return sin(0.6*x.y)*sin(0.6*x.x);
-}
+  useFrame(() => {
+    composer.current.render();
+    background.current.uniforms.iTime.value += 0.01;
+    background.current.uniforms.iMouse.value = roundValues(
+      mouse.current[0],
+      mouse.current[1]
+    );
+  }, 1);
 
-const mat2 rot = mat2( 0.80,  0.6, -0.6,  0.8 );
-float fbm ( in vec2 _st) {
-    float v = 0.0;
-    float a = 0.55;
-    vec2 shift = 10.0*vec2(c[11],c[12]);
-    for (int i = 0; i < 12; ++i) { 
-		if(i>=noctaves)break;
-        v += a * noise(_st);
-        _st = rot*_st* 2.0 + shift;
-        a *= 0.6;
-    }
-    return v;
-}
+  // useFrame(
+  //   ({ gl }) =>
+  //     void ((gl.autoClear = true),
+  //     composer.current.render(),
+  //     (background.current.uniforms.iTime.value += 0.01),
+  //     (background.current.uniforms.iMouse.value = roundValues(
+  //       mouse.current[0],
+  //       mouse.current[1]
+  //     ))),
+  //   1
+  // );
 
-void main() {
-		vec2 mouse=iMouse/iResolution;
-    vec2 st =(-iResolution.xy+2.0*gl_FragCoord.xy)/iResolution.y;
-    vec3 color = vec3(0.035, 0.105, 0.827);
-    vec2 q = vec2(0.);
-    q.x = fbm( st+vec2(c[0],c[1]*0.03*iTime) ); 
-    q.y = fbm( st+vec2(c[2],c[3]*0.01*iTime) );
-    vec2 r = vec2(0.);
-
-r.x = fbm( st+ (3.0*mouse.x+3.4)*q+vec2(c[5],c[6]));
-r.y = fbm( st+ (2.0*mouse.y+4.5)*q*sin(.02*iTime)+vec2(c[2]*.05*iTime,c[9]));
-float f = fbm(st+c[10]*(r+length(q) ));
-color = smoothstep(vec3(0.0, 0.0, 0.0),vec3(1.0,1.0,1.0),color);
-color = mix(color,vec3(0.16,1.05*(1.0+cos(0.5+.2*iTime)),0.958),r.y+length(q));
-color = mix(color,vec3(0.1*sin(0.1*iTime),0.0,0.1*cos(0.13*iTime)),length(r+q));
-color = mix(color, vec3(0.921, 0.135, 0.184), dot(r,r) );
-color*=(1.5*f*f*f+1.2*f*f+2.3*f);
-    gl_FragColor = vec4(color,1.);
-}
-`;
-
-const vertexShader = `
-#ifdef GL_ES
-precision mediump float;
-#endif
-#extension GL_OES_standard_derivatives : enable
-
-attribute vec3 aPosition;
-attribute vec3 aNormal;
-attribute vec2 aTexCoord;
-attribute vec4 aVertexColor;
-
-varying vec3 var_vertPos;
-varying vec4 var_vertCol;
-varying vec3 var_vertNormal;
-varying vec2 var_vertTexCoord;
-
-uniform mat4 uModelViewMatrix;
-uniform mat4 uProjectionMatrix;
-uniform mat3 uNormalMatrix;
-
-void main() {
-gl_Position = uProjectionMatrix * uModelViewMatrix * vec4(aPosition, 1.001);
-
-var_vertPos      = aPosition;
-var_vertCol      = aVertexColor;
-var_vertNormal   = aNormal;
-var_vertTexCoord = aTexCoord;
-}
-`;
-
-function Thing() {
-  const ref = useRef();
-  const { viewport } = useThree();
-
-  const data = useMemo(
-    () => ({
-      uniforms: {
-        iResolution: [1000, 1000],
-        iTime: 10,
-        iMouse: [100, 100],
-        noctaves: noctaves,
-        c: c
-      },
-      fragmentShader,
-      vertexShader
-    }),
-    []
-  );
+  const roundValues = (targetX, targetY) => {
+    var dx = targetX - actualMouse.current[0];
+    var dy = targetY - actualMouse.current[1];
+    actualMouse.current[0] += dx * easing;
+    actualMouse.current[1] += dy * easing;
+    return [actualMouse.current[0], actualMouse.current[1]];
+  };
 
   return (
-    <mesh scale={[viewport.width, viewport.height, 1]}>
-      <planeGeometry attach="geometry" args={[1, 1]} />
-      {/* <meshBasicMaterial attach="material" color={"pink"} depthTest={false} /> */}
-      <shaderMaterial attach="material" {...data} depthTest={false} />
-    </mesh>
+    <effectComposer ref={composer} args={[gl]}>
+      <shaderPass
+        attachArray="passes"
+        args={[ShapeShiftShader]}
+        ref={background}
+        uniforms-iResolution-value={[size.width / 2, size.height / 2]}
+      />
+    </effectComposer>
   );
-}
+});
 
-const HomeSketch = ({ hide }) => {
+const HomeSketch = ({ hide, mouse }) => {
   return (
     <SketchContainer>
       {hide ? (
@@ -148,14 +69,14 @@ const HomeSketch = ({ hide }) => {
         </Fade>
       ) : (
         <Canvas>
-          <Thing />
+          <Effects mouse={mouse} />
         </Canvas>
       )}
     </SketchContainer>
   );
 };
 
-export default React.memo(HomeSketch);
+export default HomeSketch;
 
 const SketchContainer = styled.div`
   width: 100%;

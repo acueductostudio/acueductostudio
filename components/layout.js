@@ -1,8 +1,8 @@
+import { useEffect, useState, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";
 import Nav from "./Nav";
-import { useEffect, useState } from "react";
 import LanguageToggler from "./LanguageToggler";
 import NavTrigger from "./NavTrigger";
 import { useRouter } from "next/router";
@@ -11,7 +11,7 @@ import ScrollIncentive from "./ScrollIncentive";
 import { initGA, logPageView } from "utils/analytics";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch2"), {
+const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
   ssr: false
 });
 
@@ -30,6 +30,23 @@ export default ({
   const [showArrow, setShowArrow] = useState(false);
   const [showConsentMessage, setShowConsentMessage] = useState(true);
   const router = useRouter();
+  const mouse = useRef([1200, 1]);
+
+  const onMouseMove = useCallback(
+    ({ clientX: x, clientY: y }) =>
+      (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]),
+    [mouse.current]
+  );
+
+  const onTouchMove = useCallback(
+    e => {
+      const touch = e.changedTouches[0];
+      var x = touch.clientX;
+      var y = touch.clientY;
+      mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2];
+    },
+    [mouse.current]
+  );
 
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
@@ -93,8 +110,12 @@ export default ({
 
   return (
     <>
-      <PageWrapper id="Wrapper">
-        {showSketch && <HomeSketch hide={false} />}
+      <PageWrapper
+        id="Wrapper"
+        onMouseMove={showSketch ? onMouseMove : undefined}
+        onTouchMove={showSketch ? onTouchMove : undefined}
+      >
+        {showSketch && <HomeSketch hide={false} mouse={mouse} />}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}
