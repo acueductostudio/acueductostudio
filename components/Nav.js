@@ -164,15 +164,15 @@ const BottomNav = styled.div`
   color: ${props => props.theme.colors.foreground_low};
   font-weight: 100;
   max-height: 120px;
-  @media (max-width: 1300px) {
+  @media (max-width: 1400px) {
     ${Social} {
       grid-column: 4 / span 4;
     }
   }
-  @media (max-width: 1100px) {
+  @media (max-width: 1250px) {
     font-size: 1.5rem;
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1100px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -260,7 +260,7 @@ const NavList = styled.nav`
       }
     }
   }
-  @media (max-width: 1300px) {
+  @media (max-width: 1400px) {
     grid-column-start: 4;
   }
   @media (max-width: 600px), (max-height: 450px) {

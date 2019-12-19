@@ -115,7 +115,7 @@ export default ({
         onMouseMove={showSketch ? onMouseMove : undefined}
         onTouchMove={showSketch ? onTouchMove : undefined}
       >
-        {showSketch && <HomeSketch hide={false} mouse={mouse} />}
+        {hasLoaded && showSketch && <HomeSketch hide={false} mouse={mouse} />}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}
@@ -136,7 +136,10 @@ export default ({
           closeNav={closeNav}
           isOpen={isOpen}
         />
-        {React.cloneElement(children, { setTitle: setTitle })}
+        {React.cloneElement(children, {
+          setTitle: setTitle,
+          hasLoaded: hasLoaded
+        })}
 
         <LanguageToggler
           locale={locale}

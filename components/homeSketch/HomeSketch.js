@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Fade from "react-reveal/Fade";
 import { Canvas, useThree, useFrame, extend } from "react-three-fiber";
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
-import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass";
+import { EffectComposer } from "three";
+import { ShaderPass } from "three";
 import ShapeShiftShader from "./ShapeShiftShader";
 
 extend({ EffectComposer, ShaderPass });
@@ -15,10 +15,6 @@ const Effects = React.memo(({ mouse }) => {
   const easing = 0.05;
   const actualMouse = useRef([0, 0]);
 
-  // useEffect(() => {
-  //   composer.current.setSize(size.width, size.height);
-  // }, [size]);
-
   useFrame(() => {
     composer.current.render();
     background.current.uniforms.iTime.value += 0.01;
@@ -27,18 +23,6 @@ const Effects = React.memo(({ mouse }) => {
       mouse.current[1]
     );
   }, 1);
-
-  // useFrame(
-  //   ({ gl }) =>
-  //     void ((gl.autoClear = true),
-  //     composer.current.render(),
-  //     (background.current.uniforms.iTime.value += 0.01),
-  //     (background.current.uniforms.iMouse.value = roundValues(
-  //       mouse.current[0],
-  //       mouse.current[1]
-  //     ))),
-  //   1
-  // );
 
   const roundValues = (targetX, targetY) => {
     var dx = targetX - actualMouse.current[0];

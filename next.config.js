@@ -43,6 +43,7 @@ const nextConfig = {
       ]
     });
     config.resolve.modules.push(path.resolve("./"));
+    config.resolve.alias["three$"] = path.resolve("./utils/three-exports.js");
 
     return config;
   }

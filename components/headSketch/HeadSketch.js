@@ -1,18 +1,47 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import head from "./head";
-import P5Wrapper from "utils/P5Wrapper";
+import { Suspense, useRef } from "react";
+import { Canvas, useLoader, useFrame } from "react-three-fiber";
+import { GLTFLoader } from "three";
+
+function Model(props) {
+  const ref = useRef();
+  const gltf = useLoader(GLTFLoader, "/static/assets/3d/headexported.glb");
+
+  useFrame(() => (ref.current.rotation.y += 0.005));
+
+  return (
+    <scene ref={ref} {...props}>
+      <mesh rotation={[1.5, 0, 0]} scale={[0.14, 0.14, 0.14]}>
+        <bufferGeometry attach="geometry" {...gltf.__$[4].geometry} />
+        <meshStandardMaterial
+          precision={"lowp"}
+          attach="material"
+          roughness={1}
+          metalness={0}
+          emissive={"#1A1A1A"}
+          color={"#1A1A1A"}
+        />
+      </mesh>
+    </scene>
+  );
+}
 
 export default function HeadSketch(props) {
   return (
     <Fade>
       <SketchContainer>
-        <P5Wrapper
-          sketch={head}
-          second={props.second}
-          rotationStart={props.rotationStart}
-          invertRotation={props.invertRotation}
-        />
+        <Canvas camera={{ position: [1, 0, 5] }} raycaster={false}>
+          <ambientLight intensity={0} color={[8, 8, 8]} />
+          <pointLight
+            position={[100, 0, 10]}
+            color={props.second ? "#ED0924" : "#1736BF"}
+            intensity={3}
+          />
+          <Suspense fallback={null}>
+            <Model />
+          </Suspense>
+        </Canvas>
       </SketchContainer>
     </Fade>
   );

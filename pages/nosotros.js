@@ -38,7 +38,7 @@ function About(props) {
       />
       <PinnedSection t={t}>
         <Person>
-          <HeadSketch />
+          {props.hasLoaded && <HeadSketch />}
           <Fade>
             <h4>{t.team.rodrigo.name}</h4>
             <span>{t.team.rodrigo.position}</span>
@@ -46,7 +46,9 @@ function About(props) {
           <P>{t.team.rodrigo.bio}</P>
         </Person>
         <Person>
-          <HeadSketch second rotationStart={50} invertRotation />
+          {props.hasLoaded && (
+            <HeadSketch second rotationStart={50} invertRotation />
+          )}
           <Fade>
             <h4>{t.team.artemio.name}</h4>
             <span>{t.team.artemio.position}</span>
