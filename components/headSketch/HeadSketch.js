@@ -4,42 +4,66 @@ import { Suspense, useRef } from "react";
 import { Canvas, useLoader, useFrame } from "react-three-fiber";
 import { GLTFLoader } from "three";
 
-function Model(props) {
+const Model = React.memo(props => {
   const ref = useRef();
+  const light = useRef();
   const gltf = useLoader(GLTFLoader, "/static/assets/3d/headexported.glb");
+  const actualMouse = useRef([0, 0]);
+  const easing = 0.05;
 
-  useFrame(() => (ref.current.rotation.y += 0.005));
+  useFrame(() => {
+    props.second
+      ? (ref.current.rotation.y -= 0.005)
+      : (ref.current.rotation.y += 0.005);
+    light.current.position.x = roundValue(props.mouse.current[0] / 10, 0);
+    light.current.position.y = roundValue(-props.mouse.current[1] / 10, 1);
+  }, 0);
+
+  const roundValue = (targetX, index) => {
+    var dx = targetX - actualMouse.current[index];
+    actualMouse.current[index] += dx * easing;
+    return actualMouse.current[index];
+  };
 
   return (
-    <scene ref={ref} {...props}>
-      <mesh rotation={[1.5, 0, 0]} scale={[0.14, 0.14, 0.14]}>
-        <bufferGeometry attach="geometry" {...gltf.__$[4].geometry} />
-        <meshStandardMaterial
-          precision={"lowp"}
-          attach="material"
-          roughness={1}
-          metalness={0}
-          emissive={"#1A1A1A"}
-          color={"#1A1A1A"}
-        />
-      </mesh>
-    </scene>
+    <>
+      <pointLight
+        ref={light}
+        position={[0, 0, 10]}
+        color={props.second ? "#ED0924" : "#1736BF"}
+        intensity={props.second ? 3 : 5}
+      />
+      <scene ref={ref} {...props}>
+        <mesh rotation={[1.5, 0, 0]} scale={[0.14, 0.14, 0.14]}>
+          <bufferGeometry attach="geometry" {...gltf.__$[4].geometry} />
+          <meshStandardMaterial
+            precision={"lowp"}
+            attach="material"
+            roughness={1}
+            metalness={0}
+            emissive={"#060809"}
+            color={"#1A1A1A"}
+          />
+        </mesh>
+      </scene>
+    </>
   );
-}
+});
 
 export default function HeadSketch(props) {
   return (
     <Fade>
       <SketchContainer>
-        <Canvas camera={{ position: [1, 0, 5] }} raycaster={false}>
-          <ambientLight intensity={0} color={[8, 8, 8]} />
-          <pointLight
-            position={[100, 0, 10]}
-            color={props.second ? "#ED0924" : "#1736BF"}
-            intensity={3}
+        <Canvas camera={{ position: [0, -0.1, 5] }} raycaster={false}>
+          <ambientLight intensity={1} color={[8, 8, 8]} />
+          <directionalLight
+            intensity={1}
+            // color={props.second ? "#190002" : "#1736BF"}
+            color={props.second ? "#1736BF" : "#690008"}
+            position={[-1500, -1500, 200]}
           />
           <Suspense fallback={null}>
-            <Model />
+            <Model second={props.second} mouse={props.mouse} />
           </Suspense>
         </Canvas>
       </SketchContainer>
@@ -52,10 +76,11 @@ const SketchContainer = styled.div`
   height: 400px;
   margin-bottom: 10%;
   position: relative;
-  left: -10%;
+  left: -30%;
   z-index: -1;
   @media (max-width: 1250px) {
     margin-bottom: 8%;
+    left: -20%;
   }
   @media (max-width: 1000px) {
     margin-bottom: 7%;

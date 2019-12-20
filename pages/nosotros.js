@@ -38,7 +38,7 @@ function About(props) {
       />
       <PinnedSection t={t}>
         <Person>
-          {props.hasLoaded && <HeadSketch />}
+          {props.hasLoaded && <HeadSketch mouse={props.mouse} />}
           <Fade>
             <h4>{t.team.rodrigo.name}</h4>
             <span>{t.team.rodrigo.position}</span>
@@ -47,7 +47,12 @@ function About(props) {
         </Person>
         <Person>
           {props.hasLoaded && (
-            <HeadSketch second rotationStart={50} invertRotation />
+            <HeadSketch
+              second
+              rotationStart={50}
+              invertRotation
+              mouse={props.mouse}
+            />
           )}
           <Fade>
             <h4>{t.team.artemio.name}</h4>

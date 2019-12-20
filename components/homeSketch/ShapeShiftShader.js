@@ -2,8 +2,8 @@ export default {
   uniforms: {
     iResolution: { value: [null, null] },
     iTime: { value: null },
-    iMouse: { value: [2100, 1100] },
-    noctaves: { value: 5.4 },
+    iMouse: { value: [null, null] },
+    noctaves: { value: null },
     c: {
       value: [
         0,
@@ -98,7 +98,7 @@ export default {
     "vec2 r = vec2(0.);",
 
     "r.x = fbm( st+ (3.0*mouse.x+3.4)*q+vec2(c[5],c[6]));",
-    "r.y = fbm( st+ (2.0*mouse.y+4.5)*q*sin(.02*iTime)+vec2(c[2]*.05*iTime,c[9]));",
+    "r.y = fbm( st+ (6.0*mouse.y+4.5)*q*sin(.02*iTime)+vec2(c[2]*.05*iTime,c[9]));",
     "float f = fbm(st+c[10]*(r+length(q) ));",
     "color = smoothstep(vec3(0.0, 0.0, 0.0),vec3(1.0,1.0,1.0),color);",
     "color = mix(color,vec3(0.16,1.05*(1.0+cos(0.5+.2*iTime)),0.958),r.y+length(q));",

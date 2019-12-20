@@ -39,6 +39,7 @@ const Effects = React.memo(({ mouse }) => {
         args={[ShapeShiftShader]}
         ref={background}
         uniforms-iResolution-value={[size.width / 2, size.height / 2]}
+        uniforms-noctaves-value={window.innerWidth > 600 ? 5.4 : 4}
       />
     </effectComposer>
   );

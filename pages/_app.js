@@ -61,12 +61,6 @@ class MyApp extends App {
   };
 
   componentDidMount() {
-    // Check for cookie language !messes with routing
-    // var _C = Cookies.get("chosenLang");
-    // if (_C !== undefined) {
-    //   this.toggleLang(_C);
-    // }
-
     // Disable scroll
     const targetElement = document.querySelector("#contact"); //dummy
     disableBodyScroll(targetElement);
@@ -79,7 +73,7 @@ class MyApp extends App {
       if (bordered) {
         setTimeout(() => {
           // transition out
-          bordered.classList.add("hidden"); //hide after //TODO: clean bordered
+          bordered.classList.add("hidden");
           logo.style.opacity = "0";
           bordered.style.transform = "scale(1)";
           bordered.style.borderWidth = "2px";

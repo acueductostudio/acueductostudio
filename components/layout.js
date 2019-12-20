@@ -26,6 +26,7 @@ export default ({
 }) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
+  const [isAbout, setIsAbout] = useState(false);
   const [headerTitle, setTitle] = useState("");
   const [showArrow, setShowArrow] = useState(false);
   const [showConsentMessage, setShowConsentMessage] = useState(true);
@@ -57,9 +58,18 @@ export default ({
     if (router.route === "/" || router.route === "/en") {
       setShowSketch(true);
       setShowArrow(true);
+      setIsAbout(false);
+      console.log("is index");
+    } else if (router.route === "/nosotros" || router.route === "/en/about") {
+      setIsAbout(true);
+      setShowSketch(false);
+      setShowArrow(false);
+      console.log("is about page");
     } else {
       setShowSketch(false);
       setShowArrow(false);
+      setIsAbout(false);
+      console.log("is another page");
     }
   }, [router.route]);
 
@@ -112,8 +122,8 @@ export default ({
     <>
       <PageWrapper
         id="Wrapper"
-        onMouseMove={showSketch ? onMouseMove : undefined}
-        onTouchMove={showSketch ? onTouchMove : undefined}
+        onMouseMove={showSketch | isAbout ? onMouseMove : undefined}
+        onTouchMove={showSketch | isAbout ? onTouchMove : undefined}
       >
         {hasLoaded && showSketch && <HomeSketch hide={false} mouse={mouse} />}
         <Border />
@@ -138,7 +148,8 @@ export default ({
         />
         {React.cloneElement(children, {
           setTitle: setTitle,
-          hasLoaded: hasLoaded
+          hasLoaded: hasLoaded,
+          mouse: mouse
         })}
 
         <LanguageToggler
@@ -193,6 +204,8 @@ const BodyOverflow = createGlobalStyle`
 `;
 
 const PageWrapper = styled.div`
+  top: -3px;
+  position: relative;
   width: 100%;
   flex-direction: column;
   display: flex;
