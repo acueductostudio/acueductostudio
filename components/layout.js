@@ -55,21 +55,19 @@ export default ({
       window.GA_INITIALIZED = true;
     }
     logPageView();
+    mouse.current[0] = window.innerWidth > 600 ? 1200 : 300;
     if (router.route === "/" || router.route === "/en") {
       setShowSketch(true);
       setShowArrow(true);
       setIsAbout(false);
-      console.log("is index");
     } else if (router.route === "/nosotros" || router.route === "/en/about") {
       setIsAbout(true);
       setShowSketch(false);
       setShowArrow(false);
-      console.log("is about page");
     } else {
       setShowSketch(false);
       setShowArrow(false);
       setIsAbout(false);
-      console.log("is another page");
     }
   }, [router.route]);
 

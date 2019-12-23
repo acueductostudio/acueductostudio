@@ -83,7 +83,7 @@ class MyApp extends App {
             revealer.style.pointerEvents = "none";
             this.setState(
               { hasLoaded: true },
-              () => console.log("has loaded set to true"),
+              () => console.log("Page hasLoaded"),
               enableBodyScroll(targetElement)
             );
           }, 500);
