@@ -93,7 +93,7 @@ const Person = styled.div`
     margin-bottom: 3%;
   }
   span {
-    color: ${props => props.theme.colors.accent};
+    color: ${props => props.theme.colors.accent_smalltext};
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 3.5px;

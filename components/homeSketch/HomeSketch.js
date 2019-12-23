@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useRef } from "react";
-import Fade from "react-reveal/Fade";
 import { Canvas, useThree, useFrame, extend } from "react-three-fiber";
 import { EffectComposer } from "three";
 import { ShaderPass } from "three";
@@ -49,9 +48,7 @@ const HomeSketch = ({ hide, mouse }) => {
   return (
     <SketchContainer>
       {hide ? (
-        <Fade>
-          <Background />
-        </Fade>
+        <Background />
       ) : (
         <Canvas>
           <Effects mouse={mouse} />

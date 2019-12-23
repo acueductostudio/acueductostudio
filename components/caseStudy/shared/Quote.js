@@ -32,7 +32,7 @@ const Author = styled.p`
 `;
 const Label = styled.p`
   font-size: 1.1rem;
-  opacity: 0.5;
+  opacity: 0.6;
   letter-spacing: 1.7px;
   margin: 5px 0 0 25px;
   text-transform: uppercase;

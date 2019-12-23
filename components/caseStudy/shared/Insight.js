@@ -38,7 +38,7 @@ const InsightWrapper = styled.div`
     position: relative;
     span {
       font-size: 1.5rem;
-      color: ${props => (props.color ? props.color : "#019ee3")};
+      color: ${props => (props.color ? props.color : "#008dc9")};
       display: block;
       position: absolute;
       bottom: 0;
