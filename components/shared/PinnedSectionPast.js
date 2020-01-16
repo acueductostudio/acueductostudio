@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { H1, P } from "components/shared/Dangerously";
 import BorderLink from "components/shared/BorderedLink";
 
-const PinnedSection = ({ title, p, children, className }) => (
+const PinnedSection = ({ t, children, className }) => (
   <Pinned className={className}>
-    <H1>{title}</H1>
+    <H1>{t.intro.title}</H1>
+    <P>{t.intro.p}</P>
     <ScrollDown>{children}</ScrollDown>
   </Pinned>
 );
@@ -14,7 +15,6 @@ const ScrollDown = styled.div`
   grid-column: 7 / span 5;
   display: flex;
   flex-direction: column;
-  position: relative;
   p {
     margin-top: 0;
     &:first-of-type {
@@ -36,7 +36,6 @@ const Pinned = styled.div`
   h1 {
     grid-column: 2 / span 5;
     position: sticky;
-    max-height: 300px;
     top: 17%;
     letter-spacing: 0px;
     line-height: 100%;

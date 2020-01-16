@@ -36,7 +36,8 @@ function About(props) {
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
       />
-      <PinnedSection t={t}>
+      <PinnedSection title={t.intro.title}>
+        <P>{t.intro.p}</P>
         <Person>
           {props.hasLoaded && <HeadSketch mouse={props.mouse} />}
           <Fade>

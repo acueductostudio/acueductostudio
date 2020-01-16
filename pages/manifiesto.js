@@ -35,7 +35,7 @@ function Manifesto(props) {
         en_canonical={"https://acueducto.studio/en/manifesto"}
         lang={props.lang}
       />
-      <PinnedSection t={t}>
+      <PinnedSection t={t} title={t.intro.title} p={t.intro.p}>
         <ol>{beliefs}</ol>
       </PinnedSection>
       <TitleSection title={t.cases.title} text={t.cases.p} borderTop />

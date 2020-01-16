@@ -360,6 +360,38 @@
       "linktext": "Lee nuestro"
     }
   },
+  "pitch_page": {
+    "page_title": "Nuestro pitch - Déjanos convencerte, es una inversión inteligente",
+    "meta_description": "Mira nomás que bien",
+    "headerTitle": "Pitch",
+    "intro": {
+      "title": "sin más, nuestro pitch",
+      "p0": "Somos un estudio de diseño estratégico y transformación digital en CDMX. En este documento explicamos a detalle cómo generamos valor a empresas que buscan ser más competitivas mediante herramientas digitales.",
+      "subtitle1": "áreas de innovación",
+      "li1": [
+        "Experiencia de cliente",
+        "Operaciones de negocio",
+        "Modelos de Negocios digitales"
+      ],
+      "subtitle2": "empresas modelo que implementan estas soluciones:",
+      "subtitle3": "diseño estratégico",
+      "p3": "El Diseño Estratégico aplica principios de diseño orientados a potenciar las cualidades innovadoras y competitivas de una organización. Analiza tendencias externas, internas e información/data que permiten tomar decisiones de diseño basadas en hechos más que en estética o intuición. Es una forma efectiva de conectar innovación, investigación, gestión y diseño.",
+      "subtitle4": "tranformación digital",
+      "p4": "Transformación Digital refiere a adoptar procesos y herramientas digitales para alcanzar metas estratégicas de negocios. Es un proceso complejo y multifacético que representa un cambio cultural masivo en los espacios de trabajo y decisiones que afectan todas las áreas de una organización.s"
+    },
+    "second_section": {
+      "title": "buscamos socios,</br> no clientes",
+      "p": "En Acueducto creemos firmemente en las asociaciones. A diferencia de la relación cliente-agencia que domina el mercado, asociarnos nos permite involucrarnos en la estructura de cada proyecto siguiendo nuestro proceso, sobre el que iteramos constantemente."
+    },
+    "process_section": {
+      "title": "para seguir un proceso único",
+      "p": "Nuestro proceso es el recurso más valioso con el que contamos y recargamos en él cada proyecto que llevamos a cabo. Está diseñado para implementarse en cualquier industria y para iterar sobre él. Así, cada paso que damos nos da la seguridad para dar el siguiente."
+    },
+    "tools_section": {
+      "title": "con las mejores herramientas",
+      "p": "Cada proyecto es único y requiere de un trato personalizado, por eso analizamos minuciosamente cada negocio y elegimos las herramientas adecuadas para su desarrollo.</br></br>Estas son algunas de nuestras apuestas tecnológicas."
+    }
+  },
   "work_page": {
     "page_title": "Nuestro trabajo - Construyamos productos increíbles, juntos",
     "meta_description": "Adéntrate en nuestro trabajo y mira lo que puede lograr un desarrollo innovador con una estrategia sólida.",

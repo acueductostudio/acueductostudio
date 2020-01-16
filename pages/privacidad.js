@@ -23,8 +23,9 @@ export default function Privacy(props) {
         en_canonical={"https://acueducto.studio/en/privacy"}
         lang={props.lang}
       ></Head>
-      <SimplePinnedSection t={t}>
+      <SimplePinnedSection title={t.intro.title}>
         <Fade>
+          <p dangerouslySetInnerHTML={createMarkup(t.intro.p)} />
           <h2>{b.subtitle1}</h2>
           <p>{b.p1}</p>
           <h2>{b.subtitle2}</h2>

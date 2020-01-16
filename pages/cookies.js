@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import PageClipper from "components/PageClipper";
 import SimplePinnedSection from "components/shared/SimplePinnedSection";
 import createMarkup from "utils/createMarkup";
+import { P } from "components/shared/Dangerously";
 import ContactFooter from "components/ContactFooter";
 
 export default function Cookies(props) {
@@ -23,8 +24,9 @@ export default function Cookies(props) {
         en_canonical={"https://acueducto.studio/en/cookies"}
         lang={props.lang}
       />
-      <SimplePinnedSection t={t}>
+      <SimplePinnedSection title={t.intro.title}>
         <Fade>
+          <p dangerouslySetInnerHTML={createMarkup(t.intro.p)} />
           <p>
             {b.p0}
             <Link
