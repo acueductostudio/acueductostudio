@@ -4,12 +4,12 @@ import TitleSection from "components/shared/TitleSection";
 import Fade from "react-reveal/Fade";
 import LangContext from "utils/LangContext";
 import createMarkup from "utils/createMarkup";
-import i1 from "static/assets/img/layout/steps/discover.svg";
-import i2 from "static/assets/img/layout/steps/envision.svg";
-import i3 from "static/assets/img/layout/steps/buildstory.svg";
-import i4 from "static/assets/img/layout/steps/craft.svg";
-import i5 from "static/assets/img/layout/steps/launch.svg";
-import i6 from "static/assets/img/layout/steps/review.svg";
+import i1 from "static/assets/img/layout/icons/discover.svg";
+import i2 from "static/assets/img/layout/icons/envision.svg";
+import i3 from "static/assets/img/layout/icons/buildstory.svg";
+import i4 from "static/assets/img/layout/icons/craft.svg";
+import i5 from "static/assets/img/layout/icons/launch.svg";
+import i6 from "static/assets/img/layout/icons/review.svg";
 
 const iconArray = [i1, i2, i3, i4, i5, i6];
 

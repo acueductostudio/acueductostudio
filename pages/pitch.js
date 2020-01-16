@@ -6,6 +6,9 @@ import PinnedSection from "components/shared/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
+import DigitalTransformation from "static/assets/img/layout/icons/digitaltransformation.svg";
+import StrategicDesign from "static/assets/img/layout/icons/strategicdesign.svg";
+import Logo from "static/assets/img/layout/logo.svg";
 import Tesla from "static/assets/img/layout/logos/tesla.svg";
 import Nike from "static/assets/img/layout/logos/nike.svg";
 import Burberry from "static/assets/img/layout/logos/burberry.svg";
@@ -31,12 +34,17 @@ export default function Work(props) {
         en_canonical={"https://acueducto.studio/en/pitch"}
         lang={props.lang}
       />
-      <PinnedSection title={t.intro.title} p={t.intro.p0}>
+      <StyledPinnedSection title={t.intro.title} p={t.intro.p0}>
+        <LogoFull />
         <P>{t.intro.p0}</P>
-        <h5>{t.intro.subtitle1}</h5>
+        <h3>{t.intro.subtitle1}</h3>
+        <StyledList>
+          {t.intro.li1.map((item, index) => (
+            <li key={"li1" + index}>{item}</li>
+          ))}
+        </StyledList>
         <P>{t.intro.p1}</P>
-        <h5>{t.intro.subtitle2}</h5>
-        <P>{t.intro.p2}</P>
+        <h3>{t.intro.subtitle2}</h3>
         <BusinessLogoList>
           <li>
             <Tesla />
@@ -57,11 +65,17 @@ export default function Work(props) {
             <Hasbro />
           </li>
         </BusinessLogoList>
-        <h5>{t.intro.subtitle3}</h5>
+        <IconContainer>
+          <StrategicDesign />
+        </IconContainer>
+        <h2>{t.intro.subtitle3}</h2>
         <P>{t.intro.p3}</P>
-        <h5>{t.intro.subtitle4}</h5>
+        <IconContainer>
+          <DigitalTransformation />
+        </IconContainer>
+        <h2>{t.intro.subtitle4}</h2>
         <P>{t.intro.p4}</P>
-      </PinnedSection>
+      </StyledPinnedSection>
       <TitleSection
         title={t.second_section.title}
         text={t.second_section.p}
@@ -181,6 +195,67 @@ const BusinessLogoList = styled.ul`
   display: grid;
   position: relative;
   grid-gap: 2.2rem;
+`;
+
+const LogoFull = styled(Logo)`
+  width: 100%;
+  height: auto;
+  max-width: 380px;
+  padding-bottom: 3%;
+`;
+
+const StyledPinnedSection = styled(PinnedSection)`
+  h2 {
+    font-size: 2.5rem;
+    opacity: 1;
+    line-height: 125%;
+    margin-bottom: 16px;
+    margin-top: 3%;
+    font-weight: 200;
+    transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+  h3 {
+    font-size: 3.2rem;
+    line-height: 125%;
+    font-weight: 100;
+    margin: 4% 0 3.5%;
+  }
+`;
+
+const StyledList = styled.ul`
+  list-style: none;
+  color: ${props => props.theme.colors.foreground_low};
+  li {
+    &:before {
+      content: "– ";
+      color: ${props => props.theme.colors.accent};
+    }
+  }
+`;
+
+const IconContainer = styled.div`
+  svg {
+    max-width: 100px;
+    margin-top: 10%;
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    * {
+      vector-effect: non-scaling-stroke;
+      stroke-width: ${props => props.theme.stroke};
+      stroke: ${props => props.theme.colors.foreground};
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+    .accent,
+    .accentdisco,
+    .accentcubo,
+    .accentrock {
+      stroke: ${props => props.theme.colors.accent};
+      will-change: transform;
+    }
+  }
 `;
 
 const PageClipperPadded = styled(PageClipper)`
