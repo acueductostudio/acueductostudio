@@ -34,7 +34,7 @@
             "copywriting"
           ],
           "video": "lddlf_intro.mp4",
-          "title": "<b>Acto I</b> <br/>El primer largometraje<br/>de Aly",
+          "title": "<b>Acto I</b><br/>El primer largometraje<br/>de Aly",
           "p": "Alayde, mejor conocida como Aly, es una cineasta y directora creativa fundadora de la casa productora Antítesis. Impulsada por la idea de que jóvenes artistas pueden generar un impacto innovador en la industria del cine, unió esfuerzos con la casa productora Bala Films para hacer La Danza de las Fieras (LDDLF).<br/><br/>LDDLF es un largometraje que concientiza y genera reflexiones, debates y acciones para prevenir la trata de personas. Construida por seis cortometrajes, cada uno aborda una dimensión diferente del tema. La película recibió cinco premios internacionales de cine en categorías como Mejor Película y fue seleccionada en 11 festivales de cine en México y el mundo.",
           "stats": [
             {
@@ -377,19 +377,66 @@
       "subtitle3": "diseño estratégico",
       "p3": "El Diseño Estratégico aplica principios de diseño orientados a potenciar las cualidades innovadoras y competitivas de una organización. Analiza tendencias externas, internas e información/data que permiten tomar decisiones de diseño basadas en hechos más que en estética o intuición. Es una forma efectiva de conectar innovación, investigación, gestión y diseño.",
       "subtitle4": "tranformación digital",
-      "p4": "La Transformación Digital refiere a adoptar procesos y herramientas digitales para alcanzar metas estratégicas de negocios. Es un proceso complejo y multifacético que representa un cambio cultural masivo en los espacios de trabajo y decisiones que afectan todas las áreas de una organización.s"
+      "p4": "La Transformación Digital refiere a adoptar procesos y herramientas digitales para alcanzar metas estratégicas de negocios. Es un proceso complejo y multifacético que representa un cambio cultural masivo en los espacios de trabajo y decisiones que afectan todas las áreas de una organización."
     },
     "second_section": {
-      "title": "buscamos socios,</br> no clientes",
+      "title": "buscamos socios,<br/> no clientes",
       "p": "En Acueducto creemos firmemente en las asociaciones. A diferencia de la relación cliente-agencia que domina el mercado, asociarnos nos permite involucrarnos en la estructura de cada proyecto siguiendo nuestro proceso, sobre el que iteramos constantemente."
     },
     "process_section": {
       "title": "para seguir un proceso único",
-      "p": "Nuestro proceso es el recurso más valioso con el que contamos y recargamos en él cada proyecto que llevamos a cabo. Está diseñado para implementarse en cualquier industria y para iterar sobre él. Así, cada paso que damos nos da la seguridad para dar el siguiente."
+      "p": "Nuestro proceso es el recurso más valioso con el que contamos y recargamos en él cada proyecto que llevamos a cabo. Está diseñado para implementarse en cualquier industria y para iterar sobre él. Así, cada paso que damos nos da la seguridad para dar el siguiente.",
+      "steps": [
+        {
+          "title": "descubre",
+          "p": "¿Dónde estamos parados? Se investiga y analiza el contexto del proyecto, su audiencia y sus necesidades.<br/><br/>Evaluamos:",
+          "li": ["Modelos de negocios", "Objetivos", "Identidad", "Mercado"],
+          "p2": "Hacemos en conjunto juntas creativas, entrevistas internas, investigación de campo y de escritorio."
+        },
+        {
+          "title": "visualiza",
+          "p": "¿Hacia dónde va el proyecto? Se definen y replantean los objetivos, orientación y enfoque.<br/><br/>Analizamos:",
+          "li": [
+            "Agregar valor",
+            "Generar diferenciador",
+            "Desarrollar ventaja estratégica y competitiva"
+          ],
+          "p2": "Analizamos el costo-beneficio del proyecto, su entorno de mercado, riesgos y viabilidad financiera."
+        },
+        {
+          "title": "narra",
+          "p": "¿Cómo empatizamos con la audiencia? Se conceptualizan mensajes, priorizan acciones y co-crean narrativas con nuestros socios.<br/><br/>Definimos:",
+          "li": [
+            "Indicadores de progreso (KPI's)",
+            "Brief creativo y storytelling",
+            "Identidad",
+            "Calendario"
+          ],
+          "p2": "Acordamos las estrategias que definirán el rumbo del proyecto, calendarizamos objetivos y definimos entregables."
+        },
+        {
+          "title": "diseña, programa y ensambla",
+          "p": "Suficiente planeación, en esta etapa se desarrollan los contenidos y aplicaciones del proyecto.</br></br>Desarrollamos:",
+          "li": ["Materiales y diseños", "Prototipos", "Copywriting", "Código"],
+          "p2": "Ponemos manos a la obra para producir  los entregables establecidos para cada área del proyecto."
+        },
+        {
+          "title": "lanza",
+          "p": "Todo se construyó para este momento. Se administra el cambio, impacto y lanzamiento del proyecto.</br></br>Documentamos y hacemos:",
+          "li": ["Promoción", "Advertising", "Community Management"],
+          "p2": "Ejecutamos las estrategias de comunicación, monitoreamos su desempeño y documentamos su impacto.s"
+        },
+        {
+          "title": "evalúa",
+          "p": "Se analiza la información recopilada sobre el proyecto durante todo su desarrollo.</br></br>Entregamos:",
+          "li": ["Reporte de desempeño ", "Siguientes pasos"],
+          "p2": "Evaluamos tanto el proyecto como nuestro proceso y nos preparamos para dar el siguiente paso."
+        }
+      ]
     },
     "tools_section": {
       "title": "con las mejores herramientas",
-      "p": "Cada proyecto es único y requiere de un trato personalizado, por eso analizamos minuciosamente cada negocio y elegimos las herramientas adecuadas para su desarrollo.</br></br>Estas son algunas de nuestras apuestas tecnológicas."
+      "p": "Cada proyecto es único y requiere de un trato personalizado, por eso analizamos minuciosamente cada negocio y elegimos las herramientas adecuadas para su desarrollo.<br/><br/>Estas son algunas de nuestras apuestas tecnológicas."
     }
   },
   "work_page": {

@@ -132,9 +132,6 @@ const Step = styled.div`
     svg {
       max-width: 70px;
     }
-    p {
-      /* font-size: 1.2rem; */
-    }
   }
 `;
 
