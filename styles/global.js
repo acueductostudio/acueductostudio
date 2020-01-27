@@ -126,7 +126,15 @@ const styles = `
     font-weight: 200;
     font-style: normal;
   }
-  
+  @font-face {
+    font-family: "Wide";
+    font-display: block;
+    src: url("/static/assets/font/400.woff2") format("woff2"),
+      url("/static/assets/font/400.woff") format("woff");
+    font-weight: 150;
+    font-style: normal;
+  }
+
   @font-face {
     font-family: "Wide";
     font-display: block;

@@ -90,7 +90,6 @@ const Step = styled.div`
   span {
     color: ${props => props.theme.colors.accent_smalltext};
     font-size: 1.5rem;
-    /* transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955); */
   }
   p {
     font-size: 1.5rem;

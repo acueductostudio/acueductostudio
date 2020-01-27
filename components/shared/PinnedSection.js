@@ -20,6 +20,10 @@ const ScrollDown = styled.div`
     &:first-of-type {
       margin-top: 0;
     }
+    b {
+      font-weight: 150;
+      color: ${props => props.theme.colors.foreground};
+    }
   }
 `;
 
