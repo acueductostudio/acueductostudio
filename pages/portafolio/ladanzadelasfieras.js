@@ -579,7 +579,7 @@ const Stat = styled.div`
   color: ${props => props.theme.colors.foreground};
   span {
     font-size: 8rem;
-    font-weight: 200;
+    font-weight: 300;
     display: block;
     text-align: center;
     z-index: 1;
@@ -749,7 +749,7 @@ const LaurelNumbers = styled.div`
   }
   b {
     font-size: 11.7rem;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 1;
   }
   @media (max-width: 700px) {

@@ -32,7 +32,7 @@ const TagScroll = styled.div`
     display: inline;
     li {
       margin-right: 70px;
-      font-weight: 200;
+      font-weight: 300;
       font-size: 1.4rem;
       display: inline;
       letter-spacing: 4px;

@@ -361,15 +361,15 @@
     }
   },
   "pitch_page": {
-    "page_title": "Nuestro pitch - Déjanos convencerte, es una inversión inteligente",
-    "meta_description": "Mira nomás que bien",
+    "page_title": "Nuestro pitch - Por qué tecnología digital",
+    "meta_description": "Te explicamos a detalle cómo es trabajar con nosotros",
     "headerTitle": "Pitch",
     "intro": {
       "title": "sin más, nuestro pitch",
       "p0": "La tecnología digital ha reestructurado drásticamente industria tras industria, por lo que muchos negocios se han revolucionado para beneficiarse de esta tendencia o, sencillamente, para mantenerse competitivos.<br/><br/>En Acueducto buscamos desarrollar los productos y estrategias necesarias para que tu negocio prospere en la era digital. En esta página te explicamos a detalle cómo generamos valor a organizaciones que buscan ser más competitivas mediante herramientas digitales.",
       "subtitle1": "áreas de innovación",
       "li1": [
-        "Experiencia de cliente",
+        "Experiencia de cliente/usuario",
         "Desarrollo de marca",
         "Operaciones de negocio",
         "Modelos de Negocios digitales"
@@ -398,7 +398,7 @@
         },
         {
           "title": "branding digital",
-          "p": "Una marca es la reputación que has creado alrededor de tu negocio. Elevemos la percepción de tu producto, servicio u organización mediante dirección estratégica y artística, diseño visual y aplicaciones."
+          "p": "Tu marca es la reputación que has creado alrededor de tu negocio. Elevemos la percepción de tu producto, servicio u organización mediante dirección estratégica y artística, diseño visual y aplicaciones."
         },
         {
           "title": "estrategias de<br/>marketing digital",
@@ -439,20 +439,20 @@
         },
         {
           "title": "diseña, programa y ensambla",
-          "p": "Suficiente planeación, en esta etapa se desarrollan los contenidos y aplicaciones del proyecto.</br></br>Desarrollamos:",
+          "p": "Suficiente planeación, en esta etapa se desarrollan los contenidos y aplicaciones del proyecto.<br/><br/>Desarrollamos:",
           "li": ["Materiales y diseños", "Prototipos", "Copywriting", "Código"],
           "p2": "Ponemos manos a la obra para producir los entregables que acordamos para cada área del proyecto."
         },
         {
           "title": "lanza",
-          "p": "Todo se construyó para este momento. Se administran los cambios organizacionales y lanzamiento del proyecto.</br></br>Implementamos:",
+          "p": "Todo se construyó para este momento. Se administran los cambios organizacionales y lanzamiento del proyecto.<br/><br/>Implementamos:",
           "li": ["Promoción", "Advertising", "Community Management"],
           "p2": "Ejecutamos las estrategias de comunicación, monitoreamos su desempeño y documentamos su impacto."
         },
         {
           "title": "evalúa",
-          "p": "Se analiza la información recopilada sobre el proyecto durante todo su desarrollo.</br></br>Entregamos:",
-          "li": ["Reporte de desempeño ", "Posibles siguientes pasos"],
+          "p": "Se analiza la información recopilada sobre el proyecto durante todo su desarrollo.<br/><br/>Entregamos:",
+          "li": ["Reporte de desempeño", "Posibles siguientes pasos"],
           "p2": "Evaluamos tanto el proyecto como nuestro proceso y nos preparamos para dar el siguiente paso."
         }
       ]

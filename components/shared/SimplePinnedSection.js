@@ -43,7 +43,7 @@ const SimplePinnedSection = styled(PinnedSection)`
     }
     h4 {
       text-transform: uppercase;
-      font-weight: 200;
+      font-weight: 300;
       margin-top: 5%;
       margin-bottom: 2%;
       color: ${props => props.theme.colors.accent};

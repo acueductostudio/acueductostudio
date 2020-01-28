@@ -32,7 +32,7 @@ const InsightWrapper = styled.div`
   display: flex;
   flex-direction: column;
   h4 {
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: 10px;
     font-size: 3rem;
     position: relative;

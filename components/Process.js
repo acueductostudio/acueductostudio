@@ -84,7 +84,7 @@ const Step = styled.div`
     opacity: 1;
     line-height: 125%;
     margin-bottom: 16px;
-    font-weight: 200;
+    font-weight: 300;
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {

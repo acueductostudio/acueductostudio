@@ -575,7 +575,7 @@ const TableProposition = styled(Table)`
   @media (max-width: 500px) {
     p {
       &:nth-child(1) {
-        font-weight: 200;
+        font-weight: 300;
         color: ${props => props.theme.colors.foreground};
       }
       &:nth-child(2) {
@@ -597,7 +597,7 @@ const TableStrengths = styled(Table)`
     p {
       &:nth-child(1),
       &:nth-child(3) {
-        font-weight: 200;
+        font-weight: 300;
         color: ${props => props.theme.colors.foreground};
       }
       &:nth-child(2),
@@ -686,7 +686,7 @@ const Third = styled(CommonSection)`
     color: ${props => props.theme.colors.background};
   }
   h3 {
-    font-weight: 200;
+    font-weight: 300;
   }
 `;
 const ThirdBack = styled(CommonTransition)`
@@ -783,7 +783,7 @@ const WolfDays = styled.div`
   }
   b {
     font-size: 8rem;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 110%;
   }
   @media (max-width: 450px) {

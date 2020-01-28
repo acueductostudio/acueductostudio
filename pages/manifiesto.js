@@ -60,7 +60,7 @@ const Belief = styled.li`
   h3 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    font-weight: 200;
+    font-weight: 300;
   }
   @media (max-width: 1250px) {
     h3 {

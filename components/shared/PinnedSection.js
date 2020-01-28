@@ -21,7 +21,7 @@ const ScrollDown = styled.div`
       margin-top: 0;
     }
     b {
-      font-weight: 150;
+      font-weight: 200;
       color: ${props => props.theme.colors.foreground};
     }
   }

@@ -109,7 +109,7 @@ const Hoverable = styled.a`
 `;
 
 const NavLink = styled.a`
-  font-weight: 200;
+  font-weight: 300;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   background-image: ${props =>

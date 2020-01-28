@@ -146,7 +146,7 @@ const Word = styled.p`
   text-align: center;
   opacity: ${props => (props.show ? 1 : 0)};
   font-size: 6rem;
-  font-weight: 200;
+  font-weight: 300;
   padding: 4%;
   color: ${props => props.theme.colors.foreground_low};
   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);

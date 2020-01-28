@@ -9,6 +9,7 @@ import { P, H2, H3 } from "components/shared/Dangerously";
 import createMarkup from "utils/createMarkup";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
+import Logo from "static/assets/img/layout/logo.svg";
 
 import DigitalTransformation from "static/assets/img/layout/icons/digitaltransformation.svg";
 import StrategicDesign from "static/assets/img/layout/icons/strategicdesign.svg";
@@ -77,6 +78,8 @@ import BuildStory from "static/assets/img/layout/icons/buildstory.svg";
 import Craft from "static/assets/img/layout/icons/craft.svg";
 import Launch from "static/assets/img/layout/icons/launch.svg";
 import Review from "static/assets/img/layout/icons/review.svg";
+
+const roleModelArray = [Tesla, Nike, Burberry, Cemex, Starbucks, Hasbro];
 
 const stepIconArray = [Discover, Envision, BuildStory, Craft, Launch, Review];
 
@@ -151,6 +154,7 @@ const RenderLogoList = ({ array }) => (
               tagName="span"
               hoverDelay={300}
               content={array[index].p}
+              eventOff="onScroll"
             >
               <LogoIcon />
             </Tooltip>
@@ -216,34 +220,31 @@ export default function Pitch(props) {
       />
       <StyledHeadings />
       <PinnedSection title={t.intro.title} p={t.intro.p0}>
+        <Fade>
+          <AcueductoLogo />
+        </Fade>
         <P>{t.intro.p0}</P>
-        <h3>{t.intro.subtitle1}</h3>
+        <H3>{t.intro.subtitle1}</H3>
         <StyledList>
           {t.intro.li1.map((item, index) => (
-            <li key={"li1nside" + index}>{item}</li>
+            <Fade key={"li1nside" + index}>
+              <li>{item}</li>
+            </Fade>
           ))}
         </StyledList>
         <P>{t.intro.p1}</P>
         <H3>{t.intro.subtitle2}</H3>
         <BusinessLogoList>
-          <li>
-            <Tesla />
-          </li>
-          <li>
-            <Nike />
-          </li>
-          <li>
-            <Burberry />
-          </li>
-          <li>
-            <Cemex />
-          </li>
-          <li>
-            <Starbucks />
-          </li>
-          <li>
-            <Hasbro />
-          </li>
+          {roleModelArray.map((item, index) => {
+            let LogoIcon = roleModelArray[index];
+            return (
+              <Fade key={"rolemodel" + index}>
+                <li>
+                  <LogoIcon />
+                </li>
+              </Fade>
+            );
+          })}
         </BusinessLogoList>
         <Fade>
           <IconContainer>
@@ -297,36 +298,41 @@ export default function Pitch(props) {
           />
         ))}
       </StepsSection>
-      <ToolsSection>
-        <TitleSection
-          title={t.tools_section.title}
-          text={t.tools_section.p}
-          borderTop
-        />
-        <LogoListContainer>
-          <h3>{t.tools_section.apps}</h3>
-          <RenderLogoList array={appsLogoArray} />
+      <TitleSection
+        title={t.tools_section.title}
+        text={t.tools_section.p}
+        borderTop
+      />
+      <LogoListContainer>
+        <H3>{t.tools_section.apps}</H3>
+        <RenderLogoList array={appsLogoArray} />
 
-          <h3>{t.tools_section.platforms}</h3>
-          <RenderLogoList array={platformLogoArray} />
+        <H3>{t.tools_section.platforms}</H3>
+        <RenderLogoList array={platformLogoArray} />
 
-          <h3>{t.tools_section.marketing}</h3>
-          <RenderLogoList array={marketingLogoArray} />
+        <H3>{t.tools_section.marketing}</H3>
+        <RenderLogoList array={marketingLogoArray} />
 
-          <h3>{t.tools_section.content}</h3>
-          <RenderLogoList array={contentLogoArray} />
+        <H3>{t.tools_section.content}</H3>
+        <RenderLogoList array={contentLogoArray} />
 
-          <h3>{t.tools_section.bi}</h3>
-          <RenderLogoList array={biLogoArray} />
+        <H3>{t.tools_section.bi}</H3>
+        <RenderLogoList array={biLogoArray} />
 
-          <h3>{t.tools_section.collaboration}</h3>
-          <RenderLogoList array={collaborationLogoArray} />
-        </LogoListContainer>
-      </ToolsSection>
+        <H3>{t.tools_section.collaboration}</H3>
+        <RenderLogoList array={collaborationLogoArray} />
+      </LogoListContainer>
       <ContactFooter />
     </PageClipperPadded>
   );
 }
+
+const AcueductoLogo = styled(Logo)`
+  width: 65%;
+  max-width: 390px;
+  height: auto;
+  margin-bottom: 3%;
+`;
 
 const StyledHeadings = createGlobalStyle`
   .react-tooltip-lite {
@@ -334,6 +340,7 @@ const StyledHeadings = createGlobalStyle`
     color: ${props => props.theme.colors.foreground};
     border-radius: 5px;
     transition: opacity 0.3s 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.3);
   }
   .react-tooltip-lite-arrow {
     border-color: ${props => props.theme.colors.accent};
@@ -344,7 +351,7 @@ const StyledHeadings = createGlobalStyle`
     line-height: 125%;
     margin-bottom: 16px;
     margin-top: 3%;
-    font-weight: 150;
+    font-weight: 200;
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   h3 {
@@ -524,7 +531,7 @@ const Step = styled.div`
     font-size: 2.5rem;
     line-height: 125%;
     margin-bottom: 16px;
-    font-weight: 150;
+    font-weight: 200;
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {
@@ -604,9 +611,7 @@ const StepsSection = styled.div`
   }
 `;
 
-const ToolsSection = styled.section``;
-
-const LogoListContainer = styled.ul`
+const LogoListContainer = styled.div`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2.2rem;
   width: 100%;

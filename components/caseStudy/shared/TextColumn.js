@@ -4,7 +4,7 @@ const TextColumn = styled.div`
   padding: 0 5%;
   h2 {
     padding: 15% 0 5% 0;
-    font-weight: 200;
+    font-weight: 300;
     max-width: 670px;
     line-height: 110%;
     &.topUnPadded {
@@ -18,7 +18,7 @@ const TextColumn = styled.div`
     font-size: 4.5rem;
     margin-bottom: 25px;
     max-width: 670px;
-    font-weight: 200;
+    font-weight: 300;
     padding: 18% 0 5% 0;
   }
   p {

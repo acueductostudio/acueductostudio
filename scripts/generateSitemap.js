@@ -35,6 +35,11 @@ const routes = [
     priority: 0.8
   },
   {
+    es: "/pitch",
+    en: "/en/pitch",
+    priority: 0.9
+  },
+  {
     es: "/cookies",
     en: "/en/cookies",
     priority: 0.7

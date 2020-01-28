@@ -23,6 +23,9 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
         case "/en/manifesto":
           Router.push(router.route, "/manifiesto");
           break;
+        case "/en/pitch":
+          Router.push(router.route, "/pitch");
+          break;
         case "/en/cookies":
           Router.push(router.route, "/cookies");
           break;
@@ -50,6 +53,9 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
           break;
         case "/manifiesto":
           Router.push(router.route, "/en/manifesto");
+          break;
+        case "/pitch":
+          Router.push(router.route, "/en/pitch");
           break;
         case "/cookies":
           Router.push(router.route, "/en/cookies");
@@ -108,7 +114,7 @@ const English = styled.div`
     line-height: 1;
     width: 100%;
     color: ${props => props.theme.colors.background};
-    font-weight: 200;
+    font-weight: 300;
   }
   svg {
     width: 33px;
@@ -117,7 +123,7 @@ const English = styled.div`
     * {
       fill: ${props => props.theme.colors.white};
       font-family: inherit;
-      font-weight: 200;
+      font-weight: 300;
     }
   }
 `;

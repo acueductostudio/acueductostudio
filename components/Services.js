@@ -36,7 +36,7 @@ export default React.memo(Services);
 const Info = styled.div`
   width: auto;
   h4 {
-    font-weight: 200;
+    font-weight: 300;
   }
 `;
 
@@ -78,7 +78,7 @@ const Service = styled.div`
     color: ${props => props.theme.colors.foreground_low};
     &:before {
       content: "– ";
-      font-weight: 200;
+      font-weight: 300;
       color: ${props => props.theme.colors.accent};
       margin-left: -16px;
     }

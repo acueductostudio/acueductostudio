@@ -123,7 +123,7 @@ const styles = `
     font-display: block;
     src: url("/static/assets/font/500.woff2") format("woff2"),
       url("/static/assets/font/500.woff") format("woff");
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
   }
   @font-face {
@@ -131,7 +131,7 @@ const styles = `
     font-display: block;
     src: url("/static/assets/font/400.woff2") format("woff2"),
       url("/static/assets/font/400.woff") format("woff");
-    font-weight: 150;
+    font-weight: 200;
     font-style: normal;
   }
 
@@ -190,7 +190,7 @@ const styles = `
     margin: 0;
     font-weight: inherit;
     font-size: 5rem;
-    font-weight: 200;
+    font-weight: 300;
   }
   h2 {
     margin: 0;

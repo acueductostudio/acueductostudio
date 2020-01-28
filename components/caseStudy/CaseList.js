@@ -165,7 +165,7 @@ const Info = styled.div`
   }
   h4 {
     font-size: 4.5rem;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 115%;
     max-width: 500px;
     cursor: pointer;
