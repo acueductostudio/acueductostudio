@@ -26,20 +26,18 @@ const TitleSectionGrid = styled.div`
     color: ${props => props.theme.colors.foreground_low};
     position: relative;
     max-width: 445px;
-    &:nth-child(3) {
-      &:hover {
-        svg * {
-          stroke: ${props => props.theme.colors.accent};
-        }
-      }
-    }
     b {
       color: ${props => props.theme.colors.foreground};
-      font-weight: 100;
+      font-weight: 200;
     }
   }
+  a {
+    max-width: 445px;
+    grid-column: 7 / span 5;
+  }
   @media (max-width: 1100px) {
-    p {
+    p,
+    a {
       grid-column: 5 / span 6;
     }
     h1 {
@@ -54,6 +52,7 @@ const TitleSectionGrid = styled.div`
   @media (max-width: 800px) {
     padding-top: 15%;
     p,
+    a,
     h1 {
       grid-column: 3 / span 8;
     }
@@ -64,6 +63,7 @@ const TitleSectionGrid = styled.div`
   @media (max-width: 600px) {
     grid-column-gap: 0rem;
     p,
+    a,
     h1 {
       grid-column: 1 / span 12;
     }

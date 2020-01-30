@@ -9,47 +9,53 @@ import Logo from "static/assets/img/layout/logo.svg";
 import Spotify from "static/assets/img/casestudies/salvajenada/spotify.svg";
 
 function Podcast(props) {
-  let t = es.podcast_page;
+  let {
+    page_title,
+    meta_description,
+    headerTitle,
+    title,
+    p,
+    podcasts
+  } = es.podcast_page;
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
+    props.setTitle(headerTitle);
   }, [props.locale]);
 
-  let pods = t.podcasts.map(function(pod, index) {
-    return (
-      <Pod key={"belief" + index}>
-        <Fade>
-          <iframe
-            src={pod.url}
-            frameBorder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
-        </Fade>
-      </Pod>
-    );
-  });
   return (
     <PageClipper>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
+        title={page_title}
+        description={meta_description}
         canonical={"https://acueducto.studio/podcast"}
         lang={props.lang}
       />
       <PodcastGrid>
-        <h1>{t.title}</h1>
+        <h1>{title}</h1>
         <span>
           por <Logo />
         </span>
-        <p>{t.p}</p>
+        <p>{p}</p>
         <LogoList>
           <p>escúchalo en </p>
           <Spotify />
           <Spotify />
           <Spotify />
         </LogoList>
-        <PodcastList>{pods}</PodcastList>
+        <PodcastList>
+          {podcasts.map((pod, index) => (
+            <Pod key={"belief" + index}>
+              <Fade>
+                <iframe
+                  src={pod.url}
+                  frameBorder="0"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                ></iframe>
+              </Fade>
+            </Pod>
+          ))}
+        </PodcastList>
       </PodcastGrid>
       <ContactFooter />
     </PageClipper>

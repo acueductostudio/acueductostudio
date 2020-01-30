@@ -13,15 +13,15 @@ import i6 from "static/assets/img/layout/icons/review.svg";
 
 const iconArray = [i1, i2, i3, i4, i5, i6];
 
-const StepContainer = props => {
-  const Icon = iconArray[props.index];
+const StepContainer = ({ index, title, p }) => {
+  const Icon = iconArray[index];
   return (
     <Step>
       <Fade>
-        <span>0{props.index + 1}</span>
+        <span>0{index + 1}</span>
         <Icon />
-        <h3>{props.title}</h3>
-        <p dangerouslySetInnerHTML={createMarkup(props.p)} />
+        <h3>{title}</h3>
+        <p dangerouslySetInnerHTML={createMarkup(p)} />
       </Fade>
     </Step>
   );
@@ -29,21 +29,15 @@ const StepContainer = props => {
 
 const Process = () => {
   const context = useContext(LangContext);
-  let p = context.home_page.process;
-  var steps = p.steps.map(function(step, index) {
-    return (
-      <StepContainer
-        key={"step" + index}
-        index={index}
-        title={step.title}
-        p={step.p}
-      />
-    );
-  });
+  const { title, p, steps } = context.home_page.process;
   return (
     <ProcessSection>
-      <TitleSection title={p.title} text={p.p} borderTop />
-      <StepsSection>{steps}</StepsSection>
+      <TitleSection title={title} p={p} borderTop />
+      <StepsSection>
+        {steps.map((step, index) => (
+          <StepContainer key={"step" + index} index={index} {...step} />
+        ))}
+      </StepsSection>
     </ProcessSection>
   );
 };
@@ -84,7 +78,7 @@ const Step = styled.div`
     opacity: 1;
     line-height: 125%;
     margin-bottom: 16px;
-    font-weight: 300;
+    font-weight: 200;
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {

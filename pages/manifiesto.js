@@ -6,6 +6,7 @@ import ContactFooter from "components/ContactFooter";
 import PinnedSection from "components/shared/PinnedSection";
 import TitleSection from "components/shared/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
+import { P } from "components/shared/Dangerously";
 import Fade from "react-reveal/Fade";
 
 function Manifesto(props) {
@@ -35,10 +36,11 @@ function Manifesto(props) {
         en_canonical={"https://acueducto.studio/en/manifesto"}
         lang={props.lang}
       />
-      <PinnedSection t={t} title={t.intro.title} p={t.intro.p}>
+      <PinnedSection title={t.intro.title}>
+        <P>{t.intro.p}</P>
         <ol>{beliefs}</ol>
       </PinnedSection>
-      <TitleSection title={t.cases.title} text={t.cases.p} borderTop />
+      <TitleSection {...t.cases} borderTop />
       <CaseList />
       <ContactFooter />
     </PageClipper>

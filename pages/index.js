@@ -34,16 +34,13 @@ function Index(props) {
         </Land>
         <Intro id="removeArrow">
           <TitleSection
-            title={t.intro.title}
-            text={t.intro.p}
-            link={t.intro.link}
-            linktext={t.intro.linktext}
+            {...t.intro}
             borderTop
           />
         </Intro>
         <Carousel />
         <Process />
-        <TitleSection title={t.studies.title} text={t.studies.p} borderTop />
+        <TitleSection {...t.studies} borderTop />
         <CaseList noPlay />
         <Services />
         <ContactFooter />

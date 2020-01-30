@@ -22,7 +22,7 @@ export default function Work(props) {
         en_canonical={"https://acueducto.studio/en/work"}
         lang={props.lang}
       />
-      <TitleSection title={t.intro.title} text={t.intro.p} />
+      <TitleSection {...t.intro} />
       <CaseList />
       <ContactFooter />
     </PageClipperPadded>

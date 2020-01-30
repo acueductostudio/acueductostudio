@@ -227,8 +227,8 @@
   "contact_footer": {
     "title": "asociémonos, elevemos tu negocio",
     "p": "Nos encantaría conocerte, escríbenos directamente a ",
-    "copy": "Copiar al clipboard",
-    "copied": "Copiado"
+    "copy_text": "Copiar al clipboard",
+    "copied_text": "Copiado"
   },
   "cookie_message": {
     "title": "cookies bienvenidas",
@@ -249,8 +249,8 @@
     "intro": {
       "title": "trabajando con socios, no para clientes",
       "p": "En Acueducto somos testigos de los enormes beneficios de la co-creación y la estrecha colaboración. Por ello celebramos la importancia de las asociaciones; que a diferencia de otros estudios y agencias, nos permiten involucrarnos estructuralmente en cada proyecto. Junto a nuestros socios, trabajando desde la estrategia hasta el lanzamiento, logramos producir experiencias digitales que verdaderamente conectan con sus audiencias y causan un impacto positivo en marcas, negocios y comunidades por igual.<br/><br/>Siempre nos emocionan los nuevos retos y las conexiones que generan. Así como los problemas se convierten en proyectos, nuestros socios en amigos.",
-      "link": ["/nosotros", "nosotros"],
-      "linktext": "Lee más sobre"
+      "link": ["/pitch", "pitch"],
+      "linktext": "Tenemos tu atención?<br/>Lee nuestro"
     },
     "carousel": [
       "experiencias digitales",
@@ -341,18 +341,18 @@
       "title": "una dupla que hace crecer tu negocio",
       "p": "Sin darnos cuenta, comenzamos este estudio 15 años atrás al enamorarnos de la tecnología y las culturas alternativa y pop. Al crecer juntos, impulsados por ambas perspectivas, siempre nos inspiramos a ser mejores. Compartiendo diseños, ideas de negocios o proyectos personales, siempre encontramos fascinante la mente del otro.<br/><br/>Motivados por la innovación y los altos estándares de calidad, unimos nuestros caminos profesionales para poder crear inspiradoras experiencias digitales.<br/><br/>Acueducto no es sólo un estudio, es el resultado de un trayectoria que nos ha tomado años construir, como nuestra amistad."
     },
-    "team": {
-      "rodrigo": {
+    "team": [
+      {
         "name": "rodrigo salmerón",
         "position": "diseño y desarrollo",
         "bio": "Diseñador de interacción, visual y de movimiento; también desarrollador apasionado con una Maestría en Diseño de Interacción en The Harbour Space University en Barcelona con 9 años de experiencia como freelance.<br/><br/>Ha trabajado para agencias de diseño, productoras de cine y desarrolladoras de software.<br/><br/>Rodrigo es también productor musical, compositor y letrista. Y ya se trate de música, código o de interacciones entre humanos y máquinas, siempre busca nuevos retos para probar las últimas herramientas tecnológicas."
       },
-      "artemio": {
+       {
         "name": "artemio pedraza",
         "position": "estrategia y comunicación",
         "bio": "Un estratega en comunicación, <i>project manager</i> y <i>community manager</i> con cinco años de experiencia como freelance.<br/><br/>También ha trabajado en <i>copywriting</i>, <i>community management</i> y como consultor de marketing. Es uno de los pocos licenciados en Comunicación Digital en México.<br/><br/>Cuando no está dirigiendo el departamento de estrategias o administrando un proyecto en Acueducto, trabaja en su disquera independiente Bludot, donde representa artistas y gira por el mundo tocando batería para Wet Baes."
       }
-    },
+    ],
     "values": {
       "title": "construyendo mejores comunidades",
       "p": "Para el beneficio de los usuarios finales, así como el de nuestros socios, siempre buscamos formas de crear un impacto positivo con nuestro trabajo.<br/><br/>Por eso fundamos Acueducto, para hacer las preguntas incómodas, evaluar el terreno en el que estamos parados y así ayudar a marcas y negocios a mejorar su entorno y empoderar a sus usuarios.",

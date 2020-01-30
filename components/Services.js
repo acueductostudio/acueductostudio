@@ -6,27 +6,26 @@ import LangContext from "utils/LangContext";
 
 const Services = () => {
   const context = useContext(LangContext);
-  let s = context.home_page.services;
-  let services = s.service_categories.map(function(service, index) {
-    return (
-      <Service key={"service" + index}>
-        <Fade>
-          <Info>
-            <h4>{service.title}</h4>
-            <ul>
-              {service.tags.map(function(tag, index) {
-                return <li key={"tag" + index + service.title}>{tag}</li>;
-              })}
-            </ul>
-          </Info>
-        </Fade>
-      </Service>
-    );
-  });
+  const { intro, service_categories } = context.home_page.services;
   return (
     <ServicesSection id={context.lang == "en" ? "services" : "servicios"}>
-      <TitleSection title={s.intro.title} text={s.intro.p} borderTop />
-      <ServiceGrid>{services}</ServiceGrid>
+      <TitleSection {...intro} borderTop />
+      <ServiceGrid>
+        {service_categories.map((service, index) => (
+          <Service key={"service" + index}>
+            <Fade>
+              <Info>
+                <h4>{service.title}</h4>
+                <ul>
+                  {service.tags.map((tag, index) => (
+                    <li key={"tag" + index + service.title}>{tag}</li>
+                  ))}
+                </ul>
+              </Info>
+            </Fade>
+          </Service>
+        ))}
+      </ServiceGrid>
     </ServicesSection>
   );
 };

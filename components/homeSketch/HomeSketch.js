@@ -30,14 +30,14 @@ const Effects = React.memo(({ mouse }) => {
     actualMouse.current[1] += dy * easing;
     return [actualMouse.current[0], actualMouse.current[1]];
   };
-
+  let resolutionValue = window.innerWidth > 1650 ? 1.1 : 2;
   return (
     <effectComposer ref={composer} args={[gl]}>
       <shaderPass
         attachArray="passes"
         args={[ShapeShiftShader]}
         ref={background}
-        uniforms-iResolution-value={[size.width / 2, size.height / 2]}
+        uniforms-iResolution-value={[size.width / resolutionValue, size.height / resolutionValue]}
         uniforms-noctaves-value={window.innerWidth > 600 ? 5.4 : 4}
       />
     </effectComposer>

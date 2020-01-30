@@ -227,8 +227,8 @@
   "contact_footer": {
     "title": "let's be partners,<br/> let's talk business",
     "p": "We would love to start getting to know you, contact us directly at ",
-    "copy": "Copy to clipboard",
-    "copied": "Copied"
+    "copy_text": "Copy to clipboard",
+    "copied_text": "Copied"
   },
   "cookie_message": {
     "title": "I’m okay with cookies",
@@ -249,8 +249,8 @@
     "intro": {
       "title": "working with partners, not for clients",
       "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration. That’s why we cherish the importance of partnerships; which, unlike other studios and agencies, allow us to get deeply involved in every project. Working closely together with our partners, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic.<br/><br/>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
-      "link": ["/en/about", "about us"],
-      "linktext": "Read more"
+      "link": ["/en/pitch", "pitch"],
+      "linktext": "Do we have your attention?<br/>Read our"
     },
     "carousel": [
       "digital experiences",
@@ -341,18 +341,18 @@
       "title": "a two-part ensemble to grow your business",
       "p": "Without us knowing, we started this studio 15 years ago when we began to fall in love with technology, alternative & pop culture. Growing up together, and driven by each other’s perspectives, we would always push ourselves forward; and everytime we shared a design or a business idea, we felt fascinated by the mind of the other.<br/><br/>Motivated by high standards and innovation, we joined our professional paths in order to create thoughtful and powerful digital experiences.<br/><br/>Acueducto is not just a studio, it is the result of a journey that has taken many years to build, as has our own friendship."
     },
-    "team": {
-      "rodrigo": {
+    "team": [
+     {
         "name": "rodrigo salmerón",
         "position": "design & development",
         "bio": "An interaction, visual, and motion designer and an open-source-passionate developer with an Interaction Design Master of Arts from The Harbour Space University in Barcelona and 7 years of experience as a freelancer. <br/><br/>He has also worked for several design firms, film production houses, and development companies.<br/><br/>Rodrigo is also a music producer, composer, and lyricist; and whether it’s about music, coding or human-machine interactions, he’s always looking for new challenges and trying out the latest tools."
       },
-      "artemio": {
+      {
         "name": "artemio pedraza",
         "position": "strategy & communication",
         "bio": "A communication strategist, project and community manager with five years of experience as a freelancer.<br/><br/>He has also gone from copywriter to community manager and marketing consultant, and he’s one of the few licenced digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own record label Bludot, manages artists, and tours the world playing drums for Wet Baes."
       }
-    },
+    ],
     "values": {
       "title": "building better<br/> communities",
       "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.",

@@ -147,7 +147,7 @@ const RenderLogoList = ({ array }) => (
     {array.map((i, index) => {
       let LogoIcon = array[index].i;
       return (
-        <Fade key={array[index].p + index} triggerOnce>
+        <Fade key={array[index].p + index}>
           <li>
             <Tooltip
               direction="bottom"
@@ -195,6 +195,7 @@ const StepContainer = ({ index, title, p, li, p2 }) => {
               <li key={"li1" + index}>{item}</li>
             ))}
           </ul>
+          <br/>
           <p>{p2}</p>
         </Fade>
       </Step>
@@ -262,13 +263,12 @@ export default function Pitch(props) {
         <P>{t.intro.p4}</P>
       </PinnedSection>
       <TitleSection
-        title={t.second_section.title}
-        text={t.second_section.p}
+        {...t.second_section}
         borderTop
       />
       <TitleSection
         title={t.products_section.title}
-        text={t.products_section.p}
+        p={t.products_section.p}
         borderTop
       />
       <ProductsSection>
@@ -276,14 +276,13 @@ export default function Pitch(props) {
           <ProductContainer
             key={"product" + index}
             index={index}
-            title={product.title}
-            p={product.p}
+            {...product}
           />
         ))}
       </ProductsSection>
       <TitleSection
         title={t.process_section.title}
-        text={t.process_section.p}
+        p={t.process_section.p}
         borderTop
       />
       <StepsSection>
@@ -291,16 +290,13 @@ export default function Pitch(props) {
           <StepContainer
             key={"step" + index}
             index={index}
-            title={step.title}
-            p={step.p}
-            li={step.li}
-            p2={step.p2}
+            {...step}
           />
         ))}
       </StepsSection>
       <TitleSection
         title={t.tools_section.title}
-        text={t.tools_section.p}
+        p={t.tools_section.p}
         borderTop
       />
       <LogoListContainer>
@@ -544,7 +540,6 @@ const Step = styled.div`
   }
   ul {
     list-style: none;
-    margin-bottom: 4%;
     color: ${props => props.theme.colors.foreground_low};
     li {
       list-style: none;

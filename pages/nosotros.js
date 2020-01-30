@@ -38,37 +38,25 @@ function About(props) {
       />
       <PinnedSection title={t.intro.title}>
         <P>{t.intro.p}</P>
-        <Person>
-          {props.hasLoaded && <HeadSketch mouse={props.mouse} />}
-          <Fade>
-            <h4>{t.team.rodrigo.name}</h4>
-            <span>{t.team.rodrigo.position}</span>
-          </Fade>
-          <P>{t.team.rodrigo.bio}</P>
-        </Person>
-        <Person>
-          {props.hasLoaded && (
-            <HeadSketch
-              second
-              rotationStart={50}
-              invertRotation
-              mouse={props.mouse}
-            />
-          )}
-          <Fade>
-            <h4>{t.team.artemio.name}</h4>
-            <span>{t.team.artemio.position}</span>
-          </Fade>
-          <P>{t.team.artemio.bio}</P>
-        </Person>
+        {t.team.map((person, index) => (
+          <Person key={"personX" + index}>
+            {props.hasLoaded && (
+              <HeadSketch
+                mouse={props.mouse}
+                second={index > 0}
+                invertRotation={index > 0}
+                rotationStart={index > 0 ? 50 : 0}
+              />
+            )}
+            <Fade>
+              <h4>{person.name}</h4>
+              <span>{person.position}</span>
+            </Fade>
+            <P>{person.bio}</P>
+          </Person>
+        ))}
       </PinnedSection>
-      <TitleSection
-        title={t.values.title}
-        text={t.values.p}
-        link={t.values.link}
-        linktext={t.values.linktext}
-        borderTop
-      />
+      <TitleSection {...t.values} borderTop />
       <ContactFooter />
     </PageClipper>
   );

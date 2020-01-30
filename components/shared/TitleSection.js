@@ -1,30 +1,31 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import { P, H1 } from "components/shared/Dangerously";
+import createMarkup from "utils/createMarkup";
 import Link from "next/link";
 import Arrow from "./Arrow";
 import Grid from "./TitleSectionGrid";
 
-const TitleSection = ({ title, text, link, linktext, borderTop }) => {
+const TitleSection = ({ title, p, link, linktext, borderTop }) => {
   return (
     <Grid borderTop={borderTop}>
       <H1>{title}</H1>
-      <P>{text}</P>
-      <Fade>
-        {link ? (
-          <p>
-            <Link href={link[0]} passHref>
-              <WidthLink>
-                {linktext + " "}
+      <P>{p}</P>
+      {link ? (
+        <Link href={link[0]} passHref>
+          <WidthLink>
+            <Fade>
+              <p>
+                <span dangerouslySetInnerHTML={createMarkup(linktext + " ")} />
                 <b>{link[1]}</b>
-                <Arrow />
-              </WidthLink>
-            </Link>
-          </p>
-        ) : (
-          ""
-        )}
-      </Fade>
+              </p>
+            </Fade>
+            <Arrow />
+          </WidthLink>
+        </Link>
+      ) : (
+        ""
+      )}
     </Grid>
   );
 };
@@ -34,18 +35,25 @@ export default React.memo(TitleSection);
 const WidthLink = styled.a`
   grid-column: 7 / span 5;
   text-decoration: none;
-  display: block;
+  display: flex;
   position: relative;
+  align-items: center;
+  justify-content: space-between;
   b {
     color: ${props => props.theme.colors.foreground};
     font-weight: 100;
     border-bottom: ${props =>
       props.theme.stroke + " solid " + props.theme.colors.accent};
   }
-  svg {
+  a span {
     align-self: flex-end;
     position: absolute;
     right: 0%;
+  }
+  &:hover {
+    svg * {
+      stroke: ${props => props.theme.colors.accent};
+    }
   }
   @media (max-width: 600px) {
     svg {
@@ -54,7 +62,7 @@ const WidthLink = styled.a`
       border-radius: 50%;
       width: 45px;
       height: 45px;
-      bottom: -10px;
+      bottom: -5px;
     }
   }
 `;

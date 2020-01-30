@@ -28,32 +28,18 @@ const SingleCase = props => {
                 src={`/static/assets/img/casestudies/${props.link}/portfolio_logo.svg`}
                 alt={`logo_${props.link}`}
               />
-              {props.noPlay ? (
-                <video
-                  ref={video}
-                  playsInline
-                  muted
-                  loop
-                  poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
-                >
-                  <source
-                    src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
-                  />
-                </video>
-              ) : (
-                <video
-                  ref={video}
-                  playsInline
-                  autoPlay
-                  muted
-                  loop
-                  poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
-                >
-                  <source
-                    src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
-                  />
-                </video>
-              )}
+              <video
+                ref={video}
+                playsInline
+                muted
+                autoPlay={props.noPlay ? false : true}
+                loop
+                poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
+              >
+                <source
+                  src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
+                />
+              </video>
             </VidContainer>
           </Fade>
         </a>
@@ -223,7 +209,7 @@ const Info = styled.div`
       border-radius: 50%;
       width: 48px;
       height: 48px;
-      bottom: -10px;
+      bottom: -5px;
     }
   }
   @media (max-width: 500px), (max-height: 450px) {

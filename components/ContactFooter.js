@@ -8,9 +8,9 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { logEvent } from "utils/analytics";
 import LangContext from "utils/LangContext";
 
-const ContactFooter = props => {
+const ContactFooter = () => {
   const context = useContext(LangContext);
-  let f = context.contact_footer;
+  let { title, p, copied_text, copy_text } = context.contact_footer;
 
   const [copied, setCopied] = useState(false);
   const [copying, setCopying] = useState(false);
@@ -32,8 +32,8 @@ const ContactFooter = props => {
   };
 
   return (
-    <Grid borderTop={props.borderTop} id="contact">
-      <H1>{f.title}</H1>
+    <Grid id="contact">
+      <H1>{title}</H1>
       <CopyToClipboard
         text={"hola@acueducto.studio"}
         onCopy={doSetCopied}
@@ -42,11 +42,11 @@ const ContactFooter = props => {
         onClick={setHovered}
       >
         <p>
-          {f.p}
+          {p}
           <b>
             <MailPlaceholder />
             <CopyMessage reveal={copying}>
-              {copied ? f.copied : f.copy}
+              {copied ? copied_text : copy_text}
             </CopyMessage>
           </b>
         </p>

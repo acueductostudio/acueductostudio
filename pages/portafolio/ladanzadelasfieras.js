@@ -44,15 +44,6 @@ function LaDanzaDeLasFieras(props) {
     setloadAssets(true);
   }, []);
 
-  let initialStats = t.intro_section.stats.map(function(stat, index) {
-    return (
-      <li key={"stat_" + index}>
-        <b>{stat.big}</b>
-        <p>{stat.small}</p>
-      </li>
-    );
-  });
-
   return (
     <PageClipper unPadded>
       <Head
@@ -76,7 +67,14 @@ function LaDanzaDeLasFieras(props) {
           <LaurelNumbers>
             <Laurel />
             <Fade>
-              <ul>{initialStats}</ul>
+              <ul>
+                {t.intro_section.stats.map((stat, index) => (
+                  <li key={"stat_" + index}>
+                    <b>{stat.big}</b>
+                    <p>{stat.small}</p>
+                  </li>
+                ))}
+              </ul>
             </Fade>
             <Laurel />
           </LaurelNumbers>

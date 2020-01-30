@@ -3,11 +3,13 @@ import Fade from "react-reveal/Fade";
 import MarqueeHelper from "utils/react-double-marquee";
 
 const Marquee = ({ tags, amount }) => {
-  let tagList = tags.map(function(tag, index) {
-    return <li key={index + "h"}>{tag}</li>;
-  });
-
-  let list = <ul>{tagList}</ul>;
+  const list = (
+    <ul>
+      {tags.map((tag, index) => (
+        <li key={index + "h"}>{tag}</li>
+      ))}
+    </ul>
+  );
   return (
     <TagScroll>
       <Fade>

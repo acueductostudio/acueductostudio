@@ -14,7 +14,7 @@ const HomeSketch = ({ hide }) => {
       ) : (
         <Fade>
           <P5Wrapper
-            sketch={window.innerWidth < 600 ? shademobile : shade}
+            sketch={window.innerWidth < 600 || window.innerWidth > 1700 ? shademobile : shade}
             id="Frame"
           />
         </Fade>
