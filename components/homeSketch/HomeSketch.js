@@ -30,7 +30,7 @@ const Effects = React.memo(({ mouse }) => {
     actualMouse.current[1] += dy * easing;
     return [actualMouse.current[0], actualMouse.current[1]];
   };
-  let resolutionValue = window.innerWidth > 1650 ? 1.1 : 2;
+  let resolutionValue = window.innerWidth > 1690 ? 1.1 : 2;
   return (
     <effectComposer ref={composer} args={[gl]}>
       <shaderPass
