@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout";
 import theme from "styles/theme";
-import Cookies from "js-cookie/src/js.cookie";
+import Cookies from "js-cookie/dist/js.cookie";
 import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
 import { hotjar } from "react-hotjar";
