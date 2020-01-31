@@ -10,15 +10,15 @@
     },
     {
       "src": "^/service-worker.js$",
-      "dest": "/_next/static/service-worker.js",
+      "dest": "/_next/service-worker.js",
       "headers": {
         "cache-control": "public, max-age=43200, immutable",
         "Service-Worker-Allowed": "/"
       }
     },
-    { "src": "/robots.txt", "dest": "/static/robots.txt" },
-    { "src": "/humans.txt", "dest": "/static/humans.txt" },
-    { "src": "/sitemap.xml", "dest": "/static/sitemap.xml" },
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/humans.txt", "dest": "/humans.txt" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "handle": "filesystem" }
   ]
 }

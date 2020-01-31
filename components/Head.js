@@ -64,7 +64,7 @@ const Meta = props => {
       ) : (
         <meta
           property="og:image"
-          content="https://acueducto.studio/static/assets/img/og/og_main.jpg"
+          content="https://acueducto.studio/assets/img/og/og_main.jpg"
         />
       )}
       <meta property="og:image:alt" content="Acueducto Logo" />

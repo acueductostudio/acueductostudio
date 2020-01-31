@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import ArrowSvg from "static/assets/img/layout/arrow.svg";
+import ArrowSvg from "public/assets/img/layout/arrow.svg";
 
 const Arrow = () => (
   <ArrowContainer>

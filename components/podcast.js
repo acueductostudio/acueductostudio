@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
 import Fade from "react-reveal/Fade";
-import es from "static/locales/es/podcast.json";
-import Logo from "static/assets/img/layout/logo.svg";
-import Spotify from "static/assets/img/casestudies/salvajenada/spotify.svg";
+import es from "public/locales/es/podcast.json";
+import Logo from "public/assets/img/layout/logo.svg";
+import Spotify from "public/assets/img/casestudies/salvajenada/spotify.svg";
 
 function Podcast(props) {
   let {

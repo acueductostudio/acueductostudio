@@ -16,7 +16,7 @@ const NextStudy = ({ link, margined }) => {
           <Fade>
             <Logo
               style={{
-                backgroundImage: `url(/static/assets/img/casestudies/${link}/portfolio_logo.svg)`
+                backgroundImage: `url(/assets/img/casestudies/${link}/portfolio_logo.svg)`
               }}
             />
           </Fade>

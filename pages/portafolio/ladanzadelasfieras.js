@@ -6,13 +6,13 @@ import PageClipper from "components/PageClipper";
 import Fade from "react-reveal/Fade";
 import ContactFooter from "components/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
-import LogoDanza from "static/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
-import Laurel from "static/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
-import PosterLine from "static/assets/img/casestudies/ladanzadelasfieras/line.svg";
-import Type_1 from "static/assets/img/casestudies/ladanzadelasfieras/type_1.svg";
-import Type_2 from "static/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
-import Type_3 from "static/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
-import AppSvg from "static/assets/img/casestudies/ladanzadelasfieras/app.svg";
+import LogoDanza from "public/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
+import Laurel from "public/assets/img/casestudies/ladanzadelasfieras/laurel.svg";
+import PosterLine from "public/assets/img/casestudies/ladanzadelasfieras/line.svg";
+import Type_1 from "public/assets/img/casestudies/ladanzadelasfieras/type_1.svg";
+import Type_2 from "public/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
+import Type_3 from "public/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
+import AppSvg from "public/assets/img/casestudies/ladanzadelasfieras/app.svg";
 import { H2, H3, P } from "components/shared/Dangerously";
 import IntroVideo from "components/caseStudy/shared/IntroVideo";
 import Marquee from "components/caseStudy/shared/Marquee";
@@ -90,23 +90,23 @@ function LaDanzaDeLasFieras(props) {
           <PosterGrid>
             <PosterLine />
             <Picture
-              src={"/static/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"}
+              src={"/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"}
               alt="First references for branding"
             />
             <Picture
-              src="/static/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
+              src="/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
               alt="First references for branding"
             />
             <Picture
-              src="/static/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
+              src="/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
               alt="First references for branding"
             />
             <Picture
-              src="/static/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
+              src="/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
               alt="Original sketch of poster design"
             />
             <Picture
-              src="/static/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
+              src="/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
               alt="Final poster design with awards"
             />
           </PosterGrid>
@@ -143,7 +143,7 @@ function LaDanzaDeLasFieras(props) {
         <TransitionWrapper>
           {loadAssets && (
             <Picture
-              src="/static/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
+              src="/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
               alt="Printed assets for film attendants"
             />
           )}
@@ -158,7 +158,7 @@ function LaDanzaDeLasFieras(props) {
               <ThePlayer
                 url={"https://www.youtube.com/watch?v=11aYNilxhko"}
                 still={
-                  "/static/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
+                  "/assets/img/casestudies/ladanzadelasfieras/videoBack.jpg"
                 }
                 ratio={"50.62%"}
               />
@@ -179,7 +179,7 @@ function LaDanzaDeLasFieras(props) {
           {loadAssets && (
             <Faces>
               <Picture
-                src="/static/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
+                src="/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
                 alt="Contact cards for directors and producers"
               />
             </Faces>
@@ -198,7 +198,7 @@ function LaDanzaDeLasFieras(props) {
           {loadAssets && (
             <MacPress>
               <Picture
-                src="/static/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
+                src="/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
                 alt="A whole section for the press"
               />
             </MacPress>
@@ -217,7 +217,7 @@ function LaDanzaDeLasFieras(props) {
           {loadAssets && (
             <MacContact>
               <Picture
-                src="/static/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
+                src="/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
                 alt="A contact component on every page"
               />
             </MacContact>
@@ -228,7 +228,7 @@ function LaDanzaDeLasFieras(props) {
           <P>{t.third_section.p2}</P>
           <AppGrid>
             <Picture
-              src="/static/assets/img/casestudies/ladanzadelasfieras/webapp.png"
+              src="/assets/img/casestudies/ladanzadelasfieras/webapp.png"
               alt="A Progressive Web App"
             />
             <AppSvg />
@@ -256,10 +256,10 @@ function LaDanzaDeLasFieras(props) {
                 muted
                 loop
                 poster={
-                  "/static/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
+                  "/assets/img/casestudies/ladanzadelasfieras/incognito_poster.jpg"
                 }
               >
-                <source src="/static/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
+                <source src="/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
               </video>
             </Fade>
           )}
@@ -277,7 +277,7 @@ function LaDanzaDeLasFieras(props) {
         <TextColumn>
           {loadAssets && (
             <Picture
-              src="/static/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+              src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
               alt="Festival awards"
             />
           )}
@@ -621,7 +621,7 @@ const Stat = styled.div`
 const Sixth = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("/static/assets/img/casestudies/ladanzadelasfieras/sixthBack.svg");
+  background-image: url("/assets/img/casestudies/ladanzadelasfieras/sixthBack.svg");
   background-position: center bottom;
   background-size: cover;
   a {
@@ -812,7 +812,7 @@ const FirstSection = styled(CommonSection)`
 const LandSection = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("/static/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
+  background-image: url("/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
   background-position: center bottom;
   background-size: cover;
   svg {

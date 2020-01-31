@@ -1,6 +1,6 @@
 <p align="left">
   <a href="https://acueducto.studio/" target='_blank'>
-    <img alt="Acueducto" src="https://acueducto.studio/static/signatures/logo.svg" width="220">
+    <img alt="Acueducto" src="https://acueducto.studio/signatures/logo.svg" width="220">
   </a>
 </p>
 

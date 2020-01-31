@@ -121,16 +121,16 @@ const styles = `
   @font-face {
     font-family: "Wide";
     font-display: block;
-    src: url("/static/assets/font/500.woff2") format("woff2"),
-      url("/static/assets/font/500.woff") format("woff");
+    src: url("/assets/font/500.woff2") format("woff2"),
+      url("/assets/font/500.woff") format("woff");
     font-weight: 300;
     font-style: normal;
   }
   @font-face {
     font-family: "Wide";
     font-display: block;
-    src: url("/static/assets/font/400.woff2") format("woff2"),
-      url("/static/assets/font/400.woff") format("woff");
+    src: url("/assets/font/400.woff2") format("woff2"),
+      url("/assets/font/400.woff") format("woff");
     font-weight: 200;
     font-style: normal;
   }
@@ -138,8 +138,8 @@ const styles = `
   @font-face {
     font-family: "Wide";
     font-display: block;
-    src: url("/static/assets/font/300.woff2") format("woff2"),
-      url("/static/assets/font/300.woff") format("woff");
+    src: url("/assets/font/300.woff2") format("woff2"),
+      url("/assets/font/300.woff") format("woff");
     font-weight: 100;
     font-style: normal;
   }

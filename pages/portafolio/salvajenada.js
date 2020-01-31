@@ -16,17 +16,17 @@ import Insight from "components/caseStudy/shared/Insight";
 import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
 
-import Ig from "static/assets/img/casestudies/salvajenada/ig.svg";
-import Ibero from "static/assets/img/casestudies/salvajenada/ibero.svg";
-import Wolf from "static/assets/img/casestudies/salvajenada/wolf.svg";
-import Apple from "static/assets/img/casestudies/salvajenada/apple.svg";
-import Spotify from "static/assets/img/casestudies/salvajenada/spotify.svg";
-import LogoSalvaje from "static/assets/img/casestudies/salvajenada/logoSalvaje.svg";
-import SecondBackImg from "static/assets/img/casestudies/salvajenada/secondBack.svg";
-import ThirdBackImg from "static/assets/img/casestudies/salvajenada/thirdBack.svg";
-import FourthBackImg from "static/assets/img/casestudies/salvajenada/fourthBack.svg";
-import FifthBackImg from "static/assets/img/casestudies/salvajenada/fifthBack.svg";
-import InterBackImg from "static/assets/img/casestudies/salvajenada/interBack.svg";
+import Ig from "public/assets/img/casestudies/salvajenada/ig.svg";
+import Ibero from "public/assets/img/casestudies/salvajenada/ibero.svg";
+import Wolf from "public/assets/img/casestudies/salvajenada/wolf.svg";
+import Apple from "public/assets/img/casestudies/salvajenada/apple.svg";
+import Spotify from "public/assets/img/casestudies/salvajenada/spotify.svg";
+import LogoSalvaje from "public/assets/img/casestudies/salvajenada/logoSalvaje.svg";
+import SecondBackImg from "public/assets/img/casestudies/salvajenada/secondBack.svg";
+import ThirdBackImg from "public/assets/img/casestudies/salvajenada/thirdBack.svg";
+import FourthBackImg from "public/assets/img/casestudies/salvajenada/fourthBack.svg";
+import FifthBackImg from "public/assets/img/casestudies/salvajenada/fifthBack.svg";
+import InterBackImg from "public/assets/img/casestudies/salvajenada/interBack.svg";
 
 const FramesEmbed = dynamic(
   import("components/caseStudy/salvajenada/FramesEmbed"),
@@ -53,7 +53,7 @@ export default function Salvajenada(props) {
         <Picture
           key={"c_" + i}
           alt={"salvajenada_release " + i}
-          src={`/static/assets/img/casestudies/salvajenada/c_${i}.jpg`}
+          src={`/assets/img/casestudies/salvajenada/c_${i}.jpg`}
         />
       );
     }
@@ -67,7 +67,7 @@ export default function Salvajenada(props) {
         <Picture
           key={"d_" + i}
           alt={"salvajenada_writing " + i}
-          src={`/static/assets/img/casestudies/salvajenada/d_${i}.png`}
+          src={`/assets/img/casestudies/salvajenada/d_${i}.png`}
         />
       );
     }
@@ -83,9 +83,9 @@ export default function Salvajenada(props) {
         muted
         loop
         key={"v_4"}
-        poster={`/static/assets/img/casestudies/salvajenada/girlUltra_poster.jpg`}
+        poster={`/assets/img/casestudies/salvajenada/girlUltra_poster.jpg`}
       >
-        <source src="/static/assets/video/casestudies/salvajenada/girlUltra.mp4" />
+        <source src="/assets/video/casestudies/salvajenada/girlUltra.mp4" />
       </video>
     );
     for (let i = 1; i < 4; i++) {
@@ -93,7 +93,7 @@ export default function Salvajenada(props) {
         <Picture
           key={"p_" + i}
           alt={"salvajenada_shoutout " + i}
-          src={`/static/assets/img/casestudies/salvajenada/p_${i}.jpg`}
+          src={`/assets/img/casestudies/salvajenada/p_${i}.jpg`}
         />
       );
     }
@@ -207,7 +207,7 @@ export default function Salvajenada(props) {
             <Ibero />
             {loadAssets && (
               <Picture
-                src="/static/assets/img/casestudies/salvajenada/ibero.jpg"
+                src="/assets/img/casestudies/salvajenada/ibero.jpg"
                 alt="salvajenada en Ibero 90.9"
               />
             )}
@@ -815,7 +815,7 @@ const Intro = styled(CommonSection)`
 const Land = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${props => props.theme.colors.background};
-  background-image: url("/static/assets/img/casestudies/salvajenada/landBack.svg");
+  background-image: url("/assets/img/casestudies/salvajenada/landBack.svg");
   background-position: center bottom;
   background-size: cover;
   svg {

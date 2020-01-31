@@ -79,5 +79,5 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   )}
 </urlset>`;
 
-fs.writeFileSync("static/sitemap.xml", sitemapXml);
+fs.writeFileSync("public/sitemap.xml", sitemapXml);
 console.log("sitemap.xml saved!");

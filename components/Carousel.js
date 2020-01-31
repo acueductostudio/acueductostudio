@@ -3,7 +3,7 @@ import { useInView } from "react-hook-inview";
 import styled from "styled-components";
 import LangContext from "utils/LangContext";
 import useInterval from "utils/useInterval";
-import Holed from "static/assets/img/layout/holed.svg";
+import Holed from "public/assets/img/layout/holed.svg";
 
 const Carousel = () => {
   const [activeIndex, setIndex] = useState(0);

@@ -75,8 +75,8 @@ const walk = dir => {
 
   return next();
 };
-
-const allFiles = walk("static/assets/img/");
+//No es claro si debe decir public o no
+const allFiles = walk("public/assets/img/");
 
 allFiles.forEach(file => {
   if (file.toLowerCase().lastIndexOf(".png") === file.length - 4) {

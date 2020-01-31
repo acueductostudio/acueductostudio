@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
-import Cross from "static/assets/img/layout/cross.svg";
+import Cross from "public/assets/img/layout/cross.svg";
 import BorderLink from "components/shared/BorderedLink";
 
 const CookieMessage = props => {

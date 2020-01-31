@@ -20,31 +20,31 @@ export default class MyDocument extends Document {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/static/assets/favicon/apple-touch-icon.png"
+            href="/assets/favicon/apple-touch-icon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/static/assets/favicon/favicon-32x32.png"
+            href="/assets/favicon/favicon-32x32.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/static/assets/favicon/favicon-16x16.png"
+            href="/assets/favicon/favicon-16x16.png"
           />
-          <link rel="manifest" href="/static/manifest.json" />
+          <link rel="manifest" href="/manifest.json" />
           <link
             rel="mask-icon"
-            href="/static/assets/favicon/safari-pinned-tab.svg"
+            href="/assets/favicon/safari-pinned-tab.svg"
             color="#1740bf"
           />
-          <link rel="shortcut icon" href="/static/assets/favicon/favicon.ico" />
+          <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
           <meta name="msapplication-TileColor" content="#1740bf" />
           <meta
             name="msapplication-config"
-            content="/static/assets/favicon/browserconfig.xml"
+            content="/assets/favicon/browserconfig.xml"
           />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#F4F4F4" />

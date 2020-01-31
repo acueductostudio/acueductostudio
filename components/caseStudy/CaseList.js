@@ -25,7 +25,7 @@ const SingleCase = props => {
             <VidContainer>
               {props.lang === "en" ? "go to project" : "visitar proyecto"}
               <Logo
-                src={`/static/assets/img/casestudies/${props.link}/portfolio_logo.svg`}
+                src={`/assets/img/casestudies/${props.link}/portfolio_logo.svg`}
                 alt={`logo_${props.link}`}
               />
               <video
@@ -34,10 +34,10 @@ const SingleCase = props => {
                 muted
                 autoPlay={props.noPlay ? false : true}
                 loop
-                poster={`/static/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
+                poster={`/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
               >
                 <source
-                  src={`/static/assets/video/casestudies/${props.link}/portfolio.mp4`}
+                  src={`/assets/video/casestudies/${props.link}/portfolio.mp4`}
                 />
               </video>
             </VidContainer>

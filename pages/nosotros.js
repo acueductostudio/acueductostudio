@@ -13,7 +13,7 @@ import Picture from "components/caseStudy/shared/Picture";
 const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
     <HeadLoader
-      src="/static/assets/img/layout/headPlacerHolder.jpg"
+      src="/assets/img/layout/headPlacerHolder.jpg"
       alt="3DScan"
     />
   ),

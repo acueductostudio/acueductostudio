@@ -19,7 +19,7 @@ export default function head(p) {
 
   p.preload = () => {
     // Load model with normalise (size of model is normalized)
-    teapot = p.loadModel("./../../static/assets/3d/male_head.obj", true);
+    teapot = p.loadModel("./../../public/assets/3d/male_head.obj", true);
   };
 
   p.myCustomRedrawAccordingToNewPropsHandler = props => {

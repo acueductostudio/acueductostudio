@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Arrows from "static/assets/img/layout/language.svg";
+import Arrows from "public/assets/img/layout/language.svg";
 import Router, { useRouter } from "next/router";
 
 function LanguageToggler({ hasLoaded, locale, toggleLang }) {

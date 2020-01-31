@@ -7,7 +7,7 @@ import { GLTFLoader } from "three";
 const Model = React.memo(props => {
   const ref = useRef();
   const light = useRef();
-  const gltf = useLoader(GLTFLoader, "/static/assets/3d/headexported.glb");
+  const gltf = useLoader(GLTFLoader, "/assets/3d/headexported.glb");
   const actualMouse = useRef([0, 0]);
   const easing = 0.05;
 

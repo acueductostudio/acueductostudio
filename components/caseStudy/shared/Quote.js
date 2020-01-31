@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Blockquote } from "components/shared/Dangerously";
-import Mark from "static/assets/img/layout/quoteMark.svg";
+import Mark from "public/assets/img/layout/quoteMark.svg";
 import Fade from "react-reveal/Fade";
 
 const Quote = props => (
@@ -29,6 +29,7 @@ const Author = styled.p`
   font-size: 2.5rem;
   margin-top: 25px;
   opacity: 1.4;
+  font-weight:200;
 `;
 const Label = styled.p`
   font-size: 1.1rem;

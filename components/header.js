@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Logo from "static/assets/img/layout/logo.svg";
+import Logo from "public/assets/img/layout/logo.svg";
 
 function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
   const backUp = e => {
