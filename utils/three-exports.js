@@ -70,7 +70,7 @@ export { BufferGeometry } from "three/src/core/BufferGeometry.js";
 // export { Object3D } from "three/src/core/Object3D.js";
 export { Raycaster } from "three/src/core/Raycaster.js";
 // export { Triangle } from "three/src/math/Triangle.js";
-export { _Math as Math } from "three/src/math/Math.js";
+export { MathUtils as Math } from "three/src/math/MathUtils.js";
 // export { Spherical } from "three/src/math/Spherical.js";
 // export { Cylindrical } from "three/src/math/Cylindrical.js";
 // export { Plane } from "three/src/math/Plane.js";
