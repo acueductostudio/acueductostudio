@@ -35,13 +35,15 @@ const TitleSectionGrid = styled.div`
     max-width: 445px;
     grid-column: 7 / span 5;
   }
+  @media (max-width: 1250px) {
+    h1 {
+      font-size: 6rem;
+    }
+  }
   @media (max-width: 1100px) {
     p,
     a {
       grid-column: 5 / span 6;
-    }
-    h1 {
-      font-size: 6rem;
     }
   }
   @media (max-width: 950px) {
