@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Tooltip from "react-tooltip-lite";
 import Fade from "react-reveal/Fade";
 import TitleSection from "components/shared/TitleSection";
+import Products from "components/shared/Products";
 import PinnedSection from "components/shared/PinnedSection";
 import { P, H2, H3 } from "components/shared/Dangerously";
 import createMarkup from "utils/createMarkup";
@@ -13,11 +14,6 @@ import Logo from "public/assets/img/layout/logo.svg";
 
 import DigitalTransformation from "public/assets/img/layout/icons/digitaltransformation.svg";
 import StrategicDesign from "public/assets/img/layout/icons/strategicdesign.svg";
-
-import Apps from "public/assets/img/layout/icons/apps.svg";
-import Products from "public/assets/img/layout/icons/products.svg";
-import Branding from "public/assets/img/layout/icons/branding.svg";
-import Marketing from "public/assets/img/layout/icons/marketing.svg";
 
 import Tesla from "public/assets/img/layout/logos/tesla.svg";
 import Nike from "public/assets/img/layout/logos/nike.svg";
@@ -82,8 +78,6 @@ import Review from "public/assets/img/layout/icons/review.svg";
 const roleModelArray = [Tesla, Nike, Burberry, Cemex, Starbucks, Hasbro];
 
 const stepIconArray = [Discover, Envision, BuildStory, Craft, Launch, Review];
-
-const productIconArray = [Apps, Products, Branding, Marketing];
 
 const appsLogoArray = [
   { p: "Node Js", i: NodeLogo },
@@ -165,21 +159,6 @@ const RenderLogoList = ({ array }) => (
   </LogoList>
 );
 
-const ProductContainer = ({ index, title, p }) => {
-  const ProductIcon = productIconArray[index];
-  return (
-    <Product>
-      <Fade>
-        <div>
-          <ProductIcon />
-          <h2 dangerouslySetInnerHTML={createMarkup(title)} />
-        </div>
-      </Fade>
-      <P>{p}</P>
-    </Product>
-  );
-};
-
 const StepContainer = ({ index, title, p, li, p2 }) => {
   const StepIcon = stepIconArray[index];
   return (
@@ -195,7 +174,7 @@ const StepContainer = ({ index, title, p, li, p2 }) => {
               <li key={"li1" + index}>{item}</li>
             ))}
           </ul>
-          <br/>
+          <br />
           <p>{p2}</p>
         </Fade>
       </Step>
@@ -262,24 +241,13 @@ export default function Pitch(props) {
         <H2>{t.intro.subtitle4}</H2>
         <P>{t.intro.p4}</P>
       </PinnedSection>
-      <TitleSection
-        {...t.second_section}
-        borderTop
-      />
+      <TitleSection {...t.second_section} borderTop />
       <TitleSection
         title={t.products_section.title}
         p={t.products_section.p}
         borderTop
       />
-      <ProductsSection>
-        {t.products_section.products.map((product, index) => (
-          <ProductContainer
-            key={"product" + index}
-            index={index}
-            {...product}
-          />
-        ))}
-      </ProductsSection>
+      <Products list={t.products_section.products} />
       <TitleSection
         title={t.process_section.title}
         p={t.process_section.p}
@@ -287,11 +255,7 @@ export default function Pitch(props) {
       />
       <StepsSection>
         {t.process_section.steps.map((step, index) => (
-          <StepContainer
-            key={"step" + index}
-            index={index}
-            {...step}
-          />
+          <StepContainer key={"step" + index} index={index} {...step} />
         ))}
       </StepsSection>
       <TitleSection
@@ -370,111 +334,6 @@ const StyledHeadings = createGlobalStyle`
     }
     h2 {
       font-size: 2rem;
-    }
-  }
-`;
-
-const Product = styled.div`
-  display: flex;
-  flex-direction:column;
-  width: 100%;
-  position: relative;
-  margin-top: 10%;
-  div{
-    display: flex;
-    align-items: center;
-  }
-  h2{
-    display: inline-block;
-  }
-  p {
-    color: ${props => props.theme.colors.foreground_low};
-    flex-grow: 2;
-    max-width:390px;
-  }
-  svg {
-    max-width: 52px;
-    display: inline-block;
-    margin-right:5%;
-    * {
-      vector-effect: non-scaling-stroke;
-      stroke-width: ${props => props.theme.stroke};
-      /* stroke: ${props => props.theme.colors.foreground}; */
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    }
-  }
-`;
-
-const ProductsSection = styled.div`
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 2.2rem;
-  width: 100%;
-  display: grid;
-  padding: 0 4% 10% 4%;
-  ${Product} {
-    :nth-of-type(1),
-    :nth-of-type(3),
-    :nth-of-type(5) {
-      grid-column: 3 / span 4;
-    }
-
-    :nth-of-type(2),
-    :nth-of-type(4),
-    :nth-of-type(6) {
-      grid-column: 7 / span 4;
-    }
-
-    :nth-of-type(1),
-    :nth-of-type(2) {
-      margin-top: 0;
-    }
-  }
-  @media (max-width: 1350px) {
-    ${Product} {
-      :nth-of-type(1),
-      :nth-of-type(3),
-      :nth-of-type(5) {
-        grid-column: 2 / span 5;
-      }
-      :nth-of-type(2),
-      :nth-of-type(4),
-      :nth-of-type(6) {
-        grid-column: 7 / span 5;
-      }
-      div {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      h2 {
-        margin-top: 10px;
-      }
-      svg {
-        height: auto;
-      }
-    }
-  }
-  @media (max-width: 1000px) {
-    ${Product} {
-      p {
-        font-size: 1.4rem;
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    ${Product} {
-      :nth-of-type(1),
-      :nth-of-type(3),
-      :nth-of-type(5) {
-        grid-column: 1 / span 6;
-      }
-      :nth-of-type(2),
-      :nth-of-type(4),
-      :nth-of-type(6) {
-        grid-column: 7 / span 6;
-      }
     }
   }
 `;
