@@ -1,15 +1,14 @@
-import { useContext } from "react";
+import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
-import TitleSection from "components/shared/TitleSection";
 import Fade from "react-reveal/Fade";
-import LangContext from "utils/LangContext";
+import { H3 } from "components/shared/Dangerously";
 
 const Services = () => {
-  const context = useContext(LangContext);
+  const context = useLocaleContext();
   const { intro, service_categories } = context.home_page.services;
   return (
     <ServicesSection id={context.lang == "en" ? "services" : "servicios"}>
-      <TitleSection {...intro} borderTop />
+      <H3>{intro.title}</H3>
       <ServiceGrid>
         {service_categories.map((service, index) => (
           <Service key={"service" + index}>
@@ -124,4 +123,33 @@ const Service = styled.div`
 const ServicesSection = styled.section`
   color: ${props => props.theme.colors.foreground};
   background-color: ${props => props.theme.colors.background};
+  h3 {
+    color: ${props => props.theme.colors.accent};
+    text-align: center;
+    margin-top: 10%;
+    font-size: 4rem;
+    font-weight: 300;
+    padding-bottom: 2%;
+  }
+  @media (max-width: 1250px) {
+    h3 {
+      font-size: 3.5rem;
+    }
+  }
+  @media (max-width: 950px) {
+    h3 {
+      font-size: 3.2rem;
+      padding-bottom: 4%;
+    }
+  }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 2.8rem;
+    }
+  }
+  @media (max-width: 600px) {
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
 `;

@@ -242,12 +242,7 @@ export default function Pitch(props) {
         <P>{t.intro.p4}</P>
       </PinnedSection>
       <TitleSection {...t.second_section} borderTop />
-      <TitleSection
-        title={t.products_section.title}
-        p={t.products_section.p}
-        borderTop
-      />
-      <Products list={t.products_section.products} />
+      <Products showLongText />
       <TitleSection
         title={t.process_section.title}
         p={t.process_section.p}

@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { useLocaleContext } from "utils/LangContext";
 import Fade from "react-reveal/Fade";
-import { P } from "components/shared/Dangerously";
+import TitleSection from "components/shared/TitleSection";
 import createMarkup from "utils/createMarkup";
 
 import Apps from "public/assets/img/layout/icons/apps.svg";
@@ -11,30 +12,46 @@ import Marketing from "public/assets/img/layout/icons/marketing.svg";
 const productIconArray = [Apps, DigitalProducts, Branding, Marketing];
 const letterArray = ["a", "b", "c", "d"];
 
-const ProductContainer = ({ index, title, p }) => {
+const ProductContainer = ({
+  index,
+  title,
+  p,
+  pitchDescription,
+  showLongText
+}) => {
   const ProductIcon = productIconArray[index];
   const letter = letterArray[index];
   return (
-    <Product>
+    <Product showLongText={showLongText}>
       <Fade>
         <span>{letter}.</span>
         <ProductIcon />
-        <h2 dangerouslySetInnerHTML={createMarkup(title)} />
-        <p dangerouslySetInnerHTML={createMarkup(p)} />
+        <div>
+          <h2 dangerouslySetInnerHTML={createMarkup(title)} />
+          <p
+            dangerouslySetInnerHTML={createMarkup(
+              showLongText && pitchDescription ? pitchDescription : p
+            )}
+          />
+        </div>
       </Fade>
     </Product>
   );
 };
 
-const Products = ({ list }) => {
+const Products = ({ showLongText }) => {
+  const context = useLocaleContext();
+  const { intro, products } = context.pitch_page.products_section;
   return (
     <ProductsSection>
+      <TitleSection {...intro} borderTop />
       <ProductsList>
-        {list.map((product, index) => (
+        {products.map((product, index) => (
           <ProductContainer
             key={"product" + index}
             index={index}
             {...product}
+            showLongText={showLongText}
           />
         ))}
       </ProductsList>
@@ -48,6 +65,7 @@ const Product = styled.div`
   padding: 10%;
   display: flex;
   flex-direction: column;
+  justify-content:space-between;
   border: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
@@ -93,7 +111,7 @@ const Product = styled.div`
   }
   svg {
     max-width: 100px;
-    margin: 10% auto;
+    margin:${props => (props.showLongText ? "10%" : "22%")} auto;
     display: block;
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     * {
@@ -135,16 +153,19 @@ const ProductsList = styled.div`
   width: 100%;
   ${Product} {
     :nth-of-type(1) {
-     grid-column-start: 2;
+      grid-column-start: 2;
       border-left: ${props =>
         props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
     }
+    :nth-of-type(2) {
+      border-right: 0;
+    }
     :nth-of-type(3) {
-      margin-top:-2px;
-      border-right:0;
+      margin-top: -2px;
+      border-right: 0;
     }
     :nth-of-type(4) {
-      border-top:0;
+      border-top: 0;
       border-left: ${props =>
         props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
     }
@@ -154,17 +175,20 @@ const ProductsList = styled.div`
     ${Product} {
       :nth-of-type(1) {
         grid-column-start: 1;
+        border-left: 0;
       }
       :nth-of-type(4) {
-        border-left:0;
+        border-left: 0;
+        border-right: 0;
       }
       :nth-of-type(3) {
         border-right: ${props =>
-        props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
+          props.theme.stroke +
+          " solid " +
+          props.theme.colors.foreground_lowest};
       }
     }
   }
-
 `;
 
 const ProductsSection = styled.section`

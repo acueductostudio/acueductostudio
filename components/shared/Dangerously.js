@@ -25,6 +25,12 @@ export const H3 = ({ children, ...props }) => (
   </Fade>
 );
 
+export const H4 = ({ children, ...props }) => (
+  <Fade>
+    <h4 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+  </Fade>
+);
+
 export const B = ({ children, ...props }) => (
   <b {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );

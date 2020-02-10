@@ -248,7 +248,7 @@
     },
     "intro": {
       "title": "trabajando con socios, no para clientes",
-      "p": "En Acueducto somos testigos de los enormes beneficios de la co-creación y la estrecha colaboración. Por ello celebramos la importancia de las asociaciones; que a diferencia de otros estudios y agencias, nos permiten involucrarnos estructuralmente en cada proyecto. Junto a nuestros socios, trabajando desde la estrategia hasta el lanzamiento, logramos producir experiencias digitales que verdaderamente conectan con sus audiencias y causan un impacto positivo en marcas, negocios y comunidades por igual.<br/><br/>Siempre nos emocionan los nuevos retos y las conexiones que generan. Así como los problemas se convierten en proyectos, nuestros socios en amigos.",
+      "p": "A diferencia de las relaciones cliente-agencia, las asociaciones nos permiten involucrarnos estructuralmente en cada proyecto. Así, logramos producir en conjunto experiencias digitales que causan un impacto positivo en negocios y comunidades por igual.<br/><br/>Nos emocionan los nuevos retos y las conexiones que generan. Así como los problemas se convierten en proyectos, nuestros socios en amigos.",
       "link": ["/pitch", "pitch"],
       "linktext": "¿Tenemos tu atención?<br/>Lee nuestro"
     },
@@ -262,7 +262,7 @@
     ],
     "process": {
       "title": "con la estrategia<br/>en el núcleo",
-      "p": "Compartiremos una convicción contigo:<br/>La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles y áreas de oportunidad, así como la mejor forma de resolverlos.<br/><br/>Abordar los problemas desde el Diseño Estratégico significa desarrollar desde el inicio de cada proyecto, junto con nuestros socios, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
+      "p": "La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles, áreas de oportunidad y sus mejores soluciones.<br/><br/>Abordar los problemas desde el Diseño Estratégico significa desarrollar desde el inicio de cada proyecto, junto con nuestros socios, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
       "steps": [
         {
           "title": "descubre",
@@ -286,34 +286,35 @@
         },
         {
           "title": "evalúa",
-          "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.<br/>Nos volvemos mejores."
+          "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.<br/>Mejoramos."
         }
       ]
     },
     "studies": {
       "title": "resolvemos desafiantes retos de negocio",
-      "p": "Elaboramos estos casos de estudio para mostrar cómo una sólida y esmerada estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
+      "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
     },
     "services": {
       "intro": {
-        "title": "desde la ideación<br/>hasta el lanzamiento",
+        "title": "de la ideación al lanzamiento",
         "p": "– Y todo lo que involucra.<br/><br/>Nuestros proyectos favoritos son los que construimos desde el inicio con nuestros socios, por eso ofrecemos todas las etapas del desarrollo de una experiencia digital."
       },
       "service_categories": [
         {
-          "title": "Estrategia",
+          "title": "estrategia",
           "tags": [
             "Consultoría Digital",
+            "Investigación",
             "Administración de Proyectos",
-            "Marketing Digital",
-            "Community Management"
+            "Community Management",
+            "Publicidad Pautada"
           ]
         },
         {
-          "title": "Diseño y Contenido",
+          "title": "diseño y contenido",
           "tags": [
-            "Desarrollo Transmedia",
             "Dirección de Arte",
+            "Desarrollo Transmedia",
             "Diseño UX",
             "Motion Design",
             "Copywriting",
@@ -321,13 +322,13 @@
           ]
         },
         {
-          "title": "Desarrollo",
+          "title": "desarrollo",
           "tags": [
             "Prototipado",
             "Programación",
             "User Testing",
             "Integración de Plataformas",
-            "Deployment"
+            "Administración de Cambio"
           ]
         }
       ]
@@ -339,23 +340,23 @@
     "headerTitle": "Nosotros",
     "intro": {
       "title": "una dupla que hace crecer tu negocio",
-      "p": "Sin darnos cuenta, comenzamos este estudio 15 años atrás al enamorarnos de la tecnología y las culturas alternativa y pop. Al crecer juntos, impulsados por ambas perspectivas, siempre nos inspiramos a ser mejores. Compartiendo diseños, ideas de negocios o proyectos personales, siempre encontramos fascinante la mente del otro.<br/><br/>Motivados por la innovación y los altos estándares de calidad, unimos nuestros caminos profesionales para poder crear inspiradoras experiencias digitales.<br/><br/>Acueducto no es sólo un estudio, es el resultado de un trayectoria que nos ha tomado años construir, como nuestra amistad."
+      "p": "Sin darnos cuenta, comenzamos este estudio 15 años atrás creciendo juntos y compartiendo diseños, proyectos personales y profesionales.<br/><br/>Motivados por la innovación y los altos estándares de calidad, unimos nuestros caminos profesionales para crear inspiradoras experiencias digitales.<br/><br/>Acueducto no es sólo un estudio, es el resultado de un trayectoria que nos ha tomado años construir, como nuestra amistad."
     },
     "team": [
       {
-        "name": "rodrigo salmerón",
-        "position": "diseño y desarrollo",
-        "bio": "Diseñador de interacción, visual y de movimiento; también desarrollador apasionado con una Maestría en Diseño de Interacción en The Harbour Space University en Barcelona con 9 años de experiencia como freelance.<br/><br/>Ha trabajado para agencias de diseño, productoras de cine y desarrolladoras de software.<br/><br/>Rodrigo es también productor musical, compositor y letrista. Y ya se trate de música, código o de interacciones entre humanos y máquinas, siempre busca nuevos retos para probar las últimas herramientas tecnológicas."
+        "name": "rodrigo<br/>salmerón",
+        "position": "diseño y desarrollo / cofundador",
+        "bio": "Diseñador de interacción, visual y de movimiento; también desarrollador de software con una Maestría en Diseño de Interacción en The Harbour Space University con 9 años de experiencia como freelance.<br/><br/>Ha trabajado para agencias de diseño, productoras de cine y desarrolladoras de software.<br/><br/>Rodrigo es también productor musical, compositor y letrista. Y ya se trate de música, código o de interacciones humano-máquina, siempre busca nuevos retos para probar las últimas herramientas tecnológicas."
       },
-       {
-        "name": "artemio pedraza",
-        "position": "estrategia y comunicación",
-        "bio": "Un estratega en comunicación, <i>project manager</i> y <i>community manager</i> con cinco años de experiencia como freelance.<br/><br/>También ha trabajado en <i>copywriting</i>, <i>community management</i> y como consultor de marketing. Es uno de los pocos licenciados en Comunicación Digital en México.<br/><br/>Cuando no está dirigiendo el departamento de estrategias o administrando un proyecto en Acueducto, trabaja en su disquera independiente Bludot, donde representa artistas y gira por el mundo tocando batería para Wet Baes."
+      {
+        "name": "artemio<br/>pedraza",
+        "position": "estrategia y comunicación / cofundador",
+        "bio": "Estratega en comunicación, <i>project manager</i> y <i>community manager</i> con cinco años de experiencia como freelance.<br/><br/>También se ha desarrollado en ámbitos como <i>content management</i>, consultoría de marketing y <i>copywriting</i>. Es uno de los primeros especialistas en Comunicación Digital en México.<br/><br/>Cuando no está dirigiendo el departamento de estrategias en Acueducto, maneja artistas en su sello discográfico digital Bludot."
       }
     ],
     "values": {
       "title": "construyendo mejores comunidades",
-      "p": "Para el beneficio de los usuarios finales, así como el de nuestros socios, siempre buscamos formas de crear un impacto positivo con nuestro trabajo.<br/><br/>Por eso fundamos Acueducto, para hacer las preguntas incómodas, evaluar el terreno en el que estamos parados y así ayudar a marcas y negocios a mejorar su entorno y empoderar a sus usuarios.",
+      "p": "Para el beneficio de los usuarios finales, así como el de nuestros socios, buscamos crear un impacto positivo con nuestro trabajo.<br/><br/>Por eso fundamos Acueducto, para hacer las preguntas incómodas, evaluar el terreno en el que estamos parados y así ayudar a marcas y negocios a mejorar su entorno y empoderar a sus usuarios.",
       "link": ["/manifiesto", "Manifiesto"],
       "linktext": "Lee nuestro"
     }
@@ -385,24 +386,30 @@
       "p": "En Acueducto creemos firmemente en el valor de las asociaciones. A diferencia de la relación cliente-agencia que domina el mercado, asociarnos contigo nos permite involucrarnos en la estructura de tu proyecto para aplicar procesos de diseño y estrategias de mayor impacto."
     },
     "products_section": {
-      "title": "para desarrollar ideas innovadoras",
-      "p": "Lo que antes eran innovaciones, hoy son necesidades para todo negocio. Para mantener relevante tu compañía en los contextos digitales, puedes confiar en nosotros para desarrollar:",
+      "intro": {
+        "title": "para desarrollar ideas innovadoras",
+        "p": "Lo que antes eran innovaciones, hoy son necesidades para todo negocio. Para mantener relevante tu compañía en los contextos digitales, puedes confiar en nosotros para desarrollar:"
+      },
       "products": [
         {
-          "title": "apps web<br/>y móviles",
-          "p": "Desarrollar experiencias digitales que sean veloces, interactivas y atractivas visualmente te pondrá un paso más cerca de alcanzar tus objetivos de negocio. Pongamos a trabajar tu presencia web como una herramienta efectiva para tu negocio."
+          "title": "apps web y móviles",
+          "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación.",
+          "pitchDescription": "Desarrollar experiencias digitales que sean veloces, interactivas y atractivas visualmente te pondrá un paso más cerca de alcanzar tus objetivos de negocio. Pongamos a trabajar tu presencia web como una herramienta efectiva para tu negocio."
         },
         {
           "title": "productos<br/>y servicios digitales",
-          "p": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
+          "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen.",
+          "pitchDescription": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
         },
         {
           "title": "branding digital",
-          "p": "Tu marca es la reputación que has creado alrededor de tu negocio. Elevemos la percepción de tu producto, servicio u organización mediante dirección estratégica y artística, diseño visual y aplicaciones."
+          "p": "Eleva la percepción de tu producto, servicio u organización mediante dirección de arte y diseño estratégico.",
+          "pitchDescription": "Tu marca es la reputación que has creado alrededor de tu negocio. Elevemos la percepción de tu producto, servicio u organización mediante dirección estratégica y artística, diseño visual y aplicaciones."
         },
         {
           "title": "estrategias de<br/>marketing digital",
-          "p": "No desaproveches la manera más rápida y efectiva de conectar con casi la mitad de la población. Mediante estrategias de marketing y comunicación, publicidad pagada y contenidos creativos podemos potenciar tus ventas."
+          "p": "Potencializa tus ventas mediante estrategias de comunicación, publicidad pautada y contenidos creativos.",
+          "pitchDescription": "No desaproveches la manera más rápida y efectiva de conectar con casi la mitad de la población. Mediante estrategias de marketing y comunicación, publicidad pautada y contenidos creativos podemos potenciar tus ventas."
         }
       ]
     },

@@ -60,14 +60,29 @@ const Meta = props => {
 
       <meta property="og:site_name" content="Acueducto" />
       {props.image ? (
-        <meta property="og:image" content={`${props.image}`} />
+        <>
+          <meta
+            property="og:image"
+            content={`https://acueducto.studio/assets/img/og/${props.image}`}
+          />
+          <meta
+            property="og:image:alt"
+            content={
+              props.lang === "es"
+                ? "Caso de Estudio: Acueducto"
+                : "Acueducto's Case Study"
+            }
+          />
+        </>
       ) : (
-        <meta
-          property="og:image"
-          content="https://acueducto.studio/assets/img/og/og_main.jpg"
-        />
+        <>
+          <meta
+            property="og:image"
+            content="https://acueducto.studio/assets/img/og/og_main.jpg"
+          />
+          <meta property="og:image:alt" content="Acueducto Logo" />
+        </>
       )}
-      <meta property="og:image:alt" content="Acueducto Logo" />
       {props.canonical &&
         (props.lang == "es" ? (
           <>

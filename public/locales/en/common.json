@@ -296,24 +296,25 @@
     },
     "services": {
       "intro": {
-        "title": "from ideation<br/>to launch",
+        "title": "from ideation to launch",
         "p": "– And everything in between.<br/><br/> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
       },
       "service_categories": [
         {
-          "title": "Strategy",
+          "title": "strategy",
           "tags": [
             "Digital Consulting",
+            "Research",
             "Project Management",
-            "Digital Marketing",
-            "Community Management"
+            "Community Management",
+            "Digital Advertising"
           ]
         },
         {
-          "title": "Design & Content",
+          "title": "design & content",
           "tags": [
-            "Transmedia Development",
             "Art Direction",
+            "Transmedia Development",
             "UX Design",
             "Motion Design",
             "Copywriting",
@@ -321,13 +322,13 @@
           ]
         },
         {
-          "title": "Development",
+          "title": "development",
           "tags": [
             "Prototyping",
             "Development",
             "User Testing",
             "Platform Integration",
-            "Deployment"
+            "Change Management"
           ]
         }
       ]
@@ -342,14 +343,14 @@
       "p": "Without us knowing, we started this studio 15 years ago when we began to fall in love with technology, alternative & pop culture. Growing up together, and driven by each other’s perspectives, we would always push ourselves forward; and everytime we shared a design or a business idea, we felt fascinated by the mind of the other.<br/><br/>Motivated by high standards and innovation, we joined our professional paths in order to create thoughtful and powerful digital experiences.<br/><br/>Acueducto is not just a studio, it is the result of a journey that has taken many years to build, as has our own friendship."
     },
     "team": [
-     {
-        "name": "rodrigo salmerón",
-        "position": "design & development",
+      {
+        "name": "rodrigo<br/>salmerón",
+        "position": "design & development / co-founder",
         "bio": "An interaction, visual, and motion designer and an open-source-passionate developer with an Interaction Design Master of Arts from The Harbour Space University in Barcelona and 7 years of experience as a freelancer. <br/><br/>He has also worked for several design firms, film production houses, and development companies.<br/><br/>Rodrigo is also a music producer, composer, and lyricist; and whether it’s about music, coding or human-machine interactions, he’s always looking for new challenges and trying out the latest tools."
       },
       {
-        "name": "artemio pedraza",
-        "position": "strategy & communication",
+        "name": "artemio<br/>pedraza",
+        "position": "strategy & communication / co-founder",
         "bio": "A communication strategist, project and community manager with five years of experience as a freelancer.<br/><br/>He has also gone from copywriter to community manager and marketing consultant, and he’s one of the few licenced digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own record label Bludot, manages artists, and tours the world playing drums for Wet Baes."
       }
     ],
@@ -385,8 +386,10 @@
       "p": "In Acueducto we firmly believe in the value of partnerships. Unlike the client-agency relationship that dominates the market, partnering with you allows us to get involved in the structure of your project and apply design processes and strategies of greater impact."
     },
     "products_section": {
-      "title": "to develop innovative ideas",
-      "p": "What used to be innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:",
+      "intro": {
+        "title": "to develop innovative ideas",
+        "p": "What used to be innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
+      },
       "products": [
         {
           "title": "mobile<br/>and web apps",

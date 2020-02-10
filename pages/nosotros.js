@@ -7,15 +7,13 @@ import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
 import PinnedSection from "components/shared/PinnedSection";
-import { P } from "components/shared/Dangerously";
+import { P, H4 } from "components/shared/Dangerously";
 import Picture from "components/caseStudy/shared/Picture";
+import Process from "components/shared/Process";
 
 const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
-    <HeadLoader
-      src="/assets/img/layout/headPlacerHolder.jpg"
-      alt="3DScan"
-    />
+    <HeadLoader src="/assets/img/layout/headPlacerHolder.jpg" alt="3DScan" />
   ),
   ssr: false
 });
@@ -48,14 +46,15 @@ function About(props) {
                 rotationStart={index > 0 ? 50 : 0}
               />
             )}
+            <H4>{person.name}</H4>
             <Fade>
-              <h4>{person.name}</h4>
               <span>{person.position}</span>
             </Fade>
             <P>{person.bio}</P>
           </Person>
         ))}
       </PinnedSection>
+      <Process />
       <TitleSection {...t.values} borderTop />
       <ContactFooter />
     </PageClipper>
@@ -79,14 +78,16 @@ const Person = styled.div`
   margin-top: 20%;
   h4 {
     font-size: 4.5rem;
-    margin-bottom: 3%;
+    margin-bottom: 3.5%;
+    font-weight: 200;
+    line-height: 1;
   }
   span {
     color: ${props => props.theme.colors.accent_smalltext};
     text-transform: uppercase;
     font-size: 1.1rem;
-    letter-spacing: 3.5px;
-    margin-bottom: 4%;
+    letter-spacing: 2.5px;
+    margin-bottom: 3.5%;
     font-weight: 300;
   }
   @media (max-width: 1250px) {
