@@ -22,22 +22,19 @@ class MyApp extends App {
       hasLoaded: false,
       readyToScroll: false
     };
-    this.toggleLang = this.toggleLang.bind(this);
-    this.consentToCookies = this.consentToCookies.bind(this);
-    this.checkForConsent = this.checkForConsent.bind(this);
   }
 
   authenticate() {
     return new Promise(resolve => setTimeout(resolve, 1500)); //1500
   }
 
-  toggleLang(lang) {
+  toggleLang = lang => {
     let language = lang === "en" ? en : es;
     Cookies.set("chosenLang", lang);
     this.setState({
       locale: language
     });
-  }
+  };
 
   handleRouteComplete = url => {
     var _myself = this;
@@ -111,7 +108,7 @@ class MyApp extends App {
     Router.events.off("routeChangeError", this.handleRouteError);
   }
 
-  checkForConsent() {
+  checkForConsent = () => {
     // Check if cookie message has been closed before
     var _C = Cookies.get("showCookieMessage");
     if (_C === undefined) {
@@ -119,12 +116,12 @@ class MyApp extends App {
     } else if (_C === "false") {
       this.setState({ hasToConsent: false });
     }
-  }
+  };
 
-  consentToCookies() {
+  consentToCookies = () => {
     Cookies.set("showCookieMessage", "false");
     this.setState({ hasToConsent: false });
-  }
+  };
 
   render() {
     const { Component, pageProps } = this.props;

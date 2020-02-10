@@ -1,8 +1,7 @@
+import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
-import { useContext } from "react";
 import TitleSection from "components/shared/TitleSection";
 import Fade from "react-reveal/Fade";
-import LangContext from "utils/LangContext";
 import createMarkup from "utils/createMarkup";
 import i1 from "public/assets/img/layout/icons/discover.svg";
 import i2 from "public/assets/img/layout/icons/envision.svg";
@@ -28,7 +27,7 @@ const StepContainer = ({ index, title, p }) => {
 };
 
 const Process = () => {
-  const context = useContext(LangContext);
+  const context = useLocaleContext();
   const { title, p, steps } = context.home_page.process;
   return (
     <ProcessSection>

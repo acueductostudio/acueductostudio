@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { useLocaleContext } from "utils/LangContext";
+import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import TitleSection from "components/shared/TitleSection";
 import createMarkup from "utils/createMarkup";
@@ -65,7 +65,7 @@ const Product = styled.div`
   padding: 10%;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   border: ${props =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
@@ -73,21 +73,9 @@ const Product = styled.div`
     &:hover {
       svg {
         transform: scale(1.05);
-        /* .accentdisco {
-          transform: translate(18px, -4px) scale(0.92);
+        p {
+          color: ${props => props.theme.colors.foreground};
         }
-        .accent {
-          transform: translateY(-10px) scale(1.02);
-        }
-        .accentcubo {
-          transform: translate(-4px, -9px);
-        }
-        .accentrock {
-          transform: translateY(-10px) scale(1.05);
-        } */
-      }
-      p {
-        color: ${props => props.theme.colors.foreground};
       }
     }
   }
@@ -111,25 +99,18 @@ const Product = styled.div`
   }
   svg {
     max-width: 100px;
-    margin:${props => (props.showLongText ? "10%" : "22%")} auto;
+    margin: ${props => (props.showLongText ? "10%" : "22%")} auto;
     display: block;
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    will-change: transform;
     * {
       vector-effect: non-scaling-stroke;
       stroke-width: ${props => props.theme.stroke};
-      /* stroke: ${props => props.theme.colors.foreground}; */
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
       transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
-    /* .accent,
-    .accentdisco,
-    .accentcubo,
-    .accentrock {
-      stroke: ${props => props.theme.colors.accent};
-      will-change: transform;
-    } */
   }
   @media (max-width: 1000px) {
     h2 {

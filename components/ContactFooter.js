@@ -1,15 +1,15 @@
+import { useState } from "react";
+import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
-import { useState, useContext } from "react";
 import { H1 } from "components/shared/Dangerously";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import Logo from "public/assets/img/layout/logo.svg";
 import Mail from "public/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { logEvent } from "utils/analytics";
-import LangContext from "utils/LangContext";
 
 const ContactFooter = () => {
-  const context = useContext(LangContext);
+  const context = useLocaleContext();
   let { title, p, copied_text, copy_text } = context.contact_footer;
 
   const [copied, setCopied] = useState(false);
