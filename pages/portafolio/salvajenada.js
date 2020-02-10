@@ -105,7 +105,7 @@ export default function Salvajenada(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        image={"og_salvajenada.png"}
+        image={"og_image_salvajenada.png"}
         canonical={"https://acueducto.studio/portafolio/salvajenada"}
         en_canonical={"https://acueducto.studio/en/work/salvajenada"}
         lang={props.lang}

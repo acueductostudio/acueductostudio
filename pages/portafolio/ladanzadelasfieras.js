@@ -49,7 +49,7 @@ function LaDanzaDeLasFieras(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        image={"og_lddlf.png"}
+        image={"og_image_lddlf.png"}
         canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
         en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
         lang={props.lang}
