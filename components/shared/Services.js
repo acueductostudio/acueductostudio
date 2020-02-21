@@ -34,7 +34,8 @@ export default React.memo(Services);
 const Info = styled.div`
   width: auto;
   h4 {
-    font-weight: 300;
+    font-weight: 200;
+    font-size:2.5rem;
   }
 `;
 
@@ -84,6 +85,9 @@ const Service = styled.div`
   @media (max-width: 1000px) {
     padding: 12%;
     align-items: flex-start;
+    h4{
+      font-size:2rem;
+    }
     ul li {
       font-size: 1.5rem;
       &:before {
@@ -92,22 +96,19 @@ const Service = styled.div`
     }
   }
   @media (max-width: 800px) {
-    padding: 10% 0 10% 10%;
+    padding: 5% 0 5% 5%;
     border-right: 0;
     &:nth-child(1),
     &:nth-child(2) {
       border-bottom: none;
     }
     h4 {
-      font-size: 2.5rem;
+      font-size: 2.15rem;
     }
     ul {
       margin-top: 8px;
       li {
         font-size: 1.6rem;
-        &:before {
-          content: "";
-        }
       }
     }
   }
@@ -115,7 +116,11 @@ const Service = styled.div`
     padding: 5% 0 5% 5%;
     h4 {
       text-transform: lowercase;
-      font-size: 2.3rem;
+      font-size: 2.1rem;
+      font-weight:200;
+    }
+    ul li {
+      font-size: 1.5rem;
     }
   }
 `;
@@ -129,7 +134,8 @@ const ServicesSection = styled.section`
     margin-top: 10%;
     font-size: 4rem;
     font-weight: 300;
-    padding-bottom: 2%;
+    padding: 0 4% 4% 4%;
+    line-height: 1;
   }
   @media (max-width: 1250px) {
     h3 {
@@ -150,6 +156,11 @@ const ServicesSection = styled.section`
   @media (max-width: 600px) {
     h3 {
       font-size: 2.5rem;
+    }
+  }
+  @media (max-width: 420px) {
+    h3 {
+      padding-bottom: 6%;
     }
   }
 `;
