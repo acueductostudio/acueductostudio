@@ -7,22 +7,7 @@
     "p": "Escucha Cuando el río suena; el podcast donde exploraremos la visión de personajes emblemáticos de la estrategia, el diseño y la tecnología. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     "podcasts": [
       {
-        "code": "e01",
-        "url": "https://open.spotify.com/embed-podcast/episode/0L0fOjKHYXkSZNz6pKCjEa",
-        "title": "El futuro del Branding con Mauro",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-      },
-      {
-        "code": "e02",
-        "url": "https://open.spotify.com/embed-podcast/episode/5ysIcRyUgDFhV3coEkFm8a",
-        "title": "El futuro del Branding con Mauro",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
-      },
-      {
-        "code": "e03",
-        "url": "https://open.spotify.com/embed-podcast/episode/712ngHoTS8vOeQ0R19bWXn",
-        "title": "El futuro del Branding con Mauro",
-        "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+        "url": "https://open.spotify.com/embed-podcast/episode/2QrGlwcYJLt8Dit9PJOQNY"
       }
     ]
   }

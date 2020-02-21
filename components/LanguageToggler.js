@@ -72,20 +72,22 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   };
 
   return (
-    <Toggler reveal={hasLoaded}>
-      <a onClick={handleLink}>
-        <English>
-          <span>
-            {locale.lang === "es" ? "switch language" : "cambiar idioma"}
-          </span>
-          {locale.lang === "es" ? "english" : "español"}
-        </English>
+    router.asPath !== "/podcast" && (
+        <Toggler reveal={hasLoaded}>
+          <a onClick={handleLink}>
+            <English>
+              <span>
+                {locale.lang === "es" ? "switch language" : "cambiar idioma"}
+              </span>
+              {locale.lang === "es" ? "english" : "español"}
+            </English>
 
-        <Stable>
-          <Arrows />
-        </Stable>
-      </a>
-    </Toggler>
+            <Stable>
+              <Arrows />
+            </Stable>
+          </a>
+        </Toggler>
+    )
   );
 }
 export default React.memo(LanguageToggler);

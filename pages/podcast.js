@@ -7,6 +7,8 @@ import Fade from "react-reveal/Fade";
 import es from "public/locales/es/podcast.json";
 import Logo from "public/assets/img/layout/logo.svg";
 import Spotify from "public/assets/img/casestudies/salvajenada/spotify.svg";
+import Apple from "public/assets/img/layout/applepodcasts.svg";
+import Google from "public/assets/img/layout/googlepodcasts.svg";
 
 function Podcast(props) {
   let {
@@ -38,9 +40,27 @@ function Podcast(props) {
         <p>{p}</p>
         <LogoList>
           <p>escúchalo en </p>
-          <Spotify />
-          <Spotify />
-          <Spotify />
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/acueducto.studio/"
+          >
+            <Spotify />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/acueducto.studio/"
+          >
+            <Apple />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.instagram.com/acueducto.studio/"
+          >
+            <Google />
+          </a>
         </LogoList>
         <PodcastList>
           {podcasts.map((pod, index) => (
@@ -106,7 +126,7 @@ const Pod = styled.li`
   position: relative;
   margin-bottom: 5%;
   iframe {
-    height: 150px;
+    height: 160px;
     width: 100%;
   }
 `;
@@ -123,5 +143,12 @@ const LogoList = styled.div`
     width: 30px;
     box-sizing: content-box;
     padding: 0 10px 0 10px;
+    transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    }
   }
 `;
