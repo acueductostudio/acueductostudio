@@ -39,15 +39,15 @@ function Podcast(props) {
         </span>
         <p>{p}</p>
         <LogoList>
-          <p>escúchalo en </p>
+          <p>Escúchalo en </p>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/acueducto.studio/"
+            href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
           >
             <Spotify />
           </a>
-          <a
+          {/* <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.instagram.com/acueducto.studio/"
@@ -60,7 +60,7 @@ function Podcast(props) {
             href="https://www.instagram.com/acueducto.studio/"
           >
             <Google />
-          </a>
+          </a> */}
         </LogoList>
         <PodcastList>
           {podcasts.map((pod, index) => (
@@ -85,6 +85,9 @@ export default React.memo(Podcast);
 
 const PodcastGrid = styled.div`
   background-color: ${props => props.theme.colors.background};
+  background-image: url("assets/img/layout/podcast_back.svg");
+  background-size: cover;
+  background-position: top right;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 0.2rem 2.5rem;
   width: 100%;
@@ -108,10 +111,44 @@ const PodcastGrid = styled.div`
     }
   }
   p {
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 8;
     padding-top: 2.5rem;
     color: ${props => props.theme.colors.foreground_low};
     position: relative;
+    max-width: 600px;
+  }
+  @media (max-width: 1250px) {
+    h1 {
+      font-size: 6rem;
+    }
+  }
+  @media (max-width: 950px) {
+    h1 {
+      font-size: 5rem;
+    }
+  }
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 600px) {
+    p,
+    h1,
+    span,
+    div,
+    ul {
+      grid-column-start: 1;
+    }
+    p {
+      grid-column-end: 12;
+    }
+    h1 {
+      line-height: 0.9;
+      padding-top: 5%;
+      padding-bottom: 3%;
+      grid-column-end: 12;
+    }
   }
 `;
 
@@ -119,6 +156,12 @@ const PodcastList = styled.ul`
   grid-column: 2 / span 7;
   list-style: none;
   margin-top: 5%;
+  @media (max-width: 950px) {
+    grid-column: 2 / span 10;
+  }
+  @media (max-width: 600px) {
+    grid-column: 2 / span 12;
+  }
 `;
 
 const Pod = styled.li`
@@ -137,7 +180,11 @@ const LogoList = styled.div`
   align-items: center;
   padding-top: 2.5rem;
   p {
-    padding: 0 10px 0 0;
+    padding: 0 6px 0 0;
+  }
+  a {
+    display: flex;
+    max-height:30px;
   }
   svg {
     width: 30px;

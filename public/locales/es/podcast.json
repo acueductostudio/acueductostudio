@@ -1,13 +1,13 @@
 {
   "podcast_page": {
     "page_title": "Cuando el río suena – Podcast por Acueducto",
-    "meta_description": "XXXXXXX",
+    "meta_description": "Conoce las mejores prácticas de expertos y emprendedores en la industria tecnológica.",
     "headerTitle": "Podcast",
     "title": "cuando el río suena",
-    "p": "Escucha Cuando el río suena; el podcast donde exploraremos la visión de personajes emblemáticos de la estrategia, el diseño y la tecnología. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    "p": "En Cuando el río suena exploramos la visión y conocimientos de agentes expertos y emprendedores del mundo digital. Entrevistamos a estrategas, diseñadores y profesionales tecnológicos para compartir sus mejores prácticas con nuestra comunidad.",
     "podcasts": [
       {
-        "url": "https://open.spotify.com/embed-podcast/episode/2QrGlwcYJLt8Dit9PJOQNY"
+        "url": "https://open.spotify.com/embed-podcast/show/2YLB7SOeJsLp5DtDuIwX8t"
       }
     ]
   }

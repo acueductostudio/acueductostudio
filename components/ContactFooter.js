@@ -73,6 +73,7 @@ const MailPlaceholder = styled(Mail)`
 
 const Grid = styled(TitleSectionGrid)`
   background-color: ${props => props.theme.colors.accent};
+  box-shadow: 0px -3px 10px rgba(0,0,0,0.1);
   padding: 10% 4% 20% 4%;
   h1 {
     color: ${props => props.theme.colors.foreground};

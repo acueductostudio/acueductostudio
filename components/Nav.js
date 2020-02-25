@@ -53,7 +53,7 @@ export default function Nav(props) {
             <ul>{navItems}</ul>
           </NavList>
           <BottomNav>
-            <Registered>© MMXIX</Registered>
+            <Registered>© MMXX</Registered>
             <Social>
               <Hoverable
                 target="_blank"
