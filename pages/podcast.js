@@ -30,6 +30,7 @@ function Podcast(props) {
         title={page_title}
         description={meta_description}
         canonical={"https://acueducto.studio/podcast"}
+        image={"og_image_podcast.png"}
         lang={props.lang}
       />
       <PodcastGrid>
