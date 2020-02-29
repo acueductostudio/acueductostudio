@@ -21,6 +21,21 @@ function Newsletter(props) {
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(ibl, s);
     })();
+    var invite_referrals = window.invite_referrals || {};
+    (function() {
+      invite_referrals.auth = {
+        bid_e: "57318F34C22BD0DDC6E2877502255901",
+        bid: "29963",
+        t: "420",
+        email: "",
+        userParams: { fname: "" }
+      };
+      invite_referrals.async = false;
+      var script = document.createElement("script");
+      script.src = "//cdn.invitereferrals.com/js/invite-referrals-1.0.js";
+      var entry = document.getElementsByTagName("script")[0];
+      entry.parentNode.insertBefore(script, entry);
+    })();
   }, [props.locale]);
 
   const handleChange = event => {
@@ -49,6 +64,8 @@ function Newsletter(props) {
           align="middle"
           src="https://www.ref-r.com/campaign_user/p?brandid=29963&campaignid=24982&bid_e=57318F34C22BD0DDC6E2877502255901&t=420&email=&fname="
         ></iframe>
+        <div id="invtrflfloatbtn"></div>
+
         {/*                   <Subscribe>
 <div id="mc_embed_signup">
             <form
