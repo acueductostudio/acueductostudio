@@ -8,17 +8,6 @@ import PinnedSection from "components/shared/PinnedSection";
 function Gracias(props) {
   useEffect(() => {
     props.setTitle("gracias");
-    (function() {
-      var ibl = document.createElement("script");
-      ibl.type = "text/javascript";
-      ibl.async = true;
-      ibl.src =
-        ("https:" == document.location.protocol ? "https://" : "http://") +
-        "invitebox.com/invitation-camp/30455/invitebox-landing.js?hash=" +
-        escape(window.location.hash);
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(ibl, s);
-    })();
   }, [props.locale]);
 
   // const setCookie = () => {

@@ -7,9 +7,19 @@ import Cookies from "js-cookie/dist/js.cookie";
 
 function Newsletter(props) {
   const [emailValue, setEmailValue] = useState("");
-
   useEffect(() => {
     props.setTitle("newsletter");
+    (function() {
+      var ib = document.createElement("script");
+      ib.type = "text/javascript";
+      ib.async = true;
+      ib.src =
+        ("https:" == document.location.protocol ? "https://" : "http://") +
+        "invitebox.com/invitation-camp/30468/invitebox.js?key=23a75c877f15ddc01aa4ed85898945f7&jquery=" +
+        (typeof jQuery == "undefined");
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(ib, s);
+    })();
     (function() {
       var ibl = document.createElement("script");
       ibl.type = "text/javascript";
@@ -20,21 +30,6 @@ function Newsletter(props) {
         escape(window.location.hash);
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(ibl, s);
-    })();
-    var invite_referrals = window.invite_referrals || {};
-    (function() {
-      invite_referrals.auth = {
-        bid_e: "57318F34C22BD0DDC6E2877502255901",
-        bid: "29963",
-        t: "420",
-        email: "",
-        userParams: { fname: "" }
-      };
-      invite_referrals.async = false;
-      var script = document.createElement("script");
-      script.src = "//cdn.invitereferrals.com/js/invite-referrals-1.0.js";
-      var entry = document.getElementsByTagName("script")[0];
-      entry.parentNode.insertBefore(script, entry);
     })();
   }, [props.locale]);
 
@@ -57,17 +52,20 @@ function Newsletter(props) {
       />
       <PinnedSection title={"newsletter"}>
         <ol>Join our newsletter here: </ol>
-        <iframe
+        <a id="invitebox-href" href="https://invitebox.com/widget/30468/share">
+          referral program
+        </a>
+        {/* <iframe
           width="820px"
           height="380px"
           frameBorder="0"
           align="middle"
           src="https://www.ref-r.com/campaign_user/p?brandid=29963&campaignid=24982&bid_e=57318F34C22BD0DDC6E2877502255901&t=420&email=&fname="
         ></iframe>
-        <div id="invtrflfloatbtn"></div>
+        <div id="invtrflfloatbtn"></div> */}
 
-        {/*                   <Subscribe>
-<div id="mc_embed_signup">
+        <Subscribe>
+          {/* <div id="mc_embed_signup">
             <form
               action="https://studio.us19.list-manage.com/subscribe/post?u=c9d7bbb792de4cdbe363fad75&amp;id=434dbf9f3b"
               method="post"
@@ -89,7 +87,7 @@ function Newsletter(props) {
                   value={emailValue}
                   onChange={handleChange}
                 />
-                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> 
+                {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> 
                  <div
                 style={{ position: "absolute", left: "-5000px" }}
                 aria-hidden="true"
@@ -99,7 +97,7 @@ function Newsletter(props) {
                   name="b_c9d7bbb792de4cdbe363fad75_434dbf9f3b"
                   tabIndex="-1"
                 />
-              </div> 
+              </div>
                 <div>
                   <input
                     type="submit"
@@ -109,8 +107,8 @@ function Newsletter(props) {
                 </div>
               </div>
             </form>
-          </div>
-        </Subscribe> */}
+          </div> */}
+        </Subscribe>
       </PinnedSection>
     </PageClipper>
   );
