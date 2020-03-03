@@ -210,7 +210,7 @@ const BottomNav = styled.div`
       }
     }
   }
-  @media (max-width: 600px), (max-height: 450px) {
+  @media (max-width: 600px), (max-height: 700px) {
     display: flex;
     flex-flow: column-reverse;
     justify-content: flex-start;
@@ -247,15 +247,15 @@ const NavList = styled.nav`
   ul {
     list-style: none;
     li {
-      font-size: 6rem;
+      font-size: 5rem;
       position: relative;
-      padding-bottom: 5%;
+      padding-bottom: 4%;
       span {
         color: ${props => props.theme.colors.accent};
         font-size: 1.5rem;
         position: absolute;
-        left: -45px;
-        top: 49px;
+        left: -40px;
+        top: 38px;
         pointer-events: none;
       }
     }
@@ -263,7 +263,7 @@ const NavList = styled.nav`
   @media (max-width: 1400px) {
     grid-column-start: 4;
   }
-  @media (max-width: 600px), (max-height: 450px) {
+  @media (max-width: 600px), (max-height: 700px) {
     width: 100%;
     position: relative;
     flex: 0 0 auto;
@@ -271,13 +271,13 @@ const NavList = styled.nav`
       display: flex;
       flex-direction: column;
       li {
-        font-size: 5rem;
+        font-size: 4.5rem;
         display: inline-block;
         flex-direction: column;
         span {
           position: absolute;
           left: 0;
-          top: 6px;
+          top: 0px;
         }
       }
     }
@@ -331,14 +331,20 @@ const NavWrapper = styled.div`
       background-position: 0 93%;
     }
   }
-  @media (max-width: 600px), (max-height: 450px) {
+  @media (max-height: 700px) {
+    padding: 5% 4% 20px 4%;
+  }
+  @media (max-width: 600px), (max-height: 700px) {
     display: flex;
     flex: 0 0 auto;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 20% 4% 20px 4%;
+    /* padding: 20% 4% 20px 4%; */
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+  }
+  @media (max-width: 600px) {
+    padding: 20% 4% 20px 4%;
   }
   @media (max-height: 439px) {
     padding-top: 13%;

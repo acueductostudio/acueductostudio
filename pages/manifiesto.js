@@ -3,11 +3,9 @@ import Head from "../components/Head";
 import { useEffect } from "react";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
-import PinnedSection from "components/shared/PinnedSection";
 import TitleSection from "components/shared/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
-import { P } from "components/shared/Dangerously";
-import Fade from "react-reveal/Fade";
+import ManifiestoItems from "components/ManifiestoItems";
 
 function Manifesto(props) {
   let t = props.locale.manifesto_page;
@@ -16,17 +14,6 @@ function Manifesto(props) {
     props.setTitle(t.headerTitle);
   }, [props.locale]);
 
-  let beliefs = t.beliefs.map(function(belief, index) {
-    return (
-      <Belief key={"belief" + index}>
-        <Fade>
-          <span>0{index + 1}</span>
-          <h3>{belief.title}</h3>
-          <p>{belief.p}</p>
-        </Fade>
-      </Belief>
-    );
-  });
   return (
     <PageClipper>
       <Head
@@ -36,10 +23,7 @@ function Manifesto(props) {
         en_canonical={"https://acueducto.studio/en/manifesto"}
         lang={props.lang}
       />
-      <PinnedSection title={t.intro.title}>
-        <P>{t.intro.p}</P>
-        <ol>{beliefs}</ol>
-      </PinnedSection>
+      <ManifiestoItems/>
       <TitleSection {...t.cases} borderTop />
       <CaseList />
       <ContactFooter />

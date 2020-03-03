@@ -10,6 +10,7 @@ import PinnedSection from "components/shared/PinnedSection";
 import { P, H4 } from "components/shared/Dangerously";
 import Picture from "components/caseStudy/shared/Picture";
 import Process from "components/shared/Process";
+import ManifiestoItems from "components/ManifiestoItems";
 
 const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
@@ -34,7 +35,8 @@ function About(props) {
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
       />
-      <PinnedSection title={t.intro.title}>
+      <ManifiestoItems/>
+      <PinnedSection title={t.intro.title} borderTop>
         <P>{t.intro.p}</P>
         {t.team.map((person, index) => (
           <Person key={"personX" + index}>

@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { H1, P } from "components/shared/Dangerously";
 import BorderLink from "components/shared/BorderedLink";
 
-const PinnedSection = ({ title, p, children, className }) => (
-  <Pinned className={className}>
+const PinnedSection = ({ title, children, className, borderTop }) => (
+  <Pinned className={className} borderTop={borderTop}>
     <H1>{title}</H1>
     <ScrollDown>{children}</ScrollDown>
   </Pinned>

@@ -1,8 +1,8 @@
 {
   "nav": [
+    { "title": "pitch", "link": "/pitch"},
     { "title": "nosotros", "link": "/nosotros" },
     { "title": "portafolio", "link": "/portafolio" },
-    { "title": "manifiesto", "link": "/manifiesto" },
     { "title": "contacto", "link": "#contact" }
   ],
   "legal_nav": {
