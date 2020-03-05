@@ -48,20 +48,20 @@ function Podcast(props) {
           >
             <Spotify />
           </a>
-          {/* <a
+          <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/acueducto.studio/"
+            href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
           >
             <Apple />
           </a>
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/acueducto.studio/"
+            href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
           >
             <Google />
-          </a> */}
+          </a>
         </LogoList>
         <PodcastList>
           {podcasts.map((pod, index) => (
