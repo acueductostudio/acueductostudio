@@ -1,6 +1,6 @@
 {
   "nav": [
-    { "title": "pitch", "link": "/pitch"},
+    { "title": "pitch", "link": "/pitch" },
     { "title": "nosotros", "link": "/nosotros" },
     { "title": "portafolio", "link": "/portafolio" },
     { "title": "contacto", "link": "#contact" }
@@ -228,7 +228,19 @@
     "title": "asociémonos, elevemos tu negocio",
     "p": "Nos encantaría conocerte, escríbenos directamente a ",
     "copy_text": "Copiar al clipboard",
-    "copied_text": "Copiado"
+    "copied_text": "Copiado",
+    "footer_nav": {
+      "main": [
+        { "title": "pitch", "link": "/pitch" },
+        { "title": "nosotros", "link": "/nosotros" },
+        { "title": "portafolio", "link": "/portafolio" },
+        { "title": "podcast", "link": "/podcast" }
+      ],
+      "secondary": [
+        { "title": "política de cookies", "link": "/cookies" },
+        { "title": "política de privacidad", "link": "/privacidad" }
+      ]
+    }
   },
   "cookie_message": {
     "title": "cookies bienvenidas",

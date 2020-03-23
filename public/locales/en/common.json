@@ -228,7 +228,19 @@
     "title": "let's be partners,<br/> let's talk business",
     "p": "We would love to start getting to know you, contact us directly at ",
     "copy_text": "Copy to clipboard",
-    "copied_text": "Copied"
+    "copied_text": "Copied",
+    "footer_nav": {
+      "main": [
+        { "title": "pitch", "link": "/en/pitch" },
+        { "title": "about", "link": "/en/about" },
+        { "title": "work", "link": "/en/work" },
+        { "title": "manifesto", "link": "/en/manifesto" }
+      ],
+      "secondary": [
+        { "title": "cookie policy", "link": "/en/cookies" },
+        { "title": "privacy policy", "link": "/en/privacy" }
+      ]
+    }
   },
   "cookie_message": {
     "title": "I’m okay with cookies",

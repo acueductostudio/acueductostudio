@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
+// import FooterNav from "components/FooterNav";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import Logo from "public/assets/img/layout/logo.svg";
 import Mail from "public/assets/img/layout/mail.svg";
@@ -10,7 +11,7 @@ import { logEvent } from "utils/analytics";
 
 const ContactFooter = () => {
   const context = useLocaleContext();
-  let { title, p, copied_text, copy_text } = context.contact_footer;
+  let { title, p, copied_text, copy_text, footer_nav } = context.contact_footer;
 
   const [copied, setCopied] = useState(false);
   const [copying, setCopying] = useState(false);
@@ -32,29 +33,32 @@ const ContactFooter = () => {
   };
 
   return (
-    <Grid id="contact">
-      <H1>{title}</H1>
-      <CopyToClipboard
-        text={"hola@acueducto.studio"}
-        onCopy={doSetCopied}
-        onMouseEnter={setHovered}
-        onMouseLeave={setUnhovered}
-        onClick={setHovered}
-      >
-        <p>
-          {p}
-          <b>
-            <MailPlaceholder />
-            <CopyMessage reveal={copying}>
-              {copied ? copied_text : copy_text}
-            </CopyMessage>
-          </b>
-        </p>
-      </CopyToClipboard>
-      <LogoCrop>
-        <Logo />
-      </LogoCrop>
-    </Grid>
+    <>
+      <Grid id="contact">
+        <H1>{title}</H1>
+        <CopyToClipboard
+          text={"hola@acueducto.studio"}
+          onCopy={doSetCopied}
+          onMouseEnter={setHovered}
+          onMouseLeave={setUnhovered}
+          onClick={setHovered}
+        >
+          <p>
+            {p}
+            <b>
+              <MailPlaceholder />
+              <CopyMessage reveal={copying}>
+                {copied ? copied_text : copy_text}
+              </CopyMessage>
+            </b>
+          </p>
+        </CopyToClipboard>
+        <LogoCrop>
+          <Logo />
+        </LogoCrop>
+      </Grid>
+      {/* <FooterNav nav={footer_nav} /> */}
+    </>
   );
 };
 
@@ -73,7 +77,7 @@ const MailPlaceholder = styled(Mail)`
 
 const Grid = styled(TitleSectionGrid)`
   background-color: ${props => props.theme.colors.accent};
-  box-shadow: 0px -3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
   padding: 10% 4% 20% 4%;
   h1 {
     color: ${props => props.theme.colors.foreground};
