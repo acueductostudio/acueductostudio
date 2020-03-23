@@ -98,7 +98,11 @@ export { Vector2 } from "three/src/math/Vector2.js";
 // export { WireframeGeometry } from "three/src/geometries/WireframeGeometry.js";
 
 //postprocessing
-export { PCFSoftShadowMap } from "three/src/constants.js";
+export {
+  PCFSoftShadowMap,
+  ACESFilmicToneMapping,
+  sRGBEncoding
+} from "three/src/constants.js";
 export { Clock } from "three/src/core/Clock.js";
 export { Layers } from "three/src/core/Layers.js";
 export { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
