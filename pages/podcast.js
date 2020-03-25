@@ -9,6 +9,7 @@ import Logo from "public/assets/img/layout/logo.svg";
 import Spotify from "public/assets/img/casestudies/salvajenada/spotify.svg";
 import Apple from "public/assets/img/layout/applepodcasts.svg";
 import Google from "public/assets/img/layout/googlepodcasts.svg";
+import Youtube from "public/assets/img/layout/youtube.svg";
 
 function Podcast(props) {
   let {
@@ -61,6 +62,13 @@ function Podcast(props) {
             href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
           >
             <Google />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
+          >
+            <Youtube />
           </a>
         </LogoList>
         <PodcastList>
