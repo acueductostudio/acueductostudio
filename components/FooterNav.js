@@ -105,6 +105,7 @@ const DarkNav = styled.div`
   position: relative;
   width: 100%;
   padding: 5% 4%;
+  background-color: ${props => props.theme.colors.background};
 `;
 
 const LeftNavs = styled.div`
