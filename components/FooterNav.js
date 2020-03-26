@@ -47,13 +47,14 @@ export default function FooterNav({ nav }) {
         </SecondaryNavList>
       </LeftNavs>
       <SocialNav>
-        <li>
+        <Fade>
+      <li>
           <NavLink
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/acueducto.studio/"
+            href="https://www.facebook.com/acueducto.studio/"
           >
-            in
+            fb
           </NavLink>
         </li>
         <li>
@@ -69,18 +70,9 @@ export default function FooterNav({ nav }) {
           <NavLink
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.facebook.com/acueducto.studio/"
+            href="https://www.instagram.com/acueducto.studio/"
           >
-            fb
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/company/acueductostudio/"
-          >
-            ln
+            ig
           </NavLink>
         </li>
         <li>
@@ -92,6 +84,16 @@ export default function FooterNav({ nav }) {
             yt
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/company/acueductostudio/"
+          >
+            ln
+          </NavLink>
+        </li>
+        </Fade>
       </SocialNav>
     </DarkNav>
   );
@@ -111,6 +113,9 @@ const LeftNavs = styled.div`
   a {
     text-decoration: none;
   }
+  @media (max-width: 800px) {
+    grid-column-start: 1;
+  }
 `;
 
 const MainNavList = styled.ul`
@@ -120,6 +125,13 @@ const MainNavList = styled.ul`
   list-style: none;
   font-size: 2.3rem;
   color: ${props => props.theme.colors.foreground_low};
+  @media (max-width: 1250px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 700px) {
+    flex-direction: column;
+    line-height: 190%;
+  }
 `;
 
 const SecondaryNavList = styled.ul`
@@ -129,8 +141,17 @@ const SecondaryNavList = styled.ul`
   list-style: none;
   padding-top: 8%;
   color: ${props => props.theme.colors.foreground_low};
-  li {
+  li:not(:nth-last-child(1)) {
     padding-right: 10%;
+  }
+  @media (max-width: 1250px) {
+    font-size: 1.8rem;
+  }
+  @media (max-width: 1000px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 700px) {
+    flex-direction:column;
   }
 `;
 
@@ -155,7 +176,7 @@ const NavLink = styled.a`
       : `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`};
   background-repeat: repeat-x;
   background-size: 1px 2px;
-  background-position: 0 90%;
+  background-position: 0 95%;
   &:hover {
     background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
   }
@@ -168,11 +189,34 @@ const SocialNav = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   color: ${props => props.theme.colors.foreground_low};
   text-align: center;
+  direction: rtl;
   a {
     text-decoration: none;
+    position: relative;
+    &:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      background-color: transparent;
+      top: -10px;
+      left: -20px;
+      width: 300%;
+      height: 200%;
+    }
   }
   li:nth-of-type(4),
   li:nth-of-type(5) {
     align-self: flex-end;
+  }
+  @media (max-width: 700px) {
+    max-height: 100px;
+    line-height: 165%;
+  }
+  @media (max-width: 600px) {
+    font-size: 2rem;
+    grid-column: 9 / span 4;
+  }
+  @media (max-width: 600px) {
+    grid-column: 8 / span 5;
   }
 `;

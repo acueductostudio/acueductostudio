@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
-// import FooterNav from "components/FooterNav";
+import FooterNav from "components/FooterNav";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import Logo from "public/assets/img/layout/logo.svg";
 import Mail from "public/assets/img/layout/mail.svg";
@@ -57,7 +57,7 @@ const ContactFooter = () => {
           <Logo />
         </LogoCrop>
       </Grid>
-      {/* <FooterNav nav={footer_nav} /> */}
+      <FooterNav nav={footer_nav} />
     </>
   );
 };

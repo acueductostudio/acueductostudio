@@ -23,7 +23,7 @@ export default function Work(props) {
         lang={props.lang}
       />
       <TitleSection {...t.intro} />
-      <CaseList />
+      <CaseList noPlay />
       <ContactFooter />
     </PageClipperPadded>
   );

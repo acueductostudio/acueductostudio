@@ -103,6 +103,7 @@ const PodcastGrid = styled.div`
   display: grid;
   padding: 10% 4%;
   position: relative;
+  margin-bottom: -1px;
   h1 {
     grid-column: 2 / span 10;
     letter-spacing: 0;

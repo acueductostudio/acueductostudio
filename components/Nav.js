@@ -61,7 +61,7 @@ export default function Nav(props) {
                 href="https://www.instagram.com/acueducto.studio/"
               >
                 instagram
-                <span>in</span>
+                <span>ig</span>
               </Hoverable>
               <Hoverable
                 target="_blank"
