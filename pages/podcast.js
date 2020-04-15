@@ -35,12 +35,15 @@ function Podcast(props) {
         lang={props.lang}
       />
       <PodcastGrid>
+        <Fade>
         <h1>{title}</h1>
         <span>
           por <Logo />
         </span>
         <p>{p}</p>
+        </Fade>
         <LogoList>
+        <Fade>
           <p>Escúchalo en </p>
           <a
             target="_blank"
@@ -70,6 +73,7 @@ function Podcast(props) {
           >
             <Youtube />
           </a>
+          </Fade>
         </LogoList>
         <PodcastList>
           {podcasts.map((pod, index) => (

@@ -3,6 +3,7 @@ import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
 import FooterNav from "components/FooterNav";
+import Fade from "react-reveal/Fade";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import Logo from "public/assets/img/layout/logo.svg";
 import Mail from "public/assets/img/layout/mail.svg";
@@ -22,7 +23,7 @@ const ContactFooter = () => {
 
   const setUnhovered = () => {
     setCopying(false);
-    setTimeout(function() {
+    setTimeout(function () {
       setCopied(false);
     }, 300);
   };
@@ -31,6 +32,20 @@ const ContactFooter = () => {
     setCopied(true);
     logEvent("Click", "Copied email to clipboard");
   };
+
+  const textBlock = (
+    <Fade>
+      <p>
+        {p}
+        <b>
+          <MailPlaceholder />
+          <CopyMessage reveal={copying}>
+            {copied ? copied_text : copy_text}
+          </CopyMessage>
+        </b>
+      </p>
+    </Fade>
+  );
 
   return (
     <>
@@ -43,19 +58,11 @@ const ContactFooter = () => {
           onMouseLeave={setUnhovered}
           onClick={setHovered}
         >
-          <p>
-            {p}
-            <b>
-              <MailPlaceholder />
-              <CopyMessage reveal={copying}>
-                {copied ? copied_text : copy_text}
-              </CopyMessage>
-            </b>
-          </p>
+          {textBlock}
         </CopyToClipboard>
-        <LogoCrop>
+          <LogoCrop>
           <Logo />
-        </LogoCrop>
+          </LogoCrop>
       </Grid>
       <FooterNav nav={footer_nav} />
     </>
@@ -76,18 +83,18 @@ const MailPlaceholder = styled(Mail)`
 `;
 
 const Grid = styled(TitleSectionGrid)`
-  background-color: ${props => props.theme.colors.accent};
+  background-color: ${(props) => props.theme.colors.accent};
   box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
   padding: 10% 4% 20% 4%;
   h1 {
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
   }
   p {
     z-index: 8;
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
     &:hover {
       b {
-        border-bottom: ${props =>
+        border-bottom: ${(props) =>
           props.theme.stroke + " solid " + props.theme.colors.background};
         border-color: transparent;
         transition: 0.3s ease all;
@@ -96,11 +103,11 @@ const Grid = styled(TitleSectionGrid)`
     b {
       cursor: pointer;
       position: relative;
-      color: ${props => props.theme.colors.foreground};
+      color: ${(props) => props.theme.colors.foreground};
       font-weight: 100;
       transition: 0.3s ease all 0.1s;
       padding-bottom: 2px;
-      border-bottom: ${props =>
+      border-bottom: ${(props) =>
         props.theme.stroke + " solid " + props.theme.colors.foreground};
     }
   }
@@ -123,16 +130,17 @@ const Grid = styled(TitleSectionGrid)`
 
 const CopyMessage = styled.span`
   position: absolute;
-  opacity: ${props => (props.reveal ? 1 : 0)};
+  opacity: ${(props) => (props.reveal ? 1 : 0)};
   bottom: -40px;
   left: 0;
   width: 100%;
   padding: 8px 10px;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   text-align: center;
   border-radius: 4px;
   font-size: 1.5rem;
-  transition: ${props => (props.reveal ? "0.3s ease all 0s" : "0.3s ease all")};
+  transition: ${(props) =>
+    props.reveal ? "0.3s ease all 0s" : "0.3s ease all"};
   &:before {
     content: " ";
     position: absolute;
@@ -143,7 +151,7 @@ const CopyMessage = styled.span`
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid ${props => props.theme.colors.background};
+    border-bottom: 5px solid ${(props) => props.theme.colors.background};
   }
 `;
 

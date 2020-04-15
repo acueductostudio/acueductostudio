@@ -260,9 +260,9 @@
     },
     "intro": {
       "title": "working with partners, not for clients",
-      "p": "As partners of Acueducto, we have witnessed the enormous benefits of co-creation and close collaboration. That’s why we cherish the importance of partnerships; which, unlike other studios and agencies, allow us to get deeply involved in every project. Working closely together with our partners, from ideation to launch, we can produce digital experiences that truly connect with their audiences and have a positive impact on brands, businesses, and communities alike, it works like magic.<br/><br/>We are always thrilled by new challenges and the connections that come with them: as challenges become projects, partners become friends.",
+      "p": "Unlike client-agency relationships, partnerships allow us to get deeply involved in every project we work in. Relying on close collaboration to produce digital experiences, we can truly connect with their audiences and have a positive impact in brands, business and communities alike.<br/><br/>We are always thrilled by new challenges and the people that come with them: as challenges become projects, partners become friends.",
       "link": ["/en/pitch", "pitch"],
-      "linktext": "Do we have your attention?<br/>Read our"
+      "linktext": "Have we got your attention?<br/>Read our"
     },
     "carousel": [
       "digital experiences",
@@ -273,8 +273,8 @@
       "digital branding"
     ],
     "process": {
-      "title": "we place strategy<br/>at the core",
-      "p": "Let us share a conviction of ours: <br/>Innovation will not materialize out of nowhere by a simple spark of creativity, but through a process that looks for real painpoints and the best way to solve them.<br/><br/>Approaching challenges through Strategic Design means working not only by ourselves but alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.<br/><br/><b>Discover our process.</b>",
+      "title": "is placing strategy<br/>at the core",
+      "p": "Innovation happens not by a spontaneous spark of creativity, but through a process that looks for real pain points and the best way to solve them.<br/><br/>Approaching challenges through Strategic Design means working, alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.<br/><br/><b>Discover our process.</b>",
       "steps": [
         {
           "title": "discover",
@@ -351,24 +351,24 @@
     "meta_description": "Get to know us better. Read about us.",
     "headerTitle": "About",
     "intro": {
-      "title": "a two-part ensemble to grow your business",
-      "p": "Without us knowing, we started this studio 15 years ago when we began to fall in love with technology, alternative & pop culture. Growing up together, and driven by each other’s perspectives, we would always push ourselves forward; and everytime we shared a design or a business idea, we felt fascinated by the mind of the other.<br/><br/>Motivated by high standards and innovation, we joined our professional paths in order to create thoughtful and powerful digital experiences.<br/><br/>Acueducto is not just a studio, it is the result of a journey that has taken many years to build, as has our own friendship."
+      "title": "as experts in the digital context",
+      "p": "Without us realizing, we started this studio 15 years ago growing together and sharing design and personal & professional projects.<br/><br/>Motivated by innovation and high quality standards, we joined our professional paths in order to create thoughtful and powerful digital experiences.</br></br>Acueducto is not just a studio, it is the result of a journey that has taken many years to build, as our own friendship has."
     },
     "team": [
       {
         "name": "rodrigo<br/>salmerón",
         "position": "design & development / co-founder",
-        "bio": "An interaction, visual, and motion designer and an open-source-passionate developer with an Interaction Design Master of Arts from The Harbour Space University in Barcelona and 7 years of experience as a freelancer. <br/><br/>He has also worked for several design firms, film production houses, and development companies.<br/><br/>Rodrigo is also a music producer, composer, and lyricist; and whether it’s about music, coding or human-machine interactions, he’s always looking for new challenges and trying out the latest tools."
+        "bio": "An interaction, visual, and motion designer and an open-source-enthusiast developer with an Interaction Design MA from The Harbour Space University and 10 years of experience as a freelancer.<br/><br/>He has also worked for several design firms, film production houses, and development companies.<br/><br/>Rodrigo is also a music producer, composer, and lyricist; and whether it’s about music, coding or human-machine interactions, he’s always trying out the latest tools while looking for new challenges."
       },
       {
         "name": "artemio<br/>pedraza",
         "position": "strategy & communication / co-founder",
-        "bio": "A communication strategist, project and community manager with five years of experience as a freelancer.<br/><br/>He has also gone from copywriter to community manager and marketing consultant, and he’s one of the few licenced digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own record label Bludot, manages artists, and tours the world playing drums for Wet Baes."
+        "bio": "A communication strategist, project and community manager with six years of experience as a freelancer.<br/><br/>He has gone from copywriter to content manager, and marketing consultant and is one of the first licensed digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own digital record label Bludot."
       }
     ],
     "values": {
-      "title": "building better<br/> communities",
-      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact with our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground in which we stand, and help brands and businesses enhance their surroundings and empower their users.",
+      "title": "to build better<br/>communities",
+      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact through our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground on which we stand, and help brands and businesses enhance their surroundings and empower their users.",
       "link": ["/en/manifesto", "Manifesto"],
       "linktext": "Read our"
     }
@@ -400,24 +400,24 @@
     "products_section": {
       "intro": {
         "title": "to develop innovative ideas",
-        "p": "What used to be innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
+        "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
       },
       "products": [
         {
           "title": "mobile<br/>and web apps",
-          "p": "Fast, interactive and visually appealing digital experiences will bring your organization one step closer to reaching its business goals. Let’s use your web presence as an effective tool for your company."
+          "p": "Connect with your audience through any device, grow your business with a web experience or an app."
         },
         {
           "title": "digital products<br/>and services",
-          "p": "Sometimes, products and services that do not exist or require specific features have to be developed. Together we can develop fast, scalable and attractive technologies that inspire their surrounding communities."
+          "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
         },
         {
           "title": "digital branding",
-          "p": "Your brand is all about the reputation you have created around your business. We elevate the perception of your product, service or organization through strategic and artistic direction, visual design and applications."
+          "p": "Elevate the perception of your product, service or organization through strategic design and art direction."
         },
         {
           "title": "digital marketing strategies",
-          "p": "Do not miss the fastest and most effective way to connect with all Internet users. We can boost your sales through marketing and communication strategies, paid advertising and creative content."
+          "p": "Grow your sales with communication strategies, creative content and paid advertising."
         }
       ]
     },
@@ -502,8 +502,8 @@
     "meta_description": "We follow these principles in every piece we create.",
     "headerTitle": "Manifesto",
     "intro": {
-      "title": "what makes<br/> the work great",
-      "p": "Years of experience have shaped the core values of Acueducto; governed by the following principles, we aim to become better impact-driven business strategists and quality-driven digital experience developers. <br/><br/>This is our Manifesto."
+      "title": "what makes</br>us unique",
+      "p": "Years of experience have shaped the core values of Acueducto. Governed by the following principles, we aim to become better impact-driven business strategists and quality-driven digital experience developers."
     },
     "beliefs": [
       {
