@@ -34,7 +34,7 @@ export default function Privacy(props) {
           <h2>{b.subtitle3}</h2>
           <p>{b.p3}</p>
           <ul>
-            <li>{b.listItem1}</li>
+            <li dangerouslySetInnerHTML={createMarkup(b.listItem1)} />
             <li>{b.listItem2}</li>
             <li>
               {b.listItem3}

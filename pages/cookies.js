@@ -48,15 +48,18 @@ export default function Cookies(props) {
           <p>{b.p5}</p>
           <h4>{b.subsubtitle6}</h4>
           <p dangerouslySetInnerHTML={createMarkup(b.p6)} />
-          {/*<h3>{b.subtitle7}</h3>
+          <h3 dangerouslySetInnerHTML={createMarkup(b.subtitle7)} />
           <p>{b.p7}</p>
-          Until we have the mailchimp optout link 
           <h4>{b.subsubtitle8}</h4>
-          <p dangerouslySetInnerHTML={createMarkup(b.p8)} /> */}
-          <h3 dangerouslySetInnerHTML={createMarkup(b.subtitle9)} />
+          <p dangerouslySetInnerHTML={createMarkup(b.p8)} />
+          <h2>{b.title9}</h2>
           <p>{b.p9}</p>
           <h4>{b.subsubtitle10}</h4>
           <p dangerouslySetInnerHTML={createMarkup(b.p10)} />
+          <h4>{b.subsubtitle11}</h4>
+          <p dangerouslySetInnerHTML={createMarkup(b.p11)} />
+          <h4>{b.subtitle12}</h4>
+          <p dangerouslySetInnerHTML={createMarkup(b.p12)} />
         </Fade>
       </SimplePinnedSection>
       <ContactFooter />

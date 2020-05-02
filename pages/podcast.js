@@ -18,7 +18,7 @@ function Podcast(props) {
     headerTitle,
     title,
     p,
-    podcasts
+    podcasts,
   } = es.podcast_page;
 
   useEffect(() => {
@@ -36,48 +36,48 @@ function Podcast(props) {
       />
       <PodcastGrid>
         <Fade>
-        <h1>{title}</h1>
-        <span>
-          por <Logo />
-        </span>
-        <p>{p}</p>
+          <h1>{title}</h1>
+          <span>
+            por <Logo />
+          </span>
+          <p>{p}</p>
         </Fade>
         <LogoList>
-        <Fade>
-          <p>Escúchalo en </p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
-          >
-            <Spotify />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
-          >
-            <Apple />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
-          >
-            <Google />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
-          >
-            <Youtube />
-          </a>
+          <Fade>
+            <p>Escúchalo en </p>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
+            >
+              <Spotify />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
+            >
+              <Apple />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
+            >
+              <Google />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
+            >
+              <Youtube />
+            </a>
           </Fade>
         </LogoList>
         <PodcastList>
           {podcasts.map((pod, index) => (
-            <Pod key={"belief" + index}>
+            <Pod key={"podentry" + index}>
               <Fade>
                 <iframe
                   src={pod.url}
@@ -97,7 +97,7 @@ function Podcast(props) {
 export default React.memo(Podcast);
 
 const PodcastGrid = styled.div`
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   background-image: url("assets/img/layout/podcast_back.svg");
   background-size: cover;
   background-position: top right;
@@ -115,19 +115,19 @@ const PodcastGrid = styled.div`
     font-size: 7rem;
     margin-bottom: 0;
     max-width: 810px;
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
   }
   span {
     grid-column: 2 / span 10;
-    color: ${props => props.theme.colors.accent};
+    color: ${(props) => props.theme.colors.accent};
     svg * {
-      fill: ${props => props.theme.colors.accent};
+      fill: ${(props) => props.theme.colors.accent};
     }
   }
   p {
     grid-column: 2 / span 8;
     padding-top: 2.5rem;
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
     position: relative;
     max-width: 600px;
   }
@@ -198,7 +198,7 @@ const LogoList = styled.div`
   }
   a {
     display: flex;
-    max-height:30px;
+    max-height: 30px;
   }
   svg {
     width: 30px;

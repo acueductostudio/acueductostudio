@@ -6,9 +6,11 @@ export default {
     foreground_lowest: "#4F4F4F",
     accent: "#1A4CE0",
     accent_smalltext: "#4871EA",
-    white: "#F4F4F4"
+    white: "#F4F4F4",
+    error: "#CC2E44",
+    success: "#27AE60",
   },
-  stroke: "2px"
+  stroke: "2px",
 };
 
 // accent: "#1740BF",

@@ -51,7 +51,7 @@ export { MeshStandardMaterial } from "three/src/materials/MeshStandardMaterial.j
 // export { SpriteMaterial } from "three/src/materials/SpriteMaterial.js";
 // export { LineBasicMaterial } from "three/src/materials/LineBasicMaterial.js";
 // export { TextureLoader } from "three/src/loaders/TextureLoader.js";
-// export { Texture } from "three/src/textures/Texture.js";
+export { Texture } from "three/src/textures/Texture.js";
 // export { Sprite } from "three/src/objects/Sprite.js";
 // export { SpotLightShadow } from "three/src/lights/SpotLightShadow.js";
 // export { SpotLight } from "three/src/lights/SpotLight.js";
@@ -87,7 +87,7 @@ export { MathUtils as Math } from "three/src/math/MathUtils.js";
 export { Vector3 } from "three/src/math/Vector3.js";
 export { Vector2 } from "three/src/math/Vector2.js";
 // export { Quaternion } from "three/src/math/Quaternion.js";
-// export { Color } from "three/src/math/Color.js";
+export { Color } from "three/src/math/Color.js";
 // export { GridHelper } from "three/src/helpers/GridHelper.js";
 // export { AxesHelper } from "three/src/helpers/AxesHelper.js";
 // export * from "three/src/constants.js";
@@ -101,7 +101,7 @@ export { Vector2 } from "three/src/math/Vector2.js";
 export {
   PCFSoftShadowMap,
   ACESFilmicToneMapping,
-  sRGBEncoding
+  sRGBEncoding,
 } from "three/src/constants.js";
 export { Clock } from "three/src/core/Clock.js";
 export { Layers } from "three/src/core/Layers.js";

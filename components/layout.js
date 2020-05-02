@@ -10,9 +10,10 @@ import CookieMessage from "./CookieMessage";
 import ScrollIncentive from "./ScrollIncentive";
 import { initGA, logPageView } from "utils/analytics";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import NewsletterPopup from "./NewsletterPopup";
 
 const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
-  ssr: false
+  ssr: false,
 });
 
 export default ({
@@ -22,7 +23,7 @@ export default ({
   consentToCookies,
   hasToConsent,
   hasLoaded,
-  locale
+  locale,
 }) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
@@ -30,6 +31,7 @@ export default ({
   const [headerTitle, setTitle] = useState("");
   const [showArrow, setShowArrow] = useState(false);
   const [showConsentMessage, setShowConsentMessage] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
   const router = useRouter();
   const mouse = useRef([1200, 1]);
 
@@ -40,7 +42,7 @@ export default ({
   );
 
   const onTouchMove = useCallback(
-    e => {
+    (e) => {
       const touch = e.changedTouches[0];
       var x = touch.clientX;
       var y = touch.clientY;
@@ -60,23 +62,31 @@ export default ({
       setShowSketch(true);
       setShowArrow(true);
       setIsAbout(false);
+      setShowPopup(false);
     } else if (router.route === "/nosotros" || router.route === "/en/about") {
       setIsAbout(true);
       setShowSketch(false);
       setShowArrow(false);
+      setShowPopup(false);
+    } else if (router.route === "/podcast") {
+      setIsAbout(false);
+      setShowSketch(false);
+      setShowArrow(false);
+      setShowPopup(true);
     } else {
       setShowSketch(false);
       setShowArrow(false);
       setIsAbout(false);
+      setShowPopup(false);
     }
   }, [router.route]);
 
   useEffect(() => {
     if (showArrow || showConsentMessage) {
-      document.body.onscroll = function() {
+      document.body.onscroll = function () {
         checkScroll();
       };
-      document.querySelector("#Clipper").onscroll = function() {
+      document.querySelector("#Clipper").onscroll = function () {
         checkScroll();
       };
     }
@@ -147,7 +157,7 @@ export default ({
         {React.cloneElement(children, {
           setTitle: setTitle,
           hasLoaded: hasLoaded,
-          mouse: mouse
+          mouse: mouse,
         })}
 
         <LanguageToggler
@@ -162,6 +172,7 @@ export default ({
           hasToConsent={hasToConsent}
         />
         <BodyOverflow isOpen={isOpen} hasLoaded={hasLoaded} />
+        {showPopup && <NewsletterPopup />}
       </PageWrapper>
     </>
   );
@@ -169,7 +180,7 @@ export default ({
 
 const BodyOverflow = createGlobalStyle`
   .TopBar{
-    box-shadow: 1px 1px 4px ${props => props.theme.colors.accent};
+    box-shadow: 1px 1px 4px ${(props) => props.theme.colors.accent};
   }
   @media (max-width: 600px), (max-height:450px) {
     .react-reveal {
@@ -177,11 +188,11 @@ const BodyOverflow = createGlobalStyle`
     opacity: 1 !important;
     }
     #Wrapper{
-      overflow: ${props => (props.hasLoaded ? "unset" : "hidden")};
-      height:${props => (props.hasLoaded ? "unset" : "100%")};
+      overflow: ${(props) => (props.hasLoaded ? "unset" : "hidden")};
+      height:${(props) => (props.hasLoaded ? "unset" : "100%")};
     }
     body {
-    overflow-y: ${props => (props.hasLoaded ? "auto" : "hidden")};
+    overflow-y: ${(props) => (props.hasLoaded ? "auto" : "hidden")};
       &:after,&:before{
         content: " ";
         position: fixed;
@@ -189,7 +200,7 @@ const BodyOverflow = createGlobalStyle`
         left: 0;
         height: 18px;
         z-index:100;
-        background-color: ${props => props.theme.colors.background};
+        background-color: ${(props) => props.theme.colors.background};
       }
       &:before {
         top:0;
@@ -201,6 +212,19 @@ const BodyOverflow = createGlobalStyle`
   }
 `;
 
+const BackgroundOpacity = styled.div`
+  background-color: ${(props) => props.theme.colors.background};
+  opacity: ${(props) => (props.visible ? 0.6 : 0)};
+  position: fixed;
+  pointer-events: ${(props) => (props.visible ? "auto" : "none")};
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 13;
+  transition: opacity 0.4s ease;
+`;
+
 const PageWrapper = styled.div`
   top: -3px;
   position: relative;
@@ -208,8 +232,8 @@ const PageWrapper = styled.div`
   flex-direction: column;
   display: flex;
   justify-content: flex-start;
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
 `;
 
 const Border = styled.div`
@@ -228,7 +252,7 @@ const Border = styled.div`
   max-width: 1504px;
   mix-blend-mode: exclusion;
   transition: opacity 0.3s ease-in, border 0.3s ease-in;
-  border: ${props =>
+  border: ${(props) =>
     `${props.theme.stroke} solid ${props.theme.colors.foreground}`};
   @media (max-width: 600px), (max-height: 450px) {
     mix-blend-mode: normal;
