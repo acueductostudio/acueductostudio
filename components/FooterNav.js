@@ -20,7 +20,7 @@ export default function FooterNav({ nav }) {
     <DarkNav>
       <LeftNavs>
         <MainNavList>
-          {main.map(function(item, index) {
+          {main.map(function (item, index) {
             return (
               <Fade delay={200 + index * 50} key={"item" + index}>
                 <li>
@@ -33,7 +33,7 @@ export default function FooterNav({ nav }) {
           })}
         </MainNavList>
         <SecondaryNavList>
-          {secondary.map(function(item, index) {
+          {secondary.map(function (item, index) {
             return (
               <Fade delay={200 + index * 50} key={"item" + index}>
                 <li>
@@ -48,51 +48,51 @@ export default function FooterNav({ nav }) {
       </LeftNavs>
       <SocialNav>
         <Fade>
-      <li>
-          <NavLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.facebook.com/acueducto.studio/"
-          >
-            fb
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://twitter.com/AcueductoStudio/"
-          >
-            tw
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.instagram.com/acueducto.studio/"
-          >
-            ig
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.youtube.com/channel/UCuFV_fKt_ELREPwoAb5lprg"
-          >
-            yt
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/company/acueductostudio/"
-          >
-            ln
-          </NavLink>
-        </li>
+          <li>
+            <NavLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/acueducto.studio/"
+            >
+              fb
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/AcueductoStudio/"
+            >
+              tw
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/acueducto.studio/"
+            >
+              ig
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.youtube.com/channel/UCuFV_fKt_ELREPwoAb5lprg"
+            >
+              yt
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/company/acueductostudio/"
+            >
+              ln
+            </NavLink>
+          </li>
         </Fade>
       </SocialNav>
     </DarkNav>
@@ -105,7 +105,7 @@ const DarkNav = styled.div`
   position: relative;
   width: 100%;
   padding: 5% 4%;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
 `;
 
 const LeftNavs = styled.div`
@@ -125,7 +125,7 @@ const MainNavList = styled.ul`
   justify-content: space-between;
   list-style: none;
   font-size: 2.3rem;
-  color: ${props => props.theme.colors.foreground_low};
+  color: ${(props) => props.theme.colors.foreground_low};
   @media (max-width: 1250px) {
     font-size: 2rem;
   }
@@ -141,7 +141,7 @@ const SecondaryNavList = styled.ul`
   justify-content: flex-start;
   list-style: none;
   padding-top: 8%;
-  color: ${props => props.theme.colors.foreground_low};
+  color: ${(props) => props.theme.colors.foreground_low};
   li:not(:nth-last-child(1)) {
     padding-right: 10%;
   }
@@ -152,7 +152,17 @@ const SecondaryNavList = styled.ul`
     font-size: 1.5rem;
   }
   @media (max-width: 700px) {
-    flex-direction:column;
+    flex-direction: column;
+    li {
+      padding-right: 0;
+      padding-bottom:0px;
+      padding-top:5px;
+      &:not(:nth-last-child(1)) {
+        padding-right: 0%;
+        padding-bottom:5px;
+        padding-top:0px;
+      }
+    }
   }
 `;
 
@@ -171,7 +181,7 @@ const NavLinkConstant = styled.a`
 const NavLink = styled.a`
   transition: all 0.3s ease 0s;
   cursor: pointer;
-  background-image: ${props =>
+  background-image: ${(props) =>
     props.active
       ? `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0.5)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`
       : `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`};
@@ -188,7 +198,7 @@ const SocialNav = styled.ul`
   display: grid;
   list-style: none;
   grid-template-columns: repeat(3, 1fr);
-  color: ${props => props.theme.colors.foreground_low};
+  color: ${(props) => props.theme.colors.foreground_low};
   text-align: center;
   direction: rtl;
   a {
