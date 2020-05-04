@@ -55,20 +55,23 @@ const CustomForm = ({ status, message, onValidated }) => {
             ref={(node) => (name = node)}
             type="text"
             placeholder="nombre"
+            id="name"
           />
-          <br />
+          <label htmlFor="name">nombre</label>
           <input
             ref={(node) => (lastname = node)}
             type="text"
             placeholder="apellido"
+            id="lastname"
           />
-          <br />
+          <label htmlFor="lastname">last name</label>
           <input
             ref={(node) => (email = node)}
             type="email"
             placeholder="email"
+            id="email"
           />
-          <br />
+          <label htmlFor="email">email</label>
           <Button onClick={submit}>suscribirme</Button>
         </>
       )}
@@ -222,12 +225,17 @@ const Wrapper = styled.div`
     line-height: 110%;
     margin-bottom: 5%;
   }
+  label{
+    font-size:0;
+    height:0;
+    width:0;
+    position:absolute;
+  }
   input {
     font-weight: 100;
     border-radius: 0;
     width: 100%;
     padding: 10px 18px 13px 18px;
-
     line-height: 100%;
     background-color: transparent;
     border: ${(props) => props.theme.stroke} solid

@@ -49,28 +49,28 @@ function Podcast(props) {
               target="_blank"
               rel="noopener noreferrer"
               href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
-            >
+            >Spotify
               <Spotify />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
-            >
+            >Apple Podcasts
               <Apple />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
-            >
+            >Google Podcasts
               <Google />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
-            >
+            >Youtube
               <Youtube />
             </a>
           </Fade>
@@ -80,6 +80,7 @@ function Podcast(props) {
             <Pod key={"podentry" + index}>
               <Fade>
                 <iframe
+                  title={pod.title}
                   src={pod.url}
                   frameBorder="0"
                   allowtransparency="true"
@@ -199,6 +200,7 @@ const LogoList = styled.div`
   a {
     display: flex;
     max-height: 30px;
+    font-size:0rem;
   }
   svg {
     width: 30px;
