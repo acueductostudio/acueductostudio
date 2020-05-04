@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import CookieMessage from "./CookieMessage";
 import ScrollIncentive from "./ScrollIncentive";
 import { initGA, logPageView } from "utils/analytics";
+import ReactPixel from "react-facebook-pixel";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NewsletterPopup from "./NewsletterPopup";
 
@@ -52,11 +53,20 @@ export default ({
   );
 
   useEffect(() => {
+    const options = {
+      autoConfig: true, 
+      debug: false,
+    };
+    ReactPixel.init("506854653278097", null, options);
+  }, []);
+
+  useEffect(() => {
     if (!window.GA_INITIALIZED) {
       initGA();
       window.GA_INITIALIZED = true;
     }
     logPageView();
+    ReactPixel.pageView(); // For tracking page view
     mouse.current[0] = window.innerWidth > 600 ? 1200 : 300;
     if (router.route === "/" || router.route === "/en") {
       setShowSketch(true);
