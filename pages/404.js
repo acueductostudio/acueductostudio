@@ -7,23 +7,18 @@ import ContactFooter from "components/ContactFooter";
 export default function Error(props) {
   let t = props.locale.error_page;
   useEffect(() => {
-    props.setTitle(
-      t.headerTitle + " " + (props.statusCode ? props.statusCode : "Client")
-    );
+    props.setTitle(t.headerTitle + " 404");
   }, []);
   return (
     <PageClipper>
       <Head
-        title={`Acueducto | ${props.statusCode ? props.statusCode : "404"}`}
+        title="Acueducto | 404"
         lang={props.lang}
+        canonical={"https://acueducto.studio/404"}
+        en_canonical={"https://acueducto.studio/404"}
       />
       <TitleSection {...t.intro} />
-      <ContactFooter/>
+      <ContactFooter />
     </PageClipper>
   );
 }
-
-Error.getInitialProps = ({ res, err }) => {
-  const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-  return { statusCode };
-};

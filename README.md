@@ -12,3 +12,16 @@
 - 🙋🏻‍♀️[Facebook](https://www.facebook.com/acueducto.studio/)
 - 🦜[Twitter](https://twitter.com/acueductostudio)
 - 🔌[LinkedIn](https://www.linkedin.com/company/acueductostudio/)
+
+#Todos:
+añadir 404 al cambio de idioma
+Rahid:
+
+- meta tag & description
+- og image
+- título de proyecto en preview
+
+Optim:
+
+- img for Picture y generar webp
+- Revisar tamaños de imágenes y svg's
