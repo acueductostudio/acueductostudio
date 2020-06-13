@@ -12,106 +12,6 @@
   "lang": "es",
   "casestudies": {
     "studies": {
-      "ladanzadelasfieras": {
-        "page_title": "Estrategia y producción cinematográfica | La Danza de las Fieras & Acueducto",
-        "meta_description": "Una cautivadora experiencia digital a través del cine, internet y la prensa.",
-        "headerTitle": "LDDLF",
-        "title": "estrategia y producción en la industria del cine",
-        "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Animación<br/>Web App<br/>",
-        "video": "fieras.mp4",
-        "logo": "fieras.svg",
-        "link": "ladanzadelasfieras",
-        "intro_section": {
-          "tags": [
-            "estrategia de proyecto",
-            "branding",
-            "diseño web",
-            "ux",
-            "animación",
-            "programación",
-            "estrategia de contenido",
-            "tov digital",
-            "copywriting"
-          ],
-          "video": "lddlf_intro.mp4",
-          "title": "<b>Acto I</b><br/>El primer largometraje<br/>de Aly",
-          "p": "Alayde, mejor conocida como Aly, es una cineasta y directora creativa fundadora de la casa productora Antítesis. Impulsada por la idea de que jóvenes artistas pueden generar un impacto innovador en la industria del cine, unió esfuerzos con la casa productora Bala Films para hacer La Danza de las Fieras (LDDLF).<br/><br/>LDDLF es un largometraje que concientiza y genera reflexiones, debates y acciones para prevenir la trata de personas. Construida por seis cortometrajes, cada uno aborda una dimensión diferente del tema. La película recibió cinco premios internacionales de cine en categorías como Mejor Película y fue seleccionada en 11 festivales de cine en México y el mundo.",
-          "stats": [
-            {
-              "big": "5",
-              "small": "premios"
-            },
-            {
-              "big": "11",
-              "small": "festivales"
-            },
-            {
-              "big": "6",
-              "small": "países"
-            }
-          ],
-          "p2": "Durante la producción de la película, antes de estos remarcables resultados, Aly contactó a Acueducto para evaluar su posición. Debido a la multiplicidad de directores, puntos de vista y estilos de cine, LDDLF necesitaba un <i>branding</i> que cobijara todas las historias en un mismo concepto al igual que un sitio web que mostrara información de la película y su propósito."
-        },
-        "second_section": {
-          "title": "<b>Acto II</b><br/>Una experiencia cohesiva de múltiples frentes",
-          "p": "Se realizaron sesiones creativas y de investigación para crear la identidad de la película junto con Aly y su equipo. Algunos cortometrajes eran documentales, otros ficción e incluso uno estaba narrado desde la pantalla de un teléfono. Encontrar un tono de voz cohesivo era el primer paso a dar.",
-          "font_logo": "Logo + Animación",
-          "font_body": "Cuerpo de texto",
-          "font_titles": "Títulos",
-          "red": "Rojo salvaje",
-          "subtitle": "La primera impresión lo es todo",
-          "p2": "Parte del <i>branding</i> consistía en diseñar y animar la secuencia de inicio del filme. Tal aplicación enamoró a todos los involucrados y se convirtió en uno de los pilares de la identidad visual.<br/><br/>Haz click para verla, dura sólo un par de minutos (y sube el volumen de tus bocinas, vale la pena)."
-        },
-        "third_section": {
-          "subtitle": "La experiencia web",
-          "p": "Acueducto se dio a la tarea de diseñar un portal que expusiera información sobre el largometraje, sus realizadores y los artículos de prensa que fueran publicados sobre ella.<br/><br/>Durante la fase de Descubrimiento, se hicieron entrevistas con socios, productores, directores y reporteros para encontrar áreas de oportunidad y necesidades. Las conclusiones que arrojó esta investigación fueron el motor de la estrategia web del proyecto.",
-          "insights": {
-            "portfolio": {
-              "title": "Portafolio para todos",
-              "p": "Para cineastas como Aly, el currículum es fundamental. Filmar un largometraje es sumamente costoso y conseguir fondos para lograrlo requiere de confianza, experiencia y estatus. Por esta razón, el sitio hace énfasis en los créditos a todos los productores, casas productoras, patrocinadores y directores de la obra.",
-              "quote": {
-                "quote": "El sitio web de LDDLF se convirtió en parte de mi curriculum, ahora puedo compartir una pieza de trabajo atractiva, rigurosa y comprensible junto con mi reel",
-                "name": "Gina Herrera",
-                "label": "Escritora y Directora en La Danza de las Fieras"
-              }
-            },
-            "press": {
-              "title": "Bienvenidos: prensa y festivales",
-              "p": "La prensa pocas veces encuentra la información que necesita para redactar notas sobre cine. Los artículos y noticias son de los principales medios de promoción para un filme, así que se hizo una sección dedicada sólo para prensa con la disponibilidad de <i>press kits</i>, imágenes y un salón de la fama de la película con premios y publicaciones. De esta forma ningún periodista tendría que salir del sitio para recolectar toda la información de la película.",
-              "quote": {
-                "quote": "Los festivales de cine y medios de comunicación constantemente requieren que tu película tenga un press kit en orden y traducido, que sea enviado dependiendo la información requerida. La forma en la que está diseñado nuestro sitio simplificó de sobremanera cómo compartimos esa información.",
-                "name": "Miguel Ángel Fernández",
-                "label": "Editor, Escritor & Director en La Danza de las fieras"
-              }
-            },
-            "availability": {
-              "title": "Disponibilidad",
-              "p": "En los festivales de cine y proyecciones siempre hay mucho trabajo de por medio, por lo que toda duda tiene que ser resuelta con agilidad. Además de organizar toda la información en bloques fáciles de discernir, el sitio incluye un componente de contacto en cada página del sitio y en la navegación, permitiendo a los organizadores de estos eventos y a todos los usuarios contactar fácilmente al equipo de LDDLF."
-            }
-          },
-          "subtitle2": "La cereza del pastel",
-          "p2": "Obsesionarse con los detalles vale la pena, sobretodo cuando agregan un valor real a los usuarios finales. Es por eso que Acueducto programó la aplicación web internamente, desde cero, para lograr un portal veloz, ligero y accesible para dispositivos móviles.<br/><br/>Las últimas tecnologías y herramientas pueden hacer la vida del usuario más fácil, por eso se agregó un extra para el equipo de distribución y los propios cineastas. La aplicación fue transformada en una <i>Progressive Web App</i> (PWA), así la página puede funcionar sin conexión para mostrar el sitio aunque haya una pobre o nula conexión a internet, sin tener que instalar nada desde una <i>AppStore</i>."
-        },
-        "fourth_section": {
-          "subtitle": "¿Y el contenido?",
-          "p": "Un hermoso sitio web fue construido y la <i>premiere</i> de la película estaba a la vuelta de la esquina. Era momento de entregar un mensaje claro, conciso y elegante ¿Pero cómo? Con un tono y mensaje unificado a través de toda la experiencia. Con esto en mente, de la mano con las casas productoras, Acueducto diseñó la redacción del sitio web de forma coherente con los <i>press kits</i>. Así toda la narrativa del proyecto fue controlada no sólo en la página sino también en la prensa que la difundió. <br/><br/>Encontrar artículos donde los adjetivos y mensajes del sitio web de LDDLF son reutilizados es la norma, muchas veces palabra por palabra.",
-          "stat": "de las publicaciones en prensa utilizaron o citaron palabra por palabra contenido del sitio o <i>press kit</i>.",
-          "p2": "Sin embargo ¿no es lo más valioso para un cineasta que los espectadores vean su película? En las taquillas de los festivales pueden competir cientos de filmes por la atención de los asistentes. La mayoría de las películas no cuentan con un sitio que incluya su trailer, sinópsis y créditos, no cubrir este frente impacta directamente en el número de espectadores finales al no poder consultar información adicional en buscadores. Además de resolver este problema, se hizo un gran esfuerzo de posicionamiento en buscadores (SEO) para que cualquier búsqueda de “La Danza de las Fieras” arrojara el sitio web como primer resultado."
-        },
-        "fifth_section": {
-          "title": "<b>Acto III</b><br/>That’s a wrap",
-          "p": "La Danza de las Fieras terminó recientemente su tour alrededor del mundo en más de 6 países. 12 festivales de cine y 22 menciones en prensa global avalan a la película como una autoridad en el tema de tráfico de personas.<br/><br/>El sitio web fue crucial para posicionar la película en estos festivales y en la industria del cine en general; y la estrategia digital hizo que las aplicaciones a festivales fueran más sencillas tanto para cineastas como organizadores.",
-          "quote": {
-            "quote": "El sitio web de La Danza de las Fieras fue la razón por la que Cinema23, empresa encargada de la organización de los Premios Fénix, encontró toda la información necesaria para considerar el largometraje en su premiación.",
-            "name": "Javier Rodríguez",
-            "label": "Productor de Festivales de Cine"
-          },
-          "p2": "LDDLF está comenzando su faceta de distribución y Aly junto a su equipo continúan generando conciencia y debate alrededor de la crisis de tráfico humano en México y el mundo.<br/><br/>Respaldada por un poderoso branding, sitio web y estrategia de contenido, Aly promocionó con éxito su primer largometraje viajando por el mundo, ganando visibilidad y empujando la conversación alrededor del tráfico de personas en las pantallas de cine y en la vida diaria de sus espectadores."
-        },
-        "sixth_section": {
-          "linkp": "visita"
-        }
-      },
       "salvajenada": {
         "page_title": "Difusión musical estratégica | Salvajenada & Acueducto",
         "meta_description": "¿Cómo distinguir tu playlist entre el mar de selecciones en la web?",
@@ -222,11 +122,111 @@
           "title": "escucha la #CanastaBasica"
         }
       },
-      "rahid": {
+      "ladanzadelasfieras": {
         "page_title": "Estrategia y producción cinematográfica | La Danza de las Fieras & Acueducto",
         "meta_description": "Una cautivadora experiencia digital a través del cine, internet y la prensa.",
-        "headerTitle": "Rahid",
+        "headerTitle": "LDDLF",
         "title": "estrategia y producción en la industria del cine",
+        "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Animación<br/>Web App<br/>",
+        "video": "fieras.mp4",
+        "logo": "fieras.svg",
+        "link": "ladanzadelasfieras",
+        "intro_section": {
+          "tags": [
+            "estrategia de proyecto",
+            "branding",
+            "diseño web",
+            "ux",
+            "animación",
+            "programación",
+            "estrategia de contenido",
+            "tov digital",
+            "copywriting"
+          ],
+          "video": "lddlf_intro.mp4",
+          "title": "<b>Acto I</b><br/>El primer largometraje<br/>de Aly",
+          "p": "Alayde, mejor conocida como Aly, es una cineasta y directora creativa fundadora de la casa productora Antítesis. Impulsada por la idea de que jóvenes artistas pueden generar un impacto innovador en la industria del cine, unió esfuerzos con la casa productora Bala Films para hacer La Danza de las Fieras (LDDLF).<br/><br/>LDDLF es un largometraje que concientiza y genera reflexiones, debates y acciones para prevenir la trata de personas. Construida por seis cortometrajes, cada uno aborda una dimensión diferente del tema. La película recibió cinco premios internacionales de cine en categorías como Mejor Película y fue seleccionada en 11 festivales de cine en México y el mundo.",
+          "stats": [
+            {
+              "big": "5",
+              "small": "premios"
+            },
+            {
+              "big": "11",
+              "small": "festivales"
+            },
+            {
+              "big": "6",
+              "small": "países"
+            }
+          ],
+          "p2": "Durante la producción de la película, antes de estos remarcables resultados, Aly contactó a Acueducto para evaluar su posición. Debido a la multiplicidad de directores, puntos de vista y estilos de cine, LDDLF necesitaba un <i>branding</i> que cobijara todas las historias en un mismo concepto al igual que un sitio web que mostrara información de la película y su propósito."
+        },
+        "second_section": {
+          "title": "<b>Acto II</b><br/>Una experiencia cohesiva de múltiples frentes",
+          "p": "Se realizaron sesiones creativas y de investigación para crear la identidad de la película junto con Aly y su equipo. Algunos cortometrajes eran documentales, otros ficción e incluso uno estaba narrado desde la pantalla de un teléfono. Encontrar un tono de voz cohesivo era el primer paso a dar.",
+          "font_logo": "Logo + Animación",
+          "font_body": "Cuerpo de texto",
+          "font_titles": "Títulos",
+          "red": "Rojo salvaje",
+          "subtitle": "La primera impresión lo es todo",
+          "p2": "Parte del <i>branding</i> consistía en diseñar y animar la secuencia de inicio del filme. Tal aplicación enamoró a todos los involucrados y se convirtió en uno de los pilares de la identidad visual.<br/><br/>Haz click para verla, dura sólo un par de minutos (y sube el volumen de tus bocinas, vale la pena)."
+        },
+        "third_section": {
+          "subtitle": "La experiencia web",
+          "p": "Acueducto se dio a la tarea de diseñar un portal que expusiera información sobre el largometraje, sus realizadores y los artículos de prensa que fueran publicados sobre ella.<br/><br/>Durante la fase de Descubrimiento, se hicieron entrevistas con socios, productores, directores y reporteros para encontrar áreas de oportunidad y necesidades. Las conclusiones que arrojó esta investigación fueron el motor de la estrategia web del proyecto.",
+          "insights": {
+            "portfolio": {
+              "title": "Portafolio para todos",
+              "p": "Para cineastas como Aly, el currículum es fundamental. Filmar un largometraje es sumamente costoso y conseguir fondos para lograrlo requiere de confianza, experiencia y estatus. Por esta razón, el sitio hace énfasis en los créditos a todos los productores, casas productoras, patrocinadores y directores de la obra.",
+              "quote": {
+                "quote": "El sitio web de LDDLF se convirtió en parte de mi curriculum, ahora puedo compartir una pieza de trabajo atractiva, rigurosa y comprensible junto con mi reel",
+                "name": "Gina Herrera",
+                "label": "Escritora y Directora en La Danza de las Fieras"
+              }
+            },
+            "press": {
+              "title": "Bienvenidos: prensa y festivales",
+              "p": "La prensa pocas veces encuentra la información que necesita para redactar notas sobre cine. Los artículos y noticias son de los principales medios de promoción para un filme, así que se hizo una sección dedicada sólo para prensa con la disponibilidad de <i>press kits</i>, imágenes y un salón de la fama de la película con premios y publicaciones. De esta forma ningún periodista tendría que salir del sitio para recolectar toda la información de la película.",
+              "quote": {
+                "quote": "Los festivales de cine y medios de comunicación constantemente requieren que tu película tenga un press kit en orden y traducido, que sea enviado dependiendo la información requerida. La forma en la que está diseñado nuestro sitio simplificó de sobremanera cómo compartimos esa información.",
+                "name": "Miguel Ángel Fernández",
+                "label": "Editor, Escritor & Director en La Danza de las fieras"
+              }
+            },
+            "availability": {
+              "title": "Disponibilidad",
+              "p": "En los festivales de cine y proyecciones siempre hay mucho trabajo de por medio, por lo que toda duda tiene que ser resuelta con agilidad. Además de organizar toda la información en bloques fáciles de discernir, el sitio incluye un componente de contacto en cada página del sitio y en la navegación, permitiendo a los organizadores de estos eventos y a todos los usuarios contactar fácilmente al equipo de LDDLF."
+            }
+          },
+          "subtitle2": "La cereza del pastel",
+          "p2": "Obsesionarse con los detalles vale la pena, sobretodo cuando agregan un valor real a los usuarios finales. Es por eso que Acueducto programó la aplicación web internamente, desde cero, para lograr un portal veloz, ligero y accesible para dispositivos móviles.<br/><br/>Las últimas tecnologías y herramientas pueden hacer la vida del usuario más fácil, por eso se agregó un extra para el equipo de distribución y los propios cineastas. La aplicación fue transformada en una <i>Progressive Web App</i> (PWA), así la página puede funcionar sin conexión para mostrar el sitio aunque haya una pobre o nula conexión a internet, sin tener que instalar nada desde una <i>AppStore</i>."
+        },
+        "fourth_section": {
+          "subtitle": "¿Y el contenido?",
+          "p": "Un hermoso sitio web fue construido y la <i>premiere</i> de la película estaba a la vuelta de la esquina. Era momento de entregar un mensaje claro, conciso y elegante ¿Pero cómo? Con un tono y mensaje unificado a través de toda la experiencia. Con esto en mente, de la mano con las casas productoras, Acueducto diseñó la redacción del sitio web de forma coherente con los <i>press kits</i>. Así toda la narrativa del proyecto fue controlada no sólo en la página sino también en la prensa que la difundió. <br/><br/>Encontrar artículos donde los adjetivos y mensajes del sitio web de LDDLF son reutilizados es la norma, muchas veces palabra por palabra.",
+          "stat": "de las publicaciones en prensa utilizaron o citaron palabra por palabra contenido del sitio o <i>press kit</i>.",
+          "p2": "Sin embargo ¿no es lo más valioso para un cineasta que los espectadores vean su película? En las taquillas de los festivales pueden competir cientos de filmes por la atención de los asistentes. La mayoría de las películas no cuentan con un sitio que incluya su trailer, sinópsis y créditos, no cubrir este frente impacta directamente en el número de espectadores finales al no poder consultar información adicional en buscadores. Además de resolver este problema, se hizo un gran esfuerzo de posicionamiento en buscadores (SEO) para que cualquier búsqueda de “La Danza de las Fieras” arrojara el sitio web como primer resultado."
+        },
+        "fifth_section": {
+          "title": "<b>Acto III</b><br/>That’s a wrap",
+          "p": "La Danza de las Fieras terminó recientemente su tour alrededor del mundo en más de 6 países. 12 festivales de cine y 22 menciones en prensa global avalan a la película como una autoridad en el tema de tráfico de personas.<br/><br/>El sitio web fue crucial para posicionar la película en estos festivales y en la industria del cine en general; y la estrategia digital hizo que las aplicaciones a festivales fueran más sencillas tanto para cineastas como organizadores.",
+          "quote": {
+            "quote": "El sitio web de La Danza de las Fieras fue la razón por la que Cinema23, empresa encargada de la organización de los Premios Fénix, encontró toda la información necesaria para considerar el largometraje en su premiación.",
+            "name": "Javier Rodríguez",
+            "label": "Productor de Festivales de Cine"
+          },
+          "p2": "LDDLF está comenzando su faceta de distribución y Aly junto a su equipo continúan generando conciencia y debate alrededor de la crisis de tráfico humano en México y el mundo.<br/><br/>Respaldada por un poderoso branding, sitio web y estrategia de contenido, Aly promocionó con éxito su primer largometraje viajando por el mundo, ganando visibilidad y empujando la conversación alrededor del tráfico de personas en las pantallas de cine y en la vida diaria de sus espectadores."
+        },
+        "sixth_section": {
+          "linkp": "visita"
+        }
+      },
+      "rahid": {
+        "page_title": "Un ecommerce único en México | Rahid & Acueducto",
+        "meta_description": "¿Qué necesitas para lanzar un ecommerce exitoso en México? Lee este caso de estudio con la tienda en línea de Rahid.",
+        "headerTitle": "Rahid",
+        "title": "un ecommerce único en México",
         "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
         "video": "fieras.mp4",
         "logo": "fieras.svg",
@@ -243,7 +243,7 @@
             "copywriting"
           ],
           "video": "lddlf_intro.mp4",
-          "title": "<b>Acto I</b><br/>De una marca hecha en casa a una global",
+          "title": "<b>Acto I</b><br/>Transformando una marca hecha en casa en un ecommerce único en México",
           "p": "Rodrigo es el fundador de Rahid, una comercializadora y marca de parafernalia cannábica y artículos para fumador. Durante más de 10 años ha ofrecido a su clientela los mejores bongs, shishas, dabs y más piezas de origen mexicano, impulsando la competencia local y el comercio justo. De igual forma, Rahid ha mostrado ser una marca libre de prejuicios para la discusión del consumo recreacional del cannabis en el país.",
           "graphicp": "*Logotipo anterior",
           "p2": "Antes de nuestra colaboración, Rodrigo había desarrollado dos marcas para su negocio: El Rahid y Tobacco House Mexico, pero ambas eran percibidas por él mismo como poco posicionadas, con una identidad débil y faltas de cohesividad a través de sus canales de venta. De igual forma, llevaba años queriendo montar un marketplace propio y aprovechar herramientas de marketing digitales. A pesar de comenzar su negocio en internet desde hace más de una década vía Mercado Libre, sus acciones digitales no eran suficientes para alcanzar su visión como empresa: convertirse en la comercializadora de parafernalia cannábica más relevante del país."
@@ -252,14 +252,22 @@
           "subtitle": "Un giro de 180º con una poderosa experiencia de ecommerce",
           "p": "Después de la fase de descubrimiento, decidimos explotar y desarrollar tres áreas para crear la mejor experiencia con un marketplace de punta de lanza: marca, desarrollo y lanzamiento.",
           "quote": {
-            "quote": "Llevaba diez años intentando solidificar mi marca para poder alcanzar mis objetivos, para poder crecer.",
+            "quote": "Llevaba 8 años buscando construir una marca que generara confianza a nuestros compradores en línea, pues están acostumbrados a utilizar sitios con funcionalidades y diseño de primera calidad.",
             "name": "Rodrigo H. Maldonado",
             "label": "CEO / Fundador, Rahid"
           }
         },
         "third_section": {
           "title": "<b>Acto II</b><br/>Desarrollo de marca y tono de voz",
-          "p": "Desde la primer reunión que tuvimos con Rodrigo notamos un problema con su identidad: a pesar de llevar 10 años en el mercado, se percibía débil, faltaba cohesión entre sus canales de venta y estaba poco posicionada. Nos dimos a la tarea de ahondar en su modelo y objetivos de negocio, valores, propósito, experiencia, clientes y muchos factores más para construir un branding y tono de voz a la medida. Era fundamental para el proyecto reflejar no sólo la historia de Rahid y su comunidad, sino también marcar una dirección de crecimiento para percibirse como un proyecto escalable. Cuando la intención es ser el mejor postor en tu área, es vital tener una marca que ofrezca una experiencia de calidad, bien construida y que comunique exáctamente lo que buscas. "
+          "p": "Desde la primer reunión que tuvimos con Rodrigo notamos un problema con su identidad: a pesar de llevar 10 años en el mercado, se percibía débil, faltaba cohesión entre sus canales de venta y estaba poco posicionada. Nos dimos a la tarea de ahondar en su modelo y objetivos de negocio, valores, propósito, experiencia, clientes y muchos factores más para construir un branding y tono de voz a la medida. Era fundamental para el proyecto reflejar no sólo la historia de Rahid y su comunidad, sino también marcar una dirección de crecimiento para percibirse como un proyecto escalable. Cuando la intención es ser el mejor postor en tu área, es vital tener una marca que ofrezca una experiencia de calidad, bien construida y que comunique exáctamente lo que buscas.",
+          "spans": [
+            "Logotipo",
+            "Imagotipo",
+            "Primario",
+            "Mayoreo",
+            "Paleta de color",
+            "Tipografía"
+          ]
         },
         "fourth_section": {
           "subtitle": "Un ecommerce nunca antes visto en la industria mexicana",
@@ -276,7 +284,7 @@
           "p3": "El resultado fue una tasa de conversión fenomenal, el 77% de los usuarios dejaron su correo electrónico, lo que nos permitió crear una base de datos de 1.000+ usuarios durante el pre-lanzamiento que hicieron toda la diferencia al momento de inaugurar el ecommerce.",
           "p4": "Llegó el mes del lanzamiento, y con ayuda de los influencers, en solo 30 días crecimos 400% la cantidad de seguidores en el Instagram de Rahid, además de concretar conversiones casi diariamente en medio de la crisis del COVID-19.",
           "quote": {
-            "quote": "La base de datos recolectada durante campaña de lanzamiento me permitió comenzar a desarrollar vínculos más significativos con mis clientes.",
+            "quote": "Nos encontramos en una oportunidad de crecimiento sin límites. Con un sitio funcional que refleja nuestra identidad estamos exponenciando nuestra oferta a los clientes. A pesar de estar en medio de una pandemia y oper a puerta cerrada en sucursales, nuestro ecommerce nos permite seguir activos y creciendo.",
             "name": "Rodrigo H. Maldonado",
             "label": "CEO / Fundador, RAHID"
           },

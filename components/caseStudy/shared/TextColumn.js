@@ -20,6 +20,7 @@ const TextColumn = styled.div`
     max-width: 670px;
     font-weight: 300;
     padding: 18% 0 5% 0;
+    line-height: 132%;
   }
   p {
     max-width: 670px;

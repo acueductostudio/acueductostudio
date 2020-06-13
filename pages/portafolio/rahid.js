@@ -7,21 +7,14 @@ import Fade from "react-reveal/Fade";
 import ContactFooter from "components/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoRahid from "public/assets/img/casestudies/rahid/logoRahid.svg";
-import PosterLine from "public/assets/img/casestudies/ladanzadelasfieras/line.svg";
-import Type_1 from "public/assets/img/casestudies/ladanzadelasfieras/type_1.svg";
-import Type_2 from "public/assets/img/casestudies/ladanzadelasfieras/type_2.svg";
-import Type_3 from "public/assets/img/casestudies/ladanzadelasfieras/type_3.svg";
-import AppSvg from "public/assets/img/casestudies/ladanzadelasfieras/app.svg";
 import { H2, H3, P } from "components/shared/Dangerously";
 import IntroVideo from "components/caseStudy/shared/IntroVideo";
 import Marquee from "components/caseStudy/shared/Marquee";
 import Quote from "components/caseStudy/shared/Quote";
-import Insight from "components/caseStudy/shared/Insight";
 import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
 import Picture from "components/caseStudy/shared/Picture";
 
-const fierasRed = "rgb(201,32,26)";
 const rahidBackground = "#F9F5F0";
 const rahidAccent = "#8893CE";
 const rahidForeground = "#31302E";
@@ -48,7 +41,7 @@ function Rahid(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        image={"og_image_lddlf.png"}
+        image={"og_image_rahid.png"}
         canonical={"https://acueducto.studio/portafolio/rahid"}
         en_canonical={"https://acueducto.studio/en/work/rahid"}
         lang={props.lang}
@@ -87,6 +80,9 @@ function Rahid(props) {
           <P>{t.third_section.p}</P>
         </TextColumn>
         <Branding>
+          {t.third_section.spans.map((span, index) => (
+            <span key={index + "span"}>{span}</span>
+          ))}
           <img
             src="/assets/img/casestudies/rahid/brandGroup.svg"
             alt="Branding"
@@ -189,7 +185,7 @@ const LaunchGrid = styled.div`
   img {
     width: 100%;
     margin: 0px !important;
-    &:nth-of-type(2) {
+    &:nth-of-type(even) {
       grid-column-start: 3;
     }
   }
@@ -243,9 +239,29 @@ const Applications = styled.div`
 const Branding = styled.div`
   width: 80%;
   max-width: 800px;
-  margin-top: 10%;
+  margin-top: 6%;
+  position: relative;
   img {
     width: 100%;
+  }
+  span {
+    font-size: 1.2rem;
+    width: 100%;
+    position: absolute;
+    max-width: 36%;
+    border-bottom: 2px solid #686153;
+    padding-bottom: 4px;
+    &:nth-of-type(even) {
+      right: 0;
+    }
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      top: 34.3%;
+    }
+    &:nth-of-type(5),
+    &:nth-of-type(6) {
+      top: 63.6%;
+    }
   }
 `;
 
@@ -306,12 +322,14 @@ const SixthSection = styled(CommonSection)`
   background-image: url("/assets/img/casestudies/rahid/landBack.svg");
   background-position: center bottom;
   background-size: cover;
+  align-items: flex-end;
   a {
     font-size: 4.5rem;
     margin-bottom: 5%;
     text-decoration: none;
     line-height: 100%;
     border-bottom: 3px solid ${(props) => props.theme.colors.foreground};
+    margin-right: 20%;
   }
   @media (max-width: 900px) {
     background-position: left top;
@@ -425,8 +443,10 @@ const LandSection = styled(CommonSection)`
   background-image: url("/assets/img/casestudies/rahid/landBack.svg");
   background-position: center bottom;
   background-size: cover;
+  align-items: flex-end;
   svg {
     max-width: 650px;
     width: 70%;
+    margin-right: 5%;
   }
 `;

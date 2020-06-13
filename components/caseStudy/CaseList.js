@@ -8,7 +8,7 @@ import Arrow from "components/shared/Arrow";
 import Link from "next/link";
 import LangContext from "utils/LangContext";
 
-const SingleCase = props => {
+const SingleCase = (props) => {
   const video = useRef(null);
   return (
     <Case>
@@ -82,28 +82,23 @@ const SingleCase = props => {
 
 const CaseList = ({ limit, noPlay }) => {
   const context = useContext(LangContext);
-  let cases = Object.entries(context.casestudies.studies).map(function(
-    study,
-    index
-  ) {
-    study = study[1];
-    if (limit !== undefined && index + 1 > limit) {
-      return;
-    } else {
-      return (
-        <SingleCase
-          key={"case" + index}
-          title={study.title}
-          tags={study.tags}
-          link={study.link}
-          video={study.video}
-          logo={study.logo}
-          noPlay={noPlay}
-          lang={context.lang}
-        />
-      );
-    }
-  });
+  let cases = Object.entries(context.casestudies.studies)
+    .reverse()
+    .map(function (study, index) {
+      study = study[1];
+      if (limit !== undefined && index + 1 > limit) {
+        return;
+      } else {
+        return (
+          <SingleCase
+            key={"case" + index}
+            {...study}
+            noPlay={noPlay}
+            lang={context.lang}
+          />
+        );
+      }
+    });
   return <CaseStudiesWrapper>{cases}</CaseStudiesWrapper>;
 };
 
@@ -158,13 +153,13 @@ const Info = styled.div`
     background-position: 0 5.8rem;
   }
   p {
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
   }
   a {
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         svg {
-          stroke: ${props => props.theme.colors.accent};
+          stroke: ${(props) => props.theme.colors.accent};
         }
       }
     }
@@ -176,8 +171,8 @@ const Info = styled.div`
       width: 50px;
       height: 40px;
       fill: none;
-      stroke: ${props => props.theme.colors.foreground};
-      stroke-width: ${props => props.theme.stroke};
+      stroke: ${(props) => props.theme.colors.foreground};
+      stroke-width: ${(props) => props.theme.stroke};
       transition: stroke 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
   }
@@ -204,7 +199,7 @@ const Info = styled.div`
   }
   @media (max-width: 600px) {
     span svg {
-      border: 2px solid ${props => props.theme.colors.foreground_low};
+      border: 2px solid ${(props) => props.theme.colors.foreground_low};
       padding: 10px;
       border-radius: 50%;
       width: 48px;
@@ -260,7 +255,7 @@ const VidContainer = styled.div`
 
 const Case = styled.div`
   display: grid;
-  border-top: ${props =>
+  border-top: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   grid-template-columns: repeat(2, 1fr);
   a {
@@ -290,6 +285,6 @@ const Case = styled.div`
 `;
 
 const CaseStudiesWrapper = styled.section`
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
 `;

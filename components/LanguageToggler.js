@@ -14,6 +14,9 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
         case "/en/work/salvajenada":
           Router.push(router.route, "/portafolio/salvajenada");
           break;
+        case "/en/work/rahid":
+          Router.push(router.route, "/portafolio/rahid");
+          break;
         case "/en/work":
           Router.push(router.route, "/portafolio");
           break;
@@ -45,6 +48,9 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
         case "/portafolio/salvajenada":
           Router.push(router.route, "/en/work/salvajenada");
           break;
+        case "/portafolio/rahid":
+          Router.push(router.route, "/en/work/rahid");
+          break;
         case "/portafolio":
           Router.push(router.route, "/en/work");
           break;
@@ -73,28 +79,28 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
 
   return (
     router.asPath !== "/podcast" && (
-        <Toggler reveal={hasLoaded}>
-          <a onClick={handleLink}>
-            <English>
-              <span>
-                {locale.lang === "es" ? "switch language" : "cambiar idioma"}
-              </span>
-              {locale.lang === "es" ? "english" : "español"}
-            </English>
+      <Toggler reveal={hasLoaded}>
+        <a onClick={handleLink}>
+          <English>
+            <span>
+              {locale.lang === "es" ? "switch language" : "cambiar idioma"}
+            </span>
+            {locale.lang === "es" ? "english" : "español"}
+          </English>
 
-            <Stable>
-              <Arrows />
-            </Stable>
-          </a>
-        </Toggler>
+          <Stable>
+            <Arrows />
+          </Stable>
+        </a>
+      </Toggler>
     )
   );
 }
 export default React.memo(LanguageToggler);
 
 const English = styled.div`
-  background-color: ${props => props.theme.colors.accent};
-  border: 2px solid ${props => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.accent};
+  border: 2px solid ${(props) => props.theme.colors.foreground};
   padding: 10px;
   position: absolute;
   margin-top: -13px;
@@ -115,7 +121,7 @@ const English = styled.div`
     font-size: 1.1rem;
     line-height: 1;
     width: 100%;
-    color: ${props => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.background};
     font-weight: 300;
   }
   svg {
@@ -123,7 +129,7 @@ const English = styled.div`
     padding: 15px;
     box-sizing: content-box;
     * {
-      fill: ${props => props.theme.colors.white};
+      fill: ${(props) => props.theme.colors.white};
       font-family: inherit;
       font-weight: 300;
     }
@@ -137,8 +143,8 @@ const Stable = styled.div`
     box-sizing: content-box;
     * {
       fill: none;
-      stroke-width: ${props => props.theme.stroke};
-      stroke: ${props => props.theme.colors.white};
+      stroke-width: ${(props) => props.theme.stroke};
+      stroke: ${(props) => props.theme.colors.white};
     }
   }
 `;
@@ -161,7 +167,7 @@ const Toggler = styled.div`
   padding-right: 35px;
   margin: 0px auto;
   max-width: 1500px;
-  opacity: ${props => (props.reveal ? 1 : 0)};
+  opacity: ${(props) => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -178,12 +184,12 @@ const Toggler = styled.div`
     padding: 15px;
     box-sizing: content-box;
     .fill * {
-      fill: ${props => props.theme.colors.white};
+      fill: ${(props) => props.theme.colors.white};
     }
     .stroke * {
       fill: none;
-      stroke-width: ${props => props.theme.stroke};
-      stroke: ${props => props.theme.colors.white};
+      stroke-width: ${(props) => props.theme.stroke};
+      stroke: ${(props) => props.theme.colors.white};
     }
   }
   @media (max-width: 600px) {
