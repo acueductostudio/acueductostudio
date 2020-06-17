@@ -89,10 +89,16 @@ function Rahid(props) {
           />
         </Branding>
         <Applications>
-          <img src="/assets/img/casestudies/rahid/box.png" alt="Packaging" />
-          <img src="/assets/img/casestudies/rahid/fb.png" alt="Facebook Post" />
-          <img
-            src="/assets/img/casestudies/rahid/ig.png"
+          <Picture
+            src="/assets/img/casestudies/rahid/box.png"
+            alt="Packaging"
+          />
+          <Picture
+            src="/assets/img/casestudies/rahid/fb.jpg"
+            alt="Facebook Post"
+          />
+          <Picture
+            src="/assets/img/casestudies/rahid/ig.jpg"
             alt="Instagram Post"
           />
         </Applications>
@@ -101,18 +107,18 @@ function Rahid(props) {
         <TextColumn>
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
-          <img
-            src="/assets/img/casestudies/rahid/home.png"
+          <Picture
+            src="/assets/img/casestudies/rahid/home.jpg"
             alt="Home Rahid.co"
           />
           <P>{t.fourth_section.p2}</P>
         </TextColumn>
         <InsertBlock>
-          <img
+          <Picture
             src="/assets/img/casestudies/rahid/boxes.png"
             alt="Home Rahid.co"
           />
-          <p>{t.fourth_section.graphicp}</p>
+          <P>{t.fourth_section.graphicp}</P>
         </InsertBlock>
         <TextColumn>
           <P>{t.fourth_section.p3}</P>
@@ -124,11 +130,11 @@ function Rahid(props) {
           <P>{t.fifth_section.p}</P>
         </TextColumn>
         <LaunchGrid>
-          <img
+          <Picture
             src="/assets/img/casestudies/rahid/desktop.png"
             alt="Festival awards"
           />
-          <img
+          <Picture
             src="/assets/img/casestudies/rahid/mobile.png"
             alt="Festival awards"
           />
@@ -145,8 +151,8 @@ function Rahid(props) {
           </Stat>
           <P>{t.fifth_section.p3}</P>
         </TextColumn>
-        <img
-          src="/assets/img/casestudies/rahid/referral.png"
+        <Picture
+          src="/assets/img/casestudies/rahid/referral.jpg"
           alt="Email Marketing"
         />
 
@@ -182,12 +188,28 @@ const LaunchGrid = styled.div`
   display: grid;
   grid-template-columns: 7fr 1fr 2.038fr;
   margin: 5% 0;
-  img {
+  position: relative;
+  max-height: 340px;
+  picture {
     width: 100%;
     margin: 0px !important;
+    height: auto;
+    img {
+      width: 100%;
+      margin: 0 !important;
+    }
+    &:nth-last-of-type(1) {
+      width: auto !important;
+      /* height: 100%; */
+    }
     &:nth-of-type(even) {
       grid-column-start: 3;
     }
+  }
+  @media (max-width: 1000px) {
+    max-width: unset;
+    width: 90%;
+    margin: 5%;
   }
 `;
 
@@ -197,6 +219,7 @@ const InsertBlock = styled.figure`
   margin: 8% 0;
   padding: 8%;
   position: relative;
+  max-width: 1200px;
   p {
     color: #828282;
     margin-top: 20px;
@@ -204,6 +227,29 @@ const InsertBlock = styled.figure`
     max-width: 220px;
     right: 5%;
     bottom: 25%;
+  }
+  @media (max-width: 1120px) {
+    p {
+      font-size: 1.5rem;
+      bottom: 23%;
+      max-width: 200px;
+    }
+  }
+  @media (max-width: 950px) {
+    p {
+      right: 3%;
+      font-size: 1.4rem;
+      max-width: 180px;
+    }
+  }
+  @media (max-width: 830px) {
+    p {
+      right: unset;
+      position: relative;
+      font-size: 1.4rem;
+      max-width: unset;
+      bottom: unset;
+    }
   }
 `;
 
@@ -216,9 +262,15 @@ const Applications = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 0.7fr 1fr;
-  img {
+  /* align-items: flex-end; */
+  picture {
     width: 100%;
     border-radius: 2px;
+    position: relative;
+    display: block;
+    img {
+      width: 100%;
+    }
     &:nth-of-type(1) {
       grid-column: 1 / span 3;
       margin-top: -5%;
@@ -226,13 +278,15 @@ const Applications = styled.div`
     &:nth-of-type(2) {
       grid-column: 7 / span 4;
       grid-row: 1 / span 2;
-      min-height: 100%;
     }
     &:nth-of-type(3) {
       grid-column: 1 / span 5;
       grid-row: 2;
       align-self: flex-end;
     }
+  }
+  @media (max-width: 500px) {
+    margin-bottom: 15%;
   }
 `;
 
@@ -251,6 +305,8 @@ const Branding = styled.div`
     max-width: 36%;
     border-bottom: 2px solid #686153;
     padding-bottom: 4px;
+    color: ${rahidForeground};
+
     &:nth-of-type(even) {
       right: 0;
     }
@@ -261,6 +317,32 @@ const Branding = styled.div`
     &:nth-of-type(5),
     &:nth-of-type(6) {
       top: 63.6%;
+    }
+  }
+  @media (max-width: 1000px) {
+    max-width: unset;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  @media (max-width: 600px) {
+    margin-top: 10%;
+    margin-bottom: 8%;
+    span {
+      padding-bottom: 3px;
+      border-bottom: 1px solid #686153;
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        top: -2%;
+      }
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        top: 32%;
+      }
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        top: 60%;
+      }
     }
   }
 `;
@@ -320,8 +402,9 @@ const SixthSection = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${rahidAccent};
   background-image: url("/assets/img/casestudies/rahid/landBack.svg");
-  background-position: center bottom;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto 100%;
   align-items: flex-end;
   a {
     font-size: 4.5rem;
@@ -343,6 +426,7 @@ const SixthSection = styled(CommonSection)`
     }
   }
   @media (max-width: 500px), (max-height: 450px) {
+    align-items: center;
     a {
       font-size: 1.5rem;
       padding: 5%;
@@ -351,6 +435,7 @@ const SixthSection = styled(CommonSection)`
       color: ${rahidForeground};
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
       border: 0;
+      margin-right: 0;
     }
   }
 `;
@@ -362,11 +447,24 @@ const FifthSection = styled(CommonSection)`
   h2 b {
     color: ${rahidAccent};
   }
-  img {
-    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
+  blockquote,
+  p {
+    color: ${rahidForeground};
+  }
+  picture {
+    img {
+      width: 100%;
+      box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
+    }
     &:nth-last-of-type(1) {
       max-width: 800px;
-      margin: 8% 0;
+      margin: 6% 0;
+    }
+  }
+  @media (max-width: 1000px) {
+    picture:nth-last-of-type(1) {
+      max-width: unset;
+      width: 90%;
     }
   }
 `;
@@ -375,10 +473,15 @@ const FourthSection = styled(CommonSection)`
   background-color: ${rahidForeground};
   color: ${(props) => props.theme.colors.foreground_low};
   padding-bottom: 10%;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   div img {
     width: 100%;
     margin: 12% 0;
-    max-width: 670px;
+    max-width: 800px;
   }
   figure img {
     width: 100%;
@@ -396,6 +499,9 @@ const ThirdSection = styled(CommonSection)`
     b {
       color: ${rahidAccent};
     }
+  }
+  p {
+    color: ${rahidForeground};
   }
 `;
 
@@ -435,18 +541,59 @@ const FirstSection = styled(CommonSection)`
       color: ${rahidAccent};
     }
   }
+  ul li,
+  p {
+    color: ${rahidForeground};
+  }
 `;
 
 const LandSection = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${rahidBackground};
   background-image: url("/assets/img/casestudies/rahid/landBack.svg");
-  background-position: center bottom;
+  background-position: left center;
   background-size: cover;
   align-items: flex-end;
   svg {
-    max-width: 650px;
+    max-width: 500px;
     width: 70%;
-    margin-right: 5%;
+    margin-right: 10%;
+  }
+  @media (max-width: 1200px) {
+    background-position: 20% 100%;
+  }
+  @media (max-width: 1100px) {
+    background-position: 10% 100%;
+    svg {
+      max-width: 350px;
+      margin-right: 10%;
+    }
+  }
+  @media (max-width: 960px) {
+    background-position: 15% 100%;
+    svg {
+      max-width: 300px;
+      margin-right: 10%;
+    }
+  }
+  @media (max-width: 850px) {
+    background-position: 25% 100%;
+    svg {
+      margin-right: 12%;
+    }
+  }
+  @media (max-width: 800px) {
+    background-position: 25% 100%;
+    background-image: url("/assets/img/casestudies/rahid/landBackMobile.svg");
+    background-position: center center;
+    align-items: center;
+    svg {
+      max-width: 300px;
+      margin-right: 0;
+      mix-blend-mode: invert;
+      * {
+        fill: ${rahidBackground};
+      }
+    }
   }
 `;

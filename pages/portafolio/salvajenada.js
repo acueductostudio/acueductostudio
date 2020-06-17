@@ -31,7 +31,7 @@ import InterBackImg from "public/assets/img/casestudies/salvajenada/interBack.sv
 const FramesEmbed = dynamic(
   import("components/caseStudy/salvajenada/FramesEmbed"),
   {
-    loading: () => <span style={{ height: "500px" }}>Loading frames...</span>
+    loading: () => <span style={{ height: "500px" }}>Loading frames...</span>,
   }
 );
 
@@ -216,7 +216,7 @@ export default function Salvajenada(props) {
         </Insight>
         <Quote
           quote={t.third_section.insights.multimedia_development.quote}
-          color={props => props.theme.colors.background}
+          color={(props) => props.theme.colors.background}
         />
       </Third>
       <Fourth>
@@ -259,7 +259,7 @@ export default function Salvajenada(props) {
           </a>
         </Fade>
       </Fifth>
-      <NextStudy link="ladanzadelasfieras" margined />
+      <NextStudy link="rahid" margined />
       <ContactFooter />
     </PageClipper>
   );
@@ -272,13 +272,13 @@ const Sticky = styled.div`
   flex-direction: column;
   span {
     padding: 13px 21px;
-    border: ${props =>
+    border: ${(props) =>
       props.theme.stroke + " solid " + props.theme.colors.foreground_low};
     text-align: center;
   }
   div {
     padding: 13px 21px 11px 21px;
-    border: ${props =>
+    border: ${(props) =>
       props.theme.stroke + " solid " + props.theme.colors.foreground_low};
     border-top: 0;
     display: flex;
@@ -295,7 +295,7 @@ const Sticky = styled.div`
       width: 100%;
       height: 100%;
       * {
-        fill: ${props => props.theme.colors.foreground};
+        fill: ${(props) => props.theme.colors.foreground};
       }
     }
   }
@@ -547,12 +547,12 @@ const Table = styled.div`
   width: 90%;
   max-width: 800px;
   margin: 5%;
-  box-shadow: 0 0 0 2px ${props => props.theme.colors.foreground_low};
+  box-shadow: 0 0 0 2px ${(props) => props.theme.colors.foreground_low};
   p {
-    box-shadow: 0 0 0 1px ${props => props.theme.colors.foreground_low};
+    box-shadow: 0 0 0 1px ${(props) => props.theme.colors.foreground_low};
     padding: 25px;
     font-weight: 100;
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
   }
   @media (max-width: 900px) {
     margin: 10% 5%;
@@ -577,10 +577,10 @@ const TableProposition = styled(Table)`
     p {
       &:nth-child(1) {
         font-weight: 300;
-        color: ${props => props.theme.colors.foreground};
+        color: ${(props) => props.theme.colors.foreground};
       }
       &:nth-child(2) {
-        color: ${props => props.theme.colors.foreground_low};
+        color: ${(props) => props.theme.colors.foreground_low};
       }
     }
   }
@@ -599,11 +599,11 @@ const TableStrengths = styled(Table)`
       &:nth-child(1),
       &:nth-child(3) {
         font-weight: 300;
-        color: ${props => props.theme.colors.foreground};
+        color: ${(props) => props.theme.colors.foreground};
       }
       &:nth-child(2),
       &:nth-child(4) {
-        color: ${props => props.theme.colors.foreground_low};
+        color: ${(props) => props.theme.colors.foreground_low};
       }
     }
   }
@@ -637,7 +637,7 @@ const FifthBack = styled(CommonTransition)`
 
 const Fifth = styled(CommonSection)`
   background-color: ${salvajeBlue};
-  color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.background};
   padding-bottom: 10%;
   h3 {
     padding: 0;
@@ -648,7 +648,7 @@ const Fifth = styled(CommonSection)`
     svg {
       width: 50px;
       * {
-        fill: ${props => props.theme.colors.background};
+        fill: ${(props) => props.theme.colors.background};
       }
     }
   }
@@ -668,11 +668,11 @@ const FourthBack = styled(CommonTransition)`
 `;
 
 const Fourth = styled(CommonSection)`
-  background-color: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.foreground_low};
+  background-color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground_low};
   margin-bottom: 10%;
   h2 {
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
     b {
       color: ${salvajeBlue};
     }
@@ -680,11 +680,11 @@ const Fourth = styled(CommonSection)`
 `;
 
 const Third = styled(CommonSection)`
-  color: ${props => props.theme.colors.background};
-  background-color: ${props => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.foreground};
   margin-top: 5%;
   blockquote {
-    color: ${props => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.background};
   }
   h3 {
     font-weight: 300;
@@ -721,24 +721,24 @@ const InterBack = styled.div`
 `;
 
 const Second = styled(CommonSection)`
-  color: ${props => props.theme.colors.foreground_low};
+  color: ${(props) => props.theme.colors.foreground_low};
   margin-bottom: 15%;
   h1 {
     padding-top: 0;
   }
   h2 {
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
     padding-top: 0;
     b {
       color: ${salvajeBlue};
     }
   }
   table {
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
   }
   p {
     b {
-      color: ${props => props.theme.colors.foreground};
+      color: ${(props) => props.theme.colors.foreground};
       font-weight: 100;
     }
   }
@@ -805,17 +805,17 @@ const WolfDays = styled.div`
 
 const Intro = styled(CommonSection)`
   background-color: ${salvajeBlue};
-  color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.background};
   padding-bottom: 8%;
   margin-top: -1px;
   h2 b {
-    color: ${props => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.background};
   }
 `;
 
 const Land = styled(CommonSection)`
   min-height: 100vh;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   background-image: url("/assets/img/casestudies/salvajenada/landBack.svg");
   background-position: center bottom;
   background-size: cover;

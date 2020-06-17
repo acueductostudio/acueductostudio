@@ -3,7 +3,7 @@ const { execSync } = require("child_process");
 
 const lossyMinSizeReduction = 0.35; // 30% deduction minimum
 
-const createLossyIfNotExists = file => {
+const createLossyIfNotExists = (file) => {
   const baseName = file.substring(0, file.lastIndexOf("."));
 
   const webpLossyFile = `${baseName}.webp`;
@@ -28,7 +28,7 @@ const createLossyIfNotExists = file => {
   }
 };
 
-const createLossyAlphaIfNotExists = file => {
+const createLossyAlphaIfNotExists = (file) => {
   const baseName = file.substring(0, file.lastIndexOf("."));
 
   const webpLossyAlphaFile = `${baseName}.webp`;
@@ -38,7 +38,7 @@ const createLossyAlphaIfNotExists = file => {
   execSync(`cwebp ${file} -q 85 -alpha_q 98 -m 6 -o ${webpLossyAlphaFile}`);
 };
 
-const createLosslessIfNotExists = file => {
+const createLosslessIfNotExists = (file) => {
   const baseName = file.substring(0, file.lastIndexOf("."));
 
   const webpLosslessFile = `${baseName}_lossless.webp`;
@@ -48,7 +48,7 @@ const createLosslessIfNotExists = file => {
   execSync(`cwebp ${file} -lossless -m 6 -q 95 -o ${webpLosslessFile}`);
 };
 
-const walk = dir => {
+const walk = (dir) => {
   let results = [];
 
   const list = fs.readdirSync(dir);
@@ -75,10 +75,10 @@ const walk = dir => {
 
   return next();
 };
-//No es claro si debe decir public o no
-const allFiles = walk("public/assets/img/");
 
-allFiles.forEach(file => {
+const allFiles = walk("public/assets/img/casestudies/rahid/intro");
+
+allFiles.forEach((file) => {
   if (file.toLowerCase().lastIndexOf(".png") === file.length - 4) {
     createLossyAlphaIfNotExists(file);
     createLosslessIfNotExists(file);

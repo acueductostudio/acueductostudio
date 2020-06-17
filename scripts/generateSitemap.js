@@ -7,55 +7,60 @@ const routes = [
   {
     es: "",
     en: "/en",
-    priority: 1
+    priority: 1,
   },
   {
     es: "/pitch",
     en: "/en/pitch",
-    priority: 0.9
+    priority: 0.9,
   },
   {
     es: "/nosotros",
     en: "/en/about",
-    priority: 0.8
+    priority: 0.8,
   },
   {
     es: "/manifiesto",
     en: "/en/manifesto",
-    priority: 0.8
+    priority: 0.8,
   },
   {
     es: "/portafolio",
     en: "/en/work",
-    priority: 0.8
+    priority: 0.8,
+  },
+  {
+    es: "/portafolio/rahid",
+    en: "/en/work/rahid",
+    priority: 0.7,
   },
   {
     es: "/portafolio/ladanzadelasfieras",
     en: "/en/work/ladanzadelasfieras",
-    priority: 0.7
+    priority: 0.7,
   },
   {
     es: "/portafolio/salvajenada",
     en: "/en/work/salvajenada",
-    priority: 0.7
+    priority: 0.7,
   },
   {
     es: "/cookies",
     en: "/en/cookies",
-    priority: 0.6
+    priority: 0.6,
   },
   {
     es: "/privacidad",
     en: "/en/privacy",
-    priority: 0.6
+    priority: 0.6,
   },
   {
     es: "/podcast",
-    priority: 0.7
-  }
+    priority: 0.7,
+  },
 ];
 
-const esRoute = route =>
+const esRoute = (route) =>
   route.es !== undefined
     ? `<url>
     <loc>${url + route.es}</loc>
@@ -73,7 +78,7 @@ const esRoute = route =>
   </url>`
     : "";
 
-const enRoute = route =>
+const enRoute = (route) =>
   route.en !== undefined
     ? `
   <url>
@@ -97,7 +102,7 @@ const enRoute = route =>
 const today = formatDate(new Date());
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
-  ${routes.map(route => esRoute(route) + enRoute(route)).join("")}
+  ${routes.map((route) => esRoute(route) + enRoute(route)).join("")}
 </urlset>`;
 
 fs.writeFileSync("public/sitemap.xml", sitemapXml);

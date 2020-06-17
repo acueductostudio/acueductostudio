@@ -221,6 +221,77 @@
         "fifth_section": {
           "title": "listen to #CanastaBasica"
         }
+      },
+      "rahid": {
+        "page_title": "A unique ecommerce in Mexico | Rahid & Acueducto",
+        "meta_description": "All you need to launch a successful ecommerce in Mexico: a case study of Rahid’s online store.",
+        "headerTitle": "Rahid",
+        "title": "a unique ecommerce in Mexico",
+        "tags": "Strategy<br/>Commmunication<br/>Branding<br/>Ecommerce<br/>Digital Marketing<br/>",
+        "video": "rahid.mp4",
+        "logo": "rahid.svg",
+        "link": "rahid",
+        "intro_section": {
+          "tags": [
+            "project strategy",
+            "content strategy",
+            "branding",
+            "ecommerce",
+            "community management",
+            "digital tov",
+            "copywriting"
+          ],
+          "video": "rahid_intro.mp4",
+          "title": "<b>Act I</b><br/>Transforming a homemade brand into a unique ecommerce in Mexico",
+          "p": "Rodrigo is the founder of Rahid, a cannabis and smoking paraphernalia brand and retailer. For more than 10 years he has provided the best Mexican made bongs, hookahs, dabs and other items, promoting local competition and fair trade. Likewise, Rahid has proven itself to be a prejudice free brand in favor of the discussion towards recreational use of cannabis in Mexico.",
+          "graphicp": "*Previous logo",
+          "p2": "Prior to our venture together, Rodrigo had developed two brands for his business: El Rahid and Tobacco House Mexico, but thought both of them were poorly positioned, had weak identities and his sales channels lacked cohesiveness. For years he wanted to set up his own ecommerce and exploit digital marketing tools. Despite having started his online business a decade ago through MercadoLibre, his digital efforts were not helping him achieve his business vision: become the most relevant cannabis paraphernalia retailer in the country."
+        },
+        "second_section": {
+          "subtitle": "A 180º spin with a powerful ecommerce experience",
+          "p": "Following the discovery phase, in order to provide the best experience with a cutting edge marketplace, we decided to exploit and develop three areas: brand, development and launch.",
+          "quote": {
+            "quote": "For 8 years, I had been looking to build a brand that generated trust on our online shoppers, as they are used to visiting sites with high quality design and functionality.",
+            "name": "Rodrigo H. Maldonado",
+            "label": "CEO / Founder, Rahid"
+          }
+        },
+        "third_section": {
+          "title": "<b>Act II</b><br/>Brand and tone of voice development",
+          "p": "Since our first meeting with Rodrigo, we noticed a problem with Rahid’s brand identity: despite being on the market for a decade, it appeared weak, poorly positioned, and his sales channels lacked cohesiveness. We took to the task of delving into the brand’s business model and objectives, values, purpose, experience, clients and many other factors in order to achieve a more suitable branding and tone of voice. It was of the utmost importance that it reflected the brand’s history and community, and defined a direction for growth in order to be perceived as a scalable project. When your intention is to become the best, it is vital to have built a strong brand that delivers a quality experience and communicates exactly what you want.",
+          "spans": [
+            "Logotype",
+            "Imagotype",
+            "Primary",
+            "Wholesale",
+            "Color palette",
+            "Typography"
+          ]
+        },
+        "fourth_section": {
+          "subtitle": "A never before seen ecommerce in the Mexican industry",
+          "p": "After our market research we discovered that only a handful of smoke shops in Mexico offered a web experience. Even within this niche we found a common scarcity: none of the paraphernalia brands had an ecommerce able to deal with transactions.<br/><br/>In order to set ourselves apart, we decided to develop the site in Shopify, the most powerful ecommerce platform to date, and make use of its tools to establish automated mailing campaigns (such as an abandoned shopping cart email), an efficient payment method, related products, recurring payments, multiple administrators and more.",
+          "p2": "Our ambition did not stop at offering our partner a site easy to administrate, scalable and with the best fees. Alongside Rahid’s team, we created the Green Boxes, a subscription based system that allows customers to receive products at special prices on a monthly basis, and would allow Rahid to distribute his stock and build a closer relationship with his best customers.",
+          "graphicp": "*This was the third best selling product on the month of the launch.",
+          "p3": "Due to the project’s complex apparatus and functioning, we provided our partner with a series of manuals and customised assistance in order to optimally maintain the marketplace and its communication channels. We find it crucial to equip our partners with knowledge concerning  technology and digital contexts by developing onboarding processes for them and their employees."
+        },
+        "fifth_section": {
+          "title": "<b>Act III</b><br/>A launch that marked a new era for Rahid",
+          "p": "An important fact to take into account is that it is not allowed for businesses related to tobacco to engage in direct or indirect advertising. It became essential to veer away from the pre established brand “Tobacco House” and into a more progressive vision focused on cannabis paraphernalia. Nevertheless, we were still limited by the policies in platforms like Google and Facebook which did not allow any form of advertising. What did we do? A referral marketing campaign supported by influencers.",
+          "p2": "7 accounts with 10k+ followers within the brand’s niche were selected to help to spread the launch campaign, which consisted of inviting contacts to subscribe to Rahid’s newsletter in exchange for gifts on their first purchase.",
+          "stat": "Launch campaign’s<br/> conversion rate",
+          "p3": "This campaign achieved astounding results, 77% of users provided their email address, which allowed the creation of a database of over 1,000 users during the pre-launch, making a strong difference on launch day.",
+          "p4": "The month of the launch arrived and, with the influencers’ support, the amount of followers in Rahid’s Instagram grew by 400% in the first 30 days, and achieved almost daily subscriptions during the COVID-19 crisis.",
+          "quote": {
+            "quote": "We found ourselves amid a limitless growth opportunity. With a functional site which reflects our identity we’re exponentiating our offers for our customers. Even with a pandemic happening and having our physical stores closed, our site allows us to remain active and growing.",
+            "name": "Rodrigo H. Maldonado",
+            "label": "CEO / Funder, RAHID"
+          },
+          "p5": "And our venture together does not end here, we’re still in close contact with Rodrigo. Every trimester, we revise Rahid’s team’s social media contents plan and provide advice through corrections, better practices and knowledge.<br/><br/>We are certain that Rahid is one step closer to achieving its goal: being the largest paraphernalia marketer in the country."
+        },
+        "sixth_section": {
+          "linkp": "visit"
+        }
       }
     }
   },
@@ -264,12 +335,7 @@
       "link": ["/en/pitch", "pitch"],
       "linktext": "Have we got your attention?<br/>Read our"
     },
-    "carousel": [
-      "startups",
-      "brands",
-      "smes",
-      "corporations"
-    ],
+    "carousel": ["startups", "brands", "smes", "corporations"],
     "process": {
       "title": "is placing strategy<br/>at the core",
       "p": "Innovation happens not by a spontaneous spark of creativity, but through a process that looks for real pain points and the best way to solve them.<br/><br/>Approaching challenges through Strategic Design means working, alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.<br/><br/><b>Discover our process.</b>",
