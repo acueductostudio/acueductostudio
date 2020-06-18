@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Head from "components/Head";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import PageClipper from "components/PageClipper";
 import Fade from "react-reveal/Fade";
 import ContactFooter from "components/ContactFooter";
@@ -16,16 +15,9 @@ import CommonSection from "components/caseStudy/shared/CommonSection";
 import Picture from "components/caseStudy/shared/Picture";
 
 const rahidBackground = "#F9F5F0";
-const rahidAccent = "#8893CE";
 const rahidForeground = "#31302E";
-
-const ThePlayer = dynamic(
-  import("components/caseStudy/ladanzadelasfieras/VideoPlayer"),
-  {
-    loading: () => <p>Loading player...</p>,
-    ssr: false,
-  }
-);
+const rahidAccent = "#8893CE";
+const rahidAccentDarker = "#7A84B9";
 
 function Rahid(props) {
   const [loadAssets, setloadAssets] = useState(false);
@@ -83,41 +75,49 @@ function Rahid(props) {
           {t.third_section.spans.map((span, index) => (
             <span key={index + "span"}>{span}</span>
           ))}
-          <img
-            src="/assets/img/casestudies/rahid/brandGroup.svg"
-            alt="Branding"
-          />
+          {loadAssets && (
+            <img
+              src="/assets/img/casestudies/rahid/brandGroup.svg"
+              alt="Branding"
+            />
+          )}
         </Branding>
-        <Applications>
-          <Picture
-            src="/assets/img/casestudies/rahid/box.png"
-            alt="Packaging"
-          />
-          <Picture
-            src="/assets/img/casestudies/rahid/fb.jpg"
-            alt="Facebook Post"
-          />
-          <Picture
-            src="/assets/img/casestudies/rahid/ig.jpg"
-            alt="Instagram Post"
-          />
-        </Applications>
+        {loadAssets && (
+          <Applications>
+            <Picture
+              src="/assets/img/casestudies/rahid/box.png"
+              alt="Packaging"
+            />
+            <Picture
+              src="/assets/img/casestudies/rahid/fb.jpg"
+              alt="Facebook Post"
+            />
+            <Picture
+              src="/assets/img/casestudies/rahid/ig.jpg"
+              alt="Instagram Post"
+            />
+          </Applications>
+        )}
       </ThirdSection>
       <FourthSection>
         <TextColumn>
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
-          <Picture
-            src="/assets/img/casestudies/rahid/home.jpg"
-            alt="Home Rahid.co"
-          />
+          {loadAssets && (
+            <Picture
+              src="/assets/img/casestudies/rahid/home.jpg"
+              alt="Home Rahid.co"
+            />
+          )}
           <P>{t.fourth_section.p2}</P>
         </TextColumn>
         <InsertBlock>
-          <Picture
-            src="/assets/img/casestudies/rahid/boxes.png"
-            alt="Home Rahid.co"
-          />
+          {loadAssets && (
+            <Picture
+              src="/assets/img/casestudies/rahid/boxes.png"
+              alt="Home Rahid.co"
+            />
+          )}
           <P>{t.fourth_section.graphicp}</P>
         </InsertBlock>
         <TextColumn>
@@ -129,16 +129,18 @@ function Rahid(props) {
           <H2>{t.fifth_section.title}</H2>
           <P>{t.fifth_section.p}</P>
         </TextColumn>
-        <LaunchGrid>
-          <Picture
-            src="/assets/img/casestudies/rahid/desktop.png"
-            alt="Festival awards"
-          />
-          <Picture
-            src="/assets/img/casestudies/rahid/mobile.png"
-            alt="Festival awards"
-          />
-        </LaunchGrid>
+        {loadAssets && (
+          <LaunchGrid>
+            <Picture
+              src="/assets/img/casestudies/rahid/desktop.png"
+              alt="Festival awards"
+            />
+            <Picture
+              src="/assets/img/casestudies/rahid/mobile.png"
+              alt="Festival awards"
+            />
+          </LaunchGrid>
+        )}
         <TextColumn>
           <P>{t.fifth_section.p2}</P>
           <Stat>
@@ -151,11 +153,12 @@ function Rahid(props) {
           </Stat>
           <P>{t.fifth_section.p3}</P>
         </TextColumn>
-        <Picture
-          src="/assets/img/casestudies/rahid/referral.jpg"
-          alt="Email Marketing"
-        />
-
+        {loadAssets && (
+          <Picture
+            src="/assets/img/casestudies/rahid/referral.jpg"
+            alt="Email Marketing"
+          />
+        )}
         <TextColumn>
           <P>{t.fifth_section.p4}</P>
         </TextColumn>
@@ -200,7 +203,6 @@ const LaunchGrid = styled.div`
     }
     &:nth-last-of-type(1) {
       width: auto !important;
-      /* height: 100%; */
     }
     &:nth-of-type(even) {
       grid-column-start: 3;
@@ -221,7 +223,7 @@ const InsertBlock = styled.figure`
   position: relative;
   max-width: 1200px;
   p {
-    color: #828282;
+    color: #4f4f4f;
     margin-top: 20px;
     position: absolute;
     max-width: 220px;
@@ -262,7 +264,6 @@ const Applications = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 0.7fr 1fr;
-  /* align-items: flex-end; */
   picture {
     width: 100%;
     border-radius: 2px;
@@ -445,7 +446,7 @@ const FifthSection = styled(CommonSection)`
   color: ${rahidForeground};
   padding-bottom: 10%;
   h2 b {
-    color: ${rahidAccent};
+    color: ${rahidAccentDarker};
   }
   blockquote,
   p {
@@ -497,7 +498,7 @@ const ThirdSection = styled(CommonSection)`
   h2 {
     color: ${rahidForeground};
     b {
-      color: ${rahidAccent};
+      color: ${rahidAccentDarker};
     }
   }
   p {
@@ -522,12 +523,17 @@ const OldBrand = styled.div`
   align-items: center;
   flex-direction: column;
   img {
-    max-width: 200px;
+    max-width: 170px;
   }
   p {
     line-height: 1;
     margin-top: 20px;
     color: #828282;
+  }
+  @media (max-width: 500px) {
+    img {
+      max-width: 130px;
+    }
   }
 `;
 
@@ -538,7 +544,7 @@ const FirstSection = styled(CommonSection)`
   h2 {
     color: ${rahidForeground};
     b {
-      color: ${rahidAccent};
+      color: ${rahidAccentDarker};
     }
   }
   ul li,
