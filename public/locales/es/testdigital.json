@@ -1,0 +1,31 @@
+{
+  "testdigital_page": {
+    "page_title": "¿Qué tan digital es tu negocio? – Test por Acueducto",
+    "meta_description": "Conoce las mejores prácticas de expertos y emprendedores en la industria tecnológica.",
+    "headerTitle": "test digital",
+    "intro": {
+      "title": "¿qué tan digital es tu negocio?",
+      "p": "Elaboramos este test para ayudar a negocios a descubrir que tan preparados están para la nueva década."
+    },
+    "questions": [
+      {
+        "question": "¿Cuentas con una estrategia para integrar tecnologías en tu negocio?",
+        "a1": "Si, ya tengo una estrategia",
+        "a2": "Estoy en proceso",
+        "a3": "No la tengo"
+      },
+      {
+        "question": "¿Has detectado problemas u operaciones en tu modelo de negocios que podrían ser optimizados con tecnología (tareas repetitivas, cuellos de botella, etc.)?"
+      },
+      {
+        "question": "¿Utilizas software y tecnologías de automatización para eficientar tus procesos?"
+      },
+      {
+        "question": "¿Evalúas la eficiencia de las tecnologías que empleas actualmente?"
+      },
+      {
+        "question": "¿Tienes medido el Total Cost of Ownership (TOC) y Return Of Investment (ROI) de las tecnologías que empleas en tu negocio?"
+      }
+    ]
+  }
+}
