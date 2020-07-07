@@ -7,16 +7,20 @@
     "p": "En Cuando el río suena exploramos la visión y conocimientos de agentes expertos y emprendedores del mundo digital. Entrevistamos a estrategas, diseñadores y profesionales tecnológicos para compartir sus mejores prácticas con nuestra comunidad.",
     "podcasts": [
       {
-        "url" : "https://open.spotify.com/embed-podcast/episode/0jtAKm8v3O6UWEVkZHiUbR",
-        "title" : "E03: Negocios en cuarentena - Juan Pablo Sánchez"
+        "url": "https://open.spotify.com/embed-podcast/episode/5M9L984seHD9isRPqdXdus",
+        "title": "E04: Branding digital para negocios - Tania Lili"
+      },
+      {
+        "url": "https://open.spotify.com/embed-podcast/episode/0jtAKm8v3O6UWEVkZHiUbR",
+        "title": "E03: Negocios en cuarentena - Juan Pablo Sánchez"
       },
       {
         "url": "https://open.spotify.com/embed-podcast/episode/4b9f0kCHFzfF1fOHLpUmTj",
-        "title" : "E02: Neutralidad de la red - Carlos Fuentes"
+        "title": "E02: Neutralidad de la red - Carlos Fuentes"
       },
       {
         "url": "https://open.spotify.com/embed-podcast/episode/6tE3seBLPt0GB6tYdHaqwf",
-        "title" : "E01: Protección legal digital - Salvador Camacho"
+        "title": "E01: Protección legal digital - Salvador Camacho"
       }
     ]
   }
