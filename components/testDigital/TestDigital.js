@@ -11,21 +11,21 @@ const TestD = () => {
   let { questions } = es.testdigital_page;
   const [qIndex, setQIndex] = useState(0);
   const [aIndex, setAIndex] = useState(0);
+  const [showResults, setShowResults] = useState(false);
+  const [results, setResults] = useState([]);
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
-    let grade = [];
     let estrategia =
       (parseFloat(data.Q0) + parseFloat(data.Q1) + parseFloat(data.Q2)) / 3;
-    grade.push(estrategia);
-    if (estrategia >= 2) {
-      console.log("estrategia medium");
-    }
-    if (estrategia < 2) {
-      console.log("estrategia low");
-    }
-    console.log(grade);
+    let cultura =
+      (parseFloat(data.Q2) + parseFloat(data.Q2) + parseFloat(data.Q2)) / 3;
+    let competencia =
+      (parseFloat(data.Q1) + parseFloat(data.Q1) + parseFloat(data.Q1)) / 3;
+    setResults([estrategia, cultura, competencia]);
+    console.log([estrategia, cultura, competencia]);
+    setShowResults(true);
   };
   // console.log(errors);
 
@@ -57,114 +57,186 @@ const TestD = () => {
 
   return (
     <QuestionSection>
-      <QuestionGrid>
-        <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
-          {questions.map((question, index) => (
-            <Question
-              key={"question" + index}
-              selected={qIndex === index}
-              deselected={qIndex === index - 1}
-            >
-              <Info>
-                <span>
-                  {index + 1 < 10 ? `0${index + 1}` : index}/
-                  {NUMBER_OF_QS > 10 ? NUMBER_OF_QS : `0${NUMBER_OF_QS}`}
-                </span>
-                <h4>{question.question}</h4>
-                <label>
+      {!showResults && (
+        <QuestionGrid>
+          <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
+            {questions.map((question, index) => (
+              <Question
+                key={"question" + index}
+                selected={qIndex === index}
+                deselected={qIndex === index - 1}
+              >
+                <Info>
+                  <span>
+                    {index + 1 < 10 ? `0${index + 1}` : index}/
+                    {NUMBER_OF_QS > 10 ? NUMBER_OF_QS : `0${NUMBER_OF_QS}`}
+                  </span>
+                  <h4>{question.question}</h4>
+                  <label>
+                    <input
+                      name={"Q" + index}
+                      type="radio"
+                      value={1}
+                      ref={register}
+                      onClick={handleClick}
+                    />
+                    {question.a1}
+                  </label>
+                  <label>
+                    <input
+                      name={"Q" + index}
+                      type="radio"
+                      value={2}
+                      ref={register}
+                      onClick={handleClick}
+                    />
+                    {question.a2}
+                  </label>
+                  <label>
+                    <input
+                      name={"Q" + index}
+                      type="radio"
+                      value={3}
+                      ref={register}
+                      onClick={handleClick}
+                    />
+                    {question.a3}
+                  </label>
+                </Info>
+              </Question>
+            ))}
+            <Question selected={qIndex === NUMBER_OF_QS}>
+              <InputGrid>
+                <div>
+                  <label>nombre</label>
                   <input
-                    name={"Q" + index}
-                    type="radio"
-                    value={1}
-                    ref={register}
-                    onClick={handleClick}
+                    name="nameRequired"
+                    type="text"
+                    placeholder="nombre"
+                    ref={register({ required: true })}
                   />
-                  {question.a1}
-                </label>
-                <label>
+                  {errors.nameRequired && <span>Escribe tu nombre</span>}
+                </div>
+                <div>
+                  <label>apellido</label>
                   <input
-                    name={"Q" + index}
-                    type="radio"
-                    value={2}
-                    ref={register}
-                    onClick={handleClick}
+                    name="lastNameRequired"
+                    type="text"
+                    placeholder="apellido"
+                    ref={register({ required: true })}
                   />
-                  {question.a2}
-                </label>
-                <label>
+                  {errors.lastNameRequired && <span>Escribe tu apellido</span>}
+                </div>
+                <div>
+                  <label>email</label>
                   <input
-                    name={"Q" + index}
-                    type="radio"
-                    value={3}
-                    ref={register}
-                    onClick={handleClick}
+                    name="emailRequired"
+                    type="email"
+                    placeholder="email"
+                    ref={register({
+                      required: { value: true, message: "Escribe tu email" },
+                      pattern: {
+                        value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                        message: "Email es inválido",
+                      },
+                    })}
                   />
-                  {question.a3}
-                </label>
-              </Info>
+                  <span>{errors?.emailRequired?.message}</span>
+                </div>
+                <input type="submit" value="ver resultados" />
+              </InputGrid>
             </Question>
-          ))}
-          <Question selected={qIndex === NUMBER_OF_QS}>
-            <InputGrid>
-              <div>
-                <label>nombre</label>
-                <input
-                  name="nameRequired"
-                  type="text"
-                  placeholder="nombre"
-                  ref={register({ required: true })}
-                />
-                {errors.nameRequired && <span>Escribe tu nombre</span>}
-              </div>
-              <div>
-                <label>apellido</label>
-                <input
-                  name="lastNameRequired"
-                  type="text"
-                  placeholder="apellido"
-                  ref={register({ required: true })}
-                />
-                {errors.lastNameRequired && <span>Escribe tu apellido</span>}
-              </div>
-              <div>
-                <label>email</label>
-                <input
-                  name="emailRequired"
-                  type="email"
-                  placeholder="email"
-                  ref={register({
-                    required: { value: true, message: "Escribe tu email" },
-                    pattern: {
-                      value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
-                      message: "Email es inválido",
-                    },
-                  })}
-                />
-                <span>{errors?.emailRequired?.message}</span>
-              </div>
-              <input type="submit" value="ver resultados" />
-            </InputGrid>
-          </Question>
-        </form>
-        <ArrowContainer>
-          <Arrowx reveal={qIndex > 0} onClick={prevIndex} left>
-            <Arrow reverse />
-          </Arrowx>
-          <Arrowx reveal={aIndex > qIndex} onClick={nextIndex} right>
-            <Arrow />
-          </Arrowx>
-        </ArrowContainer>
-        <LineContainer percentage={`${(qIndex * 100) / NUMBER_OF_QS}%`}>
-          <Tag show={qIndex < 1}>Estrategia</Tag>
-          <Tag show={qIndex === 1}>Cultura</Tag>
-          <Tag show={qIndex === 2}>Competencia</Tag>
-        </LineContainer>
-      </QuestionGrid>
+          </form>
+          <ArrowContainer>
+            <Arrowx reveal={qIndex > 0} onClick={prevIndex} left>
+              <Arrow reverse />
+            </Arrowx>
+            <Arrowx reveal={aIndex > qIndex} onClick={nextIndex} right>
+              <Arrow />
+            </Arrowx>
+          </ArrowContainer>
+          <LineContainer percentage={`${(qIndex * 100) / NUMBER_OF_QS}%`}>
+            <Tag show={qIndex < 1}>Estrategia</Tag>
+            <Tag show={qIndex === 1}>Cultura</Tag>
+            <Tag show={qIndex === 2}>Competencia</Tag>
+          </LineContainer>
+        </QuestionGrid>
+      )}
+      {showResults && (
+        <ResultsGrid>
+          <div>
+            Tus resultados fueron: <br />
+            total:{" "}
+            <MainResult>
+              {((results[0] + results[1] + results[2]) / 3).toFixed(1)}
+              {/* {(results[0] + results[1] + results[2]) / 3} */}
+              <span>/10</span>
+            </MainResult>
+            estrategia: <ResultNumber result={results[0]} />
+            <br />
+            cultura: <ResultNumber result={results[1]} />
+            <br />
+            competencia: <ResultNumber result={results[2]} />
+            <br />
+          </div>
+        </ResultsGrid>
+      )}
     </QuestionSection>
   );
 };
 
 export default React.memo(TestD);
+
+const MainResult = styled.div`
+  color: ${(p) => p.theme.colors.accent};
+  font-size: 3rem;
+  span {
+    font-size: 1rem;
+  }
+`;
+
+const ResultNumber = styled.div`
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid
+    ${(p) =>
+      p.result >= 2 && p.result < 3
+        ? p.theme.colors.warning
+        : (p.result = 3)
+        ? p.theme.colors.success
+        : p.theme.colors.error};
+  &::before {
+    content: ${(p) => `'${p.result}'`};
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    color: ${(p) =>
+      p.result >= 2 && p.result < 3
+        ? "yellow"
+        : (p.result = 3)
+        ? "green"
+        : "red"};
+  }
+`;
+
+const ResultsGrid = styled.div`
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  display: grid;
+  padding: 10% 4%;
+  position: relative;
+  min-height: 20vh;
+  > div {
+    width: 100%;
+    grid-column: 3 / span 8;
+  }
+`;
 
 const Tag = styled.span`
   opacity: ${(p) => (p.show ? 1 : 0)};
