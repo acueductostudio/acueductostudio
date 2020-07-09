@@ -7,7 +7,7 @@ const withOffline = require("next-offline");
 const nextConfig = {
   //start of WPA config
   target: "serverless",
-  transformManifest: manifest => ["/"].concat(manifest),
+  transformManifest: (manifest) => ["/"].concat(manifest),
   // generateInDevMode: true,
   workboxOpts: {
     swDest: "static/service-worker.js",
@@ -20,14 +20,14 @@ const nextConfig = {
           networkTimeoutSeconds: 15,
           expiration: {
             maxEntries: 150,
-            maxAgeSeconds: 30 * 24 * 60 * 60 // 1 month
+            maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
           },
           cacheableResponse: {
-            statuses: [0, 200]
-          }
-        }
-      }
-    ]
+            statuses: [0, 200],
+          },
+        },
+      },
+    ],
   }, //end of WPA config
   exportTrailingSlash: false,
   webpack: (config, options) => {
@@ -37,16 +37,14 @@ const nextConfig = {
         {
           loader: "@svgr/webpack",
           options: {
-            svgo: false
-          }
-        }
-      ]
+            svgo: false,
+          },
+        },
+      ],
     });
-    config.resolve.modules.push(path.resolve("./"));
     config.resolve.alias["three$"] = path.resolve("./utils/three-exports.js");
-
     return config;
-  }
+  },
 };
 
 // module.exports = withBundleAnalyzer(nextConfig);

@@ -15,16 +15,16 @@
         "a3": "No la tengo"
       },
       {
-        "question": "¿Has detectado problemas u operaciones en tu modelo de negocios que podrían ser optimizados con tecnología (tareas repetitivas, cuellos de botella, etc.)?"
+        "question": "¿Has detectado problemas u operaciones en tu modelo de negocios que podrían ser optimizados con tecnología (tareas repetitivas, cuellos de botella, etc.)?",
+        "a1": "Si, los tengo identificados",
+        "a2": "He detectado alguno",
+        "a3": "No se como podría eficientar mi negocio"
       },
       {
-        "question": "¿Utilizas software y tecnologías de automatización para eficientar tus procesos?"
-      },
-      {
-        "question": "¿Evalúas la eficiencia de las tecnologías que empleas actualmente?"
-      },
-      {
-        "question": "¿Tienes medido el Total Cost of Ownership (TOC) y Return Of Investment (ROI) de las tecnologías que empleas en tu negocio?"
+        "question": "¿Utilizas software y tecnologías de automatización para eficientar tus procesos?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
       }
     ]
   }
