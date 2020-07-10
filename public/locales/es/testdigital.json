@@ -10,8 +10,8 @@
     "questions": [
       {
         "question": "¿Cuentas con una estrategia para integrar tecnologías en tu negocio?",
-        "a1": "Si, ya tengo una estrategia",
-        "a2": "Estoy en proceso",
+        "a1": "Si, tengo una estrategia",
+        "a2": "Si, está en etapas de desarrollo",
         "a3": "No la tengo"
       },
       {
@@ -22,6 +22,78 @@
       },
       {
         "question": "¿Utilizas software y tecnologías de automatización para eficientar tus procesos?",
+        "a1": "Si, utilizo un software (ERP, CRM, etc.)",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "No, utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Evalúas la eficiencia de las tecnologías que empleas actualmente?",
+        "a1": "Si, evalúo los datos constantemente",
+        "a2": "He realizado alguna evaluación",
+        "a3": "No la evalúo"
+      },
+      {
+        "question": "¿Tienes medido el Coste Total de Propiedad (TCO) y Retorno de Inversión (ROI) de las tecnologías que empleas en tu negocio?",
+        "a1": "Si, así elijo las tecnologías para mi negocio",
+        "a2": "Sé cuanto invierto en tecnología, pero no hago más análisis",
+        "a3": "No los contemplo"
+      },
+      {
+        "question": "Ante un contexto agresivamente cambiante, ¿tienes una cultura de trabajo que promueva la adopción de nuevas tecnologías?",
+        "a1": "Si, busco nuevas y mejores opciones constantemente",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Mi sistema actual funciona y no busco nuevas opciones"
+      },
+      {
+        "question": "¿Las decisiones de adopción de tecnología consideran a todos los sectores de tu organización?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿La actitud ante la adopción de nuevas tecnologías es la misma en todas las áreas y departamentos de tu negocio?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Capacitas a tus empleados en el uso de nuevas tecnologías?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Tomas en cuenta los problemas identificados por expertos, líderes de tu negocio y tus clientes?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Has hecho un análisis comparativo con la competencia para saber qué tecnologías podrías implementar en tu organización?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Haz desarrollado herramientas tecnológicas que te permitan diferenciarte de la competencia?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Monitoreas la data de tu negocio para buscar áreas de oportunidad?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Tus decisiones de negocio están basadas en datos recolectados de tu negocio (data-driven)?",
+        "a1": "Si, utilizo un RP",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "Utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Evalúas tus KPI's (Key Progress Indicators) con la data que recolecta tu negocio?",
         "a1": "Si, utilizo un RP",
         "a2": "Tengo algunas tareas automatizadas",
         "a3": "Utilizo excel o llevo registros a mano"

@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import Fade from "react-reveal/Fade";
 import Arrow from "components/shared/Arrow";
 import es from "public/locales/es/testdigital.json";
 
-const NUMBER_OF_QS = 3;
+const NUMBER_OF_QS = 15;
 
 const TestD = () => {
   let { questions } = es.testdigital_page;
@@ -18,11 +17,26 @@ const TestD = () => {
   const onSubmit = (data) => {
     console.log(data);
     let estrategia =
-      (parseFloat(data.Q0) + parseFloat(data.Q1) + parseFloat(data.Q2)) / 3;
+      (parseFloat(data.Q0) +
+        parseFloat(data.Q1) +
+        parseFloat(data.Q2) +
+        parseFloat(data.Q3) +
+        parseFloat(data.Q4)) /
+      5;
     let cultura =
-      (parseFloat(data.Q2) + parseFloat(data.Q2) + parseFloat(data.Q2)) / 3;
+      (parseFloat(data.Q5) +
+        parseFloat(data.Q6) +
+        parseFloat(data.Q7) +
+        parseFloat(data.Q8)) /
+      4;
     let competencia =
-      (parseFloat(data.Q1) + parseFloat(data.Q1) + parseFloat(data.Q1)) / 3;
+      (parseFloat(data.Q9) +
+        parseFloat(data.Q10) +
+        parseFloat(data.Q11) +
+        parseFloat(data.Q12) +
+        parseFloat(data.Q13) +
+        parseFloat(data.Q14)) /
+      6;
     setResults([estrategia, cultura, competencia]);
     console.log([estrategia, cultura, competencia]);
     setShowResults(true);
@@ -35,17 +49,21 @@ const TestD = () => {
     }
     if (e.key === "ArrowLeft") {
       e.preventDefault();
-      prevIndex();
+      if (qIndex < NUMBER_OF_QS) {
+        prevIndex();
+      }
     }
     if (e.key === "ArrowRight") {
       e.preventDefault();
-      nextIndex();
+      if (qIndex < NUMBER_OF_QS) {
+        nextIndex();
+      }
     }
   };
 
   function handleClick() {
-    setQIndex(qIndex > NUMBER_OF_QS ? 0 : qIndex + 1);
-    setAIndex(aIndex > NUMBER_OF_QS ? 0 : aIndex + 1);
+    setQIndex(qIndex < NUMBER_OF_QS && qIndex + 1);
+    setAIndex(aIndex < NUMBER_OF_QS ? aIndex + 1 : aIndex);
   }
 
   function prevIndex() {
@@ -76,7 +94,7 @@ const TestD = () => {
                     <input
                       name={"Q" + index}
                       type="radio"
-                      value={0}
+                      value={10}
                       ref={register}
                       onClick={handleClick}
                     />
@@ -96,7 +114,7 @@ const TestD = () => {
                     <input
                       name={"Q" + index}
                       type="radio"
-                      value={10}
+                      value={0}
                       ref={register}
                       onClick={handleClick}
                     />
@@ -159,9 +177,9 @@ const TestD = () => {
             </Arrowx>
           </ArrowContainer>
           <LineContainer percentage={`${(qIndex * 100) / NUMBER_OF_QS}%`}>
-            <Tag show={qIndex < 1}>Estrategia</Tag>
-            <Tag show={qIndex === 1}>Cultura</Tag>
-            <Tag show={qIndex === 2}>Competencia</Tag>
+            <Tag show={qIndex <= 4}>Estrategia</Tag>
+            <Tag show={qIndex > 4 && qIndex <= 8}>Cultura</Tag>
+            <Tag show={qIndex > 8 && qIndex < NUMBER_OF_QS}>Competencia</Tag>
           </LineContainer>
         </QuestionGrid>
       )}
@@ -476,6 +494,15 @@ const InputGrid = styled.div`
     &[type="submit"] {
       background-color: ${(p) => p.theme.colors.accent};
       color: ${(p) => p.theme.colors.foreground};
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.4s all ease;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          background-color: ${(props) => props.theme.colors.success};
+          color: ${(props) => props.theme.colors.background};
+        }
+      }
     }
   }
 `;
@@ -549,7 +576,7 @@ const Question = styled.div`
       margin-right: 10px;
     }
   }
-  label {
+  label:not(:last-of-type) {
     color: ${(p) => p.theme.colors.foreground_low};
     margin-bottom: 15px;
   }
