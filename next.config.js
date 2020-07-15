@@ -45,6 +45,10 @@ const nextConfig = {
     config.resolve.alias["three$"] = path.resolve("./utils/three-exports.js");
     return config;
   },
+  //env config
+  env: {
+    SENDINBLUE_API: process.env.SENDINBLUE_API,
+  },
 };
 
 // module.exports = withBundleAnalyzer(nextConfig);
