@@ -120,7 +120,8 @@ const TestD = () => {
                       value={10}
                       ref={register}
                       onClick={handleClick}
-                    />
+                    />{" "}
+                    <span />
                     {question.a1}
                   </label>
                   <label>
@@ -130,7 +131,8 @@ const TestD = () => {
                       value={5}
                       ref={register}
                       onClick={handleClick}
-                    />
+                    />{" "}
+                    <span />
                     {question.a2}
                   </label>
                   <label>
@@ -594,17 +596,39 @@ const Question = styled.div`
   &:nth-child(3) {
     border-right: 0;
   }
-  input {
-    &[type="radio"] {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-    }
-  }
   label {
     color: ${(p) => p.theme.colors.foreground_low};
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
     &:not(:last-of-type) {
       margin-bottom: 15px;
+    }
+    &:hover input ~ span {
+      background-color: ${(p) => p.theme.colors.accent};
+    }
+    span {
+      position: absolute;
+      top: 1px;
+      left: 0;
+      height: 23px;
+      width: 23px;
+      background-color: transparent;
+      border: 2px solid ${(p) => p.theme.colors.foreground_low};
+      border-radius: 50%;
+      transition: 0.4s ease all;
+    }
+    input {
+      &[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ span {
+          background-color: ${(p) => p.theme.colors.accent};
+        }
+      }
     }
   }
   div > div {
@@ -622,13 +646,4 @@ const Question = styled.div`
 const QuestionSection = styled.section`
   color: ${(props) => props.theme.colors.foreground};
   background-color: ${(props) => props.theme.colors.background};
-  /* h3 {
-    color: ${(props) => props.theme.colors.accent};
-    text-align: center;
-    margin-top: 10%;
-    font-size: 4rem;
-    font-weight: 300;
-    padding: 0 4% 4% 4%;
-    line-height: 1;
-  } */
 `;
