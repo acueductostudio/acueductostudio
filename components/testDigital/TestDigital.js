@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Fade from "react-reveal/Fade";
 import Arrow from "components/shared/Arrow";
 import es from "public/locales/es/testdigital.json";
 import { createContact } from "utils/sendinBlue.ts";
@@ -9,14 +10,19 @@ import Results from "./Results";
 const NUMBER_OF_QS = 15;
 
 const TestD = () => {
-  let { questions } = es.testdigital_page;
+  let { questions, collection_form, progressLine } = es.testdigital_page;
   const [qIndex, setQIndex] = useState(0);
   const [aIndex, setAIndex] = useState(0);
-  const [showResults, setShowResults] = useState(false);
+  const [testStatus, setTestStatus] = useState("");
   const [results, setResults] = useState([]);
   const { register, handleSubmit, errors } = useForm();
 
+  const analyzeResults = () => {
+    return new Promise((resolve) => setTimeout(resolve, 1500)); //1500
+  };
+
   const onSubmit = (data) => {
+    setTestStatus("loading");
     //Clean TestResults object in sendinBlue
     let testResults = { ...data };
     delete testResults.email;
@@ -60,11 +66,11 @@ const TestD = () => {
         parseFloat(data.Q13) +
         parseFloat(data.Q14)) /
       6;
-    setResults([estrategia, cultura, competencia]);
+    setResults([estrategia, cultura, competencia, data.firstName]);
     console.log([estrategia, cultura, competencia]);
-    setShowResults(true);
+
+    analyzeResults().then(() => setTestStatus("done"));
   };
-  // console.log(errors);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
@@ -98,7 +104,7 @@ const TestD = () => {
 
   return (
     <QuestionSection>
-      {!showResults && (
+      {testStatus === "" && (
         <QuestionGrid>
           <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
             {questions.map((question, index) => (
@@ -120,7 +126,7 @@ const TestD = () => {
                       value={10}
                       ref={register}
                       onClick={handleClick}
-                    />{" "}
+                    />
                     <span />
                     {question.a1}
                   </label>
@@ -131,7 +137,7 @@ const TestD = () => {
                       value={5}
                       ref={register}
                       onClick={handleClick}
-                    />{" "}
+                    />
                     <span />
                     {question.a2}
                   </label>
@@ -149,30 +155,35 @@ const TestD = () => {
                 </Info>
               </Question>
             ))}
-            <Question selected={qIndex === NUMBER_OF_QS}>
-              <h5>
-                ingresa tus datos para recibir tu diagnóstico personalizado
-              </h5>
+            <Question
+              selected={qIndex === NUMBER_OF_QS}
+              deselected={qIndex === NUMBER_OF_QS - 1}
+            >
+              <h5>{collection_form.title}</h5>
               <InputGrid>
                 <div>
-                  <label>nombre</label>
+                  <label>{collection_form.firstName.label}</label>
                   <input
                     name="firstName"
                     type="text"
-                    placeholder="nombre"
+                    placeholder={collection_form.firstName.label}
                     ref={register({ required: true })}
                   />
-                  {errors.firstName && <span>Escribe tu nombre</span>}
+                  {errors.firstName && (
+                    <span>{collection_form.firstName.errorMissing}</span>
+                  )}
                 </div>
                 <div>
-                  <label>apellido</label>
+                  <label>{collection_form.lastName.label}</label>
                   <input
                     name="lastName"
                     type="text"
-                    placeholder="apellido"
+                    placeholder={collection_form.lastName.label}
                     ref={register({ required: true })}
                   />
-                  {errors.lastName && <span>Escribe tu apellido</span>}
+                  {errors.lastName && (
+                    <span>{collection_form.lastName.errorMissing}</span>
+                  )}
                 </div>
                 <div>
                   <label>email</label>
@@ -181,16 +192,19 @@ const TestD = () => {
                     type="email"
                     placeholder="email"
                     ref={register({
-                      required: { value: true, message: "Escribe tu email" },
+                      required: {
+                        value: true,
+                        message: collection_form.email.errorMissing,
+                      },
                       pattern: {
                         value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
-                        message: "Email es inválido",
+                        message: collection_form.email.errorInvalid,
                       },
                     })}
                   />
                   <span>{errors?.email?.message}</span>
                 </div>
-                <input type="submit" value="ver resultados" />
+                <input type="submit" value={collection_form.submit} />
               </InputGrid>
             </Question>
           </form>
@@ -203,134 +217,23 @@ const TestD = () => {
             </Arrowx>
           </ArrowContainer>
           <LineContainer percentage={`${(qIndex * 100) / NUMBER_OF_QS}%`}>
-            <Tag show={qIndex <= 4}>Estrategia</Tag>
-            <Tag show={qIndex > 4 && qIndex <= 8}>Cultura</Tag>
-            <Tag show={qIndex > 8 && qIndex < NUMBER_OF_QS}>Competencia</Tag>
+            <Tag show={qIndex <= 4}>{progressLine.strategy}</Tag>
+            <Tag show={qIndex > 4 && qIndex <= 8}>{progressLine.culture}</Tag>
+            <Tag show={qIndex > 8 && qIndex < NUMBER_OF_QS}>
+              {progressLine.competition}
+            </Tag>
           </LineContainer>
         </QuestionGrid>
       )}
-      {showResults && (
-        <Results results={results} setShowResults={setShowResults} />
-        // <ResultsGrid>
-        //   <MainResult onClick={() => setShowResults(false)}>
-        //     {((results[0] + results[1] + results[2]) / 3).toFixed(1)}
-        //     <span>/10</span>
-        //   </MainResult>
-        //   <div>
-        //     <ResultNumber result={results[0].toFixed(1)} />
-        //     <div>
-        //       <h3>estrategia</h3>
-        //       {results[0].toFixed(1) < 5 && (
-        //         <p>
-        //           Consideras muy pocos o ninguno de los elementos básicos para
-        //           tener una estrategia sólida de tecnología digital, tales como
-        //           la medición de costos de herramientas o la implementación de
-        //           nuevas soluciones. Debes tomar control de esta situación,
-        //           puedes eficientar procesos repetitivos de tu negocio con
-        //           automatizaciones tecnológicas que ya están operando para tu
-        //           industria. No te quedes atrás.
-        //         </p>
-        //       )}
-        //       {results[0].toFixed(1) >= 5 && results[0] < 8 && (
-        //         <p>
-        //           Te encuentras en un punto medio entre la punta de lanza y los
-        //           que se están quedando atrás. Tienes nociones sobre cómo
-        //           quieres utilizar tecnología digital en tu empresa pero la
-        //           eficiencia de tus estrategias carece de minuciosidad e
-        //           investigación exhaustiva. Un poco de dirección en esta parte
-        //           de tu negocio podría elevarlo al siguiente nivel.
-        //         </p>
-        //       )}
-        //       {results[0].toFixed(1) >= 8 && (
-        //         <p>
-        //           Cuentas con una estrategia que integra tecnologías a tu
-        //           negocio. Tu modelo de negocios está optimizado por ellas y
-        //           cuentas con procesos de automatización. Evalúas la eficiencia
-        //           de tus tecnologías constantemente y tienes claro el costo y
-        //           retorno que involucran las más relevantes para tu negocio.
-        //         </p>
-        //       )}
-        //     </div>
-        //   </div>
-        //   <div>
-        //     <ResultNumber result={results[1].toFixed(1)} />
-        //     <div>
-        //       <h3>cultura</h3>
-        //       {results[1].toFixed(1) < 5 && (
-        //         <p>
-        //           La cultura de tu empresa puede ser mucho más resiliente a los
-        //           constantes cambios tecnológicos que se enfrentan los negocios
-        //           del mundo. Todo tu organigrama tiene que adoptar este mindset,
-        //           así tu empresa prosperará en un contexto de constante cambio
-        //           que busca soluciones nuevas e innovadoras todo el tiempo.{" "}
-        //         </p>
-        //       )}
-        //       {results[1].toFixed(1) >= 5 && results[1] < 8 && (
-        //         <p>
-        //           La cultura de tu negocio abraza el cambio pero está lejos de
-        //           operar con resiliencia tecnológica.
-        //           <b> Necesitas alinear a todos</b>
-        //           los individuos de tu organización frente a un contexto
-        //           específico: un constante cambio con nuevas herramientas y
-        //           soluciones todo el tiempo. <b>No dejes de lado a nadie</b> del
-        //           organigrama, este mindset tiene que permear en el ADN de tu
-        //           empresa.
-        //         </p>
-        //       )}
-        //       {results[1].toFixed(1) >= 8 && (
-        //         <p>
-        //           Tu cultura de trabajo promueve la adopción de nuevas
-        //           tecnologías. Consideras a todos los sectores de tu
-        //           organización a la hora de adoptar herramientas nuevas y
-        //           capacitas a tus empleados en el uso de éstas, lo que genera un
-        //           ambiente de recepción abierta hacia la innovación tecnológica.
-        //         </p>
-        //       )}
-        //     </div>
-        //   </div>
-        //   <div>
-        //     <ResultNumber result={results[2].toFixed(1)} />
-        //     <div>
-        //       <h3>competencia</h3>
-        //       {results[2].toFixed(1) < 5 && (
-        //         <p>
-        //           No implementas los correctos análisis de datos que genera tu
-        //           negocio y competencia para encontrar nuevas oportunidades.
-        //           Antes de desarrollar tus propias herramientas, analiza
-        //           cuidadosamente cómo soluciona tu competencia los problemas en
-        //           tu industria e identifica qué aspectos tecnológicos juegan un
-        //           papel importante.
-        //         </p>
-        //       )}
-        //       {results[2].toFixed(1) >= 5 && results[2] < 8 && (
-        //         <p>
-        //           Tienes buenas prácticas que te ayudan a competir con otros
-        //           negocios de tu industria, pero si quieres destacar realmente
-        //           necesitas ser más agresivo con los análisis, comparaciones y
-        //           objetivos tecnológicos que planteas para tu negocio.{" "}
-        //         </p>
-        //       )}
-        //       {results[2].toFixed(1) >= 8 && (
-        //         <p>
-        //           Tienes muy claros los problemas que existen en tu industria y
-        //           has hecho análisis de cómo tu competencia los afronta. Cuentas
-        //           con herramientas propias que te distinguen de ella y
-        //           monitoreas los datos que genera tu negocio para encontrar
-        //           oportunidades. Tomas decisiones en un esquema data driven y
-        //           tus KPI’s siempre responden a datos internos.
-        //         </p>
-        //       )}
-        //     </div>
-        //   </div>
-        //   <LastMessage>
-        //     <h3>¿estás listo para subir tu rating?</h3>
-        //     <p>
-        //       En Acueducto ofrecemos consultorías y capacitaciones de procesos
-        //       digitales y tecnologías para preparar tu negocio para los 2020’s.
-        //       Escríbenos a hola@acueducto.studio para agendar tu cita.
-        //     </p>
-        //   </LastMessage>
-        // </ResultsGrid>
+      {testStatus === "loading" && (
+        <Fade>
+          <Loading>
+            <p>analizando resultados...</p>
+          </Loading>
+        </Fade>
+      )}
+      {testStatus === "done" && (
+        <Results results={results} setTestStatus={setTestStatus} />
       )}
     </QuestionSection>
   );
@@ -338,91 +241,40 @@ const TestD = () => {
 
 export default React.memo(TestD);
 
-const LastMessage = styled.div`
-  background-color: ${(p) => p.theme.colors.accent};
-  color: ${(p) => p.theme.colors.foreground_low};
-  padding: 5%;
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  h3 {
-    color: ${(p) => p.theme.colors.foreground};
-    margin-top: 0;
-    padding: 0 0 20px 0;
-    text-align: left;
-    font-size: 3rem;
-    font-weight: 200;
+const fadeIn = keyframes`
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 70%;
   }
 `;
 
-const MainResult = styled.div`
-  color: ${(p) => p.theme.colors.accent};
-  font-size: 6rem;
-  font-weight: 200;
-  align-items: flex-end;
-  line-height: 1;
-  padding-bottom: 5%;
-  span {
-    font-size: 2rem;
-  }
-`;
-
-const ResultNumber = styled.span`
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  display: flex;
+const Loading = styled.div`
+  width: 100%;
   align-items: center;
   justify-content: center;
-  border: 3px solid
-    ${(p) =>
-      p.result >= 5 && p.result < 8
-        ? p.theme.colors.warning
-        : p.result > 8
-        ? p.theme.colors.success
-        : p.theme.colors.error};
-  &::before {
-    content: ${(p) => `'${p.result}'`};
-    font-size: 3.5rem;
+  display: flex;
+  padding-bottom: 5%;
+  flex-direction: column;
+  min-height: 40vh;
+  &:after {
     display: flex;
-    text-align: center;
-    color: ${(p) =>
-      p.result >= 5 && p.result < 8
-        ? p.theme.colors.warning
-        : p.result > 8
-        ? p.theme.colors.success
-        : p.theme.colors.error};
+    margin-top: 20px;
+    height: 4px;
+    background-color: ${(p) => p.theme.colors.accent};
+    content: " ";
+    width: 70%;
   }
-`;
-
-const ResultsGrid = styled.div`
-  grid-template-columns: repeat(12, 1fr);
-  width: 100%;
-  display: grid;
-  padding: 0 4% 10% 4%;
-  position: relative;
-  min-height: 20vh;
-  > div {
-    width: 100%;
-    grid-column: 3 / span 8;
-    display: flex;
-    margin-bottom: 5%;
-    > div {
-      margin-left: 5%;
-      width: calc(100% - 85px - 5%);
-      p {
-        color: ${(p) => p.theme.colors.foreground_low};
-      }
-      h3 {
-        color: ${(p) => p.theme.colors.foreground};
-        font-weight: 200;
-        padding-left: 0;
-        padding-bottom: 15px;
-        margin-top: 0;
-        text-align: left;
-        font-size: 3rem;
-      }
-    }
+  &:before {
+    content: " ";
+    margin-top: 22px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 4px;
+    width: 10%;
+    animation: 3s ${fadeIn} ease-out infinite;
+    animation-iteration-count: infinite;
   }
 `;
 
@@ -435,10 +287,18 @@ const Tag = styled.span`
   letter-spacing: 4px;
   margin-top: 15px;
   font-size: 1.5rem;
+  user-select: none;
+  transition: 0.3s ease opacity;
+  @media (max-width: 600px) {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
 `;
 
 const LineContainer = styled.div`
-  grid-column: 4 / span 7;
+  grid-column: 4 / span 8;
+  max-width: 800px;
   width: 100%;
   grid-row: 3;
   position: relative;
@@ -463,15 +323,35 @@ const LineContainer = styled.div`
     position: absolute;
     background-color: ${(p) => p.theme.colors.accent};
     z-index: 2;
+    transition: 0.3s 0.3s ease width;
+  }
+  @media (max-width: 1100px) {
+    grid-column-start: 3;
+  }
+  @media (max-width: 1000px) {
+    grid-column: 2 / span 10;
+  }
+  @media (max-width: 600px) {
+    grid-column: 1 / span 12;
   }
 `;
 
 const ArrowContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  grid-column: 4 / span 7;
+  grid-column: 4 / span 8;
+  max-width: 800px;
   grid-row: 2;
   z-index: 100;
+  @media (max-width: 1100px) {
+    grid-column-start: 3;
+  }
+  @media (max-width: 1000px) {
+    grid-column: 2 / span 10;
+  }
+  @media (max-width: 600px) {
+    grid-column: 1 / span 12;
+  }
 `;
 
 const Arrowx = styled.div`
@@ -481,8 +361,27 @@ const Arrowx = styled.div`
   opacity: 0;
   pointer-events: none;
   transition: 0.4s ease opacity;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      svg * {
+        stroke: ${(props) => props.theme.colors.accent};
+        transition: stroke 0.3s ease;
+      }
+    }
+  }
   span {
     width: 40px;
+  }
+  @media (max-width: 600px) {
+    background-color: ${(p) => p.theme.colors.accent};
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    span {
+      width: 25px;
+      margin-top: 14px;
+      margin-left: ${(p) => (p.left ? "9px" : "11px")};
+    }
   }
   ${(p) =>
     p.reveal &&
@@ -494,6 +393,7 @@ const Arrowx = styled.div`
 const InputGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 75px);
   grid-gap: 2rem;
   width: 100%;
   align-items: flex-start;
@@ -501,16 +401,20 @@ const InputGrid = styled.div`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    margin-bottom: 0 !important;
   }
   label {
     font-size: 0px;
   }
+  span {
+    color: ${(p) => p.theme.colors.error};
+  }
   input {
     border-radius: 0;
     border: 0;
-    padding: 20px;
+    padding: 16px;
     width: 100%;
-    height: 50px;
+    height: 100%;
     font-weight: 100;
     &[type="text"],
     &[type="email"] {
@@ -521,7 +425,8 @@ const InputGrid = styled.div`
     &[type="submit"] {
       background-color: ${(p) => p.theme.colors.accent};
       color: ${(p) => p.theme.colors.foreground};
-      padding: 10px;
+      max-height: 61px;
+      /* padding: 20px; */
       cursor: pointer;
       transition: 0.4s all ease;
       @media (hover: hover) and (pointer: fine) {
@@ -530,6 +435,10 @@ const InputGrid = styled.div`
           color: ${(props) => props.theme.colors.background};
         }
       }
+    }
+  }
+  @media (max-width: 600px) {
+    span {
     }
   }
 `;
@@ -553,6 +462,11 @@ const Info = styled.div`
     margin-bottom: 20px;
     line-height: 125%;
   }
+  @media (max-width: 600px) {
+    h4 {
+      font-size: 2rem;
+    }
+  }
 `;
 
 const QuestionGrid = styled.div`
@@ -564,14 +478,31 @@ const QuestionGrid = styled.div`
   padding: 0 4% 10% 4%;
   position: relative;
   form {
-    grid-column: 4 / span 7;
+    grid-column: 4 / span 8;
+    max-width: 800px;
     position: relative;
+  }
+  @media (max-width: 1100px) {
+    form {
+      grid-column-start: 3;
+    }
+  }
+  @media (max-width: 1000px) {
+    form {
+      grid-column: 2 / span 10;
+    }
+  }
+  @media (max-width: 600px) {
+    form {
+      grid-column: 1 / span 12;
+    }
+    grid-template-rows: 2fr 35px 50px;
   }
 `;
 
 const Question = styled.div`
   position: absolute;
-  transform: translateX(30%);
+  transform: translateX(10%);
   opacity: 0;
   pointer-events: none;
   ${(p) =>
@@ -580,14 +511,14 @@ const Question = styled.div`
     pointer-events: auto;
     position:relative;
      opacity: 1;
-     transition: 0.4s ease transform, 0.4s 0.2s ease opacity;`}
+     transition: 0.4s ease transform, 0.4s 0.1s ease opacity;`}
   ${(p) =>
     p.deselected &&
-    `transform: translateX(-20%); 
-      pointer-events: none;
+    `transform: translateX(-10%); 
+     pointer-events: none;
      opacity: 0;
-     transition: 0.4s ease transform, 0.4s ease 0.2s opacity;`}
-  transition: 0.4s ease 0.1s transform, 0.4s ease opacity;
+     transition: 0.2s ease transform, 0.3 ease opacity`}
+  transition: 0.4s ease transform, 0.4s ease opacity;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -639,7 +570,14 @@ const Question = styled.div`
     text-align: left;
     font-size: 3.2rem;
     font-weight: 200;
-    line-height: 120%;
+    line-height: 115%;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 660px) {
+    h5 {
+      font-size: 2.7rem;
+    }
   }
 `;
 

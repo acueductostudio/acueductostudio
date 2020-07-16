@@ -4,8 +4,29 @@
     "meta_description": "Conoce las mejores prácticas de expertos y emprendedores en la industria tecnológica.",
     "headerTitle": "test digital",
     "intro": {
-      "title": "¿qué tan digital es tu negocio?",
-      "p": "Elaboramos este test para ayudar a negocios a descubrir que tan preparados están para la nueva década."
+      "title": "¿tu negocio está preparado para el mundo digital?",
+      "p": "<b>Averigua dónde está parada tu organización en prácticas digitales con este test.</b><br/>Duración aproximada: 5 minutos."
+    },
+    "collection_form": {
+      "title": "ingresa tus datos para recibir tu diagnóstico personalizado",
+      "firstName": {
+        "label": "nombre",
+        "errorMissing": "Escribe tu nombre"
+      },
+      "lastName": {
+        "label": "apellido",
+        "errorMissing": "Escribe tu apellido"
+      },
+      "email": {
+        "errorMissing": "Escribe tu email",
+        "errorInvalid": "Email inválido"
+      },
+      "submit": "ver resultados"
+    },
+    "progressLine": {
+      "strategy": "estrategia",
+      "culture": "cultura",
+      "competition": "competencia"
     },
     "questions": [
       {

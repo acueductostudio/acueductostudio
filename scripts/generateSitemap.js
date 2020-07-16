@@ -30,6 +30,10 @@ const routes = [
     priority: 0.8,
   },
   {
+    es: "/testdigital",
+    priority: 0.7,
+  },
+  {
     es: "/portafolio/rahid",
     en: "/en/work/rahid",
     priority: 0.7,
