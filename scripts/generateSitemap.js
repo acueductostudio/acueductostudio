@@ -30,7 +30,11 @@ const routes = [
     priority: 0.8,
   },
   {
-    es: "/testdigital",
+    es: "/consultoria",
+    priority: 0.8,
+  },
+  {
+    es: "/diagnosticodigital",
     priority: 0.7,
   },
   {

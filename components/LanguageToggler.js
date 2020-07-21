@@ -12,7 +12,7 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
       case "/podcast":
         setShowToggler(false);
         break;
-      case "/testdigital":
+      case "/diagnosticodigital":
         setShowToggler(false);
         break;
       case "/consultoria":
@@ -104,7 +104,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
           </span>
           {locale.lang === "es" ? "english" : "español"}
         </English>
-
         <Stable>
           <Arrows />
         </Stable>

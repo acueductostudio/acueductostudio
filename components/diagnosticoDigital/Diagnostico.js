@@ -3,14 +3,14 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Fade from "react-reveal/Fade";
 import Arrow from "components/shared/Arrow";
-import es from "public/locales/es/testdigital.json";
+import es from "public/locales/es/diagnosticodigital.json";
 import { createContact } from "utils/sendinBlue.ts";
 import Results from "./Results";
 
 const NUMBER_OF_QS = 15;
 
-const TestD = () => {
-  let { questions, collection_form, progressLine } = es.testdigital_page;
+const Diagnostico = () => {
+  let { questions, collection_form, progressLine } = es.diagnosticodigital_page;
   const [qIndex, setQIndex] = useState(0);
   const [aIndex, setAIndex] = useState(0);
   const [testStatus, setTestStatus] = useState("");
@@ -239,7 +239,7 @@ const TestD = () => {
   );
 };
 
-export default React.memo(TestD);
+export default React.memo(Diagnostico);
 
 const fadeIn = keyframes`
   0% {

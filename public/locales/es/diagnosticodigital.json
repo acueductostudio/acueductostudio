@@ -1,11 +1,11 @@
 {
-  "testdigital_page": {
-    "page_title": "¿Qué tan digital es tu negocio? – Test por Acueducto",
+  "diagnosticodigital_page": {
+    "page_title": "¿Qué tan digital es tu negocio? – Diagnóstico por Acueducto",
     "meta_description": "Conoce las mejores prácticas de expertos y emprendedores en la industria tecnológica.",
-    "headerTitle": "test digital",
+    "headerTitle": "diagnostico",
     "intro": {
       "title": "¿tu negocio está preparado para el mundo digital?",
-      "p": "<b>Averigua dónde está parada tu organización en prácticas digitales con este test.</b><br/>Duración aproximada: 5 minutos."
+      "p": "<b>Averigua dónde está parada tu organización en prácticas digitales con este diagnóstico.</b><br/>Duración aproximada: 5 minutos."
     },
     "collection_form": {
       "title": "ingresa tus datos para recibir tu diagnóstico personalizado",

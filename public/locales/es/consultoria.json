@@ -1,0 +1,89 @@
+{
+  "consultoria_page": {
+    "page_title": "¿Qué tan digital es tu negocio? – Diagnóstico por Acueducto",
+    "meta_description": "Conoce las mejores prácticas de expertos y emprendedores en la industria tecnológica.",
+    "headerTitle": "consultoria",
+    "intro": {
+      "title": "¿quieres automatizar más?",
+      "p": "Asesórate en adopción tecnológica, cultura innovadora, automatización y/o experiencia de marca con nuestro workshop digital."
+    },
+    "cta": {
+      "title": "agenda tu consultoría digital",
+      "price": "$5,200.00",
+      "firstName": {
+        "label": "nombre",
+        "errorMissing": "Escribe tu nombre"
+      },
+      "lastName": {
+        "label": "apellido",
+        "errorMissing": "Escribe tu apellido"
+      },
+      "email": {
+        "errorMissing": "Escribe tu email",
+        "errorInvalid": "Email inválido"
+      },
+      "submit": "agendar cita",
+      "title2": "evalúa las prácticas digitales de tu negocio.",
+      "p": "Toma nuestro ",
+      "link": "diagnóstico digital"
+    },
+    "process_section": {
+      "intro": {
+        "title": "asesórate con expertos en tecnología digital",
+        "p": "Te ayudaremos a analizar los principales problemas y necesidades de tu negocio para encontrar soluciones integrales y personalizadas en tecnología y prácticas digitales."
+      },
+      "process": [
+        {
+          "title": "identificamos",
+          "p": "Los problemas y necesidades de tu negocio."
+        }
+      ]
+    },
+    "areas_section": {
+      "intro": {
+        "title": "guíamos a tu negocio en integraciones digitales",
+        "p": "La era digital está desenvolviendo un mundo del que apenas comenzamos a ver una parte. Cuenta con nuestra asesoría para desarrollar tu negocio en las siguientes áreas."
+      },
+      "areas": [
+        {
+          "title": "tranformación digital",
+          "p": "Este es el momento de replantear tu modelo de negocios para adquirir valor desde <b>soluciones digitales</b>. Donde antes sólo veías limitantes en tu organización, encontraremos los <b>procesos y herramientas</b> más adecuados para estimular su crecimiento."
+        },
+        {
+          "title": "marketing digital",
+          "p": "Esta consultoría busca optimizar las <b>tácticas de marketing</b> que estás llevando a cabo y buscar las <b>mejores opciones para tu organización</b> y sector, ya sea emprender una campaña, mejorar las ya existentes; o <b>identificar oportunidades para crecer el mercado</b>."
+        },
+        {
+          "title": "branding",
+          "p": "¿Tu estrategia de <b>marca está diseñada para crecer y escalar tu negocio</b>? Analicemos la dirección de arte y estrategia de tu branding para <b>elevar la percepción de tu producto, servicio u organización</b>."
+        },
+        {
+          "title": "estrategia de negocios",
+          "p": "¿Estás desarrollando nuevas líneas de negocio digitales? Si tu organización no ha desarrollado <b>acciones de crecimiento digital</b>, estás quedándote atrás. <b>Diversifiquemos</b> tus ingresos o <b>fortalezcamos</b> las estrategias digitales que ya existen."
+        },
+        {
+          "title": "cultura empresarial",
+          "p": "Todo negocio debe tomar un rol activo en la adopción y capacitación de soluciones digitales. Encuentra <b>respuestas a los riesgos y oportunidades</b> de tu cultura empresarial digital y adquiere una visión, clara, sobre cómo crear un entorno productivo y saludable."
+        }
+      ],
+      "area_extra": {
+        "title": "cada consultoría incluye",
+        "ul": [
+          { "li": "Desarrollo de un draft de planeación" },
+          {
+            "li": "Dos sesiones virtuales con una duración de dos horas cada una"
+          },
+          { "li": "Investigación de tu caso particular" },
+          {
+            "li": "Síntesis de posibles soluciones con las mejores prácticas de la industria"
+          }
+        ]
+      }
+    },
+    "last_section": {
+      "intro": {
+        "title": "para desarrollar las estrategias que necesitas"
+      }
+    }
+  }
+}
