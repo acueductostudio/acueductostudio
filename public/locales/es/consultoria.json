@@ -9,7 +9,7 @@
     },
     "cta": {
       "title": "agenda tu consultoría digital",
-      "price": "$5,200.00",
+      "price": "$5,200.00 <b>MXN</b>",
       "firstName": {
         "label": "nombre",
         "errorMissing": "Escribe tu nombre"
@@ -23,9 +23,9 @@
         "errorInvalid": "Email inválido"
       },
       "submit": "agendar cita",
-      "title2": "evalúa las prácticas digitales de tu negocio.",
-      "p": "Toma nuestro ",
-      "link": "diagnóstico digital"
+      "title2": "evalúa las prácticas digitales de tu negocio",
+      "link": ["/diagnosticodigital", "diagnóstico digital"],
+      "linktext": "Toma nuestro "
     },
     "process_section": {
       "intro": {
@@ -36,6 +36,18 @@
         {
           "title": "identificamos",
           "p": "Los problemas y necesidades de tu negocio."
+        },
+        {
+          "title": "sintetizamos",
+          "p": "El problema a solucionar y creamos Key Progress Indicators (KPIs)."
+        },
+        {
+          "title": "investigamos",
+          "p": "Las mejores prácticas y tendencias en tu industria."
+        },
+        {
+          "title": "presentamos",
+          "p": "Una solución para alcanzar tus metas y facilitar la toma de decisiones."
         }
       ]
     },
@@ -69,11 +81,15 @@
       "area_extra": {
         "title": "cada consultoría incluye",
         "ul": [
-          { "li": "Desarrollo de un draft de planeación" },
+          {
+            "li": "Desarrollo de un draft de planeación"
+          },
           {
             "li": "Dos sesiones virtuales con una duración de dos horas cada una"
           },
-          { "li": "Investigación de tu caso particular" },
+          {
+            "li": "Investigación de tu caso particular"
+          },
           {
             "li": "Síntesis de posibles soluciones con las mejores prácticas de la industria"
           }

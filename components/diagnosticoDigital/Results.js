@@ -10,7 +10,9 @@ const Results = ({ results, setTestStatus }) => {
     <ResultsGrid>
       <Fade>
         <div>
-          <MainResult onClick={() => setTestStatus("")}>
+          <MainResult
+          // onClick={() => setTestStatus("")}
+          >
             <p>
               Gracias por tomar el test, {results[3]}.
               <br />

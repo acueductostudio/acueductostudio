@@ -9,6 +9,7 @@ import ContactFooter from "components/ContactFooter";
 import PinnedSection from "components/shared/PinnedSection";
 import { P, H4 } from "components/shared/Dangerously";
 import Picture from "components/caseStudy/shared/Picture";
+import ConsultoriaCTA from "components/ConsultoriaCTA";
 import Steps from "components/shared/Steps";
 import es from "public/locales/es/consultoria.json";
 import {
@@ -54,18 +55,32 @@ function Consultoria(props) {
       />
       <PinnedSection title={intro.title}>
         <P>{intro.p}</P>
+        <ConsultoriaCTA cta={cta} />
       </PinnedSection>
       <TitleSection {...process_section.intro} borderTop />
+      <StepGrid>
+        {process_section.process.map((step, index) => (
+          <div key={`consultingStep${index}`}>
+            <span>0{index + 1}</span>
+            <h4>{step.title}</h4>
+            <p>{step.p}</p>
+          </div>
+        ))}
+      </StepGrid>
       <TitleSection {...areas_section.intro} borderTop />
       <Steps steps={areas_section.areas} iconArray={stepIconArray}>
-        <ul>
-          {areas_section.area_extra.ul.map((item, index) => {
-            <li key={`listItem${index}`}>{item.li}</li>;
-          })}
-        </ul>
-        <p>HOLA</p>
+        <LastStep>
+          <h3>{areas_section.area_extra.title}</h3>
+          <ul>
+            {areas_section.area_extra.ul.map((item, index) => (
+              <li key={`listItem${index}`}>{item.li}</li>
+            ))}
+          </ul>
+        </LastStep>
       </Steps>
-      <TitleSection {...last_section.intro} borderTop />
+      <TitleSection {...last_section.intro} borderTop>
+        <ConsultoriaCTA cta={cta} />
+      </TitleSection>
       <ContactFooter />
     </PageClipper>
   );
@@ -73,38 +88,60 @@ function Consultoria(props) {
 
 export default React.memo(Consultoria);
 
-const Person = styled.div`
+const StepGrid = styled.div`
   display: flex;
-  flex-direction: column;
-  margin-top: 20%;
-  h4 {
-    font-size: 4.5rem;
-    margin-bottom: 3.5%;
-    font-weight: 200;
-    line-height: 1;
+  justify-content: center;
+  padding-bottom: 8%;
+  div {
+    margin-right: 2%;
   }
   span {
-    color: ${(props) => props.theme.colors.accent_smalltext};
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    letter-spacing: 2.5px;
-    margin-bottom: 3.5%;
-    font-weight: 300;
+    color: ${(p) => p.theme.colors.accent};
+    font-size: 1.6rem;
   }
-  @media (max-width: 1250px) {
-    h4 {
-      font-size: 4rem;
-    }
+  h4 {
+    font-size: 2.8rem;
+    line-height: 125%;
+    font-weight: 100;
+    margin-bottom: 17px;
+    margin-top: 8px;
   }
-  @media (max-width: 1000px) {
-    h4 {
-      font-size: 3.5rem;
-    }
+  p {
+    color: ${(p) => p.theme.colors.foreground_low};
+    max-width: 220px;
   }
-  @media (max-width: 600px) {
-    h4 {
-      font-size: 3rem;
+`;
+
+const LastStep = styled.div`
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    font-size: 3.5rem;
+    color: ${(p) => p.theme.colors.accent};
+    font-weight: 200;
+    max-width: 360px;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+  ul {
+    list-style: none;
+    max-width: 340px;
+    li {
+      text-decoration: none;
+      color: ${(p) => p.theme.colors.foreground_low};
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+      &:before {
+        content: " ";
+        width: 10px;
+        height: 3px;
+        background-color: ${(p) => p.theme.colors.accent};
+        display: inline-block;
+        border-radius: 1px;
+        margin-right: 10px;
+      }
     }
-    margin-top: 5%;
   }
 `;
