@@ -7,7 +7,7 @@ const TitleSection = ({ title, p, link, linktext, borderTop, children }) => {
   return (
     <Grid borderTop={borderTop}>
       <H1>{title}</H1>
-      <P>{p}</P>
+      {p && <P>{p}</P>}
       {link && (
         <Container>
           <LinkWithArrow link={link} linktext={linktext} />

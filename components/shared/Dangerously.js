@@ -7,18 +7,6 @@ export const H1 = ({ children, ...props }) => (
   </Fade>
 );
 
-export const P = ({ children, ...props }) => (
-  <Fade>
-    <p {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
-);
-
-export const Span = ({ children, ...props }) => (
-  <Fade>
-    <span {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
-);
-
 export const H2 = ({ children, ...props }) => (
   <Fade>
     <h2 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
@@ -34,6 +22,18 @@ export const H3 = ({ children, ...props }) => (
 export const H4 = ({ children, ...props }) => (
   <Fade>
     <h4 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+  </Fade>
+);
+
+export const P = ({ children, ...props }) => (
+  <Fade>
+    <p {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+  </Fade>
+);
+
+export const Span = ({ children, ...props }) => (
+  <Fade>
+    <span {...props} dangerouslySetInnerHTML={createMarkup(children)} />
   </Fade>
 );
 

@@ -26,6 +26,7 @@ const LinkContainer = styled.a`
   position: relative;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   b {
     color: ${(props) => props.theme.colors.foreground};
     font-weight: 100;

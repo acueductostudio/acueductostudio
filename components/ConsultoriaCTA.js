@@ -125,8 +125,12 @@ const Container = styled.div`
       margin-left: 8px;
     }
   }
-  p:first-of-type {
-    margin-top: 10px;
+  a {
+    display: flex;
+    background-image: none;
+    &:hover {
+      background-image: none;
+    }
   }
   form {
     margin-bottom: 15%;
