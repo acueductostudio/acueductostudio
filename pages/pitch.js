@@ -12,8 +12,16 @@ import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
 import Logo from "public/assets/img/layout/logo.svg";
 
-import DigitalTransformation from "public/assets/img/layout/icons/digitaltransformation.svg";
-import StrategicDesign from "public/assets/img/layout/icons/strategicdesign.svg";
+import {
+  DigitalTransformation,
+  StrategicDesign,
+  Discover,
+  Envision,
+  BuildStory,
+  Craft,
+  Launch,
+  Review,
+} from "components/shared/Icons";
 
 import Tesla from "public/assets/img/layout/logos/tesla.svg";
 import Nike from "public/assets/img/layout/logos/nike.svg";
@@ -68,13 +76,6 @@ import Gsuite from "public/assets/img/layout/logos/gsuite.svg";
 import Todoist from "public/assets/img/layout/logos/todoist.svg";
 import Git from "public/assets/img/layout/logos/git.svg";
 
-import Discover from "public/assets/img/layout/icons/discover.svg";
-import Envision from "public/assets/img/layout/icons/envision.svg";
-import BuildStory from "public/assets/img/layout/icons/buildstory.svg";
-import Craft from "public/assets/img/layout/icons/craft.svg";
-import Launch from "public/assets/img/layout/icons/launch.svg";
-import Review from "public/assets/img/layout/icons/review.svg";
-
 const roleModelArray = [Tesla, Nike, Burberry, Cemex, Starbucks, Hasbro];
 
 const stepIconArray = [Discover, Envision, BuildStory, Craft, Launch, Review];
@@ -93,7 +94,7 @@ const appsLogoArray = [
   { p: "CSS 3", i: Css3 },
   { p: "HTML 5", i: Html5 },
   { p: "Amazon Web Services", i: AWSLogo },
-  { p: "Typescript", i: TSLogo }
+  { p: "Typescript", i: TSLogo },
 ];
 
 const marketingLogoArray = [
@@ -101,7 +102,7 @@ const marketingLogoArray = [
   { p: "Google Analytics", i: Analytics },
   { p: "Google AdSense", i: Adsense },
   { p: "Hootsuit", i: Hootsuit },
-  { p: "Facebook Business Manager", i: FBM }
+  { p: "Facebook Business Manager", i: FBM },
 ];
 
 const contentLogoArray = [
@@ -111,7 +112,7 @@ const contentLogoArray = [
   { p: "LinkedIn", i: LinkedIn },
   { p: "Snapchat", i: Snapchat },
   { p: "TikTok", i: TikTok },
-  { p: "WhatsApp for Business", i: WhatsApp }
+  { p: "WhatsApp for Business", i: WhatsApp },
 ];
 
 const platformLogoArray = [
@@ -120,11 +121,11 @@ const platformLogoArray = [
   { p: "MacOS", i: Macos },
   { p: "Android", i: Android },
   { p: "Windows", i: Windows },
-  { p: "Linux", i: Linux }
+  { p: "Linux", i: Linux },
 ];
 const biLogoArray = [
   { p: "Tableau", i: Tableau },
-  { p: "Power BI", i: PowerBi }
+  { p: "Power BI", i: PowerBi },
 ];
 
 const collaborationLogoArray = [
@@ -133,7 +134,7 @@ const collaborationLogoArray = [
   { p: "Slack", i: Slack },
   { p: "G Suite", i: Gsuite },
   { p: "Todoist", i: Todoist },
-  { p: "Git", i: Git }
+  { p: "Git", i: Git },
 ];
 
 const RenderLogoList = ({ array }) => (
@@ -291,14 +292,14 @@ const AcueductoLogo = styled(Logo)`
 
 const StyledHeadings = createGlobalStyle`
   .react-tooltip-lite {
-    background: ${props => props.theme.colors.accent};
-    color: ${props => props.theme.colors.foreground};
+    background: ${(props) => props.theme.colors.accent};
+    color: ${(props) => props.theme.colors.foreground};
     border-radius: 5px;
     transition: opacity 0.3s 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     box-shadow: 0px 3px 7px rgba(0,0,0,0.3);
   }
   .react-tooltip-lite-arrow {
-    border-color: ${props => props.theme.colors.accent};
+    border-color: ${(props) => props.theme.colors.accent};
   }
   h2 {
     font-size: 2.5rem;
@@ -336,7 +337,7 @@ const StyledHeadings = createGlobalStyle`
 const StepBordered = styled.div`
   width: 100%;
   padding: 13% 15%;
-  border: ${props =>
+  border: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
   border-bottom: 0;
@@ -373,7 +374,7 @@ const Step = styled.div`
         }
       }
       p {
-        color: ${props => props.theme.colors.foreground};
+        color: ${(props) => props.theme.colors.foreground};
       }
     }
   }
@@ -385,21 +386,21 @@ const Step = styled.div`
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {
-    color: ${props => props.theme.colors.accent_smalltext};
+    color: ${(props) => props.theme.colors.accent_smalltext};
     font-size: 1.5rem;
   }
   p {
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   ul {
     list-style: none;
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
     li {
       list-style: none;
       &:before {
         content: "– ";
-        color: ${props => props.theme.colors.accent};
+        color: ${(props) => props.theme.colors.accent};
       }
     }
   }
@@ -411,8 +412,8 @@ const Step = styled.div`
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     * {
       vector-effect: non-scaling-stroke;
-      stroke-width: ${props => props.theme.stroke};
-      stroke: ${props => props.theme.colors.foreground};
+      stroke-width: ${(props) => props.theme.stroke};
+      stroke: ${(props) => props.theme.colors.foreground};
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -422,7 +423,7 @@ const Step = styled.div`
     .accentdisco,
     .accentcubo,
     .accentrock {
-      stroke: ${props => props.theme.colors.accent};
+      stroke: ${(props) => props.theme.colors.accent};
       will-change: transform;
     }
   }
@@ -547,11 +548,11 @@ const BusinessLogoList = styled.ul`
 
 const StyledList = styled.ul`
   list-style: none;
-  color: ${props => props.theme.colors.foreground_low};
+  color: ${(props) => props.theme.colors.foreground_low};
   li {
     &:before {
       content: "– ";
-      color: ${props => props.theme.colors.accent};
+      color: ${(props) => props.theme.colors.accent};
     }
   }
 `;
@@ -564,8 +565,8 @@ const IconContainer = styled.div`
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     * {
       vector-effect: non-scaling-stroke;
-      stroke-width: ${props => props.theme.stroke};
-      stroke: ${props => props.theme.colors.foreground};
+      stroke-width: ${(props) => props.theme.stroke};
+      stroke: ${(props) => props.theme.colors.foreground};
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -575,7 +576,7 @@ const IconContainer = styled.div`
     .accentdisco,
     .accentcubo,
     .accentrock {
-      stroke: ${props => props.theme.colors.accent};
+      stroke: ${(props) => props.theme.colors.accent};
       will-change: transform;
     }
   }

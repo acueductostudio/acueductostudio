@@ -4,10 +4,12 @@ import Fade from "react-reveal/Fade";
 import TitleSection from "components/shared/TitleSection";
 import createMarkup from "utils/createMarkup";
 
-import Apps from "public/assets/img/layout/icons/apps.svg";
-import DigitalProducts from "public/assets/img/layout/icons/products.svg";
-import Branding from "public/assets/img/layout/icons/branding.svg";
-import Marketing from "public/assets/img/layout/icons/marketing.svg";
+import {
+  Apps,
+  DigitalProducts,
+  Branding,
+  Marketing,
+} from "components/shared/Icons";
 
 const productIconArray = [Apps, DigitalProducts, Branding, Marketing];
 const letterArray = ["a", "b", "c", "d"];
@@ -17,7 +19,7 @@ const ProductContainer = ({
   title,
   p,
   pitchDescription,
-  showLongText
+  showLongText,
 }) => {
   const ProductIcon = productIconArray[index];
   const letter = letterArray[index];
@@ -66,7 +68,7 @@ const Product = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: ${props =>
+  border: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
   @media (hover: hover) and (pointer: fine) {
@@ -74,7 +76,7 @@ const Product = styled.div`
       svg {
         transform: scale(1.05);
         p {
-          color: ${props => props.theme.colors.foreground};
+          color: ${(props) => props.theme.colors.foreground};
         }
       }
     }
@@ -88,24 +90,24 @@ const Product = styled.div`
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {
-    color: ${props => props.theme.colors.accent_smalltext};
+    color: ${(props) => props.theme.colors.accent_smalltext};
     font-size: 1.5rem;
   }
   p {
     font-size: 1.5rem;
 
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   svg {
     max-width: 100px;
-    margin: ${props => (props.showLongText ? "10%" : "22%")} auto;
+    margin: ${(props) => (props.showLongText ? "10%" : "22%")} auto;
     display: block;
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     will-change: transform;
     * {
       vector-effect: non-scaling-stroke;
-      stroke-width: ${props => props.theme.stroke};
+      stroke-width: ${(props) => props.theme.stroke};
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -135,7 +137,7 @@ const ProductsList = styled.div`
   ${Product} {
     :nth-of-type(1) {
       grid-column-start: 2;
-      border-left: ${props =>
+      border-left: ${(props) =>
         props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
     }
     :nth-of-type(2) {
@@ -147,7 +149,7 @@ const ProductsList = styled.div`
     }
     :nth-of-type(4) {
       border-top: 0;
-      border-left: ${props =>
+      border-left: ${(props) =>
         props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
     }
   }
@@ -163,7 +165,7 @@ const ProductsList = styled.div`
         border-right: 0;
       }
       :nth-of-type(3) {
-        border-right: ${props =>
+        border-right: ${(props) =>
           props.theme.stroke +
           " solid " +
           props.theme.colors.foreground_lowest};
@@ -173,6 +175,6 @@ const ProductsList = styled.div`
 `;
 
 const ProductsSection = styled.section`
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
 `;

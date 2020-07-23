@@ -1,0 +1,124 @@
+{
+  "diagnosticodigital_page": {
+    "page_title": "¿Qué tan digital es tu negocio? Diagnóstico gratis | Acueducto",
+    "meta_description": "Responde a estas preguntas (5 min) y recibe un diagnóstico gratuito para tu negocio en estrategia digital, cultura innovadora y competencia tecnológica.",
+    "headerTitle": "diagnostico",
+    "intro": {
+      "title": "¿tu negocio está preparado para el mundo digital?",
+      "p": "<b>Averigua dónde está parada tu organización en prácticas digitales con este diagnóstico.</b><br/>Duración aproximada: 5 minutos."
+    },
+    "collection_form": {
+      "title": "ingresa tus datos para recibir tu diagnóstico personalizado",
+      "firstName": {
+        "label": "nombre",
+        "errorMissing": "Escribe tu nombre"
+      },
+      "lastName": {
+        "label": "apellido",
+        "errorMissing": "Escribe tu apellido"
+      },
+      "email": {
+        "errorMissing": "Escribe tu email",
+        "errorInvalid": "Email inválido"
+      },
+      "submit": "ver resultados"
+    },
+    "progressLine": {
+      "strategy": "estrategia",
+      "culture": "cultura",
+      "competition": "competencia"
+    },
+    "questions": [
+      {
+        "question": "¿Cuentas con una estrategia para integrar tecnologías en tu negocio?",
+        "a1": "Si, tengo una estrategia",
+        "a2": "Lo he contemplado pero no concretado",
+        "a3": "No la tengo"
+      },
+      {
+        "question": "¿Has detectado problemas u operaciones en tu modelo de negocios que podrían ser optimizados con tecnología (tareas repetitivas, cuellos de botella, etc.)?",
+        "a1": "Si, los tengo identificados",
+        "a2": "He detectado alguno",
+        "a3": "No los he buscado"
+      },
+      {
+        "question": "¿Utilizas software y tecnologías de automatización para eficientar tus procesos?",
+        "a1": "Si, utilizo un sistema (ERP, CRM, Task Manager, etc.)",
+        "a2": "Tengo algunas tareas automatizadas",
+        "a3": "No, utilizo excel o llevo registros a mano"
+      },
+      {
+        "question": "¿Evalúas la eficiencia de las tecnologías que empleas actualmente?",
+        "a1": "Si, evalúo constantemente",
+        "a2": "He realizado alguna evaluación",
+        "a3": "No la evalúo"
+      },
+      {
+        "question": "¿Tienes medido el Coste Total de Propiedad (TCO) y Retorno de Inversión (ROI) de las tecnologías que empleas en tu negocio?",
+        "a1": "Si, así evalúo las tecnologías que integro en mi negocio",
+        "a2": "Sólo sé cuanto invierto en servicios digitales",
+        "a3": "No los contemplo"
+      },
+      {
+        "question": "Ante un contexto agresivamente cambiante, ¿tienes una cultura de trabajo que promueva la adopción de nuevas tecnologías?",
+        "a1": "Si, hacemos manuales y capacitamos a nuestro personal",
+        "a2": "Nuestros nuevos empleados aprenden con el tiempo",
+        "a3": "No, cualquiera puede entiender las tecnologías que utilizamos"
+      },
+      {
+        "question": "¿Las decisiones de adopción de tecnología consideran a todos los sectores de tu organización?",
+        "a1": "Si, hacemos estudios y consultas",
+        "a2": "Procuro consultar a mis empleados",
+        "a3": "No, solo contemplo los departamentos más redituables"
+      },
+      {
+        "question": "¿Cuentas con documentación actualizada y manuales de uso de tus procesos de negocio?",
+        "a1": "Sí, mantenemos actualizados nuestros manuales y los revisamos con los empleados constantemente.",
+        "a2": "Cuento con algunos pero no están actualizados",
+        "a3": "No, nuestros empleados con experiencia capacitan a los nuevos"
+      },
+      {
+        "question": "¿Capacitas a tus empleados en el uso de nuevas tecnologías?",
+        "a1": "Si, tenemos procesos de actualización constantes",
+        "a2": "Tenemos un proceso de Onboarding para empleados nuevos",
+        "a3": "No, es responsabilidad de mis empleados"
+      },
+      {
+        "question": "¿Tomas en cuenta los problemas identificados por expertos, líderes del mercado y tus clientes?",
+        "a1": "Si, hacemos investigación y análisis de competencia constante",
+        "a2": "En ocasiones",
+        "a3": "No considero esa información"
+      },
+      {
+        "question": "¿Has hecho un análisis comparativo con la competencia para saber qué tecnologías podrías implementar en tu organización?",
+        "a1": "Si, conozco el software con el que opera mi competencia",
+        "a2": "Sólo comparo tecnologías con la competencia cuando causan problemas",
+        "a3": "No lo he hecho"
+      },
+      {
+        "question": "¿Haz desarrollado herramientas tecnológicas que te permitan diferenciarte de la competencia?",
+        "a1": "Si, tenemos sistemas hechos a la medida",
+        "a2": "No, pero tengo ideas claras de qué me gustaría desarrollar",
+        "a3": "Nos adaptamos a tecnologías de terceros"
+      },
+      {
+        "question": "¿Monitoreas la data de tu negocio para buscar áreas de oportunidad?",
+        "a1": "Si, tengo sistemas de información",
+        "a2": "He instalado servicios de analytics pero no los uso",
+        "a3": "No recopilo suficiente información para analizarla"
+      },
+      {
+        "question": "¿Tus decisiones de negocio están basadas en los datos que recolectas (data-driven)?",
+        "a1": "Si, no tomamos decisiones sin data a la mano",
+        "a2": "Algunas decisiones sí y otras no",
+        "a3": "No cuento con información para apoyarme en mis decisiones"
+      },
+      {
+        "question": "¿Tienes identificados tus KPI's (Key Progress Indicators) digitales?",
+        "a1": "Si, los tengo claros",
+        "a2": "Tengo algunos indicadores clave",
+        "a3": "Ningún proyecto digital se evalúa"
+      }
+    ]
+  }
+}

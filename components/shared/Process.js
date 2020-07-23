@@ -3,14 +3,16 @@ import styled from "styled-components";
 import TitleSection from "components/shared/TitleSection";
 import Fade from "react-reveal/Fade";
 import createMarkup from "utils/createMarkup";
-import i1 from "public/assets/img/layout/icons/discover.svg";
-import i2 from "public/assets/img/layout/icons/envision.svg";
-import i3 from "public/assets/img/layout/icons/buildstory.svg";
-import i4 from "public/assets/img/layout/icons/craft.svg";
-import i5 from "public/assets/img/layout/icons/launch.svg";
-import i6 from "public/assets/img/layout/icons/review.svg";
+import {
+  Discover,
+  Envision,
+  BuildStory,
+  Craft,
+  Launch,
+  Review,
+} from "components/shared/Icons";
 
-const iconArray = [i1, i2, i3, i4, i5, i6];
+const iconArray = [Discover, Envision, BuildStory, Craft, Launch, Review];
 
 const StepContainer = ({ index, title, p }) => {
   const Icon = iconArray[index];
@@ -47,7 +49,7 @@ const Step = styled.div`
   padding: 10%;
   display: flex;
   flex-direction: column;
-  border: ${props =>
+  border: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-left: 0;
   @media (hover: hover) and (pointer: fine) {
@@ -68,7 +70,7 @@ const Step = styled.div`
         }
       }
       p {
-        color: ${props => props.theme.colors.foreground};
+        color: ${(props) => props.theme.colors.foreground};
       }
     }
   }
@@ -81,12 +83,12 @@ const Step = styled.div`
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   span {
-    color: ${props => props.theme.colors.accent_smalltext};
+    color: ${(props) => props.theme.colors.accent_smalltext};
     font-size: 1.5rem;
   }
   p {
     font-size: 1.5rem;
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
     transition: color 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
   svg {
@@ -96,8 +98,8 @@ const Step = styled.div`
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     * {
       vector-effect: non-scaling-stroke;
-      stroke-width: ${props => props.theme.stroke};
-      stroke: ${props => props.theme.colors.foreground};
+      stroke-width: ${(props) => props.theme.stroke};
+      stroke: ${(props) => props.theme.colors.foreground};
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -107,7 +109,7 @@ const Step = styled.div`
     .accentdisco,
     .accentcubo,
     .accentrock {
-      stroke: ${props => props.theme.colors.accent};
+      stroke: ${(props) => props.theme.colors.accent};
       will-change: transform;
     }
   }
@@ -148,13 +150,13 @@ const StepsSection = styled.div`
     ${Step} {
       :nth-of-type(3) {
         border-top: 0;
-        border-right: ${props =>
+        border-right: ${(props) =>
           props.theme.stroke +
           " solid " +
           props.theme.colors.foreground_lowest};
       }
       :nth-of-type(4) {
-        border-bottom: ${props =>
+        border-bottom: ${(props) =>
           props.theme.stroke +
           " solid " +
           props.theme.colors.foreground_lowest};
@@ -164,6 +166,6 @@ const StepsSection = styled.div`
 `;
 
 const ProcessSection = styled.section`
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
 `;

@@ -1,9 +1,27 @@
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 import Arrows from "public/assets/img/layout/language.svg";
 import Router, { useRouter } from "next/router";
 
 function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   const router = useRouter();
+  const [showToggler, setShowToggler] = useState(false);
+
+  useEffect(() => {
+    switch (router.asPath) {
+      case "/podcast":
+        setShowToggler(false);
+        break;
+      case "/diagnosticodigital":
+        setShowToggler(false);
+        break;
+      case "/consultoria":
+        setShowToggler(false);
+        break;
+      default:
+        setShowToggler(true);
+    }
+  }, [router.route]);
 
   const handleLink = () => {
     if (locale.lang == "en") {
@@ -78,22 +96,19 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   };
 
   return (
-    router.asPath !== "/podcast" && (
-      <Toggler reveal={hasLoaded}>
-        <a onClick={handleLink}>
-          <English>
-            <span>
-              {locale.lang === "es" ? "switch language" : "cambiar idioma"}
-            </span>
-            {locale.lang === "es" ? "english" : "español"}
-          </English>
-
-          <Stable>
-            <Arrows />
-          </Stable>
-        </a>
-      </Toggler>
-    )
+    <Toggler reveal={hasLoaded} available={showToggler}>
+      <a onClick={handleLink}>
+        <English>
+          <span>
+            {locale.lang === "es" ? "switch language" : "cambiar idioma"}
+          </span>
+          {locale.lang === "es" ? "english" : "español"}
+        </English>
+        <Stable>
+          <Arrows />
+        </Stable>
+      </a>
+    </Toggler>
   );
 }
 export default React.memo(LanguageToggler);
@@ -167,7 +182,7 @@ const Toggler = styled.div`
   padding-right: 35px;
   margin: 0px auto;
   max-width: 1500px;
-  opacity: ${(props) => (props.reveal ? 1 : 0)};
+  opacity: ${(props) => (props.available && props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {

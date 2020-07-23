@@ -7,6 +7,7 @@ export default {
     accent: "#1A4CE0",
     accent_smalltext: "#4871EA",
     white: "#F4F4F4",
+    warning: "#F2C53A",
     error: "#CC2E44",
     success: "#27AE60",
   },
