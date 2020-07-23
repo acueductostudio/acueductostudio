@@ -144,6 +144,21 @@ const Container = styled.div`
     font-weight: 100;
     margin: 4% 0 3.5%;
   }
+  @media (max-width: 1250px) {
+    h3 {
+      font-size: 2.9rem;
+    }
+  }
+  @media (max-width: 1000px) {
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
 `;
 
 const fadeIn = keyframes`

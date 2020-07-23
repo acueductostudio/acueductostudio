@@ -9,7 +9,6 @@ function Steps({ steps, children, iconArray }) {
       <StepBordered>
         <Step>
           <Fade>
-            {/* {showIndex && `<span>0${index + 1}</span>`} */}
             <StepIcon />
             <h3>{title}</h3>
             <p dangerouslySetInnerHTML={createMarkup(p)} />

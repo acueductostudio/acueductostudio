@@ -110,6 +110,37 @@ const StepGrid = styled.div`
     color: ${(p) => p.theme.colors.foreground_low};
     max-width: 220px;
   }
+  @media (max-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    grid-gap: 2rem;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    p {
+      max-width: 250px;
+    }
+  }
+  @media (max-width: 1250px) {
+    h4 {
+      font-size: 2.2rem;
+      font-weight: 200;
+    }
+  }
+  @media (max-width: 1000px) {
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 2.2rem;
+    }
+  }
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const LastStep = styled.div`
@@ -121,7 +152,7 @@ const LastStep = styled.div`
     color: ${(p) => p.theme.colors.accent};
     font-weight: 200;
     max-width: 360px;
-    line-height: 120%;
+    line-height: 110%;
     margin-bottom: 20px;
   }
   ul {
@@ -142,6 +173,14 @@ const LastStep = styled.div`
         border-radius: 1px;
         margin-right: 10px;
       }
+    }
+  }
+  @media (max-width: 1000px) {
+    h3 {
+      font-size: 2.5rem;
+    }
+    ul li {
+      font-size: 1.4rem;
     }
   }
 `;
