@@ -5,8 +5,7 @@ import Fade from "react-reveal/Fade";
 import { Span } from "components/shared/Dangerously";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import { createContact } from "utils/sendinBlue.ts";
-import InputField from "components/shared/InputField";
-
+c;
 const ConsultoriaCTA = ({ cta }) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
@@ -90,18 +89,20 @@ const ConsultoriaCTA = ({ cta }) => {
       {formStatus === "loading" && (
         <Fade>
           <Loading>
-            <p>analizando resultados...</p>
+            <p>enviando...</p>
           </Loading>
         </Fade>
       )}
       {formStatus === "done" && (
-        <Fade>
-          <h3>gracias!</h3>
-          <p>
-            En unos minutos recibirás en tu email toda la información necesaria
-            para agendar tu cita.
-          </p>
-        </Fade>
+        <ThanksBlock>
+          <Fade>
+            <h3>gracias!</h3>
+            <p>
+              En unos minutos recibirás en tu email toda la información
+              necesaria para agendar tu cita.
+            </p>
+          </Fade>
+        </ThanksBlock>
       )}
       <h3>{cta.title2}</h3>
       <LinkWithArrow link={cta.link} linktext={cta.linktext} />
@@ -110,6 +111,13 @@ const ConsultoriaCTA = ({ cta }) => {
 };
 
 export default React.memo(ConsultoriaCTA);
+
+const ThanksBlock = styled.div`
+  margin-bottom: 10%;
+  p {
+    margin-top: 10px;
+  }
+`;
 
 const Container = styled.div`
   max-width: 450px;
@@ -166,7 +174,7 @@ const fadeIn = keyframes`
     width: 5%;
   }
   100% {
-    width: 70%;
+    width: 100%;
   }
 `;
 
@@ -175,23 +183,25 @@ const Loading = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
+  padding-top: 5%;
   flex-direction: column;
-  min-height: 40vh;
+  p {
+    margin-bottom: 5px;
+  }
   &:after {
     display: flex;
-    margin-top: 20px;
-    height: 4px;
+    height: 2px;
     background-color: ${(p) => p.theme.colors.accent};
     content: " ";
-    width: 70%;
+    width: 100%;
   }
   &:before {
     content: " ";
-    margin-top: 22px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
     height: 4px;
+    margin-top: 35px;
     width: 10%;
     animation: 3s ${fadeIn} ease-out infinite;
     animation-iteration-count: infinite;

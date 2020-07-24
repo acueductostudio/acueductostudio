@@ -34,7 +34,7 @@ const routes = [
     priority: 0.8,
   },
   {
-    es: "/diagnosticodigital",
+    es: "/diagnostico",
     priority: 0.7,
   },
   {

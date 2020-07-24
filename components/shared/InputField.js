@@ -17,7 +17,7 @@ const InputField = styled.div`
     border: 0;
     padding: 16px;
     width: 100%;
-    height: 100%;
+    height: 60px;
     font-weight: 100;
     &[type="text"],
     &[type="email"] {
@@ -41,7 +41,6 @@ const InputField = styled.div`
     &[type="submit"] {
       background-color: ${(p) => p.theme.colors.accent};
       color: ${(p) => p.theme.colors.foreground};
-      max-height: 61px;
       cursor: pointer;
       transition: 0.4s all ease;
       @media (hover: hover) and (pointer: fine) {

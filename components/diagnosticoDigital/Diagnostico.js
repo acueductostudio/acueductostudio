@@ -3,14 +3,20 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Fade from "react-reveal/Fade";
 import Arrow from "components/shared/Arrow";
-import es from "public/locales/es/diagnosticodigital.json";
 import { createContact } from "utils/sendinBlue.ts";
 import Results from "./Results";
+import InputField from "components/shared/InputField";
 
 const NUMBER_OF_QS = 15;
 
-const Diagnostico = () => {
-  let { questions, collection_form, progressLine } = es.diagnosticodigital_page;
+const Diagnostico = ({ diagnose_section, results_section }) => {
+  let {
+    questions,
+    collection_form,
+    progressLine,
+    analyzing_results,
+  } = diagnose_section;
+
   const [qIndex, setQIndex] = useState(0);
   const [aIndex, setAIndex] = useState(0);
   const [testStatus, setTestStatus] = useState("");
@@ -161,7 +167,7 @@ const Diagnostico = () => {
             >
               <h5>{collection_form.title}</h5>
               <InputGrid>
-                <div>
+                <InputField>
                   <label>{collection_form.firstName.label}</label>
                   <input
                     name="firstName"
@@ -172,8 +178,9 @@ const Diagnostico = () => {
                   {errors.firstName && (
                     <span>{collection_form.firstName.errorMissing}</span>
                   )}
-                </div>
-                <div>
+                </InputField>
+
+                <InputField>
                   <label>{collection_form.lastName.label}</label>
                   <input
                     name="lastName"
@@ -184,8 +191,9 @@ const Diagnostico = () => {
                   {errors.lastName && (
                     <span>{collection_form.lastName.errorMissing}</span>
                   )}
-                </div>
-                <div>
+                </InputField>
+
+                <InputField>
                   <label>email</label>
                   <input
                     name="email"
@@ -203,8 +211,10 @@ const Diagnostico = () => {
                     })}
                   />
                   <span>{errors?.email?.message}</span>
-                </div>
-                <input type="submit" value={collection_form.submit} />
+                </InputField>
+                <InputField>
+                  <input type="submit" value={collection_form.submit} />
+                </InputField>
               </InputGrid>
             </Question>
           </form>
@@ -228,12 +238,16 @@ const Diagnostico = () => {
       {testStatus === "loading" && (
         <Fade>
           <Loading>
-            <p>analizando resultados...</p>
+            <p>{analyzing_results}...</p>
           </Loading>
         </Fade>
       )}
       {testStatus === "done" && (
-        <Results results={results} setTestStatus={setTestStatus} />
+        <Results
+          results={results}
+          setTestStatus={setTestStatus}
+          results_section={results_section}
+        />
       )}
     </QuestionSection>
   );
@@ -394,53 +408,9 @@ const InputGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 75px);
-  grid-gap: 2rem;
+  grid-gap: 1.6rem 2rem;
   width: 100%;
   align-items: flex-start;
-  & > div {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-bottom: 0 !important;
-  }
-  label {
-    font-size: 0px;
-  }
-  span {
-    color: ${(p) => p.theme.colors.error};
-  }
-  input {
-    border-radius: 0;
-    border: 0;
-    padding: 16px;
-    width: 100%;
-    height: 100%;
-    font-weight: 100;
-    &[type="text"],
-    &[type="email"] {
-      background-color: ${(p) => p.theme.colors.background};
-      color: ${(p) => p.theme.colors.foreground_low};
-      border: 2px solid ${(p) => p.theme.colors.foreground_lowest};
-    }
-    &[type="submit"] {
-      background-color: ${(p) => p.theme.colors.accent};
-      color: ${(p) => p.theme.colors.foreground};
-      max-height: 61px;
-      /* padding: 20px; */
-      cursor: pointer;
-      transition: 0.4s all ease;
-      @media (hover: hover) and (pointer: fine) {
-        &:hover {
-          background-color: ${(props) => props.theme.colors.success};
-          color: ${(props) => props.theme.colors.background};
-        }
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    span {
-    }
-  }
 `;
 
 const Info = styled.div`

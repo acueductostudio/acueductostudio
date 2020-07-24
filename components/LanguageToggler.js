@@ -12,7 +12,7 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
       case "/podcast":
         setShowToggler(false);
         break;
-      case "/diagnosticodigital":
+      case "/diagnostico":
         setShowToggler(false);
         break;
       case "/consultoria":

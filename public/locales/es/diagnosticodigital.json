@@ -2,123 +2,159 @@
   "diagnosticodigital_page": {
     "page_title": "¿Qué tan digital es tu negocio? Diagnóstico gratis | Acueducto",
     "meta_description": "Responde a estas preguntas (5 min) y recibe un diagnóstico gratuito para tu negocio en estrategia digital, cultura innovadora y competencia tecnológica.",
-    "headerTitle": "diagnostico",
+    "headerTitle": "diagnóstico",
     "intro": {
       "title": "¿tu negocio está preparado para el mundo digital?",
       "p": "<b>Averigua dónde está parada tu organización en prácticas digitales con este diagnóstico.</b><br/>Duración aproximada: 5 minutos."
     },
-    "collection_form": {
-      "title": "ingresa tus datos para recibir tu diagnóstico personalizado",
-      "firstName": {
-        "label": "nombre",
-        "errorMissing": "Escribe tu nombre"
+    "diagnose_section": {
+      "collection_form": {
+        "title": "ingresa tus datos para recibir tu diagnóstico personalizado",
+        "firstName": {
+          "label": "nombre",
+          "errorMissing": "Escribe tu nombre"
+        },
+        "lastName": {
+          "label": "apellido",
+          "errorMissing": "Escribe tu apellido"
+        },
+        "email": {
+          "errorMissing": "Escribe tu email",
+          "errorInvalid": "Email inválido"
+        },
+        "submit": "ver resultados"
       },
-      "lastName": {
-        "label": "apellido",
-        "errorMissing": "Escribe tu apellido"
+      "progressLine": {
+        "strategy": "estrategia",
+        "culture": "cultura",
+        "competition": "competencia"
       },
-      "email": {
-        "errorMissing": "Escribe tu email",
-        "errorInvalid": "Email inválido"
-      },
-      "submit": "ver resultados"
+      "questions": [
+        {
+          "question": "¿Cuentas con una estrategia para integrar tecnologías en tu negocio?",
+          "a1": "Si, tengo una estrategia",
+          "a2": "Lo he contemplado pero no concretado",
+          "a3": "No la tengo"
+        },
+        {
+          "question": "¿Has detectado problemas u operaciones en tu modelo de negocios que podrían ser optimizados con tecnología (tareas repetitivas, cuellos de botella, etc.)?",
+          "a1": "Si, los tengo identificados",
+          "a2": "He detectado alguno",
+          "a3": "No los he buscado"
+        },
+        {
+          "question": "¿Utilizas software y tecnologías de automatización para eficientar tus procesos?",
+          "a1": "Si, utilizo un sistema (ERP, CRM, Task Manager, etc.)",
+          "a2": "Tengo algunas tareas automatizadas",
+          "a3": "No, utilizo excel o llevo registros a mano"
+        },
+        {
+          "question": "¿Evalúas la eficiencia de las tecnologías que empleas actualmente?",
+          "a1": "Si, evalúo constantemente",
+          "a2": "He realizado alguna evaluación",
+          "a3": "No la evalúo"
+        },
+        {
+          "question": "¿Tienes medido el Coste Total de Propiedad (TCO) y Retorno de Inversión (ROI) de las tecnologías que empleas en tu negocio?",
+          "a1": "Si, así evalúo las tecnologías que integro en mi negocio",
+          "a2": "Sólo sé cuanto invierto en servicios digitales",
+          "a3": "No los contemplo"
+        },
+        {
+          "question": "Ante un contexto agresivamente cambiante, ¿tienes una cultura de trabajo que promueva la adopción de nuevas tecnologías?",
+          "a1": "Si, hacemos manuales y capacitamos a nuestro personal",
+          "a2": "Nuestros nuevos empleados aprenden con el tiempo",
+          "a3": "No, cualquiera puede entiender las tecnologías que utilizamos"
+        },
+        {
+          "question": "¿Las decisiones de adopción de tecnología consideran a todos los sectores de tu organización?",
+          "a1": "Si, hacemos estudios y consultas",
+          "a2": "Procuro consultar a mis empleados",
+          "a3": "No, solo contemplo los departamentos más redituables"
+        },
+        {
+          "question": "¿Cuentas con documentación actualizada y manuales de uso de tus procesos de negocio?",
+          "a1": "Sí, mantenemos actualizados nuestros manuales y los revisamos con los empleados constantemente.",
+          "a2": "Cuento con algunos pero no están actualizados",
+          "a3": "No, nuestros empleados con experiencia capacitan a los nuevos"
+        },
+        {
+          "question": "¿Capacitas a tus empleados en el uso de nuevas tecnologías?",
+          "a1": "Si, tenemos procesos de actualización constantes",
+          "a2": "Tenemos un proceso de Onboarding para empleados nuevos",
+          "a3": "No, es responsabilidad de mis empleados"
+        },
+        {
+          "question": "¿Tomas en cuenta los problemas identificados por expertos, líderes del mercado y tus clientes?",
+          "a1": "Si, hacemos investigación y análisis de competencia constante",
+          "a2": "En ocasiones",
+          "a3": "No considero esa información"
+        },
+        {
+          "question": "¿Has hecho un análisis comparativo con la competencia para saber qué tecnologías podrías implementar en tu organización?",
+          "a1": "Si, conozco el software con el que opera mi competencia",
+          "a2": "Sólo comparo tecnologías con la competencia cuando causan problemas",
+          "a3": "No lo he hecho"
+        },
+        {
+          "question": "¿Haz desarrollado herramientas tecnológicas que te permitan diferenciarte de la competencia?",
+          "a1": "Si, tenemos sistemas hechos a la medida",
+          "a2": "No, pero tengo ideas claras de qué me gustaría desarrollar",
+          "a3": "Nos adaptamos a tecnologías de terceros"
+        },
+        {
+          "question": "¿Monitoreas la data de tu negocio para buscar áreas de oportunidad?",
+          "a1": "Si, tengo sistemas de información",
+          "a2": "He instalado servicios de analytics pero no los uso",
+          "a3": "No recopilo suficiente información para analizarla"
+        },
+        {
+          "question": "¿Tus decisiones de negocio están basadas en los datos que recolectas (data-driven)?",
+          "a1": "Si, no tomamos decisiones sin data a la mano",
+          "a2": "Algunas decisiones sí y otras no",
+          "a3": "No cuento con información para apoyarme en mis decisiones"
+        },
+        {
+          "question": "¿Tienes identificados tus KPI's (Key Progress Indicators) digitales?",
+          "a1": "Si, los tengo claros",
+          "a2": "Tengo algunos indicadores clave",
+          "a3": "Ningún proyecto digital se evalúa"
+        }
+      ],
+      "analyzing_results": "analizando resultados"
     },
-    "progressLine": {
-      "strategy": "estrategia",
-      "culture": "cultura",
-      "competition": "competencia"
-    },
-    "questions": [
-      {
-        "question": "¿Cuentas con una estrategia para integrar tecnologías en tu negocio?",
-        "a1": "Si, tengo una estrategia",
-        "a2": "Lo he contemplado pero no concretado",
-        "a3": "No la tengo"
+    "results_section": {
+      "greeting": {
+        "p1": "Gracias por tomar el test",
+        "span": "resultados "
       },
-      {
-        "question": "¿Has detectado problemas u operaciones en tu modelo de negocios que podrían ser optimizados con tecnología (tareas repetitivas, cuellos de botella, etc.)?",
-        "a1": "Si, los tengo identificados",
-        "a2": "He detectado alguno",
-        "a3": "No los he buscado"
+      "answers": {
+        "strategy": {
+          "title": "estrategia",
+          "bad": "Consideras muy pocos o ninguno de los elementos básicos para tener una estrategia sólida de tecnología digital, tales como la medición de costos de herramientas o la implementación de nuevas soluciones. Debes tomar control de esta situación, puedes eficientar procesos repetitivos de tu negocio con automatizaciones tecnológicas que ya están operando para tu industria. No te quedes atrás.",
+          "neutral": "Te encuentras en un punto medio entre la punta de lanza y los que se están quedando atrás. Tienes nociones sobre cómo quieres utilizar tecnología digital en tu empresa pero la eficiencia de tus estrategias carece de minuciosidad e investigación exhaustiva. Un poco de dirección en esta parte de tu negocio podría elevarlo al siguiente nivel.",
+          "good": "Cuentas con una estrategia que integra tecnologías a tu negocio. Tu modelo de negocios está optimizado por ellas y cuentas con procesos de automatización. Evalúas la eficiencia de tus tecnologías constantemente y tienes claro el costo y retorno que involucran las más relevantes para tu negocio."
+        },
+        "culture": {
+          "title": "cultura",
+          "bad": "La cultura de tu empresa puede ser mucho más resiliente a los constantes cambios tecnológicos que se enfrentan los negocios del mundo. Todo tu organigrama tiene que adoptar este mindset, así tu empresa prosperará en un contexto de constante cambio que busca soluciones nuevas e innovadoras todo el tiempo.",
+          "neutral": "La cultura de tu negocio abraza el cambio pero está lejos de operar con resiliencia tecnológica.<b> Necesitas alinear a todos </b>los individuos de tu organización frente a un contexto específico: un constante cambio con nuevas herramientas y soluciones todo el tiempo. <b>No dejes de lado a nadie</b> del organigrama, este mindset tiene que permear en el ADN de tu empresa.",
+          "good": "Tu cultura de trabajo promueve la adopción de nuevas tecnologías. Consideras a todos los sectores de tu organización a la hora de adoptar herramientas nuevas y capacitas a tus empleados en el uso de éstas, lo que genera un ambiente de recepción abierta hacia la innovación tecnológica."
+        },
+        "competition": {
+          "title": "competencia",
+          "bad": "No implementas los correctos análisis de datos que genera tu negocio y competencia para encontrar nuevas oportunidades. Antes de desarrollar tus propias herramientas, analiza cuidadosamente cómo soluciona tu competencia los problemas en tu industria e identifica qué aspectos tecnológicos juegan un papel importante.",
+          "neutral": "Tienes buenas prácticas que te ayudan a competir con otros negocios de tu industria, pero si quieres destacar realmente necesitas ser más agresivo con los análisis, comparaciones y objetivos tecnológicos que planteas para tu negocio.",
+          "good": "Tienes muy claros los problemas que existen en tu industria y has hecho análisis de cómo tu competencia los afronta. Cuentas con herramientas propias que te distinguen de ella y monitoreas los datos que genera tu negocio para encontrar oportunidades. Tomas decisiones en un esquema data driven y tus KPI’s siempre responden a datos internos."
+        }
       },
-      {
-        "question": "¿Utilizas software y tecnologías de automatización para eficientar tus procesos?",
-        "a1": "Si, utilizo un sistema (ERP, CRM, Task Manager, etc.)",
-        "a2": "Tengo algunas tareas automatizadas",
-        "a3": "No, utilizo excel o llevo registros a mano"
-      },
-      {
-        "question": "¿Evalúas la eficiencia de las tecnologías que empleas actualmente?",
-        "a1": "Si, evalúo constantemente",
-        "a2": "He realizado alguna evaluación",
-        "a3": "No la evalúo"
-      },
-      {
-        "question": "¿Tienes medido el Coste Total de Propiedad (TCO) y Retorno de Inversión (ROI) de las tecnologías que empleas en tu negocio?",
-        "a1": "Si, así evalúo las tecnologías que integro en mi negocio",
-        "a2": "Sólo sé cuanto invierto en servicios digitales",
-        "a3": "No los contemplo"
-      },
-      {
-        "question": "Ante un contexto agresivamente cambiante, ¿tienes una cultura de trabajo que promueva la adopción de nuevas tecnologías?",
-        "a1": "Si, hacemos manuales y capacitamos a nuestro personal",
-        "a2": "Nuestros nuevos empleados aprenden con el tiempo",
-        "a3": "No, cualquiera puede entiender las tecnologías que utilizamos"
-      },
-      {
-        "question": "¿Las decisiones de adopción de tecnología consideran a todos los sectores de tu organización?",
-        "a1": "Si, hacemos estudios y consultas",
-        "a2": "Procuro consultar a mis empleados",
-        "a3": "No, solo contemplo los departamentos más redituables"
-      },
-      {
-        "question": "¿Cuentas con documentación actualizada y manuales de uso de tus procesos de negocio?",
-        "a1": "Sí, mantenemos actualizados nuestros manuales y los revisamos con los empleados constantemente.",
-        "a2": "Cuento con algunos pero no están actualizados",
-        "a3": "No, nuestros empleados con experiencia capacitan a los nuevos"
-      },
-      {
-        "question": "¿Capacitas a tus empleados en el uso de nuevas tecnologías?",
-        "a1": "Si, tenemos procesos de actualización constantes",
-        "a2": "Tenemos un proceso de Onboarding para empleados nuevos",
-        "a3": "No, es responsabilidad de mis empleados"
-      },
-      {
-        "question": "¿Tomas en cuenta los problemas identificados por expertos, líderes del mercado y tus clientes?",
-        "a1": "Si, hacemos investigación y análisis de competencia constante",
-        "a2": "En ocasiones",
-        "a3": "No considero esa información"
-      },
-      {
-        "question": "¿Has hecho un análisis comparativo con la competencia para saber qué tecnologías podrías implementar en tu organización?",
-        "a1": "Si, conozco el software con el que opera mi competencia",
-        "a2": "Sólo comparo tecnologías con la competencia cuando causan problemas",
-        "a3": "No lo he hecho"
-      },
-      {
-        "question": "¿Haz desarrollado herramientas tecnológicas que te permitan diferenciarte de la competencia?",
-        "a1": "Si, tenemos sistemas hechos a la medida",
-        "a2": "No, pero tengo ideas claras de qué me gustaría desarrollar",
-        "a3": "Nos adaptamos a tecnologías de terceros"
-      },
-      {
-        "question": "¿Monitoreas la data de tu negocio para buscar áreas de oportunidad?",
-        "a1": "Si, tengo sistemas de información",
-        "a2": "He instalado servicios de analytics pero no los uso",
-        "a3": "No recopilo suficiente información para analizarla"
-      },
-      {
-        "question": "¿Tus decisiones de negocio están basadas en los datos que recolectas (data-driven)?",
-        "a1": "Si, no tomamos decisiones sin data a la mano",
-        "a2": "Algunas decisiones sí y otras no",
-        "a3": "No cuento con información para apoyarme en mis decisiones"
-      },
-      {
-        "question": "¿Tienes identificados tus KPI's (Key Progress Indicators) digitales?",
-        "a1": "Si, los tengo claros",
-        "a2": "Tengo algunos indicadores clave",
-        "a3": "Ningún proyecto digital se evalúa"
+      "last_message": {
+        "p1": "¿Conoces a alguien que le interese esta información?",
+        "title1": "comparte este diagnóstico",
+        "p2": "Emprende las estrategias que necesitas para desarrollar nuevas capacidades y prosperar en la era digital.",
+        "link": ["/consultoria", "consultorías digitales"],
+        "linktext": "Mejora tu calificación con nuestras "
       }
-    ]
+    }
   }
 }

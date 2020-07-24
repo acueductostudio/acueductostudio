@@ -1,5 +1,5 @@
 import { useState } from "react";
-import YouTubePlayer from "react-player/lib/players/YouTube";
+import YouTubePlayer from "react-player/youtube";
 import styled, { css, keyframes } from "styled-components";
 
 const fierasRed = "rgb(201,32,26)";
@@ -49,8 +49,8 @@ function VideoPlayer(props) {
           onPlay={() => handlePlay(true)}
           config={{
             vimeo: {
-              preload: true
-            }
+              preload: true,
+            },
           }}
         />
       </PlayerWrapper>
@@ -62,19 +62,19 @@ export default VideoPlayer;
 
 const PlayerWrapper = styled.div`
   z-index: 0;
-  opacity: ${props => (props.hide ? 0 : 1)};
+  opacity: ${(props) => (props.hide ? 0 : 1)};
   transition: opacity
-    ${props => (props.hide ? "0s linear 0s" : "0.3s ease .8s")};
+    ${(props) => (props.hide ? "0s linear 0s" : "0.3s ease .8s")};
 `;
 
 const VideoWrapper = styled.div`
-  padding-bottom: ${props => props.ratio || "50.6%"};
+  padding-bottom: ${(props) => props.ratio || "50.6%"};
   display: block;
   width: 90%;
   margin: 5%;
   position: relative;
   overflow: hidden;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   iframe {
     width: 100%;
     height: 100%;
@@ -98,7 +98,7 @@ const hidePause = keyframes`
 `;
 
 const Button = styled.div`
-  opacity: ${props => (props.hide ? "0" : "1")};
+  opacity: ${(props) => (props.hide ? "0" : "1")};
   font-size: 4.5rem;
   border-bottom: 2px solid transparent;
   @media (max-width: 1000px) {
@@ -132,16 +132,16 @@ const Clicker = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${props => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.foreground};
   &:hover {
     ${ButtonPlay} {
-      border-color: ${props => props.theme.colors.foreground};
+      border-color: ${(props) => props.theme.colors.foreground};
       @media (max-width: 450px) {
         border-color: transparent;
       }
     }
   }
-  ${props =>
+  ${(props) =>
     props.hideSvg &&
     css`
       div {
@@ -167,7 +167,7 @@ const Fader = styled.div`
   transition: 0.4s ease opacity;
   margin-bottom: 50px;
   pointer-events: none;
-  opacity: ${props => (props.hide ? 0 : 1)};
+  opacity: ${(props) => (props.hide ? 0 : 1)};
 `;
 
 const OverStill = styled.div`
@@ -177,11 +177,11 @@ const OverStill = styled.div`
   z-index: 1;
   cursor: pointer;
   transition: 0.3s ease opacity 0s;
-  opacity: ${props => (props.hide ? "0" : "1")};
-  pointer-events: ${props => (props.hide ? "none" : "auto")};
+  opacity: ${(props) => (props.hide ? "0" : "1")};
+  pointer-events: ${(props) => (props.hide ? "none" : "auto")};
   background-size: cover;
   background-position: center;
-  ${props =>
+  ${(props) =>
     props.hide &&
     css`
       transition: opacity 0.3s ease 0.3s;

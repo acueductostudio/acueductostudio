@@ -1,11 +1,22 @@
 import styled from "styled-components";
 import Fade from "react-reveal";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 import { P } from "components/shared/Dangerously";
-import Arrow from "components/shared/Arrow";
-import Link from "next/link";
+import LinkWithArrow from "components/shared/LinkWithArrow";
 
-const Results = ({ results, setTestStatus }) => {
-  console.log(results);
+const SHARE_URL = "https://acueducto.studio/diagnostico";
+
+const Results = ({ results, results_section, setTestStatus }) => {
+  let { greeting, answers, last_message } = results_section;
   return (
     <ResultsGrid>
       <Fade>
@@ -14,10 +25,10 @@ const Results = ({ results, setTestStatus }) => {
           // onClick={() => setTestStatus("")}
           >
             <p>
-              Gracias por tomar el test, {results[3]}.
+              {greeting.p1}, {results[3]}.
               <br />
               <span>
-                resultados <b>↓</b>
+                {greeting.span} <b>↓</b>
               </span>
             </p>
             <h4>
@@ -29,123 +40,66 @@ const Results = ({ results, setTestStatus }) => {
         <div>
           <ResultNumber result={results[0].toFixed(1)} />
           <div>
-            <h3>estrategia</h3>
-            {results[0].toFixed(1) < 5 && (
-              <p>
-                Consideras muy pocos o ninguno de los elementos básicos para
-                tener una estrategia sólida de tecnología digital, tales como la
-                medición de costos de herramientas o la implementación de nuevas
-                soluciones. Debes tomar control de esta situación, puedes
-                eficientar procesos repetitivos de tu negocio con
-                automatizaciones tecnológicas que ya están operando para tu
-                industria. No te quedes atrás.
-              </p>
-            )}
+            <h3>{answers.strategy.title}</h3>
+            {results[0].toFixed(1) < 5 && <P>{answers.strategy.bad}</P>}
             {results[0].toFixed(1) >= 5 && results[0] < 8 && (
-              <p>
-                Te encuentras en un punto medio entre la punta de lanza y los
-                que se están quedando atrás. Tienes nociones sobre cómo quieres
-                utilizar tecnología digital en tu empresa pero la eficiencia de
-                tus estrategias carece de minuciosidad e investigación
-                exhaustiva. Un poco de dirección en esta parte de tu negocio
-                podría elevarlo al siguiente nivel.
-              </p>
+              <P>{answers.strategy.neutral}</P>
             )}
-            {results[0].toFixed(1) >= 8 && (
-              <p>
-                Cuentas con una estrategia que integra tecnologías a tu negocio.
-                Tu modelo de negocios está optimizado por ellas y cuentas con
-                procesos de automatización. Evalúas la eficiencia de tus
-                tecnologías constantemente y tienes claro el costo y retorno que
-                involucran las más relevantes para tu negocio.
-              </p>
-            )}
+            {results[0].toFixed(1) >= 8 && <P>{answers.strategy.good}</P>}
           </div>
         </div>
         <div>
           <ResultNumber result={results[1].toFixed(1)} />
           <div>
-            <h3>cultura</h3>
-            {results[1].toFixed(1) < 5 && (
-              <p>
-                La cultura de tu empresa puede ser mucho más resiliente a los
-                constantes cambios tecnológicos que se enfrentan los negocios
-                del mundo. Todo tu organigrama tiene que adoptar este mindset,
-                así tu empresa prosperará en un contexto de constante cambio que
-                busca soluciones nuevas e innovadoras todo el tiempo.{" "}
-              </p>
+            <h3>{answers.culture.title}</h3>
+            {results[0].toFixed(1) < 5 && <P>{answers.culture.bad}</P>}
+            {results[0].toFixed(1) >= 5 && results[0] < 8 && (
+              <P>{answers.culture.neutral}</P>
             )}
-            {results[1].toFixed(1) >= 5 && results[1] < 8 && (
-              <p>
-                La cultura de tu negocio abraza el cambio pero está lejos de
-                operar con resiliencia tecnológica.
-                <b> Necesitas alinear a todos </b>
-                los individuos de tu organización frente a un contexto
-                específico: un constante cambio con nuevas herramientas y
-                soluciones todo el tiempo. <b>No dejes de lado a nadie</b> del
-                organigrama, este mindset tiene que permear en el ADN de tu
-                empresa.
-              </p>
-            )}
-            {results[1].toFixed(1) >= 8 && (
-              <p>
-                Tu cultura de trabajo promueve la adopción de nuevas
-                tecnologías. Consideras a todos los sectores de tu organización
-                a la hora de adoptar herramientas nuevas y capacitas a tus
-                empleados en el uso de éstas, lo que genera un ambiente de
-                recepción abierta hacia la innovación tecnológica.
-              </p>
-            )}
+            {results[0].toFixed(1) >= 8 && <P>{answers.culture.good}</P>}
           </div>
         </div>
         <div>
           <ResultNumber result={results[2].toFixed(1)} />
           <div>
-            <h3>competencia</h3>
-            {results[2].toFixed(1) < 5 && (
-              <p>
-                No implementas los correctos análisis de datos que genera tu
-                negocio y competencia para encontrar nuevas oportunidades. Antes
-                de desarrollar tus propias herramientas, analiza cuidadosamente
-                cómo soluciona tu competencia los problemas en tu industria e
-                identifica qué aspectos tecnológicos juegan un papel importante.
-              </p>
+            <h3>{answers.competition.title}</h3>
+            {results[0].toFixed(1) < 5 && <P>{answers.competition.bad}</P>}
+            {results[0].toFixed(1) >= 5 && results[0] < 8 && (
+              <P>{answers.competition.neutral}</P>
             )}
-            {results[2].toFixed(1) >= 5 && results[2] < 8 && (
-              <p>
-                Tienes buenas prácticas que te ayudan a competir con otros
-                negocios de tu industria, pero si quieres destacar realmente
-                necesitas ser más agresivo con los análisis, comparaciones y
-                objetivos tecnológicos que planteas para tu negocio.{" "}
-              </p>
-            )}
-            {results[2].toFixed(1) >= 8 && (
-              <p>
-                Tienes muy claros los problemas que existen en tu industria y
-                has hecho análisis de cómo tu competencia los afronta. Cuentas
-                con herramientas propias que te distinguen de ella y monitoreas
-                los datos que genera tu negocio para encontrar oportunidades.
-                Tomas decisiones en un esquema data driven y tus KPI’s siempre
-                responden a datos internos.
-              </p>
-            )}
+            {results[0].toFixed(1) >= 8 && <P>{answers.competition.good}</P>}
           </div>
         </div>
-        <LastMessage>
-          <p>
-            Emprende las estrategias que necesitas para desarrollar nuevas
-            capacidades y prosperar en la era digital. <br />
-            <br />
-            Mejora tu calificación con nuestras
-            <Link href="/consultorías" passHref>
-              <a> consultorías digitales.</a>
-            </Link>
-            <Link href="/consultorías">
-              <Arrow />
-            </Link>
-          </p>
-        </LastMessage>
       </Fade>
+      <LastMessage>
+        <Fade>
+          <div>
+            <p>{last_message.p1}</p>
+            <h3>{last_message.title1}</h3>
+            <TwitterShareButton url={SHARE_URL}>
+              <TwitterIcon size={55} bgStyle={{ fill: "#060809" }} />
+            </TwitterShareButton>
+            <FacebookShareButton url={SHARE_URL}>
+              <FacebookIcon size={55} bgStyle={{ fill: "#060809" }} />
+            </FacebookShareButton>
+            <WhatsappShareButton url={SHARE_URL}>
+              <WhatsappIcon size={55} bgStyle={{ fill: "#060809" }} />
+            </WhatsappShareButton>
+            <LinkedinShareButton url={SHARE_URL}>
+              <LinkedinIcon size={55} bgStyle={{ fill: "#060809" }} />
+            </LinkedinShareButton>
+            <p>
+              {last_message.p2}
+              <br />
+              <br />
+              <LinkWithArrow
+                link={last_message.link}
+                linktext={last_message.linktext}
+              />
+            </p>
+          </div>
+        </Fade>
+      </LastMessage>
     </ResultsGrid>
   );
 };
@@ -154,38 +108,58 @@ export default Results;
 
 const LastMessage = styled.div`
   color: ${(p) => p.theme.colors.foreground_low};
-  border: 2px solid ${(p) => p.theme.colors.foreground_low};
-  padding: 5% 5% 4.5% 5%;
-  margin: 5% auto !important;
-  width: auto !important;
+  border-top: 2px solid ${(p) => p.theme.colors.accent};
+  padding: 10% 5% 0 5%;
+  width: 100% !important;
+  margin: 5% auto 0 auto !important;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  p {
-    max-width: 360px;
+  margin-bottom: 0 !important;
+  & > div {
+    max-width: 410px;
+    margin-bottom: 0 !important;
   }
-  span {
-    margin: 30px auto 0px;
+  h3 {
+    padding-bottom: 5px !important;
+    line-height: 110% !important;
+  }
+  button {
+    svg * {
+      transition: 0.4s ease all;
+    }
+    &:nth-of-type(3) svg {
+      height: 49px;
+      margin-bottom: 1px;
+    }
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         svg * {
-          stroke: ${(props) => props.theme.colors.accent};
+          fill: ${(props) => props.theme.colors.accent};
         }
       }
     }
   }
-  a {
-    text-decoration: none;
-    border-bottom: 2px solid ${(p) => p.theme.colors.accent};
-    transition: 0.3s ease all;
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        ~ span svg * {
-          stroke: ${(props) => props.theme.colors.accent};
-        }
-      }
+  p {
+    &:nth-of-type(2) {
+      margin-top: 5%;
     }
   }
-  @media (max-width: 1100px) {
+  @media (min-width: 600px) {
+    span {
+      height: 26px;
+    }
+  }
+  @media (max-width: 600px) {
+    margin: 0px !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    & > div {
+      max-width: unset;
+    }
+    p {
+      max-width: unset;
+    }
   }
 `;
 
@@ -205,6 +179,7 @@ const MainResult = styled.div`
       display: block;
       b {
         font-size: 3.5rem;
+        font-weight: 800;
       }
     }
   }
@@ -256,7 +231,7 @@ const ResultNumber = styled.span`
     ${(p) =>
       p.result >= 5 && p.result < 8
         ? p.theme.colors.warning
-        : p.result > 8
+        : p.result >= 8
         ? p.theme.colors.success
         : p.theme.colors.error};
   &::before {
@@ -267,7 +242,7 @@ const ResultNumber = styled.span`
     color: ${(p) =>
       p.result >= 5 && p.result < 8
         ? p.theme.colors.warning
-        : p.result > 8
+        : p.result >= 8
         ? p.theme.colors.success
         : p.theme.colors.error};
   }
@@ -290,10 +265,6 @@ const ResultsGrid = styled.div`
       width: calc(100% - 85px - 5%);
       p {
         color: ${(p) => p.theme.colors.foreground_low};
-        b {
-          font-weight: 200;
-          color: ${(p) => p.theme.colors.foreground};
-        }
       }
       h3 {
         color: ${(p) => p.theme.colors.foreground};

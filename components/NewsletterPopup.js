@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Cross from "public/assets/img/layout/cross.svg";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import InputField from "components/shared/InputField";
 
 const url =
   "https://studio.us19.list-manage.com/subscribe/post?u=c9d7bbb792de4cdbe363fad75&amp;id=434dbf9f3b";
@@ -225,11 +226,11 @@ const Wrapper = styled.div`
     line-height: 110%;
     margin-bottom: 5%;
   }
-  label{
-    font-size:0;
-    height:0;
-    width:0;
-    position:absolute;
+  label {
+    font-size: 0;
+    height: 0;
+    width: 0;
+    position: absolute;
   }
   input {
     font-weight: 100;

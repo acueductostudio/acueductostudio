@@ -54,7 +54,7 @@ export default ({
 
   useEffect(() => {
     const options = {
-      autoConfig: true, 
+      autoConfig: true,
       debug: false,
     };
     ReactPixel.init("506854653278097", null, options);

@@ -5,7 +5,10 @@
     "headerTitle": "consultoria",
     "intro": {
       "title": "¿quieres automatizar más?",
-      "p": "Asesórate en adopción tecnológica, cultura innovadora, automatización y/o experiencia de marca con nuestro workshop digital."
+      "p": "Asesórate en adopción tecnológica, cultura innovadora, automatización y/o experiencia de marca con nuestro workshop digital.",
+      "pre_title": "¿quieres ",
+      "words": ["automatizar", "diversificar", "prospectar"],
+      "post_title": " más?"
     },
     "cta": {
       "title": "agenda tu consultoría digital",
@@ -24,7 +27,7 @@
       },
       "submit": "agendar cita",
       "title2": "evalúa las prácticas digitales de tu negocio",
-      "link": ["/diagnosticodigital", "diagnóstico digital"],
+      "link": ["/diagnostico", "diagnóstico digital"],
       "linktext": "Toma nuestro "
     },
     "process_section": {

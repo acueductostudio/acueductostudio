@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import { useEffect } from "react";
-import Fade from "react-reveal/Fade";
-import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+import useInterval from "utils/useInterval";
 import Head from "components/Head";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
 import PinnedSection from "components/shared/PinnedSection";
-import { P, H4 } from "components/shared/Dangerously";
-import Picture from "components/caseStudy/shared/Picture";
+import { P } from "components/shared/Dangerously";
 import ConsultoriaCTA from "components/ConsultoriaCTA";
 import Steps from "components/shared/Steps";
 import es from "public/locales/es/consultoria.json";
@@ -39,6 +37,15 @@ function Consultoria(props) {
     areas_section,
     last_section,
   } = es.consultoria_page;
+  const [spinWord, setSpinWord] = useState(0);
+
+  useInterval(
+    () => {
+      setSpinWord(spinWord === 2 ? 0 : spinWord + 1);
+    },
+    2500,
+    true
+  );
 
   useEffect(() => {
     props.setTitle(headerTitle);
@@ -50,10 +57,12 @@ function Consultoria(props) {
         title={page_title}
         description={meta_description}
         canonical={"https://acueducto.studio/consultoria"}
-        image={"og_image_podcast.png"}
+        image={"og_image_consultoria.jpg"}
         lang={props.lang}
       />
-      <PinnedSection title={intro.title}>
+      <PinnedSection
+        title={intro.pre_title + intro.words[spinWord] + intro.post_title}
+      >
         <P>{intro.p}</P>
         <ConsultoriaCTA cta={cta} />
       </PinnedSection>
