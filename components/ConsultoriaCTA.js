@@ -5,7 +5,8 @@ import Fade from "react-reveal/Fade";
 import { Span } from "components/shared/Dangerously";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import { createContact } from "utils/sendinBlue.ts";
-c;
+import InputField from "components/shared/InputField";
+
 const ConsultoriaCTA = ({ cta }) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
