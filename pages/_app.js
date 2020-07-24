@@ -1,5 +1,4 @@
-import React from "react";
-import App from "next/app";
+import { useState, useEffect, useRef } from "react";
 import Router from "next/router";
 import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
@@ -13,57 +12,21 @@ import { LangProvider } from "utils/LangContext";
 import { withRouter } from "next/router";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
-class MyApp extends App {
-  constructor(props) {
-    super(props);
-    this.state = {
-      locale: props.router.route.includes("/en") ? en : es,
-      hasToConsent: false,
-      hasLoaded: false,
-      readyToScroll: false
-    };
-  }
+function App(props) {
+  const [locale, setLocale] = useState(
+    props.router.route.includes("/en") ? en : es
+  );
+  const [hasToConsent, setHasToConsent] = useState(false);
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const LoadingBarRef = useRef(null);
 
-  authenticate() {
-    return new Promise(resolve => setTimeout(resolve, 1500)); //1500
-  }
-
-  toggleLang = lang => {
-    let language = lang === "en" ? en : es;
-    Cookies.set("chosenLang", lang);
-    this.setState({
-      locale: language
-    });
-  };
-
-  handleRouteComplete = url => {
-    var _myself = this;
-    setTimeout(function() {
-      _myself.LoadingBar.complete();
-    }, 300);
-  };
-
-  handleRouteStart = url => {
-    this.LoadingBar.continuousStart();
-  };
-
-  handleRouteError = (err, url) => {
-    var _myself = this;
-    setTimeout(function() {
-      if (err.cancelled) {
-        // console.log(`${err} on route to ${url}`);
-      }
-      _myself.LoadingBar.complete();
-    }, 300);
-  };
-
-  componentDidMount() {
+  useEffect(() => {
     // Disable scroll
     const targetElement = document.querySelector("#contact"); //dummy
     disableBodyScroll(targetElement);
 
     // Load Animation
-    this.authenticate().then(() => {
+    authenticate().then(() => {
       const bordered = document.getElementById("bordered");
       const logo = document.getElementById("logo");
       const revealer = document.getElementById("revealer");
@@ -78,11 +41,7 @@ class MyApp extends App {
           setTimeout(() => {
             revealer.style.opacity = "0";
             revealer.style.pointerEvents = "none";
-            this.setState(
-              { hasLoaded: true },
-              () => console.log("Page hasLoaded"),
-              enableBodyScroll(targetElement)
-            );
+            setHasLoaded(true);
           }, 500);
 
           setTimeout(() => {
@@ -95,63 +54,93 @@ class MyApp extends App {
       }
     });
     // router event listeners for loadingBar
-    Router.events.on("routeChangeStart", this.handleRouteStart);
-    Router.events.on("routeChangeComplete", this.handleRouteComplete);
-    Router.events.on("routeChangeError", this.handleRouteError);
+    Router.events.on("routeChangeStart", handleRouteStart);
+    Router.events.on("routeChangeComplete", handleRouteComplete);
+    Router.events.on("routeChangeError", handleRouteError);
     // init HotJar
     hotjar.initialize(1494703, 6);
-  }
 
-  componentWillUnmount() {
-    Router.events.off("routeChangeStart", this.handleRouteStart);
-    Router.events.off("routeChangeComplete", this.handleRouteComplete);
-    Router.events.off("routeChangeError", this.handleRouteError);
-  }
+    return () => {
+      Router.events.off("routeChangeStart", handleRouteStart);
+      Router.events.off("routeChangeComplete", handleRouteComplete);
+      Router.events.off("routeChangeError", handleRouteError);
+    };
+  }, []);
 
-  checkForConsent = () => {
+  useEffect(() => {
+    const targetElement = document.querySelector("#contact"); //dummy
+    hasLoaded &&
+      (console.log("Page hasLoaded"), enableBodyScroll(targetElement));
+  }),
+    [hasLoaded];
+
+  const authenticate = () => {
+    return new Promise((resolve) => setTimeout(resolve, 1500)); //1500
+  };
+
+  const { Component, pageProps } = props;
+
+  const toggleLang = (lang) => {
+    let language = lang === "en" ? en : es;
+    Cookies.set("chosenLang", lang);
+    setLocale(language);
+  };
+
+  const handleRouteComplete = (url) => {
+    setTimeout(function () {
+      LoadingBarRef.current.complete();
+    }, 300);
+  };
+
+  const handleRouteStart = (url) => {
+    LoadingBarRef.current.continuousStart();
+  };
+
+  const handleRouteError = (err, url) => {
+    setTimeout(function () {
+      if (err.cancelled) {
+        // console.log(`${err} on route to ${url}`);
+      }
+      LoadingBarRef.current.complete();
+    }, 300);
+  };
+
+  const checkForConsent = () => {
     // Check if cookie message has been closed before
     var _C = Cookies.get("showCookieMessage");
     if (_C === undefined) {
-      this.setState({ hasToConsent: true });
+      setHasToConsent(true);
     } else if (_C === "false") {
-      this.setState({ hasToConsent: false });
+      setHasToConsent(false);
     }
   };
 
-  consentToCookies = () => {
+  const consentToCookies = () => {
     Cookies.set("showCookieMessage", "false");
-    this.setState({ hasToConsent: false });
+    setHasToConsent(false);
   };
-
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <ThemeProvider theme={theme}>
-        <LangProvider value={this.state.locale}>
-          <LoadingBar
-            onRef={ref => (this.LoadingBar = ref)}
-            height={3}
-            color={theme.colors.accent}
-            className="TopBar"
-          />
-          <Layout
-            locale={this.state.locale}
-            checkForConsent={this.checkForConsent}
-            consentToCookies={this.consentToCookies}
-            hasToConsent={this.state.hasToConsent}
-            hasLoaded={this.state.hasLoaded}
-            toggleLang={this.toggleLang}
-          >
-            <Component
-              locale={this.state.locale}
-              {...pageProps}
-              lang={this.state.locale.lang}
-            />
-          </Layout>
-        </LangProvider>
-      </ThemeProvider>
-    );
-  }
+  return (
+    <ThemeProvider theme={theme}>
+      <LangProvider value={locale}>
+        <LoadingBar
+          ref={LoadingBarRef}
+          height={3}
+          color={theme.colors.accent}
+          className="TopBar"
+        />
+        <Layout
+          locale={locale}
+          checkForConsent={checkForConsent}
+          consentToCookies={consentToCookies}
+          hasToConsent={hasToConsent}
+          hasLoaded={hasLoaded}
+          toggleLang={toggleLang}
+        >
+          <Component locale={locale} {...pageProps} lang={locale.lang} />
+        </Layout>
+      </LangProvider>
+    </ThemeProvider>
+  );
 }
 
-export default withRouter(MyApp);
+export default withRouter(App);

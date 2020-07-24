@@ -189,8 +189,8 @@ export default ({
 };
 
 const BodyOverflow = createGlobalStyle`
-  .TopBar{
-    box-shadow: 1px 1px 4px ${(props) => props.theme.colors.accent};
+  .TopBar div{
+     box-shadow: 1px 1px 4px ${(props) => props.theme.colors.accent} !important;
   }
   @media (max-width: 600px), (max-height:450px) {
     .react-reveal {
@@ -220,19 +220,6 @@ const BodyOverflow = createGlobalStyle`
       }
     }  
   }
-`;
-
-const BackgroundOpacity = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  opacity: ${(props) => (props.visible ? 0.6 : 0)};
-  position: fixed;
-  pointer-events: ${(props) => (props.visible ? "auto" : "none")};
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  z-index: 13;
-  transition: opacity 0.4s ease;
 `;
 
 const PageWrapper = styled.div`

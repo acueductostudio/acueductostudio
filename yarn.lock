@@ -6056,10 +6056,10 @@ react-tooltip-lite@^1.12.0:
   dependencies:
     prop-types "^15.5.8"
 
-react-top-loading-bar@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/react-top-loading-bar/-/react-top-loading-bar-1.2.0.tgz#fcbca3c2e462bee7b1c0d1850e8b584cd7bd5a26"
-  integrity sha512-5oNdy+DfD5JK06bcc/gsnnXHmml+d8eaBe3C8KQ3eLiH/BD8+FcwsgbAwqgOaRjuSeVQXdYN2JC2G1uVFtCLfA==
+react-top-loading-bar@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-top-loading-bar/-/react-top-loading-bar-2.0.0.tgz#531927ec5fb5f2e49a17d6ee602f91fb407a64f1"
+  integrity sha512-nsBElvXeKHTKAHM2GA7IIafPp1Wd05NLFEUAN+64Tlm7sklEnbi9PtiIwOLJd1DtUMelhk0OmqUDEEo0BFBcQQ==
 
 react-use-measure@^2.0.0:
   version "2.0.1"
