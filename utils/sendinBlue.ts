@@ -31,5 +31,4 @@ export const createContact = async (
 
   const data = await response;
   return data;
-  // data.status !== 400 ? "success" : "fail"
 };

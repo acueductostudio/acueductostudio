@@ -4,7 +4,9 @@ import { useForm } from "react-hook-form";
 import Fade from "react-reveal/Fade";
 import Arrow from "components/shared/Arrow";
 import { createContact } from "utils/sendinBlue.ts";
+import delayForLoading from "utils/delayForLoading.ts";
 import Results from "./Results";
+import ReactPixel from "react-facebook-pixel";
 import InputField from "components/shared/InputField";
 
 const NUMBER_OF_QS = 15;
@@ -23,10 +25,6 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
   const [results, setResults] = useState([]);
   const { register, handleSubmit, errors } = useForm();
 
-  const analyzeResults = () => {
-    return new Promise((resolve) => setTimeout(resolve, 1500)); //1500
-  };
-
   const onSubmit = (data) => {
     setTestStatus("loading");
     //Clean TestResults object in sendinBlue
@@ -38,17 +36,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
     //Create contact and add to list 3 (Consulting funnel) w/ test results
     createContact(data.firstName, data.lastName, data.email, [3], true, {
       TESTRESULTS: JSON.stringify(testResults),
-    }).then(
-      function (response) {
-        console.log(
-          "API called successfully. Returned data: " + JSON.stringify(response)
-        );
-      },
-      function (error) {
-        console.error("API failed, returned: " + error);
-      }
-    );
-    console.log(data);
+    });
 
     // Get the averages of the three areas
     let estrategia =
@@ -72,10 +60,12 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
         parseFloat(data.Q13) +
         parseFloat(data.Q14)) /
       6;
-    setResults([estrategia, cultura, competencia, data.firstName]);
-    console.log([estrategia, cultura, competencia]);
 
-    analyzeResults().then(() => setTestStatus("done"));
+    setResults([estrategia, cultura, competencia, data.firstName]);
+    ReactPixel.init("506854653278097", { em: data.email });
+    ReactPixel.track("Lead", { email: data.email }); // Hizo el diagnóstico
+
+    delayForLoading(1500).then(() => setTestStatus("done"));
   };
 
   const handleKeyDown = (e) => {
@@ -239,6 +229,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
         <Fade>
           <Loading>
             <p>{analyzing_results}...</p>
+            <span />
           </Loading>
         </Fade>
       )}
@@ -269,10 +260,16 @@ const Loading = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  padding-bottom: 5%;
+  padding-bottom: 30px;
   flex-direction: column;
   min-height: 40vh;
-  &:after {
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  span:after {
     display: flex;
     margin-top: 20px;
     height: 4px;
@@ -280,9 +277,9 @@ const Loading = styled.div`
     content: " ";
     width: 70%;
   }
-  &:before {
+  span:before {
     content: " ";
-    margin-top: 22px;
+    margin-top: 20px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
     height: 4px;

@@ -92,11 +92,11 @@ const Results = ({ results, results_section, setTestStatus }) => {
               {last_message.p2}
               <br />
               <br />
-              <LinkWithArrow
-                link={last_message.link}
-                linktext={last_message.linktext}
-              />
             </p>
+            <LinkWithArrow
+              link={last_message.link}
+              linktext={last_message.linktext}
+            />
           </div>
         </Fade>
       </LastMessage>

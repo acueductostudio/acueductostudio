@@ -43,8 +43,8 @@ function Consultoria(props) {
     () => {
       setSpinWord(spinWord === 2 ? 0 : spinWord + 1);
     },
-    2500,
-    true
+    1700,
+    props.hasLoaded
   );
 
   useEffect(() => {

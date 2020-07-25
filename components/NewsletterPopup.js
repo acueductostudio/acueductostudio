@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Cross from "public/assets/img/layout/cross.svg";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import InputField from "components/shared/InputField";
 
 const url =
   "https://studio.us19.list-manage.com/subscribe/post?u=c9d7bbb792de4cdbe363fad75&amp;id=434dbf9f3b";
@@ -35,11 +34,6 @@ const CustomForm = ({ status, message, onValidated }) => {
   };
   return (
     <>
-      <h4>
-        suscríbete y<br />
-        te actualizamos
-      </h4>
-      <p>Recibe un correo cada vez que publiquemos un capítulo nuevo.</p>
       {status === "sending" && <Message>Enviando...</Message>}
       {status === "error" && (
         <Message error dangerouslySetInnerHTML={{ __html: message }} />
@@ -107,6 +101,11 @@ const NewsletterPopup = () => {
     <>
       <Wrapper clickable={showPopup} id="NewsletterPopup">
         <Border>
+          <h4>
+            suscríbete y<br />
+            te actualizamos
+          </h4>
+          <p>Recibe un correo cada vez que publiquemos un capítulo nuevo.</p>
           <MailchimpSubscribe
             url={url}
             render={({ subscribe, status, message }) => (

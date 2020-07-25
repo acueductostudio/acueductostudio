@@ -4,7 +4,7 @@ import { Suspense, useRef } from "react";
 import { Canvas, useLoader, useFrame } from "react-three-fiber";
 import { GLTFLoader } from "three";
 
-const Model = React.memo(props => {
+const Model = React.memo((props) => {
   const ref = useRef();
   const light = useRef();
   const gltf = useLoader(GLTFLoader, "/assets/3d/headexported.glb");
@@ -58,7 +58,6 @@ export default function HeadSketch(props) {
           <ambientLight intensity={1} color={[8, 8, 8]} />
           <directionalLight
             intensity={1}
-            // color={props.second ? "#190002" : "#1736BF"}
             color={props.second ? "#1736BF" : "#690008"}
             position={[-1500, -1500, 200]}
           />
@@ -92,7 +91,7 @@ const SketchContainer = styled.div`
     width: 100%;
     height: 100%;
     padding-left: 10%;
-    color: ${props => props.theme.colors.foreground_lowest};
+    color: ${(props) => props.theme.colors.foreground_lowest};
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 3.5px;

@@ -1,15 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import Router from "next/router";
+import { withRouter } from "next/router";
 import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout";
 import theme from "styles/theme";
 import Cookies from "js-cookie/dist/js.cookie";
+import delayForLoading from "utils/delayForLoading.ts";
 import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
 import { hotjar } from "react-hotjar";
 import { LangProvider } from "utils/LangContext";
-import { withRouter } from "next/router";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 function App(props) {
@@ -26,13 +27,13 @@ function App(props) {
     disableBodyScroll(targetElement);
 
     // Load Animation
-    authenticate().then(() => {
+    delayForLoading(1500).then(() => {
       const bordered = document.getElementById("bordered");
       const logo = document.getElementById("logo");
       const revealer = document.getElementById("revealer");
       if (bordered) {
         setTimeout(() => {
-          // transition out
+          // Transition out
           bordered.classList.add("hidden");
           logo.style.opacity = "0";
           bordered.style.transform = "scale(1)";
@@ -45,7 +46,7 @@ function App(props) {
           }, 500);
 
           setTimeout(() => {
-            // remove from DOM
+            // Remove transition items from DOM
             bordered.remove();
             revealer.remove();
             logo.remove();
@@ -61,6 +62,7 @@ function App(props) {
     hotjar.initialize(1494703, 6);
 
     return () => {
+      // remove loadingBar event listeners
       Router.events.off("routeChangeStart", handleRouteStart);
       Router.events.off("routeChangeComplete", handleRouteComplete);
       Router.events.off("routeChangeError", handleRouteError);
@@ -73,10 +75,6 @@ function App(props) {
       (console.log("Page hasLoaded"), enableBodyScroll(targetElement));
   }),
     [hasLoaded];
-
-  const authenticate = () => {
-    return new Promise((resolve) => setTimeout(resolve, 1500)); //1500
-  };
 
   const { Component, pageProps } = props;
 

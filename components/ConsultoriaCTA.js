@@ -5,34 +5,99 @@ import Fade from "react-reveal/Fade";
 import { Span } from "components/shared/Dangerously";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import { createContact } from "utils/sendinBlue.ts";
+import delayForLoading from "utils/delayForLoading.ts";
 import InputField from "components/shared/InputField";
+import ReactPixel from "react-facebook-pixel";
+
+const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup }) => {
+  const [formStatus, setFormStatus] = useState("");
+  const { register, handleSubmit, errors } = useForm();
+
+  const onSubmitInside = (data) => {
+    setFormStatus("loading");
+    console.log(data);
+    onSubmit();
+    delayForLoading(1500).then(() => setFormStatus("done"));
+  };
+
+  return (
+    <>
+      {formStatus === "" && (
+        <>
+          {formMarkup}
+          <form onSubmit={handleSubmit(onSubmitInside)}>
+            <InputField>
+              <label>{text.firstName.label}</label>
+              <input
+                name="firstName"
+                type="text"
+                placeholder={text.firstName.label}
+                ref={register({ required: true })}
+              />
+              {errors.firstName && <span>{text.firstName.errorMissing}</span>}
+            </InputField>
+            <InputField>
+              <label>{text.lastName.label}</label>
+              <input
+                name="lastName"
+                type="text"
+                placeholder={text.lastName.label}
+                ref={register({ required: true })}
+              />
+              {errors.lastName && <span>{text.lastName.errorMissing}</span>}
+            </InputField>
+            <InputField>
+              <label>email</label>
+              <input
+                name="email"
+                type="email"
+                placeholder="email"
+                ref={register({
+                  required: {
+                    value: true,
+                    message: text.email.errorMissing,
+                  },
+                  pattern: {
+                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                    message: text.email.errorInvalid,
+                  },
+                })}
+              />
+              <span>{errors?.email?.message}</span>
+            </InputField>
+            <InputField>
+              <input type="submit" value={text.submit} />
+            </InputField>
+          </form>
+        </>
+      )}
+      {formStatus === "loading" && (
+        <Fade>
+          <Loading>
+            <p>{text.loading}</p>
+          </Loading>
+        </Fade>
+      )}
+      {formStatus === "done" && { successMarkup }}
+    </>
+  );
+};
 
 const ConsultoriaCTA = ({ cta }) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
 
-  const analyzeResults = () => {
-    return new Promise((resolve) => setTimeout(resolve, 1500)); //1500
-  };
-
   const onSubmit = (data) => {
     setFormStatus("loading");
+    console.log(data);
 
     //Create contact and add to list 3 (Consulting funnel) w/ test results
     createContact(data.firstName, data.lastName, data.email, [3], true, {
       PIDIO_CONSULTORIA: true,
-    }).then(
-      function (response) {
-        console.log(
-          "API called successfully. Returned data: " + JSON.stringify(response)
-        );
-      },
-      function (error) {
-        console.error("API failed, returned: " + error);
-      }
-    );
-    console.log(data);
-    analyzeResults().then(() => setFormStatus("done"));
+    });
+    ReactPixel.init("506854653278097", { em: data.email });
+    ReactPixel.track("SubmitApplication", { email: data.email }); // Pidió consultoría
+    delayForLoading(1500).then(() => setFormStatus("done"));
   };
 
   return (
@@ -90,18 +155,15 @@ const ConsultoriaCTA = ({ cta }) => {
       {formStatus === "loading" && (
         <Fade>
           <Loading>
-            <p>enviando...</p>
+            <p>{cta.sending}</p>
           </Loading>
         </Fade>
       )}
       {formStatus === "done" && (
         <ThanksBlock>
           <Fade>
-            <h3>gracias!</h3>
-            <p>
-              En unos minutos recibirás en tu email toda la información
-              necesaria para agendar tu cita.
-            </p>
+            <h3>{cta.registered.title}</h3>
+            <p>{cta.registered.p}</p>
           </Fade>
         </ThanksBlock>
       )}
