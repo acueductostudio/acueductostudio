@@ -8,7 +8,7 @@
       "destination": "/_next/static/service-worker.js"
     },
     {
-      "source": "/agendarconsultoria",
+      "source": "/agendarconsultoria/hola250",
       "destination": "https://meetings.hubspot.com/hola250"
     }
   ],
