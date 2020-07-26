@@ -6,6 +6,10 @@
     {
       "source": "/service-worker.js",
       "destination": "/_next/static/service-worker.js"
+    },
+    {
+      "source": "/agendarconsultoria",
+      "destination": "https://meetings.hubspot.com/hola250"
     }
   ],
   "headers": [
