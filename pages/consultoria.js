@@ -71,7 +71,7 @@ function Consultoria(props) {
       <SpinPinnedSection hasLoaded={props.hasLoaded}>
         <>
           <P>{intro.p}</P>
-          <ConsultoriaCTA cta={cta} />
+          <ConsultoriaCTA cta={cta} id="first" />
         </>
       </SpinPinnedSection>
       <TitleSection {...process_section.intro} borderTop />
@@ -96,7 +96,7 @@ function Consultoria(props) {
         </LastStep>
       </Steps>
       <TitleSection {...last_section.intro} borderTop>
-        <ConsultoriaCTA cta={cta} />
+        <ConsultoriaCTA cta={cta} id="second" />
       </TitleSection>
       <ContactFooter />
     </PageClipper>
@@ -113,7 +113,7 @@ const StepGrid = styled.div`
     margin-right: 2%;
   }
   span {
-    color: ${(p) => p.theme.colors.accent};
+    color: ${(p) => p.theme.colors.accent_smalltext};
     font-size: 1.6rem;
   }
   h4 {

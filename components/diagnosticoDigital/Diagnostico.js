@@ -116,6 +116,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                   </span>
                   <h4>{question.question}</h4>
                   <label>
+                    {question.a1}
                     <input
                       name={"Q" + index}
                       type="radio"
@@ -124,9 +125,9 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       onClick={handleClick}
                     />
                     <span />
-                    {question.a1}
                   </label>
                   <label>
+                    {question.a2}
                     <input
                       name={"Q" + index}
                       type="radio"
@@ -135,9 +136,9 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       onClick={handleClick}
                     />
                     <span />
-                    {question.a2}
                   </label>
                   <label>
+                    {question.a3}
                     <input
                       name={"Q" + index}
                       type="radio"
@@ -146,7 +147,6 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       onClick={handleClick}
                     />
                     <span />
-                    {question.a3}
                   </label>
                 </Info>
               </Question>
@@ -158,10 +158,13 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
               <h5>{collection_form.title}</h5>
               <InputGrid>
                 <InputField>
-                  <label>{collection_form.firstName.label}</label>
+                  <label htmlFor="firstName">
+                    {collection_form.firstName.label}
+                  </label>
                   <input
                     name="firstName"
                     type="text"
+                    id="firstName"
                     placeholder={collection_form.firstName.label}
                     ref={register({ required: true })}
                   />
@@ -171,10 +174,13 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                 </InputField>
 
                 <InputField>
-                  <label>{collection_form.lastName.label}</label>
+                  <label htmlFor="lastName">
+                    {collection_form.lastName.label}
+                  </label>
                   <input
                     name="lastName"
                     type="text"
+                    id="lastName"
                     placeholder={collection_form.lastName.label}
                     ref={register({ required: true })}
                   />
@@ -184,10 +190,11 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                 </InputField>
 
                 <InputField>
-                  <label>email</label>
+                  <label htmlFor="email">email</label>
                   <input
                     name="email"
                     type="email"
+                    id="email"
                     placeholder="email"
                     ref={register({
                       required: {
@@ -421,7 +428,7 @@ const Info = styled.div`
     }
   }
   span {
-    color: ${(p) => p.theme.colors.accent};
+    color: ${(p) => p.theme.colors.accent_smalltext};
   }
   h4 {
     font-weight: 100;

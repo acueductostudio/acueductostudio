@@ -28,10 +28,10 @@ const SingleCase = (props) => {
                 src={`/assets/img/casestudies/${props.link}/portfolio_logo.svg`}
                 alt={`logo_${props.link}`}
               />
-              <video
+              {/* <video
                 ref={video}
                 playsInline
-                muted
+                muteds
                 autoPlay={props.noPlay ? false : true}
                 loop
                 poster={`/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
@@ -39,7 +39,7 @@ const SingleCase = (props) => {
                 <source
                   src={`/assets/video/casestudies/${props.link}/portfolio.mp4`}
                 />
-              </video>
+              </video> */}
             </VidContainer>
           </Fade>
         </a>

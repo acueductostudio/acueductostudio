@@ -6,7 +6,7 @@ import { createContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
 import DefaultForm from "components/shared/DefaultForm";
 
-const ConsultoriaCTA = ({ cta }) => {
+const ConsultoriaCTA = ({ cta, id }) => {
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
     createContact(data.firstName, data.lastName, data.email, [3], true, {
@@ -20,6 +20,7 @@ const ConsultoriaCTA = ({ cta }) => {
     <Container>
       <DefaultForm
         onSubmit={onSubmit}
+        id={id}
         text={cta}
         formMarkup={
           <>

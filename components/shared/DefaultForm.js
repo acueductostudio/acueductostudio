@@ -5,7 +5,7 @@ import Fade from "react-reveal/Fade";
 import delayForLoading from "utils/delayForLoading.ts";
 import InputField from "components/shared/InputField";
 
-const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup }) => {
+const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup, id }) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
 
@@ -24,9 +24,10 @@ const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup }) => {
           {formMarkup}
           <form onSubmit={handleSubmit(onSubmitInside)}>
             <InputField>
-              <label>{text.firstName.label}</label>
+              <label htmlFor={`${id}firstName`}>{text.firstName.label}</label>
               <input
                 name="firstName"
+                id={`${id}firstName`}
                 type="text"
                 placeholder={text.firstName.label}
                 ref={register({ required: true })}
@@ -34,9 +35,10 @@ const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup }) => {
               {errors.firstName && <span>{text.firstName.errorMissing}</span>}
             </InputField>
             <InputField>
-              <label>{text.lastName.label}</label>
+              <label htmlFor={`${id}lastName`}>{text.lastName.label}</label>
               <input
                 name="lastName"
+                id={`${id}lastName`}
                 type="text"
                 placeholder={text.lastName.label}
                 ref={register({ required: true })}
@@ -44,9 +46,10 @@ const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup }) => {
               {errors.lastName && <span>{text.lastName.errorMissing}</span>}
             </InputField>
             <InputField>
-              <label>email</label>
+              <label htmlFor={`${id}email`}>email</label>
               <input
                 name="email"
+                id={`${id}email`}
                 type="email"
                 placeholder="email"
                 ref={register({
