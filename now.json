@@ -2,14 +2,16 @@
   "name": "acueducto",
   "version": 2,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/agendarconsultoria",
+      "destination": "https://meetings.hubspot.com/hola250"
+    }
+  ],
   "rewrites": [
     {
       "source": "/service-worker.js",
       "destination": "/_next/static/service-worker.js"
-    },
-    {
-      "source": "/agendarconsultoria/hola250",
-      "destination": "https://meetings.hubspot.com/hola250"
     }
   ],
   "headers": [
