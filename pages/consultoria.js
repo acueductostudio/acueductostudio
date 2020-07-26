@@ -26,6 +26,21 @@ const stepIconArray = [
   Culture,
 ];
 
+const SpinPinnedSection = ({ hasLoaded, children }) => {
+  let { intro } = es.consultoria_page;
+  const [spinWord, setSpinWord] = useState(0);
+  useInterval(
+    () => {
+      setSpinWord(spinWord === 2 ? 0 : spinWord + 1);
+    },
+    1700,
+    hasLoaded
+  );
+  let spinTitle = intro.pre_title + intro.words[spinWord] + intro.post_title;
+
+  return <PinnedSection title={spinTitle}>{children}</PinnedSection>;
+};
+
 function Consultoria(props) {
   let {
     page_title,
@@ -37,19 +52,12 @@ function Consultoria(props) {
     areas_section,
     last_section,
   } = es.consultoria_page;
-  const [spinWord, setSpinWord] = useState(0);
-
-  useInterval(
-    () => {
-      setSpinWord(spinWord === 2 ? 0 : spinWord + 1);
-    },
-    1700,
-    props.hasLoaded
-  );
 
   useEffect(() => {
     props.setTitle(headerTitle);
   }, [props.locale]);
+
+  console.log("outside");
 
   return (
     <PageClipper>
@@ -60,12 +68,12 @@ function Consultoria(props) {
         image={"og_image_consultoria.jpg"}
         lang={props.lang}
       />
-      <PinnedSection
-        title={intro.pre_title + intro.words[spinWord] + intro.post_title}
-      >
-        <P>{intro.p}</P>
-        <ConsultoriaCTA cta={cta} />
-      </PinnedSection>
+      <SpinPinnedSection hasLoaded={props.hasLoaded}>
+        <>
+          <P>{intro.p}</P>
+          <ConsultoriaCTA cta={cta} />
+        </>
+      </SpinPinnedSection>
       <TitleSection {...process_section.intro} borderTop />
       <StepGrid>
         {process_section.process.map((step, index) => (
@@ -95,7 +103,7 @@ function Consultoria(props) {
   );
 }
 
-export default React.memo(Consultoria);
+export default Consultoria;
 
 const StepGrid = styled.div`
   display: flex;

@@ -1,0 +1,23 @@
+{
+  "newsletter_component": {
+    "title": " suscríbete y <br />te actualizamos",
+    "p": "Recibe un correo cada vez que publiquemos un capítulo nuevo.",
+    "firstName": {
+      "label": "nombre",
+      "errorMissing": "Escribe tu nombre"
+    },
+    "lastName": {
+      "label": "apellido",
+      "errorMissing": "Escribe tu apellido"
+    },
+    "email": {
+      "errorMissing": "Escribe tu email",
+      "errorInvalid": "Email inválido"
+    },
+    "submit": "suscribirme",
+    "loading": "enviando...",
+    "success": {
+      "p": "¡Gracias por suscribirte!"
+    }
+  }
+}

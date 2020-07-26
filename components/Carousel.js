@@ -9,7 +9,7 @@ const Carousel = () => {
   const [activeIndex, setIndex] = useState(0);
   const [ref, isVisible] = useInView({
     threshold: 0.2,
-    unobserveOnEnter: true
+    unobserveOnEnter: true,
   });
   const [start, startTick] = useState(false);
   const [manualMode, setManualMode] = useState(false);
@@ -68,7 +68,7 @@ const Carousel = () => {
   const context = useContext(LangContext);
   let p = context.home_page.carousel;
 
-  var words = p.map(function(word, index) {
+  var words = p.map(function (word, index) {
     return (
       <Word
         key={"word" + index}
@@ -98,7 +98,7 @@ export default Carousel;
 const FakePadding = styled.div`
   width: 100%;
   padding-bottom: 12%;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
 `;
 
 const HoledSection = styled.div`
@@ -144,11 +144,11 @@ const ButtonRight = styled(ButtonLeft)`
 const Word = styled.p`
   position: absolute;
   text-align: center;
-  opacity: ${props => (props.show ? 1 : 0)};
+  opacity: ${(props) => (props.show ? 1 : 0)};
   font-size: 6rem;
   font-weight: 300;
   padding: 4%;
-  color: ${props => props.theme.colors.foreground_low};
+  color: ${(props) => props.theme.colors.foreground_low};
   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   @media (max-width: 1300px) {
     font-size: 5rem;

@@ -59,10 +59,10 @@ const Land = styled.section`
   h2 {
     font-size: 2.1rem;
     margin-top: 15px;
-    color: ${props => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
   }
   h1 {
-    color: ${props => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
     line-height: 100%;
     font-size: 7rem;
     max-width: 830px;
@@ -130,7 +130,7 @@ const LandContainer = styled.div`
 `;
 
 const Intro = styled.section`
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
   transition: 0.3s ease all;
 `;

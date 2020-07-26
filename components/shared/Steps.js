@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import createMarkup from "utils/createMarkup";
+import { P } from "components/shared/Dangerously";
 
 function Steps({ steps, children, iconArray }) {
-  const StepContainer = ({ index, title, p, showIndex }) => {
+  const StepContainer = ({ index, title, p }) => {
     const StepIcon = iconArray[index];
     return (
       <StepBordered>
@@ -11,8 +11,8 @@ function Steps({ steps, children, iconArray }) {
           <Fade>
             <StepIcon />
             <h3>{title}</h3>
-            <p dangerouslySetInnerHTML={createMarkup(p)} />
           </Fade>
+          <P>{p}</P>
         </Step>
       </StepBordered>
     );
@@ -20,14 +20,14 @@ function Steps({ steps, children, iconArray }) {
   return (
     <StepsSection>
       {steps.map((step, index) => (
-        <StepContainer key={"step" + index} index={index} {...step} />
+        <StepContainer key={"stepContained" + index} index={index} {...step} />
       ))}
       <StepBordered>{children}</StepBordered>
     </StepsSection>
   );
 }
 
-export default Steps;
+export default React.memo(Steps);
 
 const StepBordered = styled.div`
   width: 100%;

@@ -17,7 +17,6 @@
       }
     },
     { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/humans.txt", "dest": "/humans.txt" },
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "handle": "filesystem" }
   ]

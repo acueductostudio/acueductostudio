@@ -26,14 +26,14 @@
         "errorInvalid": "Email inválido"
       },
       "submit": "agendar cita",
-      "title2": "evalúa las prácticas digitales de tu negocio",
-      "link": ["/diagnostico", "diagnóstico digital"],
-      "linktext": "Toma nuestro ",
-      "sending": "enviando...",
-      "registered": {
+      "loading": "enviando...",
+      "success": {
         "title": "¡gracias!",
         "p": "En unos minutos recibirás en tu email toda la información necesaria para agendar tu cita."
-      }
+      },
+      "title2": "evalúa las prácticas digitales de tu negocio",
+      "linktext": "Toma nuestro ",
+      "link": ["/diagnostico", "diagnóstico digital"]
     },
     "process_section": {
       "intro": {
