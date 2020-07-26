@@ -2,15 +2,25 @@
   "name": "acueducto",
   "version": 2,
   "trailingSlash": false,
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/service-worker.js$",
-      "dest": "/_next/static/service-worker.js",
-      "headers": {
-        "cache-control": "public, max-age=43200, immutable",
-        "Service-Worker-Allowed": "/"
-      }
-    },
-    { "handle": "filesystem" }
+      "source": "/service-worker.js",
+      "destination": "/_next/static/service-worker.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/service-worker.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=43200, immutable"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    }
   ]
 }
