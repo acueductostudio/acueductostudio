@@ -57,8 +57,6 @@ function Consultoria(props) {
     props.setTitle(headerTitle);
   }, [props.locale]);
 
-  console.log("outside");
-
   return (
     <PageClipper>
       <Head

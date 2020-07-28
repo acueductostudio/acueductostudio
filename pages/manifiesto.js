@@ -23,9 +23,9 @@ function Manifesto(props) {
         en_canonical={"https://acueducto.studio/en/manifesto"}
         lang={props.lang}
       />
-      <ManifiestoItems/>
+      <ManifiestoItems />
       <TitleSection {...t.cases} borderTop />
-      <CaseList />
+      <CaseList noPlay />
       <ContactFooter />
     </PageClipper>
   );
@@ -37,7 +37,7 @@ const Belief = styled.li`
   position: relative;
   margin-bottom: 25%;
   span {
-    color: ${props => props.theme.colors.accent};
+    color: ${(props) => props.theme.colors.accent};
     font-weight: 100;
     left: -3px;
     font-size: 5rem;

@@ -25,7 +25,7 @@ const ConsultoriaCTA = ({ cta, id }) => {
         formMarkup={
           <>
             <h3>{cta.title}</h3>
-            <Span>{cta.price}</Span>
+            <Span>{`${cta.price} <em>${cta.sessions}</em>`}</Span>
           </>
         }
         successMarkup={
@@ -63,7 +63,17 @@ const Container = styled.div`
     b {
       font-size: 1.8rem;
       margin-top: 13px;
-      margin-left: 8px;
+      margin-left: 4px;
+    }
+    em {
+      font-style: normal;
+      color: ${(p) => p.theme.colors.foreground_low};
+
+      font-weight: 100;
+      font-size: 1.8rem;
+      margin-top: 15px;
+      line-height: 125%;
+      margin-left: 20px;
     }
   }
   a {

@@ -9,7 +9,7 @@ import Link from "next/link";
 import LangContext from "utils/LangContext";
 
 const SingleCase = (props) => {
-  const video = useRef(null);
+  // const video = useRef(null);
   return (
     <Case>
       <Link
@@ -27,6 +27,11 @@ const SingleCase = (props) => {
               <Logo
                 src={`/assets/img/casestudies/${props.link}/portfolio_logo.svg`}
                 alt={`logo_${props.link}`}
+              />
+              <VidReplacer
+                style={{
+                  backgroundImage: `url(/assets/img/casestudies/${props.link}/portfolio_poster.svg`,
+                }}
               />
               {/* <video
                 ref={video}
@@ -106,6 +111,11 @@ export default React.memo(CaseList);
 
 const Hoverable = styled.h4`
   ${BorderLink({ showLink: false })}
+`;
+
+const VidReplacer = styled.div`
+  background-size: cover;
+  background-position: center center;
 `;
 
 const Logo = styled.img`
@@ -225,9 +235,15 @@ const VidContainer = styled.div`
   display: flex;
   justify-content: center;
   font-size: 0;
+  background-size: cover;
+  background-position: center center;
+  background-size: 102%;
+  transition: 0.4s ease all;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      video {
+      background-size: 100%;
+      video,
+      ${VidReplacer} {
         transform: scale(0.98);
         opacity: 0.92;
       }
@@ -240,7 +256,8 @@ const VidContainer = styled.div`
       will-change: transform;
     }
   }
-  video {
+  video,
+  ${VidReplacer} {
     position: absolute;
     top: 0;
     left: 0;

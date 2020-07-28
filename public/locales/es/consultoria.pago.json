@@ -4,11 +4,21 @@
     "meta_description": "Encuentra soluciones tecnológicas. Consultoría digital en transformación digital, branding, marketing digital, estrategia de negocios y/o cultura empresarial.",
     "headerTitle": "consultoria",
     "intro": {
-      "title": "¿quieres automatizar más?",
-      "p": "Asesórate en adopción tecnológica, cultura innovadora, automatización y/o experiencia de marca con nuestro workshop digital.",
-      "pre_title": "¿quieres ",
-      "words": ["automatizar", "diversificar", "prospectar"],
-      "post_title": " más?"
+      "title": "sigue estos pasos para agendar tu consultoría"
+    },
+    "step1": {
+      "title": "realiza tu pago",
+      "card": "tarjeta",
+      "cash": "efectivo",
+      "warning": "Si realizas tu pago por este medio, envía el comprobante a consultoria@acueducto.studio"
+    },
+    "step2": {
+      "title": "agenda tu cita",
+      "p": "Después de pagar serás redireccionado para agendar tu primera sesión. Los horarios disponibles son de 10:00am a 6:00pm (GTM-5) de lunes a viernes. Son dos sesiones de dos horas cada una, la segunda la acordaremos más adelante."
+    },
+    "step3": {
+      "title": "contesta el formulario",
+      "p": "Después de agendar tu cita recibirás en tu correo un cuestionario con preguntas básicas sobre tu negocio, así podemos aprovechar tu tiempo al máximo"
     },
     "cta": {
       "title": "agenda tu consultoría digital",
