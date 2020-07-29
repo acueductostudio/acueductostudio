@@ -8,18 +8,12 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   const [showToggler, setShowToggler] = useState(false);
 
   useEffect(() => {
-    switch (router.asPath) {
-      case "/podcast":
-        setShowToggler(false);
-        break;
-      case "/diagnostico":
-        setShowToggler(false);
-        break;
-      case "/consultoria":
-        setShowToggler(false);
-        break;
-      default:
-        setShowToggler(true);
+    if (router.asPath.includes("/consultoria")) {
+      setShowToggler(false);
+    } else if (router.asPath.includes("/podcast")) {
+      setShowToggler(false);
+    } else if (router.asPath.includes("/diagnostico")) {
+      setShowToggler(false);
     }
   }, [router.route]);
 

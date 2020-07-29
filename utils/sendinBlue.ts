@@ -32,3 +32,27 @@ export const createContact = async (
   const data = await response;
   return data;
 };
+
+export const updateContact = async (email: string, attributes: object) => {
+  let requestOptions = {
+    method: "PUT",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      "api-key": process.env.SENDINBLUE_API,
+    },
+    body: JSON.stringify({
+      attributes: {
+        ...attributes,
+      },
+    }),
+  };
+
+  const response = await fetch(
+    `https://api.sendinblue.com/v3/contacts/${email}`,
+    requestOptions
+  );
+
+  const data = await response;
+  return data;
+};

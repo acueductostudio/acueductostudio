@@ -5,17 +5,27 @@ import LinkWithArrow from "components/shared/LinkWithArrow";
 import { createContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
 import DefaultForm from "components/shared/DefaultForm";
+import Cookies from "js-cookie/dist/js.cookie.mjs";
+import { useRouter } from "next/router";
+import delayForLoading from "utils/delayForLoading.ts";
 
 const ConsultoriaCTA = ({ cta, id }) => {
+  const router = useRouter();
+
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
     createContact(data.firstName, data.lastName, data.email, [3], true, {
       PIDIO_CONSULTORIA: true,
     });
+    Cookies.set("ue", data.email);
+
     ReactPixel.init("506854653278097", { em: data.email });
     // Pidió consultoría
     ReactPixel.track("SubmitApplication", { email: data.email });
+
+    delayForLoading(1500).then(() => router.push("/consultoria/pago"));
   };
+
   return (
     <Container>
       <DefaultForm
@@ -28,14 +38,14 @@ const ConsultoriaCTA = ({ cta, id }) => {
             <Span>{`${cta.price} <em>${cta.sessions}</em>`}</Span>
           </>
         }
-        successMarkup={
-          <ThanksBlock>
-            <Fade>
-              <h3>{cta.success.title}</h3>
-              <p>{cta.success.p}</p>
-            </Fade>
-          </ThanksBlock>
-        }
+        // successMarkup={
+        //   <ThanksBlock>
+        //     <Fade>
+        //       <h3>{cta.success.title}</h3>
+        //       <p>{cta.success.p}</p>
+        //     </Fade>
+        //   </ThanksBlock>
+        // }
       />
       <h3>{cta.title2}</h3>
       <LinkWithArrow link={cta.link} linktext={cta.linktext} />

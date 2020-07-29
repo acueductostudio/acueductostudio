@@ -1,16 +1,17 @@
 {
-  "consultoria_page": {
+  "payment_page": {
     "page_title": "Consultoría digital para negocios | Acueducto",
     "meta_description": "Encuentra soluciones tecnológicas. Consultoría digital en transformación digital, branding, marketing digital, estrategia de negocios y/o cultura empresarial.",
-    "headerTitle": "consultoria",
+    "headerTitle": "pago",
+    "headerTitle_unauthorized": "consultoría",
     "intro": {
-      "title": "sigue estos pasos para agendar tu consultoría"
+      "title": "agenda tu consultoría siguiendo estos pasos"
     },
     "step1": {
       "title": "realiza tu pago",
       "card": "tarjeta",
       "cash": "efectivo",
-      "warning": "Si realizas tu pago por este medio, envía el comprobante a consultoria@acueducto.studio"
+      "warning": "Si realizas tu pago por este medio, envía el comprobante a hola@acueducto.studio"
     },
     "step2": {
       "title": "agenda tu cita",
@@ -45,80 +46,6 @@
       "title2": "evalúa las prácticas digitales de tu negocio",
       "linktext": "Toma nuestro ",
       "link": ["/diagnostico", "diagnóstico digital"]
-    },
-    "process_section": {
-      "intro": {
-        "title": "asesórate con expertos en tecnología digital",
-        "p": "Te ayudaremos a analizar los principales problemas y necesidades de tu negocio para encontrar soluciones integrales y personalizadas en tecnología y prácticas digitales."
-      },
-      "process": [
-        {
-          "title": "identificamos",
-          "p": "Los problemas y necesidades de tu negocio."
-        },
-        {
-          "title": "sintetizamos",
-          "p": "El problema a solucionar y creamos Key Progress Indicators (KPIs)."
-        },
-        {
-          "title": "investigamos",
-          "p": "Las mejores prácticas y tendencias en tu industria."
-        },
-        {
-          "title": "presentamos",
-          "p": "Una solución para alcanzar tus metas y facilitar la toma de decisiones."
-        }
-      ]
-    },
-    "areas_section": {
-      "intro": {
-        "title": "guíamos a tu negocio en integraciones digitales",
-        "p": "La era digital está desenvolviendo un mundo del que apenas comenzamos a ver una parte. Cuenta con nuestra asesoría para desarrollar tu negocio en las siguientes áreas."
-      },
-      "areas": [
-        {
-          "title": "tranformación digital",
-          "p": "Este es el momento de replantear tu modelo de negocios para adquirir valor desde <b>soluciones digitales</b>. Donde antes sólo veías limitantes en tu organización, encontraremos los <b>procesos y herramientas</b> más adecuados para estimular su crecimiento."
-        },
-        {
-          "title": "marketing digital",
-          "p": "Esta consultoría busca optimizar las <b>tácticas de marketing</b> que estás llevando a cabo y buscar las <b>mejores opciones para tu organización</b> y sector, ya sea emprender una campaña, mejorar las ya existentes; o <b>identificar oportunidades para crecer el mercado</b>."
-        },
-        {
-          "title": "branding",
-          "p": "¿Tu estrategia de <b>marca está diseñada para crecer y escalar tu negocio</b>? Analicemos la dirección de arte y estrategia de tu branding para <b>elevar la percepción de tu producto, servicio u organización</b>."
-        },
-        {
-          "title": "estrategia de negocios",
-          "p": "¿Estás desarrollando nuevas líneas de negocio digitales? Si tu organización no ha desarrollado <b>acciones de crecimiento digital</b>, estás quedándote atrás. <b>Diversifiquemos</b> tus ingresos o <b>fortalezcamos</b> las estrategias digitales que ya existen."
-        },
-        {
-          "title": "cultura empresarial",
-          "p": "Todo negocio debe tomar un rol activo en la adopción y capacitación de soluciones digitales. Encuentra <b>respuestas a los riesgos y oportunidades</b> de tu cultura empresarial digital y adquiere una visión, clara, sobre cómo crear un entorno productivo y saludable."
-        }
-      ],
-      "area_extra": {
-        "title": "cada consultoría incluye",
-        "ul": [
-          {
-            "li": "Desarrollo de un draft de planeación"
-          },
-          {
-            "li": "Dos sesiones virtuales con una duración de dos horas cada una"
-          },
-          {
-            "li": "Investigación de tu caso particular"
-          },
-          {
-            "li": "Síntesis de posibles soluciones con las mejores prácticas de la industria"
-          }
-        ]
-      }
-    },
-    "last_section": {
-      "intro": {
-        "title": "para desarrollar las estrategias que necesitas"
-      }
     }
   }
 }
