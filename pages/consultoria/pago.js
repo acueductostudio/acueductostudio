@@ -45,7 +45,8 @@ const Pago = (props) => {
         updateContact(data.email, {
           COMPRO_CONSULTORIA: true,
         });
-        window.location.replace("/agendarconsultoria");
+        console.log("referrer es mercadopago");
+        // window.location.replace("/agendarconsultoria");
       }
     } else {
       props.setTitle(headerTitle_unauthorized);
