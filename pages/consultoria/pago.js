@@ -34,19 +34,21 @@ const Pago = (props) => {
 
   useEffect(() => {
     let ref = document.referrer;
+    let email = Cookies.get("ue");
     console.log("referrer is: " + ref);
     //Check if we have an email cookie
-    if (Cookies.get("ue") != undefined) {
-      Cookies.get("ue");
+    if (email != undefined) {
       setAuthorized(true);
-      console.log("user authorized");
-      // Redirect if customer has payed
+      console.log("user authorized with: " + email);
+      // Redirect if customer has payed and add tag to sendinblue
       if (document.referrer.includes("mercadopago")) {
-        // updateContact(data.email, {
-        //   COMPRO_CONSULTORIA: true,
-        // });
-        console.log("referrer es mercadopago");
-        // window.location.replace("/agendarconsultoria");
+        updateContact(email, {
+          COMPRO_CONSULTORIA: true,
+        });
+        console.log(
+          "referrer es: " + ref + "\n" + "email registrado: " + email
+        );
+        window.location.replace("https://meetings.hubspot.com/hola250");
       }
     } else {
       props.setTitle(headerTitle_unauthorized);
