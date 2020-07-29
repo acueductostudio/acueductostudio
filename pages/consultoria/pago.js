@@ -42,9 +42,9 @@ const Pago = (props) => {
       console.log("user authorized");
       // Redirect if customer has payed
       if (document.referrer.includes("mercadopago")) {
-        updateContact(data.email, {
-          COMPRO_CONSULTORIA: true,
-        });
+        // updateContact(data.email, {
+        //   COMPRO_CONSULTORIA: true,
+        // });
         console.log("referrer es mercadopago");
         // window.location.replace("/agendarconsultoria");
       }
