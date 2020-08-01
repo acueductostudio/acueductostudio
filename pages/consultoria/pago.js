@@ -80,20 +80,7 @@ const Pago = (props) => {
       />
       {!isAuthorized && (
         <Container>
-          <DefaultForm
-            onSubmit={onSubmit}
-            id={"payment"}
-            text={cta}
-            formMarkup={<>{/* <h3>{cta.title}</h3> */}</>}
-            successMarkup={
-              <ThanksBlock>
-                <Fade>
-                  <h3>{cta.success.title}</h3>
-                  <p>{cta.success.p}</p>
-                </Fade>
-              </ThanksBlock>
-            }
-          />
+          <DefaultForm onSubmit={onSubmit} id={"payment"} text={cta} />
           <LinkWithArrow link={cta.link} linktext={cta.linktext} />
         </Container>
       )}
