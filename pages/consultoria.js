@@ -156,6 +156,19 @@ const StepGrid = styled.div`
     display: flex;
     flex-direction: column;
   }
+  @media (max-width: 600px) {
+    margin: 0;
+    padding: 0 5% 10%;
+    p {
+      max-width: unset;
+    }
+    div:not(:last-of-type) {
+      margin-bottom: 10%;
+    }
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
 `;
 
 const LastStep = styled.div`

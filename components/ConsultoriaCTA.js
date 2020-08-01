@@ -32,20 +32,13 @@ const ConsultoriaCTA = ({ cta, id }) => {
         onSubmit={onSubmit}
         id={id}
         text={cta}
+        infinite
         formMarkup={
           <>
             <h3>{cta.title}</h3>
             <Span>{`${cta.price} <em>${cta.sessions}</em>`}</Span>
           </>
         }
-        // successMarkup={
-        //   <ThanksBlock>
-        //     <Fade>
-        //       <h3>{cta.success.title}</h3>
-        //       <p>{cta.success.p}</p>
-        //     </Fade>
-        //   </ThanksBlock>
-        // }
       />
       <h3>{cta.title2}</h3>
       <LinkWithArrow link={cta.link} linktext={cta.linktext} />
@@ -54,13 +47,6 @@ const ConsultoriaCTA = ({ cta, id }) => {
 };
 
 export default React.memo(ConsultoriaCTA);
-
-const ThanksBlock = styled.div`
-  margin-bottom: 10%;
-  p {
-    margin-top: 10px;
-  }
-`;
 
 const Container = styled.div`
   max-width: 450px;
@@ -118,6 +104,16 @@ const Container = styled.div`
   @media (max-width: 800px) {
     h3 {
       font-size: 2.2rem;
+    }
+    & > span {
+      font-size: 2.5rem;
+      b {
+        font-size: 1.8rem;
+        margin-top: 8px;
+      }
+      em {
+        margin-top: 11px;
+      }
     }
   }
 `;

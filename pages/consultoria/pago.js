@@ -6,7 +6,7 @@ import { createContact, updateContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
 import Head from "components/Head";
 import PageClipper from "components/PageClipper";
-import PinnedSection from "components/shared/PinnedSection";
+import LinkWithArrow from "components/shared/LinkWithArrow";
 import TitleSection from "components/shared/TitleSection";
 import DefaultForm from "components/shared/DefaultForm";
 import es from "public/locales/es/consultoria.pago.json";
@@ -42,8 +42,11 @@ const Pago = (props) => {
       console.log("user authorized with: " + email);
       // Redirect if customer has payed and add tag to sendinblue
       if (document.referrer.includes("mercadopago")) {
-        updateContact(email, {
-          COMPRO_CONSULTORIA: true,
+        updateContact(email, [4], [3]);
+        ReactPixel.track("Purchase", {
+          email: data.email,
+          currency: "MXN",
+          value: 5200.0,
         });
         console.log(
           "referrer es: " + ref + "\n" + "email registrado: " + email
@@ -81,7 +84,7 @@ const Pago = (props) => {
             onSubmit={onSubmit}
             id={"payment"}
             text={cta}
-            formMarkup={<Span>{`${cta.price} <em>${cta.sessions}</em>`}</Span>}
+            formMarkup={<>{/* <h3>{cta.title}</h3> */}</>}
             successMarkup={
               <ThanksBlock>
                 <Fade>
@@ -91,11 +94,18 @@ const Pago = (props) => {
               </ThanksBlock>
             }
           />
+          <LinkWithArrow link={cta.link} linktext={cta.linktext} />
         </Container>
       )}
       {isAuthorized && (
         <>
           <TitleSection title={intro.title}>
+            <p>{intro.p}</p>
+            <Includes>
+              {intro.items.map((item, index) => (
+                <li key={"introItemkey" + index}>{item}</li>
+              ))}
+            </Includes>
             <Step>
               <Fade>
                 <span>01</span>
@@ -107,7 +117,7 @@ const Pago = (props) => {
                     <Cards />
                     <h3>{step1.card}</h3>
                   </a>
-                  <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=616963124-341c7abb-d6a7-45c8-9831-c3a3ec56b8c8">
+                  <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=616963124-21bbd186-417b-4bbc-a1ce-05afd265bb18">
                     <Cash />
                     <h3>{step1.cash}</h3>
                   </a>
@@ -138,6 +148,29 @@ const Pago = (props) => {
 
 export default React.memo(Pago);
 
+const Includes = styled.ul`
+  margin-bottom: 20%;
+  margin-top: 20px;
+  list-style: none;
+  li {
+    line-height: 120%;
+    margin-bottom: 15px;
+    &:before {
+      content: " ";
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      border-radius: 100%;
+      margin-right: 5px;
+      margin-bottom: 4px;
+      background-color: ${(p) => p.theme.colors.accent};
+    }
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 10%;
+  }
+`;
+
 const PayContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,7 +181,12 @@ const PayContainer = styled.div`
     position: relative;
     transition: 0.4s ease all;
     grid-column: unset;
+    text-decoration: none;
     cursor: pointer;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     svg {
       width: 100%;
       max-width: 180px;
@@ -157,7 +195,7 @@ const PayContainer = styled.div`
       content: "pagar";
       position: absolute;
       display: flex;
-      font-size: 3.2rem;
+      font-size: 2.5rem;
       font-weight: 100;
       opacity: 0;
       left: 0;
@@ -183,11 +221,26 @@ const PayContainer = styled.div`
     color: ${(p) => p.theme.colors.accent};
     font-weight: 200;
     font-size: 3.2rem;
-    margin-top: 18%;
   }
   p {
     grid-column: 2 / span 1;
     font-size: 1.4rem;
+  }
+  @media (max-width: 1100px) {
+    & > a {
+      min-height: 120px;
+    }
+  }
+  @media (max-width: 600px) {
+    & > a {
+      background-color: ${(p) => p.theme.colors.accent};
+      border: none;
+      border-radius: 5px;
+      h3 {
+        color: ${(p) => p.theme.colors.foreground};
+        font-weight: 100;
+      }
+    }
   }
 `;
 
@@ -213,32 +266,41 @@ const Step = styled.li`
     margin: 0% 0 3.5%;
   }
   @media (max-width: 1250px) {
-    h3 {
-      font-size: 2.5rem;
+    h2 {
+      font-size: 2.8rem;
     }
-  }
-  @media (max-width: 1100px) {
-    margin-bottom: 15%;
-  }
-  @media (max-width: 600px) {
-    margin-bottom: 12%;
     span {
-      font-size: 4rem;
-    }
-    h3 {
       font-size: 2.2rem;
     }
   }
-  @media (max-width: 400px), (max-height: 450px) {
+  @media (max-width: 1100px) {
+    &:not(:last-of-type) {
+      margin-bottom: 15%;
+    }
+  }
+  @media (max-width: 950px) {
+    h2 {
+      font-size: 2.5rem;
+    }
     span {
-      font-size: 3.7rem;
+      font-size: 2rem;
+      top: 2px;
+    }
+  }
+  @media (max-width: 600px) {
+    &:not(:last-of-type) {
+      margin-bottom: 10%;
+    }
+    &:last-of-type {
+      margin-bottom: 20%;
+    }
+    span {
+      font-size: 2rem;
+      position: relative;
+      left: 0;
     }
     h3 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
-    p:first-of-type {
-      margin-top: 0;
+      font-size: 2.2rem;
     }
   }
 `;
@@ -253,7 +315,7 @@ const ThanksBlock = styled.div`
 const Container = styled.div`
   max-width: 450px;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 18%;
   & > span {
     color: ${(p) => p.theme.colors.accent};
     font-size: 3rem;
@@ -309,5 +371,8 @@ const Container = styled.div`
     h3 {
       font-size: 2.2rem;
     }
+  }
+  @media (max-width: 600px) {
+    padding: 5%;
   }
 `;

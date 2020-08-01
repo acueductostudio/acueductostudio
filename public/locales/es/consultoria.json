@@ -27,7 +27,7 @@
         "errorInvalid": "Email inválido"
       },
       "submit": "agendar cita",
-      "loading": "enviando...",
+      "loading": "redirigiendo...",
       "success": {
         "title": "¡gracias!",
         "p": "Te redireccionaremos en unos segundos."

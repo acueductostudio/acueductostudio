@@ -5,7 +5,14 @@ import Fade from "react-reveal/Fade";
 import delayForLoading from "utils/delayForLoading.ts";
 import InputField from "components/shared/InputField";
 
-const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup, id }) => {
+const DefaultForm = ({
+  text,
+  onSubmit,
+  formMarkup,
+  successMarkup,
+  id,
+  infinite,
+}) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
 
@@ -14,7 +21,7 @@ const DefaultForm = ({ text, onSubmit, formMarkup, successMarkup, id }) => {
 
     setFormStatus("loading");
     onSubmit(data);
-    delayForLoading(1500).then(() => setFormStatus("done"));
+    !infinite && delayForLoading(1500).then(() => setFormStatus("done"));
   };
 
   return (

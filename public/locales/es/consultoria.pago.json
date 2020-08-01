@@ -5,7 +5,14 @@
     "headerTitle": "pago",
     "headerTitle_unauthorized": "consultoría",
     "intro": {
-      "title": "agenda tu consultoría siguiendo estos pasos"
+      "title": "agenda tu consultoría siguiendo estos pasos",
+      "p": "Cada consultoría incluye:",
+      "items": [
+        "Dos sesiones de dos horas cada una con expertos en tecnología y estrategia digital.",
+        "Analisis de tu negocio y sus problemáticas.",
+        "Investigación sobre tendencias y mejores prácticas para tu situación.",
+        "Generación de un documento de plan de acción personalizado."
+      ]
     },
     "step1": {
       "title": "realiza tu pago",
@@ -15,11 +22,11 @@
     },
     "step2": {
       "title": "agenda tu cita",
-      "p": "Después de pagar serás redireccionado para agendar tu primera sesión. Los horarios disponibles son de 10:00am a 6:00pm (GTM-5) de lunes a viernes. Son dos sesiones de dos horas cada una, la segunda la acordaremos más adelante."
+      "p": "Después de pagar podrás agendar tu primera sesión en nuestro calendario. Los horarios disponibles son de 10:00am a 6:00pm (GTM-5) de lunes a viernes. Tendremos dos sesiones, la segunda la acordaremos más adelante."
     },
     "step3": {
       "title": "contesta el formulario",
-      "p": "Después de agendar tu cita recibirás en tu correo un cuestionario con preguntas básicas sobre tu negocio, así podemos aprovechar tu tiempo al máximo"
+      "p": "Después de agendar tu cita recibirás en tu correo un cuestionario con algunas preguntas sobre tu negocio y problemática, así podemos aprovechar tu tiempo al máximo."
     },
     "cta": {
       "title": "agenda tu consultoría digital",
@@ -39,13 +46,9 @@
       },
       "submit": "agendar cita",
       "loading": "enviando...",
-      "success": {
-        "title": "¡gracias!",
-        "p": "En unos minutos recibirás en tu email toda la información necesaria para agendar tu cita."
-      },
-      "title2": "evalúa las prácticas digitales de tu negocio",
-      "linktext": "Toma nuestro ",
-      "link": ["/diagnostico", "diagnóstico digital"]
+      "title2": "lee más sobre nuestras consultorías",
+      "linktext": "Lee más sobre nuestras ",
+      "link": ["/consultoria", "consultorias"]
     }
   }
 }

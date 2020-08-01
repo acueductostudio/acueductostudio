@@ -33,7 +33,11 @@ export const createContact = async (
   return data;
 };
 
-export const updateContact = async (email: string, attributes: object) => {
+export const updateContact = async (
+  email: string,
+  listIds: number[],
+  unlinkListIds: number[]
+) => {
   let requestOptions = {
     method: "PUT",
     headers: {
@@ -42,9 +46,11 @@ export const updateContact = async (email: string, attributes: object) => {
       "api-key": process.env.SENDINBLUE_API,
     },
     body: JSON.stringify({
-      attributes: {
-        ...attributes,
-      },
+      listIds: listIds,
+      unlinkListIds: unlinkListIds,
+      // attributes: {
+      //   ...attributes,
+      // },
     }),
   };
 
