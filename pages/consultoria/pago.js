@@ -74,8 +74,8 @@ const Pago = (props) => {
       <Head
         title={page_title}
         description={meta_description}
-        canonical={"https://acueducto.studio/diagnostico"}
-        image={"og_image_diagnostico.png"}
+        canonical={"https://acueducto.studio/consultoria/pago"}
+        image={"og_image_consultoria.png"}
         lang={props.lang}
       />
       {!isAuthorized && (
