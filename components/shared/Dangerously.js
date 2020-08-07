@@ -1,5 +1,5 @@
 import createMarkup from "utils/createMarkup";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 export const H1 = ({ children, ...props }) => (
   <Fade>
@@ -43,4 +43,10 @@ export const B = ({ children, ...props }) => (
 
 export const Blockquote = ({ children, ...props }) => (
   <blockquote {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+);
+
+export const A = ({ children, ...props }) => (
+  <Fade>
+    <a {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+  </Fade>
 );

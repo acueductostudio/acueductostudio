@@ -3,7 +3,9 @@ import Head from "../components/Head";
 import { useEffect } from "react";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
-import Fade from "react-reveal/Fade";
+// import Fade from "react-reveal/Fade";
+import { H1, P, A } from "components/shared/Dangerously";
+import { Fade } from "react-awesome-reveal";
 import es from "public/locales/es/podcast.json";
 import Logo from "public/assets/img/layout/logo.svg";
 import Spotify from "public/assets/img/casestudies/salvajenada/spotify.svg";
@@ -35,45 +37,47 @@ function Podcast(props) {
         lang={props.lang}
       />
       <PodcastGrid>
-        <Fade>
-          <h1>{title}</h1>
-          <span>
-            por <Logo />
-          </span>
-          <p>{p}</p>
-        </Fade>
+        <H1>{title}</H1>
+        <span>
+          por <Logo />
+        </span>
+        <p>{p}</p>
         <LogoList>
-          <Fade>
-            <p>Escúchalo en </p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
-            >Spotify
-              <Spotify />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
-            >Apple Podcasts
-              <Apple />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
-            >Google Podcasts
-              <Google />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
-            >Youtube
-              <Youtube />
-            </a>
-          </Fade>
+          {/* <Fade> */}
+          <P>Escúchalo en </P>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
+          >
+            Spotify
+            <Spotify />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
+          >
+            Apple Podcasts
+            <Apple />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
+          >
+            Google Podcasts
+            <Google />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
+          >
+            Youtube
+            <Youtube />
+          </a>
+          {/* </Fade> */}
         </LogoList>
         <PodcastList>
           {podcasts.map((pod, index) => (
@@ -200,7 +204,7 @@ const LogoList = styled.div`
   a {
     display: flex;
     max-height: 30px;
-    font-size:0rem;
+    font-size: 0rem;
   }
   svg {
     width: 30px;
