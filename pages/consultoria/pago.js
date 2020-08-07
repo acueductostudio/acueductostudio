@@ -42,7 +42,7 @@ const Pago = (props) => {
       console.log("user authorized with: " + email);
       // Redirect if customer has payed and add tag to sendinblue
       if (document.referrer.includes("mercadopago")) {
-        updateContact(email, [4], [3]);
+        updateContact(email, [4], [3, 7]);
         ReactPixel.track("Purchase", {
           email: data.email,
           currency: "MXN",
