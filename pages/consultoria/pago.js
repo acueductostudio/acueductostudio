@@ -60,14 +60,12 @@ const Pago = (props) => {
 
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact(data.firstName, data.lastName, data.email, [3], true, {
-      PIDIO_CONSULTORIA: true,
-    });
+    createContact(data.firstName, data.lastName, data.email, [3], true);
     Cookies.set("ue", data.email);
-    setAuthorized(true);
     ReactPixel.init("506854653278097", { em: data.email });
     // Pidió consultoría
     ReactPixel.track("SubmitApplication", { email: data.email });
+    setAuthorized(true);
   };
   return (
     <PageClipper>
@@ -80,7 +78,7 @@ const Pago = (props) => {
       />
       {!isAuthorized && (
         <Container>
-          <DefaultForm onSubmit={onSubmit} id={"payment"} text={cta} />
+          <DefaultForm onSubmit={onSubmit} id={"payment"} text={cta} infinite />
           <LinkWithArrow link={cta.link} linktext={cta.linktext} />
         </Container>
       )}
