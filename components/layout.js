@@ -17,7 +17,7 @@ const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
   ssr: false,
 });
 
-export default ({
+const Layout = ({
   children,
   toggleLang,
   checkForConsent,
@@ -187,6 +187,8 @@ export default ({
     </>
   );
 };
+
+export default Layout;
 
 const BodyOverflow = createGlobalStyle`
   .TopBar div{
