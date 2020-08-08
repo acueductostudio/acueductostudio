@@ -265,6 +265,10 @@ const ResultsGrid = styled.div`
       width: calc(100% - 85px - 5%);
       p {
         color: ${(p) => p.theme.colors.foreground_low};
+        b {
+          color: ${(p) => p.theme.colors.foreground};
+          font-weight: 100;
+        }
       }
       h3 {
         color: ${(p) => p.theme.colors.foreground};
