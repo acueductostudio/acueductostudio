@@ -43,16 +43,16 @@ const Pago = (props) => {
       // Redirect if customer has payed and add tag to sendinblue
       if (document.referrer.includes("mercadopago")) {
         console.log("mercadopago");
-        // updateContact(email, [4], [3, 7]);
+        updateContact(email, [4], [3, 7]);
         ReactPixel.track("Purchase", {
           email: email,
           currency: "MXN",
           value: 5200.0,
         });
-        // console.log(
-        //   "referrer es: " + ref + "\n" + "email registrado: " + email
-        // );
-        // window.location.replace("https://meetings.hubspot.com/hola250");
+        console.log(
+          "referrer es: " + ref + "\n" + "email registrado: " + email
+        );
+        window.location.replace("https://meetings.hubspot.com/hola250");
       }
     } else {
       props.setTitle(headerTitle_unauthorized);
