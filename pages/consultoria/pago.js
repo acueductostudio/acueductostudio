@@ -44,14 +44,14 @@ const Pago = (props) => {
       if (document.referrer.includes("mercadopago")) {
         console.log("mercadopago");
         // updateContact(email, [4], [3, 7]);
-        // ReactPixel.track("Purchase", {
-        //   email: data.email,
-        //   currency: "MXN",
-        //   value: 5200.0,
-        // });
-        // console.log(
-        //   "referrer es: " + ref + "\n" + "email registrado: " + email
-        // );
+        ReactPixel.track("Purchase", {
+          email: data.email,
+          currency: "MXN",
+          value: 5200.0,
+        });
+        console.log(
+          "referrer es: " + ref + "\n" + "email registrado: " + email
+        );
         // window.location.replace("https://meetings.hubspot.com/hola250");
       }
     } else {
