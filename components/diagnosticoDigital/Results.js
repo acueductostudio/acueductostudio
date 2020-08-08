@@ -52,22 +52,22 @@ const Results = ({ results, results_section, setTestStatus }) => {
           <ResultNumber result={results[1].toFixed(1)} />
           <div>
             <h3>{answers.culture.title}</h3>
-            {results[0].toFixed(1) < 5 && <P>{answers.culture.bad}</P>}
-            {results[0].toFixed(1) >= 5 && results[0] < 8 && (
+            {results[1].toFixed(1) < 5 && <P>{answers.culture.bad}</P>}
+            {results[1].toFixed(1) >= 5 && results[0] < 8 && (
               <P>{answers.culture.neutral}</P>
             )}
-            {results[0].toFixed(1) >= 8 && <P>{answers.culture.good}</P>}
+            {results[1].toFixed(1) >= 8 && <P>{answers.culture.good}</P>}
           </div>
         </div>
         <div>
           <ResultNumber result={results[2].toFixed(1)} />
           <div>
             <h3>{answers.competition.title}</h3>
-            {results[0].toFixed(1) < 5 && <P>{answers.competition.bad}</P>}
-            {results[0].toFixed(1) >= 5 && results[0] < 8 && (
+            {results[2].toFixed(1) < 5 && <P>{answers.competition.bad}</P>}
+            {results[2].toFixed(1) >= 5 && results[0] < 8 && (
               <P>{answers.competition.neutral}</P>
             )}
-            {results[0].toFixed(1) >= 8 && <P>{answers.competition.good}</P>}
+            {results[2].toFixed(1) >= 8 && <P>{answers.competition.good}</P>}
           </div>
         </div>
       </Fade>
