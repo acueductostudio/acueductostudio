@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
-import { Span } from "components/shared/Dangerously";
 import { createContact, updateContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
 import Head from "components/Head";

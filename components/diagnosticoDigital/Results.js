@@ -53,7 +53,7 @@ const Results = ({ results, results_section, setTestStatus }) => {
           <div>
             <h3>{answers.culture.title}</h3>
             {results[1].toFixed(1) < 5 && <P>{answers.culture.bad}</P>}
-            {results[1].toFixed(1) >= 5 && results[0] < 8 && (
+            {results[1].toFixed(1) >= 5 && results[1] < 8 && (
               <P>{answers.culture.neutral}</P>
             )}
             {results[1].toFixed(1) >= 8 && <P>{answers.culture.good}</P>}
@@ -64,7 +64,7 @@ const Results = ({ results, results_section, setTestStatus }) => {
           <div>
             <h3>{answers.competition.title}</h3>
             {results[2].toFixed(1) < 5 && <P>{answers.competition.bad}</P>}
-            {results[2].toFixed(1) >= 5 && results[0] < 8 && (
+            {results[2].toFixed(1) >= 5 && results[2] < 8 && (
               <P>{answers.competition.neutral}</P>
             )}
             {results[2].toFixed(1) >= 8 && <P>{answers.competition.good}</P>}
