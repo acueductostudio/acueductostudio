@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import Fade from "react-reveal/Fade";
-import { Span } from "components/shared/Dangerously";
 import { createContact, updateContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
 import Head from "components/Head";
@@ -42,9 +41,10 @@ const Pago = (props) => {
       console.log("user authorized with: " + email);
       // Redirect if customer has payed and add tag to sendinblue
       if (document.referrer.includes("mercadopago")) {
-        updateContact(email, [4], [3]);
+        console.log("mercadopago");
+        updateContact(email, [4], [3, 7]);
         ReactPixel.track("Purchase", {
-          email: data.email,
+          email: email,
           currency: "MXN",
           value: 5200.0,
         });
@@ -60,14 +60,12 @@ const Pago = (props) => {
 
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact(data.firstName, data.lastName, data.email, [3], true, {
-      PIDIO_CONSULTORIA: true,
-    });
+    createContact(data.firstName, data.lastName, data.email, [3], true);
     Cookies.set("ue", data.email);
-    setAuthorized(true);
     ReactPixel.init("506854653278097", { em: data.email });
     // Pidió consultoría
     ReactPixel.track("SubmitApplication", { email: data.email });
+    setAuthorized(true);
   };
   return (
     <PageClipper>
@@ -80,7 +78,7 @@ const Pago = (props) => {
       />
       {!isAuthorized && (
         <Container>
-          <DefaultForm onSubmit={onSubmit} id={"payment"} text={cta} />
+          <DefaultForm onSubmit={onSubmit} id={"payment"} text={cta} infinite />
           <LinkWithArrow link={cta.link} linktext={cta.linktext} />
         </Container>
       )}

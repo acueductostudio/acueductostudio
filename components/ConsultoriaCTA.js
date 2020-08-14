@@ -14,9 +14,7 @@ const ConsultoriaCTA = ({ cta, id }) => {
 
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact(data.firstName, data.lastName, data.email, [3], true, {
-      PIDIO_CONSULTORIA: true,
-    });
+    createContact(data.firstName, data.lastName, data.email, [7], true);
     Cookies.set("ue", data.email);
 
     ReactPixel.init("506854653278097", { em: data.email });

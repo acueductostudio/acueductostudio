@@ -13,7 +13,7 @@ const NewsletterPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    let timer1 = setTimeout(() => popupShow(), 10000);
+    let timer1 = setTimeout(() => popupShow(), 13000);
     return () => {
       clearTimeout(timer1);
     };
