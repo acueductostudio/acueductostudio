@@ -1,3 +1,7 @@
+const capitalize = (string: string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 export const createContact = async (
   name: string,
   lastName: string,
@@ -6,6 +10,9 @@ export const createContact = async (
   updateEnabled: boolean,
   attributes: object
 ) => {
+  let capitalizedName = capitalize(name);
+  let capitalizedLastName = capitalize(lastName);
+
   let requestOptions = {
     method: "POST",
     headers: {
@@ -18,7 +25,7 @@ export const createContact = async (
       email: email,
       listIds: listIds,
       attributes: {
-        ...{ NOMBRE: name, APELLIDOS: lastName },
+        ...{ NOMBRE: capitalizedName, APELLIDOS: capitalizedLastName },
         ...attributes,
       },
     }),
