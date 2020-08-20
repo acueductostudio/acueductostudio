@@ -15,12 +15,9 @@ import Marquee from "components/caseStudy/shared/Marquee";
 import Insight from "components/caseStudy/shared/Insight";
 import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
+import { Spotify, AppleMusic, Ig } from "components/shared/Logos";
 
-import Ig from "public/assets/img/casestudies/salvajenada/ig.svg";
-import Ibero from "public/assets/img/casestudies/salvajenada/ibero.svg";
 import Wolf from "public/assets/img/casestudies/salvajenada/wolf.svg";
-import Apple from "public/assets/img/casestudies/salvajenada/apple.svg";
-import Spotify from "public/assets/img/casestudies/salvajenada/spotify.svg";
 import LogoSalvaje from "public/assets/img/casestudies/salvajenada/logoSalvaje.svg";
 import SecondBackImg from "public/assets/img/casestudies/salvajenada/secondBack.svg";
 import ThirdBackImg from "public/assets/img/casestudies/salvajenada/thirdBack.svg";
@@ -157,7 +154,7 @@ export default function Salvajenada(props) {
                 rel="noopener noreferrer"
                 href="https://music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP"
               >
-                <Apple />
+                <AppleMusic />
               </a>
             </div>
           </Sticky>
@@ -205,7 +202,6 @@ export default function Salvajenada(props) {
           number={4}
         >
           <IberoGrid>
-            <Ibero />
             {loadAssets && (
               <Picture
                 src="/assets/img/casestudies/salvajenada/ibero.jpg"
@@ -645,10 +641,12 @@ const Fifth = styled(CommonSection)`
   }
   a {
     font-size: 0;
+    max-width: 120px;
     svg {
-      width: 50px;
+      width: 100%;
       * {
         fill: ${(props) => props.theme.colors.background};
+        width: 100%;
       }
     }
   }

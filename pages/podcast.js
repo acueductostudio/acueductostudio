@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import Head from "../components/Head";
+import Head from "components/Head";
 import { useEffect } from "react";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
-// import Fade from "react-reveal/Fade";
-import { H1, P, A } from "components/shared/Dangerously";
-import { Fade } from "react-awesome-reveal";
+import Fade from "react-reveal/Fade";
+import { H1, P } from "components/shared/Dangerously";
+// import { Fade } from "react-awesome-reveal";
 import es from "public/locales/es/podcast.json";
 import Logo from "public/assets/img/layout/logo.svg";
-import Spotify from "public/assets/img/casestudies/salvajenada/spotify.svg";
-import Apple from "public/assets/img/layout/applepodcasts.svg";
-import Google from "public/assets/img/layout/googlepodcasts.svg";
-import Youtube from "public/assets/img/layout/youtube.svg";
+
+import {
+  Spotify,
+  ApplePodcasts,
+  Google,
+  Youtube,
+} from "components/shared/Logos";
 
 function Podcast(props) {
   let {
@@ -38,51 +41,53 @@ function Podcast(props) {
       />
       <PodcastGrid>
         <H1>{title}</H1>
-        <span>
-          por <Logo />
-        </span>
-        <p>{p}</p>
+        <Fade>
+          <span>
+            por <Logo />
+          </span>
+          <p>{p}</p>
+        </Fade>
         <LogoList>
-          {/* <Fade> */}
           <P>Escúchalo en </P>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
-          >
-            Spotify
-            <Spotify />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
-          >
-            Apple Podcasts
-            <Apple />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
-          >
-            Google Podcasts
-            <Google />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
-          >
-            Youtube
-            <Youtube />
-          </a>
-          {/* </Fade> */}
+          <Fade>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
+            >
+              Spotify
+              <Spotify />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
+            >
+              Apple Podcasts
+              <ApplePodcasts />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
+            >
+              Google Podcasts
+              <Google />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
+            >
+              Youtube
+              <Youtube />
+            </a>
+          </Fade>
         </LogoList>
         <PodcastList>
           {podcasts.map((pod, index) => (
             <Pod key={"podentry" + index}>
-              <Fade>
+              <Fade triggerOnce>
                 <iframe
                   title={pod.title}
                   src={pod.url}
