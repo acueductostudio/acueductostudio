@@ -2,7 +2,7 @@ import Head from "components/Head";
 import styled, { createGlobalStyle } from "styled-components";
 import { useEffect } from "react";
 import Tooltip from "react-tooltip-lite";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import TitleSection from "components/shared/TitleSection";
 import Products from "components/shared/Products";
 import PinnedSection from "components/shared/PinnedSection";
@@ -23,58 +23,54 @@ import {
   Review,
 } from "components/shared/Icons";
 
-import Tesla from "public/assets/img/layout/logos/tesla.svg";
-import Nike from "public/assets/img/layout/logos/nike.svg";
-import Burberry from "public/assets/img/layout/logos/burberry.svg";
-import Cemex from "public/assets/img/layout/logos/cemex.svg";
-import Hasbro from "public/assets/img/layout/logos/hasbro.svg";
-import Starbucks from "public/assets/img/layout/logos/starbucks.svg";
-
-import NodeLogo from "public/assets/img/layout/logos/node.svg";
-import ReactLogo from "public/assets/img/layout/logos/react.svg";
-import NextLogo from "public/assets/img/layout/logos/next.svg";
-import ReactNativeLogo from "public/assets/img/layout/logos/react-native.svg";
-import Electron from "public/assets/img/layout/logos/electron.svg";
-import Angular from "public/assets/img/layout/logos/angular.svg";
-import PWA from "public/assets/img/layout/logos/pwa.svg";
-import Shopify from "public/assets/img/layout/logos/shopify.svg";
-import StyledLogo from "public/assets/img/layout/logos/styled.svg";
-import Contentful from "public/assets/img/layout/logos/contentful.svg";
-import Css3 from "public/assets/img/layout/logos/css3.svg";
-import Html5 from "public/assets/img/layout/logos/html5.svg";
-import AWSLogo from "public/assets/img/layout/logos/aws.svg";
-import TSLogo from "public/assets/img/layout/logos/ts.svg";
-
-import WebLogo from "public/assets/img/layout/logos/web.svg";
-import Ios from "public/assets/img/layout/logos/ios.svg";
-import Macos from "public/assets/img/layout/logos/macos.svg";
-import Android from "public/assets/img/layout/logos/android.svg";
-import Windows from "public/assets/img/layout/logos/windows.svg";
-import Linux from "public/assets/img/layout/logos/linux.svg";
-
-import Ads from "public/assets/img/layout/logos/ads.svg";
-import Analytics from "public/assets/img/layout/logos/analytics.svg";
-import Adsense from "public/assets/img/layout/logos/adsense.svg";
-import Hootsuit from "public/assets/img/layout/logos/hootsuit.svg";
-import FBM from "public/assets/img/layout/logos/fbm.svg";
-
-import Ig from "public/assets/img/layout/logos/ig.svg";
-import Fb from "public/assets/img/layout/logos/fb.svg";
-import Tw from "public/assets/img/layout/logos/tw.svg";
-import LinkedIn from "public/assets/img/layout/logos/linkedin.svg";
-import Snapchat from "public/assets/img/layout/logos/snapchat.svg";
-import TikTok from "public/assets/img/layout/logos/tiktok.svg";
-import WhatsApp from "public/assets/img/layout/logos/whatsapp.svg";
-
-import Tableau from "public/assets/img/layout/logos/tableau.svg";
-import PowerBi from "public/assets/img/layout/logos/powerbi.svg";
-
-import Notion from "public/assets/img/layout/logos/notion.svg";
-import Figma from "public/assets/img/layout/logos/figma.svg";
-import Slack from "public/assets/img/layout/logos/slack.svg";
-import Gsuite from "public/assets/img/layout/logos/gsuite.svg";
-import Todoist from "public/assets/img/layout/logos/todoist.svg";
-import Git from "public/assets/img/layout/logos/git.svg";
+import {
+  Tesla,
+  Nike,
+  Burberry,
+  Cemex,
+  Hasbro,
+  Starbucks,
+  NodeLogo,
+  ReactLogo,
+  NextLogo,
+  ReactNativeLogo,
+  Electron,
+  Angular,
+  PWA,
+  Shopify,
+  StyledLogo,
+  Contentful,
+  Css3,
+  Html5,
+  AWSLogo,
+  TSLogo,
+  WebLogo,
+  Ios,
+  Macos,
+  Android,
+  Windows,
+  Linux,
+  Ads,
+  Analytics,
+  Adsense,
+  Hootsuit,
+  FBM,
+  Ig,
+  Fb,
+  Tw,
+  LinkedIn,
+  Snapchat,
+  TikTok,
+  WhatsApp,
+  Tableau,
+  PowerBi,
+  Notion,
+  Figma,
+  Slack,
+  Gsuite,
+  Todoist,
+  Git,
+} from "components/shared/Logos";
 
 const roleModelArray = [Tesla, Nike, Burberry, Cemex, Starbucks, Hasbro];
 
@@ -142,19 +138,17 @@ const RenderLogoList = ({ array }) => (
     {array.map((i, index) => {
       let LogoIcon = array[index].i;
       return (
-        <Fade key={array[index].p + index}>
-          <li>
-            <Tooltip
-              direction="bottom"
-              tagName="span"
-              hoverDelay={300}
-              content={array[index].p}
-              eventOff="onScroll"
-            >
-              <LogoIcon />
-            </Tooltip>
-          </li>
-        </Fade>
+        <li key={array[index].p + index}>
+          <Tooltip
+            direction="bottom"
+            tagName="span"
+            hoverDelay={300}
+            content={array[index].p}
+            eventOff="onScroll"
+          >
+            <LogoIcon />
+          </Tooltip>
+        </li>
       );
     })}
   </LogoList>
@@ -201,16 +195,12 @@ export default function Pitch(props) {
       />
       <StyledHeadings />
       <PinnedSection title={t.intro.title} p={t.intro.p0}>
-        <Fade>
-          <AcueductoLogo />
-        </Fade>
+        <AcueductoLogo />
         <P>{t.intro.p0}</P>
         <H3>{t.intro.subtitle1}</H3>
         <StyledList>
           {t.intro.li1.map((item, index) => (
-            <Fade key={"li1nside" + index}>
-              <li>{item}</li>
-            </Fade>
+            <li key={"li1nside" + index}>{item}</li>
           ))}
         </StyledList>
         <P>{t.intro.p1}</P>
@@ -219,26 +209,20 @@ export default function Pitch(props) {
           {roleModelArray.map((item, index) => {
             let LogoIcon = roleModelArray[index];
             return (
-              <Fade key={"rolemodel" + index}>
-                <li>
-                  <LogoIcon />
-                </li>
-              </Fade>
+              <li key={"rolemodel" + index}>
+                <LogoIcon />
+              </li>
             );
           })}
         </BusinessLogoList>
-        <Fade>
-          <IconContainer>
-            <StrategicDesign />
-          </IconContainer>
-        </Fade>
+        <IconContainer>
+          <StrategicDesign />
+        </IconContainer>
         <H2>{t.intro.subtitle3}</H2>
         <P>{t.intro.p3}</P>
-        <Fade>
-          <IconContainer>
-            <DigitalTransformation />
-          </IconContainer>
-        </Fade>
+        <IconContainer>
+          <DigitalTransformation />
+        </IconContainer>
         <H2>{t.intro.subtitle4}</H2>
         <P>{t.intro.p4}</P>
       </PinnedSection>
@@ -260,23 +244,25 @@ export default function Pitch(props) {
         borderTop
       />
       <LogoListContainer>
-        <H3>{t.tools_section.apps}</H3>
-        <RenderLogoList array={appsLogoArray} />
+        <Fade>
+          <H3>{t.tools_section.apps}</H3>
+          <RenderLogoList array={appsLogoArray} />
 
-        <H3>{t.tools_section.platforms}</H3>
-        <RenderLogoList array={platformLogoArray} />
+          <H3>{t.tools_section.platforms}</H3>
+          <RenderLogoList array={platformLogoArray} />
 
-        <H3>{t.tools_section.marketing}</H3>
-        <RenderLogoList array={marketingLogoArray} />
+          <H3>{t.tools_section.marketing}</H3>
+          <RenderLogoList array={marketingLogoArray} />
 
-        <H3>{t.tools_section.content}</H3>
-        <RenderLogoList array={contentLogoArray} />
+          <H3>{t.tools_section.content}</H3>
+          <RenderLogoList array={contentLogoArray} />
 
-        <H3>{t.tools_section.bi}</H3>
-        <RenderLogoList array={biLogoArray} />
+          <H3>{t.tools_section.bi}</H3>
+          <RenderLogoList array={biLogoArray} />
 
-        <H3>{t.tools_section.collaboration}</H3>
-        <RenderLogoList array={collaborationLogoArray} />
+          <H3>{t.tools_section.collaboration}</H3>
+          <RenderLogoList array={collaborationLogoArray} />
+        </Fade>
       </LogoListContainer>
       <ContactFooter />
     </PageClipperPadded>
@@ -468,15 +454,17 @@ const LogoListContainer = styled.div`
   display: grid;
   padding: 0 4% 10% 4%;
   position: relative;
-  h3 {
+  & > div {
     grid-column: 3 / span 7;
+  }
+  h3 {
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 1%;
   }
   @media (max-width: 1300px) {
-    h3 {
-      grid-column: 2 / span 8;
+    & > div {
+      grid-column: 2 / span 10;
     }
   }
   @media (max-width: 950px) {
@@ -488,8 +476,10 @@ const LogoListContainer = styled.div`
     }
   }
   @media (max-width: 600px) {
+    & > div {
+      grid-column: 1 / span 12;
+    }
     h3 {
-      grid-column: 1 / span 11;
       font-size: 2rem;
       margin-bottom: 0;
     }

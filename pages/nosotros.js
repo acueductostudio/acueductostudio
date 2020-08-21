@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useEffect } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import dynamic from "next/dynamic";
 import Head from "components/Head";
 import TitleSection from "components/shared/TitleSection";
@@ -16,7 +16,7 @@ const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
     <HeadLoader src="/assets/img/layout/headPlacerHolder.jpg" alt="3DScan" />
   ),
-  ssr: false
+  ssr: false,
 });
 
 function About(props) {
@@ -35,7 +35,7 @@ function About(props) {
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
       />
-      <ManifiestoItems/>
+      <ManifiestoItems />
       <PinnedSection title={t.intro.title} borderTop>
         <P>{t.intro.p}</P>
         {t.team.map((person, index) => (
@@ -48,11 +48,11 @@ function About(props) {
                 rotationStart={index > 0 ? 50 : 0}
               />
             )}
-            <H4>{person.name}</H4>
             <Fade>
+              <H4>{person.name}</H4>
               <span>{person.position}</span>
+              <P>{person.bio}</P>
             </Fade>
-            <P>{person.bio}</P>
           </Person>
         ))}
       </PinnedSection>
@@ -85,7 +85,7 @@ const Person = styled.div`
     line-height: 1;
   }
   span {
-    color: ${props => props.theme.colors.accent_smalltext};
+    color: ${(props) => props.theme.colors.accent_smalltext};
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 2.5px;

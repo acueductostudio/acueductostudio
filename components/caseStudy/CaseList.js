@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useRef } from "react";
 import { P } from "components/shared/Dangerously";
 import BorderLink from "components/shared/BorderedLink";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import Arrow from "components/shared/Arrow";
 import Link from "next/link";
 import LangContext from "utils/LangContext";
@@ -65,7 +65,9 @@ const SingleCase = (props) => {
           </Link>
         </Fade>
         <Flexed>
-          <P>{props.tags}</P>
+          <Fade>
+            <P>{props.tags}</P>
+          </Fade>
           <Link
             href={
               props.lang === "en"
@@ -116,6 +118,7 @@ const Hoverable = styled.h4`
 const VidReplacer = styled.div`
   background-size: cover;
   background-position: center center;
+  z-index: -1;
 `;
 
 const Logo = styled.img`

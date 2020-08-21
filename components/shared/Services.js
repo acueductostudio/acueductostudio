@@ -1,6 +1,6 @@
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { H3 } from "components/shared/Dangerously";
 
 const Services = () => {
@@ -35,7 +35,7 @@ const Info = styled.div`
   width: auto;
   h4 {
     font-weight: 200;
-    font-size:2.5rem;
+    font-size: 2.5rem;
   }
 `;
 
@@ -55,9 +55,9 @@ const Service = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border: ${props =>
+  border: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
-  border-width: ${props =>
+  border-width: ${(props) =>
     props.theme.stroke +
     " " +
     props.theme.stroke +
@@ -74,19 +74,19 @@ const Service = styled.div`
   li {
     list-style: none;
     line-height: 135%;
-    color: ${props => props.theme.colors.foreground_low};
+    color: ${(props) => props.theme.colors.foreground_low};
     &:before {
       content: "– ";
       font-weight: 300;
-      color: ${props => props.theme.colors.accent};
+      color: ${(props) => props.theme.colors.accent};
       margin-left: -16px;
     }
   }
   @media (max-width: 1000px) {
     padding: 12%;
     align-items: flex-start;
-    h4{
-      font-size:2rem;
+    h4 {
+      font-size: 2rem;
     }
     ul li {
       font-size: 1.5rem;
@@ -117,7 +117,7 @@ const Service = styled.div`
     h4 {
       text-transform: lowercase;
       font-size: 2.1rem;
-      font-weight:200;
+      font-weight: 200;
     }
     ul li {
       font-size: 1.5rem;
@@ -126,10 +126,10 @@ const Service = styled.div`
 `;
 
 const ServicesSection = styled.section`
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
   h3 {
-    color: ${props => props.theme.colors.accent};
+    color: ${(props) => props.theme.colors.accent};
     text-align: center;
     margin-top: 10%;
     font-size: 4rem;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { P } from "components/shared/Dangerously";
 
 function Steps({ steps, children, iconArray }) {
@@ -11,8 +11,8 @@ function Steps({ steps, children, iconArray }) {
           <Fade>
             <StepIcon />
             <h3>{title}</h3>
+            <P>{p}</P>
           </Fade>
-          <P>{p}</P>
         </Step>
       </StepBordered>
     );

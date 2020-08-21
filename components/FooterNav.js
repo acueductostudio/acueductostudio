@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { useRouter } from "next/router";
 
 export default function FooterNav({ nav }) {
@@ -142,7 +142,7 @@ const SecondaryNavList = styled.ul`
   list-style: none;
   padding-top: 8%;
   color: ${(props) => props.theme.colors.foreground_low};
-  li:not(:nth-last-child(1)) {
+  div:not(:nth-last-child(1)) {
     padding-right: 10%;
   }
   @media (max-width: 1250px) {
@@ -155,13 +155,13 @@ const SecondaryNavList = styled.ul`
     flex-direction: column;
     li {
       padding-right: 0;
-      padding-bottom:0px;
-      padding-top:5px;
-      &:not(:nth-last-child(1)) {
-        padding-right: 0%;
-        padding-bottom:5px;
-        padding-top:0px;
-      }
+      padding-bottom: 0px;
+      padding-top: 5px;
+    }
+    div:not(:nth-last-child(1)) {
+      padding-right: 0%;
+      padding-bottom: 5px;
+      padding-top: 0px;
     }
   }
 `;
@@ -215,8 +215,8 @@ const SocialNav = styled.ul`
       height: 200%;
     }
   }
-  li:nth-of-type(4),
-  li:nth-of-type(5) {
+  div:nth-of-type(4),
+  div:nth-of-type(5) {
     align-self: flex-end;
   }
   @media (max-width: 700px) {

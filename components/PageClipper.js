@@ -16,17 +16,17 @@ const Wrapper = styled.main`
   flex-direction: column;
   margin: 0 auto;
   max-width: 1500px;
-  top: 20px;
+  top: 23px;
   left: 20px;
   bottom: 20px;
   right: 20px;
   overflow-x: hidden;
   overflow-y: scroll;
   @media (max-width: 1300px) {
-    padding-top: ${props => (props.unPadded ? "0" : "5%")};
+    padding-top: ${(props) => (props.unPadded ? "0" : "5%")};
   }
   @media (max-width: 700px) {
-    padding-top: ${props => (props.unPadded ? "0" : "10%")};
+    padding-top: ${(props) => (props.unPadded ? "0" : "10%")};
   }
   @media (max-width: 600px), (max-height: 450px) {
     overflow-y: auto;
@@ -36,9 +36,9 @@ const Wrapper = styled.main`
     top: 17px;
   }
   @media (max-width: 500px) {
-    padding-top: ${props => (props.unPadded ? "0" : "15%")};
+    padding-top: ${(props) => (props.unPadded ? "0" : "15%")};
   }
   @media (max-width: 400px) {
-    padding-top: ${props => (props.unPadded ? "0" : "20%")};
+    padding-top: ${(props) => (props.unPadded ? "0" : "20%")};
   }
 `;

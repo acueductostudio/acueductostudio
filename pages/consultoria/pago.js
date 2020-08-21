@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { createContact, updateContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
 import Head from "components/Head";
@@ -83,49 +83,41 @@ const Pago = (props) => {
         </Container>
       )}
       {isAuthorized && (
-        <>
-          <TitleSection title={intro.title}>
-            <p>{intro.p}</p>
-            <Includes>
-              {intro.items.map((item, index) => (
-                <li key={"introItemkey" + index}>{item}</li>
-              ))}
-            </Includes>
-            <Step>
+        <TitleSection title={intro.title}>
+          <p>{intro.p}</p>
+          <Includes>
+            {intro.items.map((item, index) => (
+              <li key={"introItemkey" + index}>{item}</li>
+            ))}
+          </Includes>
+          <Step>
+            <span>01</span>
+            <h2>{step1.title}</h2>
+            <PayContainer>
               <Fade>
-                <span>01</span>
-                <h2>{step1.title}</h2>
+                <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=616963124-341c7abb-d6a7-45c8-9831-c3a3ec56b8c8">
+                  <Cards />
+                  <h3>{step1.card}</h3>
+                </a>
+                <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=616963124-21bbd186-417b-4bbc-a1ce-05afd265bb18">
+                  <Cash />
+                  <h3>{step1.cash}</h3>
+                </a>
+                <p>*{step1.warning}</p>
               </Fade>
-              <PayContainer>
-                <Fade>
-                  <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=616963124-341c7abb-d6a7-45c8-9831-c3a3ec56b8c8">
-                    <Cards />
-                    <h3>{step1.card}</h3>
-                  </a>
-                  <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=616963124-21bbd186-417b-4bbc-a1ce-05afd265bb18">
-                    <Cash />
-                    <h3>{step1.cash}</h3>
-                  </a>
-                  <p>*{step1.warning}</p>
-                </Fade>
-              </PayContainer>
-            </Step>
-            <Step>
-              <Fade>
-                <span>02</span>
-                <h2>{step2.title}</h2>
-                <p>{step2.p}</p>
-              </Fade>
-            </Step>
-            <Step>
-              <Fade>
-                <span>03</span>
-                <h2>{step3.title}</h2>
-                <p>{step3.p}</p>
-              </Fade>
-            </Step>
-          </TitleSection>
-        </>
+            </PayContainer>
+          </Step>
+          <Step>
+            <span>02</span>
+            <h2>{step2.title}</h2>
+            <p>{step2.p}</p>
+          </Step>
+          <Step className="last">
+            <span>03</span>
+            <h2>{step3.title}</h2>
+            <p>{step3.p}</p>
+          </Step>
+        </TitleSection>
       )}
     </PageClipper>
   );
@@ -160,18 +152,20 @@ const PayContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
-  & > a {
+  & > div:not(:last-of-type) {
     border: 2px solid ${(p) => p.theme.colors.foreground};
-    padding: 10% 8% 5% 8%;
     position: relative;
     transition: 0.4s ease all;
     grid-column: unset;
-    text-decoration: none;
     cursor: pointer;
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    a {
+      text-decoration: none;
+      padding: 10% 8% 5% 8%;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     svg {
       width: 100%;
       max-width: 180px;
@@ -207,17 +201,19 @@ const PayContainer = styled.div`
     font-weight: 200;
     font-size: 3.2rem;
   }
-  p {
+  & > div:last-of-type {
     grid-column: 2 / span 1;
+  }
+  p {
     font-size: 1.4rem;
   }
   @media (max-width: 1100px) {
-    & > a {
+    & > div:not(:last-of-type) a {
       min-height: 120px;
     }
   }
   @media (max-width: 600px) {
-    & > a {
+    & > div:not(:last-of-type) {
       background-color: ${(p) => p.theme.colors.accent};
       border: none;
       border-radius: 5px;
@@ -229,11 +225,12 @@ const PayContainer = styled.div`
   }
 `;
 
-const Step = styled.li`
+const Step = styled.div`
   list-style: none;
   position: relative;
-  &:not(:last-of-type) {
-    margin-bottom: 20%;
+  margin-bottom: 20%;
+  &.last {
+    margin-bottom: 0;
   }
   span {
     color: ${(props) => props.theme.colors.accent};
@@ -259,9 +256,7 @@ const Step = styled.li`
     }
   }
   @media (max-width: 1100px) {
-    &:not(:last-of-type) {
-      margin-bottom: 15%;
-    }
+    margin-bottom: 15%;
   }
   @media (max-width: 950px) {
     h2 {
@@ -273,10 +268,8 @@ const Step = styled.li`
     }
   }
   @media (max-width: 600px) {
-    &:not(:last-of-type) {
-      margin-bottom: 10%;
-    }
-    &:last-of-type {
+    margin-bottom: 10%;
+    &.last {
       margin-bottom: 20%;
     }
     span {
@@ -287,13 +280,6 @@ const Step = styled.li`
     h3 {
       font-size: 2.2rem;
     }
-  }
-`;
-
-const ThanksBlock = styled.div`
-  margin-bottom: 10%;
-  p {
-    margin-top: 10px;
   }
 `;
 

@@ -1,40 +1,27 @@
 import createMarkup from "utils/createMarkup";
-import { Fade } from "react-awesome-reveal";
 
 export const H1 = ({ children, ...props }) => (
-  <Fade>
-    <h1 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
+  <h1 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
 export const H2 = ({ children, ...props }) => (
-  <Fade>
-    <h2 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
+  <h2 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
 export const H3 = ({ children, ...props }) => (
-  <Fade>
-    <h3 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
+  <h3 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
 export const H4 = ({ children, ...props }) => (
-  <Fade>
-    <h4 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
+  <h4 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
 export const P = ({ children, ...props }) => (
-  <Fade>
-    <p {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
+  <p {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
 export const Span = ({ children, ...props }) => (
-  <Fade>
-    <span {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
+  <span {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
 export const B = ({ children, ...props }) => (
@@ -46,7 +33,13 @@ export const Blockquote = ({ children, ...props }) => (
 );
 
 export const A = ({ children, ...props }) => (
-  <Fade>
-    <a {...props} dangerouslySetInnerHTML={createMarkup(children)} />
-  </Fade>
+  <a {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+);
+
+export const Li = ({ children, ...props }) => (
+  <li {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+);
+
+export const Ul = ({ children, ...props }) => (
+  <ul {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );

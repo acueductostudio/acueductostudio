@@ -3,8 +3,10 @@ import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
 import FooterNav from "components/FooterNav";
-import Fade from "react-reveal/Fade";
-import TitleSectionGrid from "components/shared/TitleSectionGrid";
+import { Fade } from "react-awesome-reveal";
+import TitleSectionGrid, {
+  Container,
+} from "components/shared/TitleSectionGrid";
 import Logo from "public/assets/img/layout/logo.svg";
 import Mail from "public/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
@@ -33,24 +35,12 @@ const ContactFooter = () => {
     logEvent("Click", "Copied email to clipboard");
   };
 
-  const textBlock = (
-    <Fade>
-      <p>
-        {p}
-        <b>
-          <MailPlaceholder />
-          <CopyMessage reveal={copying}>
-            {copied ? copied_text : copy_text}
-          </CopyMessage>
-        </b>
-      </p>
-    </Fade>
-  );
-
   return (
     <>
       <Grid id="contact">
-        <H1>{title}</H1>
+        <Fade>
+          <H1>{title}</H1>
+        </Fade>
         <CopyToClipboard
           text={"hola@acueducto.studio"}
           onCopy={doSetCopied}
@@ -58,11 +48,23 @@ const ContactFooter = () => {
           onMouseLeave={setUnhovered}
           onClick={setHovered}
         >
-          {textBlock}
+          <Fade>
+            <p>
+              {p}
+              <b>
+                <MailPlaceholder />
+                <CopyMessage reveal={copying}>
+                  {copied ? copied_text : copy_text}
+                </CopyMessage>
+              </b>
+            </p>
+          </Fade>
         </CopyToClipboard>
-          <LogoCrop>
-          <Logo />
-          </LogoCrop>
+        <LogoCrop>
+          <Fade>
+            <Logo />
+          </Fade>
+        </LogoCrop>
       </Grid>
       <FooterNav nav={footer_nav} />
     </>
@@ -157,6 +159,7 @@ const CopyMessage = styled.span`
 
 const LogoCrop = styled.div`
   width: 100%;
+  grid-column: unset !important;
   position: absolute;
   left: 0;
   right: 0;

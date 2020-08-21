@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import ArrowSvg from "public/assets/img/layout/arrow.svg";
 
 const Arrow = ({ reverse }) => (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { Suspense, useRef } from "react";
 import { Canvas, useLoader, useFrame } from "react-three-fiber";
 import { GLTFLoader } from "three";

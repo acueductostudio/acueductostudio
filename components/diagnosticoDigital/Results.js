@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import {
   FacebookShareButton,
   FacebookIcon,

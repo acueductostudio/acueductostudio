@@ -3,9 +3,8 @@ import Head from "components/Head";
 import { useEffect } from "react";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
-import Fade from "react-reveal/Fade";
 import { H1, P } from "components/shared/Dangerously";
-// import { Fade } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import es from "public/locales/es/podcast.json";
 import Logo from "public/assets/img/layout/logo.svg";
 
@@ -40,65 +39,67 @@ function Podcast(props) {
         lang={props.lang}
       />
       <PodcastGrid>
-        <H1>{title}</H1>
-        <Fade>
-          <span>
-            por <Logo />
-          </span>
-          <p>{p}</p>
-        </Fade>
-        <LogoList>
-          <P>Escúchalo en </P>
+        <div>
           <Fade>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
-            >
-              Spotify
-              <Spotify />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
-            >
-              Apple Podcasts
-              <ApplePodcasts />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
-            >
-              Google Podcasts
-              <Google />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
-            >
-              Youtube
-              <Youtube />
-            </a>
+            <H1>{title}</H1>
+            <span>
+              por <Logo />
+            </span>
+            <p>{p}</p>
           </Fade>
-        </LogoList>
-        <PodcastList>
-          {podcasts.map((pod, index) => (
-            <Pod key={"podentry" + index}>
-              <Fade triggerOnce>
-                <iframe
-                  title={pod.title}
-                  src={pod.url}
-                  frameBorder="0"
-                  allowtransparency="true"
-                  allow="encrypted-media"
-                ></iframe>
-              </Fade>
-            </Pod>
-          ))}
-        </PodcastList>
+          <LogoList>
+            <Fade>
+              <P>Escúchalo en </P>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
+              >
+                Spotify
+                <Spotify />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
+              >
+                Apple Podcasts
+                <ApplePodcasts />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
+              >
+                Google Podcasts
+                <Google />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
+              >
+                Youtube
+                <Youtube />
+              </a>
+            </Fade>
+          </LogoList>
+          <PodcastList>
+            {podcasts.map((pod, index) => (
+              <Pod key={"podentry" + index}>
+                <Fade>
+                  <iframe
+                    title={pod.title}
+                    src={pod.url}
+                    frameBorder="0"
+                    allowtransparency="true"
+                    allow="encrypted-media"
+                  ></iframe>
+                </Fade>
+              </Pod>
+            ))}
+          </PodcastList>
+        </div>
       </PodcastGrid>
       <ContactFooter />
     </PageClipper>
@@ -118,24 +119,24 @@ const PodcastGrid = styled.div`
   padding: 10% 4%;
   position: relative;
   margin-bottom: -1px;
-  h1 {
+  & > div {
     grid-column: 2 / span 10;
+  }
+  h1 {
     letter-spacing: 0;
     line-height: 100%;
     font-size: 7rem;
-    margin-bottom: 0;
+    margin-bottom: 3px;
     max-width: 810px;
     color: ${(props) => props.theme.colors.foreground};
   }
   span {
-    grid-column: 2 / span 10;
     color: ${(props) => props.theme.colors.accent};
     svg * {
       fill: ${(props) => props.theme.colors.accent};
     }
   }
   p {
-    grid-column: 2 / span 8;
     padding-top: 2.5rem;
     color: ${(props) => props.theme.colors.foreground_low};
     position: relative;
@@ -157,15 +158,8 @@ const PodcastGrid = styled.div`
     }
   }
   @media (max-width: 600px) {
-    p,
-    h1,
-    span,
-    div,
-    ul {
-      grid-column-start: 1;
-    }
-    p {
-      grid-column-end: 12;
+    & > div {
+      grid-column: 1 / span 12;
     }
     h1 {
       line-height: 0.9;
@@ -177,14 +171,11 @@ const PodcastGrid = styled.div`
 `;
 
 const PodcastList = styled.ul`
-  grid-column: 2 / span 7;
   list-style: none;
   margin-top: 5%;
-  @media (max-width: 950px) {
-    grid-column: 2 / span 10;
-  }
-  @media (max-width: 600px) {
-    grid-column: 2 / span 12;
+  max-width: 800px;
+  @media (max-width: 1150px) {
+    max-width: 600px;
   }
 `;
 
@@ -199,7 +190,6 @@ const Pod = styled.li`
 `;
 
 const LogoList = styled.div`
-  grid-column: 2 / span 10;
   display: flex;
   align-items: center;
   padding-top: 2.5rem;

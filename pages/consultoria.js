@@ -5,6 +5,7 @@ import Head from "components/Head";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
+import { Fade } from "react-awesome-reveal";
 import PinnedSection from "components/shared/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import ConsultoriaCTA from "components/ConsultoriaCTA";
@@ -75,22 +76,26 @@ function Consultoria(props) {
       <TitleSection {...process_section.intro} borderTop />
       <StepGrid>
         {process_section.process.map((step, index) => (
-          <div key={`consultingStep${index}`}>
-            <span>0{index + 1}</span>
-            <h4>{step.title}</h4>
-            <p>{step.p}</p>
-          </div>
+          <Fade key={`consultingStep${index}`}>
+            <div>
+              <span>0{index + 1}</span>
+              <h4>{step.title}</h4>
+              <p>{step.p}</p>
+            </div>
+          </Fade>
         ))}
       </StepGrid>
       <TitleSection {...areas_section.intro} borderTop />
       <Steps steps={areas_section.areas} iconArray={stepIconArray}>
         <LastStep>
-          <h3>{areas_section.area_extra.title}</h3>
-          <ul>
-            {areas_section.area_extra.ul.map((item, index) => (
-              <li key={`listItem${index}`}>{item.li}</li>
-            ))}
-          </ul>
+          <Fade>
+            <h3>{areas_section.area_extra.title}</h3>
+            <ul>
+              {areas_section.area_extra.ul.map((item, index) => (
+                <li key={`listItem${index}`}>{item.li}</li>
+              ))}
+            </ul>
+          </Fade>
         </LastStep>
       </Steps>
       <TitleSection {...last_section.intro} borderTop>

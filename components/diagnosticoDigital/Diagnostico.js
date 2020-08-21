@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import Arrow from "components/shared/Arrow";
 import { createContact } from "utils/sendinBlue.ts";
 import delayForLoading from "utils/delayForLoading.ts";
@@ -101,136 +101,138 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
   return (
     <QuestionSection>
       {testStatus === "" && (
-        <QuestionGrid>
-          <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
-            {questions.map((question, index) => (
+        <Fade>
+          <QuestionGrid>
+            <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
+              {questions.map((question, index) => (
+                <Question
+                  key={"question" + index}
+                  selected={qIndex === index}
+                  deselected={qIndex === index - 1}
+                >
+                  <Info>
+                    <span>
+                      {index + 1 < 10 ? `0${index + 1}` : index}/
+                      {NUMBER_OF_QS > 10 ? NUMBER_OF_QS : `0${NUMBER_OF_QS}`}
+                    </span>
+                    <h4>{question.question}</h4>
+                    <label>
+                      {question.a1}
+                      <input
+                        name={"Q" + index}
+                        type="radio"
+                        value={10}
+                        ref={register}
+                        onClick={handleClick}
+                      />
+                      <span />
+                    </label>
+                    <label>
+                      {question.a2}
+                      <input
+                        name={"Q" + index}
+                        type="radio"
+                        value={5}
+                        ref={register}
+                        onClick={handleClick}
+                      />
+                      <span />
+                    </label>
+                    <label>
+                      {question.a3}
+                      <input
+                        name={"Q" + index}
+                        type="radio"
+                        value={0}
+                        ref={register}
+                        onClick={handleClick}
+                      />
+                      <span />
+                    </label>
+                  </Info>
+                </Question>
+              ))}
               <Question
-                key={"question" + index}
-                selected={qIndex === index}
-                deselected={qIndex === index - 1}
+                selected={qIndex === NUMBER_OF_QS}
+                deselected={qIndex === NUMBER_OF_QS - 1}
               >
-                <Info>
-                  <span>
-                    {index + 1 < 10 ? `0${index + 1}` : index}/
-                    {NUMBER_OF_QS > 10 ? NUMBER_OF_QS : `0${NUMBER_OF_QS}`}
-                  </span>
-                  <h4>{question.question}</h4>
-                  <label>
-                    {question.a1}
+                <h5>{collection_form.title}</h5>
+                <InputGrid>
+                  <InputField>
+                    <label htmlFor="firstName">
+                      {collection_form.firstName.label}
+                    </label>
                     <input
-                      name={"Q" + index}
-                      type="radio"
-                      value={10}
-                      ref={register}
-                      onClick={handleClick}
+                      name="firstName"
+                      type="text"
+                      id="firstName"
+                      placeholder={collection_form.firstName.label}
+                      ref={register({ required: true })}
                     />
-                    <span />
-                  </label>
-                  <label>
-                    {question.a2}
+                    {errors.firstName && (
+                      <span>{collection_form.firstName.errorMissing}</span>
+                    )}
+                  </InputField>
+
+                  <InputField>
+                    <label htmlFor="lastName">
+                      {collection_form.lastName.label}
+                    </label>
                     <input
-                      name={"Q" + index}
-                      type="radio"
-                      value={5}
-                      ref={register}
-                      onClick={handleClick}
+                      name="lastName"
+                      type="text"
+                      id="lastName"
+                      placeholder={collection_form.lastName.label}
+                      ref={register({ required: true })}
                     />
-                    <span />
-                  </label>
-                  <label>
-                    {question.a3}
+                    {errors.lastName && (
+                      <span>{collection_form.lastName.errorMissing}</span>
+                    )}
+                  </InputField>
+
+                  <InputField>
+                    <label htmlFor="email">email</label>
                     <input
-                      name={"Q" + index}
-                      type="radio"
-                      value={0}
-                      ref={register}
-                      onClick={handleClick}
+                      name="email"
+                      type="email"
+                      id="email"
+                      placeholder="email"
+                      ref={register({
+                        required: {
+                          value: true,
+                          message: collection_form.email.errorMissing,
+                        },
+                        pattern: {
+                          value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                          message: collection_form.email.errorInvalid,
+                        },
+                      })}
                     />
-                    <span />
-                  </label>
-                </Info>
+                    <span>{errors?.email?.message}</span>
+                  </InputField>
+                  <InputField>
+                    <input type="submit" value={collection_form.submit} />
+                  </InputField>
+                </InputGrid>
               </Question>
-            ))}
-            <Question
-              selected={qIndex === NUMBER_OF_QS}
-              deselected={qIndex === NUMBER_OF_QS - 1}
-            >
-              <h5>{collection_form.title}</h5>
-              <InputGrid>
-                <InputField>
-                  <label htmlFor="firstName">
-                    {collection_form.firstName.label}
-                  </label>
-                  <input
-                    name="firstName"
-                    type="text"
-                    id="firstName"
-                    placeholder={collection_form.firstName.label}
-                    ref={register({ required: true })}
-                  />
-                  {errors.firstName && (
-                    <span>{collection_form.firstName.errorMissing}</span>
-                  )}
-                </InputField>
-
-                <InputField>
-                  <label htmlFor="lastName">
-                    {collection_form.lastName.label}
-                  </label>
-                  <input
-                    name="lastName"
-                    type="text"
-                    id="lastName"
-                    placeholder={collection_form.lastName.label}
-                    ref={register({ required: true })}
-                  />
-                  {errors.lastName && (
-                    <span>{collection_form.lastName.errorMissing}</span>
-                  )}
-                </InputField>
-
-                <InputField>
-                  <label htmlFor="email">email</label>
-                  <input
-                    name="email"
-                    type="email"
-                    id="email"
-                    placeholder="email"
-                    ref={register({
-                      required: {
-                        value: true,
-                        message: collection_form.email.errorMissing,
-                      },
-                      pattern: {
-                        value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
-                        message: collection_form.email.errorInvalid,
-                      },
-                    })}
-                  />
-                  <span>{errors?.email?.message}</span>
-                </InputField>
-                <InputField>
-                  <input type="submit" value={collection_form.submit} />
-                </InputField>
-              </InputGrid>
-            </Question>
-          </form>
-          <ArrowContainer>
-            <Arrowx reveal={qIndex > 0} onClick={prevIndex} left>
-              <Arrow reverse />
-            </Arrowx>
-            <Arrowx reveal={aIndex > qIndex} onClick={nextIndex} right>
-              <Arrow />
-            </Arrowx>
-          </ArrowContainer>
-          <LineContainer percentage={`${(qIndex * 100) / NUMBER_OF_QS}%`}>
-            <Tag show={qIndex <= 4}>{progressLine.strategy}</Tag>
-            <Tag show={qIndex > 4 && qIndex <= 8}>{progressLine.culture}</Tag>
-            <Tag show={qIndex > 8 && qIndex < NUMBER_OF_QS}>
-              {progressLine.competition}
-            </Tag>
-          </LineContainer>
-        </QuestionGrid>
+            </form>
+            <ArrowContainer>
+              <Arrowx reveal={qIndex > 0} onClick={prevIndex} left>
+                <Arrow reverse />
+              </Arrowx>
+              <Arrowx reveal={aIndex > qIndex} onClick={nextIndex} right>
+                <Arrow />
+              </Arrowx>
+            </ArrowContainer>
+            <LineContainer percentage={`${(qIndex * 100) / NUMBER_OF_QS}%`}>
+              <Tag show={qIndex <= 4}>{progressLine.strategy}</Tag>
+              <Tag show={qIndex > 4 && qIndex <= 8}>{progressLine.culture}</Tag>
+              <Tag show={qIndex > 8 && qIndex < NUMBER_OF_QS}>
+                {progressLine.competition}
+              </Tag>
+            </LineContainer>
+          </QuestionGrid>
+        </Fade>
       )}
       {testStatus === "loading" && (
         <Fade>

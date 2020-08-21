@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import head from "./head";
 import P5Wrapper from "utils/P5Wrapper";
 
@@ -38,7 +38,7 @@ const SketchContainer = styled.div`
     width: 100%;
     height: 100%;
     padding-left: 10%;
-    color: ${props => props.theme.colors.foreground_lowest};
+    color: ${(props) => props.theme.colors.foreground_lowest};
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 3.5px;

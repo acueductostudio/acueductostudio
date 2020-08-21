@@ -14,6 +14,8 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
       setShowToggler(false);
     } else if (router.asPath.includes("/diagnostico")) {
       setShowToggler(false);
+    } else {
+      setShowToggler(true);
     }
   }, [router.route]);
 

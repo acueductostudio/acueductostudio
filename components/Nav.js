@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import BorderLink from "components/shared/BorderedLink";
 import { useRouter } from "next/router";
 
@@ -18,12 +18,12 @@ export default function Nav(props) {
     );
   };
 
-  const scrollToBottom = e => {
+  const scrollToBottom = (e) => {
     e.preventDefault();
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   };
 
-  let navItems = t.map(function(item, index) {
+  let navItems = t.map(function (item, index) {
     if (item.title === "contact" || item.title === "contacto") {
       return (
         <Fade delay={200 + index * 50} key={"item" + index}>
@@ -112,7 +112,7 @@ const NavLink = styled.a`
   font-weight: 300;
   transition: all 0.3s ease 0s;
   cursor: pointer;
-  background-image: ${props =>
+  background-image: ${(props) =>
     props.active
       ? `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0.5)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`
       : `url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(244, 244, 244, 0)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');`};
@@ -155,13 +155,13 @@ const BottomNav = styled.div`
   grid-template-rows: 1fr;
   grid-gap: 2.2rem;
   display: grid;
-  border-top: ${props =>
+  border-top: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   position: absolute;
   bottom: 0;
   padding: 2.5% 4%;
   width: 100%;
-  color: ${props => props.theme.colors.foreground_low};
+  color: ${(props) => props.theme.colors.foreground_low};
   font-weight: 100;
   max-height: 120px;
   @media (max-width: 1400px) {
@@ -199,7 +199,7 @@ const BottomNav = styled.div`
       span {
         font-size: 1.5rem;
         display: flex;
-        border: 2px solid ${props => props.theme.colors.foreground_low};
+        border: 2px solid ${(props) => props.theme.colors.foreground_low};
         border-radius: 50%;
         width: 35px;
         height: 35px;
@@ -251,7 +251,7 @@ const NavList = styled.nav`
       position: relative;
       padding-bottom: 4%;
       span {
-        color: ${props => props.theme.colors.accent};
+        color: ${(props) => props.theme.colors.accent};
         font-size: 1.5rem;
         position: absolute;
         left: -40px;
@@ -299,7 +299,7 @@ const NavWrapper = styled.div`
   z-index: 9;
   width: calc(100% - 40px);
   height: calc(100% - 40px);
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   position: fixed;
   left: 20px;
   top: 20px;
@@ -319,7 +319,7 @@ const NavWrapper = styled.div`
   a {
     text-decoration: none;
   }
-  ${props =>
+  ${(props) =>
     props.open &&
     css`
       opacity: 1;

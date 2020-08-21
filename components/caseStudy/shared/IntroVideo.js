@@ -1,18 +1,19 @@
 import styled from "styled-components";
+import { Fade } from "react-awesome-reveal";
 
-const IntroVideo = props => (
+const IntroVideo = (props) => (
   <VideoWrapper>
-    <Video
-      autoPlay
-      playsInline
-      muted
-      loop
-      poster={`/assets/img/casestudies/${props.link}/intro_poster.jpg`}
-    >
-      <source
-        src={`/assets/video/casestudies/${props.link}/intro.mp4`}
-      />
-    </Video>
+    <Fade>
+      <Video
+        autoPlay
+        playsInline
+        muted
+        loop
+        poster={`/assets/img/casestudies/${props.link}/intro_poster.jpg`}
+      >
+        <source src={`/assets/video/casestudies/${props.link}/intro.mp4`} />
+      </Video>
+    </Fade>
   </VideoWrapper>
 );
 

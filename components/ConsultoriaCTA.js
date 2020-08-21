@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { Span } from "components/shared/Dangerously";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import { createContact } from "utils/sendinBlue.ts";
@@ -38,7 +38,9 @@ const ConsultoriaCTA = ({ cta, id }) => {
           </>
         }
       />
-      <h3>{cta.title2}</h3>
+      <Fade>
+        <h3>{cta.title2}</h3>
+      </Fade>
       <LinkWithArrow link={cta.link} linktext={cta.linktext} />
     </Container>
   );

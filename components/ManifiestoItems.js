@@ -2,41 +2,40 @@ import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import PinnedSection from "components/shared/PinnedSection";
 import { P } from "components/shared/Dangerously";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
 const ManifiestoItems = () => {
   const context = useLocaleContext();
-  let {intro, beliefs} = context.manifesto_page;
+  let { intro, beliefs } = context.manifesto_page;
 
   return (
     <PinnedSection title={intro.title}>
-    <P>{intro.p}</P>
-    <ol>
-      {beliefs.map(function(belief, index) {
-        return (
-          <Belief key={"belief" + index}>
-            <Fade>
-              <span>0{index + 1}</span>
-              <h3>{belief.title}</h3>
-              <p>{belief.p}</p>
-            </Fade>
-          </Belief>
-        );
-      })}
-    </ol>
-  </PinnedSection>
+      <P>{intro.p}</P>
+      <ol>
+        {beliefs.map(function (belief, index) {
+          return (
+            <Belief key={"belief" + index}>
+              <Fade>
+                <span>0{index + 1}</span>
+                <h3>{belief.title}</h3>
+                <p>{belief.p}</p>
+              </Fade>
+            </Belief>
+          );
+        })}
+      </ol>
+    </PinnedSection>
   );
 };
 
 export default React.memo(ManifiestoItems);
-
 
 const Belief = styled.li`
   list-style: none;
   position: relative;
   margin-bottom: 25%;
   span {
-    color: ${props => props.theme.colors.accent};
+    color: ${(props) => props.theme.colors.accent};
     font-weight: 100;
     left: -3px;
     font-size: 5rem;

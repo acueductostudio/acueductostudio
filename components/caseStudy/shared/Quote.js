@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Blockquote } from "components/shared/Dangerously";
 import Mark from "public/assets/img/layout/quoteMark.svg";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 
-const Quote = props => (
+const Quote = (props) => (
   <QuoteWrapper
     passedColor={props.color}
     noMargin={props.noMargin}
@@ -29,7 +29,7 @@ const Author = styled.p`
   font-size: 2.5rem;
   margin-top: 25px;
   opacity: 1.4;
-  font-weight:200;
+  font-weight: 200;
 `;
 const Label = styled.p`
   font-size: 1.1rem;
@@ -50,7 +50,7 @@ const QuoteMark = styled.div`
   svg {
     width: 100%;
     * {
-      fill: ${props =>
+      fill: ${(props) =>
         props.passedColor ? props.passedColor : props.theme.colors.foreground};
     }
   }
@@ -64,13 +64,13 @@ const QuoteLimiter = styled.div`
 const QuoteWrapper = styled.div`
   width: 100%;
   font-size: 3.4rem;
-  margin: ${props => (props.noMargin ? "0" : "6% 0 4% 0")};
-  ${props => (props.specialMarginBottom ? "margin-bottom: -10%;" : "")}
+  margin: ${(props) => (props.noMargin ? "0" : "6% 0 4% 0")};
+  ${(props) => (props.specialMarginBottom ? "margin-bottom: -10%;" : "")}
   padding: 0 5%;
   position: relative;
   display: flex;
   justify-content: center;
-  color: ${props =>
+  color: ${(props) =>
     props.passedColor ? props.passedColor : props.theme.colors.foreground};
   blockquote {
     margin: 0;

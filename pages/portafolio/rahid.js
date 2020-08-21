@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Head from "components/Head";
 import { useEffect, useState } from "react";
 import PageClipper from "components/PageClipper";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoRahid from "public/assets/img/casestudies/rahid/logoRahid.svg";
@@ -38,14 +38,14 @@ function Rahid(props) {
         en_canonical={"https://acueducto.studio/en/work/rahid"}
         lang={props.lang}
       />
-      <Fade>
-        <LandSection>
-          <LogoRahid />
-        </LandSection>
-      </Fade>
+      <LandSection>
+        <LogoRahid />
+      </LandSection>
       <FirstSection>
         <Marquee tags={t.intro_section.tags} />
+
         <IntroVideo link={t.link} />
+
         <TextColumn>
           <H2>{t.intro_section.title}</H2>
           <P>{t.intro_section.p}</P>
@@ -72,15 +72,19 @@ function Rahid(props) {
           <P>{t.third_section.p}</P>
         </TextColumn>
         <Branding>
-          {t.third_section.spans.map((span, index) => (
-            <span key={index + "span"}>{span}</span>
-          ))}
-          {loadAssets && (
-            <img
-              src="/assets/img/casestudies/rahid/brandGroup.svg"
-              alt="Branding"
-            />
-          )}
+          <Fade>
+            <div>
+              {t.third_section.spans.map((span, index) => (
+                <span key={index + "span"}>{span}</span>
+              ))}
+              {loadAssets && (
+                <img
+                  src="/assets/img/casestudies/rahid/brandGroup.svg"
+                  alt="Branding"
+                />
+              )}
+            </div>
+          </Fade>
         </Branding>
         {loadAssets && (
           <Applications>
@@ -103,12 +107,14 @@ function Rahid(props) {
         <TextColumn>
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
-          {loadAssets && (
-            <Picture
-              src="/assets/img/casestudies/rahid/home.jpg"
-              alt="Home Rahid.co"
-            />
-          )}
+          <>
+            {loadAssets && (
+              <Picture
+                src="/assets/img/casestudies/rahid/home.jpg"
+                alt="Home Rahid.co"
+              />
+            )}
+          </>
           <P>{t.fourth_section.p2}</P>
         </TextColumn>
         <InsertBlock>
@@ -193,6 +199,11 @@ const LaunchGrid = styled.div`
   margin: 5% 0;
   position: relative;
   max-height: 340px;
+  & > div {
+    &:nth-of-type(even) {
+      grid-column-start: 3;
+    }
+  }
   picture {
     width: 100%;
     margin: 0px !important;
@@ -200,12 +211,6 @@ const LaunchGrid = styled.div`
     img {
       width: 100%;
       margin: 0 !important;
-    }
-    &:nth-last-of-type(1) {
-      width: auto !important;
-    }
-    &:nth-of-type(even) {
-      grid-column-start: 3;
     }
   }
   @media (max-width: 1000px) {
@@ -264,14 +269,7 @@ const Applications = styled.div`
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 0.7fr 1fr;
-  picture {
-    width: 100%;
-    border-radius: 2px;
-    position: relative;
-    display: block;
-    img {
-      width: 100%;
-    }
+  & > div {
     &:nth-of-type(1) {
       grid-column: 1 / span 3;
       margin-top: -5%;
@@ -284,6 +282,15 @@ const Applications = styled.div`
       grid-column: 1 / span 5;
       grid-row: 2;
       align-self: flex-end;
+    }
+  }
+  picture {
+    width: 100%;
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    img {
+      width: 100%;
     }
   }
   @media (max-width: 500px) {
@@ -409,11 +416,13 @@ const SixthSection = styled(CommonSection)`
   align-items: flex-end;
   a {
     font-size: 4.5rem;
-    margin-bottom: 5%;
     text-decoration: none;
     line-height: 100%;
     border-bottom: 3px solid ${(props) => props.theme.colors.foreground};
+  }
+  & > div {
     margin-right: 20%;
+    margin-bottom: 5%;
   }
   @media (max-width: 900px) {
     background-position: left top;
@@ -428,6 +437,10 @@ const SixthSection = styled(CommonSection)`
   }
   @media (max-width: 500px), (max-height: 450px) {
     align-items: center;
+    & > div {
+      margin-right: 0;
+      display: contents;
+    }
     a {
       font-size: 1.5rem;
       padding: 5%;
@@ -457,13 +470,13 @@ const FifthSection = styled(CommonSection)`
       width: 100%;
       box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
     }
-    &:nth-last-of-type(1) {
-      max-width: 800px;
-      margin: 6% 0;
-    }
+  }
+  & > div:nth-last-of-type(4) {
+    max-width: 800px;
+    margin: 6% 0;
   }
   @media (max-width: 1000px) {
-    picture:nth-last-of-type(1) {
+    & > div:nth-last-of-type(4) {
       max-width: unset;
       width: 90%;
     }

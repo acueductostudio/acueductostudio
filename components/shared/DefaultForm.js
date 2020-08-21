@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import delayForLoading from "utils/delayForLoading.ts";
 import InputField from "components/shared/InputField";
 

@@ -1,7 +1,7 @@
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import TitleSection from "components/shared/TitleSection";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import createMarkup from "utils/createMarkup";
 import {
   Discover,
