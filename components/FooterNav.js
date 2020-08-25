@@ -22,7 +22,7 @@ export default function FooterNav({ nav }) {
         <MainNavList>
           {main.map(function (item, index) {
             return (
-              <Fade delay={200 + index * 50} key={"item" + index}>
+              <Fade triggerOnce delay={200 + index * 50} key={"item" + index}>
                 <li>
                   <ActiveLink href={item.link}>
                     <NavLinkConstant>{item.title}</NavLinkConstant>
@@ -35,7 +35,7 @@ export default function FooterNav({ nav }) {
         <SecondaryNavList>
           {secondary.map(function (item, index) {
             return (
-              <Fade delay={200 + index * 50} key={"item" + index}>
+              <Fade triggerOnce delay={200 + index * 50} key={"item" + index}>
                 <li>
                   <ActiveLink href={item.link}>
                     <NavLink>{item.title}</NavLink>
