@@ -5,11 +5,11 @@ import BorderLink from "components/shared/BorderedLink";
 
 const PinnedSection = ({ title, children, className, borderTop }) => (
   <Pinned className={className} borderTop={borderTop}>
-    <Fade>
+    <Fade triggerOnce>
       <H1>{title}</H1>
     </Fade>
     <ScrollDown>
-      <Fade>{children}</Fade>
+      <Fade triggerOnce>{children}</Fade>
     </ScrollDown>
   </Pinned>
 );

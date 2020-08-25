@@ -12,7 +12,7 @@ const Marquee = ({ tags, amount }) => {
   );
   return (
     <TagScroll>
-      <Fade>
+      <Fade triggerOnce>
         <MarqueeHelper delay={0} childMargin={0}>
           {list}
           {amount === 2 ? list : null}

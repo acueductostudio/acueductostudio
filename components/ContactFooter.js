@@ -38,7 +38,7 @@ const ContactFooter = () => {
   return (
     <>
       <Grid id="contact">
-        <Fade>
+        <Fade triggerOnce>
           <H1>{title}</H1>
         </Fade>
         <CopyToClipboard
@@ -48,7 +48,7 @@ const ContactFooter = () => {
           onMouseLeave={setUnhovered}
           onClick={setHovered}
         >
-          <Fade>
+          <Fade triggerOnce>
             <p>
               {p}
               <b>
@@ -61,7 +61,7 @@ const ContactFooter = () => {
           </Fade>
         </CopyToClipboard>
         <LogoCrop>
-          <Fade>
+          <Fade triggerOnce>
             <Logo />
           </Fade>
         </LogoCrop>

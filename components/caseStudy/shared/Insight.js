@@ -5,7 +5,7 @@ import { P } from "components/shared/Dangerously";
 const Insight = (props) => (
   <InsightWrapper color={props.color}>
     <Limiter>
-      <Fade>
+      <Fade triggerOnce>
         <h4>
           <span>0{props.number}</span>
           {props.insight.title}

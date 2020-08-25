@@ -25,7 +25,7 @@ const ProductContainer = ({
   const letter = letterArray[index];
   return (
     <Product showLongText={showLongText}>
-      <Fade>
+      <Fade triggerOnce>
         <span>{letter}.</span>
         <ProductIcon />
         <div>

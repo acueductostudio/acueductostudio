@@ -4,7 +4,7 @@ import ArrowSvg from "public/assets/img/layout/arrow.svg";
 
 const Arrow = ({ reverse }) => (
   <ArrowContainer reverse={reverse}>
-    <Fade>
+    <Fade triggerOnce>
       <ArrowSvg />
     </Fade>
   </ArrowContainer>

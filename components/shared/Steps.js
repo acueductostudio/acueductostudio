@@ -8,7 +8,7 @@ function Steps({ steps, children, iconArray }) {
     return (
       <StepBordered>
         <Step>
-          <Fade>
+          <Fade triggerOnce>
             <StepIcon />
             <h3>{title}</h3>
             <P>{p}</P>

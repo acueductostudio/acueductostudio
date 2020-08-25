@@ -12,7 +12,7 @@ const Services = () => {
       <ServiceGrid>
         {service_categories.map((service, index) => (
           <Service key={"service" + index}>
-            <Fade>
+            <Fade triggerOnce>
               <Info>
                 <h4>{service.title}</h4>
                 <ul>

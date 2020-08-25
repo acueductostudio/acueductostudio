@@ -13,7 +13,7 @@ const NextStudy = ({ link, margined }) => {
     <Link href={link} passHref>
       <Wrapper margined={margined}>
         <LogoContainer>
-          <Fade>
+          <Fade triggerOnce>
             <Logo
               style={{
                 backgroundImage: `url(/assets/img/casestudies/${link}/portfolio_logo.svg)`,
@@ -21,7 +21,7 @@ const NextStudy = ({ link, margined }) => {
             />
           </Fade>
         </LogoContainer>
-        <Fade>
+        <Fade triggerOnce>
           <P>{n.p}</P>
           <ArrowContainer>
             <Arrow />

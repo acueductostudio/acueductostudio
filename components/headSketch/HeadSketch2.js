@@ -5,7 +5,7 @@ import P5Wrapper from "utils/P5Wrapper";
 
 export default function HeadSketch(props) {
   return (
-    <Fade>
+    <Fade triggerOnce>
       <SketchContainer>
         <P5Wrapper
           sketch={head}

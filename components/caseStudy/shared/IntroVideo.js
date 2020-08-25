@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 
 const IntroVideo = (props) => (
   <VideoWrapper>
-    <Fade>
+    <Fade triggerOnce>
       <Video
         autoPlay
         playsInline

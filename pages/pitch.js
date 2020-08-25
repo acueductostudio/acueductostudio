@@ -159,7 +159,7 @@ const StepContainer = ({ index, title, p, li, p2 }) => {
   return (
     <StepBordered>
       <Step>
-        <Fade>
+        <Fade triggerOnce>
           <span>0{index + 1}</span>
           <StepIcon />
           <h3>{title}</h3>
@@ -244,7 +244,7 @@ export default function Pitch(props) {
         borderTop
       />
       <LogoListContainer>
-        <Fade>
+        <Fade triggerOnce>
           <H3>{t.tools_section.apps}</H3>
           <RenderLogoList array={appsLogoArray} />
 

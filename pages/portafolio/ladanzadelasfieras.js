@@ -85,7 +85,7 @@ function LaDanzaDeLasFieras(props) {
         </TextColumn>
         {loadAssets && (
           <PosterGrid>
-            <Fade>
+            <Fade triggerOnce>
               <PosterLine />
             </Fade>
             <Picture
@@ -153,7 +153,7 @@ function LaDanzaDeLasFieras(props) {
         </TextColumn>
         <SequenceContainer>
           {loadAssets && (
-            <Fade>
+            <Fade triggerOnce>
               <ThePlayer
                 url={"https://www.youtube.com/watch?v=11aYNilxhko"}
                 still={
@@ -284,7 +284,7 @@ function LaDanzaDeLasFieras(props) {
         </TextColumn>
       </Fifth>
       <Sixth>
-        <Fade>
+        <Fade triggerOnce>
           <a
             target="_blank"
             rel="noopener noreferrer"

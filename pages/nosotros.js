@@ -48,7 +48,7 @@ function About(props) {
                 rotationStart={index > 0 ? 50 : 0}
               />
             )}
-            <Fade>
+            <Fade triggerOnce>
               <H4>{person.name}</H4>
               <span>{person.position}</span>
               <P>{person.bio}</P>

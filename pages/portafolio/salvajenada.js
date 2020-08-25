@@ -138,7 +138,7 @@ export default function Salvajenada(props) {
         </InterBack>
         <StickyContainer>
           <Sticky>
-            <Fade>
+            <Fade triggerOnce>
               <span>{t.second_section.sticky}</span>
               <div>
                 <a
@@ -165,22 +165,22 @@ export default function Salvajenada(props) {
         </Column>
         <TableStrengths>
           <div>
-            <Fade>
+            <Fade triggerOnce>
               <p>{t.second_section.table[0].label}</p>
             </Fade>
           </div>
           <div>
-            <Fade>
+            <Fade triggerOnce>
               <P>{t.second_section.table[0].content}</P>
             </Fade>
           </div>
           <div>
-            <Fade>
+            <Fade triggerOnce>
               <p>{t.second_section.table[1].label}</p>
             </Fade>
           </div>
           <div>
-            <Fade>
+            <Fade triggerOnce>
               <P>{t.second_section.table[1].content}</P>
             </Fade>
           </div>
@@ -190,12 +190,12 @@ export default function Salvajenada(props) {
         </Column>
         <TableProposition>
           <div>
-            <Fade>
+            <Fade triggerOnce>
               <p>{t.second_section.table2[0].label}</p>
             </Fade>
           </div>
           <div>
-            <Fade>
+            <Fade triggerOnce>
               <p>{t.second_section.table2[0].content}</p>
             </Fade>
           </div>
@@ -267,7 +267,7 @@ export default function Salvajenada(props) {
           <H3>{t.fifth_section.title}</H3>
         </Column>
         {loadAssets && <FramesEmbed />}
-        <Fade>
+        <Fade triggerOnce>
           <a
             target="_blank"
             rel="noopener noreferrer"

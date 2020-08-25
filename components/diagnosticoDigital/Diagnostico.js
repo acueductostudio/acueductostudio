@@ -110,7 +110,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
   return (
     <QuestionSection>
       {testStatus === "" && (
-        <Fade>
+        <Fade triggerOnce>
           <QuestionGrid>
             <form onSubmit={handleSubmit(onSubmit)} onKeyDown={handleKeyDown}>
               {questions.map((question, index) => (
@@ -244,7 +244,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
         </Fade>
       )}
       {testStatus === "loading" && (
-        <Fade>
+        <Fade triggerOnce>
           <Loading>
             <p>{analyzing_results}...</p>
             <span />

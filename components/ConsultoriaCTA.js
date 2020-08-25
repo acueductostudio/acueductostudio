@@ -38,7 +38,7 @@ const ConsultoriaCTA = ({ cta, id }) => {
           </>
         }
       />
-      <Fade>
+      <Fade triggerOnce>
         <h3>{cta.title2}</h3>
       </Fade>
       <LinkWithArrow link={cta.link} linktext={cta.linktext} />

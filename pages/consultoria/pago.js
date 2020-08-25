@@ -94,7 +94,7 @@ const Pago = (props) => {
             <span>01</span>
             <h2>{step1.title}</h2>
             <PayContainer>
-              <Fade>
+              <Fade triggerOnce>
                 <a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=616963124-341c7abb-d6a7-45c8-9831-c3a3ec56b8c8">
                   <Cards />
                   <h3>{step1.card}</h3>

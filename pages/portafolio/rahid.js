@@ -72,7 +72,7 @@ function Rahid(props) {
           <P>{t.third_section.p}</P>
         </TextColumn>
         <Branding>
-          <Fade>
+          <Fade triggerOnce>
             <div>
               {t.third_section.spans.map((span, index) => (
                 <span key={index + "span"}>{span}</span>
@@ -150,7 +150,7 @@ function Rahid(props) {
         <TextColumn>
           <P>{t.fifth_section.p2}</P>
           <Stat>
-            {/* <Fade> */}
+            {/* <Fade triggerOnce> */}
             <span>
               77<b>%</b>
             </span>
@@ -177,7 +177,7 @@ function Rahid(props) {
         </TextColumn>
       </FifthSection>
       <SixthSection>
-        <Fade>
+        <Fade triggerOnce>
           <a target="_blank" rel="noopener noreferrer" href="https://rahid.co">
             {t.sixth_section.linkp} rahid.co
           </a>

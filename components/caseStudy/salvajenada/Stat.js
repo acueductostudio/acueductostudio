@@ -5,7 +5,7 @@ import { B } from "components/shared/Dangerously";
 const Stat = ({ stat, children }) => {
   return (
     <StatWrapper>
-      <Fade>
+      <Fade triggerOnce>
         <p>
           <B>{stat.big}</B>
           {stat.small}

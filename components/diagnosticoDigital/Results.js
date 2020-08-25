@@ -19,7 +19,7 @@ const Results = ({ results, results_section, setTestStatus }) => {
   let { greeting, answers, last_message } = results_section;
   return (
     <ResultsGrid>
-      <Fade>
+      <Fade triggerOnce>
         <div>
           <MainResult
           // onClick={() => setTestStatus("")}
@@ -72,7 +72,7 @@ const Results = ({ results, results_section, setTestStatus }) => {
         </div>
       </Fade>
       <LastMessage>
-        <Fade>
+        <Fade triggerOnce>
           <div>
             <p>{last_message.p1}</p>
             <h3>{last_message.title1}</h3>

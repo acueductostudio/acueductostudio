@@ -47,7 +47,7 @@ export default function FooterNav({ nav }) {
         </SecondaryNavList>
       </LeftNavs>
       <SocialNav>
-        <Fade>
+        <Fade triggerOnce>
           <li>
             <NavLink
               target="_blank"

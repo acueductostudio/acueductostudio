@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 
 const TextColumn = ({ children }) => (
   <Column>
-    <Fade>{children}</Fade>
+    <Fade triggerOnce>{children}</Fade>
   </Column>
 );
 

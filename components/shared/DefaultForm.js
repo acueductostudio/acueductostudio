@@ -79,7 +79,7 @@ const DefaultForm = ({
         </>
       )}
       {formStatus === "loading" && (
-        <Fade>
+        <Fade triggerOnce>
           <Loading>
             <p>{text.loading}</p>
           </Loading>

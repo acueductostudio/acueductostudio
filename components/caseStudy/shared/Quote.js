@@ -9,7 +9,7 @@ const Quote = (props) => (
     noMargin={props.noMargin}
     specialMarginBottom={props.specialMarginBottom}
   >
-    <Fade>
+    <Fade triggerOnce>
       <QuoteLimiter>
         <QuoteMark passedColor={props.color}>
           <Mark />

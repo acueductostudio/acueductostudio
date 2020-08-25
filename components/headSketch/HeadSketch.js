@@ -52,7 +52,7 @@ const Model = React.memo((props) => {
 
 export default function HeadSketch(props) {
   return (
-    <Fade>
+    <Fade triggerOnce>
       <SketchContainer>
         <Canvas camera={{ position: [0, -0.1, 5] }} raycaster={false}>
           <ambientLight intensity={1} color={[8, 8, 8]} />

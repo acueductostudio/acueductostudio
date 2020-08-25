@@ -8,7 +8,7 @@ export default function LinkWithArrow({ link, linktext }) {
   return (
     <Link href={link[0]} passHref>
       <LinkContainer>
-        <Fade>
+        <Fade triggerOnce>
           <p>
             <span dangerouslySetInnerHTML={createMarkup(linktext)} />{" "}
             <b>{link[1]}</b>

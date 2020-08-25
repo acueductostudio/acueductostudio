@@ -15,7 +15,7 @@ const ManifiestoItems = () => {
         {beliefs.map(function (belief, index) {
           return (
             <Belief key={"belief" + index}>
-              <Fade>
+              <Fade triggerOnce>
                 <span>0{index + 1}</span>
                 <h3>{belief.title}</h3>
                 <p>{belief.p}</p>

@@ -40,7 +40,7 @@ function Podcast(props) {
       />
       <PodcastGrid>
         <div>
-          <Fade>
+          <Fade triggerOnce>
             <H1>{title}</H1>
             <span>
               por <Logo />
@@ -48,7 +48,7 @@ function Podcast(props) {
             <p>{p}</p>
           </Fade>
           <LogoList>
-            <Fade>
+            <Fade triggerOnce>
               <P>Escúchalo en </P>
               <a
                 target="_blank"
@@ -87,7 +87,7 @@ function Podcast(props) {
           <PodcastList>
             {podcasts.map((pod, index) => (
               <Pod key={"podentry" + index}>
-                <Fade>
+                <Fade triggerOnce>
                   <iframe
                     title={pod.title}
                     src={pod.url}

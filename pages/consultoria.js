@@ -88,7 +88,7 @@ function Consultoria(props) {
       <TitleSection {...areas_section.intro} borderTop />
       <Steps steps={areas_section.areas} iconArray={stepIconArray}>
         <LastStep>
-          <Fade>
+          <Fade triggerOnce>
             <h3>{areas_section.area_extra.title}</h3>
             <ul>
               {areas_section.area_extra.ul.map((item, index) => (

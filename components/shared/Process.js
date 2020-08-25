@@ -18,7 +18,7 @@ const StepContainer = ({ index, title, p }) => {
   const Icon = iconArray[index];
   return (
     <Step>
-      <Fade>
+      <Fade triggerOnce>
         <span>0{index + 1}</span>
         <Icon />
         <h3>{title}</h3>

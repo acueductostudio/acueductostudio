@@ -21,7 +21,7 @@ const SingleCase = (props) => {
         passHref
       >
         <a>
-          <Fade>
+          <Fade triggerOnce>
             <VidContainer>
               {props.lang === "en" ? "go to project" : "visitar proyecto"}
               <Logo
@@ -50,7 +50,7 @@ const SingleCase = (props) => {
         </a>
       </Link>
       <Info>
-        <Fade>
+        <Fade triggerOnce>
           <Link
             href={
               props.lang === "en"
@@ -65,7 +65,7 @@ const SingleCase = (props) => {
           </Link>
         </Fade>
         <Flexed>
-          <Fade>
+          <Fade triggerOnce>
             <P>{props.tags}</P>
           </Fade>
           <Link
