@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { B } from "components/shared/Dangerously";
 
 const Stat = ({ stat, children }) => {
@@ -36,7 +36,7 @@ const StatWrapper = styled.div`
     font-weight: 300;
     line-height: 100%;
     display: block;
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
   }
   @media (max-width: 1000px) {
     padding-top: 2%;

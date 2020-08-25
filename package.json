@@ -30,13 +30,12 @@
     "react-hotjar": "^2.2.1",
     "react-player": "^2.5.0",
     "react-radio-group": "^3.0.3",
-    "react-reveal": "^1.2.2",
     "react-share": "^4.2.1",
     "react-three-fiber": "^4.1.0",
     "react-tooltip-lite": "^1.12.0",
     "react-top-loading-bar": "^2.0.0",
     "styled-components": "^5.1.1",
-    "three": "^0.118.0"
+    "three": "^0.119.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^9.3.4",

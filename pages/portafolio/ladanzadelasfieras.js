@@ -3,7 +3,7 @@ import Head from "components/Head";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import PageClipper from "components/PageClipper";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoDanza from "public/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
@@ -31,7 +31,7 @@ const ThePlayer = dynamic(
   import("components/caseStudy/ladanzadelasfieras/VideoPlayer"),
   {
     loading: () => <p>Loading player...</p>,
-    ssr: false
+    ssr: false,
   }
 );
 
@@ -54,11 +54,9 @@ function LaDanzaDeLasFieras(props) {
         en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
         lang={props.lang}
       />
-      <Fade>
-        <LandSection>
-          <LogoDanza />
-        </LandSection>
-      </Fade>
+      <LandSection>
+        <LogoDanza />
+      </LandSection>
       <FirstSection>
         <Marquee tags={t.intro_section.tags} />
         <IntroVideo link={t.link} />
@@ -67,16 +65,14 @@ function LaDanzaDeLasFieras(props) {
           <P>{t.intro_section.p}</P>
           <LaurelNumbers>
             <Laurel />
-            <Fade>
-              <ul>
-                {t.intro_section.stats.map((stat, index) => (
-                  <li key={"stat_" + index}>
-                    <b>{stat.big}</b>
-                    <p>{stat.small}</p>
-                  </li>
-                ))}
-              </ul>
-            </Fade>
+            <ul>
+              {t.intro_section.stats.map((stat, index) => (
+                <li key={"stat_" + index}>
+                  <b>{stat.big}</b>
+                  <p>{stat.small}</p>
+                </li>
+              ))}
+            </ul>
             <Laurel />
           </LaurelNumbers>
           <P>{t.intro_section.p2}</P>
@@ -89,7 +85,9 @@ function LaDanzaDeLasFieras(props) {
         </TextColumn>
         {loadAssets && (
           <PosterGrid>
-            <PosterLine />
+            <Fade>
+              <PosterLine />
+            </Fade>
             <Picture
               src={"/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"}
               alt="First references for branding"
@@ -188,7 +186,7 @@ function LaDanzaDeLasFieras(props) {
         </Insight>
         <Quote
           quote={t.third_section.insights.portfolio.quote}
-          color={props => props.theme.colors.background}
+          color={(props) => props.theme.colors.background}
           noMargin
         />
         <Insight
@@ -207,7 +205,7 @@ function LaDanzaDeLasFieras(props) {
         </Insight>
         <Quote
           quote={t.third_section.insights.press.quote}
-          color={props => props.theme.colors.background}
+          color={(props) => props.theme.colors.background}
           noMargin
         />
         <Insight
@@ -241,16 +239,14 @@ function LaDanzaDeLasFieras(props) {
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
           <Stat>
-            <Fade>
-              <span>
-                81<b>%</b>
-              </span>
-            </Fade>
+            <span>
+              81<b>%</b>
+            </span>
             <P>{t.fourth_section.stat}</P>
           </Stat>
           <P>{t.fourth_section.p2}</P>
-          {loadAssets && (
-            <Fade>
+          <>
+            {loadAssets && (
               <video
                 autoPlay
                 playsInline
@@ -262,8 +258,8 @@ function LaDanzaDeLasFieras(props) {
               >
                 <source src="/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
               </video>
-            </Fade>
-          )}
+            )}
+          </>
         </TextColumn>
       </Fourth>
       <Fifth>
@@ -273,15 +269,17 @@ function LaDanzaDeLasFieras(props) {
         </TextColumn>
         <Quote
           quote={t.fifth_section.quote}
-          color={props => props.theme.colors.background}
+          color={(props) => props.theme.colors.background}
         />
         <TextColumn>
-          {loadAssets && (
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
-              alt="Festival awards"
-            />
-          )}
+          <>
+            {loadAssets && (
+              <Picture
+                src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+                alt="Festival awards"
+              />
+            )}
+          </>
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
       </Fifth>
@@ -324,7 +322,7 @@ const MacContact = styled.div`
 
 const Faces = styled.div`
   max-width: 670px;
-  margin: 8% 0 0;
+  margin: 5% 0 0;
   position: relative;
   width: 100%;
   img {
@@ -478,12 +476,14 @@ const TransitionWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  picture {
+  & > div {
     max-width: 1300px;
     padding: 0 5%;
     width: 100%;
     margin: 0 auto;
     z-index: 1;
+  }
+  picture {
     img {
       width: 100%;
       max-width: 100%;
@@ -497,7 +497,7 @@ const TransitionWrapper = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    background-color: ${props => props.theme.colors.background};
+    background-color: ${(props) => props.theme.colors.background};
   }
 `;
 
@@ -511,17 +511,11 @@ const PosterGrid = styled.div`
   width: 90%;
   position: relative;
   svg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: 0;
     path {
-      stroke-width: ${props => props.theme.stroke};
+      stroke-width: ${(props) => props.theme.stroke};
     }
   }
-  picture {
+  & > div {
     z-index: 1;
     max-width: 100%;
     width: 100%;
@@ -529,21 +523,29 @@ const PosterGrid = styled.div`
       max-width: 100%;
       width: 100%;
     }
-    &:nth-of-type(4) {
+    &:nth-of-type(1) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 0;
+    }
+    &:nth-of-type(5) {
       grid-column: 2 / span 3;
       grid-row: 2 / span 1;
     }
-    &:nth-of-type(5) {
+    &:nth-of-type(6) {
       grid-column: 6 / span 1;
       grid-row: 1 / span 2;
     }
   }
   @media (max-width: 900px) {
-    picture {
-      &:nth-of-type(4) {
+    & > div {
+      &:nth-of-type(5) {
         grid-column: 1 / span 3;
       }
-      &:nth-of-type(5) {
+      &:nth-of-type(6) {
         grid-column: 4 / span 3;
       }
     }
@@ -554,13 +556,13 @@ const PosterGrid = styled.div`
     svg {
       display: none;
     }
-    picture {
+    & > div {
       grid-column-end: span 2;
-      &:nth-of-type(4) {
+      &:nth-of-type(5) {
         grid-row: 1 / span 2;
         grid-column: 5 / span 2;
       }
-      &:nth-of-type(5) {
+      &:nth-of-type(6) {
         grid-row: 3 / span 1;
         grid-column: 1 / span 6;
       }
@@ -575,7 +577,7 @@ const Stat = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  color: ${props => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.foreground};
   span {
     font-size: 8rem;
     font-weight: 300;
@@ -621,16 +623,18 @@ const Stat = styled.div`
 
 const Sixth = styled(CommonSection)`
   min-height: 100vh;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   background-image: url("/assets/img/casestudies/ladanzadelasfieras/sixthBack.svg");
   background-position: center bottom;
   background-size: cover;
   a {
     font-size: 4.5rem;
-    margin-bottom: 5%;
     text-decoration: none;
     line-height: 100%;
-    border-bottom: 3px solid ${props => props.theme.colors.foreground};
+    border-bottom: 3px solid ${(props) => props.theme.colors.foreground};
+  }
+  & > div {
+    margin-bottom: 5%;
   }
   @media (max-width: 900px) {
     background-position: left top;
@@ -644,6 +648,9 @@ const Sixth = styled(CommonSection)`
     }
   }
   @media (max-width: 500px), (max-height: 450px) {
+    & > div {
+      display: contents;
+    }
     a {
       font-size: 1.5rem;
       padding: 5%;
@@ -656,8 +663,8 @@ const Sixth = styled(CommonSection)`
 `;
 
 const Fifth = styled(CommonSection)`
-  background-color: ${props => props.theme.colors.foreground};
-  color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.background};
   padding-bottom: 10%;
   h2 b {
     color: ${fierasRed};
@@ -669,8 +676,8 @@ const Fifth = styled(CommonSection)`
 `;
 
 const Fourth = styled(CommonSection)`
-  background-color: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.foreground_low};
+  background-color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground_low};
   margin-bottom: 10%;
   video {
     width: 100%;
@@ -678,18 +685,18 @@ const Fourth = styled(CommonSection)`
     margin-top: 12%;
   }
   h3 {
-    color: ${props => props.theme.colors.foreground};
+    color: ${(props) => props.theme.colors.foreground};
   }
 `;
 
 const Third = styled(CommonSection)`
-  color: ${props => props.theme.colors.background};
-  background-color: ${props => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.foreground};
 `;
 
 const Section_Pre = styled(CommonSection)`
-  color: ${props => props.theme.colors.foreground};
-  background-color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
   padding: 10% 0%;
   @media (max-width: 1000px) {
     padding-top: 20%;
@@ -697,16 +704,16 @@ const Section_Pre = styled(CommonSection)`
 `;
 
 const Section_Sub = styled(CommonSection)`
-  color: ${props => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.background};
   background-color: ${fierasRed};
   padding-bottom: 2%;
 `;
 
 const SecondSection = styled(CommonSection)`
-  background-color: ${props => props.theme.colors.foreground};
-  color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.background};
   h2 {
-    color: ${props => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.background};
     b {
       color: ${fierasRed};
     }
@@ -736,7 +743,7 @@ const LaurelNumbers = styled.div`
     max-width: 70px;
     transform-origin: 50% 50%;
     * {
-      fill: ${props => props.theme.colors.foreground};
+      fill: ${(props) => props.theme.colors.foreground};
     }
     &:nth-of-type(2) {
       transform: scaleX(-1);
@@ -761,7 +768,7 @@ const LaurelNumbers = styled.div`
   }
   @media (max-width: 600px) {
     p {
-      color: ${props => props.theme.colors.foreground_low};
+      color: ${(props) => props.theme.colors.foreground_low};
       margin-top: -5px;
     }
     b {
@@ -800,8 +807,8 @@ const LaurelNumbers = styled.div`
 `;
 
 const FirstSection = styled(CommonSection)`
-  background-color: ${props => props.theme.colors.background};
-  color: ${props => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
   padding-bottom: 10%;
   h2 {
     b {
@@ -812,7 +819,7 @@ const FirstSection = styled(CommonSection)`
 
 const LandSection = styled(CommonSection)`
   min-height: 100vh;
-  background-color: ${props => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.background};
   background-image: url("/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
   background-position: center bottom;
   background-size: cover;

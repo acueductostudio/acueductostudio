@@ -195,10 +195,6 @@ const BodyOverflow = createGlobalStyle`
      box-shadow: 1px 1px 4px ${(props) => props.theme.colors.accent} !important;
   }
   @media (max-width: 600px), (max-height:450px) {
-    .react-reveal {
-    animation: none !important;
-    opacity: 1 !important;
-    }
     #Wrapper{
       overflow: ${(props) => (props.hasLoaded ? "unset" : "hidden")};
       height:${(props) => (props.hasLoaded ? "unset" : "100%")};

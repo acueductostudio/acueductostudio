@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Head from "components/Head";
 import { useEffect, useState } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import PageClipper from "components/PageClipper";
 import dynamic from "next/dynamic";
 import ContactFooter from "components/ContactFooter";
@@ -107,11 +107,9 @@ export default function Salvajenada(props) {
         en_canonical={"https://acueducto.studio/en/work/salvajenada"}
         lang={props.lang}
       />
-      <Fade>
-        <Land>
-          <LogoSalvaje />
-        </Land>
-      </Fade>
+      <Land>
+        <LogoSalvaje />
+      </Land>
       <Intro>
         <Marquee tags={t.intro_section.tags} />
         <IntroVideo link={t.link} />
@@ -140,23 +138,25 @@ export default function Salvajenada(props) {
         </InterBack>
         <StickyContainer>
           <Sticky>
-            <span>{t.second_section.sticky}</span>
-            <div>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g"
-              >
-                <Spotify />
-              </a>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP"
-              >
-                <AppleMusic />
-              </a>
-            </div>
+            <Fade>
+              <span>{t.second_section.sticky}</span>
+              <div>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://open.spotify.com/playlist/4GjrIoPOl6xNo9ZPOhF3tz?si=T2xe-69oQfuWo5xmlY7S1g"
+                >
+                  <Spotify />
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP"
+                >
+                  <AppleMusic />
+                </a>
+              </div>
+            </Fade>
           </Sticky>
         </StickyContainer>
         <Column>
@@ -164,17 +164,41 @@ export default function Salvajenada(props) {
           <P>{t.second_section.p}</P>
         </Column>
         <TableStrengths>
-          <p>{t.second_section.table[0].label}</p>
-          <P>{t.second_section.table[0].content}</P>
-          <p>{t.second_section.table[1].label}</p>
-          <P>{t.second_section.table[1].content}</P>
+          <div>
+            <Fade>
+              <p>{t.second_section.table[0].label}</p>
+            </Fade>
+          </div>
+          <div>
+            <Fade>
+              <P>{t.second_section.table[0].content}</P>
+            </Fade>
+          </div>
+          <div>
+            <Fade>
+              <p>{t.second_section.table[1].label}</p>
+            </Fade>
+          </div>
+          <div>
+            <Fade>
+              <P>{t.second_section.table[1].content}</P>
+            </Fade>
+          </div>
         </TableStrengths>
         <Column>
           <P>{t.second_section.p2}</P>
         </Column>
         <TableProposition>
-          <p>{t.second_section.table2[0].label}</p>
-          <p>{t.second_section.table2[0].content}</p>
+          <div>
+            <Fade>
+              <p>{t.second_section.table2[0].label}</p>
+            </Fade>
+          </div>
+          <div>
+            <Fade>
+              <p>{t.second_section.table2[0].content}</p>
+            </Fade>
+          </div>
         </TableProposition>
         <Quote quote={t.second_section.quote} specialMarginBottom />
       </Second>
@@ -186,7 +210,6 @@ export default function Salvajenada(props) {
           <H3>{"– " + t.third_section.subtitle}</H3>
           <P>{t.third_section.p}</P>
         </Column>
-
         <Insight insight={t.third_section.insights.periodicity} number={1}>
           <PlaylistGrid>{loadAssets && playlistCovers()}</PlaylistGrid>
         </Insight>
@@ -272,26 +295,29 @@ const Sticky = styled.div`
       props.theme.stroke + " solid " + props.theme.colors.foreground_low};
     text-align: center;
   }
-  div {
-    padding: 13px 21px 11px 21px;
-    border: ${(props) =>
-      props.theme.stroke + " solid " + props.theme.colors.foreground_low};
-    border-top: 0;
-    display: flex;
-    a {
-      height: 40px;
-      &:nth-child(1) {
-        padding-right: 8px;
+  & > div {
+    display: contents;
+    & > div {
+      padding: 13px 21px 11px 21px;
+      border: ${(props) =>
+        props.theme.stroke + " solid " + props.theme.colors.foreground_low};
+      border-top: 0;
+      display: flex;
+      a {
+        height: 40px;
+        &:nth-child(1) {
+          padding-right: 8px;
+        }
+        &:nth-child(2) {
+          padding-left: 8px;
+        }
       }
-      &:nth-child(2) {
-        padding-left: 8px;
-      }
-    }
-    svg {
-      width: 100%;
-      height: 100%;
-      * {
-        fill: ${(props) => props.theme.colors.foreground};
+      svg {
+        width: 100%;
+        height: 100%;
+        * {
+          fill: ${(props) => props.theme.colors.foreground};
+        }
       }
     }
   }
@@ -544,9 +570,12 @@ const Table = styled.div`
   max-width: 800px;
   margin: 5%;
   box-shadow: 0 0 0 2px ${(props) => props.theme.colors.foreground_low};
-  p {
+  & > div {
     box-shadow: 0 0 0 1px ${(props) => props.theme.colors.foreground_low};
+  }
+  p {
     padding: 25px;
+    height: 100%;
     font-weight: 100;
     color: ${(props) => props.theme.colors.foreground};
   }
@@ -584,14 +613,14 @@ const TableProposition = styled(Table)`
 
 const TableStrengths = styled(Table)`
   grid-template-columns: 1fr 1fr;
-  p {
+  & > div {
     &:nth-child(3) {
       grid-column: 2 / span 1;
       grid-row: 1 / span 1;
     }
   }
   @media (max-width: 500px) {
-    p {
+    & > div {
       &:nth-child(1),
       &:nth-child(3) {
         font-weight: 300;
@@ -637,13 +666,15 @@ const Fifth = styled(CommonSection)`
   padding-bottom: 10%;
   h3 {
     padding: 0;
+    font-weight: 200;
     line-height: 1;
+    margin-bottom: 10%;
   }
   a {
     font-size: 0;
-    max-width: 120px;
     svg {
       width: 100%;
+      max-width: 120px;
       * {
         fill: ${(props) => props.theme.colors.background};
         width: 100%;

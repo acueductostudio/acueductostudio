@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "components/shared/Arrow";
@@ -21,6 +21,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
 
   const [qIndex, setQIndex] = useState(0);
   const [aIndex, setAIndex] = useState(0);
+  const [aIndexShouldIncrease, setAIndexShouldIncrease] = useState(true);
   const [testStatus, setTestStatus] = useState("");
   const [results, setResults] = useState([]);
   const { register, handleSubmit, errors } = useForm();
@@ -86,16 +87,24 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
     }
   };
 
+  useEffect(() => {
+    qIndex === aIndex && setAIndexShouldIncrease(true);
+  }, [qIndex]);
+
   function handleClick() {
-    setQIndex(qIndex < NUMBER_OF_QS && qIndex + 1);
-    setAIndex(aIndex < NUMBER_OF_QS ? aIndex + 1 : aIndex);
+    if (qIndex < NUMBER_OF_QS) {
+      setQIndex(qIndex + 1);
+      aIndexShouldIncrease && setAIndex(aIndex + 1);
+    }
   }
 
   function prevIndex() {
     qIndex !== 0 && setQIndex(qIndex - 1);
+    setAIndexShouldIncrease(false);
   }
   function nextIndex() {
     aIndex > qIndex && qIndex < NUMBER_OF_QS && setQIndex(qIndex + 1);
+    qIndex === aIndex && setAIndexShouldIncrease(true);
   }
 
   return (

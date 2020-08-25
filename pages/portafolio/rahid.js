@@ -150,11 +150,11 @@ function Rahid(props) {
         <TextColumn>
           <P>{t.fifth_section.p2}</P>
           <Stat>
-            <Fade>
-              <span>
-                77<b>%</b>
-              </span>
-            </Fade>
+            {/* <Fade> */}
+            <span>
+              77<b>%</b>
+            </span>
+            {/* </Fade> */}
             <P>{t.fifth_section.stat}</P>
           </Stat>
           <P>{t.fifth_section.p3}</P>

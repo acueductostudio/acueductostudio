@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { P } from "components/shared/Dangerously";
 
-const Insight = props => (
+const Insight = (props) => (
   <InsightWrapper color={props.color}>
     <Limiter>
       <Fade>
@@ -10,8 +10,8 @@ const Insight = props => (
           <span>0{props.number}</span>
           {props.insight.title}
         </h4>
+        <P>{props.insight.p}</P>
       </Fade>
-      <P>{props.insight.p}</P>
     </Limiter>
     {props.children}
   </InsightWrapper>
@@ -38,7 +38,7 @@ const InsightWrapper = styled.div`
     position: relative;
     span {
       font-size: 1.5rem;
-      color: ${props => (props.color ? props.color : "#008dc9")};
+      color: ${(props) => (props.color ? props.color : "#008dc9")};
       display: block;
       position: absolute;
       bottom: 0;
@@ -67,7 +67,7 @@ const InsightWrapper = styled.div`
         width: 100%;
         min-height: 25px;
         line-height: 60%;
-        color: ${props => (props.color ? props.color : "#019ee3")};
+        color: ${(props) => (props.color ? props.color : "#019ee3")};
       }
     }
   }
