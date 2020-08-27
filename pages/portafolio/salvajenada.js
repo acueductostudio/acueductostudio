@@ -311,10 +311,18 @@ const Sticky = styled.div`
         &:nth-child(2) {
           padding-left: 8px;
         }
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            svg {
+              transform: scale(1.07);
+            }
+          }
+        }
       }
       svg {
         width: 100%;
         height: 100%;
+        transition: 0.4s ease all;
         * {
           fill: ${(props) => props.theme.colors.foreground};
         }
@@ -672,9 +680,17 @@ const Fifth = styled(CommonSection)`
   }
   a {
     font-size: 0;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        svg {
+          transform: scale(1.07);
+        }
+      }
+    }
     svg {
       width: 100%;
       max-width: 120px;
+      transition: 0.4s ease all;
       * {
         fill: ${(props) => props.theme.colors.background};
         width: 100%;

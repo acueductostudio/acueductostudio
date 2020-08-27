@@ -2,7 +2,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Picture = ({ src, alt, fraction }) => {
   return (
-    <Fade fraction={fraction ? fraction : 0.1}>
+    <Fade fraction={fraction ? fraction : 0.1} triggerOnce>
       <picture>
         <source
           srcSet={src.replace(/jpg|jpeg|png/gi, "webp")}

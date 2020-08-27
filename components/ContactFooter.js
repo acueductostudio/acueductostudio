@@ -41,14 +41,14 @@ const ContactFooter = () => {
         <Fade triggerOnce>
           <H1>{title}</H1>
         </Fade>
-        <CopyToClipboard
-          text={"hola@acueducto.studio"}
-          onCopy={doSetCopied}
-          onMouseEnter={setHovered}
-          onMouseLeave={setUnhovered}
-          onClick={setHovered}
-        >
-          <Fade triggerOnce>
+        <Fade triggerOnce>
+          <CopyToClipboard
+            text={"hola@acueducto.studio"}
+            onCopy={doSetCopied}
+            onMouseEnter={setHovered}
+            onMouseLeave={setUnhovered}
+            onClick={setHovered}
+          >
             <p>
               {p}
               <b>
@@ -58,8 +58,8 @@ const ContactFooter = () => {
                 </CopyMessage>
               </b>
             </p>
-          </Fade>
-        </CopyToClipboard>
+          </CopyToClipboard>
+        </Fade>
         <LogoCrop>
           <Fade triggerOnce>
             <Logo />
@@ -90,6 +90,9 @@ const Grid = styled(TitleSectionGrid)`
   padding: 10% 4% 20% 4%;
   h1 {
     color: ${(props) => props.theme.colors.foreground};
+  }
+  & > div {
+    z-index: 8;
   }
   p {
     z-index: 8;
