@@ -20,7 +20,7 @@
     "next": "^9.5.2",
     "next-offline": "^5.0.2",
     "react": "17.0.0-rc.0",
-    "react-awesome-reveal": "3.0.0",
+    "react-awesome-reveal": "3.3.0",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "17.0.0-rc.0",
     "react-facebook-pixel": "^0.1.3",
