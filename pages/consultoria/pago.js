@@ -173,6 +173,7 @@ const PayContainer = styled.div`
     &:after {
       content: "pagar";
       position: absolute;
+      pointer-events: none;
       display: flex;
       font-size: 2.5rem;
       font-weight: 100;
