@@ -9,17 +9,16 @@ import { P } from "components/shared/Dangerously";
 const NextStudy = ({ link, margined }) => {
   const context = useContext(LangContext);
   let n = context.next_study;
+  console.log(link);
   return (
     <Link href={link} passHref>
       <Wrapper margined={margined}>
         <LogoContainer>
-          <Fade triggerOnce>
-            <Logo
-              style={{
-                backgroundImage: `url(/assets/img/casestudies/${link}/portfolio_logo.svg)`,
-              }}
-            />
-          </Fade>
+          <Logo
+            style={{
+              backgroundImage: `url(/assets/img/casestudies/${link}/portfolio_logo.svg)`,
+            }}
+          />
         </LogoContainer>
         <Fade triggerOnce>
           <P>{n.p}</P>
