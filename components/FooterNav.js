@@ -142,7 +142,7 @@ const SecondaryNavList = styled.ul`
   list-style: none;
   padding-top: 8%;
   color: ${(props) => props.theme.colors.foreground_low};
-  div:not(:nth-last-child(1)) {
+  li:not(:nth-last-child(1)) {
     padding-right: 10%;
   }
   @media (max-width: 1250px) {
@@ -158,7 +158,7 @@ const SecondaryNavList = styled.ul`
       padding-bottom: 0px;
       padding-top: 5px;
     }
-    div:not(:nth-last-child(1)) {
+    li:not(:nth-last-child(1)) {
       padding-right: 0%;
       padding-bottom: 5px;
       padding-top: 0px;

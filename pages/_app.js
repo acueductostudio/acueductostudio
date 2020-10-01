@@ -10,6 +10,7 @@ import delayForLoading from "utils/delayForLoading.ts";
 import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
 import { hotjar } from "react-hotjar";
+import TagManager from "react-gtm-module";
 import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
@@ -60,6 +61,9 @@ function App(props) {
     Router.events.on("routeChangeError", handleRouteError);
     // init HotJar
     hotjar.initialize(1494703, 6);
+    TagManager.initialize({
+      gtmId: "GTM-NQHHFWF",
+    });
 
     return () => {
       // remove loadingBar event listeners
