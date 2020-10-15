@@ -204,9 +204,9 @@ export default function Pitch(props) {
               },
               {
                 "@type": "ListItem",
-                position: 2,
-                name: "Pitch",
-                item: "https://acueducto.studio/pitch",
+                "position": 2,
+                "name": "Pitch",
+                "item": "https://acueducto.studio/pitch",
               },
             ],
         }}
