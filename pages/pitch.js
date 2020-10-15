@@ -195,12 +195,13 @@ export default function Pitch(props) {
         structured={{
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
+            "@id": "https://acueducto.studio",
             "itemListElement": [
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Acueducto",
-                "item": "https://acueducto.studio/",
+                "name": "Home",
+                "item": "https://acueducto.studio",
               },
               {
                 "@type": "ListItem",
