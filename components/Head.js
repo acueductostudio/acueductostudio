@@ -1,10 +1,19 @@
 import Head from "next/head";
 
-const Meta = props => {
+const Meta = (props) => {
   const es_default =
     "Nos asociamos con innovadores alrededor del mundo para desarrollar estrategias y experiencias digitales que cuentan historias convincentes, inspiran comunidades y forjen vínculos significativos.";
   const en_default =
     "We partner with innovators around the globe to develop digital strategies and experiences that tell compelling stories, inspire communities and build meaningful bonds.";
+
+  const structuredDefault = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://acueducto.studio",
+    name: "Acueducto",
+    url: "https://acueducto.studio",
+    logo: "https://acueducto.studio/assets/img/og/acueducto.png",
+  };
   return (
     <Head>
       <meta charSet="utf-8" />
@@ -107,6 +116,20 @@ const Meta = props => {
             <meta property="og:url" content={props.canonical} />
           </>
         ))}
+      {props.structured && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(props.structured),
+          }}
+        />
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredDefault),
+        }}
+      />
     </Head>
   );
 };
