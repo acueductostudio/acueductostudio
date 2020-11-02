@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Head from "components/Head";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
 import { H1, P } from "components/shared/Dangerously";

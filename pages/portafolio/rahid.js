@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Head from "components/Head";
-import { useEffect, useState } from "react";
 import PageClipper from "components/PageClipper";
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/ContactFooter";

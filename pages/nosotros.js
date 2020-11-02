@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import dynamic from "next/dynamic";
 import Head from "components/Head";

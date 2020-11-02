@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Head from "components/Head";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import PageClipper from "components/PageClipper";
 import { Fade } from "react-awesome-reveal";

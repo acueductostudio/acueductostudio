@@ -1,3 +1,4 @@
+import React from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import TitleSection from "components/shared/TitleSection";

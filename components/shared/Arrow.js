@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import ArrowSvg from "public/assets/img/layout/arrow.svg";

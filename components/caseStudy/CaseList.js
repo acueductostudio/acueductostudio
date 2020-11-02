@@ -1,6 +1,5 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import { useRef } from "react";
 import { P } from "components/shared/Dangerously";
 import BorderLink from "components/shared/BorderedLink";
 import { Fade } from "react-awesome-reveal";

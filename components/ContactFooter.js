@@ -1,12 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
 import FooterNav from "components/FooterNav";
 import { Fade } from "react-awesome-reveal";
-import TitleSectionGrid, {
-  Container,
-} from "components/shared/TitleSectionGrid";
+import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import Logo from "public/assets/img/layout/logo.svg";
 import Mail from "public/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";

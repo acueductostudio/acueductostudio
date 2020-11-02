@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "components/shared/Arrow";

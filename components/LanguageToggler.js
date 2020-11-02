@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Arrows from "public/assets/img/layout/language.svg";
 import Router, { useRouter } from "next/router";
 

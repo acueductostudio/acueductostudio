@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
 import Arrow from "components/shared/Arrow";

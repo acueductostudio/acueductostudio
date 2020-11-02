@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, useCallback } from "react";
+import React,{ useEffect, useState, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./header";

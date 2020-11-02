@@ -1,9 +1,10 @@
+import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Logo from "public/assets/img/layout/logo.svg";
 
 function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
-  const backUp = e => {
+  const backUp = (e) => {
     closeNav();
     (route === "/" || route === "/en") &&
       (e.preventDefault(),
@@ -33,7 +34,7 @@ const HeaderTitle = styled.div`
   z-index: 2;
   top: 61px;
   mix-blend-mode: exclusion;
-  opacity: ${props => (props.hide ? 0 : 1)};
+  opacity: ${(props) => (props.hide ? 0 : 1)};
   transition: opacity 0.2s ease;
   @media (max-height: 450px) and (min-width: 800px) {
     top: 40px;
@@ -54,7 +55,7 @@ const TopHeader = styled.header`
   max-width: 1500px;
   pointer-events: none;
   mix-blend-mode: exclusion;
-  opacity: ${props => (props.reveal ? 1 : 0)};
+  opacity: ${(props) => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
   @media (max-width: 800px) {
     flex-direction: column;
@@ -95,7 +96,7 @@ const LogoLink = styled.a`
     max-width: 130px;
     width: 100%;
     path {
-      fill: ${props => props.theme.colors.white};
+      fill: ${(props) => props.theme.colors.white};
     }
   }
 `;

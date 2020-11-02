@@ -1,3 +1,4 @@
+import React from "react";
 import { P, H1 } from "components/shared/Dangerously";
 import Grid, { Container } from "./TitleSectionGrid";
 import LinkWithArrow from "components/shared/LinkWithArrow";

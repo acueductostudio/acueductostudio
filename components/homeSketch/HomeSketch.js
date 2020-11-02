@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { Canvas, useThree, useFrame, extend } from "react-three-fiber";
 import { EffectComposer } from "three";
 import { ShaderPass } from "three";

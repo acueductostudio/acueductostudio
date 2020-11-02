@@ -1,5 +1,5 @@
 import Head from "components/Head";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import es from "public/locales/es/diagnosticodigital.json";
 import PageClipper from "components/PageClipper";
 import Diagnostico from "components/diagnosticoDigital/Diagnostico";
