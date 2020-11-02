@@ -63,7 +63,9 @@ function Consultoria(props) {
       <Head
         title={page_title}
         description={meta_description}
-        image={"og_image_consultoria.jpg"}
+        image="og_image_consultoria.jpg"
+        es_image_alt="Consultoría digital por Acueducto"
+        es_only_canonical="https://acueducto.studio/consultoria"
         lang={props.lang}
       />
       <SpinPinnedSection hasLoaded={props.hasLoaded}>

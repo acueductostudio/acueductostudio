@@ -24,7 +24,9 @@ function DiagnosticoDigital(props) {
       <Head
         title={page_title}
         description={meta_description}
-        image={"og_image_diagnostico.png"}
+        image="og_image_diagnostico.png"
+        es_image_alt="Diagnóstico digital por Acueducto"
+        es_only_canonical="https://acueducto.studio/diagnostico"
         lang={props.lang}
       />
       <TitleSection {...intro} />

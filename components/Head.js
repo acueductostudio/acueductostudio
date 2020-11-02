@@ -57,13 +57,19 @@ const Meta = (props) => {
       <meta property="og:type" content="website" />
       {props.lang === "es" ? (
         <>
-          <meta property="og:locale" content="es_MX" />
-          <meta property="og:locale:alternate" content="en_US" />
+          {(props.canonical || props.es_only_canonical) && (
+            <meta property="og:locale" content="es_MX" />
+          )}
+          {props.en_canonical && (
+            <meta property="og:locale:alternate" content="en_US" />
+          )}
         </>
       ) : (
         <>
-          <meta property="og:locale" content="en_US" />
-          <meta property="og:locale:alternate" content="es_MX" />
+          {props.en_canonical && <meta property="og:locale" content="en_US" />}
+          {props.canonical && (
+            <meta property="og:locale:alternate" content="es_MX" />
+          )}
         </>
       )}
 
@@ -74,14 +80,25 @@ const Meta = (props) => {
             property="og:image"
             content={`https://acueducto.studio/assets/img/og/${props.image}`}
           />
-          <meta
-            property="og:image:alt"
-            content={
-              props.lang === "es"
-                ? "Caso de Estudio: Acueducto"
-                : "Acueducto's Case Study"
-            }
-          />
+          {props.lang === "es" ? (
+            <meta
+              property="og:image:alt"
+              content={
+                props.es_image_alt
+                  ? props.es_image_alt
+                  : "Caso de estudio: Acueducto"
+              }
+            />
+          ) : (
+            <meta
+              property="og:image:alt"
+              content={
+                props.en_image_alt
+                  ? props.en_image_alt
+                  : "Case study: Acueducto"
+              }
+            />
+          )}
         </>
       ) : (
         <>
@@ -115,9 +132,12 @@ const Meta = (props) => {
               href={props.en_canonical}
               hrefLang="x-default"
             />
-            <meta property="og:url" content={props.canonical} />
+            <meta property="og:url" content={props.en_canonical} />
           </>
         ))}
+      {props.es_only_canonical && (
+        <meta property="og:url" content={props.es_only_canonical} />
+      )}
       {props.structured && (
         <script
           type="application/ld+json"

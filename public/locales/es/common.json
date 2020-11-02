@@ -3,6 +3,7 @@
     { "title": "pitch", "link": "/pitch" },
     { "title": "nosotros", "link": "/nosotros" },
     { "title": "portafolio", "link": "/portafolio" },
+    { "title": "consultoria", "link": "/consultoría" },
     { "title": "contacto", "link": "#contact" }
   ],
   "legal_nav": {
@@ -662,7 +663,7 @@
       "subtitle5": "grabación de sesiones",
       "p5": "Los servicios de grabación de sesiones son usados para mostrar las áreas de la Aplicación donde el Usuario mueve el cursor o da click más frecuentemente, nos permiten interpretar si nuestras estrategias y puntos de interés funcionan correctamente. El servicio permite monitorear y analizar el tráfico de la Aplicación; y rastrear el comportamiento del Usuario. El servicio puede grabar sesiones para su posterior reproducción",
       "subsubtitle6": "HOTJAR HEAT MAPS & RECORDINGS (HOTJAR LTD)",
-      "p6": "Hotjar es un servicio de grabación de sesión brindado por Hotjar, LTD. (“Hotjar”). Hotjar acepta el encabezado genérico <i>Do Not Track</i> (no rastrear), con el cual el navegador puede dar la orden de no recolectar ninguna información del Usuario. Esta opción está disponible en la gran mayoría de los navegadores.<br/>Datos recolectados: Cookies, usos de datos y varios tipos de información como especifica la política de privacidad de su servicio.<br/>Lugar de procesamiento: Malta – <a target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy'>Política de Privacidad</a> – <a target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/legal/compliance/opt-out'>Renunciar (opt-out)</a>.",
+      "p6": "Hotjar es un servicio de grabación de sesión brindado por Hotjar, LTD. (“Hotjar”). Hotjar acepta el encabezado genérico <i>Do Not Track</i> (no rastrear), con el cual el navegador puede dar la orden de no recolectar ninguna información del Usuario. Esta opción está disponible en la gran mayoría de los navegadores.<br/>Datos recolectados: Cookies, usos de datos y varios tipos de información como especifica la política de privacidad de su servicio.<br/>Lugar de procesamiento: Malta – <a target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy/'>Política de Privacidad</a> – <a target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy/do-not-track/'>Renunciar (opt-out)</a>.",
       "subtitle7": "gestión de tags",
       "p7": "Este servicio permite a Acueducto administrar las etiquetas necesarias en la Aplicación en una plataforma centralizada. Esto puede resultar en la retención de datos del Usuario en su interacción con la Aplicación.",
       "subsubtitle8": "GOOGLE TAG MANAGER (GOOGLE LLC)",

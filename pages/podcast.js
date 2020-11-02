@@ -35,6 +35,8 @@ function Podcast(props) {
         title={page_title}
         description={meta_description}
         image={"og_image_podcast.png"}
+        es_image_alt="Cuando el río suena, podcast por Acueducto"
+        es_only_canonical={"https://acueducto.studio/podcast"}
         lang={props.lang}
       />
       <PodcastGrid>
