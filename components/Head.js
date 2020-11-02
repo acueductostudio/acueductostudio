@@ -97,6 +97,7 @@ const Meta = (props) => {
           <>
             <link rel="canonical" href={props.canonical} />
             <link rel="alternate" hrefLang="en" href={props.en_canonical} />
+            <link rel="alternate" hrefLang="es" href={props.canonical} />
             <link
               rel="alternate"
               href={props.en_canonical}
@@ -108,6 +109,7 @@ const Meta = (props) => {
           <>
             <link rel="canonical" href={props.en_canonical} />
             <link rel="alternate" hrefLang="es" href={props.canonical} />
+            <link rel="alternate" hrefLang="en" href={props.en_canonical} />
             <link
               rel="alternate"
               href={props.en_canonical}

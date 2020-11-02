@@ -63,7 +63,6 @@ function Consultoria(props) {
       <Head
         title={page_title}
         description={meta_description}
-        canonical={"https://acueducto.studio/consultoria"}
         image={"og_image_consultoria.jpg"}
         lang={props.lang}
       />
