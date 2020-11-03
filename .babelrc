@@ -8,10 +8,6 @@
         "displayName": true,
         "preprocess": false
       }
-    ],
-    ["module-resolver", {
-      "root": ["./"]
-    }],
-    ["inline-react-svg", { "svgo": false }]
+    ]
   ]
 }

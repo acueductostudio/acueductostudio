@@ -31,6 +31,17 @@ const nextConfig = {
   }, //end of WPA config
   trailingSlash: false,
   webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            svgo: false,
+          },
+        },
+      ],
+    });
     config.resolve.alias["three$"] = path.resolve("./utils/three-exports.js");
     return config;
   },
