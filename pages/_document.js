@@ -50,10 +50,6 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#F4F4F4" />
           <meta name="geo.region" content="CDMX" />
           <meta name="geo.placename" content="Acueducto" />
-          <meta
-            name="keywords"
-            content="design, studio, acueducto, cdmx, innovation, strategic design, experience design, product design, brand design, social impact, design strategy, technology"
-          />
           <GlobalStyles />
           {this.props.styleTags}
         </Head>
