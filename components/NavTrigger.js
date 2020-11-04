@@ -4,7 +4,7 @@ import Hamburger from "public/assets/img/layout/hamburger.svg";
 const NavTrigger = props => (
   <TriggerContainer visible={props.hasLoaded}>
     <Trigger onClick={() => props.toggleNav()} open={props.isOpen}>
-      {/* <Hamburger /> */}
+      <Hamburger />
     </Trigger>
   </TriggerContainer>
 );
