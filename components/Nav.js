@@ -120,7 +120,7 @@ const NavLink = styled.a`
   background-repeat: repeat-x;
   background-size: 1px 2px;
   background-position: 0 90%;
-  &:hover {
+  &:hover, &:focus {
     background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
   }
 `;
@@ -208,6 +208,11 @@ const BottomNav = styled.div`
         justify-content: center;
         padding-bottom: 2px;
         padding-left: 1px;
+        transition: 0.3s ease-in border-color;
+        &:focus,
+        &:active {
+          border-color: ${(p) => p.theme.colors.accent};
+        }
       }
     }
   }

@@ -450,6 +450,11 @@ const SixthSection = styled(CommonSection)`
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
       border: 0;
       margin-right: 0;
+      transition: .2s ease-out all;
+      &:active,
+      &:focus {
+        transform: scale(0.95);
+      }
     }
   }
 `;

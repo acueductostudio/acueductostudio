@@ -654,10 +654,16 @@ const Sixth = styled(CommonSection)`
     a {
       font-size: 1.5rem;
       padding: 5%;
-      border-radius: 4px;
+      border-radius: 8px;
       background-color: ${fierasRed};
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
       border: 0;
+      transition: .2s ease-out all;
+      &:active,
+      &:focus {
+        transform: scale(0.95);
+      }
+    }
     }
   }
 `;

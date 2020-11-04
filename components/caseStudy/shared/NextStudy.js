@@ -97,6 +97,12 @@ const Wrapper = styled.a`
       width: 45px;
       height: 45px;
       bottom: -10px;
+      transition: .2s ease-out all;
+      &:active,
+      &:focus {
+        border-color: ${(props) => props.theme.colors.accent};
+        transform: scale(0.9);
+      }
     }
   }
   @media (max-width: 450px) {

@@ -74,16 +74,18 @@ export default function Salvajenada(props) {
   const artistShout = () => {
     let x = [];
     x.push(
-      <video
-        autoPlay
-        playsInline
-        muted
-        loop
-        key={"v_4"}
-        poster={`/assets/img/casestudies/salvajenada/girlUltra_poster.jpg`}
-      >
-        <source src="/assets/video/casestudies/salvajenada/girlUltra.mp4" />
-      </video>
+      <Fade triggerOnce>
+        <video
+          autoPlay
+          playsInline
+          muted
+          loop
+          key={"v_4"}
+          poster={`/assets/img/casestudies/salvajenada/girlUltra_poster.jpg`}
+        >
+          <source src="/assets/video/casestudies/salvajenada/girlUltra.mp4" />
+        </video>
+      </Fade>
     );
     for (let i = 1; i < 4; i++) {
       x.push(
@@ -446,7 +448,7 @@ const StatGrid = styled.div`
       &:nth-child(3),
       &:nth-child(4),
       &:nth-child(5) {
-        width: 120px;
+        width: auto;
         min-width: 70%;
         margin: 0 5% 5% 0;
         box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
@@ -456,6 +458,11 @@ const StatGrid = styled.div`
         padding: 1% 4% 4.5% 4%;
         align-items: center;
         justify-content: center;
+        transition: 0.2s ease-out transform;
+        &:active,
+        &:focus {
+          transform: scale(0.95);
+        }
       }
       svg {
         display: none;
@@ -486,9 +493,13 @@ const ShoutGrid = styled.div`
   justify-items: center;
   grid-gap: 5rem;
   margin-top: 5rem;
+  & > div {
+    max-width: 250px;
+    width: 100%;
+  }
   img,
   video {
-    max-width: 250px;
+    /* max-width: 250px; */
     width: 100%;
   }
   @media (max-width: 1100px) {
@@ -506,12 +517,17 @@ const ShoutGrid = styled.div`
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 8%;
-    picture {
+    & > div {
       min-width: 70%;
       padding-bottom: 117%;
       margin-right: 5%;
       margin-bottom: 5%;
       height: 0;
+      transition: 0.3s ease transform;
+      &:focus,
+      &:active {
+        transform: scale(0.95);
+      }
     }
     img {
       max-width: 100%;
@@ -520,9 +536,6 @@ const ShoutGrid = styled.div`
       scroll-snap-stop: always;
     }
     video {
-      max-width: 70%;
-      margin-right: 5%;
-      margin-bottom: 5%;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
       scroll-snap-align: start;
       scroll-snap-stop: always;
@@ -555,12 +568,18 @@ const PlaylistGrid = styled.div`
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     margin-top: 8%;
-    picture {
+    & > div {
       min-width: 70%;
       padding-bottom: 70%;
       margin-right: 5%;
       margin-bottom: 5%;
       height: 0;
+      transform: scale(1);
+      transition: 0.3s ease transform;
+      &:focus,
+      &:active {
+        transform: scale(0.95);
+      }
     }
     img {
       max-width: 100%;
@@ -694,6 +713,12 @@ const Fifth = styled(CommonSection)`
       * {
         fill: ${(props) => props.theme.colors.background};
         width: 100%;
+      }
+    }
+    @media (max-width: 600px) {
+      svg:focus,
+      svg:active {
+        transform: scale(0.9);
       }
     }
   }

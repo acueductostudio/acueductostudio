@@ -217,6 +217,12 @@ const Info = styled.div`
       width: 48px;
       height: 48px;
       bottom: -5px;
+      transition: .2s ease-out all;
+      &:active,
+      &:focus {
+        border-color: ${(props) => props.theme.colors.accent};
+        transform: scale(0.9);
+      }
     }
   }
   @media (max-width: 500px), (max-height: 450px) {
