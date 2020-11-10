@@ -25,16 +25,16 @@ export default function Nav(props) {
   };
 
   let navItems = t.map(function (item, index) {
-    if (item.title === "contact" || item.title === "contacto") {
-      return (
-        <Fade delay={200 + index * 50} key={"item" + index}>
-          <li>
-            <span>0{index + 1}</span>
-            <NavLink onClick={scrollToBottom}>{item.title}</NavLink>
-          </li>
-        </Fade>
-      );
-    }
+    // if (item.title === "contact" || item.title === "contacto") {
+    //   return (
+    //     <Fade delay={200 + index * 50} key={"item" + index}>
+    //       <li>
+    //         <span>0{index + 1}</span>
+    //         <NavLink onClick={scrollToBottom}>{item.title}</NavLink>
+    //       </li>
+    //     </Fade>
+    //   );
+    // }
     return (
       <Fade delay={200 + index * 50} key={"item" + index}>
         <li>
@@ -120,7 +120,8 @@ const NavLink = styled.a`
   background-repeat: repeat-x;
   background-size: 1px 2px;
   background-position: 0 90%;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-image: url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgb(23, 64, 191)" stroke-width="3px" vector-effect="non-scaling-stroke"/></svg>');
   }
 `;

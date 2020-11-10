@@ -3,7 +3,7 @@
     { "title": "pitch", "link": "/en/pitch" },
     { "title": "about", "link": "/en/about" },
     { "title": "work", "link": "/en/work" },
-    { "title": "contact", "link": "#contact" }
+    { "title": "contact", "link": "/en/contact" }
   ],
   "legal_nav": {
     "cookies": { "title": "cookie policy", "link": "/en/cookies" },
@@ -559,6 +559,62 @@
     "intro": {
       "title": "our selected<br/>case studies",
       "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what it can  achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
+    }
+  },
+  "contact_page": {
+    "page_title": "Contact Us | ¿How can we help you?",
+    "meta_description": "Let's be partners, let's talk business. You can contact us via WhatsApp or by filling out our form.",
+    "headerTitle": "Contact",
+    "intro": {
+      "title": "¿how may we help you?",
+      "p1": "Send us a WhatsApp message",
+      "p2": "Email us",
+      "p3": "Or fill out our form"
+    },
+    "form": {
+      "email": {
+        "label": "work email",
+        "placeholder": "your email",
+        "errorMissing": "*missing email",
+        "errorInvalid": "*invalid email"
+      },
+      "firstName": {
+        "label": "first name",
+        "placeholder": "your first name",
+        "errorMissing": "*missing first name"
+      },
+      "lastName": {
+        "label": "last name",
+        "placeholder": "your last name",
+        "errorMissing": "*missing last name"
+      },
+      "company": {
+        "label": "your company",
+        "placeholder": "name of your company",
+        "errorMissing": "*missing company"
+      },
+      "employees": {
+        "label": "number of employees"
+      },
+      "message": {
+        "label": "¿what problem do you need to solve?",
+        "placeholder": "develop your idea",
+        "errorMissing": "*missing proyect or idea"
+      },
+      "phonecheckbox": {
+        "label": "I want to be contacted by WhatsApp"
+      },
+      "phone": {
+        "label": "phone number",
+        "placeholder": "your WhatsApp number",
+        "errorMissing": "*missing phone number",
+        "errorInvalid": "*invalid phone number (+XX XX XXXX XXXX)"
+      },
+      "submit": "get in touch",
+      "loading": "sending...",
+      "success": {
+        "p": "We'll contact you as soon as we can"
+      }
     }
   },
   "manifesto_page": {

@@ -8,7 +8,7 @@ import ContactFooter from "components/ContactFooter";
 import ContactForm from "components/ContactForm";
 import { WhatsApp } from "components/shared/Logos";
 
-export default function Contacto(props) {
+export default function Contact(props) {
   let t = props.locale.contact_page;
 
   useEffect(() => {
