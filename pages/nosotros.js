@@ -6,7 +6,7 @@ import Head from "components/Head";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
-import PinnedSection from "components/shared/PinnedSection";
+import PinnedSection from "components/shared/PinnedSections/PinnedSection";
 import { P, H4 } from "components/shared/Dangerously";
 import Picture from "components/caseStudy/shared/Picture";
 import Process from "components/shared/Process";

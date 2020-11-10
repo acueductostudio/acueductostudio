@@ -92,6 +92,7 @@ import TwIcon from "public/assets/img/layout/logos/tw.svg";
 import LinkedInIcon from "public/assets/img/layout/logos/linkedin.svg";
 import SnapchatIcon from "public/assets/img/layout/logos/snapchat.svg";
 import TikTokIcon from "public/assets/img/layout/logos/tiktok.svg";
+import WhatsAppBusinessIcon from "public/assets/img/layout/logos/whatsappbusiness.svg";
 import WhatsAppIcon from "public/assets/img/layout/logos/whatsapp.svg";
 
 export const Ig = () => <IgIcon />;
@@ -100,6 +101,7 @@ export const Tw = () => <TwIcon />;
 export const LinkedIn = () => <LinkedInIcon />;
 export const Snapchat = () => <SnapchatIcon />;
 export const TikTok = () => <TikTokIcon />;
+export const WhatsAppBusiness = () => <WhatsAppBusinessIcon />;
 export const WhatsApp = () => <WhatsAppIcon />;
 
 // BI

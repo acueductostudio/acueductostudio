@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Head from "components/Head";
 import Link from "next/link";
 import PageClipper from "components/PageClipper";
-import MetalPinnedSection from "components/shared/MetalPinnedSection";
+import MetalPinnedSection from "components/shared/PinnedSections/MetalPinnedSection";
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/ContactFooter";
 import es from "public/locales/es/linkenbio.json";
@@ -93,16 +93,17 @@ const Resource = styled.li`
   margin-bottom: 20px;
   position: relative;
   overflow: hidden;
-  transition: .2s ease-out border-color;
+  transition: 0.2s ease-out border-color;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       border-color: ${(p) => p.theme.colors.accent};
     }
   }
-  &:focus, &:active{
+  &:focus,
+  &:active {
     border-color: ${(p) => p.theme.colors.accent};
-    h3{
-      color:${(p) => p.theme.colors.foreground};
+    h3 {
+      color: ${(p) => p.theme.colors.foreground};
     }
   }
   a {
@@ -127,7 +128,7 @@ const Resource = styled.li`
     font-size: 3rem;
     color: ${(p) => p.theme.colors.accent};
     font-weight: 200;
-    transition: .3s ease-out color;
+    transition: 0.3s ease-out color;
   }
   svg {
     height: 100%;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
-import PinnedSection from "components/shared/PinnedSection";
+import PinnedSection from "components/shared/PinnedSections/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 

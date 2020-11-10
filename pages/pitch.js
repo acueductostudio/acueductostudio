@@ -5,7 +5,7 @@ import Tooltip from "react-tooltip-lite";
 import { Fade } from "react-awesome-reveal";
 import TitleSection from "components/shared/TitleSection";
 import Products from "components/shared/Products";
-import PinnedSection from "components/shared/PinnedSection";
+import PinnedSection from "components/shared/PinnedSections/PinnedSection";
 import { P, H2, H3 } from "components/shared/Dangerously";
 import createMarkup from "utils/createMarkup";
 import PageClipper from "components/PageClipper";
@@ -61,7 +61,7 @@ import {
   LinkedIn,
   Snapchat,
   TikTok,
-  WhatsApp,
+  WhatsAppBusiness,
   Tableau,
   PowerBi,
   Notion,
@@ -108,7 +108,7 @@ const contentLogoArray = [
   { p: "LinkedIn", i: LinkedIn },
   { p: "Snapchat", i: Snapchat },
   { p: "TikTok", i: TikTok },
-  { p: "WhatsApp for Business", i: WhatsApp },
+  { p: "WhatsApp for Business", i: WhatsAppBusiness },
 ];
 
 const platformLogoArray = [
@@ -193,23 +193,23 @@ export default function Pitch(props) {
         en_canonical={"https://acueducto.studio/en/pitch"}
         lang={props.lang}
         structured={{
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "@id": "https://acueducto.studio",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://acueducto.studio",
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Pitch",
-                "item": "https://acueducto.studio/pitch",
-              },
-            ],
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "@id": "https://acueducto.studio",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://acueducto.studio",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Pitch",
+              item: "https://acueducto.studio/pitch",
+            },
+          ],
         }}
       />
       <StyledHeadings />

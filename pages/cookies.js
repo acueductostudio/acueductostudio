@@ -2,7 +2,7 @@ import Head from "components/Head";
 import Link from "next/link";
 import { useEffect } from "react";
 import PageClipper from "components/PageClipper";
-import SimplePinnedSection from "components/shared/SimplePinnedSection";
+import SimplePinnedSection from "components/shared/PinnedSections/SimplePinnedSection";
 import { P, H3 } from "components/shared/Dangerously";
 import ContactFooter from "components/ContactFooter";
 

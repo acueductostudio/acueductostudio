@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 import Arrows from "public/assets/img/layout/language.svg";
 import Router, { useRouter } from "next/router";
 
@@ -13,6 +13,8 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
     } else if (router.asPath.includes("/podcast")) {
       setShowToggler(false);
     } else if (router.asPath.includes("/diagnostico")) {
+      setShowToggler(false);
+    } else if (router.asPath.includes("/linkenbio")) {
       setShowToggler(false);
     } else {
       setShowToggler(true);
@@ -36,6 +38,9 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
           break;
         case "/en/about":
           Router.push(router.route, "/nosotros");
+          break;
+        case "/en/contact":
+          Router.push(router.route, "/contacto");
           break;
         case "/en/manifesto":
           Router.push(router.route, "/manifiesto");
@@ -70,6 +75,9 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
           break;
         case "/nosotros":
           Router.push(router.route, "/en/about");
+          break;
+        case "/contacto":
+          Router.push(router.route, "/en/contact");
           break;
         case "/manifiesto":
           Router.push(router.route, "/en/manifesto");

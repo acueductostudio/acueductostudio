@@ -6,7 +6,7 @@ import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/PageClipper";
 import ContactFooter from "components/ContactFooter";
 import { Fade } from "react-awesome-reveal";
-import PinnedSection from "components/shared/PinnedSection";
+import PinnedSection from "components/shared/PinnedSections/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import ConsultoriaCTA from "components/ConsultoriaCTA";
 import Steps from "components/shared/Steps";

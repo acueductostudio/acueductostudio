@@ -1,7 +1,7 @@
 import Head from "components/Head";
 import Link from "next/link";
 import PageClipper from "components/PageClipper";
-import SimplePinnedSection from "components/shared/SimplePinnedSection";
+import SimplePinnedSection from "components/shared/PinnedSections/SimplePinnedSection";
 import createMarkup from "utils/createMarkup";
 import ContactFooter from "components/ContactFooter";
 import { useEffect } from "react";

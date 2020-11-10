@@ -561,6 +561,62 @@
       "p": "Cada proyecto que desarrollamos es único, así que elegimos estos casos de estudio para retratar cómo trabaja Acueducto y lo que puede lograr.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
     }
   },
+  "contact_page": {
+    "page_title": "Contacto | ¿Cómo podemos ayudarte?",
+    "meta_description": "Asociémonos, elevemos tu negocio. Puedes contactarnos por whatsapp o llenando esta forma de contacto.",
+    "headerTitle": "Contacto",
+    "intro": {
+      "title": "¿cómo podemos ayudarte?",
+      "p1": "Escríbenos por WhatsApp",
+      "p2": "Mándanos un email",
+      "p3": "O contesta nuestro cuestionario"
+    },
+    "form": {
+      "email": {
+        "label": "email de trabajo",
+        "placeholder": "tu email",
+        "errorMissing": "*falta tu email",
+        "errorInvalid": "*email inválido"
+      },
+      "firstName": {
+        "label": "nombre",
+        "placeholder": "tu nombre",
+        "errorMissing": "*falta tu nombre"
+      },
+      "lastName": {
+        "label": "apellidos",
+        "placeholder": "tus apellidos",
+        "errorMissing": "*faltan tus apellidos"
+      },
+      "company": {
+        "label": "tu empresa",
+        "placeholder": "nombre de tu empresa",
+        "errorMissing": "*falta tu empresa"
+      },
+      "employees": {
+        "label": "número de empleados"
+      },
+      "message": {
+        "label": "¿qué problemas buscas resolver?",
+        "placeholder": "desarrolla tu idea",
+        "errorMissing": "*falta tu idea o proyecto"
+      },
+      "phonecheckbox": {
+        "label": "Quiero que me contacten por WhatsApp"
+      },
+      "phone": {
+        "label": "número de teléfono",
+        "placeholder": "tu número de WhatsApp",
+        "errorMissing": "*falta tu número de teléfono",
+        "errorInvalid": "*teléfono inválido (+XX XX XXXX XXXX)"
+      },
+      "submit": "contáctenme",
+      "loading": "enviando...",
+      "success": {
+        "p": "Te contactaremos a la brevedad"
+      }
+    }
+  },
   "manifesto_page": {
     "page_title": "Manifiesto | Lo que nos hace mejores",
     "meta_description": "Los valores que moldean cada acción que realizamos",
