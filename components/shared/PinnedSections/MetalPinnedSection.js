@@ -35,6 +35,7 @@ const Pinned = styled.div`
 
   div:first-of-type {
     grid-column: 2 / span 5;
+    z-index: 1;
   }
   h1 {
     position: sticky;
@@ -45,8 +46,8 @@ const Pinned = styled.div`
     font-size: 7rem;
     color: ${(props) => props.theme.colors.accent};
   }
-  a{
-    text-decoration:none;
+  a {
+    text-decoration: none;
   }
   @media (max-width: 1300px) {
     ${ScrollDown} {

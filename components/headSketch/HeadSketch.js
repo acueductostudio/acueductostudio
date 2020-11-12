@@ -30,19 +30,22 @@ const Model = React.memo((props) => {
       <pointLight
         ref={light}
         position={[0, 0, 10]}
-        color={props.second ? "#ED0924" : "#1736BF"}
+        color={props.second ? "#ED0924" : "#1A4CE0"}
         intensity={props.second ? 3 : 5}
       />
       <scene ref={ref} {...props}>
         <mesh rotation={[1.5, 0, 0]} scale={[0.14, 0.14, 0.14]}>
-          <bufferGeometry attach="geometry" {...gltf.__$[4].geometry} />
+          <bufferGeometry
+            attach="geometry"
+            {...gltf.nodes.male_headobj.geometry}
+          />
           <meshStandardMaterial
             precision={"lowp"}
             attach="material"
             roughness={1}
             metalness={0}
             emissive={"#060809"}
-            color={"#1A1A1A"}
+            color={"#3E3E3E"}
           />
         </mesh>
       </scene>
@@ -77,6 +80,7 @@ const SketchContainer = styled.div`
   position: relative;
   left: -30%;
   z-index: -1;
+  background-color: ${(p) => p.theme.colors.background};
   @media (max-width: 1250px) {
     margin-bottom: 8%;
     left: -20%;
@@ -86,6 +90,9 @@ const SketchContainer = styled.div`
   }
   @media (max-width: 600px) {
     left: -30px;
+  }
+  > div {
+    mix-blend-mode: difference;
   }
   div div div {
     width: 100%;

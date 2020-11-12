@@ -1,12 +1,12 @@
 // Only export the things that are actually needed, cut out everything else
 
 export { WebGLRenderer } from "three/src/renderers/WebGLRenderer.js";
+export { WebGL1Renderer } from "three/src/renderers/WebGL1Renderer.js";
 // export { ShaderLib } from "three/src/renderers/shaders/ShaderLib.js";
 // export { UniformsLib } from "three/src/renderers/shaders/UniformsLib.js";
 // export { UniformsUtils } from "three/src/renderers/shaders/UniformsUtils.js";
 // export { ShaderChunk } from "three/src/renderers/shaders/ShaderChunk.js";
 export { Scene } from "three/src/scenes/Scene.js";
-export { Mesh } from "three/src/objects/Mesh.js";
 // export { LineSegments } from "three/src/objects/LineSegments.js";
 // export { Line } from "three/src/objects/Line.js";
 // export { CubeTexture } from "three/src/textures/CubeTexture.js";
@@ -44,7 +44,6 @@ export { Mesh } from "three/src/objects/Mesh.js";
 // export { Material } from "three/src/materials/Material.js";
 // export { MeshPhongMaterial } from "three/src/materials/MeshPhongMaterial.js";
 // export { MeshPhysicalMaterial } from "three/src/materials/MeshPhysicalMaterial.js";
-export { MeshStandardMaterial } from "three/src/materials/MeshStandardMaterial.js";
 // export { ShaderMaterial } from "three/src/materials/ShaderMaterial.js";
 // export { MeshBasicMaterial } from "three/src/materials/MeshBasicMaterial.js";
 // export { LineDashedMaterial } from "three/src/materials/LineDashedMaterial.js";
@@ -57,20 +56,25 @@ export { Texture } from "three/src/textures/Texture.js";
 // export { SpotLight } from "three/src/lights/SpotLight.js";
 // export { SpotLightHelper } from "three/src/helpers/SpotLightHelper.js";
 // export { CameraHelper } from "three/src/helpers/CameraHelper.js";
-export { PointLight } from "three/src/lights/PointLight.js";
+
+//These only for heads
 export { DirectionalLight } from "three/src/lights/DirectionalLight.js";
 export { AmbientLight } from "three/src/lights/AmbientLight.js";
+export { PointLight } from "three/src/lights/PointLight.js";
+export { Mesh } from "three/src/objects/Mesh.js";
+export { MeshStandardMaterial } from "three/src/materials/MeshStandardMaterial.js";
+export { BufferGeometry } from "three/src/core/BufferGeometry.js";
+
 // export { LightShadow } from "three/src/lights/LightShadow.js";
 export { PerspectiveCamera } from "three/src/cameras/PerspectiveCamera.js";
 export { OrthographicCamera } from "three/src/cameras/OrthographicCamera.js";
-export { BufferGeometry } from "three/src/core/BufferGeometry.js";
 // export { Geometry } from "three/src/core/Geometry.js";
 // export * from "three/src/core/BufferAttribute.js";
 // export { Face3 } from "three/src/core/Face3.js";
 // export { Object3D } from "three/src/core/Object3D.js";
 export { Raycaster } from "three/src/core/Raycaster.js";
 // export { Triangle } from "three/src/math/Triangle.js";
-export { MathUtils as Math } from "three/src/math/MathUtils.js";
+// export { MathUtils as Math } from "three/src/math/MathUtils.js";
 // export { Spherical } from "three/src/math/Spherical.js";
 // export { Cylindrical } from "three/src/math/Cylindrical.js";
 // export { Plane } from "three/src/math/Plane.js";

@@ -308,6 +308,10 @@
         { "title": "consultoría", "link": "/consultoria" },
         { "title": "podcast", "link": "/podcast" }
       ],
+      "resources": [
+        { "title": "podcast", "link": "/podcast" },
+        { "title": "diagnóstico", "link": "/diagnostico" }
+      ],
       "secondary": [
         { "title": "política de cookies", "link": "/cookies" },
         { "title": "política de privacidad", "link": "/privacidad" }
