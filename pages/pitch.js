@@ -11,8 +11,6 @@ import createMarkup from "utils/createMarkup";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import Logo from "public/assets/img/layout/logo.svg";
-// import fs from 'fs'
-// import path from 'path'
 
 
 import {
@@ -290,19 +288,6 @@ export default function Pitch(props) {
     </PageClipperPadded>
   );
 }
-
-// export async function getStaticProps(context) {
-//   const directory = path.join(process.cwd(), 'public/locales/en/pitch.json')
-//   const fileContents = fs.readFileSync(directory, 'utf8')
-//   // console.log(fileContents)
-//   console.log(context)
-
-//   return {
-//     props: {
-//       fileContents,
-//     },
-//   }
-// }
 
 const AcueductoLogo = styled(Logo)`
   width: 65%;
