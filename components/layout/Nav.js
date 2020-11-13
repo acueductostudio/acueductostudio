@@ -308,6 +308,7 @@ const NavWrapper = styled.div`
   align-items: center;
   pointer-events: none;
   transition: opacity 0.3s ease 150ms;
+  border-radius: 57px;
   a {
     text-decoration: none;
   }
@@ -318,6 +319,9 @@ const NavWrapper = styled.div`
       pointer-events: auto;
       transition: opacity 0.3s ease;
     `}
+  @media(max-width:1530px) {
+    border-radius: 38px;
+  }
   @media (max-width: 800px) {
     ${NavLink} {
       background-position: 0 93%;
@@ -327,11 +331,11 @@ const NavWrapper = styled.div`
     padding: 5% 4% 20px 4%;
   }
   @media (max-width: 600px), (max-height: 700px) {
+    border-radius:0;
     display: flex;
     flex: 0 0 auto;
     align-items: flex-start;
     justify-content: space-between;
-    /* padding: 20% 4% 20px 4%; */
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }

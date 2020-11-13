@@ -125,6 +125,9 @@ const Footer = styled.div`
   width: 100%;
   padding: 5% 4%;
   background-color: ${(props) => props.theme.colors.background};
+  @media (max-width: 600px) {
+    padding-bottom:13%;
+  }
 `;
 
 const Navs = styled.div`

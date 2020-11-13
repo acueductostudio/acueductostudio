@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Arrows from "public/assets/img/layout/language.svg";
+import Arrows from "public/assets/img/layout/language2.svg";
 import Router, { useRouter } from "next/router";
 
 function LanguageToggler({ hasLoaded, locale, toggleLang }) {
@@ -144,7 +144,7 @@ const English = styled.div`
     font-weight: 300;
   }
   svg {
-    width: 33px;
+    width: 30px;
     padding: 15px;
     box-sizing: content-box;
     * {
@@ -157,14 +157,9 @@ const English = styled.div`
 
 const Stable = styled.div`
   svg {
-    width: 33px;
+    width: 30px;
     padding: 15px;
     box-sizing: content-box;
-    * {
-      fill: none;
-      stroke-width: ${(props) => props.theme.stroke};
-      stroke: ${(props) => props.theme.colors.white};
-    }
   }
 `;
 
@@ -198,10 +193,11 @@ const Toggler = styled.div`
   }
 
   svg {
-    width: 33px;
+    width: 30px;
     pointer-events: auto;
     padding: 15px;
     box-sizing: content-box;
+    transition: 0.2s ease-in transform;
     .fill * {
       fill: ${(props) => props.theme.colors.white};
     }
@@ -215,6 +211,10 @@ const Toggler = styled.div`
     align-items: flex-start;
     padding-top: 40px;
     padding-right: calc(22px + 1%);
+    &:active{
+      svg{
+      transform:scale(0.9);}
+    }
   }
   @media (max-width: 450px) {
     padding-top: 20px;
@@ -222,7 +222,8 @@ const Toggler = styled.div`
   }
   @media (max-height: 450px) {
     align-items: flex-start;
-    padding-top: 20px;
+    padding-top: 24px;
+    padding-right: 25px;
   }
   @media (max-height: 450px) and (max-width: 600px) {
     align-items: flex-start;

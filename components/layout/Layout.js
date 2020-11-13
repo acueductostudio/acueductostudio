@@ -1,4 +1,4 @@
-import React,{ useEffect, useState, useRef, useCallback } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./Header";
@@ -201,21 +201,6 @@ const BodyOverflow = createGlobalStyle`
     }
     body {
     overflow-y: ${(props) => (props.hasLoaded ? "auto" : "hidden")};
-      &:after,&:before{
-        content: " ";
-        position: fixed;
-        right: 0;
-        left: 0;
-        height: 18px;
-        z-index:100;
-        background-color: ${(props) => props.theme.colors.background};
-      }
-      &:before {
-        top:0;
-      }
-      &:after {
-        bottom:0;
-      }
     }  
   }
 `;
@@ -249,7 +234,22 @@ const Border = styled.div`
   transition: opacity 0.3s ease-in, border 0.3s ease-in;
   border: ${(props) =>
     `${props.theme.stroke} solid ${props.theme.colors.foreground}`};
+  border-radius: 60px;
+  @media(max-width:1530px){
+    border-radius: 40px;
+  }
   @media (max-width: 600px), (max-height: 450px) {
+    border-radius: 30px;
     mix-blend-mode: normal;
+    &:after {
+      content: " ";
+      position: absolute;
+      top: -42px;
+      right: -42px;
+      left: -42px;
+      bottom: -42px;
+      border-radius: 70px;
+      border: ${(p) => `40px solid ${p.theme.colors.background}`};
+    }
   }
 `;

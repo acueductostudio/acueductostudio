@@ -22,6 +22,10 @@ const Wrapper = styled.main`
   right: 20px;
   overflow-x: hidden;
   overflow-y: scroll;
+  border-radius: 58px;
+  @media(max-width:1530px){
+    border-radius: 38px;
+  }
   @media (max-width: 1300px) {
     padding-top: ${(props) => (props.unPadded ? "0" : "5%")};
   }
@@ -34,6 +38,7 @@ const Wrapper = styled.main`
     left: 0px;
     padding-bottom: 20px;
     top: 17px;
+    border-radius:0;
   }
   @media (max-width: 500px) {
     padding-top: ${(props) => (props.unPadded ? "0" : "15%")};

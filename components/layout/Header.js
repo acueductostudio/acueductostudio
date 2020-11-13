@@ -57,6 +57,10 @@ const TopHeader = styled.header`
   mix-blend-mode: exclusion;
   opacity: ${(props) => (props.reveal ? 1 : 0)};
   transition: opacity 0.3s ease 0.3s;
+  @media(max-width:1530px){
+    padding-left:60px;
+    padding-top: 55px;
+  }
   @media (max-width: 800px) {
     flex-direction: column;
     ${HeaderTitle} {
@@ -77,6 +81,7 @@ const TopHeader = styled.header`
   }
   @media (max-height: 450px) {
     padding-top: 35px;
+    padding-left:45px;
   }
 `;
 

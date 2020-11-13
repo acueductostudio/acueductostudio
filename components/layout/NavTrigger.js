@@ -62,6 +62,10 @@ const TriggerContainer = styled.div`
   pointer-events: none;
   mix-blend-mode: exclusion;
   transition: opacity 0.3s ease 0.3s;
+  @media(max-width:1530px){
+    padding-right:60px;
+    padding-top: 55px;
+  }
   @media (max-width: 600px), (max-height: 450px) {
     top: unset;
     bottom: 0;
