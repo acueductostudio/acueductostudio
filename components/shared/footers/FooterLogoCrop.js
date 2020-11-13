@@ -21,6 +21,7 @@ const LogoCrop = styled.div`
   overflow: hidden;
   bottom: 0;
   height: 175px;
+  pointer-events:none;
   svg {
     width: 110%;
     height: auto;

@@ -38,6 +38,10 @@ const Border = styled.div`
   border: ${(props) => props.theme.stroke} solid
     ${(props) => props.theme.colors.foreground};
   background-color: ${(props) => props.theme.colors.background};
+  border-radius:30px;
+  @media(max-width:600px){
+    border-radius: 0 0 30px 30px;
+  }
 `;
 
 const Button = styled.button`
@@ -53,6 +57,10 @@ const Button = styled.button`
     ${(props) => props.theme.colors.foreground};
   cursor: pointer;
   transition: 0.3s ease all;
+  border-radius: 28px 0 0 0;
+  @media(max-width:600px){
+    border-radius: 0;
+  }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       background-color: ${(props) => props.theme.colors.success};
@@ -60,6 +68,12 @@ const Button = styled.button`
       span {
         background-size: 0 0;
       }
+    }
+  }
+  @media(max-width:600px){
+    &:active{
+      background-color: ${(props) => props.theme.colors.success};
+      color: ${(props) => props.theme.colors.background};
     }
   }
 `;
@@ -71,13 +85,23 @@ const Divider = styled.div`
 `;
 
 const CrossContainer = styled.div`
-  width: 45px;
+  width: 55px;
   height: 45px;
-  padding: 12px;
+  padding: 14px;
   svg {
-    width: 100%;
+    width: 80%;
     max-width: 30px;
     cursor: pointer;
+    transition: 0.2s ease transform;
+  }
+  @media(max-width:600px){
+    padding-right:10px;
+    padding-left:16px;
+    &:active{
+      svg{
+        transform: scale(0.9);
+      }
+    }
   }
 `;
 
@@ -96,9 +120,12 @@ const Wrapper = styled.div`
   z-index: 12;
   p {
     font-size: 1.2rem;
-    padding: 2.5% 4% 3% 4%;
+    padding: 2.5% 4% 4% 4%;
   }
   @media (max-width: 600px) {
+    p{
+      padding: 3% 6% 5% 6%;
+    }
     left: 0;
     transform: none;
     width: calc(100% - 36px);

@@ -297,9 +297,9 @@
   },
   "contact_footer": {
     "title": "asociémonos, elevemos tu negocio",
-    "p": "Nos encantaría conocerte, escríbenos directamente a ",
-    "copy_text": "Copiar al clipboard",
-    "copied_text": "Copiado",
+    "p": "¿Somos los indicados para acompañarte en tu próximo proyecto?",
+    "button_text": "escríbenos",
+    "button_link": "/contacto",
     "footer_nav": {
       "navTitles": {
         "main": "estudio",
@@ -594,9 +594,9 @@
         "errorMissing": "*falta tu nombre"
       },
       "lastName": {
-        "label": "apellidos",
-        "placeholder": "tus apellidos",
-        "errorMissing": "*faltan tus apellidos"
+        "label": "apellido",
+        "placeholder": "tu apellido",
+        "errorMissing": "*falta tu apellido"
       },
       "company": {
         "label": "tu empresa",

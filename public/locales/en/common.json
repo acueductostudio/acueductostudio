@@ -298,8 +298,8 @@
   "contact_footer": {
     "title": "let's be partners,<br/> let's talk business",
     "p": "We would love to start getting to know you, contact us directly at ",
-    "copy_text": "Copy to clipboard",
-    "copied_text": "Copied",
+    "button_text": "write us",
+    "button_link": "/en/contact",
     "footer_nav": {
       "navTitles" : {
         "main" : "studio",
@@ -574,7 +574,7 @@
     "meta_description": "Let's be partners, let's talk business. Contact us via WhatsApp or by filling out our form.",
     "headerTitle": "Contact",
     "intro": {
-      "title": "¿how may we help you?",
+      "title": "how may we help you?",
       "p1": "Send us a WhatsApp message",
       "p2": "Email us"
     },

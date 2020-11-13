@@ -1,7 +1,8 @@
+
 {
-  "newsletter_component": {
-    "title": " suscríbete y <br />te actualizamos",
-    "p": "Recibe un correo cada vez que publiquemos un capítulo nuevo.",
+  "resource_footer": {
+    "title": " suscríbete y te actualizamos",
+    "p": "Recibe recursos para negocios creados por expertos en estrategia digital. ",
     "firstName": {
       "label": "nombre",
       "placeholder": "tu nombre",

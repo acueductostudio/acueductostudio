@@ -12,15 +12,19 @@
         "title": "ingresa tus datos para recibir tu diagnóstico personalizado",
         "firstName": {
           "label": "nombre",
-          "errorMissing": "Escribe tu nombre"
+          "placeholder": "tu nombre",
+          "errorMissing": "*falta tu nombre"
         },
         "lastName": {
           "label": "apellido",
-          "errorMissing": "Escribe tu apellido"
+          "placeholder": "tu apellido",
+          "errorMissing": "*falta tu apellido"
         },
         "email": {
-          "errorMissing": "Escribe tu email",
-          "errorInvalid": "Email inválido"
+          "label": "email",
+          "placeholder": "tu email",
+          "errorMissing": "*falta tu email",
+          "errorInvalid": "*email inválido"
         },
         "submit": "ver resultados"
       },

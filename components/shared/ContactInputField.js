@@ -7,6 +7,7 @@ const InputField = styled.div`
   margin-bottom: 12px;
   label {
     font-size: 0.8em;
+    padding-left:0 !important;
     margin-bottom: 8px;
     color: ${(p) => p.theme.colors.foreground_low};
   }

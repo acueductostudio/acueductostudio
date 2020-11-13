@@ -7,7 +7,8 @@ import { createContact } from "utils/sendinBlue.ts";
 import delayForLoading from "utils/delayForLoading.ts";
 import Results from "./Results";
 import ReactPixel from "react-facebook-pixel";
-import InputField from "components/shared/InputField";
+// import InputField from "components/shared/InputField";
+import InputField, { SubmitField } from "components/shared/ContactInputField";
 
 const NUMBER_OF_QS = 15;
 
@@ -175,7 +176,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       name="firstName"
                       type="text"
                       id="firstName"
-                      placeholder={collection_form.firstName.label}
+                      placeholder={collection_form.firstName.placeholder}
                       ref={register({ required: true })}
                     />
                     {errors.firstName && (
@@ -191,7 +192,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       name="lastName"
                       type="text"
                       id="lastName"
-                      placeholder={collection_form.lastName.label}
+                      placeholder={collection_form.lastName.placeholder}
                       ref={register({ required: true })}
                     />
                     {errors.lastName && (
@@ -205,7 +206,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       name="email"
                       type="email"
                       id="email"
-                      placeholder="email"
+                      placeholder={collection_form.email.placeholder}
                       ref={register({
                         required: {
                           value: true,
@@ -219,9 +220,9 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                     />
                     <span>{errors?.email?.message}</span>
                   </InputField>
-                  <InputField>
+                  <SubmitField>
                     <input type="submit" value={collection_form.submit} />
-                  </InputField>
+                  </SubmitField>
                 </InputGrid>
               </Question>
             </form>
@@ -422,10 +423,18 @@ const Arrowx = styled.div`
 const InputGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 75px);
-  grid-gap: 1.6rem 2rem;
+  grid-gap: 1rem 2rem;
   width: 100%;
   align-items: flex-start;
+  ${SubmitField} {
+    margin-top: 30px;
+  }
+  @media (max-width: 750px) {
+    grid-gap: 0 1.4rem;
+    ${SubmitField} {
+      margin-top: 28px;
+    }
+  }
 `;
 
 const Info = styled.div`

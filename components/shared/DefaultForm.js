@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import delayForLoading from "utils/delayForLoading.ts";
-import InputField from "components/shared/InputField";
+import InputField, { SubmitField } from "components/shared/ContactInputField";
 
 const DefaultForm = ({
   text,
@@ -11,7 +11,7 @@ const DefaultForm = ({
   formMarkup,
   successMarkup,
   id,
-  infinite,
+  infinite
 }) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
@@ -36,7 +36,7 @@ const DefaultForm = ({
                 name="firstName"
                 id={`${id}firstName`}
                 type="text"
-                placeholder={text.firstName.label}
+                placeholder={text.firstName.placeholder}
                 ref={register({ required: true })}
               />
               {errors.firstName && <span>{text.firstName.errorMissing}</span>}
@@ -47,7 +47,7 @@ const DefaultForm = ({
                 name="lastName"
                 id={`${id}lastName`}
                 type="text"
-                placeholder={text.lastName.label}
+                placeholder={text.lastName.placeholder}
                 ref={register({ required: true })}
               />
               {errors.lastName && <span>{text.lastName.errorMissing}</span>}
@@ -58,7 +58,7 @@ const DefaultForm = ({
                 name="email"
                 id={`${id}email`}
                 type="email"
-                placeholder="email"
+                placeholder={text.email.placeholder}
                 ref={register({
                   required: {
                     value: true,
@@ -72,9 +72,9 @@ const DefaultForm = ({
               />
               <span>{errors?.email?.message}</span>
             </InputField>
-            <InputField>
+            <SubmitField>
               <input type="submit" value={text.submit} />
-            </InputField>
+            </SubmitField>
           </form>
         </>
       )}

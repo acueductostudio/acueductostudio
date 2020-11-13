@@ -1,37 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
+import Link from "next/link";
 import { H1 } from "components/shared/Dangerously";
 import FooterNav from "./FooterNav";
 import { Fade } from "react-awesome-reveal";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
-import Mail from "public/assets/img/layout/mail.svg";
-import { CopyToClipboard } from "react-copy-to-clipboard";
-import { logEvent } from "utils/analytics";
 import FooterLogoCrop from "./FooterLogoCrop";
 
 const ContactFooter = () => {
   const context = useLocaleContext();
-  let { title, p, copied_text, copy_text } = context.contact_footer;
-
-  const [copied, setCopied] = useState(false);
-  const [copying, setCopying] = useState(false);
-
-  const setHovered = () => {
-    setCopying(true);
-  };
-
-  const setUnhovered = () => {
-    setCopying(false);
-    setTimeout(function () {
-      setCopied(false);
-    }, 300);
-  };
-
-  const doSetCopied = () => {
-    setCopied(true);
-    logEvent("Click", "Copied email to clipboard");
-  };
+  let { title, p, button_text, button_link } = context.contact_footer;
 
   return (
     <>
@@ -40,25 +19,15 @@ const ContactFooter = () => {
           <H1>{title}</H1>
         </Fade>
         <Fade triggerOnce>
-          <CopyToClipboard
-            text={"hola@acueducto.studio"}
-            onCopy={doSetCopied}
-            onMouseEnter={setHovered}
-            onMouseLeave={setUnhovered}
-            onClick={setHovered}
-          >
-            <p>
-              {p}
-              <b>
-                <MailPlaceholder />
-                <CopyMessage reveal={copying}>
-                  {copied ? copied_text : copy_text}
-                </CopyMessage>
-              </b>
-            </p>
-          </CopyToClipboard>
+          <p>{p}</p>
+          <Link href={button_link} passHref>
+            <ButtonLink>
+              {button_text}
+              <Pin />
+            </ButtonLink>
+          </Link>
         </Fade>
-<FooterLogoCrop/>
+        <FooterLogoCrop />
       </Grid>
       <FooterNav />
     </>
@@ -67,14 +36,72 @@ const ContactFooter = () => {
 
 export default React.memo(ContactFooter);
 
-const MailPlaceholder = styled(Mail)`
-  height: 100%;
-  max-height: 18px;
-  bottom: 0;
-  position: relative;
-  margin-bottom: -4px;
+const Pin = styled.span`
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: ${(p) => p.theme.colors.background};
+  border-radius: 100%;
+  margin-left: 15px;
+  transition: 0.3s ease all;
+  &:after {
+    content: " ";
+    border: solid ${(p) => p.theme.colors.accent};
+    border-width: 0 2.5px 2.5px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(-45deg) translateY(3px);
+    margin-left: 3px;
+    transition: 0.3s ease all;
+  }
+`;
+
+const ButtonLink = styled.a`
+  text-decoration: none;
+  padding: 13px 17px 18px 24px;
+  border-radius: 30px;
+  color: ${(p) => p.theme.colors.foreground};
+  background-color: ${(p) => p.theme.colors.background};
+  margin-top: 20px;
+  border: 2px solid ${(p) => p.theme.colors.background};
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &:after {
+        border-color: ${(p) => p.theme.colors.foreground};
+      }
+      ${Pin} {
+        background-color: ${(p) => p.theme.colors.accent};
+        margin-left: 25px;
+        &:after {
+          border-color: ${(p) => p.theme.colors.foreground};
+          transform: rotate(-45deg) translateY(3px) scale(0.8);
+        }
+      }
+    }
+  }
   @media (max-width: 600px) {
-    max-height: 15px;
+    margin-bottom:20%;
+    padding-top:15px;
+    ${Pin}{
+      transform:translateY(-3px);
+      &:after{
+        margin-left:0px;
+        transform: rotate(-45deg) translateY(7px) scale(1);
+      }
+    }
+    &:active {
+      &:after {
+        border-color: ${(p) => p.theme.colors.foreground};
+      }
+      ${Pin} {
+        background-color: ${(p) => p.theme.colors.accent};
+        margin-left: 25px;
+        &:after {
+          border-color: ${(p) => p.theme.colors.foreground};
+          transform: rotate(-45deg) translateY(7px) scale(0.8);
+        }
+      }
+    }
   }
 `;
 
@@ -91,6 +118,7 @@ const Grid = styled(TitleSectionGrid)`
   p {
     z-index: 8;
     color: ${(props) => props.theme.colors.foreground_low};
+    margin-bottom: 10px;
     &:hover {
       b {
         border-bottom: ${(props) =>
@@ -111,45 +139,17 @@ const Grid = styled(TitleSectionGrid)`
     }
   }
   @media (max-width: 600px) {
+    > div:nth-of-type(3){
+      margin-bottom:20%;
+    }
     p {
       max-width: 360px;
-      padding-bottom: 10%;
+      padding-bottom: 5%;
     }
   }
   @media (max-width: 450px) {
     p {
       max-width: 360px;
-      padding-bottom: 20%;
-      b span {
-        bottom: -40px;
-      }
     }
-  }
-`;
-
-const CopyMessage = styled.span`
-  position: absolute;
-  opacity: ${(props) => (props.reveal ? 1 : 0)};
-  bottom: -40px;
-  left: 0;
-  width: 100%;
-  padding: 8px 10px;
-  background-color: ${(props) => props.theme.colors.background};
-  text-align: center;
-  border-radius: 4px;
-  font-size: 1.5rem;
-  transition: ${(props) =>
-    props.reveal ? "0.3s ease all 0s" : "0.3s ease all"};
-  &:before {
-    content: " ";
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid ${(props) => props.theme.colors.background};
   }
 `;

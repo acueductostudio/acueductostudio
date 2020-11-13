@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Head from "components/layout/Head";
 import React, { useEffect } from "react";
 import PageClipper from "components/layout/PageClipper";
-import ContactFooter from "components/shared/footers/ContactFooter";
+import ResourceFooter from "components/shared/footers/ResourceFooter";
 import { H1, P } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import es from "public/locales/es/podcast.json";
@@ -102,7 +102,7 @@ function Podcast(props) {
           </PodcastList>
         </div>
       </PodcastGrid>
-      <ContactFooter />
+      <ResourceFooter />
     </PageClipper>
   );
 }

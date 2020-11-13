@@ -90,6 +90,7 @@ const Border = styled.div`
     ${(props) => props.theme.colors.foreground};
   background-color: ${(props) => props.theme.colors.background};
   padding: 10% 15% 14% 15%;
+  border-radius:30px;
   @media (max-width: 380px) {
     padding: 10% 10% 14% 10%;
   }
@@ -100,7 +101,7 @@ const CrossContainer = styled.div`
   height: 50px;
   padding: 12px;
   position: absolute;
-  top: 3%;
+  top: 2.4%;
   right: 3%;
   svg {
     width: 100%;

@@ -119,23 +119,21 @@ export default React.memo(LanguageToggler);
 
 const English = styled.div`
   background-color: ${(props) => props.theme.colors.accent};
-  border: 2px solid ${(props) => props.theme.colors.foreground};
-  padding: 10px;
+  padding: 9px 10px 8px 23px;
   position: absolute;
-  margin-top: -13px;
   margin-left: -8px;
-  border-radius: 50% 50%;
-  width: 80px;
-  height: 80px;
+  border-radius: 30px;
+  width: 138px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   font-weight: 100;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 1.5rem;
+  transform: translateX(-100%);
   span {
     font-size: 1.1rem;
     line-height: 1;
@@ -191,10 +189,10 @@ const Toggler = styled.div`
       }
     }
   }
-
   svg {
     width: 30px;
-    pointer-events: auto;
+    pointer-events: ${(props) =>
+      props.available && props.reveal ? "auto" : "none"};
     padding: 15px;
     box-sizing: content-box;
     transition: 0.2s ease-in transform;
@@ -207,14 +205,15 @@ const Toggler = styled.div`
       stroke: ${(props) => props.theme.colors.white};
     }
   }
+  &:active {
+      svg {
+        transform: scale(0.9);
+      }
+    }
   @media (max-width: 600px) {
     align-items: flex-start;
     padding-top: 40px;
     padding-right: calc(22px + 1%);
-    &:active{
-      svg{
-      transform:scale(0.9);}
-    }
   }
   @media (max-width: 450px) {
     padding-top: 20px;

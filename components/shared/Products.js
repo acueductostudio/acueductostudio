@@ -125,6 +125,9 @@ const Product = styled.div`
   }
   @media (max-width: 550px) {
     padding: 8%;
+    h2 {
+      font-size: 1.8rem;
+    }
     svg {
       max-width: 70px;
     }

@@ -16,15 +16,19 @@
       "sessions": "2 sesiones",
       "firstName": {
         "label": "nombre",
-        "errorMissing": "Escribe tu nombre"
+        "placeholder": "tu nombre",
+        "errorMissing": "*falta tu nombre"
       },
       "lastName": {
         "label": "apellido",
-        "errorMissing": "Escribe tu apellido"
+        "placeholder": "tu apellido",
+        "errorMissing": "*falta tu apellido"
       },
       "email": {
-        "errorMissing": "Escribe tu email",
-        "errorInvalid": "Email inválido"
+        "label": "email de trabajo",
+        "placeholder": "tu email",
+        "errorMissing": "*falta tu email",
+        "errorInvalid": "*email inválido"
       },
       "submit": "agendar cita",
       "loading": "redirigiendo...",

@@ -148,22 +148,19 @@ const NavList = styled.div`
   flex-direction: column;
   ul {
     list-style: none;
-    font-size: 2rem;
-    color: ${(props) => props.theme.colors.foreground_low};
+    font-size: 1.8rem;
+    color: ${(p) => p.accentColor ? p.theme.colors.foreground_lowest : p.theme.colors.foreground_lower};
     li:not(:last-of-type) {
       margin-bottom: 20px;
     }
   }
   h6 {
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     font-weight: 200;
     margin: 0 0 30px;
-    ${(p) => p.accentColor && `color:${p.theme.colors.accent};`}
+    color: ${(p) => p.accentColor ? p.theme.colors.accent : p.theme.colors.foreground}
   }
   @media (max-width: 950px) {
-    ul {
-      font-size: 1.8rem;
-    }
     h6 {
       font-size: 2rem;
     }
@@ -194,21 +191,22 @@ const Colophon = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-column: 2 / span 11;
   margin-top: 10%;
+  font-size: 1.6rem;
   p {
     color: ${(p) => p.theme.colors.accent};
   }
   > div:nth-of-type(3) a {
     position: relative;
-    padding-left: 35px;
+    padding-left: 33px;
   }
   img {
     pointer-events: none;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 0;
     background-color: ${(p) => p.theme.colors.background};
-    padding-right: 10px;
+    padding-right: 8px;
     padding-bottom: 5px;
     left: 0;
   }
