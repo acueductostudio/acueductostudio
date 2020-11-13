@@ -7,6 +7,7 @@ import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import FooterLogoCrop from "./FooterLogoCrop";
 import DefaultForm from "components/shared/DefaultForm";
 import es from "public/locales/es/resourcefooter.json";
+import ArrowButton from "components/shared/footers/ArrowButton";
 
 const ResourceFooter = () => {
   let resource = es.resource_footer;
@@ -32,6 +33,7 @@ const ResourceFooter = () => {
             <DefaultForm
               onSubmit={onSubmit}
               text={resource}
+              submitButton={<ArrowButton text={resource.submit} submitButton/>}
               successMarkup={<Message success>{resource.success.p}</Message>}
             />
           </ResourceForm>
@@ -46,8 +48,15 @@ const ResourceFooter = () => {
 export default React.memo(ResourceFooter);
 
 const ResourceForm = styled.div`
+overflow:hidden;  
+position:relative;
+form{
+  display:flex;
+  flex-direction:column;
+}
   input {
     background-color: ${(props) => props.theme.colors.accent};
+    border-color: ${(props) => props.theme.colors.background};
     &:active, &:focus {
       border-color: ${(props) => props.theme.colors.background} !important;
     }
@@ -63,9 +72,10 @@ const ResourceForm = styled.div`
 `;
 
 const Message = styled.div`
-  color: ${(p) => p.theme.colors.success};
+  color: ${(p) => p.theme.colors.background};
   font-size: 1.8rem;
   padding-bottom: 5px;
+  font-weight:200;
   @media (max-width: 600px), (max-height: 450px) {
     font-size: 1.5rem;
   }

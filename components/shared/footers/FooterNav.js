@@ -110,7 +110,7 @@ export default function FooterNav() {
           <p>© 2020, Acueducto</p>
           <a href="mailto:hola@acueducto.studio">hola@acueducto.studio</a>
           <a href="https://wa.me/525541634721">
-            <img src="/assets/img/layout/logos/whatsapp.svg" />+ 52 55 4163 4721
+            <img src="/assets/img/layout/logos/whatsapp.svg" alt="WhatApp"/>+ 52 55 4163 4721
           </a>
         </Fade>
       </Colophon>

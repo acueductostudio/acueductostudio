@@ -9,9 +9,10 @@ const DefaultForm = ({
   text,
   onSubmit,
   formMarkup,
+  submitButton,
   successMarkup,
   id,
-  infinite
+  infinite,
 }) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
@@ -72,9 +73,13 @@ const DefaultForm = ({
               />
               <span>{errors?.email?.message}</span>
             </InputField>
-            <SubmitField>
-              <input type="submit" value={text.submit} />
-            </SubmitField>
+            {submitButton ? (
+              submitButton
+            ) : (
+              <SubmitField>
+                <input type="submit" value={text.submit} />
+              </SubmitField>
+            )}
           </form>
         </>
       )}

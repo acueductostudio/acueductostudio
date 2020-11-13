@@ -7,6 +7,7 @@ import FooterNav from "./FooterNav";
 import { Fade } from "react-awesome-reveal";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import FooterLogoCrop from "./FooterLogoCrop";
+import ArrowButton from "components/shared/footers/ArrowButton";
 
 const ContactFooter = () => {
   const context = useLocaleContext();
@@ -21,10 +22,7 @@ const ContactFooter = () => {
         <Fade triggerOnce>
           <p>{p}</p>
           <Link href={button_link} passHref>
-            <ButtonLink>
-              {button_text}
-              <Pin />
-            </ButtonLink>
+            <ArrowButton text={button_text} />
           </Link>
         </Fade>
         <FooterLogoCrop />
@@ -35,75 +33,6 @@ const ContactFooter = () => {
 };
 
 export default React.memo(ContactFooter);
-
-const Pin = styled.span`
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  background-color: ${(p) => p.theme.colors.background};
-  border-radius: 100%;
-  margin-left: 15px;
-  transition: 0.3s ease all;
-  &:after {
-    content: " ";
-    border: solid ${(p) => p.theme.colors.accent};
-    border-width: 0 2.5px 2.5px 0;
-    display: inline-block;
-    padding: 6px;
-    transform: rotate(-45deg) translateY(3px);
-    margin-left: 3px;
-    transition: 0.3s ease all;
-  }
-`;
-
-const ButtonLink = styled.a`
-  text-decoration: none;
-  padding: 13px 17px 18px 24px;
-  border-radius: 30px;
-  color: ${(p) => p.theme.colors.foreground};
-  background-color: ${(p) => p.theme.colors.background};
-  margin-top: 20px;
-  border: 2px solid ${(p) => p.theme.colors.background};
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      &:after {
-        border-color: ${(p) => p.theme.colors.foreground};
-      }
-      ${Pin} {
-        background-color: ${(p) => p.theme.colors.accent};
-        margin-left: 25px;
-        &:after {
-          border-color: ${(p) => p.theme.colors.foreground};
-          transform: rotate(-45deg) translateY(3px) scale(0.8);
-        }
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    margin-bottom:20%;
-    padding-top:15px;
-    ${Pin}{
-      transform:translateY(-3px);
-      &:after{
-        margin-left:0px;
-        transform: rotate(-45deg) translateY(7px) scale(1);
-      }
-    }
-    &:active {
-      &:after {
-        border-color: ${(p) => p.theme.colors.foreground};
-      }
-      ${Pin} {
-        background-color: ${(p) => p.theme.colors.accent};
-        margin-left: 25px;
-        &:after {
-          border-color: ${(p) => p.theme.colors.foreground};
-          transform: rotate(-45deg) translateY(7px) scale(0.8);
-        }
-      }
-    }
-  }
-`;
 
 const Grid = styled(TitleSectionGrid)`
   background-color: ${(props) => props.theme.colors.accent};
@@ -139,8 +68,8 @@ const Grid = styled(TitleSectionGrid)`
     }
   }
   @media (max-width: 600px) {
-    > div:nth-of-type(3){
-      margin-bottom:20%;
+    > div:nth-of-type(3) {
+      margin-bottom: 20%;
     }
     p {
       max-width: 360px;
