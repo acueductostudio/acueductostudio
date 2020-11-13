@@ -26,12 +26,23 @@ const styles = `
     right: 20px;
     bottom: 20px;
     border: 17px solid white;
+    border-radius:60px;
     border-width: 17px;
     transform: scale(0.12);
     transition: transform 0.4s ease-out, border-width 0.3s ease-out;
     will-change: transform;
     overflow: hidden;
   }
+  @media(max-width:1530px) {
+   #bordered { 
+     border-radius: 40px;
+    }
+  }
+  @media(max-width:600px) {
+    #bordered { 
+      border-radius: 30px;
+     }
+   }
   #bordered::before {
     content: " ";
     background-color: #1740bf;
@@ -224,7 +235,7 @@ function renderStyles() {
   return {
     __html: styles
       .replace(/(\r\n|\n|\r)/gm, "") // removes all new lines
-      .replace(/ +(?= )/g, "") // removes all multiple spaces (indenting)
+      .replace(/ +(?= )/g, ""), // removes all multiple spaces (indenting)
     // .replace(/.}/g, "}\n") // adds new line after every } charracter
   };
 }

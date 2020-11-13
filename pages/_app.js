@@ -44,15 +44,15 @@ function App(props) {
             revealer.style.opacity = "0";
             revealer.style.pointerEvents = "none";
             setHasLoaded(true);
-          }, 500);
+          }, 400);
 
           setTimeout(() => {
             // Remove transition items from DOM
             bordered.remove();
             revealer.remove();
             logo.remove();
-          }, 3000);
-        }, 500);
+          }, 2000);
+        }, 400);
       }
     });
     // router event listeners for loadingBar
