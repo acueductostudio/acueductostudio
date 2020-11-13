@@ -1,10 +1,10 @@
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import styled from "styled-components";
 import { useEffect } from "react";
 import TitleSection from "components/shared/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
-import PageClipper from "components/PageClipper";
-import ContactFooter from "components/ContactFooter";
+import PageClipper from "components/layout/PageClipper";
+import ContactFooter from "components/shared/footers/ContactFooter";
 
 export default function Work(props) {
   let t = props.locale.work_page;

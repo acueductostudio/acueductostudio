@@ -1,0 +1,115 @@
+{
+    "page_title": "Our Pitch - Why digital technology",
+    "meta_description": "Out expertise, methodology and toolbox, the tour of what it's like to work with us",
+    "headerTitle": "Pitch",
+    "intro": {
+      "title": "and now,<br/>our pitch",
+      "p0": "Digital technology has drastically restructured industry after industry, so many businesses have undergone dramatic transformations either to benefit from this trend or simply to keep their organization competitive.<br/><br/>At Acueducto we seek to develop the strategies and products that you need to keep your business healthy in the digital era. In this page we explain in detail how we generate value to organizations that look for competitive solutions in digital tools. ",
+      "subtitle1": "innovation areas",
+      "li1": [
+        "User/Client experience",
+        "Brand development",
+        "Business operations",
+        "Digital business models"
+      ],
+      "subtitle2": "model companies who<br/>implement these solutions",
+      "subtitle3": "strategic design",
+      "p3": "<b>Strategic design</b> develops business solutions applying design principles to maximize innovation and competitiveness in your organization. It analyzes external and internal trends alongside your business’ hard data in order to make fact-based decisions instead of following esthetics or intuition.",
+      "subtitle4": "digital transformation",
+      "p4": "<b>Digital transformation</b> refers to the adoption of digital processes and tools in order to achieve strategic business goals. With the implementation of technological advances we can find innovative ways to stimulate the growth of your organization."
+    },
+    "second_section": {
+      "title": "we look for partners,<br/> not clients",
+      "p": "In Acueducto we firmly believe in the value of partnerships. Unlike the client-agency relationship that dominates the market, partnering with you allows us to get involved in the structure of your project and apply design processes and strategies of greater impact."
+    },
+    "products_section": {
+      "intro": {
+        "title": "to develop innovative ideas",
+        "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
+      },
+      "products": [
+        {
+          "title": "mobile<br/>and web apps",
+          "p": "Connect with your audience through any device, grow your business with a web experience or an app."
+        },
+        {
+          "title": "digital products<br/>and services",
+          "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
+        },
+        {
+          "title": "digital branding",
+          "p": "Elevate the perception of your product, service or organization through strategic design and art direction."
+        },
+        {
+          "title": "digital marketing strategies",
+          "p": "Grow your sales with communication strategies, creative content and paid advertising."
+        }
+      ]
+    },
+    "process_section": {
+      "title": "following a strategic process",
+      "p": "Our process is the most valuable resource we have. It’s designed to operate in any industry and we follow through it in every project. We iterate over it each time we use it so every step we take gives us the security to take the next one.",
+      "steps": [
+        {
+          "title": "discover",
+          "p": "Where are we standing? Research and analysis are made on the project’s context, audience and needs.<br/><br/>We evaluate:",
+          "li": ["Business models", "Goals", "Brand", "Market"],
+          "p2": "We engage with your organization in creative workshops, internal interviews, and conduct field and desktop research."
+        },
+        {
+          "title": "envision",
+          "p": "Where are we headed? Goals are defined and re-framed along with the project’s orientation and approach.<br/><br/>We explore:",
+          "li": [
+            "Creating value",
+            "Generating a differentiator",
+            "Developing competitive advantages"
+          ],
+          "p2": "We analyze the market environment, cost-benefit, risks, and the financial viablity of your project."
+        },
+        {
+          "title": "build the story",
+          "p": "How do we empathize with our audience? Messages are conceptualized, actions prioritized and narratives co-created with your team.<br/><br/>We define:",
+          "li": [
+            "Key Performance Indicators",
+            "Creative brief & storytelling",
+            "Branding",
+            "Calendar"
+          ],
+          "p2": "We agree on the strategies that will define the course of the project, set milestones, and specify deliverables."
+        },
+        {
+          "title": "design, tech & craft",
+          "p": "Enough planning, in this step the project contents and applications are developed.<br/><br/>We work on:",
+          "li": [
+            "Designs and applications",
+            "Prototypes",
+            "Copywriting",
+            "Code"
+          ],
+          "p2": "We get down to work to produce all the planned deliverables to meet the project’s needs."
+        },
+        {
+          "title": "launch",
+          "p": "It all comes down to this moment. Organizational changes are guided and launching is managed. <br/><br/>We implement:",
+          "li": ["Promotion", "Advertising", "Community Management"],
+          "p2": "We execute the project’s communication strategies while their performance is monitored and documented."
+        },
+        {
+          "title": "review",
+          "p": "Evaluation leads to improvement. All data from the projects’ processes and results is collected and reviewed.<br/><br/>We share:",
+          "li": ["Performance report", "Next possible steps"],
+          "p2": "We evaluate the whole project, our own process effectiveness and prepare to take the next step."
+        }
+      ]
+    },
+    "tools_section": {
+      "title": "with the<br/>best tools only",
+      "p": "Your project is unique and requieres personalized treatment, that’s why we perform careful analysis to find the toolkit best fit for its development.<br/><br/>This is some of our favorite tech to get the work done.",
+      "apps": "mobile and web apps",
+      "platforms": "platforms and operating systems",
+      "marketing": "digital marketing",
+      "content": "content platforms",
+      "bi": "business intelligence",
+      "collaboration": "co-creation"
+    }
+  }

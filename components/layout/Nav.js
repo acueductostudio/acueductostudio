@@ -19,22 +19,7 @@ export default function Nav(props) {
     );
   };
 
-  const scrollToBottom = (e) => {
-    e.preventDefault();
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  };
-
   let navItems = t.map(function (item, index) {
-    // if (item.title === "contact" || item.title === "contacto") {
-    //   return (
-    //     <Fade delay={200 + index * 50} key={"item" + index}>
-    //       <li>
-    //         <span>0{index + 1}</span>
-    //         <NavLink onClick={scrollToBottom}>{item.title}</NavLink>
-    //       </li>
-    //     </Fade>
-    //   );
-    // }
     return (
       <Fade delay={200 + index * 50} key={"item" + index}>
         <li>

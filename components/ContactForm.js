@@ -8,24 +8,7 @@ import InputField, {
   CheckMark,
 } from "components/shared/ContactInputField";
 
-// const Field = ({ fieldName, type, reference, errors }) => {
-//   let fieldName2 = Object.keys(fieldName)[0];
-//   return (
-//     <InputField>
-//       <label htmlFor={`cp_${fieldName2}`}>{fieldName.label}</label>
-//       <input
-//         name={fieldName2}
-//         id={`cp_${fieldName2}`}
-//         type={type}
-//         placeholder={fieldName.placeholder}
-//         ref={reference}
-//       />
-//       <span>{errors}</span>
-//     </InputField>
-//   );
-// };
-
-const DefaultForm = ({ text, onSubmit, infinite }) => {
+const DefaultForm = ({ text }) => {
   const [formStatus, setFormStatus] = useState("");
   const [requirePhone, setRequirePhone] = useState(false);
 
@@ -35,8 +18,7 @@ const DefaultForm = ({ text, onSubmit, infinite }) => {
     console.log(data);
 
     setFormStatus("loading");
-    onSubmit(data);
-    !infinite && delayForLoading(1500).then(() => setFormStatus("done"));
+    delayForLoading(1500).then(() => setFormStatus("done"));
   };
 
   const phoneFieldChange = () => setRequirePhone(!requirePhone);
@@ -44,65 +26,70 @@ const DefaultForm = ({ text, onSubmit, infinite }) => {
   return (
     <>
       {formStatus === "" && (
-        <Form onSubmit={handleSubmit(onSubmitInside)}>
-          <InputField>
-            <label htmlFor={`cp_email`}>{text.email.label}</label>
-            <input
-              name="email"
-              id={`cp_email`}
-              type="email"
-              placeholder={text.email.placeholder}
-              ref={register({
-                required: {
-                  value: true,
-                  message: text.email.errorMissing,
-                },
-                pattern: {
-                  value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
-                  message: text.email.errorInvalid,
-                },
-              })}
-            />
-            <span>{errors?.email?.message}</span>
-          </InputField>
+        <>
+          <p>{text.p3}</p>
+          <Form onSubmit={handleSubmit(onSubmitInside)}>
+            <InputField>
+              <label htmlFor={`cp_email`}>{text.email.label}</label>
+              <input
+                name="email"
+                id={`cp_email`}
+                type="email"
+                placeholder={text.email.placeholder}
+                ref={register({
+                  required: {
+                    value: true,
+                    message: text.email.errorMissing,
+                  },
+                  pattern: {
+                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                    message: text.email.errorInvalid,
+                  },
+                })}
+              />
+              <span>{errors?.email?.message}</span>
+            </InputField>
 
-          <InputField>
-            <label htmlFor={`cp_firstName`}>{text.firstName.label}</label>
-            <input
-              name="firstName"
-              id={`cp_firstName`}
-              type="text"
-              placeholder={text.firstName.placeholder}
-              ref={register({
-                required: { value: true, message: text.firstName.errorMissing },
-              })}
-            />
-            <span>{errors?.firstName?.message}</span>
-          </InputField>
+            <InputField>
+              <label htmlFor={`cp_firstName`}>{text.firstName.label}</label>
+              <input
+                name="firstName"
+                id={`cp_firstName`}
+                type="text"
+                placeholder={text.firstName.placeholder}
+                ref={register({
+                  required: {
+                    value: true,
+                    message: text.firstName.errorMissing,
+                  },
+                })}
+              />
+              <span>{errors?.firstName?.message}</span>
+            </InputField>
 
-          <InputField>
-            <label htmlFor={`cp_lastName`}>{text.lastName.label}</label>
-            <input
-              name="lastName"
-              id={`cp_lastName`}
-              type="text"
-              placeholder={text.lastName.placeholder}
-              ref={register({ required: true })}
-            />
-            {errors.lastName && <span>{text.lastName.errorMissing}</span>}
-          </InputField>
-          <InputField>
-            <label htmlFor={`cp_company`}>{text.company.label}</label>
-            <input
-              name="company"
-              id={`cp_company`}
-              type="text"
-              placeholder={text.company.placeholder}
-              ref={register({ required: true })}
-            />
-            {errors.company && <span>{text.company.errorMissing}</span>}
-          </InputField>
-          {/* <InputField>
+            <InputField>
+              <label htmlFor={`cp_lastName`}>{text.lastName.label}</label>
+              <input
+                name="lastName"
+                id={`cp_lastName`}
+                type="text"
+                placeholder={text.lastName.placeholder}
+                ref={register({ required: true })}
+              />
+              {errors.lastName && <span>{text.lastName.errorMissing}</span>}
+            </InputField>
+            <InputField>
+              <label htmlFor={`cp_company`}>{text.company.label}</label>
+              <input
+                name="company"
+                id={`cp_company`}
+                type="text"
+                placeholder={text.company.placeholder}
+                ref={register({ required: true })}
+              />
+              {errors.company && <span>{text.company.errorMissing}</span>}
+            </InputField>
+            {/* <InputField>
             <label htmlFor={`cp_employees`}>{text.employees.label}</label>
             <select name="employees" id={`cp_employees`} ref={register}>
               <option value="female">female</option>
@@ -111,62 +98,63 @@ const DefaultForm = ({ text, onSubmit, infinite }) => {
             </select>
             {errors.employees && <span>{text.employees.errorMissing}</span>}
           </InputField> */}
-          <InputField>
-            <label htmlFor={`cp_message`}>{text.message.label}</label>
-            <textarea
-              name="message"
-              id={`cp_message`}
-              placeholder={text.message.placeholder}
-              ref={register({ required: true })}
-            />
-            {errors.message && <span>{text.message.errorMissing}</span>}
-          </InputField>
-          <CheckMark>
-            <label htmlFor={`cp_phonecheckbox`}>
-              {text.phonecheckbox.label}
-            </label>
-            <input
-              name="phonecheckbox"
-              id={`cp_phonecheckbox`}
-              type="checkbox"
-              placeholder={text.message.placeholder}
-              ref={register()}
-              onChange={phoneFieldChange}
-            />
-            <span className="checkmark"></span>
-          </CheckMark>
-          {requirePhone && (
-            <Fade triggerOnce>
-              <InputField>
-                <label htmlFor={`cp_phone`}>{text.phone.label}</label>
-                <input
-                  name="phone"
-                  id={`cp_phone`}
-                  type="phone"
-                  placeholder={text.phone.placeholder}
-                  ref={register({
-                    required: {
-                      value: true,
-                      message: text.phone.errorMissing,
-                    },
-                    pattern: {
-                      value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/i,
-                      message: text.phone.errorInvalid,
-                    },
-                    minLength: {
-                      value: 10,
-                      message: text.phone.errorInvalid,
-                    },
-                  })}
-                />
-                <span>{errors?.phone?.message}</span>
-              </InputField>
-            </Fade>
-          )}
-          <SubmitField>
-            <input type="submit" value={text.submit} />
-          </SubmitField>
-        </Form>
+            <InputField>
+              <label htmlFor={`cp_message`}>{text.message.label}</label>
+              <textarea
+                name="message"
+                id={`cp_message`}
+                placeholder={text.message.placeholder}
+                ref={register({ required: true })}
+              />
+              {errors.message && <span>{text.message.errorMissing}</span>}
+            </InputField>
+            <CheckMark>
+              <label htmlFor={`cp_phonecheckbox`}>
+                {text.phonecheckbox.label}
+              </label>
+              <input
+                name="phonecheckbox"
+                id={`cp_phonecheckbox`}
+                type="checkbox"
+                placeholder={text.message.placeholder}
+                ref={register()}
+                onChange={phoneFieldChange}
+              />
+              <span className="checkmark"></span>
+            </CheckMark>
+            {requirePhone && (
+              <Fade triggerOnce>
+                <InputField>
+                  <label htmlFor={`cp_phone`}>{text.phone.label}</label>
+                  <input
+                    name="phone"
+                    id={`cp_phone`}
+                    type="phone"
+                    placeholder={"+52 55 8778 8778"}
+                    ref={register({
+                      required: {
+                        value: true,
+                        message: text.phone.errorMissing,
+                      },
+                      pattern: {
+                        value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/i,
+                        message: text.phone.errorInvalid,
+                      },
+                      minLength: {
+                        value: 10,
+                        message: text.phone.errorInvalid,
+                      },
+                    })}
+                  />
+                  <span>{errors?.phone?.message}</span>
+                </InputField>
+              </Fade>
+            )}
+            <SubmitField>
+              <input type="submit" value={text.submit} />
+            </SubmitField>
+          </Form>
+        </>
       )}
       {formStatus === "loading" && (
         <Fade triggerOnce>
@@ -175,9 +163,7 @@ const DefaultForm = ({ text, onSubmit, infinite }) => {
           </Loading>
         </Fade>
       )}
-      {formStatus === "done" && (
-        <Message success>{newsletter.success.p}</Message>
-      )}
+      {formStatus === "done" && <Message success>{text.success.p}</Message>}
     </>
   );
 };
@@ -204,7 +190,7 @@ const fadeIn = keyframes`
 
 const Loading = styled.div`
   width: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   display: flex;
   padding-bottom: 10%;

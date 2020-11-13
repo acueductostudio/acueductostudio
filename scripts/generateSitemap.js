@@ -15,6 +15,11 @@ const routes = [
     priority: 0.9,
   },
   {
+    es: "/contacto",
+    en: "/en/contact",
+    priority: 0.9,
+  },
+  {
     es: "/nosotros",
     en: "/en/about",
     priority: 0.8,
@@ -38,6 +43,10 @@ const routes = [
     priority: 0.7,
   },
   {
+    es: "/podcast",
+    priority: 0.7,
+  },
+  {
     es: "/portafolio/rahid",
     en: "/en/work/rahid",
     priority: 0.7,
@@ -55,16 +64,12 @@ const routes = [
   {
     es: "/cookies",
     en: "/en/cookies",
-    priority: 0.6,
+    priority: 0.5,
   },
   {
     es: "/privacidad",
     en: "/en/privacy",
-    priority: 0.6,
-  },
-  {
-    es: "/podcast",
-    priority: 0.7,
+    priority: 0.5,
   },
 ];
 

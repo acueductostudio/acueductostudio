@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Head from "components/Head";
-import PageClipper from "components/PageClipper";
+import Head from "components/layout/Head";
+import PageClipper from "components/layout/PageClipper";
 import { Fade } from "react-awesome-reveal";
-import ContactFooter from "components/ContactFooter";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoRahid from "public/assets/img/casestudies/rahid/logoRahid.svg";
 import { H2, H3, P } from "components/shared/Dangerously";

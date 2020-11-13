@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import Head from "components/Head";
-import Link from "next/link";
-import PageClipper from "components/PageClipper";
-import PinnedSection from "components/shared/PinnedSections/PinnedSection";
-import ContactFooter from "components/ContactFooter";
+import Head from "components/layout/Head";
+import PageClipper from "components/layout/PageClipper";
+import PinnedSection from "components/shared/pinnedSections/PinnedSection";
+import MetalFooter from "components/shared/footers/MetalFooter";
 import ContactForm from "components/ContactForm";
 import { WhatsApp } from "components/shared/Logos";
 
@@ -34,10 +33,9 @@ export default function Contact(props) {
           {t.intro.p2} <br />
           <a href="mailto:hola@acueducto.studio">hola@acueducto.studio</a>
         </p>
-        <p>{t.intro.p3}</p>
         <ContactForm text={t.form} />
       </CustomPinnedSection>
-      <ContactFooter />
+      <MetalFooter />
     </PageClipper>
   );
 }
@@ -54,7 +52,7 @@ const CustomPinnedSection = styled(PinnedSection)`
       height: 35px;
       position: absolute;
       top: 0;
-      background-color: black;
+      background-color: ${(p) => p.theme.colors.background};
       padding-right: 10px;
       padding-bottom: 5px;
       left: 0;

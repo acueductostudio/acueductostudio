@@ -3,7 +3,7 @@ import Router from "next/router";
 import { withRouter } from "next/router";
 import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
-import Layout from "components/layout";
+import Layout from "components/layout/Layout";
 import theme from "styles/theme";
 import Cookies from "js-cookie/dist/js.cookie";
 import delayForLoading from "utils/delayForLoading.ts";
@@ -24,7 +24,7 @@ function App(props) {
 
   useEffect(() => {
     // Disable scroll
-    const targetElement = document.querySelector("#contact"); //dummy
+    const targetElement = document.querySelector("#dum"); //dummy
     disableBodyScroll(targetElement);
 
     // Load Animation
@@ -74,7 +74,7 @@ function App(props) {
   }, []);
 
   useEffect(() => {
-    const targetElement = document.querySelector("#contact"); //dummy
+    const targetElement = document.querySelector("#dum"); //dummy
     hasLoaded &&
       (console.log("Page hasLoaded"), enableBodyScroll(targetElement));
   }),

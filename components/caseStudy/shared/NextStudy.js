@@ -9,7 +9,6 @@ import { P } from "components/shared/Dangerously";
 const NextStudy = ({ link, margined }) => {
   const context = useContext(LangContext);
   let n = context.next_study;
-  console.log(link);
   return (
     <Link href={link} passHref>
       <Wrapper margined={margined}>

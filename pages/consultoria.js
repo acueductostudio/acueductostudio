@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import useInterval from "utils/useInterval";
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import TitleSection from "components/shared/TitleSection";
-import PageClipper from "components/PageClipper";
-import ContactFooter from "components/ContactFooter";
+import PageClipper from "components/layout/PageClipper";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import { Fade } from "react-awesome-reveal";
-import PinnedSection from "components/shared/PinnedSections/PinnedSection";
+import PinnedSection from "components/shared/pinnedSections/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import ConsultoriaCTA from "components/ConsultoriaCTA";
 import Steps from "components/shared/Steps";

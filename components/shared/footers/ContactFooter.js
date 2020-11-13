@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
-import FooterNav from "components/FooterNav";
+import FooterNav from "./FooterNav";
 import { Fade } from "react-awesome-reveal";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
-import Logo from "public/assets/img/layout/logo.svg";
 import Mail from "public/assets/img/layout/mail.svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { logEvent } from "utils/analytics";
+import FooterLogoCrop from "./FooterLogoCrop";
 
 const ContactFooter = () => {
   const context = useLocaleContext();
-  let { title, p, copied_text, copy_text, footer_nav } = context.contact_footer;
+  let { title, p, copied_text, copy_text } = context.contact_footer;
 
   const [copied, setCopied] = useState(false);
   const [copying, setCopying] = useState(false);
@@ -35,7 +35,7 @@ const ContactFooter = () => {
 
   return (
     <>
-      <Grid id="contact">
+      <Grid>
         <Fade triggerOnce>
           <H1>{title}</H1>
         </Fade>
@@ -58,13 +58,9 @@ const ContactFooter = () => {
             </p>
           </CopyToClipboard>
         </Fade>
-        <LogoCrop>
-          <Fade triggerOnce>
-            <Logo />
-          </Fade>
-        </LogoCrop>
+<FooterLogoCrop/>
       </Grid>
-      <FooterNav nav={footer_nav} />
+      <FooterNav />
     </>
   );
 };
@@ -155,29 +151,5 @@ const CopyMessage = styled.span`
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-bottom: 5px solid ${(props) => props.theme.colors.background};
-  }
-`;
-
-const LogoCrop = styled.div`
-  width: 100%;
-  grid-column: unset !important;
-  position: absolute;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  bottom: 0;
-  height: 175px;
-  svg {
-    width: 110%;
-    height: auto;
-    transform: translateY(13%);
-    opacity: 0.3;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(35%);
-    * {
-      fill: rgba(0, 0, 0, 0.5);
-    }
   }
 `;

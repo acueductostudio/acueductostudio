@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import TitleSection from "components/shared/TitleSection";
-import PageClipper from "components/PageClipper";
-import ContactFooter from "components/ContactFooter";
+import PageClipper from "components/layout/PageClipper";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import { H1, H2 } from "components/shared/Dangerously";
 import Services from "components/shared/Services";
 import CaseList from "components/caseStudy/CaseList";
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import Carousel from "components/Carousel";
 import Products from "components/shared/Products";
 

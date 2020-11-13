@@ -54,6 +54,7 @@ export default class MyDocument extends Document {
           {this.props.styleTags}
         </Head>
         <body>
+          <span id="dum"></span>
           <div id="revealer">
             <div id="bordered" />
             <svg

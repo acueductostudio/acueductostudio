@@ -95,15 +95,17 @@ export const SubmitField = styled(InputField)`
 `;
 
 export const CheckMark = styled(InputField)`
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
   position: relative;
-  padding-left: 45px;
   cursor: pointer;
   user-select: none;
   margin: 20px 0;
 
   label {
     cursor: pointer;
-    margin: 7px 0 0;
+    margin: 0;
     font-size: 0.9em;
   }
 
@@ -115,15 +117,13 @@ export const CheckMark = styled(InputField)`
   }
 
   .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 35px;
     width: 35px;
+    margin-right:15px;
     border-radius: 10px;
     border: 2px solid ${(p) => p.theme.colors.foreground_lowest};
     z-index: -1;
-    transition: 0.2s ease border;
+    transition: 0.2s ease-in border, 0.1s ease-in background-color;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -133,11 +133,15 @@ export const CheckMark = styled(InputField)`
       }
     }
   }
-  &:active,
-  &:focus {
+  &:active {
     input ~ .checkmark {
       border-color: ${(p) => p.theme.colors.foreground};
-      background-color: ${(p) => p.theme.colors.accent};
+    }
+  }
+  &:focus,
+  &:focus-within {
+    input ~ .checkmark {
+      border-color: ${(p) => p.theme.colors.foreground};
     }
   }
 
@@ -146,10 +150,10 @@ export const CheckMark = styled(InputField)`
       background-color: ${(p) => p.theme.colors.accent};
       border-color: ${(p) => p.theme.colors.background};
     }
-    &:active {
+    &:active,
+    &:focus {
       ~ .checkmark {
-        background-color: ${(p) => p.theme.colors.background} !important;
-        border-color: ${(p) => p.theme.colors.foreground_lowest};
+        border-color: ${(p) => p.theme.colors.foreground};
       }
     }
   }

@@ -1,9 +1,8 @@
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import Link from "next/link";
-import PageClipper from "components/PageClipper";
-import SimplePinnedSection from "components/shared/PinnedSections/SimplePinnedSection";
-import createMarkup from "utils/createMarkup";
-import ContactFooter from "components/ContactFooter";
+import PageClipper from "components/layout/PageClipper";
+import SimplePinnedSection from "components/shared/pinnedSections/SimplePinnedSection";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import { useEffect } from "react";
 import { P, Ul, Li } from "components/shared/Dangerously";
 

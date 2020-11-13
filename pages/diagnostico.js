@@ -1,9 +1,9 @@
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import React, { useEffect } from "react";
 import es from "public/locales/es/diagnosticodigital.json";
-import PageClipper from "components/PageClipper";
+import PageClipper from "components/layout/PageClipper";
 import Diagnostico from "components/diagnosticoDigital/Diagnostico";
-import ContactFooter from "components/ContactFooter";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import TitleSection from "components/shared/TitleSection";
 
 function DiagnosticoDigital(props) {

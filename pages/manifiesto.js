@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Head from "../components/Head";
+import Head from "components/layout/Head";
 import React, { useEffect } from "react";
-import PageClipper from "components/PageClipper";
-import ContactFooter from "components/ContactFooter";
+import PageClipper from "components/layout/PageClipper";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import TitleSection from "components/shared/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
 import ManifiestoItems from "components/ManifiestoItems";

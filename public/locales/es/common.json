@@ -13,7 +13,7 @@
   "casestudies": {
     "studies": {
       "salvajenada": {
-        "page_title": "Difusión musical estratégica | Salvajenada & Acueducto",
+        "page_title": "Difusión musical estratégica - Salvajenada & Acueducto",
         "meta_description": "¿Cómo distinguir tu playlist entre el mar de selecciones en la web?",
         "headerTitle": "Salvajenada",
         "title": "¿cómo compartir música hoy en día?",
@@ -123,7 +123,7 @@
         }
       },
       "ladanzadelasfieras": {
-        "page_title": "Estrategia cinematográfica | La Danza de las Fieras & Acueducto",
+        "page_title": "Estrategia cinematográfica - La Danza de las Fieras & Acueducto",
         "meta_description": "Una cautivadora experiencia digital a través del cine, internet y la prensa.",
         "headerTitle": "LDDLF",
         "title": "estrategia y producción en la industria del cine",
@@ -223,7 +223,7 @@
         }
       },
       "rahid": {
-        "page_title": "Un ecommerce único en México | Rahid & Acueducto",
+        "page_title": "Un ecommerce único en México - Rahid & Acueducto",
         "meta_description": "¿Qué necesitas para lanzar un ecommerce exitoso en México? Lee este caso de estudio con la tienda en línea de Rahid.",
         "headerTitle": "Rahid",
         "title": "un ecommerce único en México",
@@ -301,20 +301,26 @@
     "copy_text": "Copiar al clipboard",
     "copied_text": "Copiado",
     "footer_nav": {
+      "navTitles": {
+        "main": "estudio",
+        "resources": "recursos",
+        "community": "comunidad",
+        "policies": "políticas"
+      },
       "main": [
         { "title": "pitch", "link": "/pitch" },
         { "title": "nosotros", "link": "/nosotros" },
         { "title": "portafolio", "link": "/portafolio" },
         { "title": "consultoría", "link": "/consultoria" },
-        { "title": "podcast", "link": "/podcast" }
+        { "title": "contacto", "link": "/contacto" }
       ],
       "resources": [
         { "title": "podcast", "link": "/podcast" },
         { "title": "diagnóstico", "link": "/diagnostico" }
       ],
-      "secondary": [
-        { "title": "política de cookies", "link": "/cookies" },
-        { "title": "política de privacidad", "link": "/privacidad" }
+      "policies": [
+        { "title": "cookies", "link": "/cookies" },
+        { "title": "privacidad", "link": "/privacidad" }
       ]
     }
   },
@@ -328,14 +334,14 @@
     "p": "Haz click para ver el siguiente caso de estudio"
   },
   "home_page": {
-    "page_title": "Acueducto, un estudio de diseño estrategico y tecnología en CDMX",
+    "page_title": "Acueducto, un estudio de estrategias e interfaces digitales en CDMX",
     "header_title": " ",
     "landing": {
-      "heading": "en busca de las mejores ideas digitales",
-      "tagline": "Acueducto es un estudio de diseño estratégico y tecnología en CDMX."
+      "heading": "impulsamos negocios de alto impacto",
+      "tagline": "Acueducto es un estudio de estrategias e interfaces digitales en CDMX."
     },
     "intro": {
-      "title": "trabajando con socios, no para clientes",
+      "title": "trabajando con líderes, no para clientes",
       "p": "A diferencia de las relaciones cliente-agencia, las asociaciones nos permiten involucrarnos estructuralmente en cada proyecto. Así, logramos producir en conjunto experiencias digitales que causan un impacto positivo en negocios y comunidades por igual.<br/><br/>Nos emocionan los nuevos retos y las conexiones que generan. Así como los problemas se convierten en proyectos, nuestros socios en amigos.",
       "link": ["/pitch", "pitch"],
       "linktext": "¿Tenemos tu atención?<br/>Lee nuestro"
@@ -566,16 +572,16 @@
     }
   },
   "contact_page": {
-    "page_title": "Contacto | ¿Cómo podemos ayudarte?",
-    "meta_description": "Asociémonos, elevemos tu negocio. Puedes contactarnos por WhatsApp o llenando esta forma de contacto.",
+    "page_title": "¿Somos los indicados? - Contáctanos",
+    "meta_description": "Asociémonos, elevemos tu negocio. Contáctanos por WhatsApp o llenando nuestra forma de contacto.",
     "headerTitle": "Contacto",
     "intro": {
       "title": "¿cómo podemos ayudarte?",
       "p1": "Escríbenos por WhatsApp",
-      "p2": "Mándanos un email",
-      "p3": "O contesta nuestro cuestionario"
+      "p2": "Mándanos un email"
     },
     "form": {
+      "p3": "O contesta nuestro cuestionario",
       "email": {
         "label": "email de trabajo",
         "placeholder": "tu email",
@@ -617,12 +623,12 @@
       "submit": "contáctenme",
       "loading": "enviando...",
       "success": {
-        "p": "Te contactaremos a la brevedad"
+        "p": "Gracias por contactarnos, te buscaremos pronto por el medio que elegiste."
       }
     }
   },
   "manifesto_page": {
-    "page_title": "Manifiesto | Lo que nos hace mejores",
+    "page_title": "Manifiesto - Lo que nos hace mejores",
     "meta_description": "Los valores que moldean cada acción que realizamos",
     "headerTitle": "Manifiesto",
     "intro": {
@@ -673,7 +679,7 @@
     }
   },
   "privacy_page": {
-    "page_title": "Política de Privacidad | Acueducto",
+    "page_title": "Política de Privacidad - Acueducto",
     "headerTitle": "privacidad",
     "intro": {
       "title": "política de privacidad",
@@ -703,7 +709,7 @@
     }
   },
   "cookies_page": {
-    "page_title": "Política de Cookies | Acueducto",
+    "page_title": "Política de Cookies - Acueducto",
     "headerTitle": "cookies",
     "intro": {
       "title": "política de cookies",

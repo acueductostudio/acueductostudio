@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import PageClipper from "components/PageClipper";
+import PageClipper from "components/layout/PageClipper";
 import { Fade } from "react-awesome-reveal";
-import ContactFooter from "components/ContactFooter";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoDanza from "public/assets/img/casestudies/ladanzadelasfieras/logoDanza.svg";
 import Laurel from "public/assets/img/casestudies/ladanzadelasfieras/laurel.svg";

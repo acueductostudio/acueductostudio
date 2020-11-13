@@ -1,10 +1,10 @@
-import Head from "components/Head";
-import Link from "next/link";
 import { useEffect } from "react";
-import PageClipper from "components/PageClipper";
-import SimplePinnedSection from "components/shared/PinnedSections/SimplePinnedSection";
+import Head from "components/layout/Head";
+import Link from "next/link";
+import PageClipper from "components/layout/PageClipper";
+import SimplePinnedSection from "components/shared/pinnedSections/SimplePinnedSection";
 import { P, H3 } from "components/shared/Dangerously";
-import ContactFooter from "components/ContactFooter";
+import ContactFooter from "components/shared/footers/ContactFooter";
 
 export default function Cookies(props) {
   let t = props.locale.cookies_page;

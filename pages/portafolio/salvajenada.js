@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import PageClipper from "components/PageClipper";
+import PageClipper from "components/layout/PageClipper";
 import dynamic from "next/dynamic";
-import ContactFooter from "components/ContactFooter";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import Quote from "components/caseStudy/shared/Quote";
 import Stat from "components/caseStudy/salvajenada/Stat";
@@ -74,14 +74,13 @@ export default function Salvajenada(props) {
   const artistShout = () => {
     let x = [];
     x.push(
-      <Fade triggerOnce>
+      <Fade triggerOnce key="v_7">
         <video
           autoPlay
           playsInline
           muted
           loop
-          key={"v_4"}
-          poster={`/assets/img/casestudies/salvajenada/girlUltra_poster.jpg`}
+          poster="/assets/img/casestudies/salvajenada/girlUltra_poster.jpg"
         >
           <source src="/assets/video/casestudies/salvajenada/girlUltra.mp4" />
         </video>

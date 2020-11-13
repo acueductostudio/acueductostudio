@@ -13,7 +13,7 @@
   "casestudies": {
     "studies": {
       "ladanzadelasfieras": {
-        "page_title": "From strategy to production | La Danza de las Fieras & Acueducto",
+        "page_title": "From strategy to production - La Danza de las Fieras & Acueducto",
         "meta_description": "A compelling digital experience story through cinema, web, and press.",
         "headerTitle": "LDDLF",
         "title": "from strategy to production in the filmmaking industry",
@@ -113,7 +113,7 @@
         }
       },
       "salvajenada": {
-        "page_title": "Where playlists meet strategy | Salvajenada & Acueducto",
+        "page_title": "Where playlists meet strategy - Salvajenada & Acueducto",
         "meta_description": "How to distinguish your playlist from the plethora of selections on the web?",
         "headerTitle": "Salvajenada",
         "title": "how do you share music nowadays?",
@@ -223,7 +223,7 @@
         }
       },
       "rahid": {
-        "page_title": "A unique ecommerce in Mexico | Rahid & Acueducto",
+        "page_title": "A unique ecommerce in Mexico - Rahid & Acueducto",
         "meta_description": "All you need to launch a successful ecommerce in Mexico: a case study of Rahid’s online store.",
         "headerTitle": "Rahid",
         "title": "a unique ecommerce in Mexico",
@@ -301,13 +301,21 @@
     "copy_text": "Copy to clipboard",
     "copied_text": "Copied",
     "footer_nav": {
+      "navTitles" : {
+        "main" : "studio",
+        "resources" : "resources",
+        "community" : "community",
+        "policies" : "policies"
+      },
       "main": [
         { "title": "pitch", "link": "/en/pitch" },
         { "title": "about", "link": "/en/about" },
         { "title": "work", "link": "/en/work" },
-        { "title": "manifesto", "link": "/en/manifesto" }
+        { "title": "manifesto", "link": "/en/manifesto" },
+        { "title": "contact", "link": "/en/contact" }
+
       ],
-      "secondary": [
+      "policies": [
         { "title": "cookie policy", "link": "/en/cookies" },
         { "title": "privacy policy", "link": "/en/privacy" }
       ]
@@ -553,7 +561,7 @@
     }
   },
   "work_page": {
-    "page_title": "Our Work | Let's build amazing things together",
+    "page_title": "Our Work - Let's build amazing things together",
     "meta_description": "Take a look at how we work and what can we achieve through solid strategies and innovative development.",
     "headerTitle": "Work",
     "intro": {
@@ -562,16 +570,16 @@
     }
   },
   "contact_page": {
-    "page_title": "Contact Us | ¿How can we help you?",
-    "meta_description": "Let's be partners, let's talk business. You can contact us via WhatsApp or by filling out our form.",
+    "page_title": "Are we the right fit? - Contact us",
+    "meta_description": "Let's be partners, let's talk business. Contact us via WhatsApp or by filling out our form.",
     "headerTitle": "Contact",
     "intro": {
       "title": "¿how may we help you?",
       "p1": "Send us a WhatsApp message",
-      "p2": "Email us",
-      "p3": "Or fill out our form"
+      "p2": "Email us"
     },
     "form": {
+      "p3": "Or fill out our form",
       "email": {
         "label": "work email",
         "placeholder": "your email",
@@ -613,12 +621,12 @@
       "submit": "get in touch",
       "loading": "sending...",
       "success": {
-        "p": "We'll contact you as soon as we can"
+        "p": "Thanks for reaching out, we'll contact you as soon as possible."
       }
     }
   },
   "manifesto_page": {
-    "page_title": "Manifesto | What makes us better",
+    "page_title": "Manifesto - What makes us better",
     "meta_description": "We follow these principles in every piece we create.",
     "headerTitle": "Manifesto",
     "intro": {
@@ -669,7 +677,7 @@
     }
   },
   "privacy_page": {
-    "page_title": "Privacy Policy | Acueducto",
+    "page_title": "Privacy Policy – Acueducto",
     "headerTitle": "Privacy Policy",
     "intro": {
       "title": "privacy policy",
@@ -699,7 +707,7 @@
     }
   },
   "cookies_page": {
-    "page_title": "Cookie Policy | Acueducto",
+    "page_title": "Cookie Policy – Acueducto",
     "headerTitle": "Cookie Policy",
     "intro": {
       "title": "cookie policy",

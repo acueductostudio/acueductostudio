@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import Head from "components/Head";
+import Head from "components/layout/Head";
 import Link from "next/link";
-import PageClipper from "components/PageClipper";
-import MetalPinnedSection from "components/shared/PinnedSections/MetalPinnedSection";
+import PageClipper from "components/layout/PageClipper";
+import MetalPinnedSection from "components/shared/pinnedSections/MetalPinnedSection";
 import { Fade } from "react-awesome-reveal";
-import ContactFooter from "components/ContactFooter";
+import ContactFooter from "components/shared/footers/ContactFooter";
 import es from "public/locales/es/linkenbio.json";
 import Consultoria from "public/assets/img/layout/linkenbio/consultoria.svg";
 import Podcast from "public/assets/img/layout/linkenbio/podcast.svg";

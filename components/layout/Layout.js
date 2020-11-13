@@ -1,7 +1,7 @@
 import React,{ useEffect, useState, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import styled, { createGlobalStyle } from "styled-components";
-import Header from "./header";
+import Header from "./Header";
 import Nav from "./Nav";
 import LanguageToggler from "./LanguageToggler";
 import NavTrigger from "./NavTrigger";
@@ -11,9 +11,9 @@ import ScrollIncentive from "./ScrollIncentive";
 import { initGA, logPageView } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import NewsletterPopup from "./NewsletterPopup";
+import NewsletterPopup from "components/NewsletterPopup";
 
-const HomeSketch = dynamic(import("../components/homeSketch/HomeSketch"), {
+const HomeSketch = dynamic(import("../../components/homeSketch/HomeSketch"), {
   ssr: false,
 });
 

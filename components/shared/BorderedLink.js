@@ -20,8 +20,7 @@ const BorderLink = ({ showLink }) => css`
     }
   }
   @media (max-width: 600px) {
-    &:active,
-    &:focus {
+    &:active {
       background-image: ${highlightedLink};
     }
   }
