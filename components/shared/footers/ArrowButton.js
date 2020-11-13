@@ -1,19 +1,19 @@
+import React from "react";
 import styled from "styled-components";
 
-export default function ButtonArrow({ text, submitButton, href }) {
-  console.log;
-  return (
-    <Normalizer as={submitButton ? "div" : "a"} href={href}>
-      <Button>
-        {submitButton && <input type="submit" value={text} />}
-        {text}
-        <Pin />
-      </Button>
-    </Normalizer>
-  );
-}
+const ArrowButton = React.forwardRef((props, ref) => (
+  <Shifter ref={ref} {...props} as={props.submitButton ? "div" : "a"}>
+    <Button>
+      {props.submitButton && <input type="submit" value={props.text} />}
+      {props.text}
+      <Pin />
+    </Button>
+  </Shifter>
+));
 
-const Normalizer = styled.div`
+export default ArrowButton;
+
+const Shifter = styled.a`
   margin: 22px 0 15px 0;
   text-decoration: none;
 `;
