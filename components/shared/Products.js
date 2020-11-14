@@ -12,7 +12,7 @@ import {
   Marketing,
 } from "components/shared/Icons";
 
-const productIconArray = [Apps, DigitalProducts, Branding, Marketing];
+const productIconArray = [Branding, Apps, DigitalProducts, Marketing];
 const letterArray = ["a", "b", "c", "d"];
 
 const ProductContainer = ({

@@ -4,12 +4,14 @@ import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import delayForLoading from "utils/delayForLoading.ts";
 import InputField, { SubmitField } from "components/shared/ContactInputField";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 const DefaultForm = ({
   text,
   onSubmit,
   formMarkup,
-  submitButton,
+  buttonArrow,
+  buttonArrowInverse,
   successMarkup,
   id,
   infinite,
@@ -73,8 +75,13 @@ const DefaultForm = ({
               />
               <span>{errors?.email?.message}</span>
             </InputField>
-            {submitButton ? (
-              submitButton
+
+            {buttonArrow || buttonArrowInverse ? (
+              <ButtonArrow
+                text={text.submit}
+                inverse={buttonArrowInverse}
+                submitButton
+              />
             ) : (
               <SubmitField>
                 <input type="submit" value={text.submit} />

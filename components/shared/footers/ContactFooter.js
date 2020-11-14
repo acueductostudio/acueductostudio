@@ -7,7 +7,7 @@ import FooterNav from "./FooterNav";
 import { Fade } from "react-awesome-reveal";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import FooterLogoCrop from "./FooterLogoCrop";
-import ArrowButton from "components/shared/footers/ArrowButton";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 const ContactFooter = () => {
   const context = useLocaleContext();
@@ -22,7 +22,7 @@ const ContactFooter = () => {
         <Fade triggerOnce>
           <p>{p}</p>
           <Link href={button_link} passHref>
-            <ArrowButton text={button_text} />
+            <ButtonArrow text={button_text} />
           </Link>
         </Fade>
         <FooterLogoCrop />
@@ -46,6 +46,7 @@ const Grid = styled(TitleSectionGrid)`
   }
   p {
     z-index: 8;
+    max-width: 375px;
     color: ${(props) => props.theme.colors.foreground_low};
     margin-bottom: 10px;
     &:hover {

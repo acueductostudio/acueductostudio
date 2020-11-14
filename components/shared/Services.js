@@ -2,14 +2,15 @@ import React from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import { H3 } from "components/shared/Dangerously";
+import TitleSection from "components/shared/TitleSection";
+import { H3, P } from "components/shared/Dangerously";
 
 const Services = () => {
   const context = useLocaleContext();
   const { intro, service_categories } = context.home_page.services;
   return (
     <ServicesSection id={context.lang == "en" ? "services" : "servicios"}>
-      <H3>{intro.title}</H3>
+      <TitleSection {...intro}/>
       <ServiceGrid>
         {service_categories.map((service, index) => (
           <Service key={"service" + index}>

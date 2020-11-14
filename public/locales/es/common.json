@@ -341,12 +341,12 @@
       "tagline": "Acueducto es un estudio de estrategias e interfaces digitales en CDMX."
     },
     "intro": {
-      "title": "trabajando con líderes, no para clientes",
-      "p": "A diferencia de las relaciones cliente-agencia, las asociaciones nos permiten involucrarnos estructuralmente en cada proyecto. Así, logramos producir en conjunto experiencias digitales que causan un impacto positivo en negocios y comunidades por igual.<br/><br/>Nos emocionan los nuevos retos y las conexiones que generan. Así como los problemas se convierten en proyectos, nuestros socios en amigos.",
+      "title": "trabajando con visionarios digitales",
+      "p": "El boom de internet quedó atrás y es para la cotidianidad digital que hay que estar preparados.<br/><br/>En Acueducto, ayudamos a tomadores de decisiones a innovar con estas tecnologías y, al involucrarnos estructuralmente con cada proyecto, logramos producir en conjunto experiencias significativas para negocios y comunidades por igual.",
       "link": ["/pitch", "pitch"],
       "linktext": "¿Tenemos tu atención?<br/>Lee nuestro"
     },
-    "carousel": ["startups", "marcas", "pymes", "corporativos"],
+    "carousel": ["startups", "marcas", "corporativos"],
     "process": {
       "title": "con la estrategia<br/>en el núcleo",
       "p": "La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles, áreas de oportunidad y sus mejores soluciones.<br/><br/>Abordar los problemas desde el Diseño Estratégico significa desarrollar desde el inicio de cada proyecto, junto con nuestros socios, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
@@ -379,43 +379,42 @@
     },
     "studies": {
       "title": "resolvemos desafiantes retos de negocio",
-      "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
+      "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado."
     },
     "services": {
       "intro": {
-        "title": "de la ideación al lanzamiento",
+        "title": "de la estrategia al lanzamiento",
         "p": "– Y todo lo que involucra.<br/><br/>Nuestros proyectos favoritos son los que construimos desde el inicio con nuestros socios, por eso ofrecemos todas las etapas del desarrollo de una experiencia digital."
       },
       "service_categories": [
         {
           "title": "estrategia",
           "tags": [
-            "Consultoría Digital",
-            "Investigación",
-            "Administración de Proyectos",
-            "Community Management",
-            "Publicidad Pautada"
+            "Administración de proyectos",
+            "Consultoría digital",
+            "Investigación e insights",
+            "Experiencia de usuario (UX)",
+            "Evaluación de impacto"
           ]
         },
         {
-          "title": "diseño y contenido",
+          "title": "diseño & desarrollo",
           "tags": [
-            "Dirección de Arte",
-            "Desarrollo Transmedia",
-            "Diseño UX",
-            "Motion Design",
+            "Dirección de arte",
+            "Producción de contenido",
             "Copywriting",
-            "Evaluación de Impacto"
+            "Prototipado",
+            "Desarrollo y programación"
           ]
         },
         {
-          "title": "desarrollo",
+          "title": "lanzamiento",
           "tags": [
-            "Prototipado",
-            "Programación",
-            "User Testing",
-            "Integración de Plataformas",
-            "Administración de Cambio"
+            "Estrategias de marketing",
+            "Publicidad pautada",
+            "Community management",
+            "User testing",
+            "Administración de cambio"
           ]
         }
       ]
@@ -475,9 +474,14 @@
     "products_section": {
       "intro": {
         "title": "para desarrollar ideas innovadoras",
-        "p": "Lo que antes eran innovaciones, hoy son necesidades para todo negocio. Para mantener relevante tu compañía en los contextos digitales, puedes confiar en nosotros para desarrollar:"
+        "p": "Los productos digitales pueden potenciar la cultura innovadora de una organización, automatizar sus procesos y optimizar la experiencia de marca.<br/><br/>Puedes confiar en nosotros para desarrollar:"
       },
       "products": [
+        {
+          "title": "estrategia digital",
+          "p": "Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones.",
+          "pitchDescription": "Tu estrategia digital es la columna vertebral de tu negocio en internet. Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
+        },
         {
           "title": "apps web y móviles",
           "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación.",
@@ -487,11 +491,6 @@
           "title": "productos<br/>y servicios digitales",
           "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen.",
           "pitchDescription": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
-        },
-        {
-          "title": "branding digital",
-          "p": "Eleva la percepción de tu producto, servicio u organización mediante dirección de arte y diseño estratégico.",
-          "pitchDescription": "Tu marca es la reputación que has creado alrededor de tu negocio. Elevemos la percepción de tu producto, servicio u organización mediante dirección estratégica y artística, diseño visual y aplicaciones."
         },
         {
           "title": "estrategias de<br/>marketing digital",

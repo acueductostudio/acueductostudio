@@ -1,34 +1,37 @@
 import React from "react";
 import styled from "styled-components";
 
-const ArrowButton = React.forwardRef((props, ref) => (
+const ButtonArrow = React.forwardRef((props, ref) => (
   <Shifter ref={ref} {...props} as={props.submitButton ? "div" : "a"}>
-    <Button>
+    <Button inverse={props.inverse}>
       {props.submitButton && <input type="submit" value={props.text} />}
       {props.text}
-      <Pin />
+      <Pin inverse={props.inverse} />
     </Button>
   </Shifter>
 ));
 
-export default ArrowButton;
+export default ButtonArrow;
 
 const Shifter = styled.a`
   margin: 22px 0 15px 0;
   text-decoration: none;
+  display: ${(p) => (p.as === "div" ? "inline-block" : "unset")};
 `;
 
 const Pin = styled.span`
   width: 30px;
   height: 30px;
   display: inline-block;
-  background-color: ${(p) => p.theme.colors.background};
+  background-color: ${(p) =>
+    !p.inverse ? p.theme.colors.background : p.theme.colors.accent};
   border-radius: 100%;
   margin-left: 15px;
   transition: 0.3s ease all;
   &:after {
     content: " ";
-    border: solid ${(p) => p.theme.colors.accent};
+    border: solid
+      ${(p) => (!p.inverse ? p.theme.colors.accent : p.theme.colors.background)};
     border-width: 0 2.5px 2.5px 0;
     display: inline-block;
     padding: 6px;
@@ -43,7 +46,8 @@ const Button = styled.div`
   padding: 13px 17px 18px 24px;
   border-radius: 30px;
   color: ${(p) => p.theme.colors.foreground};
-  background-color: ${(p) => p.theme.colors.background};
+  background-color: ${(p) =>
+    !p.inverse ? p.theme.colors.background : p.theme.colors.accent};
   margin-top: 20px;
   border: 2px solid ${(p) => p.theme.colors.background};
   position: relative;
@@ -61,12 +65,14 @@ const Button = styled.div`
     opacity: 0;
   }
   @media (hover: hover) and (pointer: fine) {
-    &:hover {
+    &:hover,
+    &:focus-within {
       &:after {
         border-color: ${(p) => p.theme.colors.foreground};
       }
       ${Pin} {
-        background-color: ${(p) => p.theme.colors.accent};
+        background-color: ${(p) =>
+          !p.inverse ? p.theme.colors.accent : p.theme.colors.background};
         margin-left: 25px;
         &:after {
           border-color: ${(p) => p.theme.colors.foreground};

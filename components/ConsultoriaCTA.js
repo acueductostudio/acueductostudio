@@ -32,6 +32,7 @@ const ConsultoriaCTA = ({ cta, id }) => {
         id={id}
         text={cta}
         infinite
+        buttonArrowInverse
         formMarkup={
           <>
             <h3>{cta.title}</h3>

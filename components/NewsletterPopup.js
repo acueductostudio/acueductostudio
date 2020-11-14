@@ -49,6 +49,7 @@ const NewsletterPopup = () => {
           <DefaultForm
             onSubmit={onSubmit}
             text={newsletter}
+            buttonArrowInverse
             successMarkup={<Message success>{newsletter.success.p}</Message>}
           />
           <CrossContainer>
