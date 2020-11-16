@@ -101,8 +101,6 @@ const Step = styled.div`
     * {
       vector-effect: non-scaling-stroke;
       stroke-width: ${(props) => props.theme.stroke};
-      stroke: ${(props) => props.theme.colors.foreground};
-      fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
       transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);

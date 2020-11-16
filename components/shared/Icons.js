@@ -10,7 +10,7 @@ import StrategicDesignIcon from "public/assets/img/layout/icons/strategicdesign.
 
 import AppsIcon from "public/assets/img/layout/icons/apps.svg";
 import DigitalProductsIcon from "public/assets/img/layout/icons/products.svg";
-import BrandingIcon from "public/assets/img/layout/icons/branding.svg";
+import StrategyIcon from "public/assets/img/layout/icons/strategy.svg";
 import MarketingIcon from "public/assets/img/layout/icons/marketing.svg";
 import CultureIcon from "public/assets/img/layout/icons/culture.svg";
 
@@ -29,6 +29,6 @@ export const StrategicDesign = () => <StrategicDesignIcon />;
 // Products
 export const Apps = () => <AppsIcon />;
 export const DigitalProducts = () => <DigitalProductsIcon />;
-export const Branding = () => <BrandingIcon />;
+export const Strategy = () => <StrategyIcon />;
 export const Marketing = () => <MarketingIcon />;
 export const Culture = () => <CultureIcon />;

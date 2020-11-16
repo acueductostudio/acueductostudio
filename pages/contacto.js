@@ -21,7 +21,7 @@ export default function Contact(props) {
         description={t.meta_description}
         lang={props.lang}
       ></Head>
-      <CustomPinnedSection title={t.intro.title}>
+      <CustomPinnedSection title={t.intro.title} id="Scroll">
         <p>
           {t.intro.p1}
           <br />

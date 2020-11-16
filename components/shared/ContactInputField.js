@@ -7,7 +7,7 @@ const InputField = styled.div`
   margin-bottom: 12px;
   label {
     font-size: 0.8em;
-    padding-left:0 !important;
+    padding-left: 0 !important;
     margin-bottom: 8px;
     color: ${(p) => p.theme.colors.foreground_low};
   }
@@ -120,7 +120,7 @@ export const CheckMark = styled(InputField)`
   .checkmark {
     height: 35px;
     width: 35px;
-    margin-right:15px;
+    margin-right: 15px;
     border-radius: 10px;
     border: 2px solid ${(p) => p.theme.colors.foreground_lowest};
     z-index: -1;
@@ -158,4 +158,7 @@ export const CheckMark = styled(InputField)`
       }
     }
   }
+  /* @media (max-width: 600px) {
+    margin-bottom: 200px;
+  } */
 `;

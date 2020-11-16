@@ -3,10 +3,9 @@ import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import delayForLoading from "utils/delayForLoading.ts";
-import InputField, {
-  SubmitField,
-  CheckMark,
-} from "components/shared/ContactInputField";
+import { sendToHola } from "utils/sendinBlue.ts";
+import InputField, { CheckMark } from "components/shared/ContactInputField";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 const DefaultForm = ({ text }) => {
   const [formStatus, setFormStatus] = useState("");
@@ -15,10 +14,10 @@ const DefaultForm = ({ text }) => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmitInside = (data) => {
-    console.log(data);
-
-    setFormStatus("loading");
-    delayForLoading(1500).then(() => setFormStatus("done"));
+    document.getElementById("Scroll").scrollIntoView({ behavior: "smooth" });
+    delayForLoading(300).then(() => setFormStatus("loading"));
+    sendToHola(data);
+    delayForLoading(1800).then(() => setFormStatus("done"));
   };
 
   const phoneFieldChange = () => setRequirePhone(!requirePhone);
@@ -89,15 +88,6 @@ const DefaultForm = ({ text }) => {
               />
               {errors.company && <span>{text.company.errorMissing}</span>}
             </InputField>
-            {/* <InputField>
-            <label htmlFor={`cp_employees`}>{text.employees.label}</label>
-            <select name="employees" id={`cp_employees`} ref={register}>
-              <option value="female">female</option>
-              <option value="male">male</option>
-              <option value="other">other</option>
-            </select>
-            {errors.employees && <span>{text.employees.errorMissing}</span>}
-          </InputField> */}
             <InputField>
               <label htmlFor={`cp_message`}>{text.message.label}</label>
               <textarea
@@ -109,12 +99,12 @@ const DefaultForm = ({ text }) => {
               {errors.message && <span>{text.message.errorMissing}</span>}
             </InputField>
             <CheckMark>
-              <label htmlFor={`cp_phonecheckbox`}>
+              <label htmlFor={`cp_phoneCheckbox`}>
                 {text.phonecheckbox.label}
               </label>
               <input
-                name="phonecheckbox"
-                id={`cp_phonecheckbox`}
+                name="phoneCheckbox"
+                id={`cp_phoneCheckbox`}
                 type="checkbox"
                 placeholder={text.message.placeholder}
                 ref={register()}
@@ -150,9 +140,7 @@ const DefaultForm = ({ text }) => {
                 </InputField>
               </Fade>
             )}
-            <SubmitField>
-              <input type="submit" value={text.submit} />
-            </SubmitField>
+            <ButtonArrow text={text.submit} submitButton inverse />
           </Form>
         </>
       )}
@@ -174,8 +162,10 @@ const Message = styled.div`
   color: ${(p) => p.theme.colors.success};
   font-size: 1.8rem;
   padding-bottom: 5px;
+  max-width: 250px;
   @media (max-width: 600px), (max-height: 450px) {
     font-size: 1.5rem;
+    max-width: 200px;
   }
 `;
 
@@ -223,4 +213,6 @@ const Form = styled.form`
   border: 2px solid ${(p) => p.theme.colors.foreground_lowest};
   border-radius: 30px;
   margin-top: -10px;
+  display: flex;
+  flex-direction: column;
 `;

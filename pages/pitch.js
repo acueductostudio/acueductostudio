@@ -12,7 +12,6 @@ import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import Logo from "public/assets/img/layout/logo.svg";
 
-
 import {
   DigitalTransformation,
   StrategicDesign,
@@ -575,9 +574,9 @@ const IconContainer = styled.div`
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     * {
       vector-effect: non-scaling-stroke;
+      /* stroke: ${(props) => props.theme.colors.foreground}; */
+      /* fill: none; */
       stroke-width: ${(props) => props.theme.stroke};
-      stroke: ${(props) => props.theme.colors.foreground};
-      fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
       transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);

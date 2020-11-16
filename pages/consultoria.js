@@ -14,7 +14,7 @@ import es from "public/locales/es/consultoria.json";
 import {
   DigitalTransformation,
   Marketing,
-  Branding,
+  Strategy,
   StrategicDesign,
   Culture,
 } from "components/shared/Icons";
@@ -22,7 +22,7 @@ import {
 const stepIconArray = [
   DigitalTransformation,
   Marketing,
-  Branding,
+  Strategy,
   StrategicDesign,
   Culture,
 ];

@@ -301,11 +301,11 @@
     "button_text": "write us",
     "button_link": "/en/contact",
     "footer_nav": {
-      "navTitles" : {
-        "main" : "studio",
-        "resources" : "resources",
-        "community" : "community",
-        "policies" : "policies"
+      "navTitles": {
+        "main": "studio",
+        "resources": "resources",
+        "community": "community",
+        "policies": "policies"
       },
       "main": [
         { "title": "pitch", "link": "/en/pitch" },
@@ -313,7 +313,6 @@
         { "title": "work", "link": "/en/work" },
         { "title": "manifesto", "link": "/en/manifesto" },
         { "title": "contact", "link": "/en/contact" }
-
       ],
       "policies": [
         { "title": "cookie policy", "link": "/en/cookies" },
@@ -476,16 +475,16 @@
       },
       "products": [
         {
+          "title": "digital strategy",
+          "p": "Elevate the perception of your product, service or organization through strategic design."
+        },
+        {
           "title": "mobile<br/>and web apps",
           "p": "Connect with your audience through any device, grow your business with a web experience or an app."
         },
         {
           "title": "digital products<br/>and services",
           "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
-        },
-        {
-          "title": "digital branding",
-          "p": "Elevate the perception of your product, service or organization through strategic design and art direction."
         },
         {
           "title": "digital marketing strategies",

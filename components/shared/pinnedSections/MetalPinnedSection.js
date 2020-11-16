@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 
-const MetalPinnedSection = ({ title, children, className, borderTop }) => (
-  <Pinned className={className} borderTop={borderTop}>
+const MetalPinnedSection = ({ title, children, className, borderTop, id }) => (
+  <Pinned className={className} borderTop={borderTop} id={id}>
     <Fade triggerOnce>
       <H1>{title}</H1>
     </Fade>

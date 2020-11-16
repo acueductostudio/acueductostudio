@@ -13,10 +13,29 @@ const ButtonArrow = React.forwardRef((props, ref) => (
 
 export default ButtonArrow;
 
+//Este debe solo ser input para evitar problemas
+export const ButtonArrowInput = React.forwardRef((props, ref) => (
+  <Shifter ref={ref} {...props} as={props.submitButton ? "div" : "a"}>
+    <Button inverse={props.inverse}>
+      {props.submitButton && <input type="submit" value={props.text} />}
+      {props.text}
+      <Pin inverse={props.inverse} />
+    </Button>
+  </Shifter>
+));
+
 const Shifter = styled.a`
   margin: 22px 0 15px 0;
   text-decoration: none;
   display: ${(p) => (p.as === "div" ? "inline-block" : "unset")};
+  /* 
+    Esto no fucniona
+    @media (max-width: 600px) {
+    height: 60px;
+    display: block;
+    position: relative;
+    z-index: 2;
+  } */
 `;
 
 const Pin = styled.span`
@@ -96,7 +115,8 @@ const Button = styled.div`
         border-color: ${(p) => p.theme.colors.foreground};
       }
       ${Pin} {
-        background-color: ${(p) => p.theme.colors.accent};
+        background-color: ${(p) =>
+          !p.inverse ? p.theme.colors.accent : p.theme.colors.background};
         margin-left: 25px;
         &:after {
           border-color: ${(p) => p.theme.colors.foreground};

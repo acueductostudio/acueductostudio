@@ -8,11 +8,11 @@ import createMarkup from "utils/createMarkup";
 import {
   Apps,
   DigitalProducts,
-  Branding,
+  Strategy,
   Marketing,
 } from "components/shared/Icons";
 
-const productIconArray = [Branding, Apps, DigitalProducts, Marketing];
+const productIconArray = [Strategy, Apps, DigitalProducts, Marketing];
 const letterArray = ["a", "b", "c", "d"];
 
 const ProductContainer = ({
@@ -108,10 +108,9 @@ const Product = styled.div`
     will-change: transform;
     * {
       vector-effect: non-scaling-stroke;
-      stroke-width: ${(props) => props.theme.stroke};
-      fill: none;
-      stroke-linecap: round;
       stroke-linejoin: round;
+      stroke-width: ${(props) => props.theme.stroke};
+      stroke-linecap: round;
       transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
   }
