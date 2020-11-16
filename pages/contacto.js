@@ -25,8 +25,9 @@ export default function Contact(props) {
         <p>
           {t.intro.p1}
           <br />
-          <a href="https://wa.me/525541634721">
-            <WhatsApp />+ 52 55 4163 4721
+          <a href="https://wa.me/message/JNUILJPF23CSP1">
+            <WhatsApp />
+            +52 55 2789 5399
           </a>
         </p>
         <p>

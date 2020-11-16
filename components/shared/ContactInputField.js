@@ -23,22 +23,6 @@ const InputField = styled.div`
     width: 100%;
     height: 60px;
     font-weight: 100;
-    &:focus {
-      outline: none;
-      border-color: ${(p) => p.theme.colors.accent} !important;
-      &::placeholder {
-        color: ${(p) => p.theme.colors.foreground_low};
-      }
-    }
-    @media (max-width: 600px) {
-      &:active {
-        outline: none;
-        border-color: ${(p) => p.theme.colors.foreground};
-        &::placeholder {
-          color: ${(p) => p.theme.colors.foreground_low};
-        }
-      }
-    }
     background-color: ${(p) => p.theme.colors.background};
     color: ${(p) => p.theme.colors.foreground_low};
     border: 2px solid ${(p) => p.theme.colors.foreground_lowest};
@@ -47,11 +31,27 @@ const InputField = styled.div`
       color: ${(p) => p.theme.colors.foreground_lower};
       transition: 0.4s ease color;
     }
+    &:focus {
+      outline: none;
+      border-color: ${(p) => p.theme.colors.accent} !important;
+      &::placeholder {
+        color: ${(p) => p.theme.colors.foreground_lower};
+      }
+    }
+    @media (max-width: 600px) {
+      &:active {
+        outline: none;
+        border-color: ${(p) => p.theme.colors.foreground};
+        &::placeholder {
+          color: ${(p) => p.theme.colors.foreground_lower};
+        }
+      }
+    }
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         border: 2px solid ${(p) => p.theme.colors.foreground_low};
         &::placeholder {
-          color: ${(p) => p.theme.colors.foreground_low};
+          color: ${(p) => p.theme.colors.foreground_lower};
         }
       }
     }
@@ -158,7 +158,4 @@ export const CheckMark = styled(InputField)`
       }
     }
   }
-  /* @media (max-width: 600px) {
-    margin-bottom: 200px;
-  } */
 `;

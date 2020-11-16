@@ -119,7 +119,7 @@ export default React.memo(LanguageToggler);
 
 const English = styled.div`
   background-color: ${(props) => props.theme.colors.accent};
-  padding: 9px 10px 8px 23px;
+  padding: 9px 10px 10px 23px;
   position: absolute;
   margin-left: -8px;
   border-radius: 30px;
@@ -184,6 +184,9 @@ const Toggler = styled.div`
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       mix-blend-mode: unset;
+      svg {
+        transform: scale(0.95);
+      }
       ${English} {
         opacity: 1;
       }
@@ -206,10 +209,10 @@ const Toggler = styled.div`
     }
   }
   &:active {
-      svg {
-        transform: scale(0.9);
-      }
+    svg {
+      transform: scale(0.9);
     }
+  }
   @media (max-width: 600px) {
     align-items: flex-start;
     padding-top: 40px;

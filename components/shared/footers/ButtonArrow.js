@@ -1,46 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
-const ButtonArrow = React.forwardRef((props, ref) => (
-  <Shifter ref={ref} {...props} as={props.submitButton ? "div" : "a"}>
-    <Button inverse={props.inverse}>
-      {props.submitButton && <input type="submit" value={props.text} />}
+export const ButtonArrow = React.forwardRef((props, ref) =>
+  !props.submitButton ? (
+    <Button as="a" ref={ref} {...props} inverse={props.inverse}>
       {props.text}
       <Pin inverse={props.inverse} />
     </Button>
-  </Shifter>
-));
+  ) : (
+    <Button {...props} inverse={props.inverse} marginTop>
+      <input type="submit" value={props.text} />
+      {props.text}
+      <Pin inverse={props.inverse} />
+    </Button>
+  )
+);
 
 export default ButtonArrow;
-
-//Este debe solo ser input para evitar problemas
-export const ButtonArrowInput = React.forwardRef((props, ref) => (
-  <Shifter ref={ref} {...props} as={props.submitButton ? "div" : "a"}>
-    <Button inverse={props.inverse}>
-      {props.submitButton && <input type="submit" value={props.text} />}
-      {props.text}
-      <Pin inverse={props.inverse} />
-    </Button>
-  </Shifter>
-));
-
-const Shifter = styled.a`
-  margin: 22px 0 15px 0;
-  text-decoration: none;
-  display: ${(p) => (p.as === "div" ? "inline-block" : "unset")};
-  /* 
-    Esto no fucniona
-    @media (max-width: 600px) {
-    height: 60px;
-    display: block;
-    position: relative;
-    z-index: 2;
-  } */
-`;
 
 const Pin = styled.span`
   width: 30px;
   height: 30px;
+  pointer-events: none;
   display: inline-block;
   background-color: ${(p) =>
     !p.inverse ? p.theme.colors.background : p.theme.colors.accent};
@@ -62,15 +43,18 @@ const Pin = styled.span`
 
 const Button = styled.div`
   text-decoration: none;
-  padding: 13px 17px 18px 24px;
-  border-radius: 30px;
+  padding: 13px 17px 14px 25px;
+  border-radius: 50px;
   color: ${(p) => p.theme.colors.foreground};
   background-color: ${(p) =>
     !p.inverse ? p.theme.colors.background : p.theme.colors.accent};
-  margin-top: 20px;
   border: 2px solid ${(p) => p.theme.colors.background};
   position: relative;
-  display: inline;
+  display: inline-block;
+  align-self: flex-start;
+  font-weight: 100;
+  -webkit-appearance: button-bevel;
+  margin-top: ${(p) => (p.marginTop ? "10px" : "0px")};
   cursor: pointer;
   input {
     cursor: pointer;
@@ -81,7 +65,9 @@ const Button = styled.div`
     right: 0;
     bottom: 0;
     min-width: 100%;
+    min-height: 100%;
     opacity: 0;
+    z-index: 2;
   }
   @media (hover: hover) and (pointer: fine) {
     &:hover,
@@ -101,8 +87,9 @@ const Button = styled.div`
     }
   }
   @media (max-width: 600px) {
-    margin-bottom: 20%;
+    margin-bottom: 10px;
     padding-top: 15px;
+    padding-bottom: 11px;
     ${Pin} {
       transform: translateY(-3px);
       &:after {

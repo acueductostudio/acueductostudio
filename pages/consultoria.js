@@ -77,7 +77,7 @@ function Consultoria(props) {
       <TitleSection {...process_section.intro} borderTop />
       <StepGrid>
         {process_section.process.map((step, index) => (
-          <Fade key={`consultingStep${index}`}>
+          <Fade key={`consultingStep${index}`} triggerOnce>
             <div>
               <span>0{index + 1}</span>
               <h4>{step.title}</h4>

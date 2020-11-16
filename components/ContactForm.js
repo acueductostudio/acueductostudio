@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
@@ -10,6 +10,7 @@ import ButtonArrow from "components/shared/footers/ButtonArrow";
 const DefaultForm = ({ text }) => {
   const [formStatus, setFormStatus] = useState("");
   const [requirePhone, setRequirePhone] = useState(false);
+  const formRef = useRef(null);
 
   const { register, handleSubmit, errors } = useForm();
 
@@ -27,7 +28,7 @@ const DefaultForm = ({ text }) => {
       {formStatus === "" && (
         <>
           <p>{text.p3}</p>
-          <Form onSubmit={handleSubmit(onSubmitInside)}>
+          <Form onSubmit={handleSubmit(onSubmitInside)} ref={formRef}>
             <InputField>
               <label htmlFor={`cp_email`}>{text.email.label}</label>
               <input

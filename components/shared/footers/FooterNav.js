@@ -109,8 +109,9 @@ export default function FooterNav() {
         <Fade triggerOnce>
           <p>© 2020, Acueducto</p>
           <a href="mailto:hola@acueducto.studio">hola@acueducto.studio</a>
-          <a href="https://wa.me/525541634721">
-            <img src="/assets/img/layout/logos/whatsapp.svg" alt="WhatApp"/>+ 52 55 4163 4721
+          <a href="https://wa.me/message/JNUILJPF23CSP1">
+            <img src="/assets/img/layout/logos/whatsapp.svg" alt="WhatApp" />
+            +52 55 2789 5399
           </a>
         </Fade>
       </Colophon>
@@ -126,7 +127,7 @@ const Footer = styled.div`
   padding: 5% 4%;
   background-color: ${(props) => props.theme.colors.background};
   @media (max-width: 600px) {
-    padding-bottom:13%;
+    padding-bottom: 13%;
   }
 `;
 
@@ -149,7 +150,10 @@ const NavList = styled.div`
   ul {
     list-style: none;
     font-size: 1.8rem;
-    color: ${(p) => p.accentColor ? p.theme.colors.foreground_lowest : p.theme.colors.foreground_lower};
+    color: ${(p) =>
+      p.accentColor
+        ? p.theme.colors.foreground_lowest
+        : p.theme.colors.foreground_lower};
     li:not(:last-of-type) {
       margin-bottom: 20px;
     }
@@ -158,7 +162,8 @@ const NavList = styled.div`
     font-size: 2.1rem;
     font-weight: 200;
     margin: 0 0 30px;
-    color: ${(p) => p.accentColor ? p.theme.colors.accent : p.theme.colors.foreground}
+    color: ${(p) =>
+      p.accentColor ? p.theme.colors.accent : p.theme.colors.foreground_low};
   }
   @media (max-width: 950px) {
     h6 {
