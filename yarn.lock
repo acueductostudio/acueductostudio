@@ -5959,13 +5959,6 @@ react-player@^2.6.2:
     prop-types "^15.7.2"
     react-fast-compare "^3.0.1"
 
-react-radio-group@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/react-radio-group/-/react-radio-group-3.0.3.tgz#60bb29c7ad05d8b6f67cf443af0767ee2007cf98"
-  integrity sha512-MUNRRjZqQ2y+1K6rBuH0zO+gLVmCnWIcc5GnNwr9WNoUwZ9FUAKJ1UfsKXwYS93whR6/qrZKoVgiOltRkbzezw==
-  dependencies:
-    prop-types "^15.5.8"
-
 react-reconciler@0.26.1:
   version "0.26.1"
   resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.26.1.tgz#860952dd359fd870f94895c254271e3a9de3b2d6"

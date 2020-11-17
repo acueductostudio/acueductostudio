@@ -16,10 +16,10 @@ const nextConfig = {
         urlPattern: /^https?.*/,
         handler: "NetworkFirst",
         options: {
-          cacheName: "https-calls",
+          cacheName: "offlineCache",
           networkTimeoutSeconds: 15,
           expiration: {
-            maxEntries: 150,
+            maxEntries: 200,
             maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
           },
           cacheableResponse: {
