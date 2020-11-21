@@ -12,6 +12,8 @@ import { initGA, logPageView } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NewsletterPopup from "components/NewsletterPopup";
+import { hotjar } from "react-hotjar";
+import TagManager from "react-gtm-module";
 
 const HomeSketch = dynamic(import("../../components/homeSketch/HomeSketch"), {
   ssr: false,
@@ -65,6 +67,10 @@ const Layout = ({
     };
     ReactPixel.init("506854653278097", null, options);
     ReactPixel.pageView();
+    TagManager.initialize({
+      gtmId: "GTM-NQHHFWF",
+    });
+    hotjar.initialize(1494703, 6);
   };
 
   useEffect(() => {

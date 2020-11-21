@@ -180,7 +180,7 @@ const Toggler = styled.div`
   margin: 0px auto;
   max-width: 1500px;
   opacity: ${(props) => (props.available && props.reveal ? 1 : 0)};
-  transition: opacity 0.3s ease 0.3s;
+  transition: opacity 0.3s ease 0.35s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       mix-blend-mode: unset;

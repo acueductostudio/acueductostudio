@@ -61,9 +61,9 @@ const TriggerContainer = styled.div`
   max-width: 1500px;
   pointer-events: none;
   mix-blend-mode: exclusion;
-  transition: opacity 0.3s ease 0.3s;
-  @media(max-width:1530px){
-    padding-right:60px;
+  transition: opacity 0.3s ease 0.35s;
+  @media (max-width: 1530px) {
+    padding-right: 60px;
     padding-top: 55px;
   }
   @media (max-width: 600px), (max-height: 450px) {
@@ -78,8 +78,8 @@ const TriggerContainer = styled.div`
       border-radius: 50% 50%;
       width: 60px;
       height: 60px;
-      transform:scale(1);
-      transition: .2s ease-in transform;
+      transform: scale(1);
+      transition: 0.2s ease-in transform;
       &:focus,
       &:active {
         transform: scale(0.9);

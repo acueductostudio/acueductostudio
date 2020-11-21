@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import Arrow from "components/shared/Arrow";
 
-const scrollToNext = e => {
+const scrollToNext = (e) => {
   e.preventDefault();
   document.getElementById("removeArrow").scrollIntoView({ behavior: "smooth" });
 };
@@ -19,6 +19,7 @@ export default ScrollIncentive;
 const jumping = keyframes`
   0%{
     transform: translateY(0)rotate(90deg);
+    opacity:1;
   }
   20%{
     transform: translateY(0)rotate(90deg);
@@ -37,16 +38,19 @@ const jumping = keyframes`
   }
   100%{
     transform: translateY(0)rotate(90deg);
+    opacity:1;
   }
 `;
 const Jumper = styled.div`
   animation-name: ${jumping};
+  transform: translateY(0) rotate(90deg);
+  opacity: 0;
   animation-duration: 1.5s;
   animation-timing-function: ease;
-  animation-delay: 0s;
+  animation-delay: 5s;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  pointer-events: ${props =>
+  pointer-events: ${(props) =>
     props.reveal && props.showArrow ? "auto" : "none"};
   cursor: pointer;
 `;
@@ -69,7 +73,7 @@ const Container = styled.div`
   padding-bottom: 65px;
   margin: 0px auto;
   max-width: 1500px;
-  opacity: ${props => (props.reveal && props.showArrow ? 1 : 0)};
+  opacity: ${(props) => (props.reveal && props.showArrow ? 1 : 0)};
   transition: opacity 0.3s ease 1s;
   @media (max-width: 600px) {
     padding-left: 25px;

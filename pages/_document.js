@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
   static getInitialProps({ renderPage, pathname }) {
     let lang = pathname.includes("/en") ? "en" : "es";
     const sheet = new ServerStyleSheet();
-    const page = renderPage(App => props =>
+    const page = renderPage((App) => (props) =>
       sheet.collectStyles(<App {...props} />)
     );
     const styleTags = sheet.getStyleElement();

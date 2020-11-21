@@ -56,9 +56,9 @@ const TopHeader = styled.header`
   pointer-events: none;
   mix-blend-mode: exclusion;
   opacity: ${(props) => (props.reveal ? 1 : 0)};
-  transition: opacity 0.3s ease 0.3s;
-  @media(max-width:1530px){
-    padding-left:60px;
+  transition: opacity 0.3s ease-out 0.15s;
+  @media (max-width: 1530px) {
+    padding-left: 60px;
     padding-top: 55px;
   }
   @media (max-width: 800px) {
@@ -81,7 +81,7 @@ const TopHeader = styled.header`
   }
   @media (max-height: 450px) {
     padding-top: 35px;
-    padding-left:45px;
+    padding-left: 45px;
   }
 `;
 

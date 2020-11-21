@@ -11,35 +11,61 @@ const styles = `
     top: 0;
     padding: 19px;
     background-color: #060809;
-    transition: opacity 0.8s ease;
+    transition: opacity 0.4s ease-out;
     will-change: opacity;
   }
   #bordered {
-    width: calc(100% - 40px);
-    height: calc(100% - 42px);
+    width: calc(100% - 36px);
+    height: calc(100% - 36px);
     max-width: 1500px;
     margin: 0 auto;
     position: fixed;
     pointer-events: none;
-    left: 20px;
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
+    left: 18px;
+    top: 18px;
+    right: 18px;
+    bottom: 18px;
     border: 17px solid white;
-    border-radius:60px;
+    border-radius: 500px;
     border-width: 17px;
     transform: scale(0.12);
-    transition: transform 0.4s ease-out, border-width 0.3s ease-out;
+    transition: transform 0.4s ease-in, border-width 0.3s ease-in, border-radius 0.3s ease-out;
     will-change: transform;
     overflow: hidden;
   }
+  #logo {
+    width: 40px;
+    height: 35px;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    transition: opacity 0.2s ease-in;
+  }
+
+  #bordered.hidden{
+    border-radius:60px;
+    transform: scale(1);
+    border-width:2px;
+  }
   @media(max-width:1530px) {
-   #bordered { 
+    #logo {
+      width: 32px;
+      height: 32px;
+      top: calc(50% - 16px);
+      left: calc(50% - 16px);
+    }
+   #bordered.hidden { 
      border-radius: 40px;
     }
   }
   @media(max-width:600px) {
-    #bordered { 
+    #logo {
+      width: 25px;
+      height: 25px;
+      top: calc(50% - 12.5px);
+      left: calc(50% - 12.5px);
+    }
+    #bordered.hidden { 
       border-radius: 30px;
      }
    }
@@ -50,29 +76,18 @@ const styles = `
     height: 100%;
     position: absolute;
     transform: translateX(-100%);
-    animation: shine 2s infinite ease-in-out;
-    transition: opacity 0.1s ease;
+    animation: shine 1s infinite ease-in;
+    transition: opacity 0.150s ease;
   }
   .hidden::before {
     opacity: 0;
-  }
-  #logo {
-    width: 40px;
-    height: 35px;
-    position: absolute;
-    top: calc(50% - 20px);
-    left: calc(50% - 20px);
-    transition: opacity 0.2s ease;
   }
   @keyframes shine {
     0% {
       transform: translateX(-100%);
     }
-    30% {
-      transform: translateX(-100%);
-    }
     100% {
-      transform: translateX(100%);
+      transform: translateX(50%);
     }
   }
 

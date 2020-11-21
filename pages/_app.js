@@ -9,8 +9,6 @@ import Cookies from "js-cookie/dist/js.cookie";
 import delayForLoading from "utils/delayForLoading.ts";
 import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
-import { hotjar } from "react-hotjar";
-import TagManager from "react-gtm-module";
 import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
@@ -28,36 +26,28 @@ function App(props) {
     disableBodyScroll(targetElement);
 
     // Load Animation
-    delayForLoading(1500).then(() => {
+    delayForLoading(800).then(() => {
+      console.log("start animation");
       const bordered = document.getElementById("bordered");
       const logo = document.getElementById("logo");
       const revealer = document.getElementById("revealer");
       if (bordered) {
+        // Transition out
+        bordered.classList.add("hidden");
+        logo.style.opacity = "0";
+
         setTimeout(() => {
-          // Transition out
-          bordered.classList.add("hidden");
-          logo.style.opacity = "0";
-          bordered.style.transform = "scale(1)";
-          bordered.style.borderWidth = "2px";
-
-          setTimeout(() => {
-            revealer.style.opacity = "0";
-            revealer.style.pointerEvents = "none";
-            setHasLoaded(true);
-          }, 400);
-
-          setTimeout(() => {
-            // Remove transition items from DOM
-            bordered.remove();
-            revealer.remove();
-            logo.remove();
-            // init HotJar
-            hotjar.initialize(1494703, 6);
-            TagManager.initialize({
-              gtmId: "GTM-NQHHFWF",
-            });
-          }, 1000);
+          revealer.style.pointerEvents = "none";
+          revealer.style.opacity = "0";
+          setHasLoaded(true);
         }, 400);
+
+        setTimeout(() => {
+          // Remove transition items from DOM
+          bordered.remove();
+          revealer.remove();
+          logo.remove();
+        }, 1000);
       }
     });
     // router event listeners for loadingBar
