@@ -51,7 +51,12 @@ function App(props) {
             bordered.remove();
             revealer.remove();
             logo.remove();
-          }, 2000);
+            // init HotJar
+            hotjar.initialize(1494703, 6);
+            TagManager.initialize({
+              gtmId: "GTM-NQHHFWF",
+            });
+          }, 1000);
         }, 400);
       }
     });
@@ -59,11 +64,6 @@ function App(props) {
     Router.events.on("routeChangeStart", handleRouteStart);
     Router.events.on("routeChangeComplete", handleRouteComplete);
     Router.events.on("routeChangeError", handleRouteError);
-    // init HotJar
-    hotjar.initialize(1494703, 6);
-    TagManager.initialize({
-      gtmId: "GTM-NQHHFWF",
-    });
 
     return () => {
       // remove loadingBar event listeners

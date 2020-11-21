@@ -52,21 +52,26 @@ const Layout = ({
     [mouse.current]
   );
 
-  useEffect(() => {
-    const options = {
-      autoConfig: true,
-      debug: false,
-    };
-    ReactPixel.init("506854653278097", null, options);
-  }, []);
-
-  useEffect(() => {
+  const initializePixels = () => {
     if (!window.GA_INITIALIZED) {
       initGA();
       window.GA_INITIALIZED = true;
     }
     logPageView();
-    ReactPixel.pageView(); // For tracking page view
+
+    const options = {
+      autoConfig: true,
+      debug: false,
+    };
+    ReactPixel.init("506854653278097", null, options);
+    ReactPixel.pageView();
+  };
+
+  useEffect(() => {
+    hasLoaded && initializePixels();
+  }, [hasLoaded]);
+
+  useEffect(() => {
     mouse.current[0] = window.innerWidth > 600 ? 1200 : 300;
     if (router.route === "/" || router.route === "/en") {
       setShowSketch(true);
@@ -89,6 +94,8 @@ const Layout = ({
       setIsAbout(false);
       setShowPopup(false);
     }
+    hasLoaded && logPageView();
+    hasLoaded && ReactPixel.pageView(); // For tracking page view
   }, [router.route]);
 
   useEffect(() => {
@@ -235,7 +242,7 @@ const Border = styled.div`
   border: ${(props) =>
     `${props.theme.stroke} solid ${props.theme.colors.foreground}`};
   border-radius: 60px;
-  @media(max-width:1530px){
+  @media (max-width: 1530px) {
     border-radius: 40px;
   }
   @media (max-width: 600px), (max-height: 450px) {
