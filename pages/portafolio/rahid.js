@@ -86,44 +86,53 @@ function Rahid(props) {
             </div>
           </Fade>
         </Branding>
-        {loadAssets && (
-          <Applications>
-            <Picture
-              src="/assets/img/casestudies/rahid/box.png"
-              alt="Packaging"
-            />
-            <Picture
-              src="/assets/img/casestudies/rahid/fb.jpg"
-              alt="Facebook Post"
-            />
-            <Picture
-              src="/assets/img/casestudies/rahid/ig.jpg"
-              alt="Instagram Post"
-            />
-          </Applications>
-        )}
+        <Applications>
+          <Picture
+            src="/assets/img/casestudies/rahid/box.png"
+            alt="Packaging: Rahid"
+            width={279}
+            height={261}
+            newimg
+          />
+          <Picture
+            src="/assets/img/casestudies/rahid/fb.jpg"
+            alt="Facebook Post: Rahid"
+            width={372}
+            height={579}
+            newimg
+          />
+          <Picture
+            src="/assets/img/casestudies/rahid/ig.jpg"
+            alt="Instagram Post: Rahid"
+            width={465}
+            height={298}
+            newimg
+          />
+        </Applications>
       </ThirdSection>
       <FourthSection>
         <TextColumn>
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
-          <>
-            {loadAssets && (
-              <Picture
-                src="/assets/img/casestudies/rahid/home.jpg"
-                alt="Home Rahid.co"
-              />
-            )}
-          </>
+          <div className="image">
+            <Picture
+              src="/assets/img/casestudies/rahid/home.jpg"
+              alt="Home Rahid.co"
+              width={800}
+              height={412}
+              newimg
+            />
+          </div>
           <P>{t.fourth_section.p2}</P>
         </TextColumn>
         <InsertBlock>
-          {loadAssets && (
-            <Picture
-              src="/assets/img/casestudies/rahid/boxes.png"
-              alt="Home Rahid.co"
-            />
-          )}
+          <Picture
+            src="/assets/img/casestudies/rahid/boxes.png"
+            alt="Home Rahid.co"
+            width={960}
+            height={754}
+            newimg
+          />
           <P>{t.fourth_section.graphicp}</P>
         </InsertBlock>
         <TextColumn>
@@ -135,36 +144,44 @@ function Rahid(props) {
           <H2>{t.fifth_section.title}</H2>
           <P>{t.fifth_section.p}</P>
         </TextColumn>
-        {loadAssets && (
-          <LaunchGrid>
+        <LaunchGrid>
+          <div className="image">
             <Picture
               src="/assets/img/casestudies/rahid/desktop.png"
               alt="Festival awards"
+              width={558}
+              height={340}
+              newimg
             />
+          </div>
+          <div className="image">
             <Picture
               src="/assets/img/casestudies/rahid/mobile.png"
               alt="Festival awards"
+              width={162}
+              height={339}
+              newimg
             />
-          </LaunchGrid>
-        )}
+          </div>
+        </LaunchGrid>
         <TextColumn>
           <P>{t.fifth_section.p2}</P>
           <Stat>
-            {/* <Fade triggerOnce> */}
             <span>
               77<b>%</b>
             </span>
-            {/* </Fade> */}
             <P>{t.fifth_section.stat}</P>
           </Stat>
           <P>{t.fifth_section.p3}</P>
         </TextColumn>
-        {loadAssets && (
-          <Picture
-            src="/assets/img/casestudies/rahid/referral.jpg"
-            alt="Email Marketing"
-          />
-        )}
+        <Picture
+          src="/assets/img/casestudies/rahid/referral.jpg"
+          alt="Email Marketing"
+          width={800}
+          height={450}
+          newimg
+        />
+
         <TextColumn>
           <P>{t.fifth_section.p4}</P>
         </TextColumn>
@@ -202,15 +219,6 @@ const LaunchGrid = styled.div`
   & > div {
     &:nth-of-type(even) {
       grid-column-start: 3;
-    }
-  }
-  picture {
-    width: 100%;
-    margin: 0px !important;
-    height: auto;
-    img {
-      width: 100%;
-      margin: 0 !important;
     }
   }
   @media (max-width: 1000px) {
@@ -284,17 +292,12 @@ const Applications = styled.div`
       align-self: flex-end;
     }
   }
-  picture {
-    width: 100%;
-    border-radius: 2px;
-    position: relative;
-    display: block;
-    img {
-      width: 100%;
-    }
+  img {
+    border-radius: 3px;
   }
   @media (max-width: 500px) {
     margin-bottom: 15%;
+    border-radius: 2px;
   }
 `;
 
@@ -450,7 +453,7 @@ const SixthSection = styled(CommonSection)`
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
       border: 0;
       margin-right: 0;
-      transition: .2s ease-out all;
+      transition: 0.2s ease-out all;
       &:active,
       &:focus {
         transform: scale(0.95);
@@ -470,11 +473,8 @@ const FifthSection = styled(CommonSection)`
   p {
     color: ${rahidForeground};
   }
-  picture {
-    img {
-      width: 100%;
-      box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
-    }
+  .image div div {
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
   }
   & > div:nth-last-of-type(4) {
     max-width: 800px;
@@ -497,9 +497,9 @@ const FourthSection = styled(CommonSection)`
     flex-direction: column;
     align-items: center;
   }
-  div img {
+  .image {
     width: 100%;
-    margin: 12% 0;
+    padding: 12% 0;
     max-width: 800px;
   }
   figure img {
