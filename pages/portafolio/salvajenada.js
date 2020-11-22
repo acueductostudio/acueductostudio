@@ -34,6 +34,35 @@ const FramesEmbed = dynamic(
 
 const salvajeBlue = "rgb(60, 179, 224)";
 
+const periodicity_covers = [
+  { alt: "Salvajenada - Canásta Básica #27 - Solange" },
+  { alt: "Salvajenada - Canásta Básica #29 - Michelle Blades" },
+  { alt: "Salvajenada - Canásta Básica #30 - Solange" },
+  { alt: "Salvajenada - Canásta Básica #28 - Kevin Abstract" },
+  { alt: "Salvajenada - Canásta Básica #34 - Noa Sainz" },
+  {
+    alt: "Salvajenada - Canásta Básica #33 - Tyler, The Creator",
+  },
+];
+
+const meaningfulness_covers = [
+  { alt: "Salvajenada - Canásta Básica - Balmy Evening" },
+  { alt: "Salvajenada - Canásta Básica - Claustro" },
+  { alt: "Salvajenada - Canásta Básica - The Experimenter" },
+  { alt: "Salvajenada - Canásta Básica - Miel" },
+  { alt: "Salvajenada - Canásta Básica - One Eye Open" },
+  {
+    alt:
+      "Salvajenada - Canásta Básica - Un Arpa Descansa Dentro de un Piano de Cola",
+  },
+];
+
+const spreadability_covers = [
+  { alt: "Salvajenada - Canásta Básica - Shout out - WetBaes" },
+  { alt: "Salvajenada - Canásta Básica - Shout out - Valgur" },
+  { alt: "Salvajenada - Canásta Básica - Shout out - Yecto" },
+];
+
 export default function Salvajenada(props) {
   const [loadAssets, setloadAssets] = useState(false);
   let t = props.locale.casestudies.studies.salvajenada;
@@ -42,61 +71,6 @@ export default function Salvajenada(props) {
     props.setTitle(t.headerTitle);
     setloadAssets(true);
   }, []);
-
-  const playlistCovers = () => {
-    let covers = [];
-    for (let i = 1; i < 7; i++) {
-      covers.push(
-        <Picture
-          key={"c_" + i}
-          alt={"salvajenada_release " + i}
-          src={`/assets/img/casestudies/salvajenada/c_${i}.jpg`}
-        />
-      );
-    }
-    return covers;
-  };
-
-  const playlistDescriptions = () => {
-    let descriptions = [];
-    for (let i = 1; i < 7; i++) {
-      descriptions.push(
-        <Picture
-          key={"d_" + i}
-          alt={"salvajenada_writing " + i}
-          src={`/assets/img/casestudies/salvajenada/d_${i}.png`}
-        />
-      );
-    }
-    return descriptions;
-  };
-
-  const artistShout = () => {
-    let x = [];
-    x.push(
-      <Fade triggerOnce key="v_7">
-        <video
-          autoPlay
-          playsInline
-          muted
-          loop
-          poster="/assets/img/casestudies/salvajenada/girlUltra_poster.jpg"
-        >
-          <source src="/assets/video/casestudies/salvajenada/girlUltra.mp4" />
-        </video>
-      </Fade>
-    );
-    for (let i = 1; i < 4; i++) {
-      x.push(
-        <Picture
-          key={"p_" + i}
-          alt={"salvajenada_shoutout " + i}
-          src={`/assets/img/casestudies/salvajenada/p_${i}.jpg`}
-        />
-      );
-    }
-    return x;
-  };
 
   return (
     <PageClipper unPadded>
@@ -212,13 +186,60 @@ export default function Salvajenada(props) {
           <P>{t.third_section.p}</P>
         </Column>
         <Insight insight={t.third_section.insights.periodicity} number={1}>
-          <PlaylistGrid>{loadAssets && playlistCovers()}</PlaylistGrid>
+          <PlaylistGrid>
+            {periodicity_covers.map((cover, i) => (
+              <div className="image" key={"c_" + i}>
+                <Picture
+                  alt={cover.alt}
+                  src={`/assets/img/casestudies/salvajenada/c_${i}.jpg`}
+                  width={362}
+                  height={362}
+                  newimg
+                />
+              </div>
+            ))}
+          </PlaylistGrid>
         </Insight>
         <Insight insight={t.third_section.insights.meaningfulness} number={2}>
-          <PlaylistGrid>{loadAssets && playlistDescriptions()}</PlaylistGrid>
+          <PlaylistGrid>
+            {meaningfulness_covers.map((cover, i) => (
+              <div className="image" key={"d_" + i}>
+                <Picture
+                  alt={cover.alt}
+                  src={`/assets/img/casestudies/salvajenada/d_${i}.png`}
+                  width={362}
+                  height={362}
+                  newimg
+                />
+              </div>
+            ))}
+          </PlaylistGrid>
         </Insight>
         <Insight insight={t.third_section.insights.spreadability} number={3}>
-          <ShoutGrid>{loadAssets && artistShout()}</ShoutGrid>
+          <ShoutGrid>
+            <Fade triggerOnce key="v_7">
+              <video
+                autoPlay
+                playsInline
+                muted
+                loop
+                poster="/assets/img/casestudies/salvajenada/girlUltra_poster.jpg"
+              >
+                <source src="/assets/video/casestudies/salvajenada/girlUltra.mp4" />
+              </video>
+            </Fade>
+            {spreadability_covers.map((cover, i) => (
+              <div className="image" key={"p_" + i}>
+                <Picture
+                  alt={cover.alt}
+                  src={`/assets/img/casestudies/salvajenada/p_${i}.jpg`}
+                  width={320}
+                  height={537}
+                  newimg
+                />
+              </div>
+            ))}
+          </ShoutGrid>
         </Insight>
         <Insight
           insight={t.third_section.insights.multimedia_development}
@@ -226,12 +247,13 @@ export default function Salvajenada(props) {
           number={4}
         >
           <IberoGrid>
-            {loadAssets && (
-              <Picture
-                src="/assets/img/casestudies/salvajenada/ibero.jpg"
-                alt="salvajenada en Ibero 90.9"
-              />
-            )}
+            <Picture
+              src="/assets/img/casestudies/salvajenada/ibero.jpg"
+              alt="Salvajenada - Ibero 90.9"
+              width={850}
+              height={534}
+              newimg
+            />
           </IberoGrid>
         </Insight>
         <Quote
@@ -496,9 +518,8 @@ const ShoutGrid = styled.div`
     max-width: 250px;
     width: 100%;
   }
-  img,
+  .image,
   video {
-    /* max-width: 250px; */
     width: 100%;
   }
   @media (max-width: 1100px) {
@@ -528,7 +549,7 @@ const ShoutGrid = styled.div`
         transform: scale(0.95);
       }
     }
-    img {
+    .image {
       max-width: 100%;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
       scroll-snap-align: start;
@@ -551,8 +572,9 @@ const PlaylistGrid = styled.div`
   justify-items: center;
   grid-gap: 5rem;
   margin-top: 5rem;
-  img {
+  .image {
     max-width: 300px;
+    max-height: 300px;
     width: 100%;
   }
   @media (max-width: 900px) {
@@ -580,7 +602,7 @@ const PlaylistGrid = styled.div`
         transform: scale(0.95);
       }
     }
-    img {
+    .image {
       max-width: 100%;
       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
       scroll-snap-align: start;

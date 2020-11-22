@@ -5,30 +5,31 @@ const path = require("path");
 const withOffline = require("next-offline");
 
 const nextConfig = {
-  //start of WPA config
-  target: "serverless",
-  transformManifest: (manifest) => ["/"].concat(manifest),
-  // generateInDevMode: true,
   workboxOpts: {
-    swDest: "static/service-worker.js",
+    swDest: process.env.NEXT_EXPORT
+      ? "service-worker.js"
+      : "static/service-worker.js",
     runtimeCaching: [
       {
         urlPattern: /^https?.*/,
         handler: "NetworkFirst",
         options: {
           cacheName: "offlineCache",
-          networkTimeoutSeconds: 15,
           expiration: {
             maxEntries: 200,
-            maxAgeSeconds: 30 * 24 * 60 * 60, // 1 month
-          },
-          cacheableResponse: {
-            statuses: [0, 200],
           },
         },
       },
     ],
-  }, //end of WPA config
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/service-worker.js",
+        destination: "/_next/static/service-worker.js",
+      },
+    ];
+  },
   trailingSlash: false,
   webpack: (config, options) => {
     config.module.rules.push({

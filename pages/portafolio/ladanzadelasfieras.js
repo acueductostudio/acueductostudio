@@ -83,33 +83,46 @@ function LaDanzaDeLasFieras(props) {
           <H2>{t.second_section.title}</H2>
           <P>{t.second_section.p}</P>
         </TextColumn>
-        {loadAssets && (
-          <PosterGrid>
-            <Fade triggerOnce>
-              <PosterLine />
-            </Fade>
-            <Picture
-              src={"/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"}
-              alt="First references for branding"
-            />
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
-              alt="First references for branding"
-            />
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
-              alt="First references for branding"
-            />
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
-              alt="Original sketch of poster design"
-            />
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
-              alt="Final poster design with awards"
-            />
-          </PosterGrid>
-        )}
+        <PosterGrid>
+          <Fade triggerOnce>
+            <PosterLine />
+          </Fade>
+          <Picture
+            src={"/assets/img/casestudies/ladanzadelasfieras/p_1.jpg"}
+            alt="First references for branding"
+            width={114}
+            height={160}
+            newimg
+          />
+          <Picture
+            src="/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
+            alt="First references for branding"
+            width={114}
+            height={160}
+            newimg
+          />
+          <Picture
+            src="/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
+            alt="First references for branding"
+            width={114}
+            height={160}
+            newimg
+          />
+          <Picture
+            src="/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
+            alt="Original sketch of poster design"
+            width={382}
+            height={544}
+            newimg
+          />
+          <Picture
+            src="/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
+            alt="Final poster design with awards"
+            width={530}
+            height={755}
+            newimg
+          />
+        </PosterGrid>
       </SecondSection>
       <Section_Pre>
         <TextColumn>
@@ -140,12 +153,13 @@ function LaDanzaDeLasFieras(props) {
       </Section_Pre>
       <Section_Sub>
         <TransitionWrapper>
-          {loadAssets && (
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
-              alt="Printed assets for film attendants"
-            />
-          )}
+          <Picture
+            src="/assets/img/casestudies/ladanzadelasfieras/materials.jpg"
+            alt="Printed assets for film attendants"
+            width={1150}
+            height={612}
+            newimg
+          />
         </TransitionWrapper>
         <TextColumn>
           <H3>{"– " + t.second_section.subtitle}</H3>
@@ -175,14 +189,15 @@ function LaDanzaDeLasFieras(props) {
           number={1}
           color={fierasRed}
         >
-          {loadAssets && (
-            <Faces>
-              <Picture
-                src="/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
-                alt="Contact cards for directors and producers"
-              />
-            </Faces>
-          )}
+          <Faces>
+            <Picture
+              src="/assets/img/casestudies/ladanzadelasfieras/d_1.jpg"
+              alt="Contact cards for directors and producers"
+              width={670}
+              height={356}
+              newimg
+            />
+          </Faces>
         </Insight>
         <Quote
           quote={t.third_section.insights.portfolio.quote}
@@ -194,14 +209,15 @@ function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.press}
           number={2}
         >
-          {loadAssets && (
-            <MacPress>
-              <Picture
-                src="/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
-                alt="A whole section for the press"
-              />
-            </MacPress>
-          )}
+          <MacPress>
+            <Picture
+              src="/assets/img/casestudies/ladanzadelasfieras/i_1.jpg"
+              alt="A whole section for the press"
+              width={830}
+              height={634}
+              newimg
+            />
+          </MacPress>
         </Insight>
         <Quote
           quote={t.third_section.insights.press.quote}
@@ -213,14 +229,15 @@ function LaDanzaDeLasFieras(props) {
           insight={t.third_section.insights.availability}
           number={3}
         >
-          {loadAssets && (
-            <MacContact>
-              <Picture
-                src="/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
-                alt="A contact component on every page"
-              />
-            </MacContact>
-          )}
+          <MacContact>
+            <Picture
+              src="/assets/img/casestudies/ladanzadelasfieras/i_3.jpg"
+              alt="A contact component on every page"
+              width={670}
+              height={1057}
+              newimg
+            />
+          </MacContact>
         </Insight>
         <TextColumn>
           <H3>{"– " + t.third_section.subtitle2}</H3>
@@ -229,6 +246,9 @@ function LaDanzaDeLasFieras(props) {
             <Picture
               src="/assets/img/casestudies/ladanzadelasfieras/webapp.png"
               alt="A Progressive Web App"
+              width={335}
+              height={188}
+              newimg
             />
             <AppSvg />
           </AppGrid>
@@ -272,14 +292,15 @@ function LaDanzaDeLasFieras(props) {
           color={(props) => props.theme.colors.background}
         />
         <TextColumn>
-          <>
-            {loadAssets && (
-              <Picture
-                src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
-                alt="Festival awards"
-              />
-            )}
-          </>
+          <div className="image">
+            <Picture
+              src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+              alt="Festival awards"
+              width={670}
+              height={445}
+              newimg
+            />
+          </div>
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
       </Fifth>
@@ -675,7 +696,7 @@ const Fifth = styled(CommonSection)`
   h2 b {
     color: ${fierasRed};
   }
-  img {
+  .image {
     max-width: 670px;
     margin: 5% 0 12% 0;
   }

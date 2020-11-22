@@ -50,10 +50,12 @@ function Rahid(props) {
           <H2>{t.intro_section.title}</H2>
           <P>{t.intro_section.p}</P>
           <OldBrand>
-            <img
-              src="/assets/img/casestudies/rahid/oldLogo.svg"
-              alt="El Rahid"
-            />
+            {loadAssets && (
+              <img
+                src="/assets/img/casestudies/rahid/oldLogo.svg"
+                alt="El Rahid"
+              />
+            )}
             <p>{t.intro_section.graphicp}</p>
           </OldBrand>
           <P>{t.intro_section.p2}</P>

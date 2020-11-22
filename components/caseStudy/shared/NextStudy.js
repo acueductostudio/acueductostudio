@@ -96,7 +96,7 @@ const Wrapper = styled.a`
       width: 45px;
       height: 45px;
       bottom: -10px;
-      transition: .2s ease-out all;
+      transition: 0.2s ease-out all;
       &:active,
       &:focus {
         border-color: ${(props) => props.theme.colors.accent};

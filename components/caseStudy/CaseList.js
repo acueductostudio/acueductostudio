@@ -8,7 +8,6 @@ import Link from "next/link";
 import LangContext from "utils/LangContext";
 
 const SingleCase = (props) => {
-  // const video = useRef(null);
   return (
     <Case>
       <Link
@@ -32,18 +31,6 @@ const SingleCase = (props) => {
                   backgroundImage: `url(/assets/img/casestudies/${props.link}/portfolio_poster.svg`,
                 }}
               />
-              {/* <video
-                ref={video}
-                playsInline
-                muteds
-                autoPlay={props.noPlay ? false : true}
-                loop
-                poster={`/assets/img/casestudies/${props.link}/portfolio_poster.svg`}
-              >
-                <source
-                  src={`/assets/video/casestudies/${props.link}/portfolio.mp4`}
-                />
-              </video> */}
             </VidContainer>
           </Fade>
         </a>
@@ -217,7 +204,7 @@ const Info = styled.div`
       width: 48px;
       height: 48px;
       bottom: -5px;
-      transition: .2s ease-out all;
+      transition: 0.2s ease-out all;
       &:active,
       &:focus {
         border-color: ${(props) => props.theme.colors.accent};
@@ -260,9 +247,25 @@ const VidContainer = styled.div`
       }
     }
     img {
-      transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      transition: transform 0.3s ease-out;
       will-change: transform;
     }
+  }
+  &:focus,
+  &:active {
+    background-size: 100%;
+    video,
+    ${VidReplacer} {
+      transform: scale(0.98);
+      opacity: 0.92;
+    }
+    img {
+      transform: translateZ(1px) translateY(-50%) translateX(-50%) scale(1.02);
+    }
+  }
+  img {
+    transition: transform 0.3s ease-out;
+    will-change: transform;
   }
   video,
   ${VidReplacer} {
@@ -273,8 +276,7 @@ const VidContainer = styled.div`
     right: 0;
     width: 100%;
     will-change: transform, opacity;
-    transition: transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
-      opacity 0.5s ease;
+    transition: transform 0.3s ease-out, opacity 0.5s ease;
   }
 `;
 
