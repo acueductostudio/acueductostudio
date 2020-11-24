@@ -42,7 +42,7 @@ const SpinPinnedSection = ({ hasLoaded, children }) => {
   return <PinnedSection title={spinTitle}>{children}</PinnedSection>;
 };
 
-function Consultoria(props) {
+function Consultoria({setTitle, lang, hasLoaded }) {
   let {
     page_title,
     meta_description,
@@ -55,8 +55,8 @@ function Consultoria(props) {
   } = es.consultoria_page;
 
   useEffect(() => {
-    props.setTitle(headerTitle);
-  }, [props.locale]);
+    setTitle(headerTitle);
+  }, []);
 
   return (
     <PageClipper>
@@ -66,9 +66,9 @@ function Consultoria(props) {
         image="og_image_consultoria.jpg"
         es_image_alt="Consultoría digital por Acueducto"
         es_only_canonical="https://acueducto.studio/consultoria"
-        lang={props.lang}
+        lang={lang}
       />
-      <SpinPinnedSection hasLoaded={props.hasLoaded}>
+      <SpinPinnedSection hasLoaded={hasLoaded}>
         <>
           <P>{intro.p}</P>
           <ConsultoriaCTA cta={cta} id="first" />

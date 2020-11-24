@@ -1,15 +1,19 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import Hamburger from "public/assets/img/layout/hamburger.svg";
 
-const NavTrigger = (props) => (
-  <TriggerContainer visible={props.hasLoaded}>
-    <Trigger onClick={() => props.toggleNav()} open={props.isOpen}>
-      <Hamburger />
-    </Trigger>
-  </TriggerContainer>
-);
+const NavTrigger = ({ hasLoaded, toggleNav, isOpen }) => {
+  const doToggleNav = () => toggleNav();
+  return (
+    <TriggerContainer visible={hasLoaded}>
+      <Trigger onClick={doToggleNav} open={isOpen}>
+        <Hamburger />
+      </Trigger>
+    </TriggerContainer>
+  );
+};
 
-export default NavTrigger;
+export default React.memo(NavTrigger);
 
 const Trigger = styled.div`
   pointer-events: auto;
