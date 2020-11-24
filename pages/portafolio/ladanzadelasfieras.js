@@ -243,13 +243,15 @@ function LaDanzaDeLasFieras(props) {
           <H3>{"– " + t.third_section.subtitle2}</H3>
           <P>{t.third_section.p2}</P>
           <AppGrid>
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/webapp.png"
-              alt="A Progressive Web App"
-              width={335}
-              height={188}
-              newimg
-            />
+            <div className="image">
+              <Picture
+                src="/assets/img/casestudies/ladanzadelasfieras/webapp.png"
+                alt="A Progressive Web App"
+                width={335}
+                height={188}
+                newimg
+              />
+            </div>
             <AppSvg />
           </AppGrid>
         </TextColumn>
@@ -376,10 +378,10 @@ const AppGrid = styled.div`
   max-width: 670px;
   margin: 10% 0 20% 0;
   width: 100%;
-  img {
+  /* img {
     max-width: 100%;
     width: 100%;
-  }
+  } */
   svg {
     height: 100%;
     max-width: 100%;
@@ -391,7 +393,7 @@ const AppGrid = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 5%;
-    img {
+    .image {
       max-width: 400px;
       align-self: center;
       margin-bottom: 15%;

@@ -42,7 +42,7 @@ const jumping = keyframes`
   }
 `;
 const Jumper = styled.div`
-  animation-name: ${jumping};
+  animation-name: ${p=>p.reveal ? jumping : "none"};
   transform: translateY(0) rotate(90deg);
   opacity: 0;
   animation-duration: 1.5s;
