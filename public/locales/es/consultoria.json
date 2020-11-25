@@ -41,15 +41,15 @@
       "linktext2": " y evalúa dónde estás parado."
     },
     "fit_section": {
-        "title": "guiamos a tu negocio en integraciones digitales",
-        "p": "Analizamos los principales retos de tu negocio para encontrar soluciones con tecnología y prácticas digitales.</br></br>Este workshop es para ti si:",
-        "ul": [
-          "Tienes una idea para una app o un servicio digital",
-          "Quieres medir resultados en tu negocio y necesitas recolectar datos",
-          "Buscas optimizar la experiencia de tu web y sus métricas",
-          "Notas procesos repetitivos en tu negocio que podrías automatizar",
-          "No consigues resultados en marketing digital"
-        ]
+      "title": "guiamos a tu negocio en integraciones digitales",
+      "p": "Analizamos los principales retos de tu negocio para encontrar soluciones con tecnología y prácticas digitales.</br></br>Este workshop es para ti si:",
+      "ul": [
+        "Tienes una idea para una app o un servicio digital",
+        "Quieres medir resultados en tu negocio y necesitas recolectar datos",
+        "Buscas optimizar la experiencia de tu web y sus métricas",
+        "Notas procesos repetitivos en tu negocio que podrías automatizar",
+        "No consigues resultados en marketing digital"
+      ]
     },
     "process_section": {
       "intro": {
@@ -99,7 +99,7 @@
         },
         {
           "title": "cultura empresarial",
-          "p": "¿Es momento de adoptar una solución digital? Planeemos como tomar un rol activo con tu organización en adopción y capacitación tecnológica. Adquiere una visión clara sobre cómo crear un entorno productivo y saludable."
+          "p": "¿Es momento de adoptar una solución digital? Planeemos cómo tomar un rol activo con tu organización en adopción y capacitación tecnológica. Adquiere una visión clara sobre cómo crear un entorno productivo y saludable."
         }
       ],
       "area_extra": {

@@ -32,7 +32,11 @@ export default function Contact(props) {
         </p>
         <p>
           {t.intro.p2} <br />
-          <a href="mailto:hola@acueducto.studio">hola@acueducto.studio</a>
+          <a
+            href={`mailto:hola@acueducto.studio?subject=${t.intro.mailto.subject}&body=${t.intro.mailto.body}`}
+          >
+            hola@acueducto.studio
+          </a>
         </p>
         <ContactForm text={t.form} />
       </CustomPinnedSection>

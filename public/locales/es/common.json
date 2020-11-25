@@ -321,7 +321,11 @@
       "policies": [
         { "title": "cookies", "link": "/cookies" },
         { "title": "privacidad", "link": "/privacidad" }
-      ]
+      ],
+      "mailto": {
+        "subject": "Trabajemos juntos",
+        "body": "Hola,%0d%0a%0d%0a Mi nombre es [Nombre y apellido] y escribo porque me interesa reunirme con ustedes.%0d%0a%0d%0a El principal problema que tengo es: [describe detalladamente tu idea].%0d%0a%0d%0a Me gustaría agendar una cita para discutir más a fondo sobre el tema.%0d%0a%0d%0a ¡Saludos!"
+      }
     }
   },
   "cookie_message": {
@@ -577,7 +581,11 @@
     "intro": {
       "title": "¿cómo podemos ayudarte?",
       "p1": "Escríbenos por WhatsApp",
-      "p2": "Mándanos un email"
+      "p2": "Mándanos un email",
+      "mailto": {
+        "subject": "Trabajemos juntos",
+        "body": "Hola,%0d%0a%0d%0a Mi nombre es [Nombre y apellido] y escribo porque me interesa reunirme con ustedes.%0d%0a%0d%0a El principal problema que tengo es: [describe detalladamente tu idea].%0d%0a%0d%0a Me gustaría agendar una cita para discutir más a fondo sobre el tema.%0d%0a%0d%0a ¡Saludos!"
+      }
     },
     "form": {
       "p3": "O contesta nuestro cuestionario",

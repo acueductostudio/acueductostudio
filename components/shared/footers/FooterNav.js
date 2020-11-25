@@ -26,6 +26,7 @@ export default function FooterNav() {
     policies,
     resources,
     navTitles,
+    mailto,
   } = context.contact_footer.footer_nav;
   return (
     <Footer>
@@ -108,7 +109,11 @@ export default function FooterNav() {
       <Colophon>
         <Fade triggerOnce>
           <p>© 2020, Acueducto</p>
-          <a href="mailto:hola@acueducto.studio">hola@acueducto.studio</a>
+          <a
+            href={`mailto:hola@acueducto.studio?subject=${mailto.subject}&body=${mailto.body}`}
+          >
+            hola@acueducto.studio
+          </a>
           <a href="https://wa.me/message/JNUILJPF23CSP1">
             <img src="/assets/img/layout/logos/whatsapp.svg" alt="WhatApp" />
             +52 55 2789 5399

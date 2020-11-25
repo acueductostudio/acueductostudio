@@ -317,7 +317,11 @@
       "policies": [
         { "title": "cookie policy", "link": "/en/cookies" },
         { "title": "privacy policy", "link": "/en/privacy" }
-      ]
+      ],
+      "mailto": {
+        "subject": "Let's work together",
+        "body": "Hi,%0d%0a%0d%0a My name is [Name and last name] and I’d like to meet with you.%0d%0a%0d%0a My main problem is [detail your problem or idea].%0d%0a%0d%0a I'd like to schedule a call to discuss my ideas in depth.%0d%0a%0d%0a ¡Cheers!"
+      }
     }
   },
   "cookie_message": {
@@ -575,7 +579,11 @@
     "intro": {
       "title": "how may we help you?",
       "p1": "Send us a WhatsApp message",
-      "p2": "Email us"
+      "p2": "Email us",
+      "mailto": {
+        "subject": "Let's work together",
+        "body": "Hi,%0d%0a%0d%0a My name is [Name and last name] and I’d like to meet with you.%0d%0a%0d%0a My main problem is [detail your problem or idea].%0d%0a%0d%0a I'd like to schedule a call to discuss my ideas in depth.%0d%0a%0d%0a ¡Cheers!"
+      }
     },
     "form": {
       "p3": "Or fill out our form",
