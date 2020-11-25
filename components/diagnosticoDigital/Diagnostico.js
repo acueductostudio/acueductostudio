@@ -7,7 +7,6 @@ import { createContact } from "utils/sendinBlue.ts";
 import delayForLoading from "utils/delayForLoading.ts";
 import Results from "./Results";
 import ReactPixel from "react-facebook-pixel";
-// import InputField from "components/shared/InputField";
 import InputField, { SubmitField } from "components/shared/ContactInputField";
 
 const NUMBER_OF_QS = 15;
@@ -36,8 +35,15 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
     delete testResults.lastName;
 
     //Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact(data.firstName, data.lastName, data.email, [3], true, {
-      TESTRESULTS: JSON.stringify(testResults),
+    createContact({
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      listIds: [2],
+      updateEnabled: true,
+      attributes: {
+        TESTRESULTS: JSON.stringify(testResults),
+      },
     });
 
     // Get the averages of the three areas

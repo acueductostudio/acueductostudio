@@ -27,7 +27,7 @@ const Pinned = styled.div`
   grid-gap: 2.2rem;
   width: 100%;
   display: grid;
-  padding: calc(70px + 5%) 4%;
+  padding: 150px 4% calc(70px + 5%) 4%;
   border-top: ${(props) =>
     props.borderTop
       ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`
@@ -40,7 +40,7 @@ const Pinned = styled.div`
   h1 {
     position: sticky;
     max-height: 300px;
-    top: 17%;
+    top: 150px;
     letter-spacing: 0px;
     line-height: 100%;
     font-size: 7rem;
@@ -50,6 +50,10 @@ const Pinned = styled.div`
     text-decoration: none;
   }
   @media (max-width: 1300px) {
+    padding-top:100px;
+    h1{
+      top:100px;
+    }
     ${ScrollDown} {
       grid-column: 7 / span 5;
     }

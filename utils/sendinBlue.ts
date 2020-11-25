@@ -3,18 +3,28 @@ const capitalize = (string: string) => {
 };
 
 const capitalizeAll = (string: string) => {
-  return string.split(' ').map(capitalize).join(' ');
+  return string.split(" ").map(capitalize).join(" ");
 };
 
-export const createContact = async (
-  name: string,
-  lastName: string,
-  email: string,
-  listIds: number[],
-  updateEnabled: boolean,
-  attributes: object
-) => {
-  let capitalizedName = capitalize(name);
+interface NewContact {
+  firstName: string;
+  lastName: string;
+  email: string;
+  listIds: number[];
+  updateEnabled: boolean;
+  attributes: object;
+}
+
+export const createContact = async (submittedData: NewContact) => {
+  let {
+    firstName,
+    lastName,
+    email,
+    listIds,
+    updateEnabled,
+    attributes,
+  } = submittedData;
+  let capitalizedName = capitalize(firstName);
   let capitalizedLastName = capitalize(lastName);
 
   let requestOptions = {
@@ -34,21 +44,22 @@ export const createContact = async (
       },
     }),
   };
-
   const response = await fetch(
     "https://api.sendinblue.com/v3/contacts",
     requestOptions
   );
-
   const data = await response;
   return data;
 };
 
-export const updateContact = async (
-  email: string,
-  listIds: number[],
-  unlinkListIds: number[]
-) => {
+interface UpdatedContact {
+  email: string;
+  listIds: number[];
+  unlinkListIds: number[];
+}
+
+export const updateContact = async (submittedData: UpdatedContact) => {
+  let { email, listIds, unlinkListIds } = submittedData;
   let requestOptions = {
     method: "PUT",
     headers: {
@@ -59,9 +70,6 @@ export const updateContact = async (
     body: JSON.stringify({
       listIds: listIds,
       unlinkListIds: unlinkListIds,
-      // attributes: {
-      //   ...attributes,
-      // },
     }),
   };
 
@@ -75,30 +83,39 @@ export const updateContact = async (
 };
 
 interface MailForHola {
-  firstName: string,
-  lastName: string,
-  email: string,
-  company: string,
-  message: string,
-  phoneCheckbox: boolean,
-  phone: string
-};
+  firstName: string;
+  lastName: string;
+  email: string;
+  company: string;
+  message: string;
+  phoneCheckbox: boolean;
+  phone: string;
+}
 
-export const sendToHola = async (
-  formData: MailForHola
-) => {
-  let { firstName, lastName, email, company, phone, phoneCheckbox, message } = formData
+export const sendToHola = async (formData: MailForHola) => {
+  let {
+    firstName,
+    lastName,
+    email,
+    company,
+    phone,
+    phoneCheckbox,
+    message,
+  } = formData;
 
-  let completeName = capitalize(firstName) + " " + capitalizeAll(lastName)
+  let completeName = capitalize(firstName) + " " + capitalizeAll(lastName);
 
   let htmlContent = `
     <p>
     Nombre: ${completeName}<br/>
     Email: ${email}<br/>
     Empresa: ${capitalizeAll(company)}<br/>
-    ${phoneCheckbox ?
-      `Teléfono: ${phone}<br/>
-      <b>Contactar por WhatsApp</b><br/>`: ''}
+    ${
+      phoneCheckbox
+        ? `Teléfono: ${phone}<br/>
+      <b>Contactar por WhatsApp</b><br/>`
+        : ""
+    }
     Mensaje: ${message}</p>
   `;
 
@@ -114,10 +131,10 @@ export const sendToHola = async (
         email: email,
         name: completeName,
       },
-      to: [{ "name": "Acueducto", "email": "hola@acueducto.studio" }],
+      to: [{ name: "Acueducto", email: "hola@acueducto.studio" }],
       subject: "Nuevo proyecto",
       replyTo: { email: email, name: completeName },
-      textContent: htmlContent
+      textContent: htmlContent,
     }),
   };
 

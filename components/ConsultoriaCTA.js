@@ -1,21 +1,29 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import { Span } from "components/shared/Dangerously";
-import LinkWithArrow from "components/shared/LinkWithArrow";
 import { createContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
 import DefaultForm from "components/shared/DefaultForm";
 import Cookies from "js-cookie/dist/js.cookie.mjs";
 import { useRouter } from "next/router";
+import BorderLink from "components/shared/BorderedLink";
 import delayForLoading from "utils/delayForLoading.ts";
 
-const ConsultoriaCTA = ({ cta, id }) => {
+const ConsultoriaCTA = ({ cta, id, diagnostico_cta }) => {
   const router = useRouter();
 
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact(data.firstName, data.lastName, data.email, [7], true);
+    createContact({
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      listIds: [7],
+      updateEnabled: true,
+    });
+
     Cookies.set("ue", data.email);
 
     ReactPixel.init("506854653278097", { em: data.email });
@@ -40,10 +48,20 @@ const ConsultoriaCTA = ({ cta, id }) => {
           </>
         }
       />
-      <Fade triggerOnce>
-        <h3>{cta.title2}</h3>
-      </Fade>
-      <LinkWithArrow link={cta.link} linktext={cta.linktext} />
+      {diagnostico_cta && (
+        <Diagnostico>
+          <Fade triggerOnce>
+            <h3>{cta.title2}</h3>
+            <p>
+              <span>{cta.linktext}</span>
+              <Link href={cta.link[0]}>
+                <a>{cta.link[1]}</a>
+              </Link>
+              <span>{cta.linktext2}</span>
+            </p>
+          </Fade>
+        </Diagnostico>
+      )}
     </Container>
   );
 };
@@ -74,24 +92,14 @@ const Container = styled.div`
       margin-left: 20px;
     }
   }
-  a {
-    display: flex;
-    background-image: none;
-    &:hover {
-      background-image: none;
-    }
-  }
   form {
     margin-bottom: 15%;
   }
   h3 {
-    &:nth-of-type(1) {
-      margin-bottom: 0;
-    }
     font-size: 3.2rem;
     line-height: 125%;
     font-weight: 100;
-    margin: 4% 0 3.5%;
+    margin: 4% 0 0;
   }
   @media (max-width: 1250px) {
     h3 {
@@ -117,5 +125,14 @@ const Container = styled.div`
         margin-top: 11px;
       }
     }
+  }
+`;
+
+const Diagnostico = styled.div`
+  p {
+    margin-top: 20px;
+  }
+  a {
+    ${BorderLink({ showLink: true })}
   }
 `;

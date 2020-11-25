@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
-import createMarkup from "utils/createMarkup";
+import { Span } from "components/shared/Dangerously";
 import Arrow from "components/shared/Arrow";
 
 export default function LinkWithArrow({ link, linktext }) {
@@ -10,7 +10,7 @@ export default function LinkWithArrow({ link, linktext }) {
       <LinkContainer>
         <Fade triggerOnce>
           <p>
-            <span dangerouslySetInnerHTML={createMarkup(linktext)} />{" "}
+            <Span>{linktext}</Span>{" "}
             <b>{link[1]}</b>
           </p>
         </Fade>

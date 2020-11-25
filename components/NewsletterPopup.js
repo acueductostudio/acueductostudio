@@ -21,7 +21,13 @@ const NewsletterPopup = () => {
 
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact(data.firstName, data.lastName, data.email, [2], true);
+    createContact({
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      listIds: [2],
+      updateEnabled: true,
+    });
     ReactPixel.init("506854653278097", { em: data.email });
     // Suscripción a la newsletter
     ReactPixel.track("Subscribe", { email: data.email });

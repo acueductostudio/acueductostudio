@@ -15,15 +15,15 @@ import {
   DigitalTransformation,
   Marketing,
   Strategy,
-  StrategicDesign,
+  Apps,
   Culture,
 } from "components/shared/Icons";
 
 const stepIconArray = [
-  DigitalTransformation,
-  Marketing,
   Strategy,
-  StrategicDesign,
+  DigitalTransformation,
+  Apps,
+  Marketing,
   Culture,
 ];
 
@@ -42,13 +42,14 @@ const SpinPinnedSection = ({ hasLoaded, children }) => {
   return <PinnedSection title={spinTitle}>{children}</PinnedSection>;
 };
 
-function Consultoria({setTitle, lang, hasLoaded }) {
+function Consultoria({ setTitle, lang, hasLoaded }) {
   let {
     page_title,
     meta_description,
     headerTitle,
     intro,
     cta,
+    fit_section,
     process_section,
     areas_section,
     last_section,
@@ -72,20 +73,18 @@ function Consultoria({setTitle, lang, hasLoaded }) {
         <>
           <P>{intro.p}</P>
           <ConsultoriaCTA cta={cta} id="first" />
+          <FitSection>
+            <h3>{fit_section.title}</h3>
+            <P>{fit_section.p}</P>
+            <ul>
+              {fit_section.ul.map((li, i) => (
+                <li key={"fit" + i}>{li}</li>
+              ))}
+            </ul>
+          </FitSection>
         </>
       </SpinPinnedSection>
-      <TitleSection {...process_section.intro} borderTop />
-      <StepGrid>
-        {process_section.process.map((step, index) => (
-          <Fade key={`consultingStep${index}`} triggerOnce>
-            <div>
-              <span>0{index + 1}</span>
-              <h4>{step.title}</h4>
-              <p>{step.p}</p>
-            </div>
-          </Fade>
-        ))}
-      </StepGrid>
+
       <TitleSection {...areas_section.intro} borderTop />
       <Steps steps={areas_section.areas} iconArray={stepIconArray}>
         <LastStep>
@@ -99,8 +98,20 @@ function Consultoria({setTitle, lang, hasLoaded }) {
           </Fade>
         </LastStep>
       </Steps>
+      <TitleSection {...process_section.intro} borderTop />
+      <StepGrid>
+        {process_section.process.map((step, index) => (
+          <Fade key={`consultingStep${index}`} triggerOnce>
+            <div>
+              <span>0{index + 1}</span>
+              <h4>{step.title}</h4>
+              <p>{step.p}</p>
+            </div>
+          </Fade>
+        ))}
+      </StepGrid>
       <TitleSection {...last_section.intro} borderTop>
-        <ConsultoriaCTA cta={cta} id="second" />
+        <ConsultoriaCTA cta={cta} id="second" diagnostico_cta />
       </TitleSection>
       <ContactFooter />
     </PageClipper>
@@ -215,6 +226,46 @@ const LastStep = styled.div`
     }
     ul li {
       font-size: 1.4rem;
+    }
+  }
+`;
+
+const FitSection = styled.div`
+  ul {
+    list-style: none;
+    color: inherit;
+    color: ${(p) => p.theme.colors.foreground_low};
+    li {
+      max-width: 445px;
+
+      &:before {
+        content: "– ";
+        color: ${(p) => p.theme.colors.accent};
+      }
+    }
+  }
+  h3 {
+    font-size: 3.2rem;
+    line-height: 130%;
+    font-weight: 100;
+    margin: 0 0 15px;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  @media (max-width: 1250px) {
+    h3 {
+      font-size: 2.9rem;
+    }
+  }
+  @media (max-width: 1000px) {
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+  @media (max-width: 800px) {
+    h3 {
+      font-size: 2.2rem;
     }
   }
 `;

@@ -42,7 +42,7 @@ const Pago = (props) => {
       // Redirect if customer has payed and add tag to sendinblue
       if (document.referrer.includes("mercadopago")) {
         console.log("mercadopago");
-        updateContact(email, [4], [3, 7]);
+        updateContact({ email: email, listIds: [4], unlinkListIds: [3, 7] });
         ReactPixel.track("Purchase", {
           email: email,
           currency: "MXN",
@@ -60,7 +60,13 @@ const Pago = (props) => {
 
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact(data.firstName, data.lastName, data.email, [3], true);
+    createContact({
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      listIds: [3],
+      updateEnabled: true,
+    });
     Cookies.set("ue", data.email);
     ReactPixel.init("506854653278097", { em: data.email });
     // Pidió consultoría
