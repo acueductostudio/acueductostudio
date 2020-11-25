@@ -62,19 +62,31 @@ const ResourceForm = styled.div`
   input {
     background-color: ${(props) => props.theme.colors.accent};
     border-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.foreground};
+    &::placeholder {
+      color: ${(props) => props.theme.colors.background};
+    }
     &:active,
     &:focus {
-      border-color: ${(props) => props.theme.colors.background} !important;
+      border-color: ${(props) => props.theme.colors.foreground} !important;
+      &::placeholder {
+        color: ${(props) => props.theme.colors.background};
+      }
+    }
+    &:hover {
+      &::placeholder {
+        color: ${(props) => props.theme.colors.background};
+      }
     }
   }
-  form > div:last-of-type {
+  /* form > div:last-of-type {
     input {
       background-color: ${(props) => props.theme.colors.background};
       &:hover {
         color: ${(props) => props.theme.colors.accent};
       }
     }
-  }
+  } */
 `;
 
 const Message = styled.div`
