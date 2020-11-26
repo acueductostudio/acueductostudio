@@ -243,15 +243,13 @@ function LaDanzaDeLasFieras(props) {
           <H3>{"– " + t.third_section.subtitle2}</H3>
           <P>{t.third_section.p2}</P>
           <AppGrid>
-            <div className="image">
               <Picture
                 src="/assets/img/casestudies/ladanzadelasfieras/webapp.png"
                 alt="A Progressive Web App"
                 width={335}
                 height={188}
-                newimg
+                withWrapper
               />
-            </div>
             <AppSvg />
           </AppGrid>
         </TextColumn>
@@ -294,15 +292,13 @@ function LaDanzaDeLasFieras(props) {
           color={(props) => props.theme.colors.background}
         />
         <TextColumn>
-          <div className="image">
             <Picture
               src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
               alt="Festival awards"
               width={670}
               height={445}
-              newimg
+              withWrapper
             />
-          </div>
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
       </Fifth>

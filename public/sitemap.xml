@@ -6,7 +6,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en"/>
     <priority>1</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en</loc>
@@ -14,7 +14,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en"/>
     <priority>1</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/pitch</loc>
@@ -22,7 +22,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/pitch"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/pitch"/>
     <priority>0.9</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/pitch</loc>
@@ -30,7 +30,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/pitch"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/pitch"/>
     <priority>0.9</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/contacto</loc>
@@ -38,7 +38,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/contact"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/contact"/>
     <priority>0.9</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/contact</loc>
@@ -46,7 +46,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/contacto"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/contact"/>
     <priority>0.9</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/nosotros</loc>
@@ -54,7 +54,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/about"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/about"/>
     <priority>0.8</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/about</loc>
@@ -62,7 +62,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/nosotros"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/about"/>
     <priority>0.8</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/manifiesto</loc>
@@ -70,7 +70,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/manifesto"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/manifesto"/>
     <priority>0.8</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/manifesto</loc>
@@ -78,7 +78,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/manifiesto"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/manifesto"/>
     <priority>0.8</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/portafolio</loc>
@@ -86,7 +86,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/work"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work"/>
     <priority>0.8</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/work</loc>
@@ -94,30 +94,30 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/portafolio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work"/>
     <priority>0.8</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/consultoria</loc>
     <language>es</language>
     <priority>0.8</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url><url>
     <loc>https://acueducto.studio/diagnostico</loc>
     <language>es</language>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url><url>
     <loc>https://acueducto.studio/podcast</loc>
     <language>es</language>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url><url>
     <loc>https://acueducto.studio/portafolio/rahid</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/portafolio/rahid"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/work/rahid"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work/rahid"/>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/work/rahid</loc>
@@ -125,7 +125,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/portafolio/rahid"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work/rahid"/>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/portafolio/ladanzadelasfieras</loc>
@@ -133,7 +133,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/work/ladanzadelasfieras"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work/ladanzadelasfieras"/>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/work/ladanzadelasfieras</loc>
@@ -141,7 +141,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/portafolio/ladanzadelasfieras"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work/ladanzadelasfieras"/>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/portafolio/salvajenada</loc>
@@ -149,7 +149,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/work/salvajenada"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work/salvajenada"/>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/work/salvajenada</loc>
@@ -157,7 +157,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/portafolio/salvajenada"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/work/salvajenada"/>
     <priority>0.7</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/cookies</loc>
@@ -165,7 +165,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/cookies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/cookies"/>
     <priority>0.5</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/cookies</loc>
@@ -173,7 +173,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/cookies"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/cookies"/>
     <priority>0.5</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/privacidad</loc>
@@ -181,7 +181,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://acueducto.studio/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/privacy"/>
     <priority>0.5</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   <url>
     <loc>https://acueducto.studio/en/privacy</loc>
@@ -189,7 +189,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://acueducto.studio/privacidad"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://acueducto.studio/en/privacy"/>
     <priority>0.5</priority>
-    <lastmod>2020-11-22</lastmod>
+    <lastmod>2020-11-25</lastmod>
   </url>
   
 </urlset>

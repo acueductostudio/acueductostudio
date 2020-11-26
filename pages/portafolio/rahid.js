@@ -116,15 +116,13 @@ function Rahid(props) {
         <TextColumn>
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
-          <div className="image">
             <Picture
               src="/assets/img/casestudies/rahid/home.jpg"
               alt="Home Rahid.co"
               width={800}
               height={412}
-              newimg
+              withWrapper
             />
-          </div>
           <P>{t.fourth_section.p2}</P>
         </TextColumn>
         <InsertBlock>
@@ -147,24 +145,20 @@ function Rahid(props) {
           <P>{t.fifth_section.p}</P>
         </TextColumn>
         <LaunchGrid>
-          <div className="image">
             <Picture
               src="/assets/img/casestudies/rahid/desktop.png"
               alt="Festival awards"
               width={558}
               height={340}
-              newimg
+              withWrapper
             />
-          </div>
-          <div className="image">
             <Picture
               src="/assets/img/casestudies/rahid/mobile.png"
               alt="Festival awards"
               width={162}
               height={339}
-              newimg
+              withWrapper
             />
-          </div>
         </LaunchGrid>
         <TextColumn>
           <P>{t.fifth_section.p2}</P>

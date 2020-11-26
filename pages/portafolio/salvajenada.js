@@ -188,30 +188,28 @@ export default function Salvajenada(props) {
         <Insight insight={t.third_section.insights.periodicity} number={1}>
           <PlaylistGrid>
             {periodicity_covers.map((cover, i) => (
-              <div className="image" key={"c_" + i}>
-                <Picture
-                  alt={cover.alt}
-                  src={`/assets/img/casestudies/salvajenada/c_${i}.jpg`}
-                  width={362}
-                  height={362}
-                  newimg
-                />
-              </div>
+              <Picture
+                key={"c_" + i}
+                alt={cover.alt}
+                src={`/assets/img/casestudies/salvajenada/c_${i}.jpg`}
+                width={362}
+                height={362}
+                withWrapper
+              />
             ))}
           </PlaylistGrid>
         </Insight>
         <Insight insight={t.third_section.insights.meaningfulness} number={2}>
           <PlaylistGrid>
             {meaningfulness_covers.map((cover, i) => (
-              <div className="image" key={"d_" + i}>
-                <Picture
-                  alt={cover.alt}
-                  src={`/assets/img/casestudies/salvajenada/d_${i}.png`}
-                  width={362}
-                  height={362}
-                  newimg
-                />
-              </div>
+              <Picture
+                key={"d_" + i}
+                alt={cover.alt}
+                src={`/assets/img/casestudies/salvajenada/d_${i}.png`}
+                width={362}
+                height={362}
+                withWrapper
+              />
             ))}
           </PlaylistGrid>
         </Insight>
@@ -229,15 +227,14 @@ export default function Salvajenada(props) {
               </video>
             </Fade>
             {spreadability_covers.map((cover, i) => (
-              <div className="image" key={"p_" + i}>
-                <Picture
-                  alt={cover.alt}
-                  src={`/assets/img/casestudies/salvajenada/p_${i}.jpg`}
-                  width={320}
-                  height={537}
-                  newimg
-                />
-              </div>
+              <Picture
+                key={"p_" + i}
+                alt={cover.alt}
+                src={`/assets/img/casestudies/salvajenada/p_${i}.jpg`}
+                width={320}
+                height={537}
+                withWrapper
+              />
             ))}
           </ShoutGrid>
         </Insight>
