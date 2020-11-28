@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import Link from "next/link";
 import PageClipper from "components/layout/PageClipper";
 import SimplePinnedSection from "components/shared/pinnedSections/SimplePinnedSection";
@@ -18,6 +18,7 @@ export default function Cookies(props) {
     <PageClipper>
       <Head
         title={t.page_title}
+        description={t.meta_description}
         canonical={"https://acueducto.studio/cookies"}
         en_canonical={"https://acueducto.studio/en/cookies"}
         lang={props.lang}

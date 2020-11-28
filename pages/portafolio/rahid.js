@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import PageClipper from "components/layout/PageClipper";
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
@@ -33,8 +33,8 @@ function Rahid(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        image={"og_image_rahid.png"}
-        canonical={"https://acueducto.studio/portafolio/rahid"}
+        image={{ fileName: "og_image_rahid.png", alt: t.image_alt }}
+        es_canonical={"https://acueducto.studio/portafolio/rahid"}
         en_canonical={"https://acueducto.studio/en/work/rahid"}
         lang={props.lang}
       />
@@ -116,13 +116,13 @@ function Rahid(props) {
         <TextColumn>
           <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
-            <Picture
-              src="/assets/img/casestudies/rahid/home.jpg"
-              alt="Home Rahid.co"
-              width={800}
-              height={412}
-              withWrapper
-            />
+          <Picture
+            src="/assets/img/casestudies/rahid/home.jpg"
+            alt="Home Rahid.co"
+            width={800}
+            height={412}
+            withWrapper
+          />
           <P>{t.fourth_section.p2}</P>
         </TextColumn>
         <InsertBlock>
@@ -145,20 +145,20 @@ function Rahid(props) {
           <P>{t.fifth_section.p}</P>
         </TextColumn>
         <LaunchGrid>
-            <Picture
-              src="/assets/img/casestudies/rahid/desktop.png"
-              alt="Festival awards"
-              width={558}
-              height={340}
-              withWrapper
-            />
-            <Picture
-              src="/assets/img/casestudies/rahid/mobile.png"
-              alt="Festival awards"
-              width={162}
-              height={339}
-              withWrapper
-            />
+          <Picture
+            src="/assets/img/casestudies/rahid/desktop.png"
+            alt="Festival awards"
+            width={558}
+            height={340}
+            withWrapper
+          />
+          <Picture
+            src="/assets/img/casestudies/rahid/mobile.png"
+            alt="Festival awards"
+            width={162}
+            height={339}
+            withWrapper
+          />
         </LaunchGrid>
         <TextColumn>
           <P>{t.fifth_section.p2}</P>

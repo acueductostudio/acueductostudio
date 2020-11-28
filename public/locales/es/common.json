@@ -15,6 +15,7 @@
       "salvajenada": {
         "page_title": "Difusión musical estratégica - Salvajenada & Acueducto",
         "meta_description": "¿Cómo distinguir tu playlist entre el mar de selecciones en la web?",
+        "image_alt": "Salvajenada, caso de estudio por Acueducto",
         "headerTitle": "Salvajenada",
         "title": "¿cómo compartir música hoy en día?",
         "tags": "Estrategia<br/>Desarrollo de producto<br/>Consultoría digital y de diseño<br/>Project management",
@@ -125,6 +126,7 @@
       "ladanzadelasfieras": {
         "page_title": "Estrategia cinematográfica - La Danza de las Fieras & Acueducto",
         "meta_description": "Una cautivadora experiencia digital a través del cine, internet y la prensa.",
+        "image_alt": "La Danza de las Fueras, caso de estudio por Acueducto",
         "headerTitle": "LDDLF",
         "title": "estrategia y producción en la industria del cine",
         "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Animación<br/>Web App<br/>",
@@ -225,6 +227,7 @@
       "rahid": {
         "page_title": "Un ecommerce único en México - Rahid & Acueducto",
         "meta_description": "¿Qué necesitas para lanzar un ecommerce exitoso en México? Lee este caso de estudio con la tienda en línea de Rahid.",
+        "image_alt": "Rahid, caso de estudio por Acueducto",
         "headerTitle": "Rahid",
         "title": "un ecommerce único en México",
         "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
@@ -339,6 +342,7 @@
   },
   "home_page": {
     "page_title": "Acueducto, un estudio de estrategias e interfaces digitales en CDMX",
+    "meta_description": "Nos asociamos con innovadores alrededor del mundo para desarrollar estrategias y experiencias digitales que cuentan historias convincentes, inspiran comunidades y forjen vínculos significativos.",
     "header_title": " ",
     "landing": {
       "heading": "impulsamos negocios de alto impacto",
@@ -685,6 +689,7 @@
   },
   "privacy_page": {
     "page_title": "Política de Privacidad - Acueducto",
+    "meta_description": "Lee nuestra Política de Privacidad y conoce como utilizamos tu información.",
     "headerTitle": "privacidad",
     "intro": {
       "title": "política de privacidad",
@@ -715,6 +720,7 @@
   },
   "cookies_page": {
     "page_title": "Política de Cookies - Acueducto",
+    "meta_description": "Conoce que cookies utilizamos y por qué. Más detalles en nuestra Política de Privacidad.",
     "headerTitle": "cookies",
     "intro": {
       "title": "política de cookies",
@@ -751,6 +757,7 @@
   },
   "error_page": {
     "headerTitle": "Error",
+    "meta_description": "Ups! Página no encontrada",
     "intro": {
       "title": "ups!<br/> página no encontrada",
       "p": "Esta página no existe, por favor confirma que el URL es correcto. Si crees que es un problema con nuestro sitio por favor contáctanos en <a class='inline' href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>."

@@ -1,4 +1,4 @@
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import styled from "styled-components";
 import { useEffect } from "react";
 import TitleSection from "components/shared/TitleSection";
@@ -18,7 +18,7 @@ export default function Work(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        canonical={"https://acueducto.studio/portafolio"}
+        es_canonical={"https://acueducto.studio/portafolio"}
         en_canonical={"https://acueducto.studio/en/work"}
         lang={props.lang}
       />

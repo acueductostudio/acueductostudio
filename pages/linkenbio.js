@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import Link from "next/link";
 import PageClipper from "components/layout/PageClipper";
 import MetalPinnedSection from "components/shared/pinnedSections/MetalPinnedSection";
@@ -30,6 +30,7 @@ export default function LinkEnBio(props) {
       <Head
         title={page_title}
         description={meta_description}
+        es_canonical={"https://acueducto.studio/linkenbio"}
         lang={props.lang}
       ></Head>
       <MetalPinnedSection title={title}>

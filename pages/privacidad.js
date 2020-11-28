@@ -1,4 +1,4 @@
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import Link from "next/link";
 import PageClipper from "components/layout/PageClipper";
 import SimplePinnedSection from "components/shared/pinnedSections/SimplePinnedSection";
@@ -18,7 +18,8 @@ export default function Privacy(props) {
     <PageClipper>
       <Head
         title={t.page_title}
-        canonical={"https://acueducto.studio/privacidad"}
+        description={t.meta_description}
+        es_canonical={"https://acueducto.studio/privacidad"}
         en_canonical={"https://acueducto.studio/en/privacy"}
         lang={props.lang}
       ></Head>

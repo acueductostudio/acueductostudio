@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { createContact, updateContact } from "utils/sendinBlue.ts";
 import ReactPixel from "react-facebook-pixel";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import PageClipper from "components/layout/PageClipper";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import TitleSection from "components/shared/TitleSection";
@@ -78,8 +78,8 @@ const Pago = (props) => {
       <Head
         title={page_title}
         description={meta_description}
-        canonical={"https://acueducto.studio/consultoria/pago"}
-        image={"og_image_consultoria.png"}
+        image={{ fileName: "og_image_consultoria.jpg", alt: props.image_alt }}
+        es_canonical={"https://acueducto.studio/consultoria/pago"}
         lang={props.lang}
       />
       {!isAuthorized && (

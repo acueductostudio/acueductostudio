@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import PageClipper from "components/layout/PageClipper";
@@ -77,8 +77,8 @@ export default function Salvajenada(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        image={"og_image_salvajenada.png"}
-        canonical={"https://acueducto.studio/portafolio/salvajenada"}
+        image={{ fileName: "og_image_salvajenada.png", alt: t.image_alt }}
+        es_canonical={"https://acueducto.studio/portafolio/salvajenada"}
         en_canonical={"https://acueducto.studio/en/work/salvajenada"}
         lang={props.lang}
       />

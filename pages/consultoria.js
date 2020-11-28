@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import useInterval from "utils/useInterval";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
@@ -46,6 +46,7 @@ function Consultoria({ setTitle, lang, hasLoaded }) {
   let {
     page_title,
     meta_description,
+    image_alt,
     headerTitle,
     intro,
     cta,
@@ -64,9 +65,8 @@ function Consultoria({ setTitle, lang, hasLoaded }) {
       <Head
         title={page_title}
         description={meta_description}
-        image="og_image_consultoria.jpg"
-        es_image_alt="Consultoría digital por Acueducto"
-        es_only_canonical="https://acueducto.studio/consultoria"
+        image={{ fileName: "og_image_consultoria.jpg", alt: image_alt }}
+        es_canonical="https://acueducto.studio/consultoria"
         lang={lang}
       />
       <SpinPinnedSection hasLoaded={hasLoaded}>

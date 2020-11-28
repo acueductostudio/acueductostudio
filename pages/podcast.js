@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import React, { useEffect } from "react";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
@@ -19,6 +19,7 @@ function Podcast(props) {
   let {
     page_title,
     meta_description,
+    image_alt,
     headerTitle,
     title,
     p,
@@ -34,9 +35,8 @@ function Podcast(props) {
       <Head
         title={page_title}
         description={meta_description}
-        image={"og_image_podcast.png"}
-        es_image_alt="Cuando el río suena, podcast por Acueducto"
-        es_only_canonical={"https://acueducto.studio/podcast"}
+        image={{ fileName: "og_image_podcast.png", alt: image_alt }}
+        es_canonical={"https://acueducto.studio/podcast"}
         lang={props.lang}
       />
       <PodcastGrid>

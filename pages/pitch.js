@@ -1,4 +1,4 @@
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import styled, { createGlobalStyle } from "styled-components";
 import { useEffect } from "react";
 import Tooltip from "react-tooltip-lite";
@@ -189,7 +189,7 @@ export default function Pitch(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        canonical={"https://acueducto.studio/pitch"}
+        es_canonical={"https://acueducto.studio/pitch"}
         en_canonical={"https://acueducto.studio/en/pitch"}
         lang={props.lang}
         structured={{

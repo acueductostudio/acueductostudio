@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React, { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import dynamic from "next/dynamic";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
@@ -39,7 +39,7 @@ function About(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        canonical={"https://acueducto.studio/nosotros"}
+        es_canonical={"https://acueducto.studio/nosotros"}
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
       />

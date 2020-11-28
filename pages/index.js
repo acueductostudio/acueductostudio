@@ -6,7 +6,7 @@ import ContactFooter from "components/shared/footers/ContactFooter";
 import { H1, H2 } from "components/shared/Dangerously";
 import Services from "components/shared/Services";
 import CaseList from "components/caseStudy/CaseList";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import Carousel from "components/Carousel";
 import Products from "components/shared/Products";
 
@@ -22,7 +22,8 @@ function Index(props) {
       <PageClipper unPadded>
         <Head
           title={t.page_title}
-          canonical={"https://acueducto.studio"}
+          description={t.meta_description}
+          es_canonical={"https://acueducto.studio"}
           en_canonical={"https://acueducto.studio/en"}
           lang={props.lang}
         />

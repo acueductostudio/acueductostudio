@@ -15,6 +15,7 @@
       "ladanzadelasfieras": {
         "page_title": "From strategy to production - La Danza de las Fieras & Acueducto",
         "meta_description": "A compelling digital experience story through cinema, web, and press.",
+        "image_alt": "La Danza de las Fieras, case study by Acueducto",
         "headerTitle": "LDDLF",
         "title": "from strategy to production in the filmmaking industry",
         "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
@@ -115,6 +116,7 @@
       "salvajenada": {
         "page_title": "Where playlists meet strategy - Salvajenada & Acueducto",
         "meta_description": "How to distinguish your playlist from the plethora of selections on the web?",
+        "image_alt": "Salvajenada, case study by Acueducto",
         "headerTitle": "Salvajenada",
         "title": "how do you share music nowadays?",
         "tags": "Strategy<br/>Product development<br/>Design & digital consulting<br/>Project management",
@@ -225,6 +227,7 @@
       "rahid": {
         "page_title": "A unique ecommerce in Mexico - Rahid & Acueducto",
         "meta_description": "All you need to launch a successful ecommerce in Mexico: a case study of Rahid’s online store.",
+        "image_alt": "Rahid, case study by Acueducto",
         "headerTitle": "Rahid",
         "title": "a unique ecommerce in Mexico",
         "tags": "Strategy<br/>Commmunication<br/>Branding<br/>Ecommerce<br/>Digital Marketing<br/>",
@@ -334,6 +337,7 @@
   },
   "home_page": {
     "page_title": "Acueducto, a strategic design & technology studio.",
+    "meta_description": "We partner with innovators around the globe to develop digital strategies and experiences that tell compelling stories, inspire communities and build meaningful bonds.",
     "header_title": " ",
     "landing": {
       "heading": "we look for the next great digital idea",
@@ -682,6 +686,7 @@
   },
   "privacy_page": {
     "page_title": "Privacy Policy – Acueducto",
+    "meta_description": "Read our Privacy Policy to know how we use your data.",
     "headerTitle": "Privacy Policy",
     "intro": {
       "title": "privacy policy",
@@ -712,6 +717,7 @@
   },
   "cookies_page": {
     "page_title": "Cookie Policy – Acueducto",
+    "meta_description" : "Know which cookies we use and why we use them. More details on our Privacy Policy.",
     "headerTitle": "Cookie Policy",
     "intro": {
       "title": "cookie policy",
@@ -748,6 +754,7 @@
   },
   "error_page": {
     "headerTitle": "Error",
+    "meta_description" : "Oops! Page not found",
     "intro": {
       "title": "oops!<br/> page not found",
       "p": "This page doesn’t exist, please check if the URL is correct. If you think this is a problem on our end please contact us at <a class='inline' href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>."

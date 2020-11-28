@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import PageClipper from "components/layout/PageClipper";
@@ -49,8 +49,8 @@ function LaDanzaDeLasFieras(props) {
       <Head
         title={t.page_title}
         description={t.meta_description}
-        image={"og_image_lddlf.png"}
-        canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
+        image={{ fileName: "og_image_lddlf.png", alt: t.image_alt }}
+        es_canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
         en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
         lang={props.lang}
       />
@@ -243,13 +243,13 @@ function LaDanzaDeLasFieras(props) {
           <H3>{"– " + t.third_section.subtitle2}</H3>
           <P>{t.third_section.p2}</P>
           <AppGrid>
-              <Picture
-                src="/assets/img/casestudies/ladanzadelasfieras/webapp.png"
-                alt="A Progressive Web App"
-                width={335}
-                height={188}
-                withWrapper
-              />
+            <Picture
+              src="/assets/img/casestudies/ladanzadelasfieras/webapp.png"
+              alt="A Progressive Web App"
+              width={335}
+              height={188}
+              withWrapper
+            />
             <AppSvg />
           </AppGrid>
         </TextColumn>
@@ -292,13 +292,13 @@ function LaDanzaDeLasFieras(props) {
           color={(props) => props.theme.colors.background}
         />
         <TextColumn>
-            <Picture
-              src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
-              alt="Festival awards"
-              width={670}
-              height={445}
-              withWrapper
-            />
+          <Picture
+            src="/assets/img/casestudies/ladanzadelasfieras/l_1.jpg"
+            alt="Festival awards"
+            width={670}
+            height={445}
+            withWrapper
+          />
           <P>{t.fifth_section.p2}</P>
         </TextColumn>
       </Fifth>

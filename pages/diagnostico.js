@@ -1,4 +1,4 @@
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import React, { useEffect } from "react";
 import es from "public/locales/es/diagnosticodigital.json";
 import PageClipper from "components/layout/PageClipper";
@@ -10,6 +10,7 @@ function DiagnosticoDigital(props) {
   let {
     page_title,
     meta_description,
+    image_alt,
     headerTitle,
     intro,
     diagnose_section,
@@ -24,9 +25,8 @@ function DiagnosticoDigital(props) {
       <Head
         title={page_title}
         description={meta_description}
-        image="og_image_diagnostico.png"
-        es_image_alt="Diagnóstico digital por Acueducto"
-        es_only_canonical="https://acueducto.studio/diagnostico"
+        image={{fileName:"og_image_diagnostico.png", alt:image_alt}}
+        es_canonical="https://acueducto.studio/diagnostico"
         lang={props.lang}
       />
       <TitleSection {...intro} />

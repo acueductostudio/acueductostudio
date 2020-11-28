@@ -1,4 +1,4 @@
-import Head from "components/layout/Head";
+import Head from "components/layout/Head.tsx";
 import { useEffect } from "react";
 import PageClipper from "components/layout/PageClipper";
 import TitleSection from "components/shared/TitleSection";
@@ -14,7 +14,8 @@ export default function Error(props) {
       <Head
         title="Acueducto | 404"
         lang={props.lang}
-        canonical={"https://acueducto.studio/404"}
+        description={t.meta_description}
+        es_canonical={"https://acueducto.studio/404"}
         en_canonical={"https://acueducto.studio/404"}
       />
       <TitleSection {...t.intro} />
