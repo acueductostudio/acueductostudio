@@ -43,7 +43,6 @@ function About(props) {
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
       />
-      <ManifiestoItems />
       <PinnedSection title={t.intro.title} borderTop>
         <P>{t.intro.p}</P>
         {t.team.map((person, index) => (
@@ -64,6 +63,7 @@ function About(props) {
           </Person>
         ))}
       </PinnedSection>
+      <ManifiestoItems/>
       <Process />
       <TitleSection {...t.values} borderTop />
       <ContactFooter />

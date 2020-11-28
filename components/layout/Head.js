@@ -97,6 +97,13 @@ const Meta = (props) => {
         content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
       />
       <title>{props.title}</title>
+      {/* <link
+      rel="preload"
+      href="font/NeueLight.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    /> */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@acueductostudio" />
       <meta name="twitter:site" content="@acueductostudio" />
@@ -210,7 +217,7 @@ const Meta = (props) => {
               property="og:image"
               content="https://acueducto.studio/assets/img/og/og_main.jpg"
             />
-            <meta property="og:image:alt" content="Acueducto Logo" />
+            <meta property="og:image:alt" content="Acueducto Studio" />
           </>
         )
       }

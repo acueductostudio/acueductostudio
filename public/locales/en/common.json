@@ -311,7 +311,6 @@
         { "title": "pitch", "link": "/en/pitch" },
         { "title": "about", "link": "/en/about" },
         { "title": "work", "link": "/en/work" },
-        { "title": "manifesto", "link": "/en/manifesto" },
         { "title": "contact", "link": "/en/contact" }
       ],
       "policies": [
@@ -443,9 +442,7 @@
     ],
     "values": {
       "title": "to build better<br/>communities",
-      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact through our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground on which we stand, and help brands and businesses enhance their surroundings and empower their users.",
-      "link": ["/en/manifesto", "Manifesto"],
-      "linktext": "Read our"
+      "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact through our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground on which we stand, and help brands and businesses enhance their surroundings and empower their users."
     }
   },
   "pitch_page": {
@@ -642,8 +639,8 @@
     },
     "beliefs": [
       {
-        "title": "We partner with you",
-        "p": "Trust us, working in partnership gets the best results."
+        "title": "We get involved",
+        "p": "Trust us, long lasting relationships get the best results."
       },
       {
         "title": "We love challenges",

@@ -3,18 +3,14 @@ import styled from "styled-components";
 import Arrows from "public/assets/img/layout/language2.svg";
 import Router, { useRouter } from "next/router";
 
+const oneLangPages = ["consultoria", "podcast", "diagnostico", "linkenbio"];
+
 function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   const router = useRouter();
   const [showToggler, setShowToggler] = useState(false);
 
   useEffect(() => {
-    if (router.asPath.includes("/consultoria")) {
-      setShowToggler(false);
-    } else if (router.asPath.includes("/podcast")) {
-      setShowToggler(false);
-    } else if (router.asPath.includes("/diagnostico")) {
-      setShowToggler(false);
-    } else if (router.asPath.includes("/linkenbio")) {
+    if (oneLangPages.some((v) => router.asPath.includes(v))) {
       setShowToggler(false);
     } else {
       setShowToggler(true);
@@ -41,9 +37,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
           break;
         case "/en/contact":
           Router.push(router.route, "/contacto");
-          break;
-        case "/en/manifesto":
-          Router.push(router.route, "/manifiesto");
           break;
         case "/en/pitch":
           Router.push(router.route, "/pitch");
@@ -78,9 +71,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
           break;
         case "/contacto":
           Router.push(router.route, "/en/contact");
-          break;
-        case "/manifiesto":
-          Router.push(router.route, "/en/manifesto");
           break;
         case "/pitch":
           Router.push(router.route, "/en/pitch");

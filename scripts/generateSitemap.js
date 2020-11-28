@@ -25,11 +25,6 @@ const routes = [
     priority: 0.8,
   },
   {
-    es: "/manifiesto",
-    en: "/en/manifesto",
-    priority: 0.8,
-  },
-  {
     es: "/portafolio",
     en: "/en/work",
     priority: 0.8,
@@ -74,33 +69,33 @@ const routes = [
 ];
 
 const esRoute = (route) =>
-  route.es !== undefined
-    ? `<url>
+  route.es !== undefined &&
+  `<url>
     <loc>${url + route.es}</loc>
     ${
       route.en !== undefined
         ? `<xhtml:link rel="alternate" hreflang="es" href="${url + route.es}"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${url + route.en}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${url + route.en}"/>`
+           <xhtml:link rel="alternate" hreflang="en" href="${url + route.en}"/>
+           <xhtml:link rel="alternate" hreflang="x-default" href="${
+             url + route.en
+           }"/>`
         : `<language>es</language>`
     }
     <priority>${route.priority}</priority>
     <lastmod>${
       route.lastModified ? formatDate(new Date(route.lastModified)) : today
     }</lastmod>
-  </url>`
-    : "";
+  </url>`;
 
 const enRoute = (route) =>
-  route.en !== undefined
-    ? `
-  <url>
+  route.en !== undefined &&
+  `<url>
     <loc>${url + route.en}</loc>
     ${
       route.es !== undefined
         ? `<xhtml:link rel="alternate" hreflang="en" href="${url + route.en}"/>
-    <xhtml:link rel="alternate" hreflang="es" href="${url + route.es}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${url + route.en}"/>`
+           <xhtml:link rel="alternate" hreflang="es" href="${url + route.es}"/>
+           <xhtml:link rel="alternate" hreflang="x-default" href="${url + route.en}"/>`
         : `<language>en</language>`
     }
     <priority>${route.priority}</priority>
@@ -108,8 +103,7 @@ const enRoute = (route) =>
       route.lastModified ? formatDate(new Date(route.lastModified)) : today
     }</lastmod>
   </url>
-  `
-    : "";
+  `;
 
 // SITEMAP.XML
 const today = formatDate(new Date());

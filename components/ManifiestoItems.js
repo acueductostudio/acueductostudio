@@ -10,7 +10,7 @@ const ManifiestoItems = () => {
   let { intro, beliefs } = context.manifesto_page;
 
   return (
-    <PinnedSection title={intro.title}>
+    <PinnedSection title={intro.title} borderTop>
       <P>{intro.p}</P>
       <ol>
         {beliefs.map(function (belief, index) {
