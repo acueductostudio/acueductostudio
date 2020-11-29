@@ -12,7 +12,7 @@ interface NewContact {
   email: string;
   listIds: number[];
   updateEnabled: boolean;
-  attributes: object;
+  attributes?: object;
 }
 
 export const createContact = async (submittedData: NewContact) => {

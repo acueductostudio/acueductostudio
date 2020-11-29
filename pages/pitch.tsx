@@ -1,4 +1,4 @@
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import styled, { createGlobalStyle } from "styled-components";
 import { useEffect } from "react";
 import Tooltip from "react-tooltip-lite";

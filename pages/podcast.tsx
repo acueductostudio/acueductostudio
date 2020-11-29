@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import React, { useEffect } from "react";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
@@ -93,7 +93,7 @@ function Podcast(props) {
                     title={pod.title}
                     src={pod.url}
                     frameBorder="0"
-                    allowtransparency="true"
+                    allowTransparency={true}
                     allow="encrypted-media"
                   ></iframe>
                 </Fade>
@@ -109,7 +109,7 @@ function Podcast(props) {
 export default React.memo(Podcast);
 
 const PodcastGrid = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(p) => p.theme.colors.background};
   background-image: url("assets/img/layout/podcast_back.svg");
   background-size: cover;
   background-position: top right;

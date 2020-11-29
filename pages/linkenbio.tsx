@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import Link from "next/link";
 import PageClipper from "components/layout/PageClipper";
 import MetalPinnedSection from "components/shared/pinnedSections/MetalPinnedSection";

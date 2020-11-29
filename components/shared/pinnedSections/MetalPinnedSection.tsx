@@ -3,7 +3,22 @@ import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 
-const MetalPinnedSection = ({ title, children, className, borderTop, id }) => (
+type PinnedProps = {
+  title: string;
+  className?: string;
+  unPadded?: boolean;
+  borderTop?: boolean;
+  id?: string;
+  children: React.ReactNode;
+};
+
+const MetalPinnedSection = ({
+  title,
+  children,
+  className,
+  borderTop,
+  id,
+}: PinnedProps) => (
   <Pinned className={className} borderTop={borderTop} id={id}>
     <Fade triggerOnce>
       <H1>{title}</H1>
@@ -50,9 +65,9 @@ const Pinned = styled.div`
     text-decoration: none;
   }
   @media (max-width: 1300px) {
-    padding-top:100px;
-    h1{
-      top:100px;
+    padding-top: 100px;
+    h1 {
+      top: 100px;
     }
     ${ScrollDown} {
       grid-column: 7 / span 5;

@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-const PageClipper = ({ children, className, unPadded }) => (
+type ClipProps = {
+  className?: string;
+  unPadded?: boolean;
+  children: React.ReactNode;
+};
+
+const PageClipper = ({ children, className, unPadded }: ClipProps) => (
   <Wrapper id="Clipper" className={className} unPadded={unPadded}>
     {children}
   </Wrapper>

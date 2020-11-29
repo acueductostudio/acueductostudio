@@ -90,8 +90,8 @@ type HeadProps = {
   keywords?: string;
   en_canonical?: string;
   es_canonical?: string;
-  image: { fileName: string; alt: string };
-  structured: Object;
+  image?: { fileName: string; alt: string };
+  structured?: Object;
 };
 
 const NewHead = ({
