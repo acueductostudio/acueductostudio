@@ -43,7 +43,7 @@ function About(props) {
         en_canonical={"https://acueducto.studio/en/about"}
         lang={props.lang}
       />
-      <PinnedSection title={t.intro.title} borderTop>
+      <PinnedSection title={t.intro.title}>
         <P>{t.intro.p}</P>
         {t.team.map((person, index) => (
           <Person key={"personX" + index}>
