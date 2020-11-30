@@ -1,27 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
 import styled from "styled-components";
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import PinnedSection from "components/shared/pinnedSections/PinnedSection";
 import MetalFooter from "components/shared/footers/MetalFooter";
 import ContactForm from "components/ContactForm";
 import { WhatsApp } from "components/shared/Logos";
 
-export default function Contact(props) {
-  let t = props.locale.contact_page;
+export default function Contact({ locale, setTitle, pt }) {
+  const [t, setT] = useState(pt);
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
-  }, [props.locale]);
+    clientLocale({
+      locale: locale,
+      fileName: "contact.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
+  }, [locale]);
 
   return (
     <PageClipper>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
-        canonical={"https://acueducto.studio/contacto"}
+        {...t.head}
+        es_canonical={"https://acueducto.studio/contacto"}
         en_canonical={"https://acueducto.studio/en/contact"}
-        lang={props.lang}
       ></Head>
       <CustomPinnedSection title={t.intro.title} id="Scroll">
         <p>
@@ -46,6 +54,15 @@ export default function Contact(props) {
     </PageClipper>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "contact.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const CustomPinnedSection = styled(PinnedSection)`
   a {

@@ -1,0 +1,91 @@
+{
+  "meta":{
+    "page_title": "Acueducto, a strategic design & technology studio.",
+    "meta_description": "We partner with innovators around the globe to develop digital strategies and experiences that tell compelling stories, inspire communities and build meaningful bonds."
+  },
+  "header_title": "",
+  "landing": {
+    "heading": "we look for the next great digital idea",
+    "tagline": "Acueducto is a strategic design & technology studio based in CDMX."
+  },
+  "intro": {
+    "title": "working with partners, not for clients",
+    "p": "Unlike client-agency relationships, partnerships allow us to get deeply involved in every project we work in. Relying on close collaboration to produce digital experiences, we can truly connect with their audiences and have a positive impact in brands, business and communities alike.<br/><br/>We are always thrilled by new challenges and the people that come with them: as challenges become projects, partners become friends.",
+    "link": ["/en/pitch", "pitch"],
+    "linktext": "Have we got your attention?<br/>Read our"
+  },
+  "carousel": ["startups", "brands", "corporations"],
+  "process": {
+    "title": "is placing strategy<br/>at the core",
+    "p": "Innovation happens not by a spontaneous spark of creativity, but through a process that looks for real pain points and the best way to solve them.<br/><br/>Approaching challenges through Strategic Design means working, alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.<br/><br/><b>Discover our process.</b>",
+    "steps": [
+      {
+        "title": "discover",
+        "p": "Understand the context, audience, needs, and challenges of the project.<br/>We get smart."
+      },
+      {
+        "title": "envision",
+        "p": "Here we re-frame the problem to highlight new insights and opportunities.<br/>We make sense."
+      },
+      {
+        "title": "build the story",
+        "p": "Create a strategy that guides concepting, prioritization, and co-creation.<br/>We create empathy."
+      },
+      {
+        "title": "design, tech & craft",
+        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.<br/>We develop."
+      },
+      {
+        "title": "launch",
+        "p": "Implement new solutions, support socialization of organizational changes and product innovation.<br/>We drive change."
+      },
+      {
+        "title": "review",
+        "p": "Reflect, document, and iterate on our process and approach.<br/>We get better."
+      }
+    ]
+  },
+  "studies": {
+    "title": "tackling complex<br/>business challenges",
+    "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.<br/><br/>Read about selected projects we have launched alongside our partners."
+  },
+  "services": {
+    "intro": {
+      "title": "from ideation to launch",
+      "p": "– And everything in between.<br/><br/> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
+    },
+    "service_categories": [
+      {
+        "title": "strategy",
+        "tags": [
+          "Digital Consulting",
+          "Research",
+          "Project Management",
+          "Community Management",
+          "Digital Advertising"
+        ]
+      },
+      {
+        "title": "design & content",
+        "tags": [
+          "Art Direction",
+          "Transmedia Development",
+          "UX Design",
+          "Motion Design",
+          "Copywriting",
+          "Impact Evaluation"
+        ]
+      },
+      {
+        "title": "development",
+        "tags": [
+          "Prototyping",
+          "Development",
+          "User Testing",
+          "Platform Integration",
+          "Change Management"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "head": {
+    "fileName": "contact",
+    "page_title": "¿Somos los indicados? - Contáctanos",
+    "meta_description": "Asociémonos, elevemos tu negocio. Contáctanos por WhatsApp o llenando nuestra forma de contacto."
+  },
+  "headerTitle": "Contacto",
+  "intro": {
+    "title": "¿cómo podemos ayudarte?",
+    "p1": "Escríbenos por WhatsApp",
+    "p2": "Mándanos un email",
+    "mailto": {
+      "subject": "Trabajemos juntos",
+      "body": "Hola,%0d%0a%0d%0a Mi nombre es [Nombre y apellido] y escribo porque me interesa reunirme con ustedes.%0d%0a%0d%0a El principal problema que tengo es: [describe detalladamente tu idea].%0d%0a%0d%0a Me gustaría agendar una cita para discutir más a fondo sobre el tema.%0d%0a%0d%0a ¡Saludos!"
+    }
+  },
+  "form": {
+    "p3": "O contesta nuestro cuestionario",
+    "email": {
+      "label": "email de trabajo",
+      "placeholder": "tu email",
+      "errorMissing": "*falta tu email",
+      "errorInvalid": "*email inválido"
+    },
+    "firstName": {
+      "label": "nombre",
+      "placeholder": "tu nombre",
+      "errorMissing": "*falta tu nombre"
+    },
+    "lastName": {
+      "label": "apellido",
+      "placeholder": "tu apellido",
+      "errorMissing": "*falta tu apellido"
+    },
+    "company": {
+      "label": "tu empresa",
+      "placeholder": "nombre de tu empresa",
+      "errorMissing": "*falta tu empresa"
+    },
+    "employees": {
+      "label": "número de empleados"
+    },
+    "message": {
+      "label": "¿qué problemas buscas resolver?",
+      "placeholder": "desarrolla tu idea",
+      "errorMissing": "*falta tu idea o proyecto"
+    },
+    "phonecheckbox": {
+      "label": "Quiero que me contacten por WhatsApp"
+    },
+    "phone": {
+      "label": "número de teléfono",
+      "placeholder": "tu número de WhatsApp",
+      "errorMissing": "*falta tu número de teléfono",
+      "errorInvalid": "*teléfono inválido (+XX XX XXXX XXXX)"
+    },
+    "submit": "contáctenme",
+    "loading": "enviando...",
+    "success": {
+      "p": "Gracias por contactarnos, te buscaremos pronto por el medio que elegiste."
+    }
+  }
+}

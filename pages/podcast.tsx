@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import Head from "components/layout/Head";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
 import React, { useEffect } from "react";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
 import { H1, P } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
-import es from "public/locales/es/podcast.json";
 import Logo from "public/assets/img/layout/logo.svg";
 
 import {
@@ -15,38 +16,28 @@ import {
   Youtube,
 } from "components/shared/Logos";
 
-function Podcast(props) {
-  let {
-    page_title,
-    meta_description,
-    image_alt,
-    headerTitle,
-    title,
-    p,
-    podcasts,
-  } = es.podcast_page;
+function Podcast({ locale, setTitle, pt }) {
+  let { headerTitle, intro, podcasts, head } = pt;
 
   useEffect(() => {
-    props.setTitle(headerTitle);
-  }, [props.locale]);
+    setTitle(headerTitle);
+  }, [locale]);
 
   return (
     <PageClipper>
       <Head
-        title={page_title}
-        description={meta_description}
-        image={{ fileName: "og_image_podcast.png", alt: image_alt }}
+        {...head}
+        image={{ fileName: "og_image_podcast.png", alt: head.image_alt }}
         es_canonical={"https://acueducto.studio/podcast"}
-        lang={props.lang}
       />
       <PodcastGrid>
         <div>
           <Fade triggerOnce>
-            <H1>{title}</H1>
+            <H1>{intro.title}</H1>
             <span>
               por <Logo />
             </span>
-            <p>{p}</p>
+            <p>{intro.p}</p>
           </Fade>
           <LogoList>
             <Fade triggerOnce>
@@ -93,7 +84,6 @@ function Podcast(props) {
                     title={pod.title}
                     src={pod.url}
                     frameBorder="0"
-                    allowTransparency={true}
                     allow="encrypted-media"
                   ></iframe>
                 </Fade>
@@ -107,6 +97,15 @@ function Podcast(props) {
   );
 }
 export default React.memo(Podcast);
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "podcast.json", oneLang: "es" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const PodcastGrid = styled.div`
   background-color: ${(p) => p.theme.colors.background};
@@ -187,6 +186,7 @@ const Pod = styled.li`
   iframe {
     height: 160px;
     width: 100%;
+    background-color: transparent;
   }
 `;
 
@@ -206,7 +206,7 @@ const LogoList = styled.div`
     width: 30px;
     box-sizing: content-box;
     padding: 0 10px 0 10px;
-    transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: transform 0.3s ease-in;
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         transform: scale(1.1);

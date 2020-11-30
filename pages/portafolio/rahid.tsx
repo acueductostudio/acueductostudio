@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Head from "components/layout/Head.tsx";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
+import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
@@ -19,24 +22,29 @@ const rahidForeground = "#31302E";
 const rahidAccent = "#8893CE";
 const rahidAccentDarker = "#7A84B9";
 
-function Rahid(props) {
+function Rahid({ locale, setTitle, pt }) {
   const [loadAssets, setloadAssets] = useState(false);
-  let t = props.locale.casestudies.studies.rahid;
+  const [t, setT] = useState(pt);
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
+    clientLocale({
+      locale: locale,
+      fileName: "work.rahid.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
     setloadAssets(true);
-  }, []);
+  }, [locale]);
 
   return (
     <PageClipper unPadded>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
-        image={{ fileName: "og_image_rahid.png", alt: t.image_alt }}
+        {...t.head}
+        image={{ fileName: "og_image_rahid.png", alt: t.head.image_alt }}
         es_canonical={"https://acueducto.studio/portafolio/rahid"}
         en_canonical={"https://acueducto.studio/en/work/rahid"}
-        lang={props.lang}
       />
       <LandSection>
         <LogoRahid />
@@ -94,21 +102,18 @@ function Rahid(props) {
             alt="Packaging: Rahid"
             width={279}
             height={261}
-            newimg
           />
           <Picture
             src="/assets/img/casestudies/rahid/fb.jpg"
             alt="Facebook Post: Rahid"
             width={372}
             height={579}
-            newimg
           />
           <Picture
             src="/assets/img/casestudies/rahid/ig.jpg"
             alt="Instagram Post: Rahid"
             width={465}
             height={298}
-            newimg
           />
         </Applications>
       </ThirdSection>
@@ -131,7 +136,6 @@ function Rahid(props) {
             alt="Home Rahid.co"
             width={960}
             height={754}
-            newimg
           />
           <P>{t.fourth_section.graphicp}</P>
         </InsertBlock>
@@ -175,7 +179,6 @@ function Rahid(props) {
           alt="Email Marketing"
           width={800}
           height={450}
-          newimg
         />
 
         <TextColumn>
@@ -203,6 +206,15 @@ function Rahid(props) {
 }
 
 export default React.memo(Rahid);
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "work.rahid.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const LaunchGrid = styled.div`
   max-width: 800px;

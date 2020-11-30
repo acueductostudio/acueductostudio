@@ -1,22 +1,50 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import GlobalStyles from "../styles/global";
 
+type MyDocumentContext = DocumentContext & {
+  lang: string;
+};
+
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage, pathname }) {
-    let lang = pathname.includes("/en") ? "en" : "es";
+  static async getInitialProps(ctx: MyDocumentContext) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage((App) => (props) =>
-      sheet.collectStyles(<App {...props} />)
-    );
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags, lang };
+    const originalRenderPage = ctx.renderPage;
+    let lang = ctx.pathname.includes("/en") ? "en" : "es";
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        lang,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
   }
   render() {
     return (
-      <Html lang={this.props.lang} dir="ltr">
+      <Html dir="ltr">
         <Head>
           <meta charSet="utf-8" />
+          <GlobalStyles />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -50,8 +78,6 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#F4F4F4" />
           <meta name="geo.region" content="CDMX" />
           <meta name="geo.placename" content="Acueducto" />
-          <GlobalStyles />
-          {this.props.styleTags}
         </Head>
         <body>
           <span id="dum"></span>

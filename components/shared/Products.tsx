@@ -42,7 +42,7 @@ const ProductContainer = ({
   );
 };
 
-const Products = ({ showLongText }) => {
+const Products = ({ showLongText }: { showLongText?: boolean }) => {
   const context = useLocaleContext();
   const { intro, products } = context.pitch_page.products_section;
   return (

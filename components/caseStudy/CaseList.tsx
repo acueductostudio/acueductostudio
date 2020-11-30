@@ -8,16 +8,22 @@ import Link from "next/link";
 import LangContext from "utils/LangContext";
 
 const SingleCase = (props) => {
+  const LinkComplex = ({ children }: { children: React.ReactNode }) => (
+    <Link
+      href={"/portafolio/" + props.link}
+      as={
+        props.lang === "en" ? "work/" + props.link : "/portafolio/" + props.link
+      }
+      locale={props.lang}
+      passHref
+    >
+      {children}
+    </Link>
+  );
+
   return (
     <Case>
-      <Link
-        href={
-          props.lang === "en"
-            ? "/en/work/" + props.link
-            : "/portafolio/" + props.link
-        }
-        passHref
-      >
+      <LinkComplex>
         <a>
           <Fade triggerOnce>
             <VidContainer>
@@ -34,46 +40,32 @@ const SingleCase = (props) => {
             </VidContainer>
           </Fade>
         </a>
-      </Link>
+      </LinkComplex>
       <Info>
         <Fade triggerOnce>
-          <Link
-            href={
-              props.lang === "en"
-                ? "/en/work/" + props.link
-                : "/portafolio/" + props.link
-            }
-            passHref
-          >
+          <LinkComplex>
             <a>
               <Hoverable>{props.title}</Hoverable>
             </a>
-          </Link>
+          </LinkComplex>
         </Fade>
         <Flexed>
           <Fade triggerOnce>
             <P>{props.tags}</P>
           </Fade>
-          <Link
-            href={
-              props.lang === "en"
-                ? "/en/work/" + props.link
-                : "/portafolio/" + props.link
-            }
-            passHref
-          >
+          <LinkComplex>
             <a>
               {props.lang === "en" ? "go to project" : "visitar proyecto"}
               <Arrow />
             </a>
-          </Link>
+          </LinkComplex>
         </Flexed>
       </Info>
     </Case>
   );
 };
 
-const CaseList = ({ limit, noPlay }) => {
+const CaseList = ({ limit, noPlay }: { limit?: number; noPlay?: boolean }) => {
   const context = useContext(LangContext);
   let cases = Object.entries(context.casestudies.studies)
     .reverse()

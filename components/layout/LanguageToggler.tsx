@@ -18,25 +18,23 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   }, [router.route]);
 
   const handleLink = () => {
-    if (locale.lang == "en") {
+    console.log(router.asPath);
+    if (locale == "en") {
       switch (router.asPath) {
-        case "/en/work/ladanzadelasfieras":
-          Router.push(router.route, "/portafolio/ladanzadelasfieras");
+        case "/work/rahid":
+          console.log("Fue ejemplo");
+          Router.push("/portafolio/rahid", "/portafolio/rahid", {
+            locale: "es",
+          });
           break;
-        case "/en/work/salvajenada":
-          Router.push(router.route, "/portafolio/salvajenada");
-          break;
-        case "/en/work/rahid":
-          Router.push(router.route, "/portafolio/rahid");
-          break;
-        case "/en/work":
-          Router.push(router.route, "/portafolio");
+        case "/work":
+          Router.push("/portafolio", "/portafolio", { locale: "es" });
           break;
         case "/en/about":
-          Router.push(router.route, "/nosotros");
+          Router.push("/nosotros", "/nosotros", { locale: "es" });
           break;
-        case "/en/contact":
-          Router.push(router.route, "/contacto");
+        case "/contact":
+          Router.push("/contacto", "/contacto", { locale: "es" });
           break;
         case "/en/pitch":
           Router.push(router.route, "/pitch");
@@ -47,30 +45,43 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
         case "/en/privacy":
           Router.push(router.route, "/privacidad");
           break;
+        case "/":
+          console.log("dentro de INGLES cambiando a Español");
+          Router.push("/", "/", { locale: "es" });
+          break;
         default:
           Router.push(router.route, "/");
       }
-      document.querySelector("html").lang = "es";
       toggleLang("es");
     } else {
       switch (router.asPath) {
         case "/portafolio/ladanzadelasfieras":
-          Router.push(router.route, "/en/work/ladanzadelasfieras");
+          Router.push(
+            "/portafolio/ladanzadelasfieras",
+            "/work/ladanzadelasfieras",
+            {
+              locale: "en",
+            }
+          );
           break;
         case "/portafolio/salvajenada":
-          Router.push(router.route, "/en/work/salvajenada");
+          Router.push("/portafolio/salvajenada", "/work/salvajenada", {
+            locale: "en",
+          });
           break;
         case "/portafolio/rahid":
-          Router.push(router.route, "/en/work/rahid");
+          Router.push("/portafolio/rahid", "/work/rahid", {
+            locale: "en",
+          });
           break;
         case "/portafolio":
-          Router.push(router.route, "/en/work");
+          Router.push("/portafolio", "/work", { locale: "en" });
           break;
         case "/nosotros":
-          Router.push(router.route, "/en/about");
+          Router.push("/nosotros", "/about", { locale: "en" });
           break;
         case "/contacto":
-          Router.push(router.route, "/en/contact");
+          Router.push("/contacto", "/contact", { locale: "en" });
           break;
         case "/pitch":
           Router.push(router.route, "/en/pitch");
@@ -81,10 +92,12 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
         case "/privacidad":
           Router.push(router.route, "/en/privacy");
           break;
+        case "/":
+          Router.push("/", "/en", { locale: "en" });
+          break;
         default:
-          Router.push(router.route, "/en");
+          Router.push(router.route, "/trouble");
       }
-      document.querySelector("html").lang = "en";
       toggleLang("en");
     }
   };
@@ -93,10 +106,8 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
     <Toggler reveal={hasLoaded} available={showToggler}>
       <a onClick={handleLink}>
         <English>
-          <span>
-            {locale.lang === "es" ? "switch language" : "cambiar idioma"}
-          </span>
-          {locale.lang === "es" ? "english" : "español"}
+          <span>{locale === "es" ? "switch language" : "cambiar idioma"}</span>
+          {locale === "es" ? "english" : "español"}
         </English>
         <Stable>
           <Arrows />

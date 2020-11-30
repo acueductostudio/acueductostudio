@@ -340,94 +340,6 @@
   "next_study": {
     "p": "Haz click para ver el siguiente caso de estudio"
   },
-  "home_page": {
-    "page_title": "Acueducto, un estudio de estrategias e interfaces digitales en CDMX",
-    "meta_description": "Nos asociamos con innovadores alrededor del mundo para desarrollar estrategias y experiencias digitales que cuentan historias convincentes, inspiran comunidades y forjen vínculos significativos.",
-    "header_title": " ",
-    "landing": {
-      "heading": "impulsamos negocios de alto impacto",
-      "tagline": "Acueducto es un estudio de estrategias e interfaces digitales en CDMX."
-    },
-    "intro": {
-      "title": "trabajando con visionarios digitales",
-      "p": "El boom de internet quedó atrás y es para la cotidianidad digital que hay que estar preparados.<br/><br/>En Acueducto, ayudamos a tomadores de decisiones a innovar con estas tecnologías y, al involucrarnos estructuralmente con cada proyecto, logramos producir en conjunto experiencias significativas para negocios y comunidades por igual.",
-      "link": ["/pitch", "pitch"],
-      "linktext": "¿Tenemos tu atención?<br/>Lee nuestro"
-    },
-    "carousel": ["startups", "marcas", "corporativos"],
-    "process": {
-      "title": "con la estrategia<br/>en el núcleo",
-      "p": "La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles, áreas de oportunidad y sus mejores soluciones.<br/><br/>Abordar los problemas con una perspectiva design-driven significa desarrollar desde el inicio de cada proyecto, junto con nuestros clientes, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
-      "steps": [
-        {
-          "title": "descubre",
-          "p": "Entendemos el contexto, audiencia, necesidades y retos del proyecto.<br/>Nos informamos."
-        },
-        {
-          "title": "visualiza",
-          "p": "Replanteamos el problema para resaltar nuevos hallazgos y oportunidades.<br/>Fijamos el trayecto."
-        },
-        {
-          "title": "narra",
-          "p": "Creamos una estrategia que guíe la conceptualización, priorización y co-creación.<br/>Creamos empatía."
-        },
-        {
-          "title": "diseña, programa y ensambla",
-          "p": "Diseñamos y refinamos prototipos, procesos y <i>copywriting</i>.<br/>Desarrollamos."
-        },
-        {
-          "title": "lanza",
-          "p": "Implementamos las nuevas soluciones y apoyamos la adopción de cambios organizacionales y de innovación.<br/>Guiamos el cambio."
-        },
-        {
-          "title": "evalúa",
-          "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.<br/>Mejoramos."
-        }
-      ]
-    },
-    "studies": {
-      "title": "resolvemos desafiantes retos de negocio",
-      "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado."
-    },
-    "services": {
-      "intro": {
-        "title": "de la estrategia al lanzamiento",
-        "p": "– Y todo lo que involucra.<br/><br/>Nuestros proyectos favoritos son los que construimos desde el inicio con nuestros socios, por eso ofrecemos todas las etapas del desarrollo de una experiencia digital."
-      },
-      "service_categories": [
-        {
-          "title": "estrategia",
-          "tags": [
-            "Administración de proyectos",
-            "Consultoría digital",
-            "Investigación e insights",
-            "Experiencia de usuario (UX)",
-            "Evaluación de impacto"
-          ]
-        },
-        {
-          "title": "diseño & desarrollo",
-          "tags": [
-            "Dirección de arte",
-            "Producción de contenido",
-            "Copywriting",
-            "Prototipado",
-            "Desarrollo y programación"
-          ]
-        },
-        {
-          "title": "lanzamiento",
-          "tags": [
-            "Estrategias de marketing",
-            "Publicidad pautada",
-            "Community management",
-            "User testing",
-            "Administración de cambio"
-          ]
-        }
-      ]
-    }
-  },
   "about_page": {
     "page_title": "Acerca de Acueducto",
     "meta_description": "Conócenos, lee sobre nosotros.",
@@ -567,75 +479,6 @@
       "collaboration": "co-creación"
     }
   },
-  "work_page": {
-    "page_title": "Nuestro trabajo - Construyamos productos increíbles, juntos",
-    "meta_description": "Adéntrate en nuestro trabajo y mira lo que puede lograr un desarrollo innovador con una estrategia sólida.",
-    "headerTitle": "Portafolio",
-    "intro": {
-      "title": "casos de estudio seleccionados",
-      "p": "Cada proyecto que desarrollamos es único, así que elegimos estos casos de estudio para retratar cómo trabaja Acueducto y lo que puede lograr.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
-    }
-  },
-  "contact_page": {
-    "page_title": "¿Somos los indicados? - Contáctanos",
-    "meta_description": "Asociémonos, elevemos tu negocio. Contáctanos por WhatsApp o llenando nuestra forma de contacto.",
-    "headerTitle": "Contacto",
-    "intro": {
-      "title": "¿cómo podemos ayudarte?",
-      "p1": "Escríbenos por WhatsApp",
-      "p2": "Mándanos un email",
-      "mailto": {
-        "subject": "Trabajemos juntos",
-        "body": "Hola,%0d%0a%0d%0a Mi nombre es [Nombre y apellido] y escribo porque me interesa reunirme con ustedes.%0d%0a%0d%0a El principal problema que tengo es: [describe detalladamente tu idea].%0d%0a%0d%0a Me gustaría agendar una cita para discutir más a fondo sobre el tema.%0d%0a%0d%0a ¡Saludos!"
-      }
-    },
-    "form": {
-      "p3": "O contesta nuestro cuestionario",
-      "email": {
-        "label": "email de trabajo",
-        "placeholder": "tu email",
-        "errorMissing": "*falta tu email",
-        "errorInvalid": "*email inválido"
-      },
-      "firstName": {
-        "label": "nombre",
-        "placeholder": "tu nombre",
-        "errorMissing": "*falta tu nombre"
-      },
-      "lastName": {
-        "label": "apellido",
-        "placeholder": "tu apellido",
-        "errorMissing": "*falta tu apellido"
-      },
-      "company": {
-        "label": "tu empresa",
-        "placeholder": "nombre de tu empresa",
-        "errorMissing": "*falta tu empresa"
-      },
-      "employees": {
-        "label": "número de empleados"
-      },
-      "message": {
-        "label": "¿qué problemas buscas resolver?",
-        "placeholder": "desarrolla tu idea",
-        "errorMissing": "*falta tu idea o proyecto"
-      },
-      "phonecheckbox": {
-        "label": "Quiero que me contacten por WhatsApp"
-      },
-      "phone": {
-        "label": "número de teléfono",
-        "placeholder": "tu número de WhatsApp",
-        "errorMissing": "*falta tu número de teléfono",
-        "errorInvalid": "*teléfono inválido (+XX XX XXXX XXXX)"
-      },
-      "submit": "contáctenme",
-      "loading": "enviando...",
-      "success": {
-        "p": "Gracias por contactarnos, te buscaremos pronto por el medio que elegiste."
-      }
-    }
-  },
   "manifesto_page": {
     "page_title": "Manifiesto - Lo que nos hace mejores",
     "meta_description": "Los valores que moldean cada acción que realizamos",
@@ -753,14 +596,6 @@
       "p11": "Google Analytics es un servicio de análisis web brindado por Google, LLC. (“Google”). Google utiliza los datos recolectados para analizar, examinar el uso de la Aplicación, hacer reportes de sus actividades y compartirlos con otros servicios de Google. Es posible que Google utilice estos datos para contextualizar y personalizar los anuncios en su propia red de publicidad.<br/>Usamos Google Analytics para hacer prácticas de distribución de publicidad pagada y retargeting. Para lo último mencionado, Google instala un pixel en tu navegador que nos permite ponernos en contacto si visitaste nuestro sitio o realizaste una acción específica como descargar algún material, visitar una página o brindarnos tus datos.<br/>Datos recolectados: Cookies e Información de uso.<br/>Lugar de procesamiento: Estados Unidos – <a href='https://policies.google.com/privacy?hl=es' target='_blank' rel='nofollow noopener'>Política de Privacidad</a> – <a href='https://tools.google.com/dlpage/gaoptout?hl=es' target='_blank' rel='nofollow noopener'>Renunciar (opt-out)</a>.",
       "subtitle12": "Facebook (FACEBOOK INC)",
       "p12": "Utilizamos servicios de Facebook que instalan cookies y pixeles de seguimiento en tu navegador para hacer publicidad basada en comportamientos y acciones, además de acceder a analíticas de publicidad pagada brindada por Facebook. Usamos Facebook Custom Audiences para identificar a los usuarios que accedieron a ciertas páginas con el propósito de segmentar nuestras prácticas de remarketing y publicidad pautada. Puedes modificar tus ajustes de Publicidad en Facebook para restringir estos anuncios. <a href='https://www.facebook.com/policies/cookies/'>Política de cookies </a> - <a href='https://www.facebook.com/policy.php'>Políticas de privacidad</a>"
-    }
-  },
-  "error_page": {
-    "headerTitle": "Error",
-    "meta_description": "Ups! Página no encontrada",
-    "intro": {
-      "title": "ups!<br/> página no encontrada",
-      "p": "Esta página no existe, por favor confirma que el URL es correcto. Si crees que es un problema con nuestro sitio por favor contáctanos en <a class='inline' href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>."
     }
   }
 }

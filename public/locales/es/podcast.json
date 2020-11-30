@@ -1,32 +1,34 @@
 {
-  "podcast_page": {
+  "head": {
     "page_title": "Cuando el río suena – Podcast por Acueducto",
     "meta_description": "Conoce las mejores prácticas de expertos y emprendedores en la industria tecnológica.",
-    "image_alt": "Cuando el río suena, podcast por Acueducto",
-    "headerTitle": "Podcast",
+    "image_alt": "Cuando el río suena, podcast por Acueducto"
+  },
+  "headerTitle": "Podcast",
+  "intro": {
     "title": "cuando el río suena",
-    "p": "En Cuando el río suena exploramos la visión y conocimientos de agentes expertos y emprendedores del mundo digital. Entrevistamos a estrategas, diseñadores y profesionales tecnológicos para compartir sus mejores prácticas con nuestra comunidad.",
-    "podcasts": [
-      {
-        "url": "https://open.spotify.com/embed-podcast/episode/1uIGMGR7NSjqgmCdf5XrRK",
-        "title": "E05: Educación y transformación digital - Noemí Valencia"
-      },
-      {
-        "url": "https://open.spotify.com/embed-podcast/episode/5M9L984seHD9isRPqdXdus",
-        "title": "E04: Branding digital para negocios - Tania Lili"
-      },
-      {
-        "url": "https://open.spotify.com/embed-podcast/episode/0jtAKm8v3O6UWEVkZHiUbR",
-        "title": "E03: Negocios en cuarentena - Juan Pablo Sánchez"
-      },
-      {
-        "url": "https://open.spotify.com/embed-podcast/episode/4b9f0kCHFzfF1fOHLpUmTj",
-        "title": "E02: Neutralidad de la red - Carlos Fuentes"
-      },
-      {
-        "url": "https://open.spotify.com/embed-podcast/episode/6tE3seBLPt0GB6tYdHaqwf",
-        "title": "E01: Protección legal digital - Salvador Camacho"
-      }
-    ]
-  }
+    "p": "En Cuando el río suena exploramos la visión y conocimientos de agentes expertos y emprendedores del mundo digital. Entrevistamos a estrategas, diseñadores y profesionales tecnológicos para compartir sus mejores prácticas con nuestra comunidad."
+  },
+  "podcasts": [
+    {
+      "url": "https://open.spotify.com/embed-podcast/episode/1uIGMGR7NSjqgmCdf5XrRK",
+      "title": "E05: Educación y transformación digital - Noemí Valencia"
+    },
+    {
+      "url": "https://open.spotify.com/embed-podcast/episode/5M9L984seHD9isRPqdXdus",
+      "title": "E04: Branding digital para negocios - Tania Lili"
+    },
+    {
+      "url": "https://open.spotify.com/embed-podcast/episode/0jtAKm8v3O6UWEVkZHiUbR",
+      "title": "E03: Negocios en cuarentena - Juan Pablo Sánchez"
+    },
+    {
+      "url": "https://open.spotify.com/embed-podcast/episode/4b9f0kCHFzfF1fOHLpUmTj",
+      "title": "E02: Neutralidad de la red - Carlos Fuentes"
+    },
+    {
+      "url": "https://open.spotify.com/embed-podcast/episode/6tE3seBLPt0GB6tYdHaqwf",
+      "title": "E01: Protección legal digital - Salvador Camacho"
+    }
+  ]
 }

@@ -25,6 +25,25 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: "/en/contact",
+        destination: "/en/contacto",
+        locale:false, 
+      },
+      {
+        source: "/en/work",
+        destination: "/en/portafolio",
+        locale:false,
+      },
+      {
+        source: "/en/work/:slug",
+        destination: "/en/portafolio/:slug",
+        locale:false, 
+      },
+      {
+        source: "/en/nosotros",
+        destination: "/en/about",
+      },
+      {
         source: "/service-worker.js",
         destination: "/_next/static/service-worker.js",
       },
@@ -49,6 +68,11 @@ const nextConfig = {
   //env config
   env: {
     SENDINBLUE_API: process.env.SENDINBLUE_API,
+  },
+  i18n: {
+    locales: ['es', 'en'],
+    defaultLocale: 'es',
+    localeDetection: false,
   },
 };
 

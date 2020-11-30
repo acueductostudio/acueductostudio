@@ -6,37 +6,42 @@ import BorderLink from "components/shared/BorderedLink";
 import { useRouter } from "next/router";
 
 export default function Nav(props) {
-  let t = props.locale.nav;
-  let l = props.locale.legal_nav;
+  let t = props.t.nav;
+  let l = props.t.legal_nav;
 
-  const ActiveLink = ({ children, ...props }) => {
+  const ActiveLink = ({ children, href, as, locale }) => {
     const router = useRouter();
     const child = React.Children.only(children);
     return (
-      <Link {...props} passHref>
-        {React.cloneElement(child, { active: router.pathname === props.href })}
+      <Link {...props} href={href} as={as} passHref locale={locale}>
+        {React.cloneElement(child, { active: router.pathname === href })}
       </Link>
     );
   };
 
-  let navItems = t.map(function (item, index) {
-    return (
-      <Fade delay={200 + index * 50} key={"item" + index}>
-        <li>
-          <span>0{index + 1}</span>
-          <ActiveLink href={item.link}>
-            <NavLink>{item.title}</NavLink>
-          </ActiveLink>
-        </li>
-      </Fade>
-    );
-  });
   return (
     <NavWrapper open={props.isOpen} id="Nav">
       {props.isOpen && (
         <>
           <NavList onClick={props.closeNav} open={props.isOpen}>
-            <ul>{navItems}</ul>
+            <ul>
+              {t.map(function (item, index) {
+                return (
+                  <Fade delay={200 + index * 50} key={"item" + index}>
+                    <li>
+                      <span>0{index + 1}</span>
+                      <ActiveLink
+                        href={item.link}
+                        as={item.as ? item.as : item.link}
+                        locale={props.locale}
+                      >
+                        <NavLink>{item.title}</NavLink>
+                      </ActiveLink>
+                    </li>
+                  </Fade>
+                );
+              })}
+            </ul>
           </NavList>
           <BottomNav>
             <Registered>© MMXX</Registered>
@@ -331,7 +336,7 @@ const NavWrapper = styled.div`
     padding: 5% 4% 20px 4%;
   }
   @media (max-width: 600px), (max-height: 700px) {
-    border-radius:0;
+    border-radius: 0;
     display: flex;
     flex: 0 0 auto;
     align-items: flex-start;

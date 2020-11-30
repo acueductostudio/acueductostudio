@@ -14,8 +14,7 @@ import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 function App({ Component, pageProps, router }: AppProps) {
-  console.log(router)
-  const [locale, setLocale] = useState(router.route.includes("/en") ? en : es);
+  const [locale, setLocale] = useState(router.locale === "en" ? en : es);
   const [hasToConsent, setHasToConsent] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const LoadingBarRef = useRef(null);

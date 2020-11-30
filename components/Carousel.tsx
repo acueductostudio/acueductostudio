@@ -5,7 +5,7 @@ import LangContext from "utils/LangContext";
 import useInterval from "utils/useInterval";
 import Holed from "public/assets/img/layout/holed.svg";
 
-const Carousel = () => {
+const Carousel = ({items}) => {
   const [activeIndex, setIndex] = useState(0);
   const [ref, isVisible] = useInView({
     threshold: 0.2,
@@ -65,10 +65,7 @@ const Carousel = () => {
     setManualMode(true);
   };
 
-  const context = useContext(LangContext);
-  let p = context.home_page.carousel;
-
-  var words = p.map(function (word, index) {
+  let words = items.map(function (word, index) {
     return (
       <Word
         key={"word" + index}

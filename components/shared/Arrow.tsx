@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import ArrowSvg from "public/assets/img/layout/arrow.svg";
 
-const Arrow = ({ reverse }) => (
+const Arrow = ({ reverse }: { reverse?: boolean }) => (
   <ArrowContainer reverse={reverse}>
     <Fade triggerOnce>
       <ArrowSvg />

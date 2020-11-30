@@ -1,0 +1,90 @@
+{
+  "home": {
+    "page_title": "Acueducto, un estudio de estrategias e interfaces digitales en CDMX",
+    "meta_description": "Nos asociamos con innovadores alrededor del mundo para desarrollar estrategias y experiencias digitales que cuentan historias convincentes, inspiran comunidades y forjen vínculos significativos."
+  },
+  "header_title": " ",
+  "landing": {
+    "heading": "impulsamos negocios de alto impacto",
+    "tagline": "Acueducto es un estudio de estrategias e interfaces digitales en CDMX."
+  },
+  "intro": {
+    "title": "trabajando con visionarios digitales",
+    "p": "El boom de internet quedó atrás y es para la cotidianidad digital que hay que estar preparados.<br/><br/>En Acueducto, ayudamos a tomadores de decisiones a innovar con estas tecnologías y, al involucrarnos estructuralmente con cada proyecto, logramos producir en conjunto experiencias significativas para negocios y comunidades por igual.",
+    "link": ["/pitch", "pitch"],
+    "linktext": "¿Tenemos tu atención?<br/>Lee nuestro"
+  },
+  "carousel": ["startups", "marcas", "corporativos"],
+  "process": {
+    "title": "con la estrategia<br/>en el núcleo",
+    "p": "La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles, áreas de oportunidad y sus mejores soluciones.<br/><br/>Abordar los problemas con una perspectiva design-driven significa desarrollar desde el inicio de cada proyecto, junto con nuestros clientes, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
+    "steps": [
+      {
+        "title": "descubre",
+        "p": "Entendemos el contexto, audiencia, necesidades y retos del proyecto.<br/>Nos informamos."
+      },
+      {
+        "title": "visualiza",
+        "p": "Replanteamos el problema para resaltar nuevos hallazgos y oportunidades.<br/>Fijamos el trayecto."
+      },
+      {
+        "title": "narra",
+        "p": "Creamos una estrategia que guíe la conceptualización, priorización y co-creación.<br/>Creamos empatía."
+      },
+      {
+        "title": "diseña, programa y ensambla",
+        "p": "Diseñamos y refinamos prototipos, procesos y <i>copywriting</i>.<br/>Desarrollamos."
+      },
+      {
+        "title": "lanza",
+        "p": "Implementamos las nuevas soluciones y apoyamos la adopción de cambios organizacionales y de innovación.<br/>Guiamos el cambio."
+      },
+      {
+        "title": "evalúa",
+        "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.<br/>Mejoramos."
+      }
+    ]
+  },
+  "studies": {
+    "title": "resolvemos desafiantes retos de negocio",
+    "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado."
+  },
+  "services": {
+    "intro": {
+      "title": "de la estrategia al lanzamiento",
+      "p": "– Y todo lo que involucra.<br/><br/>Nuestros proyectos favoritos son los que construimos desde el inicio con nuestros socios, por eso ofrecemos todas las etapas del desarrollo de una experiencia digital."
+    },
+    "service_categories": [
+      {
+        "title": "estrategia",
+        "tags": [
+          "Administración de proyectos",
+          "Consultoría digital",
+          "Investigación e insights",
+          "Experiencia de usuario (UX)",
+          "Evaluación de impacto"
+        ]
+      },
+      {
+        "title": "diseño & desarrollo",
+        "tags": [
+          "Dirección de arte",
+          "Producción de contenido",
+          "Copywriting",
+          "Prototipado",
+          "Desarrollo y programación"
+        ]
+      },
+      {
+        "title": "lanzamiento",
+        "tags": [
+          "Estrategias de marketing",
+          "Publicidad pautada",
+          "Community management",
+          "User testing",
+          "Administración de cambio"
+        ]
+      }
+    ]
+  }
+}

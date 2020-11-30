@@ -1,4 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
 import styled from "styled-components";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/layout/PageClipper";
@@ -6,26 +9,29 @@ import ContactFooter from "components/shared/footers/ContactFooter";
 import { H1, H2 } from "components/shared/Dangerously";
 import Services from "components/shared/Services";
 import CaseList from "components/caseStudy/CaseList";
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import Carousel from "components/Carousel";
 import Products from "components/shared/Products";
 
-function Index(props) {
-  let t = props.locale.home_page;
+function Index({ locale, setTitle, pt }) {
+  const [t, setT] = useState(pt);
 
   useEffect(() => {
-    props.setTitle(t.header_title);
-  }, []);
-
+    clientLocale({
+      locale: locale,
+      fileName: "home.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
+  }, [locale]);
   return (
-    <>
       <PageClipper unPadded>
         <Head
-          title={t.page_title}
-          description={t.meta_description}
+          {...t.head}
           es_canonical={"https://acueducto.studio"}
           en_canonical={"https://acueducto.studio/en"}
-          lang={props.lang}
         />
         <Land id="land">
           <LandContainer>
@@ -36,18 +42,26 @@ function Index(props) {
         <Intro id="removeArrow">
           <TitleSection {...t.intro} borderTop />
         </Intro>
-        <Carousel />
+        <Carousel items={t.carousel}/>
         <TitleSection {...t.studies} borderTop />
         <CaseList noPlay />
         <Products />
-        <Services />
+        <Services services={t.services}/>
         <ContactFooter />
       </PageClipper>
-    </>
   );
 }
 
 export default React.memo(Index);
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "home.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const Land = styled.section`
   min-height: 100vh;

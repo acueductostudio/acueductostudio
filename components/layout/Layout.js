@@ -170,7 +170,8 @@ const Layout = ({
           route={router.route}
         />
         <Nav
-          locale={locale}
+          locale={router.locale}
+          t={locale}
           toggleNav={toggleNav}
           closeNav={closeNav}
           isOpen={isOpen}
@@ -178,11 +179,12 @@ const Layout = ({
         {React.cloneElement(children, {
           setTitle: setTitle,
           hasLoaded: hasLoaded,
+          locale: router.locale,
           mouse: mouse,
         })}
 
         <LanguageToggler
-          locale={locale}
+          locale={router.locale}
           hasLoaded={hasLoaded}
           toggleLang={toggleLang}
         />
