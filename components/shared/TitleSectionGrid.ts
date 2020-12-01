@@ -14,7 +14,7 @@ export const Container = styled.div`
   }
 `;
 
-const TitleSectionGrid = styled.div`
+const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
   width: 100%;
   position: relative;
   display: grid;

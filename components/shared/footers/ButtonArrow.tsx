@@ -1,27 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 
-type ButtonProps = { inverse?: boolean; text:string, submitButton?:boolean };
+type ButtonProps = { inverse?: boolean; text: string; submitButton?: boolean };
 export type ButtonRef = HTMLAnchorElement;
 
-export const ButtonArrow = React.forwardRef<ButtonRef, ButtonProps>((props, ref) =>
-  !props.submitButton ? (
-    <Button as="a" ref={ref} {...props} inverse={props.inverse}>
-      {props.text}
-      <Pin inverse={props.inverse} />
-    </Button>
-  ) : (
-    <Button {...props} inverse={props.inverse} marginTop>
-      <input type="submit" value={props.text} />
-      {props.text}
-      <Pin inverse={props.inverse} />
-    </Button>
-  )
+export const ButtonArrow = React.forwardRef<ButtonRef, ButtonProps>(
+  (props, ref) =>
+    !props.submitButton ? (
+      <Button as="a" ref={ref} {...props} inverse={props.inverse}>
+        {props.text}
+        <Pin inverse={props.inverse} />
+      </Button>
+    ) : (
+      <Button {...props} inverse={props.inverse} marginTop>
+        <input type="submit" value={props.text} />
+        {props.text}
+        <Pin inverse={props.inverse} />
+      </Button>
+    )
 );
 
 export default ButtonArrow;
 
-const Pin = styled.span`
+const Pin = styled.span<{ inverse: boolean }>`
   width: 30px;
   height: 30px;
   pointer-events: none;
@@ -44,7 +45,7 @@ const Pin = styled.span`
   }
 `;
 
-const Button = styled.div`
+const Button = styled.div<{ inverse: boolean; marginTop?: boolean }>`
   text-decoration: none;
   padding: 13px 17px 14px 25px;
   border-radius: 50px;

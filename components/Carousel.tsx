@@ -1,11 +1,10 @@
-import { useContext, useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-hook-inview";
 import styled from "styled-components";
-import LangContext from "utils/LangContext";
 import useInterval from "utils/useInterval";
 import Holed from "public/assets/img/layout/holed.svg";
 
-const Carousel = ({items}) => {
+const Carousel = ({ items }) => {
   const [activeIndex, setIndex] = useState(0);
   const [ref, isVisible] = useInView({
     threshold: 0.2,
@@ -65,23 +64,20 @@ const Carousel = ({items}) => {
     setManualMode(true);
   };
 
-  let words = items.map(function (word, index) {
-    return (
-      <Word
-        key={"word" + index}
-        show={index === activeIndex ? true : false}
-        rolling={start}
-      >
-        {word}
-      </Word>
-    );
-  });
-
   return (
     <>
       <HoledSection ref={ref}>
         <Holed />
-        <CarouselContainer>{words}</CarouselContainer>
+        <CarouselContainer>
+          {items.map((word, index) => (
+            <Word
+              key={"word" + index}
+              show={index === activeIndex ? true : false}
+            >
+              {word}
+            </Word>
+          ))}
+        </CarouselContainer>
         <ButtonLeft onClick={prevManualIndex} />
         <ButtonRight onClick={nextManualIndex} />
       </HoledSection>
@@ -95,7 +91,7 @@ export default Carousel;
 const FakePadding = styled.div`
   width: 100%;
   padding-bottom: 12%;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(p) => p.theme.colors.background};
 `;
 
 const HoledSection = styled.div`
@@ -138,14 +134,14 @@ const ButtonRight = styled(ButtonLeft)`
   cursor: e-resize;
 `;
 
-const Word = styled.p`
+const Word = styled.p<{ show: boolean }>`
   position: absolute;
   text-align: center;
-  opacity: ${(props) => (props.show ? 1 : 0)};
+  opacity: ${(p) => (p.show ? 1 : 0)};
   font-size: 6rem;
   font-weight: 300;
   padding: 4%;
-  color: ${(props) => props.theme.colors.foreground_low};
+  color: ${(p) => p.theme.colors.foreground_low};
   transition: opacity 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   @media (max-width: 1300px) {
     font-size: 5rem;

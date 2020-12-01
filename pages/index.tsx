@@ -27,28 +27,28 @@ function Index({ locale, setTitle, pt }) {
     });
   }, [locale]);
   return (
-      <PageClipper unPadded>
-        <Head
-          {...t.head}
-          es_canonical={"https://acueducto.studio"}
-          en_canonical={"https://acueducto.studio/en"}
-        />
-        <Land id="land">
-          <LandContainer>
-            <H1>{t.landing.heading}</H1>
-            <H2>{t.landing.tagline}</H2>
-          </LandContainer>
-        </Land>
-        <Intro id="removeArrow">
-          <TitleSection {...t.intro} borderTop />
-        </Intro>
-        <Carousel items={t.carousel}/>
-        <TitleSection {...t.studies} borderTop />
-        <CaseList />
-        <Products/>
-        <Services services={t.services}/>
-        <ContactFooter />
-      </PageClipper>
+    <PageClipper unPadded>
+      <Head
+        {...t.head}
+        es_canonical={"https://acueducto.studio"}
+        en_canonical={"https://acueducto.studio/en"}
+      />
+      <Land id="land">
+        <LandContainer>
+          <H1>{t.landing.heading}</H1>
+          <H2>{t.landing.tagline}</H2>
+        </LandContainer>
+      </Land>
+      <Intro id="removeArrow">
+        <TitleSection {...t.intro} borderTop />
+      </Intro>
+      <Carousel items={t.carousel} />
+      <TitleSection {...t.studies} borderTop />
+      <CaseList />
+      <Products {...t.products_section} />
+      <Services services={t.services} />
+      <ContactFooter />
+    </PageClipper>
   );
 }
 

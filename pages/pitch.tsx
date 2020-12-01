@@ -221,7 +221,7 @@ export default function Pitch({ locale, setTitle, pt }) {
         }}
       />
       <StyledHeadings />
-      <PinnedSection title={t.intro.title} p={t.intro.p0}>
+      <PinnedSection title={t.intro.title}>
         <AcueductoLogo />
         <P>{t.intro.p0}</P>
         <H3>{t.intro.subtitle1}</H3>
@@ -254,7 +254,7 @@ export default function Pitch({ locale, setTitle, pt }) {
         <P>{t.intro.p4}</P>
       </PinnedSection>
       <TitleSection {...t.second_section} borderTop />
-      <Products showLongText /> 
+      <Products {...t.products_section} longer />
       <TitleSection
         title={t.process_section.title}
         p={t.process_section.p}
@@ -294,7 +294,7 @@ export default function Pitch({ locale, setTitle, pt }) {
       <ContactFooter />
     </PageClipperPadded>
   );
-};
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "pitch.json" });

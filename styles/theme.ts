@@ -1,4 +1,6 @@
-export default {
+import { DefaultTheme } from 'styled-components'
+
+const Theme: DefaultTheme = {
   colors: {
     background: "#060809",
     foreground: "#F4F4F4",
@@ -14,5 +16,7 @@ export default {
   },
   stroke: "2px",
 };
+
+export default Theme;
 
 // accent: "#1740BF",

@@ -18,30 +18,6 @@
     }
   },
   "lang": "en",
-  "products_section": {
-    "intro": {
-      "title": "to develop innovative ideas",
-      "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
-    },
-    "products": [
-      {
-        "title": "digital strategy",
-        "p": "Elevate the perception of your product, service or organization through strategic design."
-      },
-      {
-        "title": "mobile<br/>and web apps",
-        "p": "Connect with your audience through any device, grow your business with a web experience or an app."
-      },
-      {
-        "title": "digital products<br/>and services",
-        "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
-      },
-      {
-        "title": "digital marketing strategies",
-        "p": "Grow your sales with communication strategies, creative content and paid advertising."
-      }
-    ]
-  },
   "casestudies": [
     {
       "title": "from strategy to production in the filmmaking industry",
@@ -53,7 +29,7 @@
       "tags": "Strategy<br/>Product development<br/>Design & digital consulting<br/>Project management",
       "link": "salvajenada"
     },
-    {
+    { 
       "title": "a unique ecommerce in Mexico",
       "tags": "Strategy<br/>Commmunication<br/>Branding<br/>Ecommerce<br/>Digital Marketing<br/>",
       "link": "rahid"

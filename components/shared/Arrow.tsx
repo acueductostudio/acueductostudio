@@ -13,7 +13,7 @@ const Arrow = ({ reverse }: { reverse?: boolean }) => (
 
 export default React.memo(Arrow);
 
-const ArrowContainer = styled.span`
+const ArrowContainer = styled.span<{ reverse: boolean }>`
   width: 50px;
   height: 34px;
   position: relative;

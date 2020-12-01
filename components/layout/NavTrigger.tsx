@@ -2,7 +2,15 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Hamburger from "public/assets/img/layout/hamburger.svg";
 
-const NavTrigger = ({ hasLoaded, toggleNav, isOpen }) => {
+const NavTrigger = ({
+  hasLoaded,
+  toggleNav,
+  isOpen,
+}: {
+  hasLoaded: boolean;
+  toggleNav: () => void;
+  isOpen: boolean;
+}) => {
   const doToggleNav = () => toggleNav();
   return (
     <TriggerContainer visible={hasLoaded}>
@@ -15,7 +23,7 @@ const NavTrigger = ({ hasLoaded, toggleNav, isOpen }) => {
 
 export default React.memo(NavTrigger);
 
-const Trigger = styled.div`
+const Trigger = styled.div<{ open: boolean }>`
   pointer-events: auto;
   cursor: pointer;
   width: 30px;
@@ -50,7 +58,7 @@ const Trigger = styled.div`
     `}
 `;
 
-const TriggerContainer = styled.div`
+const TriggerContainer = styled.div<{ visible: boolean }>`
   opacity: ${(props) => (props.visible ? 1 : 0)};
   display: flex;
   justify-content: flex-end;

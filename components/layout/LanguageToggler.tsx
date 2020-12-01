@@ -18,7 +18,7 @@ function LanguageToggler({ hasLoaded, locale }) {
   }, [router.route]);
 
   const handleLink = () => {
-    // console.log(router.asPath + router.locale);
+    console.log(router.asPath + " " + router.locale);
     if (locale == "en") {
       switch (router.asPath) {
         case "/work/rahid":
@@ -50,7 +50,7 @@ function LanguageToggler({ hasLoaded, locale }) {
           Router.push("/contacto", "/contacto", { locale: "es" });
           break;
         case "/pitch":
-          Router.push("/pitch", "/pitch"), { locale: "es" };
+          Router.push("/pitch", "/pitch", { locale: "es" });
           break;
         case "/cookies":
           Router.push("/cookies", "/cookies", { locale: "es" });
@@ -130,6 +130,7 @@ export default React.memo(LanguageToggler);
 
 const English = styled.div`
   background-color: ${(props) => props.theme.colors.accent};
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
   padding: 9px 10px 10px 23px;
   position: absolute;
   margin-left: -8px;
@@ -172,7 +173,7 @@ const Stable = styled.div`
   }
 `;
 
-const Toggler = styled.div`
+const Toggler = styled.div<{ reveal: boolean; available: boolean }>`
   cursor: pointer;
   bottom: 50%;
   display: flex;

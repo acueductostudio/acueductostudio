@@ -14,7 +14,7 @@ const PageClipper = ({ children, className, unPadded }: ClipProps) => (
 
 export default PageClipper;
 
-const Wrapper = styled.main`
+const Wrapper = styled.main<{ unPadded: boolean }>`
   display: flex;
   width: calc(100% - 40px);
   height: calc(100% - 40px);

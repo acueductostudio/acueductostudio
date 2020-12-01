@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 import clientLocale from "utils/clientLocale";
 import { AppProps } from "next/app";
-import { ThemeProvider, AppContext } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout/Layout";
 import theme from "styles/theme";
+import type { AppContext } from "utils/LangContext";
 import Cookies from "js-cookie/dist/js.cookie";
 import delayForLoading from "utils/delayForLoading";
 // import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
 import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-
 
 function App({ Component, pageProps, router }: AppProps) {
   const [locale, setLocale] = useState<AppContext>(es);

@@ -83,9 +83,7 @@ export default function FooterNav() {
                 key={"itemSocial" + index}
               >
                 <li>
-                  <Link href={item.link}>
-                    {item.title}
-                  </Link>
+                  <Link href={item.link}>{item.title}</Link>
                 </li>
               </Fade>
             ))}
@@ -154,7 +152,7 @@ const Navs = styled.div`
   }
 `;
 
-const NavList = styled.div`
+const NavList = styled.div<{ accentColor?: boolean }>`
   width: 100%;
   display: flex;
   flex-direction: column;

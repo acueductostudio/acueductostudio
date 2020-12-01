@@ -24,6 +24,30 @@
     "title": "we look for partners,<br/> not clients",
     "p": "In Acueducto we firmly believe in the value of partnerships. Unlike the client-agency relationship that dominates the market, partnering with you allows us to get involved in the structure of your project and apply design processes and strategies of greater impact."
   },
+  "products_section": {
+    "intro": {
+      "title": "to develop innovative ideas",
+      "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
+    },
+    "products": [
+      {
+        "title": "digital strategy",
+        "p": "Elevate the perception of your product, service or organization through strategic design."
+      },
+      {
+        "title": "mobile<br/>and web apps",
+        "p": "Connect with your audience through any device, grow your business with a web experience or an app."
+      },
+      {
+        "title": "digital products<br/>and services",
+        "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
+      },
+      {
+        "title": "digital marketing strategies",
+        "p": "Grow your sales with communication strategies, creative content and paid advertising."
+      }
+    ]
+  },
   "process_section": {
     "title": "following a strategic process",
     "p": "Our process is the most valuable resource we have. It’s designed to operate in any industry and we follow through it in every project. We iterate over it each time we use it so every step we take gives us the security to take the next one.",

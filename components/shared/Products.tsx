@@ -1,9 +1,8 @@
 import React from "react";
-import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import TitleSection from "components/shared/TitleSection";
-import createMarkup from "utils/createMarkup";
+import { P, H2 } from "components/shared/Dangerously";
 
 import {
   Apps,
@@ -15,48 +14,35 @@ import {
 const productIconArray = [Strategy, Apps, DigitalProducts, Marketing];
 const letterArray = ["a", "b", "c", "d"];
 
-const ProductContainer = ({
-  index,
-  title,
-  p,
-  p_long,
-  showLongText,
+const Products = ({
+  intro,
+  products,
+  longer,
+}: {
+  intro: any;
+  products: Array<object>;
+  longer: boolean;
 }) => {
-  const ProductIcon = productIconArray[index];
-  const letter = letterArray[index];
-  return (
-    <Product showLongText={showLongText}>
-      <Fade triggerOnce>
-        <span>{letter}.</span>
-        <ProductIcon />
-        <div>
-          <h2 dangerouslySetInnerHTML={createMarkup(title)} />
-          <p
-            dangerouslySetInnerHTML={createMarkup(
-              showLongText && p_long ? p_long : p
-            )}
-          />
-        </div>
-      </Fade>
-    </Product>
-  );
-};
-
-const Products = ({ showLongText }: { showLongText?: boolean }) => {
-  const context = useLocaleContext();
-  const { intro, products } = context.products_section;
   return (
     <ProductsSection>
       <TitleSection {...intro} borderTop />
       <ProductsList>
-        {products.map((product, index) => (
-          <ProductContainer
-            key={"product" + index}
-            index={index}
-            {...product}
-            showLongText={showLongText}
-          />
-        ))}
+        {products.map((t: { title: string; p: string }, index) => {
+          const ProductIcon = productIconArray[index];
+          const letter = letterArray[index];
+          return (
+            <Product key={"product" + index} longer={longer}>
+              <Fade triggerOnce>
+                <span>{letter}.</span>
+                <ProductIcon />
+                <div>
+                  <H2>{t.title}</H2>
+                  <P>{t.p}</P>
+                </div>
+              </Fade>
+            </Product>
+          );
+        })}
       </ProductsList>
     </ProductsSection>
   );
@@ -64,7 +50,7 @@ const Products = ({ showLongText }: { showLongText?: boolean }) => {
 
 export default React.memo(Products);
 
-const Product = styled.div`
+const Product = styled.div<{ longer: boolean }>`
   padding: 10%;
   display: flex;
   flex-direction: column;
@@ -102,7 +88,7 @@ const Product = styled.div`
   }
   svg {
     max-width: 100px;
-    margin: ${(props) => (props.showLongText ? "10%" : "22%")} auto;
+    margin: ${(props) => (props.longer ? "10%" : "22%")} auto;
     display: block;
     transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     will-change: transform;

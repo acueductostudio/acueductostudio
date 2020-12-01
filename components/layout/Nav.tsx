@@ -23,7 +23,7 @@ export default function Nav(props) {
     <NavWrapper open={props.isOpen} id="Nav">
       {props.isOpen && (
         <>
-          <NavList onClick={props.closeNav} open={props.isOpen}>
+          <NavList onClick={props.closeNav}>
             <ul>
               {t.map(function (item, index) {
                 return (
@@ -35,7 +35,7 @@ export default function Nav(props) {
                         as={item.as ? item.as : item.link}
                         locale={props.locale}
                       >
-                        <NavLink>{item.title}</NavLink>
+                        <NavLink active={undefined}>{item.title}</NavLink>
                       </ActiveLink>
                     </li>
                   </Fade>
@@ -109,7 +109,7 @@ const Hoverable = styled.a`
   ${BorderLink({ showLink: false })}
 `;
 
-const NavLink = styled.a`
+const NavLink = styled.a<{ active: boolean }>`
   font-weight: 300;
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -300,7 +300,7 @@ const NavList = styled.nav`
   }
 `;
 
-const NavWrapper = styled.div`
+const NavWrapper = styled.div<{ open: boolean }>`
   opacity: 0;
   pointer-events: none;
   z-index: 9;

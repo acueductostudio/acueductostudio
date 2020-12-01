@@ -9,6 +9,7 @@ interface TitleProps {
   p?: string;
   link?: string;
   linktext?: string;
+  as?:string;
   borderTop?: boolean;
   children?: React.ReactNode;
 };
@@ -18,7 +19,8 @@ const TitleSection = ({
   p,
   link,
   linktext,
-  borderTop,
+  as,
+  borderTop, 
   children,
   ...intro
 }: TitleProps) => {
@@ -35,7 +37,7 @@ const TitleSection = ({
       {link && (
         <Container>
           <Fade triggerOnce>
-            <LinkWithArrow link={link} linktext={linktext} />
+            <LinkWithArrow link={link} linktext={linktext} as={as}/>
           </Fade>
         </Container>
       )}

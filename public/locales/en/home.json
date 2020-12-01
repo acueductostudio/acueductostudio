@@ -19,6 +19,30 @@
     "title": "tackling complex<br/>business challenges",
     "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.<br/><br/>Read about selected projects we have launched alongside our partners."
   },
+  "products_section": {
+    "intro": {
+      "title": "to develop innovative ideas",
+      "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
+    },
+    "products": [
+      {
+        "title": "digital strategy",
+        "p": "Elevate the perception of your product, service or organization through strategic design."
+      },
+      {
+        "title": "mobile<br/>and web apps",
+        "p": "Connect with your audience through any device, grow your business with a web experience or an app."
+      },
+      {
+        "title": "digital products<br/>and services",
+        "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
+      },
+      {
+        "title": "digital marketing strategies",
+        "p": "Grow your sales with communication strategies, creative content and paid advertising."
+      }
+    ]
+  },
   "services": {
     "intro": {
       "title": "from ideation to launch",

@@ -32,23 +32,19 @@
     "products": [
       {
         "title": "estrategia digital",
-        "p": "Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones.",
-        "pitchDescription": "Tu estrategia digital es la columna vertebral de tu negocio en internet. Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
+        "p": "Tu estrategia digital es la columna vertebral de tu negocio en internet. Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
       },
       {
         "title": "apps web y móviles",
-        "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación.",
-        "pitchDescription": "Desarrollar experiencias digitales que sean veloces, interactivas y atractivas visualmente te pondrá un paso más cerca de alcanzar tus objetivos de negocio. Pongamos a trabajar tu presencia web como una herramienta efectiva para tu negocio."
+        "p": "Desarrollar experiencias digitales que sean veloces, interactivas y atractivas visualmente te pondrá un paso más cerca de alcanzar tus objetivos de negocio. Pongamos a trabajar tu presencia web como una herramienta efectiva para tu negocio."
       },
       {
         "title": "productos<br/>y servicios digitales",
-        "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen.",
-        "pitchDescription": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
+        "p": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
       },
       {
         "title": "estrategias de<br/>marketing digital",
-        "p": "Potencializa tus ventas mediante estrategias de comunicación, contenidos creativos y publicidad pautada.",
-        "pitchDescription": "No desaproveches la manera más rápida y efectiva de conectar con casi la mitad de la población. Mediante estrategias de marketing y comunicación, publicidad pautada y contenidos creativos podemos potenciar tus ventas."
+        "p": "No desaproveches la manera más rápida y efectiva de conectar con casi la mitad de la población. Mediante estrategias de marketing y comunicación, publicidad pautada y contenidos creativos podemos potenciar tus ventas."
       }
     ]
   },

@@ -9,18 +9,17 @@ export type AppContext = {
     footer_nav: {
       navTitles: {
         main: string;
-        resources: string;
+        resources?: string;
         community: string;
         policies: string;
       };
-      main: [{ title: string; link: string; as?: string }];
-      policies: [{ title: string; link: string; as?: string }];
-      resources: [{ title: string; link: string }];
+      main: { title: string; link: string; as?: string }[];
+      policies: { title: string; link: string; as?: string }[];
+      resources?: { title: string; link: string }[];
       mailto: { subject: string; body: string };
     };
   };
   cookie_message: object;
-  products_section: { intro: { title: string; p: string }; products: [] };
   lang: string;
   legal_nav: object;
   nav: Array<object>;

@@ -15,8 +15,14 @@ const NextStudy = ({
 }) => {
   const context = useContext(LangContext);
   let n = context.next_study;
+  console.log(link);
   return (
-    <Link href={link} passHref>
+    <Link
+      href={"/portafolio/" + link}
+      as={(context.lang === "en" ? "/work/" : "/portafolio/") + link}
+      passHref
+      locale={context.lang}
+    >
       <Wrapper margined={margined}>
         <LogoContainer>
           <Logo
@@ -58,7 +64,7 @@ const Logo = styled.div`
   transform-origin: 50% 0;
 `;
 
-const Wrapper = styled.a`
+const Wrapper = styled.a<{ margined: boolean }>`
   align-items: center;
   display: flex;
   flex-direction: column;

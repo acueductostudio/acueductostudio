@@ -3,15 +3,24 @@ import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 import { Span } from "components/shared/Dangerously";
 import Arrow from "components/shared/Arrow";
+import { useRouter } from "next/router";
 
-export default function LinkWithArrow({ link, linktext }) {
+function LinkWithArrow({
+  link,
+  linktext,
+  as,
+}: {
+  link: string;
+  linktext: string;
+  as?: string;
+}) {
+  let router = useRouter();
   return (
-    <Link href={link[0]} passHref>
+    <Link href={link[0]} as={as} passHref locale={router.locale}>
       <LinkContainer>
         <Fade triggerOnce>
           <p>
-            <Span>{linktext}</Span>{" "}
-            <b>{link[1]}</b>
+            <Span>{linktext}</Span> <b>{link[1]}</b>
           </p>
         </Fade>
         <Arrow />
@@ -19,6 +28,8 @@ export default function LinkWithArrow({ link, linktext }) {
     </Link>
   );
 }
+
+export default LinkWithArrow;
 
 const LinkContainer = styled.a`
   text-decoration: none;

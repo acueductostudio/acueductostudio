@@ -19,6 +19,30 @@
     "title": "resolvemos desafiantes retos de negocio",
     "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado."
   },
+  "products_section": {
+    "intro": {
+      "title": "para desarrollar ideas innovadoras",
+      "p": "Los productos digitales pueden potenciar la cultura innovadora de una organización, automatizar sus procesos y optimizar la experiencia de marca.<br/><br/>Puedes confiar en nosotros para desarrollar:"
+    },
+    "products": [
+      {
+        "title": "estrategia digital",
+        "p": "Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
+      },
+      {
+        "title": "apps web y móviles",
+        "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación."
+      },
+      {
+        "title": "productos<br/>y servicios digitales",
+        "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
+      },
+      {
+        "title": "estrategias de<br/>marketing digital",
+        "p": "Potencializa tus ventas mediante estrategias de comunicación, contenidos creativos y publicidad pautada."
+      }
+    ]
+  },
   "services": {
     "intro": {
       "title": "de la estrategia al lanzamiento",

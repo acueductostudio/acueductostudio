@@ -37,7 +37,7 @@ const ScrollDown = styled.div`
   position: relative;
 `;
 
-const Pinned = styled.div`
+const Pinned = styled.div<{borderTop:boolean}>`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2.2rem;
   width: 100%;
