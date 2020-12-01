@@ -125,7 +125,7 @@ const NewHead = ({
       <meta name="twitter:creator" content="@acueductostudio" />
       <meta name="twitter:site" content="@acueductostudio" />
 
-      <meta name="description" content={description} />
+      <meta name="description" content={description!} />
       <meta
         name="og:description"
         property="og:description"

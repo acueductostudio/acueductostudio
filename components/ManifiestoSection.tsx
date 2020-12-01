@@ -1,13 +1,11 @@
 import React from "react";
-import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import PinnedSection from "components/shared/pinnedSections/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 
-const ManifiestoItems = () => {
-  const context = useLocaleContext();
-  let { intro, beliefs } = context.manifesto_page;
+const ManifiestoSection = ({ t }) => {
+  let { intro, beliefs } = t;
 
   return (
     <PinnedSection title={intro.title} borderTop>
@@ -29,7 +27,7 @@ const ManifiestoItems = () => {
   );
 };
 
-export default React.memo(ManifiestoItems);
+export default React.memo(ManifiestoSection);
 
 const Belief = styled.li`
   list-style: none;

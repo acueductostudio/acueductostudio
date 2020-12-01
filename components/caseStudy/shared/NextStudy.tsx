@@ -6,7 +6,13 @@ import Arrow from "components/shared/Arrow";
 import LangContext from "utils/LangContext";
 import { P } from "components/shared/Dangerously";
 
-const NextStudy = ({ link, margined }: { link: string; margined?: string }) => {
+const NextStudy = ({
+  link,
+  margined,
+}: {
+  link: string;
+  margined?: boolean;
+}) => {
   const context = useContext(LangContext);
   let n = context.next_study;
   return (

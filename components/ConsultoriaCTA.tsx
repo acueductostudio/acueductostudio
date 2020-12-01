@@ -3,15 +3,24 @@ import Link from "next/link";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import { Span } from "components/shared/Dangerously";
-import { createContact } from "utils/sendinBlue.ts";
+import { createContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
 import DefaultForm from "components/shared/DefaultForm";
 import Cookies from "js-cookie/dist/js.cookie.mjs";
 import { useRouter } from "next/router";
 import BorderLink from "components/shared/BorderedLink";
-import delayForLoading from "utils/delayForLoading.ts";
+import delayForLoading from "utils/delayForLoading";
+import {advancedMatching} from "utils/analytics";
 
-const ConsultoriaCTA = ({ cta, id, diagnostico_cta }) => {
+const ConsultoriaCTA = ({
+  cta,
+  id,
+  diagnostico_cta,
+}: {
+  cta: any;
+  id: string;
+  diagnostico_cta?: boolean;
+}) => {
   const router = useRouter();
 
   const onSubmit = (data) => {
@@ -26,7 +35,7 @@ const ConsultoriaCTA = ({ cta, id, diagnostico_cta }) => {
 
     Cookies.set("ue", data.email);
 
-    ReactPixel.init("506854653278097", { em: data.email });
+    ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Pidió consultoría
     ReactPixel.track("SubmitApplication", { email: data.email });
 

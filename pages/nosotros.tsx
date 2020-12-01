@@ -1,8 +1,12 @@
+
+import React, { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
 import styled from "styled-components";
-import React, { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import dynamic from "next/dynamic";
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
@@ -10,7 +14,7 @@ import PinnedSection from "components/shared/pinnedSections/PinnedSection";
 import { P, H4 } from "components/shared/Dangerously";
 import Process from "components/shared/Process";
 import Picture from "components/caseStudy/shared/Picture";
-import ManifiestoItems from "components/ManifiestoItems";
+import ManifiestoSection from "components/ManifiestoSection";
 
 const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   loading: () => (
@@ -18,7 +22,6 @@ const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
       <Picture
         src="/assets/img/layout/headPlacerHolder.jpg"
         alt="3DScan"
-        newimg
         height={400}
         width={400}
       />
@@ -27,29 +30,33 @@ const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
   ssr: false,
 });
 
-function About(props) {
-  let t = props.locale.about_page;
+function About({ locale, setTitle, pt, hasLoaded, mouse }) {
+  const [t, setT] = useState(pt);
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
-  }, [props.locale]);
-
+    clientLocale({
+      locale: locale,
+      fileName: "about.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
+  }, [locale]);
   return (
     <PageClipper>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
+        {...t.head}
         es_canonical={"https://acueducto.studio/nosotros"}
         en_canonical={"https://acueducto.studio/en/about"}
-        lang={props.lang}
       />
       <PinnedSection title={t.intro.title}>
         <P>{t.intro.p}</P>
         {t.team.map((person, index) => (
           <Person key={"personX" + index}>
-            {props.hasLoaded && (
+            {hasLoaded && (
               <HeadSketch
-                mouse={props.mouse}
+                mouse={mouse}
                 second={index > 0}
                 invertRotation={index > 0}
                 rotationStart={index > 0 ? 50 : 0}
@@ -63,8 +70,8 @@ function About(props) {
           </Person>
         ))}
       </PinnedSection>
-      <ManifiestoItems/>
-      <Process />
+      <ManifiestoSection t={t.manifesto}/>
+      <Process {...t.process}/>
       <TitleSection {...t.values} borderTop />
       <ContactFooter />
     </PageClipper>
@@ -72,6 +79,15 @@ function About(props) {
 }
 
 export default React.memo(About);
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "about.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const HeadLoader = styled.div`
   width: 100%;

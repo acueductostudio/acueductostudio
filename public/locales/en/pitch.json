@@ -1,6 +1,8 @@
 {
-  "page_title": "Our Pitch - Why digital technology",
-  "meta_description": "Out expertise, methodology and toolbox, the tour of what it's like to work with us",
+  "head": {
+    "title": "Our Pitch - Why digital technology",
+    "description": "Out expertise, methodology and toolbox, the tour of what it's like to work with us"
+  },
   "headerTitle": "Pitch",
   "intro": {
     "title": "and now,<br/>our pitch",
@@ -21,30 +23,6 @@
   "second_section": {
     "title": "we look for partners,<br/> not clients",
     "p": "In Acueducto we firmly believe in the value of partnerships. Unlike the client-agency relationship that dominates the market, partnering with you allows us to get involved in the structure of your project and apply design processes and strategies of greater impact."
-  },
-  "products_section": {
-    "intro": {
-      "title": "to develop innovative ideas",
-      "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
-    },
-    "products": [
-      {
-        "title": "digital strategy",
-        "p": "Elevate the perception of your product, service or organization through strategic design"
-      },
-      {
-        "title": "mobile<br/>and web apps",
-        "p": "Connect with your audience through any device, grow your business with a web experience or an app."
-      },
-      {
-        "title": "digital products<br/>and services",
-        "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
-      },
-      {
-        "title": "digital marketing strategies",
-        "p": "Grow your sales with communication strategies, creative content and paid advertising."
-      }
-    ]
   },
   "process_section": {
     "title": "following a strategic process",

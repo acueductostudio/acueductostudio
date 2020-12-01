@@ -1,0 +1,105 @@
+{
+  "head": {
+    "title": "Acerca de Acueducto",
+    "description": "Conócenos, lee sobre nosotros."
+  },
+  "headerTitle": "Nosotros",
+  "intro": {
+    "title": "una dupla que hace crecer tu negocio",
+    "p": "Sin darnos cuenta, comenzamos este estudio 15 años atrás creciendo juntos y compartiendo proyectos personales y profesionales.<br/><br/>Motivados por la innovación y los altos estándares de calidad, unimos nuestros caminos profesionales para crear inspiradoras estrategias digitales.<br/><br/>Acueducto no es sólo un estudio, es el resultado de un trayectoria que nos ha tomado años construir, como nuestra amistad."
+  },
+  "team": [
+    {
+      "name": "rodrigo<br/>salmerón",
+      "position": "diseño y desarrollo, cofundador",
+      "bio": "Diseñador de interacción, visual y de movimiento; también desarrollador de software con una Maestría en Diseño de Interacción en The Harbour Space University con más de 10 años de experiencia como freelance.<br/><br/>Ha trabajado para agencias de diseño, productoras de cine y desarrolladoras de software.<br/><br/>Rodrigo es también productor musical, compositor y letrista. Y ya se trate de música, código o de interacciones humano-máquina, siempre busca nuevos retos para probar las últimas herramientas tecnológicas."
+    },
+    {
+      "name": "artemio<br/>pedraza",
+      "position": "estrategia y comunicación, cofundador",
+      "bio": "Estratega en comunicación, <i>project manager</i> y <i>community manager</i> con más de 7 años de experiencia como freelance.<br/><br/>También se ha desarrollado en ámbitos como <i>content management</i>, consultoría de marketing y <i>copywriting</i>. Es uno de los primeros licenciados especialistas en Comunicación Digital en México.<br/><br/>Cuando no está dirigiendo el departamento de estrategias en Acueducto, representa artistas en su sello discográfico digital Bludot."
+    }
+  ],
+  "manifesto": {
+    "intro": {
+      "title": "¿qué nos hace distintos?",
+      "p": "Años de experiencia han forjado los valores fundamentales de Acueducto. Siguiendo estos principios, desarrollamos las mejores estrategias digitales para construir poderosos servicios, productos y aplicaciones.<br/><br/>Este es nuestro manifiesto."
+    },
+    "beliefs": [
+      {
+        "title": "Nos involucramos contigo",
+        "p": "Confía en nosotros, las relaciones a largo plazo llegan a resultados más significativos."
+      },
+      {
+        "title": "Amamos los retos",
+        "p": "Analizarlos juntos nos permite enfrentarlos de la mejor forma."
+      },
+      {
+        "title": "Nos obsesiona la calidad",
+        "p": "Nuestro trabajo tiene que ser impecable ¿si no, para qué hacerlo?"
+      },
+      {
+        "title": "Somos humanos",
+        "p": "Ponemos primero la calidad humana, trabajamos con respeto y con clientes respetuosos."
+      },
+      {
+        "title": "Trabajamos para tus usuarios",
+        "p": "Habrá momentos en los que nos pondremos de su lado."
+      },
+      {
+        "title": "Somos románticos de la tecnología",
+        "p": "Siempre a la vanguardia, ofrecemos soluciones para el futuro."
+      },
+      {
+        "title": "Somos justos",
+        "p": "Valuamos nuestro trabajo según el valor que agregamos a tu negocio."
+      },
+      {
+        "title": "Nos encanta aprender",
+        "p": "Aceptamos el cambio, pues muchas veces es parte de la solución."
+      },
+      {
+        "title": "Somos accesibles",
+        "p": "Escuchar tu opinión es parte fundamental de nuestro proceso."
+      }
+    ],
+    "cases": {
+      "title": "casos de estudio seleccionados",
+      "p": "Cada proyecto que desarrollamos es único, así que elegimos estos casos de estudio para retratar cómo trabaja Acueducto y lo que puede lograr.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
+    }
+  },
+  "process": {
+    "title": "con la estrategia<br/>en el núcleo",
+    "p": "La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles, áreas de oportunidad y sus mejores soluciones.<br/><br/>Abordar los problemas con una perspectiva design-driven significa desarrollar desde el inicio de cada proyecto, junto con nuestros clientes, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
+    "steps": [
+      {
+        "title": "descubre",
+        "p": "Entendemos el contexto, audiencia, necesidades y retos del proyecto.<br/>Nos informamos."
+      },
+      {
+        "title": "visualiza",
+        "p": "Replanteamos el problema para resaltar nuevos hallazgos y oportunidades.<br/>Fijamos el trayecto."
+      },
+      {
+        "title": "narra",
+        "p": "Creamos una estrategia que guíe la conceptualización, priorización y co-creación.<br/>Creamos empatía."
+      },
+      {
+        "title": "diseña, programa y ensambla",
+        "p": "Diseñamos y refinamos prototipos, procesos y <i>copywriting</i>.<br/>Desarrollamos."
+      },
+      {
+        "title": "lanza",
+        "p": "Implementamos las nuevas soluciones y apoyamos la adopción de cambios organizacionales y de innovación.<br/>Guiamos el cambio."
+      },
+      {
+        "title": "evalúa",
+        "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.<br/>Mejoramos."
+      }
+    ]
+  },
+  "values": {
+    "title": "construyendo mejores comunidades",
+    "p": "Para el beneficio de los usuarios finales, así como el de nuestros clientes, buscamos crear un impacto positivo con nuestro trabajo.<br/><br/>Por eso fundamos Acueducto, para hacer las preguntas incómodas, evaluar el terreno en el que estamos parados y así ayudar a marcas y negocios a mejorar su entorno y empoderar a sus usuarios."
+  }
+}

@@ -2,9 +2,39 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import delayForLoading from "utils/delayForLoading.ts";
+import delayForLoading from "utils/delayForLoading";
 import InputField, { SubmitField } from "components/shared/ContactInputField";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
+
+type FormInput = {
+  text: {
+    firstName: {
+      label: string;
+      placeholder: string;
+      errorMissing: string;
+    };
+    lastName: {
+      label: string;
+      placeholder: string;
+      errorMissing: string;
+    };
+    email: {
+      label: string;
+      placeholder: string;
+      errorMissing: string;
+      errorInvalid: string;
+    };
+    loading: string;
+    submit:string;
+  };
+  onSubmit: (data: object) => void;
+  formMarkup?: React.ReactNode;
+  buttonArrow?: boolean;
+  buttonArrowInverse?: boolean;
+  successMarkup?: React.ReactNode;
+  id: string;
+  infinite?: boolean;
+};
 
 const DefaultForm = ({
   text,
@@ -15,7 +45,7 @@ const DefaultForm = ({
   successMarkup,
   id,
   infinite,
-}) => {
+}: FormInput) => {
   const [formStatus, setFormStatus] = useState("");
   const { register, handleSubmit, errors } = useForm();
 

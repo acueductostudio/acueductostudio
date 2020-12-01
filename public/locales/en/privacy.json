@@ -1,0 +1,33 @@
+{
+  "head": {
+    "title": "Privacy Policy – Acueducto",
+    "description": "Read our Privacy Policy to know how we use your data."
+  },
+  "headerTitle": "Privacy Policy",
+  "intro": {
+    "title": "privacy policy",
+    "p": "There has never been a more critical time to reflect and act around privacy than now. Between users and technology, practices of data collection and information processes are being made; from data voluntarily provided by users to information collected just by browsing the web. In a world where interests and values vary, it has become a norm to demand a careful, transparent and ethical use of this information. <br/><br/>In Acueducto (“We”, “Us”, “Our”), we treat the information of the people we interact with responsibly. Here you can read about the data collection and processing practices of our site, as well as where to find the options to opt-out from them. We strongly recommend that you read this section carefully, as you should do with all the other sites you visit. <br/><br/>If you have any questions regarding these policies, do not hesitate to contact us at <a href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>"
+  },
+  "body": {
+    "subtitle1": "about Acueducto",
+    "p1": "We help our Partners (“Companies”, “Brands”, “Others”) to build digital experiences, products and services, and we often provide our services to associates who process data for their own use. This document does not reflect the privacy policies and practices of our Partners. Therefore, we are not responsible for such practices or policies outside this site.",
+    "subtitle2": "data we process",
+    "p2": "Acueducto processes your personal information by using our services and/or by providing any of this information to us:",
+    "list1": "<li>Full name</li><li>Email address</li><li>IP address</li><li>Location</li><li>Browser and device</li><li>Information about your activities on our site</li><li>Other information that you actively share with us</li>",
+    "subtitle3": "how we collect info",
+    "p3": "All the information we process is acquired as follows:",
+    "listItem1": "The contact forms on this Application. (You can cancel your suscription <a href='https://studio.us19.list-manage.com/unsubscribe?u=c9d7bbb792de4cdbe363fad75&id=434dbf9f3b' target='_blank' rel='nofollow noopener'>here</a>).",
+    "listItem2": "Emails sent to adresses ending in @acueducto.studio",
+    "listItem3": "Cookies or similar tactics (Read our ",
+    "listItem3Link": "Cookie Policy",
+    "subtitle4": "special and/or sensitive information we process",
+    "p4": "Acueducto does not intend to collect data from visitors who are under the age of 16 unless they have permission from their parents or guardians, however, we can not always confirm if our visitors are over 16. If you believe that we have collected data from a minor and you are his or her parent or guardian, contact us at <a href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a> and we will immediately delete this information.",
+    "subtitle5": "for what purpose and under what circumstances we process personal information",
+    "p5": "Acueducto collects personal information when it intends to:",
+    "list2": "<li>Optimize the operation of our Application</li><li>Contact potential partners</li><li>Improve its application Search Engine Optimization (SEO)</li>",
+    "subtitle6": "data protection",
+    "p6": "In Acueducto, multiple measures are taken to protect the information it collects, such as safeguarding data in a cloud with passwords that change periodically, however, no measure guarantees that this data can fall into the wrong hands.<br/><br/>Rest assured that if Acueducto suffers from a security breach and your data is acquired by an unauthorized third party, appropriate measures will be taken and you will be properly notified.",
+    "subtitle7": "changes to these Privacy Policies",
+    "p7": "This Privacy Policy is effective as of May 1st, 2020 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page. We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy. If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us or by placing a prominent notice on our site."
+  }
+}

@@ -2,7 +2,13 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import { B } from "components/shared/Dangerously";
 
-const Stat = ({ stat, children }) => {
+const Stat = ({
+  stat,
+  children,
+}: {
+  stat: string;
+  children?: React.ReactNode;
+}) => {
   return (
     <StatWrapper>
       <Fade triggerOnce>

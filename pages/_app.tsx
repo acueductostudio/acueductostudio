@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Router from "next/router";
 import { AppProps } from "next/app";
 import { withRouter } from "next/router";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, AppContext } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout/Layout";
 import theme from "styles/theme";
@@ -14,7 +14,7 @@ import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 function App({ Component, pageProps, router }: AppProps) {
-  const [locale, setLocale] = useState(router.locale === "en" ? en : es);
+  const [locale, setLocale] = useState<AppContext>(router.locale === "en" ? en : es);
   const [hasToConsent, setHasToConsent] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const LoadingBarRef = useRef(null);

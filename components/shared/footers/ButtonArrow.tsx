@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ButtonArrow = React.forwardRef((props, ref) =>
+type ButtonProps = { inverse?: boolean; text:string, submitButton?:boolean };
+export type ButtonRef = HTMLAnchorElement;
+
+export const ButtonArrow = React.forwardRef<ButtonRef, ButtonProps>((props, ref) =>
   !props.submitButton ? (
     <Button as="a" ref={ref} {...props} inverse={props.inverse}>
       {props.text}

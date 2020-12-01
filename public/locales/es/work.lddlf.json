@@ -1,0 +1,100 @@
+{
+  "head": {
+    "title": "Estrategia cinematográfica - La Danza de las Fieras & Acueducto",
+    "description": "Una cautivadora experiencia digital a través del cine, internet y la prensa.",
+    "image_alt": "La Danza de las Fueras, caso de estudio por Acueducto"
+  },
+  "headerTitle": "LDDLF",
+  "logo": "fieras.svg",
+  "link": "ladanzadelasfieras",
+  "intro_section": {
+    "tags": [
+      "estrategia de proyecto",
+      "branding",
+      "diseño web",
+      "ux",
+      "animación",
+      "programación",
+      "estrategia de contenido",
+      "tov digital",
+      "copywriting"
+    ],
+    "video": "lddlf_intro.mp4",
+    "title": "<b>Acto I</b><br/>El primer largometraje<br/>de Aly",
+    "p": "Alayde, mejor conocida como Aly, es una cineasta y directora creativa fundadora de la casa productora Antítesis. Impulsada por la idea de que jóvenes artistas pueden generar un impacto innovador en la industria del cine, unió esfuerzos con la casa productora Bala Films para hacer La Danza de las Fieras (LDDLF).<br/><br/>LDDLF es un largometraje que concientiza y genera reflexiones, debates y acciones para prevenir la trata de personas. Construida por seis cortometrajes, cada uno aborda una dimensión diferente del tema. La película recibió cinco premios internacionales de cine en categorías como Mejor Película y fue seleccionada en 11 festivales de cine en México y el mundo.",
+    "stats": [
+      {
+        "big": "5",
+        "small": "premios"
+      },
+      {
+        "big": "11",
+        "small": "festivales"
+      },
+      {
+        "big": "6",
+        "small": "países"
+      }
+    ],
+    "p2": "Durante la producción de la película, antes de estos remarcables resultados, Aly contactó a Acueducto para evaluar su posición. Debido a la multiplicidad de directores, puntos de vista y estilos de cine, LDDLF necesitaba un <i>branding</i> que cobijara todas las historias en un mismo concepto al igual que un sitio web que mostrara información de la película y su propósito."
+  },
+  "second_section": {
+    "title": "<b>Acto II</b><br/>Una experiencia cohesiva de múltiples frentes",
+    "p": "Se realizaron sesiones creativas y de investigación para crear la identidad de la película junto con Aly y su equipo. Algunos cortometrajes eran documentales, otros ficción e incluso uno estaba narrado desde la pantalla de un teléfono. Encontrar un tono de voz cohesivo era el primer paso a dar.",
+    "font_logo": "Logo + Animación",
+    "font_body": "Cuerpo de texto",
+    "font_titles": "Títulos",
+    "red": "Rojo salvaje",
+    "subtitle": "La primera impresión lo es todo",
+    "p2": "Parte del <i>branding</i> consistía en diseñar y animar la secuencia de inicio del filme. Tal aplicación enamoró a todos los involucrados y se convirtió en uno de los pilares de la identidad visual.<br/><br/>Haz click para verla, dura sólo un par de minutos (y sube el volumen de tus bocinas, vale la pena)."
+  },
+  "third_section": {
+    "subtitle": "La experiencia web",
+    "p": "Acueducto se dio a la tarea de diseñar un portal que expusiera información sobre el largometraje, sus realizadores y los artículos de prensa que fueran publicados sobre ella.<br/><br/>Durante la fase de Descubrimiento, se hicieron entrevistas con socios, productores, directores y reporteros para encontrar áreas de oportunidad y necesidades. Las conclusiones que arrojó esta investigación fueron el motor de la estrategia web del proyecto.",
+    "insights": {
+      "portfolio": {
+        "title": "Portafolio para todos",
+        "p": "Para cineastas como Aly, el currículum es fundamental. Filmar un largometraje es sumamente costoso y conseguir fondos para lograrlo requiere de confianza, experiencia y estatus. Por esta razón, el sitio hace énfasis en los créditos a todos los productores, casas productoras, patrocinadores y directores de la obra.",
+        "quote": {
+          "quote": "El sitio web de LDDLF se convirtió en parte de mi curriculum, ahora puedo compartir una pieza de trabajo atractiva, rigurosa y comprensible junto con mi reel",
+          "name": "Gina Herrera",
+          "label": "Escritora y Directora en La Danza de las Fieras"
+        }
+      },
+      "press": {
+        "title": "Bienvenidos: prensa y festivales",
+        "p": "La prensa pocas veces encuentra la información que necesita para redactar notas sobre cine. Los artículos y noticias son de los principales medios de promoción para un filme, así que se hizo una sección dedicada sólo para prensa con la disponibilidad de <i>press kits</i>, imágenes y un salón de la fama de la película con premios y publicaciones. De esta forma ningún periodista tendría que salir del sitio para recolectar toda la información de la película.",
+        "quote": {
+          "quote": "Los festivales de cine y medios de comunicación constantemente requieren que tu película tenga un press kit en orden y traducido, que sea enviado dependiendo la información requerida. La forma en la que está diseñado nuestro sitio simplificó de sobremanera cómo compartimos esa información.",
+          "name": "Miguel Ángel Fernández",
+          "label": "Editor, Escritor & Director en La Danza de las fieras"
+        }
+      },
+      "availability": {
+        "title": "Disponibilidad",
+        "p": "En los festivales de cine y proyecciones siempre hay mucho trabajo de por medio, por lo que toda duda tiene que ser resuelta con agilidad. Además de organizar toda la información en bloques fáciles de discernir, el sitio incluye un componente de contacto en cada página del sitio y en la navegación, permitiendo a los organizadores de estos eventos y a todos los usuarios contactar fácilmente al equipo de LDDLF."
+      }
+    },
+    "subtitle2": "La cereza del pastel",
+    "p2": "Obsesionarse con los detalles vale la pena, sobretodo cuando agregan un valor real a los usuarios finales. Es por eso que Acueducto programó la aplicación web internamente, desde cero, para lograr un portal veloz, ligero y accesible para dispositivos móviles.<br/><br/>Las últimas tecnologías y herramientas pueden hacer la vida del usuario más fácil, por eso se agregó un extra para el equipo de distribución y los propios cineastas. La aplicación fue transformada en una <i>Progressive Web App</i> (PWA), así la página puede funcionar sin conexión para mostrar el sitio aunque haya una pobre o nula conexión a internet, sin tener que instalar nada desde una <i>AppStore</i>."
+  },
+  "fourth_section": {
+    "subtitle": "¿Y el contenido?",
+    "p": "Un hermoso sitio web fue construido y la <i>premiere</i> de la película estaba a la vuelta de la esquina. Era momento de entregar un mensaje claro, conciso y elegante ¿Pero cómo? Con un tono y mensaje unificado a través de toda la experiencia. Con esto en mente, de la mano con las casas productoras, Acueducto diseñó la redacción del sitio web de forma coherente con los <i>press kits</i>. Así toda la narrativa del proyecto fue controlada no sólo en la página sino también en la prensa que la difundió. <br/><br/>Encontrar artículos donde los adjetivos y mensajes del sitio web de LDDLF son reutilizados es la norma, muchas veces palabra por palabra.",
+    "stat": "de las publicaciones en prensa utilizaron o citaron palabra por palabra contenido del sitio o <i>press kit</i>.",
+    "p2": "Sin embargo ¿no es lo más valioso para un cineasta que los espectadores vean su película? En las taquillas de los festivales pueden competir cientos de filmes por la atención de los asistentes. La mayoría de las películas no cuentan con un sitio que incluya su trailer, sinópsis y créditos, no cubrir este frente impacta directamente en el número de espectadores finales al no poder consultar información adicional en buscadores. Además de resolver este problema, se hizo un gran esfuerzo de posicionamiento en buscadores (SEO) para que cualquier búsqueda de “La Danza de las Fieras” arrojara el sitio web como primer resultado."
+  },
+  "fifth_section": {
+    "title": "<b>Acto III</b><br/>That’s a wrap",
+    "p": "La Danza de las Fieras terminó recientemente su tour alrededor del mundo en más de 6 países. 12 festivales de cine y 22 menciones en prensa global avalan a la película como una autoridad en el tema de tráfico de personas.<br/><br/>El sitio web fue crucial para posicionar la película en estos festivales y en la industria del cine en general; y la estrategia digital hizo que las aplicaciones a festivales fueran más sencillas tanto para cineastas como organizadores.",
+    "quote": {
+      "quote": "El sitio web de La Danza de las Fieras fue la razón por la que Cinema23, empresa encargada de la organización de los Premios Fénix, encontró toda la información necesaria para considerar el largometraje en su premiación.",
+      "name": "Javier Rodríguez",
+      "label": "Productor de Festivales de Cine"
+    },
+    "p2": "LDDLF está comenzando su faceta de distribución y Aly junto a su equipo continúan generando conciencia y debate alrededor de la crisis de tráfico humano en México y el mundo.<br/><br/>Respaldada por un poderoso branding, sitio web y estrategia de contenido, Aly promocionó con éxito su primer largometraje viajando por el mundo, ganando visibilidad y empujando la conversación alrededor del tráfico de personas en las pantallas de cine y en la vida diaria de sus espectadores."
+  },
+  "sixth_section": {
+    "linkp": "visita"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "head": {
+    "title": "From strategy to production - La Danza de las Fieras & Acueducto",
+    "description": "A compelling digital experience story through cinema, web, and press.",
+    "image_alt": "La Danza de las Fieras, case study by Acueducto"
+  },
+  "headerTitle": "LDDLF",
+  "title": "from strategy to production in the filmmaking industry",
+  "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
+  "logo": "fieras.svg",
+  "link": "ladanzadelasfieras",
+  "intro_section": {
+    "tags": [
+      "project strategy",
+      "branding",
+      "web design",
+      "ux",
+      "animation",
+      "coding",
+      "content strategy",
+      "digital tov",
+      "copywriting"
+    ],
+    "video": "lddlf_intro.mp4",
+    "title": "<b>Act I</b> <br/>Aly’s first <br/>feature-length",
+    "p": "Alayde, better known as Aly, is a filmmaker, creative and creative director of her self-founded production company, Antítesis. Fueled by the idea that young artists can make an innovative impact in the film industry, she worked along with film production house Bala Films to create La Danza de las Fieras (The Wild Dance).<br/><br/>La Danza de las Fieras is a feature-length film that is raising awareness about human trafficking. It’s made up of six short films, each one focused on a different dimension of this topic. The movie was awarded five international film awards, including Best Film, and was selected in 11 film festivals in México and across the globe.",
+    "stats": [
+      {
+        "big": "5",
+        "small": "awards"
+      },
+      {
+        "big": "11",
+        "small": "festivals"
+      },
+      {
+        "big": "6",
+        "small": "countries"
+      }
+    ],
+    "p2": "Before these amazing results and during the production process, Aly contacted Acueducto in order to review her position. She was also co-directing one of the short films, and because of the multiplicity of directors, views, and film styles she needed a strong branding to fit all the stories under one same package and a powerful website that displayed information about the film."
+  },
+  "second_section": {
+    "title": "<b>Act II</b><br/>A multi-front<br/>cohesive experience",
+    "p": "Creative and research sessions were taken alongside Aly and her team in order to craft a visual identity and branding for the film. Some shorts were documentaries and some fiction; one of them was even narrated from a phone screen. Finding a voice and a cohesive tone was the first task to take on.",
+    "font_logo": "Logo + Animation",
+    "font_body": "Body text",
+    "font_titles": "Titles",
+    "red": "Wild Red",
+    "subtitle": "First impressions are always paramount",
+    "p2": "Part of the branding included the design and animation for the opening sequence of the film. Everyone involved loved it so much that this application stuck to be reused on the web app.<br/><br/>Click to watch it, it's only a couple of minutes long (and crank up your speakers, it’s worth it)."
+  },
+  "third_section": {
+    "subtitle": "Movie portal, the web experience",
+    "p": "Acueducto was tasked with designing a portal that would display information about the film, the filmmakers, and the press articles that would be published about La Danza de las Fieras.<br/><br/>During the discovery phase, interviews were made with stakeholders, producers, directors, and reporters to look for hidden needs and painpoints. These interviews threw several insights that became the core of the web strategy.",
+    "insights": {
+      "portfolio": {
+        "title": "Portfolio for everyone",
+        "p": "Curriculum is really important for filmmakers like Aly, films are really expensive to make and getting the funds always require a lot of trust, experience, and status. That’s why the web app emphasizes the credits of the producers, production houses, sponsors, and directors.",
+        "quote": {
+          "quote": "La Danza de las Fieras’ website has become part of my curriculum, now I can also share an atractive, comprehensible and exhaustive piece of work next to my reel.",
+          "name": "Gina Herrera",
+          "label": "Writer & Director in La Danza de las Fieras"
+        }
+      },
+      "press": {
+        "title": "Press and festivals, welcome",
+        "p": "Press often struggles to find the information and resources they need for writing pieces about films. These publications are films’ main media outlets, so it was decided to give the press their own section with access to presskits, imagery, and the movie’s hall of fame with awards and publications. No reporter would need to leave the web app to gather additional information.",
+        "quote": {
+          "quote": "Film festivals and media outlets often require a media kit from your film that needs to be organized, translated, and sent away depending on the required information.<br/>The way our website was designed greatly simplified us the sharing of that information.",
+          "name": "Miguel Ángel Fernández",
+          "label": "Editor, Writer & Director in La Danza de las fieras"
+        }
+      },
+      "availability": {
+        "title": "Availability",
+        "p": "In film festival submissions and film screenings there is always a lot of work involved, and solving any doubt needs to happen fast. That’s why, on top of organizing all the film’s information on clear and easy-to-find chunks, the web app includes a contact feature on every page and in the fixed navigation, allowing users to effortlessly reach out if they feel the need."
+      }
+    },
+    "subtitle2": "And the cherry on top",
+    "p2": "Obsessing with details is worth it, especially when they add real value to the users. That is why Acueducto tailor-coded the web app in-house from the ground up to achieve a lightning-fast, lightweight, and mobile-accessible portal.<br/><br/>Latest technologies and tools can make users’ life easier, that is why Acueducto gave something extra to the internal distribution team and the filmmakers themselves. The website was turned into a Progressive Web App to enable offline capabilities and in this way allowing anyone to show it around even in poor or null connectivity conditions (without having to install anything from an AppStore!)."
+  },
+  "fourth_section": {
+    "subtitle": "What about the content?",
+    "p": "A powerful web app was built and the film’s premier was getting close. It was time to deliver its message in a clear, concise, and elegant way. But how? Having a unified tone and message throughout the whole experience. With this in mind, alongside the production houses of the film, Acueducto crafted the web-app’s copywriting. That way the whole narrative around the project was controlled; not just on the web app, but also in the press.<br/><br/>It is a common thing to find throughout press articles that the messages and adjectives of La Danza de las Fieras’ web app were used, most of them word by word.",
+    "stat": "of press publications quoted word by word content on the web app or the presskit.",
+    "p2": "But, is it not the most valuable result for the filmmakers to actually get people to watch their film? In film festival’s box office listings, they can compete with hundreds of other films for viewers’ attention. Most of them do not have a proper portal to hold their synopsis, credits, and trailer, and this lack of preview assets impacts the film’s viewing rate. This is why SEO for “La Danza de las Fieras” was paramount, a lot of effort was put into so that any search of that combination of words would throw the web app as the first result."
+  },
+  "fifth_section": {
+    "title": "<b>Act III</b><br/>That’s a wrap",
+    "p": "La Danza de las Fieras just ended its film festival tour around the world in more than 12 international film festivals in 6 different countries, and 22 press mentions across the globe endorse the film as an authority on the human trafficking matter.<br/><br/>The web app was crucial to position the movie in these festivals, and in the film industry in general; the digital strategy made the submissions easier both for the filmmakers and film festival organizers.",
+    "quote": {
+      "quote": "La Danza de las Fieras’ website was the reason Cinema23, the organization responsable for the Iberoamerican Phoenix Film Awards, found all the information needed to consider the film eligible.",
+      "name": "Javier Rodríguez",
+      "label": "Film festival coordinator"
+    },
+    "p2": "La Danza de las Fieras is entering it’s distribution phase as Aly and her team continue to raise awareness on the human trafficking crisis.<br/><br/>Supported by a powerful branding, web app & content strategy, Aly nailed her first feature-length movie touring around the world, winning visibility and pushing the human trafficking conversation from the screens to the everyday life of movie goers."
+  },
+  "sixth_section": {
+    "linkp": "visit"
+  }
+}

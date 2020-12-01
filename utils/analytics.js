@@ -20,3 +20,20 @@ export const logException = (description = "", fatal = false) => {
     ReactGA.exception({ description, fatal });
   }
 };
+
+//ReactPixel
+export const advancedMatching = (email) => {
+  const am = {
+    em: email,
+    ct: null,
+    country: null,
+    db: null,
+    fn: null,
+    ge: null,
+    ln: null,
+    ph: null,
+    st: null,
+    zp: null,
+  };
+  return am;
+};

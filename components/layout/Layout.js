@@ -14,7 +14,7 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NewsletterPopup from "components/NewsletterPopup";
 import TagManager from "react-gtm-module";
 
-const HomeSketch = dynamic(import("../../components/homeSketch/HomeSketch"), {
+const HomeSketch = dynamic(import("../homeSketch/HomeSketch"), {
   ssr: false,
 });
 

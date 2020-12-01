@@ -1,7 +1,9 @@
-import styled from "styled-components";
 import { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import styled from "styled-components";
 import useInterval from "utils/useInterval";
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
@@ -10,7 +12,7 @@ import PinnedSection from "components/shared/pinnedSections/PinnedSection";
 import { P } from "components/shared/Dangerously";
 import ConsultoriaCTA from "components/ConsultoriaCTA";
 import Steps from "components/shared/Steps";
-import es from "public/locales/es/consultoria.json";
+
 import {
   DigitalTransformation,
   Marketing,
@@ -27,8 +29,7 @@ const stepIconArray = [
   Culture,
 ];
 
-const SpinPinnedSection = ({ hasLoaded, children }) => {
-  let { intro } = es.consultoria_page;
+const SpinPinnedSection = ({ hasLoaded, children, intro }) => {
   const [spinWord, setSpinWord] = useState(0);
   useInterval(
     () => {
@@ -42,34 +43,30 @@ const SpinPinnedSection = ({ hasLoaded, children }) => {
   return <PinnedSection title={spinTitle}>{children}</PinnedSection>;
 };
 
-function Consultoria({ setTitle, lang, hasLoaded }) {
+function Consultoria({ locale, setTitle, pt, hasLoaded }) {
   let {
-    page_title,
-    meta_description,
-    image_alt,
+    head,
     headerTitle,
     intro,
-    cta,
+    cta, 
     fit_section,
     process_section,
     areas_section,
     last_section,
-  } = es.consultoria_page;
+  } = pt;
 
   useEffect(() => {
     setTitle(headerTitle);
-  }, []);
+  }, [locale]);
 
   return (
     <PageClipper>
       <Head
-        title={page_title}
-        description={meta_description}
-        image={{ fileName: "og_image_consultoria.jpg", alt: image_alt }}
+        {...head}
+        image={{ fileName: "og_image_consultoria.jpg", alt: head.image_alt }}
         es_canonical="https://acueducto.studio/consultoria"
-        lang={lang}
       />
-      <SpinPinnedSection hasLoaded={hasLoaded}>
+      <SpinPinnedSection hasLoaded={hasLoaded} intro={intro}>
         <>
           <P>{intro.p}</P>
           <ConsultoriaCTA cta={cta} id="first" />
@@ -119,6 +116,15 @@ function Consultoria({ setTitle, lang, hasLoaded }) {
 }
 
 export default Consultoria;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "consultoria.json", oneLang: "es" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const StepGrid = styled.div`
   display: flex;

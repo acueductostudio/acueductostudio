@@ -3,7 +3,11 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import TitleSection from "components/shared/TitleSection";
 
-const Services = ({ services }: { services: any }) => {
+const Services = ({
+  services,
+}: {
+  services: { intro: { title: string; p: string }; service_categories: any };
+}) => {
   const { intro, service_categories } = services;
   return (
     <ServicesSection>

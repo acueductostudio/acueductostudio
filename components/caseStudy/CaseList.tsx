@@ -65,26 +65,21 @@ const SingleCase = (props) => {
   );
 };
 
-const CaseList = ({ limit, noPlay }: { limit?: number; noPlay?: boolean }) => {
+const CaseList = ({ limit }: { limit?: number }) => {
   const context = useContext(LangContext);
-  let cases = Object.entries(context.casestudies.studies)
-    .reverse()
-    .map(function (study, index) {
-      study = study[1];
-      if (limit !== undefined && index + 1 > limit) {
-        return;
-      } else {
-        return (
-          <SingleCase
-            key={"case" + index}
-            {...study}
-            noPlay={noPlay}
-            lang={context.lang}
-          />
-        );
-      }
-    });
-  return <CaseStudiesWrapper>{cases}</CaseStudiesWrapper>;
+  return (
+    <CaseStudiesWrapper>
+      {context.casestudies.map(function (study, index) {
+        if (limit !== undefined && index + 1 > limit) {
+          return;
+        } else {
+          return (
+            <SingleCase key={"case" + index} {...study} lang={context.lang} />
+          );
+        }
+      })}
+    </CaseStudiesWrapper>
+  );
 };
 
 export default React.memo(CaseList);

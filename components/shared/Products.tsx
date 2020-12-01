@@ -19,7 +19,7 @@ const ProductContainer = ({
   index,
   title,
   p,
-  pitchDescription,
+  p_long,
   showLongText,
 }) => {
   const ProductIcon = productIconArray[index];
@@ -33,7 +33,7 @@ const ProductContainer = ({
           <h2 dangerouslySetInnerHTML={createMarkup(title)} />
           <p
             dangerouslySetInnerHTML={createMarkup(
-              showLongText && pitchDescription ? pitchDescription : p
+              showLongText && p_long ? p_long : p
             )}
           />
         </div>
@@ -44,7 +44,7 @@ const ProductContainer = ({
 
 const Products = ({ showLongText }: { showLongText?: boolean }) => {
   const context = useLocaleContext();
-  const { intro, products } = context.pitch_page.products_section;
+  const { intro, products } = context.products_section;
   return (
     <ProductsSection>
       <TitleSection {...intro} borderTop />

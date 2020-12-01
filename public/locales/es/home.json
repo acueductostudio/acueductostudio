@@ -1,7 +1,7 @@
 {
   "home": {
-    "page_title": "Acueducto, un estudio de estrategias e interfaces digitales en CDMX",
-    "meta_description": "Nos asociamos con innovadores alrededor del mundo para desarrollar estrategias y experiencias digitales que cuentan historias convincentes, inspiran comunidades y forjen vínculos significativos."
+    "title": "Acueducto, un estudio de estrategias e interfaces digitales en CDMX",
+    "description": "Nos asociamos con innovadores alrededor del mundo para desarrollar estrategias y experiencias digitales que cuentan historias convincentes, inspiran comunidades y forjen vínculos significativos."
   },
   "header_title": " ",
   "landing": {
@@ -15,36 +15,6 @@
     "linktext": "¿Tenemos tu atención?<br/>Lee nuestro"
   },
   "carousel": ["startups", "marcas", "corporativos"],
-  "process": {
-    "title": "con la estrategia<br/>en el núcleo",
-    "p": "La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles, áreas de oportunidad y sus mejores soluciones.<br/><br/>Abordar los problemas con una perspectiva design-driven significa desarrollar desde el inicio de cada proyecto, junto con nuestros clientes, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
-    "steps": [
-      {
-        "title": "descubre",
-        "p": "Entendemos el contexto, audiencia, necesidades y retos del proyecto.<br/>Nos informamos."
-      },
-      {
-        "title": "visualiza",
-        "p": "Replanteamos el problema para resaltar nuevos hallazgos y oportunidades.<br/>Fijamos el trayecto."
-      },
-      {
-        "title": "narra",
-        "p": "Creamos una estrategia que guíe la conceptualización, priorización y co-creación.<br/>Creamos empatía."
-      },
-      {
-        "title": "diseña, programa y ensambla",
-        "p": "Diseñamos y refinamos prototipos, procesos y <i>copywriting</i>.<br/>Desarrollamos."
-      },
-      {
-        "title": "lanza",
-        "p": "Implementamos las nuevas soluciones y apoyamos la adopción de cambios organizacionales y de innovación.<br/>Guiamos el cambio."
-      },
-      {
-        "title": "evalúa",
-        "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.<br/>Mejoramos."
-      }
-    ]
-  },
   "studies": {
     "title": "resolvemos desafiantes retos de negocio",
     "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado."

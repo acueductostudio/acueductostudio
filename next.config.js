@@ -27,25 +27,32 @@ const nextConfig = {
       {
         source: "/en/contact",
         destination: "/en/contacto",
-        locale:false, 
+        locale: false,
       },
       {
         source: "/en/work",
         destination: "/en/portafolio",
-        locale:false,
+        locale: false,
+      },
+      {
+        source: "/en/privacy",
+        destination: "/en/privacidad",
+        locale: false,
       },
       {
         source: "/en/work/:slug",
         destination: "/en/portafolio/:slug",
-        locale:false, 
+        locale: false,
       },
       {
-        source: "/en/nosotros",
-        destination: "/en/about",
+        source: "/en/about",
+        destination: "/en/nosotros",
+        locale: false,
       },
       {
         source: "/service-worker.js",
         destination: "/_next/static/service-worker.js",
+        locale: false,
       },
     ];
   },
@@ -70,8 +77,8 @@ const nextConfig = {
     SENDINBLUE_API: process.env.SENDINBLUE_API,
   },
   i18n: {
-    locales: ['es', 'en'],
-    defaultLocale: 'es',
+    locales: ["es", "en"],
+    defaultLocale: "es",
     localeDetection: false,
   },
 };

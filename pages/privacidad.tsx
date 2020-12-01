@@ -1,27 +1,35 @@
-import Head from "components/layout/Head.tsx";
+import { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
+import Head from "components/layout/Head";
 import Link from "next/link";
 import PageClipper from "components/layout/PageClipper";
 import SimplePinnedSection from "components/shared/pinnedSections/SimplePinnedSection";
 import ContactFooter from "components/shared/footers/ContactFooter";
-import { useEffect } from "react";
 import { P, Ul, Li } from "components/shared/Dangerously";
 
-export default function Privacy(props) {
-  let t = props.locale.privacy_page;
+export default function Privacy({ locale, setTitle, pt }) {
+  const [t, setT] = useState(pt);
   let b = t.body;
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
-  }, [props.lang]);
+    clientLocale({
+      locale: locale,
+      fileName: "privacy.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
+  }, [locale]);
 
   return (
     <PageClipper>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
+        {...t.head}
         es_canonical={"https://acueducto.studio/privacidad"}
         en_canonical={"https://acueducto.studio/en/privacy"}
-        lang={props.lang}
       ></Head>
       <SimplePinnedSection title={t.intro.title}>
         <P>{t.intro.p}</P>
@@ -37,9 +45,7 @@ export default function Privacy(props) {
           <li>{b.listItem2}</li>
           <li>
             {b.listItem3}
-            <Link
-              href={props.locale.lang === "en" ? "/en/cookies" : "/cookies"}
-            >
+            <Link href={"/cookies"} locale={locale}>
               <a>{b.listItem3Link}</a>
             </Link>
             )
@@ -59,3 +65,12 @@ export default function Privacy(props) {
     </PageClipper>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "privacy.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};

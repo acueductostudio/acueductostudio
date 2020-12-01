@@ -1,130 +1,130 @@
 {
-  "consultoria_page": {
-    "page_title": "Consultoría digital para negocios | Acueducto",
-    "meta_description": "Asesórate en estrategias e interfaces digitales. Consultoría en transformación digital, automatización de procesos, cultura de innovación y experiencia de marca.",
-    "image_alt" : "Consultoría digital por Acueducto",
-    "headerTitle": "consultoria",
+  "head": {
+    "title": "Consultoría digital para negocios | Acueducto",
+    "description": "Asesórate en estrategias e interfaces digitales. Consultoría en transformación digital, automatización de procesos, cultura de innovación y experiencia de marca.",
+    "image_alt": "Consultoría digital por Acueducto"
+  },
+  "headerTitle": "consultoria",
+  "intro": {
+    "p": "Asesórate en estrategias e interfaces digitales con nuestra consultoría para startups, marcas y corporativos. Nos especializamos en transformación digital, automatización de procesos, cultura de innovación y experiencia de marca.",
+    "pre_title": "deja de perder ",
+    "words": ["tiempo", "clientes", "recursos"],
+    "post_title": " "
+  },
+  "cta": {
+    "title": "agenda tu consultoría digital",
+    "price": "$5,200.00 <b>MXN</b>",
+    "sessions": "2 sesiones",
+    "firstName": {
+      "label": "nombre",
+      "placeholder": "tu nombre",
+      "errorMissing": "*falta tu nombre"
+    },
+    "lastName": {
+      "label": "apellido",
+      "placeholder": "tu apellido",
+      "errorMissing": "*falta tu apellido"
+    },
+    "email": {
+      "label": "email de trabajo",
+      "placeholder": "tu email",
+      "errorMissing": "*falta tu email",
+      "errorInvalid": "*email inválido"
+    },
+    "submit": "agendar cita",
+    "loading": "redirigiendo...",
+    "success": {
+      "title": "¡gracias!",
+      "p": "Te redireccionaremos en unos segundos."
+    },
+    "title2": "evalúa la estrategia digital de tu negocio",
+    "linktext": "¿Estás pensando si la consultoría es adecuada para ti? Prueba gratis nuestro ",
+    "link": ["/diagnostico", "diagnóstico de estrategia digital"],
+    "linktext2": " y evalúa dónde estás parado."
+  },
+  "fit_section": {
+    "title": "guiamos a tu negocio en integraciones digitales",
+    "p": "Analizamos los principales retos de tu negocio para encontrar soluciones con tecnología y prácticas digitales.</br></br>Este workshop es para ti si:",
+    "ul": [
+      "Tienes una idea para una app o un servicio digital",
+      "Quieres medir resultados en tu negocio y necesitas recolectar datos",
+      "Buscas optimizar la experiencia de tu web y sus métricas",
+      "Notas procesos repetitivos en tu negocio que podrías automatizar",
+      "No consigues resultados en marketing digital"
+    ]
+  },
+  "process_section": {
     "intro": {
-      "p": "Asesórate en estrategias e interfaces digitales con nuestra consultoría para startups, marcas y corporativos. Nos especializamos en transformación digital, automatización de procesos, cultura de innovación y experiencia de marca.",
-      "pre_title": "deja de perder ",
-      "words": ["tiempo", "clientes", "recursos"],
-      "post_title": " "
+      "title": "con una proceso diseñado para asegurar resultados",
+      "p": "¿Por qué dividimos nuestras consultorías en dos sesiones? Entre ellas, hacemos investigación de tu caso específico para ofrecerte soluciones actualizadas, adecuadas y puntuales."
     },
-    "cta": {
-      "title": "agenda tu consultoría digital",
-      "price": "$5,200.00 <b>MXN</b>",
-      "sessions": "2 sesiones",
-      "firstName": {
-        "label": "nombre",
-        "placeholder": "tu nombre",
-        "errorMissing": "*falta tu nombre"
+    "process": [
+      {
+        "title": "discutimos",
+        "p": "Los problemas y necesidades de tu negocio."
       },
-      "lastName": {
-        "label": "apellido",
-        "placeholder": "tu apellido",
-        "errorMissing": "*falta tu apellido"
+      {
+        "title": "sintetizamos",
+        "p": "El problema a solucionar y creamos Key Progress Indicators (KPIs)."
       },
-      "email": {
-        "label": "email de trabajo",
-        "placeholder": "tu email",
-        "errorMissing": "*falta tu email",
-        "errorInvalid": "*email inválido"
+      {
+        "title": "investigamos",
+        "p": "Las mejores prácticas y tendencias en tu industria."
       },
-      "submit": "agendar cita",
-      "loading": "redirigiendo...",
-      "success": {
-        "title": "¡gracias!",
-        "p": "Te redireccionaremos en unos segundos."
-      },
-      "title2": "evalúa la estrategia digital de tu negocio",
-      "linktext": "¿Estás pensando si la consultoría es adecuada para ti? Prueba gratis nuestro ",
-      "link": ["/diagnostico", "diagnóstico de estrategia digital"],
-      "linktext2": " y evalúa dónde estás parado."
+      {
+        "title": "presentamos",
+        "p": "Soluciones para alcanzar tus objetivos y facilitar la toma de decisiones."
+      }
+    ]
+  },
+  "areas_section": {
+    "intro": {
+      "title": "enfocándonos en áreas estratégicas",
+      "p": "La cotidianidad digital juega un papel fundamental en las relaciones de tus clientes con tu negocio; prepara tu organización para adaptarse al presente y robustecerse para el futuro en áreas como:"
     },
-    "fit_section": {
-      "title": "guiamos a tu negocio en integraciones digitales",
-      "p": "Analizamos los principales retos de tu negocio para encontrar soluciones con tecnología y prácticas digitales.</br></br>Este workshop es para ti si:",
+    "areas": [
+      {
+        "title": "estrategia digital",
+        "p": "¿Tu estrategia digital está diseñada para crecer y escalar tu negocio de manera ágil?</br></br>Analicémosla para elevar la eficiencia de tus productos, servicios y organización en el ecosistema tecnológico. Exploremos nuevas líneas de negocio o fortalezcamos tus estrategias existentes."
+      },
+      {
+        "title": "transformación digital",
+        "p": "Evaluemos tus procesos analógicos y busquemos oportunidades para eficientar procesos, recabar data o apoyar a RH.</br></br>Encuentra oportunidades en tu organización donde antes veías limitantes, establezcamos los procesos y herramientas más adecuados para estimular su crecimiento."
+      },
+      {
+        "title": "interfaces digitales",
+        "p": "Analicemos la experiencia que estás brindando a tus usuarios en la web y plataformas móviles. Evaluemos el diseño de tus interfaces contra las mejores prácticas en experiencia de usuario (UX), copywriting y estrategias de conversión."
+      },
+      {
+        "title": "marketing digital",
+        "p": "Optimicemos las tácticas de marketing que estás llevando a cabo y encontremos las mejores opciones para tu organización e industria. Ya sea emprender una campaña, mejorar las ya existentes o identificar oportunidades para crecer tu mercado."
+      },
+      {
+        "title": "cultura empresarial",
+        "p": "¿Es momento de adoptar una solución digital? Planeemos cómo tomar un rol activo con tu organización en adopción y capacitación tecnológica. Adquiere una visión clara sobre cómo crear un entorno productivo y saludable."
+      }
+    ],
+    "area_extra": {
+      "title": "cada consultoría incluye",
       "ul": [
-        "Tienes una idea para una app o un servicio digital",
-        "Quieres medir resultados en tu negocio y necesitas recolectar datos",
-        "Buscas optimizar la experiencia de tu web y sus métricas",
-        "Notas procesos repetitivos en tu negocio que podrías automatizar",
-        "No consigues resultados en marketing digital"
-      ]
-    },
-    "process_section": {
-      "intro": {
-        "title": "con una proceso diseñado para asegurar resultados",
-        "p": "¿Por qué dividimos nuestras consultorías en dos sesiones? Entre ellas, hacemos investigación de tu caso específico para ofrecerte soluciones actualizadas, adecuadas y puntuales."
-      },
-      "process": [
         {
-          "title": "discutimos",
-          "p": "Los problemas y necesidades de tu negocio."
+          "li": "Desarrollo de un draft de planeación"
         },
         {
-          "title": "sintetizamos",
-          "p": "El problema a solucionar y creamos Key Progress Indicators (KPIs)."
+          "li": "Dos sesiones virtuales de hasta una hora y media cada una"
         },
         {
-          "title": "investigamos",
-          "p": "Las mejores prácticas y tendencias en tu industria."
+          "li": "Investigación de tu caso particular"
         },
         {
-          "title": "presentamos",
-          "p": "Soluciones para alcanzar tus objetivos y facilitar la toma de decisiones."
+          "li": "Síntesis de posibles soluciones con las mejores prácticas de tu industria"
         }
       ]
-    },
-    "areas_section": {
-      "intro": {
-        "title": "enfocándonos en áreas estratégicas",
-        "p": "La cotidianidad digital juega un papel fundamental en las relaciones de tus clientes con tu negocio; prepara tu organización para adaptarse al presente y robustecerse para el futuro en áreas como:"
-      },
-      "areas": [
-        {
-          "title": "estrategia digital",
-          "p": "¿Tu estrategia digital está diseñada para crecer y escalar tu negocio de manera ágil?</br></br>Analicémosla para elevar la eficiencia de tus productos, servicios y organización en el ecosistema tecnológico. Exploremos nuevas líneas de negocio o fortalezcamos tus estrategias existentes."
-        },
-        {
-          "title": "transformación digital",
-          "p": "Evaluemos tus procesos analógicos y busquemos oportunidades para eficientar procesos, recabar data o apoyar a RH.</br></br>Encuentra oportunidades en tu organización donde antes veías limitantes, establezcamos los procesos y herramientas más adecuados para estimular su crecimiento."
-        },
-        {
-          "title": "interfaces digitales",
-          "p": "Analicemos la experiencia que estás brindando a tus usuarios en la web y plataformas móviles. Evaluemos el diseño de tus interfaces contra las mejores prácticas en experiencia de usuario (UX), copywriting y estrategias de conversión."
-        },
-        {
-          "title": "marketing digital",
-          "p": "Optimicemos las tácticas de marketing que estás llevando a cabo y encontremos las mejores opciones para tu organización e industria. Ya sea emprender una campaña, mejorar las ya existentes o identificar oportunidades para crecer tu mercado."
-        },
-        {
-          "title": "cultura empresarial",
-          "p": "¿Es momento de adoptar una solución digital? Planeemos cómo tomar un rol activo con tu organización en adopción y capacitación tecnológica. Adquiere una visión clara sobre cómo crear un entorno productivo y saludable."
-        }
-      ],
-      "area_extra": {
-        "title": "cada consultoría incluye",
-        "ul": [
-          {
-            "li": "Desarrollo de un draft de planeación"
-          },
-          {
-            "li": "Dos sesiones virtuales de hasta una hora y media cada una"
-          },
-          {
-            "li": "Investigación de tu caso particular"
-          },
-          {
-            "li": "Síntesis de posibles soluciones con las mejores prácticas de tu industria"
-          }
-        ]
-      }
-    },
-    "last_section": {
-      "intro": {
-        "title": "para desarrollar las estrategias que necesitas"
-      }
+    }
+  },
+  "last_section": {
+    "intro": {
+      "title": "para desarrollar las estrategias que necesitas"
     }
   }
 }

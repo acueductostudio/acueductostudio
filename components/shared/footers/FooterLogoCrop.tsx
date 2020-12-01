@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import Logo from "public/assets/img/layout/logo.svg";
 
-const FooterLogoCrop = ({ color }) => (
+const FooterLogoCrop = ({ color }: { color?: string }) => (
   <LogoCrop color={color}>
     <Fade triggerOnce>
       <Logo />
@@ -21,7 +21,7 @@ const LogoCrop = styled.div`
   overflow: hidden;
   bottom: 0;
   height: 175px;
-  pointer-events:none;
+  pointer-events: none;
   svg {
     width: 110%;
     height: auto;

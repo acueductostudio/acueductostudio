@@ -1,0 +1,105 @@
+{
+  "head": {
+    "title": "About Acueducto",
+    "description": "Get to know us better. Read about us."
+  },
+  "headerTitle": "About",
+  "intro": {
+    "title": "as experts in the digital context",
+    "p": "Without us realizing, we started this studio 15 years ago growing together and sharing design and personal & professional projects.<br/><br/>Motivated by innovation and high quality standards, we joined our professional paths in order to create thoughtful and powerful digital experiences.</br></br>Acueducto is not just a studio, it is the result of a journey that has taken many years to build, as our own friendship has."
+  },
+  "team": [
+    {
+      "name": "rodrigo<br/>salmerón",
+      "position": "design & development / co-founder",
+      "bio": "An interaction, visual, and motion designer and an open-source-enthusiast developer with an Interaction Design MA from The Harbour Space University and 10 years of experience as a freelancer.<br/><br/>He has also worked for several design firms, film production houses, and development companies.<br/><br/>Rodrigo is also a music producer, composer, and lyricist; and whether it’s about music, coding or human-machine interactions, he’s always trying out the latest tools while looking for new challenges."
+    },
+    {
+      "name": "artemio<br/>pedraza",
+      "position": "strategy & communication / co-founder",
+      "bio": "A communication strategist, project and community manager with six years of experience as a freelancer.<br/><br/>He has gone from copywriter to content manager, and marketing consultant and is one of the first licensed digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own digital record label Bludot."
+    }
+  ],
+  "manifesto": {
+    "intro": {
+      "title": "what makes</br>us unique",
+      "p": "Years of experience have shaped the core values of Acueducto. Governed by the following principles, we aim to become better impact-driven business strategists and quality-driven digital experience developers."
+    },
+    "beliefs": [
+      {
+        "title": "We get involved",
+        "p": "Trust us, long lasting relationships get the best results."
+      },
+      {
+        "title": "We love challenges",
+        "p": "And amazing work can happen if we analyze them together."
+      },
+      {
+        "title": "We are quality driven",
+        "p": "If our work is not incredible, why bother doing it?"
+      },
+      {
+        "title": "We are human",
+        "p": "We put people first, working respecfully with respectful clients."
+      },
+      {
+        "title": "We work for your users",
+        "p": "There may be times we will have to side with them."
+      },
+      {
+        "title": "We are tech romantics",
+        "p": "Future solutions for today's problems, expect the bleeding edge."
+      },
+      {
+        "title": "We are fair",
+        "p": "We rate our work on the added value we bring to your business."
+      },
+      {
+        "title": "We keep learning",
+        "p": "We embrace change, a lot of times it’s part of the solution."
+      },
+      {
+        "title": "We are always open",
+        "p": "We love feedback, hearing what you have to say is a fundamental part of our process."
+      }
+    ],
+    "cases": {
+      "title": "our selected<br/>case studies",
+      "p": "Every project we develop is unique, so we hand-picked these case studies to provide an understanding of how Acueducto works and what it can achieve.<br/><br/>Read about the selected projects we have launched alongside our partners."
+    }
+  },
+  "process": {
+    "title": "is placing strategy<br/>at the core",
+    "p": "Innovation happens not by a spontaneous spark of creativity, but through a process that looks for real pain points and the best way to solve them.<br/><br/>Approaching challenges through Strategic Design means working, alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.<br/><br/><b>Discover our process.</b>",
+    "steps": [
+      {
+        "title": "discover",
+        "p": "Understand the context, audience, needs, and challenges of the project.<br/>We get smart."
+      },
+      {
+        "title": "envision",
+        "p": "Here we re-frame the problem to highlight new insights and opportunities.<br/>We make sense."
+      },
+      {
+        "title": "build the story",
+        "p": "Create a strategy that guides concepting, prioritization, and co-creation.<br/>We create empathy."
+      },
+      {
+        "title": "design, tech & craft",
+        "p": "Create prototypes, copywrite, iterate and refine designs, code, and test the product.<br/>We develop."
+      },
+      {
+        "title": "launch",
+        "p": "Implement new solutions, support socialization of organizational changes and product innovation.<br/>We drive change."
+      },
+      {
+        "title": "review",
+        "p": "Reflect, document, and iterate on our process and approach.<br/>We get better."
+      }
+    ]
+  },
+  "values": {
+    "title": "to build better<br/>communities",
+    "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact through our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground on which we stand, and help brands and businesses enhance their surroundings and empower their users."
+  }
+}

@@ -1,6 +1,9 @@
+import { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
 import Head from "components/layout/Head";
 import styled, { createGlobalStyle } from "styled-components";
-import { useEffect } from "react";
 import Tooltip from "react-tooltip-lite";
 import { Fade } from "react-awesome-reveal";
 import TitleSection from "components/shared/TitleSection";
@@ -177,21 +180,26 @@ const StepContainer = ({ index, title, p, li, p2 }) => {
   );
 };
 
-export default function Pitch(props) {
-  let t = props.locale.pitch_page;
+export default function Pitch({ locale, setTitle, pt }) {
+  const [t, setT] = useState(pt);
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
-  }, [props.locale]);
+    clientLocale({
+      locale: locale,
+      fileName: "pitch.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
+  }, [locale]);
 
   return (
     <PageClipperPadded>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
+        {...t.head}
         es_canonical={"https://acueducto.studio/pitch"}
         en_canonical={"https://acueducto.studio/en/pitch"}
-        lang={props.lang}
         structured={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -246,7 +254,7 @@ export default function Pitch(props) {
         <P>{t.intro.p4}</P>
       </PinnedSection>
       <TitleSection {...t.second_section} borderTop />
-      <Products showLongText />
+      <Products showLongText /> 
       <TitleSection
         title={t.process_section.title}
         p={t.process_section.p}
@@ -286,7 +294,16 @@ export default function Pitch(props) {
       <ContactFooter />
     </PageClipperPadded>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "pitch.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const AcueductoLogo = styled(Logo)`
   width: 65%;

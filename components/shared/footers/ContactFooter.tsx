@@ -11,7 +11,7 @@ import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 const ContactFooter = () => {
   const context = useLocaleContext();
-  let { title, p, button_text, button_link } = context.contact_footer;
+  let { title, p, button_text, lang} = context.contact_footer;
 
   return (
     <>
@@ -21,7 +21,12 @@ const ContactFooter = () => {
         </Fade>
         <Fade triggerOnce>
           <p>{p}</p>
-          <Link href={button_link} passHref>
+          <Link
+            href={"/contacto"}
+            as={lang === "en" ? "contact" : "/contacto"}
+            locale={lang}
+            passHref
+          >
             <ButtonArrow text={button_text} />
           </Link>
         </Fade>

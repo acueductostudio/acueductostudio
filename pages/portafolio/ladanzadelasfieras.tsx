@@ -1,6 +1,9 @@
-import styled from "styled-components";
-import Head from "components/layout/Head.tsx";
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
+import Head from "components/layout/Head";
 import dynamic from "next/dynamic";
 import PageClipper from "components/layout/PageClipper";
 import { Fade } from "react-awesome-reveal";
@@ -35,24 +38,29 @@ const ThePlayer = dynamic(
   }
 );
 
-function LaDanzaDeLasFieras(props) {
+function LaDanzaDeLasFieras({ locale, setTitle, pt }) {
   const [loadAssets, setloadAssets] = useState(false);
-  let t = props.locale.casestudies.studies.ladanzadelasfieras;
+  const [t, setT] = useState(pt);
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
+    clientLocale({
+      locale: locale,
+      fileName: "work.lddlf.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
     setloadAssets(true);
-  }, []);
+  }, [locale]);
 
   return (
     <PageClipper unPadded>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
-        image={{ fileName: "og_image_lddlf.png", alt: t.image_alt }}
+        {...t.head}
+        image={{ fileName: "og_image_lddlf.png", alt: t.head.image_alt }}
         es_canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
         en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
-        lang={props.lang}
       />
       <LandSection>
         <LogoDanza />
@@ -92,35 +100,30 @@ function LaDanzaDeLasFieras(props) {
             alt="First references for branding"
             width={114}
             height={160}
-            newimg
           />
           <Picture
             src="/assets/img/casestudies/ladanzadelasfieras/p_2.jpg"
             alt="First references for branding"
             width={114}
             height={160}
-            newimg
           />
           <Picture
             src="/assets/img/casestudies/ladanzadelasfieras/p_3.jpg"
             alt="First references for branding"
             width={114}
             height={160}
-            newimg
           />
           <Picture
             src="/assets/img/casestudies/ladanzadelasfieras/boceto.jpg"
             alt="Original sketch of poster design"
             width={382}
             height={544}
-            newimg
           />
           <Picture
             src="/assets/img/casestudies/ladanzadelasfieras/p_5.jpg"
             alt="Final poster design with awards"
             width={530}
             height={755}
-            newimg
           />
         </PosterGrid>
       </SecondSection>
@@ -158,7 +161,6 @@ function LaDanzaDeLasFieras(props) {
             alt="Printed assets for film attendants"
             width={1150}
             height={612}
-            newimg
           />
         </TransitionWrapper>
         <TextColumn>
@@ -195,7 +197,6 @@ function LaDanzaDeLasFieras(props) {
               alt="Contact cards for directors and producers"
               width={670}
               height={356}
-              newimg
             />
           </Faces>
         </Insight>
@@ -215,7 +216,6 @@ function LaDanzaDeLasFieras(props) {
               alt="A whole section for the press"
               width={830}
               height={634}
-              newimg
             />
           </MacPress>
         </Insight>
@@ -235,7 +235,6 @@ function LaDanzaDeLasFieras(props) {
               alt="A contact component on every page"
               width={670}
               height={1057}
-              newimg
             />
           </MacContact>
         </Insight>
@@ -320,6 +319,15 @@ function LaDanzaDeLasFieras(props) {
 }
 
 export default React.memo(LaDanzaDeLasFieras);
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "work.lddlf.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const SequenceContainer = styled.div`
   max-width: 1300px;
@@ -677,12 +685,11 @@ const Sixth = styled(CommonSection)`
       background-color: ${fierasRed};
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
       border: 0;
-      transition: .2s ease-out all;
+      transition: 0.2s ease-out all;
       &:active,
       &:focus {
         transform: scale(0.95);
       }
-    }
     }
   }
 `;

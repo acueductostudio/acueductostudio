@@ -18,43 +18,60 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
   }, [router.route]);
 
   const handleLink = () => {
-    console.log(router.asPath);
+    // console.log(router.asPath + router.locale);
     if (locale == "en") {
       switch (router.asPath) {
         case "/work/rahid":
-          console.log("Fue ejemplo");
           Router.push("/portafolio/rahid", "/portafolio/rahid", {
+            locale: "es",
+          });
+          break;
+        case "/work/ladanzadelasfieras":
+          Router.push(
+            "/portafolio/ladanzadelasfieras",
+            "/portafolio/ladanzadelasfieras",
+            {
+              locale: "es",
+            }
+          );
+          break;
+        case "/work/salvajenada":
+          Router.push("/portafolio/salvajenada", "/portafolio/salvajenada", {
             locale: "es",
           });
           break;
         case "/work":
           Router.push("/portafolio", "/portafolio", { locale: "es" });
           break;
-        case "/en/about":
+        case "/about":
           Router.push("/nosotros", "/nosotros", { locale: "es" });
           break;
         case "/contact":
           Router.push("/contacto", "/contacto", { locale: "es" });
           break;
-        case "/en/pitch":
-          Router.push(router.route, "/pitch");
+        case "/pitch":
+          Router.push("/pitch", "/pitch"), { locale: "es" };
           break;
-        case "/en/cookies":
-          Router.push(router.route, "/cookies");
+        case "/cookies":
+          Router.push("/cookies", "/cookies", { locale: "es" });
           break;
-        case "/en/privacy":
-          Router.push(router.route, "/privacidad");
+        case "/privacy":
+          Router.push("/privacidad", "/privacidad", { locale: "es" });
           break;
         case "/":
-          console.log("dentro de INGLES cambiando a Español");
           Router.push("/", "/", { locale: "es" });
           break;
         default:
-          Router.push(router.route, "/");
+          Router.push(router.route, "/problemas");
       }
       toggleLang("es");
     } else {
       switch (router.asPath) {
+        case "/portafolio/rahid":
+          Router.push("/portafolio/rahid", "/work/rahid", {
+            locale: "en",
+          });
+          break;
         case "/portafolio/ladanzadelasfieras":
           Router.push(
             "/portafolio/ladanzadelasfieras",
@@ -69,11 +86,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
             locale: "en",
           });
           break;
-        case "/portafolio/rahid":
-          Router.push("/portafolio/rahid", "/work/rahid", {
-            locale: "en",
-          });
-          break;
         case "/portafolio":
           Router.push("/portafolio", "/work", { locale: "en" });
           break;
@@ -84,13 +96,13 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
           Router.push("/contacto", "/contact", { locale: "en" });
           break;
         case "/pitch":
-          Router.push(router.route, "/en/pitch");
+          Router.push("/pitch", "/pitch", { locale: "en" });
           break;
         case "/cookies":
-          Router.push(router.route, "/en/cookies");
+          Router.push("/cookies", "/cookies", { locale: "en" });
           break;
         case "/privacidad":
-          Router.push(router.route, "/en/privacy");
+          Router.push("/privacidad", "/privacy", { locale: "en" });
           break;
         case "/":
           Router.push("/", "/en", { locale: "en" });

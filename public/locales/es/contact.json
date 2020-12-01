@@ -1,8 +1,7 @@
 {
   "head": {
-    "fileName": "contact",
-    "page_title": "¿Somos los indicados? - Contáctanos",
-    "meta_description": "Asociémonos, elevemos tu negocio. Contáctanos por WhatsApp o llenando nuestra forma de contacto."
+    "title": "¿Somos los indicados? - Contáctanos",
+    "description": "Asociémonos, elevemos tu negocio. Contáctanos por WhatsApp o llenando nuestra forma de contacto."
   },
   "headerTitle": "Contacto",
   "intro": {

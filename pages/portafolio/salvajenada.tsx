@@ -1,6 +1,9 @@
+import React, { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
 import styled from "styled-components";
-import Head from "components/layout/Head.tsx";
-import { useEffect, useState } from "react";
+import Head from "components/layout/Head";
 import { Fade } from "react-awesome-reveal";
 import PageClipper from "components/layout/PageClipper";
 import dynamic from "next/dynamic";
@@ -63,24 +66,29 @@ const spreadability_covers = [
   { alt: "Salvajenada - Canásta Básica - Shout out - Yecto" },
 ];
 
-export default function Salvajenada(props) {
+export default function Salvajenada({ locale, setTitle, pt }) {
   const [loadAssets, setloadAssets] = useState(false);
-  let t = props.locale.casestudies.studies.salvajenada;
+  const [t, setT] = useState(pt);
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
+    clientLocale({
+      locale: locale,
+      fileName: "work.salvajenada.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
     setloadAssets(true);
-  }, []);
+  }, [locale]);
 
   return (
     <PageClipper unPadded>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
-        image={{ fileName: "og_image_salvajenada.png", alt: t.image_alt }}
+        {...t.head}
+        image={{ fileName: "og_image_salvajenada.png", alt: t.head.image_alt }}
         es_canonical={"https://acueducto.studio/portafolio/salvajenada"}
         en_canonical={"https://acueducto.studio/en/work/salvajenada"}
-        lang={props.lang}
       />
       <Land>
         <LogoSalvaje />
@@ -249,7 +257,6 @@ export default function Salvajenada(props) {
               alt="Salvajenada - Ibero 90.9"
               width={850}
               height={534}
-              newimg
             />
           </IberoGrid>
         </Insight>
@@ -303,6 +310,15 @@ export default function Salvajenada(props) {
     </PageClipper>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "work.salvajenada.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const Sticky = styled.div`
   position: absolute;

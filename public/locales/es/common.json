@@ -10,299 +10,55 @@
     "privacy": { "title": "política de privacidad", "link": "/privacidad" }
   },
   "lang": "es",
-  "casestudies": {
-    "studies": {
-      "salvajenada": {
-        "page_title": "Difusión musical estratégica - Salvajenada & Acueducto",
-        "meta_description": "¿Cómo distinguir tu playlist entre el mar de selecciones en la web?",
-        "image_alt": "Salvajenada, caso de estudio por Acueducto",
-        "headerTitle": "Salvajenada",
-        "title": "¿cómo compartir música hoy en día?",
-        "tags": "Estrategia<br/>Desarrollo de producto<br/>Consultoría digital y de diseño<br/>Project management",
-        "video": "salvajenada.mp4",
-        "logo": "salvajenada.svg",
-        "link": "salvajenada",
-        "intro_section": {
-          "tags": [
-            "estrategia de proyecto",
-            "estrategia de contenido",
-            "desarrrollo de producto",
-            "tov digital",
-            "consultoría de diseño",
-            "copywriting"
-          ],
-          "video": "salvajevideo.mp4",
-          "title": "<b>Acto I</b><br/>Señales de muerte",
-          "p": "Sebastián Díaz, mejor conocido como Sebas, comparte música desde hace más de seis años con un equipo de editores musicales -incluido nuestro cofundador Artemio Pedraza- en Salvajenada. Una iniciativa cuyo gusto por propuestas emergentes ha descubierto artistas como Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels y muchos más antes de convertirse en estrellas <i>indie</i>. Su deseo por compartir música los ha llevado a realizar actividades como alimentar un blog, organizar conciertos, aliarse con festivales de música, realizar entrevistas, escribir artículos y muchas cosas más.<br/><br/>A pesar de estos esfuerzos, un año antes de asociarnos Salvajenada mostraba señales de muerte. Sus canales de redes sociales estaban desérticos; su sitio web era lento y obsoleto, sus colaboradores creían que el proyecto ya había dado su máximo potencial y nadie hacía nada al respecto.",
-          "graphicp": "días sin postear",
-          "p2": "Nadie con excepción de Sebas, quien enfocó su carrera en contextos digitales gracias a su apego y experiencia con Salvajenada. Sabía que tenía una marca y concepto único, por lo que agendó una junta con Acueducto para explorar posible soluciones."
-        },
-        "second_section": {
-          "title": "<b>Acto II</b><br/>Cómo hacer una playlist relevante",
-          "p": "Se comenzó por revisar las ideas centrales y el propósito de la marca, sus últimas acciones y las responsabilidades del equipo. A pesar de llevar más de seis años a flote, esta era la primera vez que Salvajenada desarrollaba un modelo de negocios con todas sus operaciones y valores. Para tomar decisiones correctas es fundamental tener un panorama amplio, re-pensar los retos y resaltar las oportunidades de los problemas a resolver.",
-          "sticky": "Escúchala en",
-          "table": [
-            {
-              "label": "Competencias",
-              "content": "- Equipo de descubrimiento musical<br/>- Autoridad de marca"
-            },
-            {
-              "label": "Restricciones",
-              "content": "- Disposición de tiempo de colaboradores<br/>- Sólo trabajan en contextos digitales"
-            }
-          ],
-          "p2": "El análisis de la situación arrojó una posible solución: traer de vuelta su lista de nuevos descubrimientos, mejor conocida como <b>#CanastaBásica</b>; y convertirla en el producto central de la organización.<br/><br/>Desde entonces los editores sólo arrastran sus descubrimientos diarios en una <i>playlist</i> colaborativa y el resto de la comunicación es realizada por tres colaboradores que formaron un equipo para el desarrollo y moderación de contenidos.<br/><br/>¿Cómo hacer una <i>playlist</i> relevante entre el mar de listas que hay en internet? Con una fuerte propuesta de valor y una sólida estrategia alrededor de ella.",
-          "table2": [
-            {
-              "label": "Propuesta de valor",
-              "content": "Lista de reproducción actualizada cada 15 días con recientes y auténticos lanzamientos musicales construída por un grupo de melómanos que busca romper con tendencias convencionales y generar nuevas experiencias para descubrir música."
-            }
-          ],
-          "quote": {
-            "quote": "Desarrollar un modelo de negocios nos permitió lanzar el proyecto y darle seguimiento. Ahora cada trimestre implementamos nuevas ideas con métricas a la mano. Esto determina cada paso que damos y cómo distribuimos las responsabilidades en el equipo. Todos sabemos hacia dónde vamos y qué se espera del proyecto a futuro.",
-            "name": "Sebastián Díaz"
-          }
-        },
-        "third_section": {
-          "subtitle": "Publica, interactúa y esparce",
-          "p": "La fase de Descubrimiento arrojó las pautas que moldearon el plan de comunicación de la <i>playlist</i>. Mediante investigación y análisis de datos se decidió utilizar Instagram como el canal principal de la marca, mientras que las actualizaciones a la lista serían a través de Apple Music y Spotify.<br/><br/>Con esto en consideración, un plan fue creado para conectar con su audiencia y posibles nuevos usuarios.",
-          "insights": {
-            "periodicity": {
-              "title": "Periodicidad",
-              "p": "Todo lo que hagas en redes sociales necesita consistencia. La #CanastaBásica se actualiza cada quince días y en cada entrega se seleccionan seis canciones para hacer micro-reseñas, las cuales son publicadas en Instagram. Tomando en cuenta los posts que anuncian cada actualización y las reseñas, suman un total de 108 publicaciones en Instagram cada dos trimestres, un promedio de 4.5 publicaciones semanales."
-            },
-            "meaningfulness": {
-              "title": "Relevancia",
-              "p": "Los escuchas de la lista no sólo tienen a su disposición una actualización quincenal con los últimos lanzamientos del mundo, sino que también reciben contexto e información sobre las mejores canciones de la lista. Por otra parte, para un artista ser seleccionado en una <i>playlist</i> de “lo mejor de” suma a la promoción y autoridad del tema reseñado, recibir una mención honorífica contribuye a la relevancia del lanzamiento."
-            },
-            "spreadability": {
-              "title": "Nuevas audiencias",
-              "p": "El último punto se relaciona directamente con este. Al dar a artistas un reconocimiento que pueden mostrar al mundo, su aparición en la <i>playlist</i> o en las micro-reseñas se convierte en contenido atractivo para compartir en sus redes sociales. De esta forma, más de 20 proyectos han compartido la <i>playlist</i> en sus perfiles, lo que da un promedio de uno por entrega. Esto permite a Salvajenada llegar a las audiencias de dichos artistas."
-            },
-            "multimedia_development": {
-              "title": "Desarrollo multimedia",
-              "p": "Se hizo una propuesta al equipo editorial de Ibero 90.9, la estación universitaria más grande de México, para que en cada actualización de la <i>playlist</i> el equipo de Salvajenada fuese invitado a programar temas de la #CanastaBásica y discutirlos al aire.",
-              "quote": {
-                "quote": "No sólo tenemos una playlist que los usuarios pueden escuchar, se trata del concepto de compartir nueva música. Es una colección de canciones que también sirve como un lugar en el que puedes contextualizar (y enamorarte de) la nueva música que descubres.",
-                "name": "Sebastián Díaz"
-              }
-            }
-          }
-        },
-        "fourth_section": {
-          "title": "<b>Acto III</b><br/>Estadísticas y planes",
-          "p": "Tras la implementación de la estrategia, las redes sociales y plataformas musicales de Salvajenada arrojaron resultados inmediatos y positivos. Áreas como la base de seguidores, el alcance y la interacción tuvieron impactos radicales. Echa un vistazo a los datos recolectados tras un semestre de trabajo:",
-          "stats": [
-            {
-              "big": "<i>+</i>1k",
-              "small": "seguidores orgánicos de la lista"
-            },
-            {
-              "big": "<i>+</i>341%",
-              "small": "promedio de alcance de publicaciones"
-            },
-            {
-              "big": "<i>x</i>2",
-              "small": "apariciones en radio FM mensuales"
-            },
-            {
-              "big": "<i>+</i>42%",
-              "small": "aumento en seguidores en Instagram"
-            },
-            {
-              "big": "6<i>+</i>",
-              "small": "correos recibidos al día de seguidores, artistas, disqueras y agentes de PR con recomendaciones"
-            },
-            {
-              "small": "Seguidos por los equipos editoriales de Apple Music y Spotify"
-            }
-          ],
-          "p2": "Motivados por estos resultados, Salvajenada se encuentra pensando cómo crear una fuente de ingresos a partir de su comunidad. La conversación va y viene entre organizar conciertos, promocionar nuevos lanzamientos e incluso asociarse con una tienda de viniles para ofrecer un modelo de suscripción que entregue discos mensualmente.<br/><br/>Asociándose con Acueducto y tomando su consultoría digital para desarrollar una experiencia web, Salvajenada trabaja en una nueva estrategia, a través del contenido y la innovación digital, para ofrecer valor a esta comunidad de amantes de la música."
-        },
-        "fifth_section": {
-          "title": "escucha la #CanastaBasica"
-        }
+  "products_section": {
+    "intro": {
+      "title": "para desarrollar ideas innovadoras",
+      "p": "Los productos digitales pueden potenciar la cultura innovadora de una organización, automatizar sus procesos y optimizar la experiencia de marca.<br/><br/>Puedes confiar en nosotros para desarrollar:"
+    },
+    "products": [
+      {
+        "title": "estrategia digital",
+        "p": "Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones.",
+        "p_long": "Tu estrategia digital es la columna vertebral de tu negocio en internet. Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
       },
-      "ladanzadelasfieras": {
-        "page_title": "Estrategia cinematográfica - La Danza de las Fieras & Acueducto",
-        "meta_description": "Una cautivadora experiencia digital a través del cine, internet y la prensa.",
-        "image_alt": "La Danza de las Fueras, caso de estudio por Acueducto",
-        "headerTitle": "LDDLF",
-        "title": "estrategia y producción en la industria del cine",
-        "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Animación<br/>Web App<br/>",
-        "video": "fieras.mp4",
-        "logo": "fieras.svg",
-        "link": "ladanzadelasfieras",
-        "intro_section": {
-          "tags": [
-            "estrategia de proyecto",
-            "branding",
-            "diseño web",
-            "ux",
-            "animación",
-            "programación",
-            "estrategia de contenido",
-            "tov digital",
-            "copywriting"
-          ],
-          "video": "lddlf_intro.mp4",
-          "title": "<b>Acto I</b><br/>El primer largometraje<br/>de Aly",
-          "p": "Alayde, mejor conocida como Aly, es una cineasta y directora creativa fundadora de la casa productora Antítesis. Impulsada por la idea de que jóvenes artistas pueden generar un impacto innovador en la industria del cine, unió esfuerzos con la casa productora Bala Films para hacer La Danza de las Fieras (LDDLF).<br/><br/>LDDLF es un largometraje que concientiza y genera reflexiones, debates y acciones para prevenir la trata de personas. Construida por seis cortometrajes, cada uno aborda una dimensión diferente del tema. La película recibió cinco premios internacionales de cine en categorías como Mejor Película y fue seleccionada en 11 festivales de cine en México y el mundo.",
-          "stats": [
-            {
-              "big": "5",
-              "small": "premios"
-            },
-            {
-              "big": "11",
-              "small": "festivales"
-            },
-            {
-              "big": "6",
-              "small": "países"
-            }
-          ],
-          "p2": "Durante la producción de la película, antes de estos remarcables resultados, Aly contactó a Acueducto para evaluar su posición. Debido a la multiplicidad de directores, puntos de vista y estilos de cine, LDDLF necesitaba un <i>branding</i> que cobijara todas las historias en un mismo concepto al igual que un sitio web que mostrara información de la película y su propósito."
-        },
-        "second_section": {
-          "title": "<b>Acto II</b><br/>Una experiencia cohesiva de múltiples frentes",
-          "p": "Se realizaron sesiones creativas y de investigación para crear la identidad de la película junto con Aly y su equipo. Algunos cortometrajes eran documentales, otros ficción e incluso uno estaba narrado desde la pantalla de un teléfono. Encontrar un tono de voz cohesivo era el primer paso a dar.",
-          "font_logo": "Logo + Animación",
-          "font_body": "Cuerpo de texto",
-          "font_titles": "Títulos",
-          "red": "Rojo salvaje",
-          "subtitle": "La primera impresión lo es todo",
-          "p2": "Parte del <i>branding</i> consistía en diseñar y animar la secuencia de inicio del filme. Tal aplicación enamoró a todos los involucrados y se convirtió en uno de los pilares de la identidad visual.<br/><br/>Haz click para verla, dura sólo un par de minutos (y sube el volumen de tus bocinas, vale la pena)."
-        },
-        "third_section": {
-          "subtitle": "La experiencia web",
-          "p": "Acueducto se dio a la tarea de diseñar un portal que expusiera información sobre el largometraje, sus realizadores y los artículos de prensa que fueran publicados sobre ella.<br/><br/>Durante la fase de Descubrimiento, se hicieron entrevistas con socios, productores, directores y reporteros para encontrar áreas de oportunidad y necesidades. Las conclusiones que arrojó esta investigación fueron el motor de la estrategia web del proyecto.",
-          "insights": {
-            "portfolio": {
-              "title": "Portafolio para todos",
-              "p": "Para cineastas como Aly, el currículum es fundamental. Filmar un largometraje es sumamente costoso y conseguir fondos para lograrlo requiere de confianza, experiencia y estatus. Por esta razón, el sitio hace énfasis en los créditos a todos los productores, casas productoras, patrocinadores y directores de la obra.",
-              "quote": {
-                "quote": "El sitio web de LDDLF se convirtió en parte de mi curriculum, ahora puedo compartir una pieza de trabajo atractiva, rigurosa y comprensible junto con mi reel",
-                "name": "Gina Herrera",
-                "label": "Escritora y Directora en La Danza de las Fieras"
-              }
-            },
-            "press": {
-              "title": "Bienvenidos: prensa y festivales",
-              "p": "La prensa pocas veces encuentra la información que necesita para redactar notas sobre cine. Los artículos y noticias son de los principales medios de promoción para un filme, así que se hizo una sección dedicada sólo para prensa con la disponibilidad de <i>press kits</i>, imágenes y un salón de la fama de la película con premios y publicaciones. De esta forma ningún periodista tendría que salir del sitio para recolectar toda la información de la película.",
-              "quote": {
-                "quote": "Los festivales de cine y medios de comunicación constantemente requieren que tu película tenga un press kit en orden y traducido, que sea enviado dependiendo la información requerida. La forma en la que está diseñado nuestro sitio simplificó de sobremanera cómo compartimos esa información.",
-                "name": "Miguel Ángel Fernández",
-                "label": "Editor, Escritor & Director en La Danza de las fieras"
-              }
-            },
-            "availability": {
-              "title": "Disponibilidad",
-              "p": "En los festivales de cine y proyecciones siempre hay mucho trabajo de por medio, por lo que toda duda tiene que ser resuelta con agilidad. Además de organizar toda la información en bloques fáciles de discernir, el sitio incluye un componente de contacto en cada página del sitio y en la navegación, permitiendo a los organizadores de estos eventos y a todos los usuarios contactar fácilmente al equipo de LDDLF."
-            }
-          },
-          "subtitle2": "La cereza del pastel",
-          "p2": "Obsesionarse con los detalles vale la pena, sobretodo cuando agregan un valor real a los usuarios finales. Es por eso que Acueducto programó la aplicación web internamente, desde cero, para lograr un portal veloz, ligero y accesible para dispositivos móviles.<br/><br/>Las últimas tecnologías y herramientas pueden hacer la vida del usuario más fácil, por eso se agregó un extra para el equipo de distribución y los propios cineastas. La aplicación fue transformada en una <i>Progressive Web App</i> (PWA), así la página puede funcionar sin conexión para mostrar el sitio aunque haya una pobre o nula conexión a internet, sin tener que instalar nada desde una <i>AppStore</i>."
-        },
-        "fourth_section": {
-          "subtitle": "¿Y el contenido?",
-          "p": "Un hermoso sitio web fue construido y la <i>premiere</i> de la película estaba a la vuelta de la esquina. Era momento de entregar un mensaje claro, conciso y elegante ¿Pero cómo? Con un tono y mensaje unificado a través de toda la experiencia. Con esto en mente, de la mano con las casas productoras, Acueducto diseñó la redacción del sitio web de forma coherente con los <i>press kits</i>. Así toda la narrativa del proyecto fue controlada no sólo en la página sino también en la prensa que la difundió. <br/><br/>Encontrar artículos donde los adjetivos y mensajes del sitio web de LDDLF son reutilizados es la norma, muchas veces palabra por palabra.",
-          "stat": "de las publicaciones en prensa utilizaron o citaron palabra por palabra contenido del sitio o <i>press kit</i>.",
-          "p2": "Sin embargo ¿no es lo más valioso para un cineasta que los espectadores vean su película? En las taquillas de los festivales pueden competir cientos de filmes por la atención de los asistentes. La mayoría de las películas no cuentan con un sitio que incluya su trailer, sinópsis y créditos, no cubrir este frente impacta directamente en el número de espectadores finales al no poder consultar información adicional en buscadores. Además de resolver este problema, se hizo un gran esfuerzo de posicionamiento en buscadores (SEO) para que cualquier búsqueda de “La Danza de las Fieras” arrojara el sitio web como primer resultado."
-        },
-        "fifth_section": {
-          "title": "<b>Acto III</b><br/>That’s a wrap",
-          "p": "La Danza de las Fieras terminó recientemente su tour alrededor del mundo en más de 6 países. 12 festivales de cine y 22 menciones en prensa global avalan a la película como una autoridad en el tema de tráfico de personas.<br/><br/>El sitio web fue crucial para posicionar la película en estos festivales y en la industria del cine en general; y la estrategia digital hizo que las aplicaciones a festivales fueran más sencillas tanto para cineastas como organizadores.",
-          "quote": {
-            "quote": "El sitio web de La Danza de las Fieras fue la razón por la que Cinema23, empresa encargada de la organización de los Premios Fénix, encontró toda la información necesaria para considerar el largometraje en su premiación.",
-            "name": "Javier Rodríguez",
-            "label": "Productor de Festivales de Cine"
-          },
-          "p2": "LDDLF está comenzando su faceta de distribución y Aly junto a su equipo continúan generando conciencia y debate alrededor de la crisis de tráfico humano en México y el mundo.<br/><br/>Respaldada por un poderoso branding, sitio web y estrategia de contenido, Aly promocionó con éxito su primer largometraje viajando por el mundo, ganando visibilidad y empujando la conversación alrededor del tráfico de personas en las pantallas de cine y en la vida diaria de sus espectadores."
-        },
-        "sixth_section": {
-          "linkp": "visita"
-        }
+      {
+        "title": "apps web y móviles",
+        "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación.",
+        "p_long": "Desarrollar experiencias digitales que sean veloces, interactivas y atractivas visualmente te pondrá un paso más cerca de alcanzar tus objetivos de negocio. Pongamos a trabajar tu presencia web como una herramienta efectiva para tu negocio."
       },
-      "rahid": {
-        "page_title": "Un ecommerce único en México - Rahid & Acueducto",
-        "meta_description": "¿Qué necesitas para lanzar un ecommerce exitoso en México? Lee este caso de estudio con la tienda en línea de Rahid.",
-        "image_alt": "Rahid, caso de estudio por Acueducto",
-        "headerTitle": "Rahid",
-        "title": "un ecommerce único en México",
-        "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
-        "video": "rahid.mp4",
-        "logo": "rahid.svg",
-        "link": "rahid",
-        "intro_section": {
-          "tags": [
-            "estrategia de proyecto",
-            "branding",
-            "ecommerce",
-            "community management",
-            "estrategia de contenido",
-            "tov digital",
-            "copywriting"
-          ],
-          "video": "rahid_intro.mp4",
-          "title": "<b>Acto I</b><br/>Transformando una marca hecha en casa en un ecommerce único en México",
-          "p": "Rodrigo es el fundador de Rahid, una comercializadora y marca de parafernalia cannábica y artículos para fumador. Durante más de 10 años ha ofrecido a su clientela los mejores bongs, shishas, dabs y más piezas de origen mexicano, impulsando la competencia local y el comercio justo. De igual forma, Rahid ha mostrado ser una marca libre de prejuicios en favor de la discusión del consumo recreacional del cannabis en el país.",
-          "graphicp": "*Logotipo anterior",
-          "p2": "Antes de nuestra colaboración, Rodrigo había desarrollado dos marcas para su negocio: El Rahid y Tobacco House Mexico, pero ambas eran percibidas por él mismo como poco posicionadas, con una identidad débil y faltas de cohesividad a través de sus canales de venta. De igual forma, llevaba años queriendo montar un <i>marketplace</i> propio y aprovechar herramientas de marketing digitales. A pesar de comenzar su negocio en internet desde hace más de una década vía Mercado Libre, sus acciones digitales no eran suficientes para alcanzar su visión como empresa: convertirse en la comercializadora de parafernalia cannábica más relevante del país."
-        },
-        "second_section": {
-          "subtitle": "Un giro de 180º con una poderosa experiencia de ecommerce",
-          "p": "Después de la fase de descubrimiento, decidimos explotar y desarrollar tres áreas para crear la mejor experiencia con un <i>marketplace</i> de punta de lanza: marca, desarrollo y lanzamiento.",
-          "quote": {
-            "quote": "Llevaba 8 años buscando construir una marca que generara confianza a nuestros compradores en línea, pues están acostumbrados a utilizar sitios con funcionalidades y diseño de primera calidad.",
-            "name": "Rodrigo H. Maldonado",
-            "label": "CEO / Fundador, Rahid"
-          }
-        },
-        "third_section": {
-          "title": "<b>Acto II</b><br/>Desarrollo de marca y tono de voz",
-          "p": "Desde la primer reunión que tuvimos con Rodrigo notamos un problema con su identidad: a pesar de llevar 10 años en el mercado, se percibía débil, faltaba cohesión entre sus canales de venta y estaba poco posicionada. Nos dimos a la tarea de ahondar en su modelo y objetivos de negocio, valores, propósito, experiencia, clientes y muchos factores más para construir un branding y tono de voz a la medida. Era fundamental para el proyecto reflejar no sólo la historia de Rahid y su comunidad, sino también marcar una dirección de crecimiento para percibirse como un proyecto escalable. Cuando la intención es ser el mejor postor en tu área, es vital tener una marca que ofrezca una experiencia de calidad, bien construida y que comunique exáctamente lo que buscas.",
-          "spans": [
-            "Logotipo",
-            "Imagotipo",
-            "Primario",
-            "Mayoreo",
-            "Paleta de color",
-            "Tipografía"
-          ]
-        },
-        "fourth_section": {
-          "subtitle": "Un ecommerce nunca antes visto en la industria mexicana",
-          "p": "Tras nuestra investigación de mercado descubrimos que sólo un grupo muy reducido de las <i>smoke shops</i> del país contaban con una experiencia web. Incluso dentro del nicho, encontramos una carencia en común: ninguna marca de parafernalia tenía un ecommerce capaz de hacer transacciones.<br/><br/>Para diferenciarnos, decidimos montar el sitio en Shopify, la plataforma de ecommerce más poderosa del momento, y aprovechar sus herramientas para desarrollar campañas de mailing automatizado (como un mail de carrito abandonado), una forma de pago eficiente, productos relacionados, pagos recurrentes, múltiples administradores y más.",
-          "p2": "Nuestra hambre por innovar no se detuvo en ofrecer a nuestro socio un ecommerce sencillo de administrar, escalable y con las mejores tarifas. De la mano del equipo de Rahid, desarrollamos las Canastas Verdes, un sistema de suscripción que permite a los usuarios recibir mensualmente productos a precios preferenciales y, a Rahid, distribuir su inventario y conseguir una relación más cercana con sus mejores clientes.",
-          "graphicp": "*En el mes de lanzamiento, este fue el tercer producto más vendido del <i>marketplace</i>.",
-          "p3": "El engranaje de este proyecto y su funcionamiento son evidentemente complejos, por lo que brindamos a nuestro socio una serie de manuales y atención personalizada para mantener de manera óptima la tienda en línea y sus canales de comunicación. Como parte de nuestro trabajo, consideramos indispensable capacitar a nuestros socios en tecnología y contextos digitales desarrollando procesos de <i>onboarding</i> para ellos y sus empleados."
-        },
-        "fifth_section": {
-          "title": "<b>Acto III</b><br/>Un lanzamiento que celebró una nueva era para Rahid",
-          "p": "Este es un dato importante: ningún negocio que oferte productos relacionados al tabaco puede hacer publicidad directa o indirecta. Fue indispensable alejarnos de la marca preestablecida \"Tobacco House\" e inclinarnos a una visión más progresiva enfocada en la parafernalia de cannabis. Sin embargo seguíamos limitados ya que, debido a sus políticas de uso, ningún tipo de publicidad pagada era posible en plataformas como Google y Facebook ¿Qué hicimos? Una campaña de <i>referral marketing</i> apoyada de <i>influencers</i>.",
-          "p2": "7 perfiles de 10k+ seguidores del nicho fueron seleccionados para apoyar la difusión de la campaña de lanzamiento, la cual consistía en invitar a tus contactos a suscribirse a la newsletter de Rahid a cambio de productos gratis en tu primer envío.",
-          "stat": "Tasa de conversión<br/>en la campaña de lanzamiento",
-          "p3": "El resultado fue una tasa de conversión fenomenal, el 77% de los usuarios dejaron su correo electrónico, lo que nos permitió crear una base de datos de 1.000+ usuarios durante el pre-lanzamiento que hicieron toda la diferencia al momento de inaugurar el ecommerce.",
-          "p4": "Llegó el mes del lanzamiento y, con ayuda de los <i>influencers</i>, en solo 30 días crecimos 400% la cantidad de seguidores en el Instagram de Rahid, además de concretar conversiones casi diariamente en medio de la crisis del COVID-19.",
-          "quote": {
-            "quote": "Nos encontramos en una oportunidad de crecimiento sin límites. Con un sitio funcional que refleja nuestra identidad estamos exponenciando nuestra oferta a los clientes. A pesar de estar en medio de una pandemia y operar a puerta cerrada en sucursales, nuestro ecommerce nos permite seguir activos y creciendo.",
-            "name": "Rodrigo H. Maldonado",
-            "label": "CEO / Fundador, RAHID"
-          },
-          "p5": "Y éste no es el final del proyecto, seguimos en contacto con Rodrigo. Cada trimestre, el equipo de Rahid nos muestra su plan de contenidos en social media y damos consultoría sobre correcciones, sugerencias, mejores prácticas y conocimiento.<br/><br/>Con certeza podemos decir que Rahid está un paso más cerca de su objetivo: ser la comercializadora de parafernalia más grande del país."
-        },
-        "sixth_section": {
-          "linkp": "visita"
-        }
+      {
+        "title": "productos<br/>y servicios digitales",
+        "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen.",
+        "p_long": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
+      },
+      {
+        "title": "estrategias de<br/>marketing digital",
+        "p": "Potencializa tus ventas mediante estrategias de comunicación, contenidos creativos y publicidad pautada.",
+        "p_long": "No desaproveches la manera más rápida y efectiva de conectar con casi la mitad de la población. Mediante estrategias de marketing y comunicación, publicidad pautada y contenidos creativos podemos potenciar tus ventas."
       }
-    }
+    ]
   },
+  "casestudies": [
+    {
+      "title": "¿cómo compartir música hoy en día?",
+      "tags": "Estrategia<br/>Desarrollo de producto<br/>Consultoría digital y de diseño<br/>Project management",
+      "link": "salvajenada"
+    },
+    {
+      "title": "estrategia y producción en la industria del cine",
+      "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Animación<br/>Web App<br/>",
+      "link": "ladanzadelasfieras"
+    },
+    {
+      "title": "un ecommerce único en México",
+      "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
+      "link": "rahid"
+    }
+  ],
   "contact_footer": {
     "title": "asociémonos, elevemos tu negocio",
     "p": "¿Somos los indicados para acompañarte en tu próximo proyecto?",
     "button_text": "escríbenos",
-    "button_link": "/contacto",
     "footer_nav": {
       "navTitles": {
         "main": "estudio",
@@ -339,263 +95,5 @@
   },
   "next_study": {
     "p": "Haz click para ver el siguiente caso de estudio"
-  },
-  "about_page": {
-    "page_title": "Acerca de Acueducto",
-    "meta_description": "Conócenos, lee sobre nosotros.",
-    "headerTitle": "Nosotros",
-    "intro": {
-      "title": "una dupla que hace crecer tu negocio",
-      "p": "Sin darnos cuenta, comenzamos este estudio 15 años atrás creciendo juntos y compartiendo proyectos personales y profesionales.<br/><br/>Motivados por la innovación y los altos estándares de calidad, unimos nuestros caminos profesionales para crear inspiradoras estrategias digitales.<br/><br/>Acueducto no es sólo un estudio, es el resultado de un trayectoria que nos ha tomado años construir, como nuestra amistad."
-    },
-    "team": [
-      {
-        "name": "rodrigo<br/>salmerón",
-        "position": "diseño y desarrollo, cofundador",
-        "bio": "Diseñador de interacción, visual y de movimiento; también desarrollador de software con una Maestría en Diseño de Interacción en The Harbour Space University con más de 10 años de experiencia como freelance.<br/><br/>Ha trabajado para agencias de diseño, productoras de cine y desarrolladoras de software.<br/><br/>Rodrigo es también productor musical, compositor y letrista. Y ya se trate de música, código o de interacciones humano-máquina, siempre busca nuevos retos para probar las últimas herramientas tecnológicas."
-      },
-      {
-        "name": "artemio<br/>pedraza",
-        "position": "estrategia y comunicación, cofundador",
-        "bio": "Estratega en comunicación, <i>project manager</i> y <i>community manager</i> con más de 7 años de experiencia como freelance.<br/><br/>También se ha desarrollado en ámbitos como <i>content management</i>, consultoría de marketing y <i>copywriting</i>. Es uno de los primeros licenciados especialistas en Comunicación Digital en México.<br/><br/>Cuando no está dirigiendo el departamento de estrategias en Acueducto, representa artistas en su sello discográfico digital Bludot."
-      }
-    ],
-    "values": {
-      "title": "construyendo mejores comunidades",
-      "p": "Para el beneficio de los usuarios finales, así como el de nuestros clientes, buscamos crear un impacto positivo con nuestro trabajo.<br/><br/>Por eso fundamos Acueducto, para hacer las preguntas incómodas, evaluar el terreno en el que estamos parados y así ayudar a marcas y negocios a mejorar su entorno y empoderar a sus usuarios."
-    }
-  },
-  "pitch_page": {
-    "page_title": "Nuestro pitch - Por qué tecnología digital",
-    "meta_description": "Te explicamos a detalle cómo es trabajar con nosotros",
-    "headerTitle": "Pitch",
-    "intro": {
-      "title": "sin más, nuestro pitch",
-      "p0": "La tecnología digital ha reestructurado drásticamente industria tras industria, por lo que muchos negocios se han revolucionado para beneficiarse de esta tendencia o, sencillamente, para mantenerse competitivos.<br/><br/>En Acueducto buscamos desarrollar los productos y estrategias necesarias para que tu negocio prospere en la era digital. En esta página te explicamos a detalle cómo generamos valor a organizaciones que buscan ser más competitivas mediante herramientas digitales.",
-      "subtitle1": "áreas de innovación",
-      "li1": [
-        "Experiencia de cliente/usuario",
-        "Desarrollo de marca",
-        "Operaciones de negocio",
-        "Modelos de Negocios digitales"
-      ],
-      "subtitle2": "empresas modelo que implementan estas soluciones:",
-      "subtitle3": "diseño estratégico",
-      "p3": "El <b>diseño estratégico</b> aplica principios de diseño orientados a potenciar las cualidades innovadoras y competitivas de una organización. Analizando las tendencias externas, internas y data de tu negocio; podemos tomar decisiones en conjunto basadas en hechos más que en estética o intuición.",
-      "subtitle4": "transformación digital",
-      "p4": "La <b>transformación digital</b> refiere a adoptar procesos y herramientas digitales para alcanzar metas estratégicas de negocios. Con la adopción de avances tecnológicos podemos encontrar formas innovadoras de estimular el crecimiento de tu organización."
-    },
-    "second_section": {
-      "title": "buscamos socios,<br/> no clientes",
-      "p": "En Acueducto creemos firmemente en el valor de las asociaciones. A diferencia de la relación cliente-agencia que domina el mercado, asociarnos contigo nos permite involucrarnos en la estructura de tu proyecto para aplicar procesos de diseño y estrategias de mayor impacto."
-    },
-    "products_section": {
-      "intro": {
-        "title": "para desarrollar ideas innovadoras",
-        "p": "Los productos digitales pueden potenciar la cultura innovadora de una organización, automatizar sus procesos y optimizar la experiencia de marca.<br/><br/>Puedes confiar en nosotros para desarrollar:"
-      },
-      "products": [
-        {
-          "title": "estrategia digital",
-          "p": "Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones.",
-          "pitchDescription": "Tu estrategia digital es la columna vertebral de tu negocio en internet. Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
-        },
-        {
-          "title": "apps web y móviles",
-          "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación.",
-          "pitchDescription": "Desarrollar experiencias digitales que sean veloces, interactivas y atractivas visualmente te pondrá un paso más cerca de alcanzar tus objetivos de negocio. Pongamos a trabajar tu presencia web como una herramienta efectiva para tu negocio."
-        },
-        {
-          "title": "productos<br/>y servicios digitales",
-          "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen.",
-          "pitchDescription": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
-        },
-        {
-          "title": "estrategias de<br/>marketing digital",
-          "p": "Potencializa tus ventas mediante estrategias de comunicación, contenidos creativos y publicidad pautada.",
-          "pitchDescription": "No desaproveches la manera más rápida y efectiva de conectar con casi la mitad de la población. Mediante estrategias de marketing y comunicación, publicidad pautada y contenidos creativos podemos potenciar tus ventas."
-        }
-      ]
-    },
-    "process_section": {
-      "title": "siguiendo un proceso estratégico",
-      "p": "Nuestro proceso es el recurso más valioso con el que contamos y recargamos en él cada proyecto que llevamos a cabo. Está diseñado para implementarse en cualquier industria y para iterar  sobre si mismo. Así, cada paso que damos nos da la seguridad para dar el siguiente.",
-      "steps": [
-        {
-          "title": "descubre",
-          "p": "¿Dónde estamos parados? Se investiga y analiza el contexto del proyecto, su audiencia y sus necesidades.<br/><br/>Evaluamos:",
-          "li": ["Modelos de negocios", "Objetivos", "Identidad", "Mercado"],
-          "p2": "Hacemos entrevistas y juntas creativas con tu organización, además de investigación de campo y de escritorio."
-        },
-        {
-          "title": "visualiza",
-          "p": "¿Hacia dónde va el proyecto? Se definen y replantean sus objetivos, orientación y enfoque.<br/><br/>Redefinimos:",
-          "li": [
-            "Valor agregado",
-            "Diferenciador",
-            "Ventaja estratégica y competitiva"
-          ],
-          "p2": "Analizamos el costo-beneficio de tu proyecto, su entorno de mercado, riesgos y viabilidad financiera."
-        },
-        {
-          "title": "narra",
-          "p": "¿Cómo empatizamos con la audiencia? Se conceptualizan mensajes, priorizan acciones y co-crean narrativas.<br/><br/>Definimos:",
-          "li": [
-            "Indicadores de progreso (KPI's)",
-            "Brief creativo y storytelling",
-            "Identidad",
-            "Calendario"
-          ],
-          "p2": "Acordamos junto contigo las estrategias que definirán el rumbo del proyecto, calendarizamos objetivos y definimos entregables."
-        },
-        {
-          "title": "diseña, programa y ensambla",
-          "p": "Suficiente planeación, en esta etapa se desarrollan los contenidos y aplicaciones del proyecto.<br/><br/>Desarrollamos:",
-          "li": ["Materiales y diseños", "Prototipos", "Copywriting", "Código"],
-          "p2": "Ponemos manos a la obra para producir los entregables que acordamos para cada área del proyecto."
-        },
-        {
-          "title": "lanza",
-          "p": "Todo se construyó para este momento. Se administran los cambios organizacionales y lanzamiento del proyecto.<br/><br/>Implementamos:",
-          "li": ["Promoción", "Advertising", "Community Management"],
-          "p2": "Ejecutamos las estrategias de comunicación, monitoreamos su desempeño y documentamos su impacto."
-        },
-        {
-          "title": "evalúa",
-          "p": "Se analiza la información recopilada sobre el proyecto durante todo su desarrollo.<br/><br/>Entregamos:",
-          "li": ["Reporte de desempeño", "Posibles siguientes pasos"],
-          "p2": "Evaluamos tanto el proyecto como nuestro proceso y nos preparamos para dar el siguiente paso."
-        }
-      ]
-    },
-    "tools_section": {
-      "title": "con las mejores herramientas",
-      "p": "Tu proyecto es único y requiere de un trato personalizado, siempre haremos un análisis detallado y elegiremos las herramientas adecuadas para su desarrollo.<br/><br/>Estas son algunas de nuestras apuestas tecnológicas.",
-      "apps": "apps web y móviles",
-      "platforms": "plataformas y sistemas operativos",
-      "marketing": "marketing digital",
-      "content": "difusión de contenidos",
-      "bi": "business intelligence",
-      "collaboration": "co-creación"
-    }
-  },
-  "manifesto_page": {
-    "page_title": "Manifiesto - Lo que nos hace mejores",
-    "meta_description": "Los valores que moldean cada acción que realizamos",
-    "headerTitle": "Manifiesto",
-    "intro": {
-      "title": "¿qué nos hace distintos?",
-      "p": "Años de experiencia han forjado los valores fundamentales de Acueducto. Siguiendo estos principios, desarrollamos las mejores estrategias digitales para construir poderosos servicios, productos y aplicaciones.<br/><br/>Este es nuestro manifiesto."
-    },
-    "beliefs": [
-      {
-        "title": "Nos involucramos contigo",
-        "p": "Confía en nosotros, las relaciones a largo plazo llegan a resultados más significativos."
-      },
-      {
-        "title": "Amamos los retos",
-        "p": "Analizarlos juntos nos permite enfrentarlos de la mejor forma."
-      },
-      {
-        "title": "Nos obsesiona la calidad",
-        "p": "Nuestro trabajo tiene que ser impecable ¿si no, para qué hacerlo?"
-      },
-      {
-        "title": "Somos humanos",
-        "p": "Ponemos primero la calidad humana, trabajamos con respeto y con clientes respetuosos."
-      },
-      {
-        "title": "Trabajamos para tus usuarios",
-        "p": "Habrá momentos en los que nos pondremos de su lado."
-      },
-      {
-        "title": "Somos románticos de la tecnología",
-        "p": "Siempre a la vanguardia, ofrecemos soluciones para el futuro."
-      },
-      {
-        "title": "Somos justos",
-        "p": "Valuamos nuestro trabajo según el valor que agregamos a tu negocio."
-      },
-      {
-        "title": "Nos encanta aprender",
-        "p": "Aceptamos el cambio, pues muchas veces es parte de la solución."
-      },
-      {
-        "title": "Somos accesibles",
-        "p": "Escuchar tu opinión es parte fundamental de nuestro proceso."
-      }
-    ],
-    "cases": {
-      "title": "casos de estudio seleccionados",
-      "p": "Cada proyecto que desarrollamos es único, así que elegimos estos casos de estudio para retratar cómo trabaja Acueducto y lo que puede lograr.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
-    }
-  },
-  "privacy_page": {
-    "page_title": "Política de Privacidad - Acueducto",
-    "meta_description": "Lee nuestra Política de Privacidad y conoce como utilizamos tu información.",
-    "headerTitle": "privacidad",
-    "intro": {
-      "title": "política de privacidad",
-      "p": "Nunca ha habido momento más crítico para reflexionar y actuar en torno a la privacidad que ahora. En la interacción entre usuarios e Internet, existen prácticas de recaudación y procesos de información relevantes para todos los internautas. Desde la captación de datos que son proporcionados voluntariamente hasta información recolectada por navegar sitios. En un mundo donde los intereses y valores varían, se ha convertido en una norma exigir un uso de la información cuidadoso, transparente y ético.<br/><br/>En Acueducto (“Nosotros”, “Nuestro”, “Nos”) tratamos con delicadeza y responsabilidad la información de las personas con las que interactuamos. En este apartado encontrarás las prácticas de recolección y procesos de datos de nuestro sitio, así como dónde encontrar las opciones renunciar a ellas. Recomendamos ampliamente que leas con cuidado esta sección y que hagas lo mismo en todos los sitios que frecuentas en Internet.<br/><br/>Si llegaras a tener cualquier duda respecto a estas políticas, no dudes en escribir a <a href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>."
-    },
-    "body": {
-      "subtitle1": "sobre Acueducto",
-      "p1": "Ayudamos a nuestros Socios (“Empresas”, “Marcas”, “Otros”) a construír experiencias digitales y productos. Brindamos servicios para otras compañías y procesamos datos para los Socios con los que trabajamos. Esta Política de Privacidad no refleja las políticas y prácticas de privacidad de nuestros Socios. Por lo tanto, no somos responsables por dichas prácticas o políticas fuera de este sitio.",
-      "subtitle2": "información que procesamos",
-      "p2": "Acueducto procesa tu información personal al usar nuestros servicios y/o al proveer cualquiera de esta información a nosotros:",
-      "list1": "<li>Nombre completo</li><li>Dirección de correo electrónico</li><li>Dirección IP</li><li>Locación</li><li>Navegador y equipo</li><li>Información sobre tus actividades en nuestro sitio</li><li>Otra información que activamente compartas con nosotros</li>",
-      "subtitle3": "cómo recolectamos información",
-      "p3": "Toda la información que procesamos es adquirida de la siguiente forma:",
-      "listItem1": "Las formas de contacto en esta Aplicación. (Puedes cancelar tu suscripción <a href='https://studio.us19.list-manage.com/unsubscribe?u=c9d7bbb792de4cdbe363fad75&id=434dbf9f3b' target='_blank' rel='nofollow noopener'>aquí</a>).",
-      "listItem2": "Emails enviados a correos con terminación @acueducto.studio",
-      "listItem3": "Cookies o tácticas similares. (Lee nuestra ",
-      "listItem3Link": "Política de Cookies",
-      "subtitle4": "información especial y/o sensible que procesamos",
-      "p4": "Acueducto no pretende recolectar datos de visitantes menores de 16 años a menos que tengan permiso de sus padres o guardianes, sin embargo, no podemos confirmar si todos nuestros visitantes superan dicha edad. Si crees que hemos recolectado datos de un menor y eres su padre o guardián, por favor contáctanos en <a href='mailto:soporte@acueducto'>soporte@acueducto.studio</a> e inmediatamente eliminaremos dichos datos.",
-      "subtitle5": "con qué propósito y bajo qué circunstancias procesamos información personal",
-      "p5": "Acueducto recolecta información personal cuando busca:",
-      "list2": "<li>Optimizar el funcionamiento de su Aplicación</li><li>Ponerse en contacto con posibles Socios</li><li>Mejorar el posicionamiento (SEO) de su Aplicación</li>",
-      "subtitle6": "protección de datos",
-      "p6": "En Acueducto se toman múltiples medidas para proteger la información que recolectamos tal como resguardar los datos en la nube con contraseñas que cambian periódicamente; sin embargo ninguna medida garantiza que estos datos puedan caer en las manos equivocadas. <br/><br/>Ten la seguridad de que si Acueducto sufre un ataque y tus datos son adquiridos por un tercero no autorizado, se tomarán las medidas apropiadas y serás debidamente notificado.",
-      "subtitle7": "cambios a estas Políticas de Privacidad",
-      "p7": "Estas Políticas de Privacidad son vigentes desde el 1ro de Mayo de 2020 y se mantendrán vigentes hasta que haya cambios en ellas en el futuro, los cuales tendrán un efecto inmediato tras ser publicados en esta página. Nos reservamos el derecho a actualizar o cambiar nuestras Políticas de Privacidad en cualquier momento por lo que te invitamos a revisar esta página periódicamente. El que uses esta Aplicación después de que modifiquemos sus Políticas de Privacidad, constituirá tu reconocimiento de las modificaciones y tu consentimiento la modificada Política de Privacidad. Al realizar cualquier cambio en estas Políticas de Privacidad, te notificaremos a través del correo electrónico que nos brindaste o publicando un anuncio en nuestro sitio."
-    }
-  },
-  "cookies_page": {
-    "page_title": "Política de Cookies - Acueducto",
-    "meta_description": "Conoce que cookies utilizamos y por qué. Más detalles en nuestra Política de Privacidad.",
-    "headerTitle": "cookies",
-    "intro": {
-      "title": "política de cookies",
-      "p": "Las cookies son porciones de código instaladas en tu navegador para proveer los servicios de la Aplicación (“Servicio”) y algunos propósitos para los que son instaladas requieren tu (“Usuario”) consentimiento.<br/><br/>Todas las Cookies instaladas consensualmente en tu navegador pueden ser revocadas en cualquier momento siguiendo las instrucciones aquí proporcionadas."
-    },
-    "body": {
-      "p0": "Esta Política de Cookies y sus prácticas son regidas por nuestra ",
-      "link0": "Política de Privacidad",
-      "title1": "cookies esenciales para el funcionamiento de la Aplicación",
-      "p1": "Éstas son estrictamente necesarias para el funcionamiento del Servicio. Esta Aplicación utiliza Cookies que se guardan en tu navegador para llevar a cabo actividades necesarias para la operación del sitio, por ejemplo la distribución de tráfico, selección de idioma, etc. Ninguna de ellas guarda información personal o anónima de nuestros Usuarios.",
-      "title2": "actividades con relación a preferencias, optimización y estadística",
-      "p2": "Esta Aplicación utiliza Cookies que guardan las preferencias de navegadores para optimizar tu experiencia. Estas Cookies, por ejemplo, son aquellas que se usan para la configuración de analíticos de la Aplicación. Nos ayudan a mejorar el Servicio manteniéndonos al tanto de las acciones que toman los usuarios anónimamente en la Aplicación.",
-      "subtitle3": "analítica",
-      "p3": "Este servicio permite monitorear y analizar el tráfico web, puede ser utilizado para estar al tanto del comportamiento del Usuario.",
-      "subsubtitle4": "GOOGLE ANALYTICS (GOOGLE LLC)",
-      "p4": "Google Analytics es un servicio de análisis web brindado por Google, LLC. (“Google”). Google utiliza los datos recolectados para analizar, examinar el uso de la Aplicación, hacer reportes de sus actividades y compartirlos con otros servicios de Google. Es posible que Google utilice estos datos para contextualizar y personalizar los anuncios en su propia red de publicidad.<br/>Datos recolectados: Cookies e Información de uso<br/>Lugar de procesamiento: Estados Unidos – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy?hl=es'>Política de Privacidad</a> – <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout?hl=es'>Renunciar (opt-out)</a>.",
-      "subtitle5": "grabación de sesiones",
-      "p5": "Los servicios de grabación de sesiones son usados para mostrar las áreas de la Aplicación donde el Usuario mueve el cursor o da click más frecuentemente, nos permiten interpretar si nuestras estrategias y puntos de interés funcionan correctamente. El servicio permite monitorear y analizar el tráfico de la Aplicación; y rastrear el comportamiento del Usuario. El servicio puede grabar sesiones para su posterior reproducción",
-      "subsubtitle6": "HOTJAR HEAT MAPS & RECORDINGS (HOTJAR LTD)",
-      "p6": "Hotjar es un servicio de grabación de sesión brindado por Hotjar, LTD. (“Hotjar”). Hotjar acepta el encabezado genérico <i>Do Not Track</i> (no rastrear), con el cual el navegador puede dar la orden de no recolectar ninguna información del Usuario. Esta opción está disponible en la gran mayoría de los navegadores.<br/>Datos recolectados: Cookies, usos de datos y varios tipos de información como especifica la política de privacidad de su servicio.<br/>Lugar de procesamiento: Malta – <a target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy/'>Política de Privacidad</a> – <a target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy/do-not-track/'>Renunciar (opt-out)</a>.",
-      "subtitle7": "gestión de tags",
-      "p7": "Este servicio permite a Acueducto administrar las etiquetas necesarias en la Aplicación en una plataforma centralizada. Esto puede resultar en la retención de datos del Usuario en su interacción con la Aplicación.",
-      "subsubtitle8": "GOOGLE TAG MANAGER (GOOGLE LLC)",
-      "p8": "Google Tag Manager es un servicio de administración de etiquetas brindado por Google, LLC. (“Google”).<br/>Datos recolectados: Cookies y actividades en la Aplicación<br/>Lugar de procesamiento: Estados Unidos – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy?hl=es'>Privacy Policy</a> - <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout?hl=es'>Renunciar (opt-out)</a>.",
-      "title9": "información que compartimos con terceros",
-      "p9": "Utilizamos servicios externos de analíticas que nos ayudan a entender el uso de nuestro servicio y a brindar una mejor experiencia, analizar tráfico y distribuir publicidad segmentada en línea.",
-      "subsubtitle10": "MAILCHIMP (THE ROCKET SCIENCE GROUP LLC)",
-      "p10": "Mailchimp es un administrador de <i>email marketing</i> en el que almacenamos nuestra lista de correos para enviar mensajes. Si te suscribes a nuestro newsletter, nos proporcionas tu correo o descargas cualquiera de nuestros contenidos que sean administrados por Mailchimp, recopilaremos tu información como correo electrónico, dirección IP e información sobre tu interacción con los clicks que haces en los mensajes que te enviamos desde los servidores de Mailchimp.<br/><br/>Tanto Mailchimp como Acueducto jamás venderán tus datos o los compartirá con algún tercero, a menos que exista una obligación legal de hacerlo. Si contactas a Mailchimp con respecto a nuestra newsletter, probablemente te contacten directamente; de otra forma, Mailchimp jamás te contactará. Sólo empleados autorizados de Mailchimp tienen acceso a nuestra lista de suscripciones. Siempre eres libre de cancelar tu suscripción, pero mientras estés registrado con Acueducto probablemente usaremos Mailchimp para enviarte información, noticias o nuestro podcast.<br/><br/>Para más información sobre las prácticas de privacidad de Mailchimp, visita su <a href='https://mailchimp.com/legal/privacy/' target='_blank' rel='nofollow noopener'>Política de Privacidad</a>. Si quieres darte de baja (unsubscribe) haz click <a href='https://studio.us19.list-manage.com/unsubscribe?u=c9d7bbb792de4cdbe363fad75&id=434dbf9f3b' target='_blank' rel='nofollow noopener'>aquí</a>.",
-      "subsubtitle11": "GOOGLE ANALYTICS (GOOGLE LLC)",
-      "p11": "Google Analytics es un servicio de análisis web brindado por Google, LLC. (“Google”). Google utiliza los datos recolectados para analizar, examinar el uso de la Aplicación, hacer reportes de sus actividades y compartirlos con otros servicios de Google. Es posible que Google utilice estos datos para contextualizar y personalizar los anuncios en su propia red de publicidad.<br/>Usamos Google Analytics para hacer prácticas de distribución de publicidad pagada y retargeting. Para lo último mencionado, Google instala un pixel en tu navegador que nos permite ponernos en contacto si visitaste nuestro sitio o realizaste una acción específica como descargar algún material, visitar una página o brindarnos tus datos.<br/>Datos recolectados: Cookies e Información de uso.<br/>Lugar de procesamiento: Estados Unidos – <a href='https://policies.google.com/privacy?hl=es' target='_blank' rel='nofollow noopener'>Política de Privacidad</a> – <a href='https://tools.google.com/dlpage/gaoptout?hl=es' target='_blank' rel='nofollow noopener'>Renunciar (opt-out)</a>.",
-      "subtitle12": "Facebook (FACEBOOK INC)",
-      "p12": "Utilizamos servicios de Facebook que instalan cookies y pixeles de seguimiento en tu navegador para hacer publicidad basada en comportamientos y acciones, además de acceder a analíticas de publicidad pagada brindada por Facebook. Usamos Facebook Custom Audiences para identificar a los usuarios que accedieron a ciertas páginas con el propósito de segmentar nuestras prácticas de remarketing y publicidad pautada. Puedes modificar tus ajustes de Publicidad en Facebook para restringir estos anuncios. <a href='https://www.facebook.com/policies/cookies/'>Política de cookies </a> - <a href='https://www.facebook.com/policy.php'>Políticas de privacidad</a>"
-    }
   }
 }

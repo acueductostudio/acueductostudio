@@ -29,9 +29,7 @@ const StepContainer = ({ index, title, p }) => {
   );
 };
 
-const Process = () => {
-  const context = useLocaleContext();
-  const { title, p, steps } = context.home_page.process;
+const Process = ({ title, p, steps }) => {
   return (
     <ProcessSection>
       <TitleSection title={title} p={p} borderTop />

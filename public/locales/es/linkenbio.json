@@ -1,36 +1,36 @@
 {
-  "linkenbio_page": {
-    "page_title": "Link en bio - Acueducto",
-    "meta_description": "Agendemos una cita, prueba una consultoría o escucha nuestro podcast.",
-    "headerTitle": "Link en bio",
-    "title": "¿qué estás buscando?",
-    "links": [
-      {
-        "url": "contacto",
-        "subtitle": "¿Somos los indicados?",
-        "title": "Agenda una cita"
-      },
-      {
-        "url": "podcast",
-        "subtitle": "Podcast",
-        "title": "Cuando el río suena"
-      },
-      {
-        "url": "consultoria",
-        "subtitle": "Desarrollo de negocios",
-        "title": "Consultorías digitales"
-      }
-    ],
-    "p": "revisa nuestro",
-    "secondary_links": [
-      {
-        "url": "pitch",
-        "title": "pitch"
-      },
-      {
-        "url": "portafolio",
-        "title": "portafolio"
-      }
-    ]
-  }
+  "head": {
+    "title": "Link en bio - Acueducto",
+    "description": "Agendemos una cita, prueba una consultoría o escucha nuestro podcast."
+  },
+  "headerTitle": "Link en bio",
+  "title": "¿qué estás buscando?",
+  "links": [
+    {
+      "url": "/contacto",
+      "subtitle": "¿Somos los indicados?",
+      "title": "Agenda una cita"
+    },
+    {
+      "url": "/podcast",
+      "subtitle": "Podcast",
+      "title": "Cuando el río suena"
+    },
+    {
+      "url": "/consultoria",
+      "subtitle": "Desarrollo de negocios",
+      "title": "Consultorías digitales"
+    }
+  ],
+  "p": "revisa nuestro",
+  "secondary_links": [
+    {
+      "url": "/pitch",
+      "title": "pitch"
+    },
+    {
+      "url": "/portafolio",
+      "title": "portafolio"
+    }
+  ]
 }

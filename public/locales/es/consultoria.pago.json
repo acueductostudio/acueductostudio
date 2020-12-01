@@ -1,58 +1,58 @@
 {
-  "payment_page": {
-    "page_title": "Consultoría digital para negocios | Acueducto",
-    "meta_description": "Encuentra soluciones tecnológicas. Consultoría digital en transformación digital, branding, marketing digital, estrategia de negocios y/o cultura empresarial.",
-    "headerTitle": "pago",
-    "headerTitle_unauthorized": "consultoría",
-    "intro": {
-      "title": "agenda tu consultoría siguiendo estos pasos",
-      "p": "Cada consultoría incluye:",
-      "items": [
-        "Dos sesiones de hasta una hora y media cada una con expertos en tecnología y estrategia digital",
-        "Analisis de tu negocio y sus problemáticas",
-        "Investigación sobre tendencias y mejores prácticas para tu situación",
-        "Generación de un documento de plan de acción personalizado"
-      ]
+  "head":{
+    "title": "Consultoría digital para negocios | Acueducto",
+    "description": "Encuentra soluciones tecnológicas. Consultoría digital en transformación digital, branding, marketing digital, estrategia de negocios y/o cultura empresarial."
+  },
+  "headerTitle": "pago",
+  "headerTitle_unauthorized": "consultoría",
+  "intro": {
+    "title": "agenda tu consultoría siguiendo estos pasos",
+    "p": "Cada consultoría incluye:",
+    "items": [
+      "Dos sesiones de hasta una hora y media cada una con expertos en tecnología y estrategia digital",
+      "Analisis de tu negocio y sus problemáticas",
+      "Investigación sobre tendencias y mejores prácticas para tu situación",
+      "Generación de un documento de plan de acción personalizado"
+    ]
+  },
+  "step1": {
+    "title": "realiza tu pago",
+    "card": "tarjeta",
+    "cash": "efectivo",
+    "warning": "Si realizas tu pago por este medio, envía el comprobante a hola@acueducto.studio"
+  },
+  "step2": {
+    "title": "agenda tu cita",
+    "p": "Después de pagar podrás agendar tu primera sesión en nuestro calendario. Los horarios disponibles son de 10:00am a 6:00pm (GTM-5) de lunes a viernes. Tendremos dos sesiones, la segunda la acordaremos más adelante."
+  },
+  "step3": {
+    "title": "contesta el formulario",
+    "p": "Después de agendar tu cita recibirás en tu correo un cuestionario con algunas preguntas sobre tu negocio y problemática, así podemos aprovechar tu tiempo al máximo."
+  },
+  "cta": {
+    "title": "agenda tu consultoría digital",
+    "price": "$5,200.00 <b>MXN</b>",
+    "sessions": "2 sesiones",
+    "firstName": {
+      "label": "nombre",
+      "placeholder": "tu nombre",
+      "errorMissing": "*falta tu nombre"
     },
-    "step1": {
-      "title": "realiza tu pago",
-      "card": "tarjeta",
-      "cash": "efectivo",
-      "warning": "Si realizas tu pago por este medio, envía el comprobante a hola@acueducto.studio"
+    "lastName": {
+      "label": "apellido",
+      "placeholder": "tu apellido",
+      "errorMissing": "*falta tu apellido"
     },
-    "step2": {
-      "title": "agenda tu cita",
-      "p": "Después de pagar podrás agendar tu primera sesión en nuestro calendario. Los horarios disponibles son de 10:00am a 6:00pm (GTM-5) de lunes a viernes. Tendremos dos sesiones, la segunda la acordaremos más adelante."
+    "email": {
+      "label": "email de trabajo",
+      "placeholder": "tu email",
+      "errorMissing": "*falta tu email",
+      "errorInvalid": "*email inválido"
     },
-    "step3": {
-      "title": "contesta el formulario",
-      "p": "Después de agendar tu cita recibirás en tu correo un cuestionario con algunas preguntas sobre tu negocio y problemática, así podemos aprovechar tu tiempo al máximo."
-    },
-    "cta": {
-      "title": "agenda tu consultoría digital",
-      "price": "$5,200.00 <b>MXN</b>",
-      "sessions": "2 sesiones",
-      "firstName": {
-        "label": "nombre",
-        "placeholder": "tu nombre",
-        "errorMissing": "*falta tu nombre"
-      },
-      "lastName": {
-        "label": "apellido",
-        "placeholder": "tu apellido",
-        "errorMissing": "*falta tu apellido"
-      },
-      "email": {
-        "label": "email de trabajo",
-        "placeholder": "tu email",
-        "errorMissing": "*falta tu email",
-        "errorInvalid": "*email inválido"
-      },
-      "submit": "agendar cita",
-      "loading": "enviando...",
-      "title2": "lee más sobre nuestras consultorías",
-      "linktext": "Lee más sobre nuestras ",
-      "link": ["/consultoria", "consultorias"]
-    }
+    "submit": "agendar cita",
+    "loading": "enviando...",
+    "title2": "lee más sobre nuestras consultorías",
+    "linktext": "Lee más sobre nuestras ",
+    "link": ["/consultoria", "consultorias"]
   }
 }

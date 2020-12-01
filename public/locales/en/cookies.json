@@ -1,0 +1,39 @@
+{
+  "head": {
+    "title": "Cookie Policy – Acueducto",
+    "description": "Know which cookies we use and why we use them. More details on our Privacy Policy."
+  },
+  "headerTitle": "Cookie Policy",
+  "intro": {
+    "title": "cookie policy",
+    "p": "Cookies are portions of code installed in your browser to provide the Application (“Service”) services and some of the purposes for which they are installed require your (“User”) consent.<br/><br/>All cookies consensually installed can be revoked at any time by following the instructions provided here."
+  },
+  "body": {
+    "p0": "This Cookie Policy and its practices are governed by our ",
+    "link0": "Privacy Policy",
+    "title1": "essential cookies for the operation of the Application",
+    "p1": "These are strictly necessary for the proper operation of the Service. This Application uses Cookies that are saved in your browser to carry out activities necessary for the operation of the site, for example, traffic distribution, language selection, etc. They do not store any personal or anonymous information about our Users.",
+    "title2": "activities with relations to preferences, optimizations, and statistics",
+    "p2": "This Application uses cookies that save browser preferences to optimize your experience. These Cookies, for example, are those used for the analytics of the Application. They help us improve the Service by making us aware of the actions Users anonymously take inside the Application.",
+    "subtitle3": "analytics",
+    "p3": "This service allows monitoring and analyzing web traffic, and can be used to be aware of the User's behavior.",
+    "subsubtitle4": "GOOGLE ANALYTICS (GOOGLE LLC)",
+    "p4": "Google Analytics is a web analysis service provided by Google LLC. (“Google”). Google utilizes the data collected to track and examine the use of this Application, to prepare reports on its activities and share them with other Google services. Google may use the data collected to contextualize and personalize the ads of its own advertising network.<br/>Personal data collected: Cookies and Usage Data.<br/>Place of processing: United States – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy'>Privacy Policy</a> – <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout'>Opt Out</a>",
+    "subtitle5": "heat mapping and session recording",
+    "p5": "Heat mapping services are used to display the areas of a page where Users most frequently move the mouse or click, they allow us to interpret if our strategies and points of interest are working. These services make it possible to monitor and analyze web traffic while keeping track of User behavior. Some of these services may record sessions and make them available for a later visual playback.",
+    "subsubtitle6": "HOTJAR HEAT MAPS & RECORDINGS (HOTJAR LTD)",
+    "p6": "Hotjar is a session recording and heat mapping service provided by Hotjar Ltd. (“Hotjar”). Hotjar honors generic <i>Do Not Track</i> headers. This means the browser can tell its script not to collect any of the User's data. This is a setting that is available in all major browsers. Find Hotjar’s opt-out information here.<br/>Personal Data collected: Cookies, Usage Data and various types of data as specified in their privacy policy.<br/>Place of processing: Malta – <a  target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy/'>Privacy Policy</a> – <a  target='_blank' rel='noopener noreferrer' href='https://www.hotjar.com/privacy/do-not-track/'>Opt Out.</a>",
+    "subtitle7": "tag management",
+    "p7": "This type of service helps the Application manage the tags or scripts needed on this Application in a centralized fashion. This results in the Users' data flowing through tag management services, potentially resulting in the retention of this data.",
+    "subsubtitle8": "GOOGLE TAG MANAGER (GOOGLE LLC)",
+    "p8": "Google Tag Manager es un servicio de administración de etiquetas brindado por Google, LLC. (“Google”).<br/>Datos recolectados: Cookies y actividades en la Aplicación<br/>Lugar de procesamiento: Estados Unidos – <a target='_blank' rel='noopener noreferrer' href='https://policies.google.com/privacy?hl=es'>Privacy Policy</a> - <a target='_blank' rel='noopener noreferrer' href='https://tools.google.com/dlpage/gaoptout?hl=es'>Renunciar (opt-out)</a>.",
+    "title9": "sharing personal data with third parties",
+    "p9": "We use third-party analytics services to help understand your usage of our services and offer you a better browsing experience, analyze site traffic, personalize content, and serve targeted advertisements.",
+    "subsubtitle10": "MAILCHIMP (THE ROCKET SCIENCE GROUP LLC)",
+    "p10": "We use these services to manage email marketing subscriber lists and send emails to our subscribers. If you sign up for our newsletter, leave your email address or download one of our whitepapers or guides which are administered through Mailchimp, or if you register on our site, we will store some of your information, including your email address, IP address and certain information about the links you click within the emails we send you, on a Mailchimp server.<br/><br/>Neither we nor Mailchimp will ever sell your email address or share it with any other party, unless we are legally compelled to do so. If you contact Mailchimp directly regarding your subscription to our newsletter, Mailchimp may contact you directly; otherwise, Mailchimp will never contact you. Only authorized Mailchimp employees have access to our subscriber list. You are always free to unsubscribe from our newsletter, but as long as you are registered with Acueducto we may use Mailchimp to send you information about your account.<br/><br/><a href='https://mailchimp.com/legal/privacy/' target='_blank' rel='nofollow noopener'>Mailchimp's Privacy Policy</a> - <a href='https://studio.us19.list-manage.com/unsubscribe?u=c9d7bbb792de4cdbe363fad75&id=434dbf9f3b' target='_blank' rel='nofollow noopener'>Unsubscribe</a>.",
+    "subsubtitle11": "GOOGLE ANALYTICS (GOOGLE LLC)",
+    "p11": "The Site uses Google Analytics, a web analytics service provided by Google, Inc. (“Google”). Google Analytics uses cookies to help the Site analyze how users interact with it. The information generated by the cookie about your use of the Site (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google Analytics does not identify individual users or associate your IP address with any other data held by Google. We use reports provided by Google Analytics to help us understand website traffic and webpage usage, and improve our content and website performance. You may refuse the use of cookies by selecting the appropriate settings on your browser. However, please note that if you do this, you may not be able to use the full functionality of this website.<br/>Data collected: Cookies and usage data.<br/>Place of processing: United States – <a href='https://policies.google.com/privacy?hl=es' target='_blank' rel='nofollow noopener'>Privacy Policy</a> – <a href='https://tools.google.com/dlpage/gaoptout?hl=es' target='_blank' rel='nofollow noopener'>Opt-out</a>.",
+    "subtitle12": "Facebook (FACEBOOK INC)",
+    "p12": "We use Facebook services that install cookies and tracking pixels in your browser to make paid ads based on behavior and actions and to access analytics provided by Facebook. We use Facebook Custom Audiences to identify users that landed in certain pages with the purpose to make segmented retargeting and paid ads. You can modify your Facebook Ad settings to stop these ads.<br/><br/><a href='https://www.facebook.com/policies/cookies/'>Cookie Policy</a> - <a href='https://www.facebook.com/policy.php'>Privacy Policy</a>."
+  }
+}

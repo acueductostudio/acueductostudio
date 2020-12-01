@@ -31,7 +31,7 @@ export default function Work({ locale, setTitle, pt }) {
         en_canonical={"https://acueducto.studio/en/work"}
       />
       <TitleSection {...t.intro} />
-      <CaseList noPlay />
+      <CaseList />
       <ContactFooter />
     </PageClipperPadded>
   );

@@ -4,9 +4,9 @@ import Grid, { Container } from "./TitleSectionGrid";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import { Fade } from "react-awesome-reveal";
 
-type TitleProps = {
+interface TitleProps {
   title: string;
-  p: string;
+  p?: string;
   link?: string;
   linktext?: string;
   borderTop?: boolean;
@@ -20,6 +20,7 @@ const TitleSection = ({
   linktext,
   borderTop,
   children,
+  ...intro
 }: TitleProps) => {
   return (
     <Grid borderTop={borderTop}>

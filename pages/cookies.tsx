@@ -1,34 +1,45 @@
-import { useEffect } from "react";
-import Head from "components/layout/Head.tsx";
+import { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import clientLocale from "utils/clientLocale";
+import Head from "components/layout/Head";
 import Link from "next/link";
 import PageClipper from "components/layout/PageClipper";
 import SimplePinnedSection from "components/shared/pinnedSections/SimplePinnedSection";
 import { P, H3 } from "components/shared/Dangerously";
 import ContactFooter from "components/shared/footers/ContactFooter";
 
-export default function Cookies(props) {
-  let t = props.locale.cookies_page;
+export default function Cookies({ locale, setTitle, pt }) {
+  const [t, setT] = useState(pt);
   let b = t.body;
 
   useEffect(() => {
-    props.setTitle(t.headerTitle);
-  }, [props.lang]);
+    clientLocale({
+      locale: locale,
+      fileName: "cookies.json",
+      callBack: (nT) => {
+        setT(nT);
+        setTitle(nT.headerTitle);
+      },
+    });
+  }, [locale]);
 
   return (
     <PageClipper>
       <Head
-        title={t.page_title}
-        description={t.meta_description}
-        canonical={"https://acueducto.studio/cookies"}
+        {...t.head}
+        es_canonical={"https://acueducto.studio/cookies"}
         en_canonical={"https://acueducto.studio/en/cookies"}
-        lang={props.lang}
       />
       <SimplePinnedSection title={t.intro.title}>
         <P>{t.intro.p}</P>
         <p>
           {b.p0}
           <Link
-            href={props.locale.lang === "en" ? "/en/privacy" : "/privacidad"}
+            href={"/privacidad"}
+            as={locale === "en" ? "privacy" : "/privacidad"}
+            locale={locale}
+            passHref
           >
             <a>{b.link0}</a>
           </Link>
@@ -63,3 +74,12 @@ export default function Cookies(props) {
     </PageClipper>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "cookies.json" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};

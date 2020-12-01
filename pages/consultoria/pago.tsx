@@ -1,23 +1,24 @@
-import styled from "styled-components";
 import React, { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
+import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import { createContact, updateContact } from "utils/sendinBlue.ts";
+import { createContact, updateContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
-import Head from "components/layout/Head.tsx";
+import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import TitleSection from "components/shared/TitleSection";
 import DefaultForm from "components/shared/DefaultForm";
-import es from "public/locales/es/consultoria.pago.json";
 import Cards from "public/assets/img/layout/logos/cards.svg";
 import Cash from "public/assets/img/layout/logos/cash.svg";
 import Cookies from "js-cookie/dist/js.cookie.mjs";
+import { advancedMatching } from "utils/analytics";
 
-const Pago = (props) => {
+const Pago = ({ locale, setTitle, pt }) => {
   const [isAuthorized, setAuthorized] = useState(false);
   let {
-    page_title,
-    meta_description,
+    head,
     headerTitle,
     headerTitle_unauthorized,
     intro,
@@ -25,11 +26,11 @@ const Pago = (props) => {
     step2,
     step3,
     cta,
-  } = es.payment_page;
+  } = pt;
 
   useEffect(() => {
-    props.setTitle(headerTitle);
-  }, [props.locale]);
+    setTitle(headerTitle);
+  }, [locale]);
 
   useEffect(() => {
     let ref = document.referrer;
@@ -54,7 +55,7 @@ const Pago = (props) => {
         window.location.replace("https://meetings.hubspot.com/hola250");
       }
     } else {
-      props.setTitle(headerTitle_unauthorized);
+      setTitle(headerTitle_unauthorized);
     }
   }, [isAuthorized]);
 
@@ -68,7 +69,7 @@ const Pago = (props) => {
       updateEnabled: true,
     });
     Cookies.set("ue", data.email);
-    ReactPixel.init("506854653278097", { em: data.email });
+    ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Pidió consultoría
     ReactPixel.track("SubmitApplication", { email: data.email });
     setAuthorized(true);
@@ -76,11 +77,9 @@ const Pago = (props) => {
   return (
     <PageClipper>
       <Head
-        title={page_title}
-        description={meta_description}
-        image={{ fileName: "og_image_consultoria.jpg", alt: props.image_alt }}
+        {...head}
+        image={{ fileName: "og_image_consultoria.jpg", alt: head.image_alt }}
         es_canonical={"https://acueducto.studio/consultoria/pago"}
-        lang={props.lang}
       />
       {!isAuthorized && (
         <Container>
@@ -130,6 +129,19 @@ const Pago = (props) => {
 };
 
 export default React.memo(Pago);
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({
+    locale: context.locale,
+    fileName: "consultoria.pago.json",
+    oneLang: "es",
+  });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const Includes = styled.ul`
   margin-bottom: 20%;

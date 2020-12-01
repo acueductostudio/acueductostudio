@@ -1,0 +1,110 @@
+{
+  "head": {
+    "title": "Difusión musical estratégica - Salvajenada & Acueducto",
+    "description": "¿Cómo distinguir tu playlist entre el mar de selecciones en la web?",
+    "image_alt": "Salvajenada, caso de estudio por Acueducto"
+  },
+  "headerTitle": "Salvajenada",
+  "logo": "salvajenada.svg",
+  "link": "salvajenada",
+  "intro_section": {
+    "tags": [
+      "estrategia de proyecto",
+      "estrategia de contenido",
+      "desarrrollo de producto",
+      "tov digital",
+      "consultoría de diseño",
+      "copywriting"
+    ],
+    "video": "salvajevideo.mp4",
+    "title": "<b>Acto I</b><br/>Señales de muerte",
+    "p": "Sebastián Díaz, mejor conocido como Sebas, comparte música desde hace más de seis años con un equipo de editores musicales -incluido nuestro cofundador Artemio Pedraza- en Salvajenada. Una iniciativa cuyo gusto por propuestas emergentes ha descubierto artistas como Tyler The Creator, Anderson .Paak, Mac DeMarco, Alt-J, Parcels y muchos más antes de convertirse en estrellas <i>indie</i>. Su deseo por compartir música los ha llevado a realizar actividades como alimentar un blog, organizar conciertos, aliarse con festivales de música, realizar entrevistas, escribir artículos y muchas cosas más.<br/><br/>A pesar de estos esfuerzos, un año antes de asociarnos Salvajenada mostraba señales de muerte. Sus canales de redes sociales estaban desérticos; su sitio web era lento y obsoleto, sus colaboradores creían que el proyecto ya había dado su máximo potencial y nadie hacía nada al respecto.",
+    "graphicp": "días sin postear",
+    "p2": "Nadie con excepción de Sebas, quien enfocó su carrera en contextos digitales gracias a su apego y experiencia con Salvajenada. Sabía que tenía una marca y concepto único, por lo que agendó una junta con Acueducto para explorar posible soluciones."
+  },
+  "second_section": {
+    "title": "<b>Acto II</b><br/>Cómo hacer una playlist relevante",
+    "p": "Se comenzó por revisar las ideas centrales y el propósito de la marca, sus últimas acciones y las responsabilidades del equipo. A pesar de llevar más de seis años a flote, esta era la primera vez que Salvajenada desarrollaba un modelo de negocios con todas sus operaciones y valores. Para tomar decisiones correctas es fundamental tener un panorama amplio, re-pensar los retos y resaltar las oportunidades de los problemas a resolver.",
+    "sticky": "Escúchala en",
+    "table": [
+      {
+        "label": "Competencias",
+        "content": "- Equipo de descubrimiento musical<br/>- Autoridad de marca"
+      },
+      {
+        "label": "Restricciones",
+        "content": "- Disposición de tiempo de colaboradores<br/>- Sólo trabajan en contextos digitales"
+      }
+    ],
+    "p2": "El análisis de la situación arrojó una posible solución: traer de vuelta su lista de nuevos descubrimientos, mejor conocida como <b>#CanastaBásica</b>; y convertirla en el producto central de la organización.<br/><br/>Desde entonces los editores sólo arrastran sus descubrimientos diarios en una <i>playlist</i> colaborativa y el resto de la comunicación es realizada por tres colaboradores que formaron un equipo para el desarrollo y moderación de contenidos.<br/><br/>¿Cómo hacer una <i>playlist</i> relevante entre el mar de listas que hay en internet? Con una fuerte propuesta de valor y una sólida estrategia alrededor de ella.",
+    "table2": [
+      {
+        "label": "Propuesta de valor",
+        "content": "Lista de reproducción actualizada cada 15 días con recientes y auténticos lanzamientos musicales construída por un grupo de melómanos que busca romper con tendencias convencionales y generar nuevas experiencias para descubrir música."
+      }
+    ],
+    "quote": {
+      "quote": "Desarrollar un modelo de negocios nos permitió lanzar el proyecto y darle seguimiento. Ahora cada trimestre implementamos nuevas ideas con métricas a la mano. Esto determina cada paso que damos y cómo distribuimos las responsabilidades en el equipo. Todos sabemos hacia dónde vamos y qué se espera del proyecto a futuro.",
+      "name": "Sebastián Díaz"
+    }
+  },
+  "third_section": {
+    "subtitle": "Publica, interactúa y esparce",
+    "p": "La fase de Descubrimiento arrojó las pautas que moldearon el plan de comunicación de la <i>playlist</i>. Mediante investigación y análisis de datos se decidió utilizar Instagram como el canal principal de la marca, mientras que las actualizaciones a la lista serían a través de Apple Music y Spotify.<br/><br/>Con esto en consideración, un plan fue creado para conectar con su audiencia y posibles nuevos usuarios.",
+    "insights": {
+      "periodicity": {
+        "title": "Periodicidad",
+        "p": "Todo lo que hagas en redes sociales necesita consistencia. La #CanastaBásica se actualiza cada quince días y en cada entrega se seleccionan seis canciones para hacer micro-reseñas, las cuales son publicadas en Instagram. Tomando en cuenta los posts que anuncian cada actualización y las reseñas, suman un total de 108 publicaciones en Instagram cada dos trimestres, un promedio de 4.5 publicaciones semanales."
+      },
+      "meaningfulness": {
+        "title": "Relevancia",
+        "p": "Los escuchas de la lista no sólo tienen a su disposición una actualización quincenal con los últimos lanzamientos del mundo, sino que también reciben contexto e información sobre las mejores canciones de la lista. Por otra parte, para un artista ser seleccionado en una <i>playlist</i> de “lo mejor de” suma a la promoción y autoridad del tema reseñado, recibir una mención honorífica contribuye a la relevancia del lanzamiento."
+      },
+      "spreadability": {
+        "title": "Nuevas audiencias",
+        "p": "El último punto se relaciona directamente con este. Al dar a artistas un reconocimiento que pueden mostrar al mundo, su aparición en la <i>playlist</i> o en las micro-reseñas se convierte en contenido atractivo para compartir en sus redes sociales. De esta forma, más de 20 proyectos han compartido la <i>playlist</i> en sus perfiles, lo que da un promedio de uno por entrega. Esto permite a Salvajenada llegar a las audiencias de dichos artistas."
+      },
+      "multimedia_development": {
+        "title": "Desarrollo multimedia",
+        "p": "Se hizo una propuesta al equipo editorial de Ibero 90.9, la estación universitaria más grande de México, para que en cada actualización de la <i>playlist</i> el equipo de Salvajenada fuese invitado a programar temas de la #CanastaBásica y discutirlos al aire.",
+        "quote": {
+          "quote": "No sólo tenemos una playlist que los usuarios pueden escuchar, se trata del concepto de compartir nueva música. Es una colección de canciones que también sirve como un lugar en el que puedes contextualizar (y enamorarte de) la nueva música que descubres.",
+          "name": "Sebastián Díaz"
+        }
+      }
+    }
+  },
+  "fourth_section": {
+    "title": "<b>Acto III</b><br/>Estadísticas y planes",
+    "p": "Tras la implementación de la estrategia, las redes sociales y plataformas musicales de Salvajenada arrojaron resultados inmediatos y positivos. Áreas como la base de seguidores, el alcance y la interacción tuvieron impactos radicales. Echa un vistazo a los datos recolectados tras un semestre de trabajo:",
+    "stats": [
+      {
+        "big": "<i>+</i>1k",
+        "small": "seguidores orgánicos de la lista"
+      },
+      {
+        "big": "<i>+</i>341%",
+        "small": "promedio de alcance de publicaciones"
+      },
+      {
+        "big": "<i>x</i>2",
+        "small": "apariciones en radio FM mensuales"
+      },
+      {
+        "big": "<i>+</i>42%",
+        "small": "aumento en seguidores en Instagram"
+      },
+      {
+        "big": "6<i>+</i>",
+        "small": "correos recibidos al día de seguidores, artistas, disqueras y agentes de PR con recomendaciones"
+      },
+      {
+        "small": "Seguidos por los equipos editoriales de Apple Music y Spotify"
+      }
+    ],
+    "p2": "Motivados por estos resultados, Salvajenada se encuentra pensando cómo crear una fuente de ingresos a partir de su comunidad. La conversación va y viene entre organizar conciertos, promocionar nuevos lanzamientos e incluso asociarse con una tienda de viniles para ofrecer un modelo de suscripción que entregue discos mensualmente.<br/><br/>Asociándose con Acueducto y tomando su consultoría digital para desarrollar una experiencia web, Salvajenada trabaja en una nueva estrategia, a través del contenido y la innovación digital, para ofrecer valor a esta comunidad de amantes de la música."
+  },
+  "fifth_section": {
+    "title": "escucha la #CanastaBasica"
+  }
+}

@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { GetStaticProps } from "next";
+import ssrLocale from "utils/ssrLocale";
 import styled from "styled-components";
 import Head from "components/layout/Head";
 import Link from "next/link";
@@ -6,32 +8,28 @@ import PageClipper from "components/layout/PageClipper";
 import MetalPinnedSection from "components/shared/pinnedSections/MetalPinnedSection";
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
-import es from "public/locales/es/linkenbio.json";
 import Consultoria from "public/assets/img/layout/linkenbio/consultoria.svg";
 import Podcast from "public/assets/img/layout/linkenbio/podcast.svg";
 
-export default function LinkEnBio(props) {
+export default function LinkEnBio({locale, setTitle, pt}) {
   let {
-    page_title,
-    meta_description,
+    head,
     headerTitle,
     title,
     links,
     secondary_links,
     p,
-  } = es.linkenbio_page;
+  } = pt;
 
   useEffect(() => {
-    props.setTitle(headerTitle);
-  }, [props.locale]);
+    setTitle(headerTitle);
+  }, [locale]);
 
   return (
     <PageClipper>
       <Head
-        title={page_title}
-        description={meta_description}
+        {...head}
         es_canonical={"https://acueducto.studio/linkenbio"}
-        lang={props.lang}
       ></Head>
       <MetalPinnedSection title={title}>
         <ul>
@@ -39,7 +37,7 @@ export default function LinkEnBio(props) {
             <Resource key={"linkentry" + index}>
               {index === 2 && <Consultoria />}
               {index === 1 && <Podcast />}
-              <Link href={link.url} passHref>
+              <Link href={link.url} passHref locale={locale}>
                 <a>
                   <Fade triggerOnce>
                     <span>{link.subtitle}</span>
@@ -68,7 +66,17 @@ export default function LinkEnBio(props) {
       <ContactFooter />
     </PageClipper>
   );
-}
+};
+
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const pt = ssrLocale({ locale: context.locale, fileName: "linkenbio.json", oneLang: "es" });
+  return {
+    props: {
+      pt,
+    },
+  };
+};
 
 const Subtitle = styled.p`
   color: ${(p) => p.theme.colors.accent} !important;

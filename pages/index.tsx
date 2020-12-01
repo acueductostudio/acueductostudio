@@ -44,8 +44,8 @@ function Index({ locale, setTitle, pt }) {
         </Intro>
         <Carousel items={t.carousel}/>
         <TitleSection {...t.studies} borderTop />
-        <CaseList noPlay />
-        <Products />
+        <CaseList />
+        <Products/>
         <Services services={t.services}/>
         <ContactFooter />
       </PageClipper>

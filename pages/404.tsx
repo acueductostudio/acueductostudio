@@ -25,7 +25,7 @@ export default function Error({ locale, setTitle, pt }) {
     <PageClipper>
       <Head
         title="Acueducto | 404"
-        description={t.meta_description}
+        description={t.description}
         es_canonical={"https://acueducto.studio/404"}
         en_canonical={"https://acueducto.studio/en/404"}
       />

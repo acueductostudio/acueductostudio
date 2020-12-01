@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
+import styled from "styled-components";
 import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import { Fade } from "react-awesome-reveal";
