@@ -6,8 +6,16 @@
     { "title": "contact", "link": "/contacto", "as": "/contact" }
   ],
   "legal_nav": {
-    "cookies": { "title": "cookie policy", "link": "/en/cookies" },
-    "privacy": { "title": "privacy policy", "link": "/en/privacy" }
+    "cookies": {
+      "title": "cookie policy",
+      "link": "cookies",
+      "as": "/cookies"
+    },
+    "privacy": {
+      "title": "privacy policy",
+      "link": "privacidad",
+      "as": "/privacy"
+    }
   },
   "lang": "en",
   "products_section": {
@@ -63,14 +71,18 @@
         "policies": "policies"
       },
       "main": [
-        { "title": "pitch", "link": "/en/pitch" },
-        { "title": "about", "link": "/en/about" },
-        { "title": "work", "link": "/en/work" },
-        { "title": "contact", "link": "/en/contact" }
+        { "title": "pitch", "link": "/pitch", "as": "/pitch" },
+        { "title": "about", "link": "/nosotros", "as": "/about" },
+        { "title": "work", "link": "/portafolio", "as": "/work" },
+        { "title": "contact", "link": "/contacto", "as": "/contact" }
       ],
       "policies": [
-        { "title": "cookie policy", "link": "/en/cookies" },
-        { "title": "privacy policy", "link": "/en/privacy" }
+        { "title": "cookie policy", "link": "cookies", "as": "/cookies" },
+        {
+          "title": "privacy policy",
+          "link": "privacidad",
+          "as": "/privacy"
+        }
       ],
       "mailto": {
         "subject": "Let's work together",

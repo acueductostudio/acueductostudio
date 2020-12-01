@@ -11,8 +11,7 @@ import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 const ContactFooter = () => {
   const context = useLocaleContext();
-  let { title, p, button_text, lang} = context.contact_footer;
-
+  let { title, p, button_text } = context.contact_footer;
   return (
     <>
       <Grid>
@@ -23,8 +22,8 @@ const ContactFooter = () => {
           <p>{p}</p>
           <Link
             href={"/contacto"}
-            as={lang === "en" ? "contact" : "/contacto"}
-            locale={lang}
+            as={context.lang === "en" ? "contact" : "/contacto"}
+            locale={context.lang}
             passHref
           >
             <ButtonArrow text={button_text} />

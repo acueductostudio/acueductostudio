@@ -5,7 +5,7 @@ import Router, { useRouter } from "next/router";
 
 const oneLangPages = ["consultoria", "podcast", "diagnostico", "linkenbio"];
 
-function LanguageToggler({ hasLoaded, locale, toggleLang }) {
+function LanguageToggler({ hasLoaded, locale }) {
   const router = useRouter();
   const [showToggler, setShowToggler] = useState(false);
 
@@ -64,7 +64,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
         default:
           Router.push(router.route, "/problemas");
       }
-      toggleLang("es");
     } else {
       switch (router.asPath) {
         case "/portafolio/rahid":
@@ -110,7 +109,6 @@ function LanguageToggler({ hasLoaded, locale, toggleLang }) {
         default:
           Router.push(router.route, "/trouble");
       }
-      toggleLang("en");
     }
   };
 

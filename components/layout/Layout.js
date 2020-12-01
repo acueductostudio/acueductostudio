@@ -20,7 +20,6 @@ const HomeSketch = dynamic(import("../homeSketch/HomeSketch"), {
 
 const Layout = ({
   children,
-  toggleLang,
   checkForConsent,
   consentToCookies,
   hasToConsent,
@@ -77,12 +76,12 @@ const Layout = ({
 
   useEffect(() => {
     mouse.current[0] = window.innerWidth > 600 ? 1200 : 300;
-    if (router.route === "/" || router.route === "/en") {
+    if (router.route === "/") {
       setShowSketch(true);
       setShowArrow(true);
       setIsAbout(false);
       setShowPopup(false);
-    } else if (router.route === "/nosotros" || router.route === "/en/about") {
+    } else if (router.route === "/nosotros") {
       setIsAbout(true);
       setShowSketch(false);
       setShowArrow(false);
@@ -98,8 +97,9 @@ const Layout = ({
       setIsAbout(false);
       setShowPopup(false);
     }
+    // console.log(router.route)
     hasLoaded && logPageView();
-    hasLoaded && ReactPixel.pageView(); // For tracking page view
+    hasLoaded && ReactPixel.pageView(); 
   }, [router.route]);
 
   useEffect(() => {
@@ -166,7 +166,7 @@ const Layout = ({
           headerTitle={headerTitle}
           hasLoaded={hasLoaded}
           closeNav={closeNav}
-          locale={locale}
+          locale={router.locale}
           route={router.route}
         />
         <Nav
@@ -182,11 +182,9 @@ const Layout = ({
           locale: router.locale,
           mouse: mouse,
         })}
-
         <LanguageToggler
           locale={router.locale}
           hasLoaded={hasLoaded}
-          toggleLang={toggleLang}
         />
         <ScrollIncentive hasLoaded={hasLoaded} showArrow={showArrow} />
         <CookieMessage

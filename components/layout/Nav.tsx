@@ -80,11 +80,21 @@ export default function Nav(props) {
               </Hoverable>
             </Social>
             <Policies onClick={props.closeNav}>
-              <Link href={l.cookies.link} passHref>
+              <Link
+                href={l.cookies.link}
+                as={l.cookies.as ? l.cookies.as : l.cookies.link}
+                locale={props.locale}
+                passHref
+              >
                 <Hoverable>{l.cookies.title}</Hoverable>
               </Link>
               <span> | </span>
-              <Link href={l.privacy.link} passHref>
+              <Link
+                href={l.privacy.link}
+                as={l.privacy.as ? l.privacy.as : l.privacy.link}
+                locale={props.locale}
+                passHref
+              >
                 <Hoverable>{l.privacy.title}</Hoverable>
               </Link>
             </Policies>

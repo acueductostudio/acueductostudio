@@ -43,7 +43,9 @@ export default function FooterNav() {
                 key={"itemMain" + index}
               >
                 <li>
-                  <Link href={item.link}>{item.title}</Link>
+                  <Link href={item.link} as={item.as} locale={context.lang}>
+                    {item.title}
+                  </Link>
                 </li>
               </Fade>
             ))}
@@ -81,7 +83,9 @@ export default function FooterNav() {
                 key={"itemSocial" + index}
               >
                 <li>
-                  <Link href={item.link}>{item.title}</Link>
+                  <Link href={item.link}>
+                    {item.title}
+                  </Link>
                 </li>
               </Fade>
             ))}
@@ -99,7 +103,9 @@ export default function FooterNav() {
                 key={"itemPolicy" + index}
               >
                 <li>
-                  <Link href={item.link}>{item.title}</Link>
+                  <Link href={item.link} as={item.as} locale={context.lang}>
+                    {item.title}
+                  </Link>
                 </li>
               </Fade>
             ))}

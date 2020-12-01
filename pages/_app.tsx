@@ -1,23 +1,33 @@
 import { useState, useEffect, useRef } from "react";
-import Router from "next/router";
+import clientLocale from "utils/clientLocale";
 import { AppProps } from "next/app";
-import { withRouter } from "next/router";
 import { ThemeProvider, AppContext } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout/Layout";
 import theme from "styles/theme";
 import Cookies from "js-cookie/dist/js.cookie";
 import delayForLoading from "utils/delayForLoading";
-import en from "public/locales/en/common.json";
+// import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
 import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
+
 function App({ Component, pageProps, router }: AppProps) {
-  const [locale, setLocale] = useState<AppContext>(router.locale === "en" ? en : es);
+  const [locale, setLocale] = useState<AppContext>(es);
   const [hasToConsent, setHasToConsent] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const LoadingBarRef = useRef(null);
+
+  useEffect(() => {
+    clientLocale({
+      locale: router.locale,
+      fileName: "common.json",
+      callBack: (nT) => {
+        setLocale(nT);
+      },
+    });
+  }, [router.locale]);
 
   useEffect(() => {
     // Disable scroll
@@ -26,7 +36,7 @@ function App({ Component, pageProps, router }: AppProps) {
 
     // Load Animation
     delayForLoading(800).then(() => {
-      console.log("start animation");
+      // console.log("start animation");
       const bordered = document.getElementById("bordered");
       const logo = document.getElementById("logo");
       const revealer = document.getElementById("revealer");
@@ -50,15 +60,15 @@ function App({ Component, pageProps, router }: AppProps) {
       }
     });
     // router event listeners for loadingBar
-    Router.events.on("routeChangeStart", handleRouteStart);
-    Router.events.on("routeChangeComplete", handleRouteComplete);
-    Router.events.on("routeChangeError", handleRouteError);
+    router.events.on("routeChangeStart", handleRouteStart);
+    router.events.on("routeChangeComplete", handleRouteComplete);
+    router.events.on("routeChangeError", handleRouteError);
 
     return () => {
       // remove loadingBar event listeners
-      Router.events.off("routeChangeStart", handleRouteStart);
-      Router.events.off("routeChangeComplete", handleRouteComplete);
-      Router.events.off("routeChangeError", handleRouteError);
+      router.events.off("routeChangeStart", handleRouteStart);
+      router.events.off("routeChangeComplete", handleRouteComplete);
+      router.events.off("routeChangeError", handleRouteError);
     };
   }, []);
 
@@ -68,12 +78,6 @@ function App({ Component, pageProps, router }: AppProps) {
       (console.log("Page hasLoaded"), enableBodyScroll(targetElement));
   }),
     [hasLoaded];
-
-  const toggleLang = (lang) => {
-    let language = lang === "en" ? en : es;
-    Cookies.set("chosenLang", lang);
-    setLocale(language);
-  };
 
   const handleRouteComplete = (url) => {
     setTimeout(function () {
@@ -123,13 +127,12 @@ function App({ Component, pageProps, router }: AppProps) {
           consentToCookies={consentToCookies}
           hasToConsent={hasToConsent}
           hasLoaded={hasLoaded}
-          toggleLang={toggleLang}
         >
-          <Component locale={locale} {...pageProps} lang={locale.lang} />
+          <Component locale={locale} {...pageProps} lang={router.locale} />
         </Layout>
       </LangProvider>
     </ThemeProvider>
   );
 }
 
-export default withRouter(App);
+export default App;

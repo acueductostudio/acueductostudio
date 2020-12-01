@@ -12,7 +12,7 @@ function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
   };
   return (
     <TopHeader reveal={hasLoaded}>
-      <Link href={locale.lang === "en" ? "/en" : "/"} passHref>
+      <Link href="/" as={locale === "en" ? "/en" : "/"} passHref locale={locale}>
         <LogoLink onClick={backUp}>
           <h1>acueducto</h1>
           <Logo />
@@ -22,6 +22,7 @@ function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
     </TopHeader>
   );
 }
+
 export default React.memo(Header);
 
 const HeaderTitle = styled.div`
