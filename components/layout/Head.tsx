@@ -114,13 +114,6 @@ const NewHead = ({
         content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
       />
       <title>{title}</title>
-      {/* <link
-      rel="preload"
-      href="font/NeueLight.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    /> */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@acueductostudio" />
       <meta name="twitter:site" content="@acueductostudio" />
@@ -235,6 +228,7 @@ const NewHead = ({
           __html: JSON.stringify(structuredDefault),
         }}
       />
+      <link rel="preconnect" href="https://connect.facebook.net"/>
     </Head>
   );
 };
