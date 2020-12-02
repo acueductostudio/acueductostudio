@@ -1,14 +1,60 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Cross from "public/assets/img/layout/cross.svg";
 import BorderLink from "components/shared/BorderedLink";
+import Cookies from "js-cookie/dist/js.cookie";
+import delayForLoading from "utils/delayForLoading";
 
 const CookieMessage = (props) => {
+  const [hasToConsent, setHasToConsent] = useState(false);
+  const [showConsentMessage, setShowConsentMessage] = useState(true);
+
+  useEffect(() => {
+    delayForLoading(800).then(() => {
+      if (showConsentMessage) {
+        document.body.onscroll = () => {
+          checkScroll();
+        };
+        document.querySelector("#Clipper").onscroll = () => {
+          checkScroll();
+        };
+      }
+    });
+  }, [props.hasLoaded]);
+
+  const checkScroll = () => {
+    if (
+      document.querySelector("#Clipper").scrollTop > 100 ||
+      window.scrollY > 100
+    ) {
+      document.body.onscroll = null;
+      document.querySelector("#Clipper").onscroll = null;
+      checkForConsent();
+      setShowConsentMessage(false);
+    }
+  };
+
+  const checkForConsent = () => {
+    // Check if cookie message has been closed before
+    var _C = Cookies.get("showCookieMessage");
+    if (_C === undefined) {
+      setHasToConsent(true);
+    } else if (_C === "false") {
+      setHasToConsent(false);
+    }
+  };
+
+  const consentToCookies = () => {
+    Cookies.set("showCookieMessage", "false");
+    setHasToConsent(false);
+  };
+
   let t = props.locale.cookie_message;
   return (
-    <Wrapper borderTop={props.borderTop} clickable={props.hasToConsent}>
+    <Wrapper borderTop={props.borderTop} clickable={hasToConsent}>
       <Border>
-        <Divider onClick={props.doConsentToCookies}>
+        <Divider onClick={consentToCookies}>
           <Button>
             <span>{t.title}</span>
           </Button>
@@ -38,8 +84,8 @@ const Border = styled.div`
   border: ${(props) => props.theme.stroke} solid
     ${(props) => props.theme.colors.foreground};
   background-color: ${(props) => props.theme.colors.background};
-  border-radius:30px;
-  @media(max-width:600px){
+  border-radius: 30px;
+  @media (max-width: 600px) {
     border-radius: 0 0 30px 30px;
   }
 `;
@@ -58,7 +104,7 @@ const Button = styled.button`
   cursor: pointer;
   transition: 0.3s ease all;
   border-radius: 28px 0 0 0;
-  @media(max-width:600px){
+  @media (max-width: 600px) {
     border-radius: 0;
   }
   @media (hover: hover) and (pointer: fine) {
@@ -70,8 +116,8 @@ const Button = styled.button`
       }
     }
   }
-  @media(max-width:600px){
-    &:active{
+  @media (max-width: 600px) {
+    &:active {
       background-color: ${(props) => props.theme.colors.success};
       color: ${(props) => props.theme.colors.background};
     }
@@ -94,11 +140,11 @@ const CrossContainer = styled.div`
     cursor: pointer;
     transition: 0.2s ease transform;
   }
-  @media(max-width:600px){
-    padding-right:10px;
-    padding-left:16px;
-    &:active{
-      svg{
+  @media (max-width: 600px) {
+    padding-right: 10px;
+    padding-left: 16px;
+    &:active {
+      svg {
         transform: scale(0.9);
       }
     }
@@ -123,7 +169,7 @@ const Wrapper = styled.div`
     padding: 2.5% 4% 4% 4%;
   }
   @media (max-width: 600px) {
-    p{
+    p {
       padding: 3% 6% 5% 6%;
     }
     left: 0;

@@ -6,51 +6,57 @@
   "headerTitle": "Pitch",
   "intro": {
     "title": "sin más, nuestro pitch",
-    "p0": "La tecnología digital ha reestructurado drásticamente industria tras industria, por lo que muchos negocios se han revolucionado para beneficiarse de esta tendencia o, sencillamente, para mantenerse competitivos.<br/><br/>En Acueducto buscamos desarrollar los productos y estrategias necesarias para que tu negocio prospere en la era digital. En esta página te explicamos a detalle cómo generamos valor a organizaciones que buscan ser más competitivas mediante herramientas digitales.",
-    "subtitle1": "áreas de innovación",
+    "p0": "La tecnología digital sigue reestructurando drásticamente industria tras industria. Para mantenerse competitivos, los negocios más inteligentes han desarrollando productos y servicios digitales, apps web y móviles, estrategias de marketing y/o automatizado sus procesos para mantenerse a la altura de la cotidianidad digital.",
+    "subtitle1": "innovando con diseño</br> y tecnología en áreas como",
     "li1": [
-      "Experiencia de cliente/usuario",
-      "Desarrollo de marca",
-      "Operaciones de negocio",
-      "Modelos de Negocios digitales"
+      "La experiencia de sus clientes/usuarios",
+      "Su desarrollo de marca",
+      "Los procesos internos",
+      "Su modelo de negocio"
     ],
-    "subtitle2": "empresas modelo que implementan estas soluciones:",
-    "subtitle3": "diseño estratégico",
-    "p3": "El <b>diseño estratégico</b> aplica principios de diseño orientados a potenciar las cualidades innovadoras y competitivas de una organización. Analizando las tendencias externas, internas y data de tu negocio; podemos tomar decisiones en conjunto basadas en hechos más que en estética o intuición.",
-    "subtitle4": "transformación digital",
-    "p4": "La <b>transformación digital</b> refiere a adoptar procesos y herramientas digitales para alcanzar metas estratégicas de negocios. Con la adopción de avances tecnológicos podemos encontrar formas innovadoras de estimular el crecimiento de tu organización."
+    "p1": "En Acueducto, nos encargamos de desarrollar las estrategias e interfaces necesarias para materializar tus ideas digitales. Con un acercamiento design-driven, de la ideación al lanzamiento, creando:",
+    "subtitle3": "estrategias digitales",
+    "p3": "Variando sus metas e implementaciones, son planes formulados para alcanzar objetivos en medios digitales. Una estrategia de desarrollo podría buscar construir una arquitectura escalable para una app internacional, mientras que una estrategia de marketing digital buscaría aumentar el alcance y generación de leads de un negocio. </br></br>Independientemente de tus objetivos, contar con una sólida estrategia digital es pieza angular de tu proyecto.",
+    "subtitle4": "interfaces digitales",
+    "p4": "Las interfaces digitales son el medio de comunicación humano-máquina. Pueden ser apps web y móviles, productos o servicios digitales, o incluso interfaces de voz como Alexa o Siri. El diseño del uso de estas interfaces (Experiencia de Usuario o UX) es vital para su funcionamiento adecuado, usabilidad, retención de usuarios y escalabilidad. </br></br>Sin un diseño adecuado a las necesidades de los usuarios y el negocio, la probabilidad de éxito del proyecto se desploma.",
+    "subtitle5": "un dato importante",
+    "img_business" : "compañías design-driven",
+    "alt": "Empresas design-driven superan al S&P500 en 211%",
+    "p5": "Las empresas design-driven han conseguido una considerable ventaja en la bolsa, teniendo un mejor rendimiento que las empresas del S&P 500 en un 211%."
   },
   "second_section": {
-    "title": "buscamos socios,<br/> no clientes",
-    "p": "En Acueducto creemos firmemente en el valor de las asociaciones. A diferencia de la relación cliente-agencia que domina el mercado, asociarnos contigo nos permite involucrarnos en la estructura de tu proyecto para aplicar procesos de diseño y estrategias de mayor impacto."
+    "title": "un caso de estudio<br/> habla por si mismo",
+    "p": "Rahid era una marca percibida, incluso por su propio fundador, como poco posicionada. Contaba con una identidad débil y falta de cohesión entre sus canales de venta. </br></br>Después de desarrollar su estrategia de ecommerce y de comunicación, hacer un rebranding, marketing digital y su sitio web, ayudamos a Rahid a estar un paso más cerca de su objetivo: convertirse en la comercializadora de parafernalia cannábica más relevante de México.",
+    "linktext": "Lee el ",
+    "link": ["/portafolio/rahid", "caso de estudio."]
   },
   "products_section": {
     "intro": {
-      "title": "para desarrollar ideas innovadoras",
-      "p": "Los productos digitales pueden potenciar la cultura innovadora de una organización, automatizar sus procesos y optimizar la experiencia de marca.<br/><br/>Puedes confiar en nosotros para desarrollar:"
+      "title": "damos vida a ideas innovadoras",
+      "p": "Potencializa la cultura innovadora de tu organización, automatiza procesos y optimiza la experiencia de marca con iniciativas digitales.</br></br>Puedes contar con nuestra experiencia para desarrollar:"
     },
     "products": [
       {
-        "title": "estrategia digital",
-        "p": "Tu estrategia digital es la columna vertebral de tu negocio en internet. Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
+        "title": "estrategias digitales",
+        "p": "Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
       },
       {
         "title": "apps web y móviles",
-        "p": "Desarrollar experiencias digitales que sean veloces, interactivas y atractivas visualmente te pondrá un paso más cerca de alcanzar tus objetivos de negocio. Pongamos a trabajar tu presencia web como una herramienta efectiva para tu negocio."
+        "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación."
       },
       {
         "title": "productos<br/>y servicios digitales",
-        "p": "En ocasiones tienen que desarrollarse productos y servicios que no existen o que requieren de especificaciones particulares. Juntos podemos desarrollar tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
+        "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
       },
       {
         "title": "estrategias de<br/>marketing digital",
-        "p": "No desaproveches la manera más rápida y efectiva de conectar con casi la mitad de la población. Mediante estrategias de marketing y comunicación, publicidad pautada y contenidos creativos podemos potenciar tus ventas."
+        "p": "Potencializa tus ventas mediante estrategias de comunicación, contenidos creativos y publicidad pautada."
       }
     ]
   },
   "process_section": {
     "title": "siguiendo un proceso estratégico",
-    "p": "Nuestro proceso es el recurso más valioso con el que contamos y recargamos en él cada proyecto que llevamos a cabo. Está diseñado para implementarse en cualquier industria y para iterar  sobre si mismo. Así, cada paso que damos nos da la seguridad para dar el siguiente.",
+    "p": "Nuestro proceso está diseñado para iterar sobre sí mismo y perfeccionarse con cada proyecto que llevamos a cabo. Llevamos años desarrollándolo y se ha convertido en uno de nuestros recursos más preciados. </br></br>Gracias a él, cada paso que damos nos da la seguridad para dar el siguiente.",
     "steps": [
       {
         "title": "descubre",
@@ -66,7 +72,7 @@
           "Diferenciador",
           "Ventaja estratégica y competitiva"
         ],
-        "p2": "Analizamos el costo-beneficio de tu proyecto, su entorno de mercado, riesgos y viabilidad financiera."
+        "p2": "Analizamos el entorno de mercado y los riesgos del proyecto."
       },
       {
         "title": "narra",

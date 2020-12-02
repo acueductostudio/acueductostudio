@@ -14,11 +14,15 @@
       "Business operations",
       "Digital business models"
     ],
-    "subtitle2": "model companies who<br/>implement these solutions",
+    "p1": "At Acueducto, we develop the strategies and interfaces needed to materialize your digital ideas. Always with a design-driven approach, from ideation to launch, developing:",
     "subtitle3": "strategic design",
     "p3": "<b>Strategic design</b> develops business solutions applying design principles to maximize innovation and competitiveness in your organization. It analyzes external and internal trends alongside your business’ hard data in order to make fact-based decisions instead of following esthetics or intuition.",
     "subtitle4": "digital transformation",
-    "p4": "<b>Digital transformation</b> refers to the adoption of digital processes and tools in order to achieve strategic business goals. With the implementation of technological advances we can find innovative ways to stimulate the growth of your organization."
+    "p4": "<b>Digital transformation</b> refers to the adoption of digital processes and tools in order to achieve strategic business goals. With the implementation of technological advances we can find innovative ways to stimulate the growth of your organization.",
+    "subtitle5": "one important fact",
+    "img_business" : "design-driven companies",
+    "alt": "Design-driven companies outperformed the S&P500 by 211% in the last 10 years.",
+    "p5": "Design-driven companies outperformed the S&P500 by 211% in the last 10 years."
   },
   "second_section": {
     "title": "we look for partners,<br/> not clients",

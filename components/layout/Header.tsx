@@ -105,6 +105,7 @@ const LogoLink = styled.a`
   }
   svg {
     max-width: 130px;
+    max-height:18px;
     width: 100%;
     path {
       fill: ${(props) => props.theme.colors.white};

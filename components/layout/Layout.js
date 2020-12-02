@@ -18,20 +18,12 @@ const HomeSketch = dynamic(import("../homeSketch/HomeSketch"), {
   ssr: false,
 });
 
-const Layout = ({
-  children,
-  checkForConsent,
-  consentToCookies,
-  hasToConsent,
-  hasLoaded,
-  locale,
-}) => {
+const Layout = ({ locale, hasLoaded, children }) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
   const [isAbout, setIsAbout] = useState(false);
   const [headerTitle, setTitle] = useState("");
   const [showArrow, setShowArrow] = useState(false);
-  const [showConsentMessage, setShowConsentMessage] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const router = useRouter();
   const mouse = useRef([1200, 1]);
@@ -97,13 +89,12 @@ const Layout = ({
       setIsAbout(false);
       setShowPopup(false);
     }
-    // console.log(router.route)
     hasLoaded && logPageView();
-    hasLoaded && ReactPixel.pageView(); 
+    hasLoaded && ReactPixel.pageView();
   }, [router.route]);
 
   useEffect(() => {
-    if (showArrow || showConsentMessage) {
+    if (showArrow) {
       document.body.onscroll = function () {
         checkScroll();
       };
@@ -130,8 +121,6 @@ const Layout = ({
       document.body.onscroll = null;
       document.querySelector("#Clipper").onscroll = null;
       setShowArrow(false);
-      checkForConsent();
-      setShowConsentMessage(false);
     }
   };
 
@@ -142,11 +131,6 @@ const Layout = ({
   const closeNav = () => {
     setOpen(false);
   };
-
-  const doConsentToCookies = () => {
-    consentToCookies();
-  };
-
   return (
     <>
       <PageWrapper
@@ -182,15 +166,11 @@ const Layout = ({
           locale: router.locale,
           mouse: mouse,
         })}
-        <LanguageToggler
-          locale={router.locale}
-          hasLoaded={hasLoaded}
-        />
+        <LanguageToggler locale={router.locale} hasLoaded={hasLoaded} />
         <ScrollIncentive hasLoaded={hasLoaded} showArrow={showArrow} />
         <CookieMessage
           locale={locale}
-          doConsentToCookies={doConsentToCookies}
-          hasToConsent={hasToConsent}
+          hasLoaded={hasLoaded}
         />
         <BodyOverflow isOpen={isOpen} hasLoaded={hasLoaded} />
         {showPopup && <NewsletterPopup />}

@@ -6,7 +6,6 @@ import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout/Layout";
 import theme from "styles/theme";
 import type { AppContext } from "utils/LangContext";
-import Cookies from "js-cookie/dist/js.cookie";
 import delayForLoading from "utils/delayForLoading";
 // import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
@@ -15,7 +14,6 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 function App({ Component, pageProps, router }: AppProps) {
   const [locale, setLocale] = useState<AppContext>(es);
-  const [hasToConsent, setHasToConsent] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const LoadingBarRef = useRef(null);
 
@@ -98,20 +96,6 @@ function App({ Component, pageProps, router }: AppProps) {
     }, 300);
   };
 
-  const checkForConsent = () => {
-    // Check if cookie message has been closed before
-    var _C = Cookies.get("showCookieMessage");
-    if (_C === undefined) {
-      setHasToConsent(true);
-    } else if (_C === "false") {
-      setHasToConsent(false);
-    }
-  };
-
-  const consentToCookies = () => {
-    Cookies.set("showCookieMessage", "false");
-    setHasToConsent(false);
-  };
   return (
     <ThemeProvider theme={theme}>
       <LangProvider value={locale}>
@@ -123,9 +107,6 @@ function App({ Component, pageProps, router }: AppProps) {
         />
         <Layout
           locale={locale}
-          checkForConsent={checkForConsent}
-          consentToCookies={consentToCookies}
-          hasToConsent={hasToConsent}
           hasLoaded={hasLoaded}
         >
           <Component locale={locale} {...pageProps} lang={router.locale} />
