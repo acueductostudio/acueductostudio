@@ -118,7 +118,7 @@ export default function FooterNav() {
           >
             hola@acueducto.studio
           </a>
-          <a href="https://wa.me/message/JNUILJPF23CSP1">
+          <a href="https://api.whatsapp.com/message/JNUILJPF23CSP1">
             <img src="/assets/img/layout/logos/whatsapp.svg" alt="WhatApp" />
             +52 55 2789 5399
           </a>

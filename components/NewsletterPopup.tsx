@@ -5,8 +5,9 @@ import Cross from "public/assets/img/layout/cross.svg";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import es from "public/locales/es/newsletter.json";
 import DefaultForm from "components/shared/DefaultForm";
-import { createContact } from "utils/sendinBlue.ts";
+import { createContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
+import { advancedMatching } from "utils/analytics";
 
 const NewsletterPopup = () => {
   let newsletter = es.newsletter_component;
@@ -28,7 +29,7 @@ const NewsletterPopup = () => {
       listIds: [2],
       updateEnabled: true,
     });
-    ReactPixel.init("506854653278097", { em: data.email });
+    ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Suscripción a la newsletter
     ReactPixel.track("Subscribe", { email: data.email });
   };
@@ -53,6 +54,7 @@ const NewsletterPopup = () => {
           <H4>{newsletter.title}</H4>
           <p>{newsletter.p}</p>
           <DefaultForm
+            id="newsletter"
             onSubmit={onSubmit}
             text={newsletter}
             buttonArrowInverse
@@ -70,7 +72,7 @@ const NewsletterPopup = () => {
 
 export default NewsletterPopup;
 
-const Background = styled.div`
+const Background = styled.div<{ visible: boolean }>`
   background-color: ${(props) => props.theme.colors.background};
   opacity: ${(props) => (props.visible ? 0.6 : 0)};
   position: fixed;
@@ -83,7 +85,7 @@ const Background = styled.div`
   transition: opacity 0.4s ease;
 `;
 
-const Message = styled.div`
+const Message = styled.div<{ success: boolean }>`
   color: ${(p) => p.theme.colors.success};
   font-size: 1.8rem;
   padding-bottom: 5px;
@@ -97,7 +99,7 @@ const Border = styled.div`
     ${(props) => props.theme.colors.foreground};
   background-color: ${(props) => props.theme.colors.background};
   padding: 10% 15% 14% 15%;
-  border-radius:30px;
+  border-radius: 30px;
   @media (max-width: 380px) {
     padding: 10% 10% 14% 10%;
   }
@@ -116,7 +118,7 @@ const CrossContainer = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ clickable: boolean }>`
   pointer-events: ${(props) => (props.clickable ? "auto" : "none")};
   opacity: ${(props) => (props.clickable ? "1" : "0")};
   max-width: 440px;

@@ -22,7 +22,7 @@ export const logException = (description = "", fatal = false) => {
 };
 
 //ReactPixel
-export const advancedMatching = (email) => {
+export const advancedMatching = (email: string) => {
   const am = {
     em: email,
     ct: null,

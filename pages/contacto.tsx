@@ -35,7 +35,7 @@ export default function Contact({ locale, setTitle, pt }) {
         <p>
           {t.intro.p1}
           <br />
-          <a href="https://wa.me/message/JNUILJPF23CSP1">
+          <a href="https://api.whatsapp.com/message/JNUILJPF23CSP1">
             <WhatsApp />
             +52 55 2789 5399
           </a>
