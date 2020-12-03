@@ -49,7 +49,7 @@ export default function Pitch({ locale, setTitle, pt }) {
   }, [locale]);
 
   return (
-    <PageClipperPadded>
+    <PageClipper>
       <Head
         {...t.head}
         es_canonical={"https://acueducto.studio/pitch"}
@@ -143,7 +143,7 @@ export default function Pitch({ locale, setTitle, pt }) {
       />
       {loadAssets && <LogoLists t={t} />}
       <ContactFooter />
-    </PageClipperPadded>
+    </PageClipper>
   );
 }
 
@@ -435,17 +435,5 @@ const IconContainer = styled.div`
       max-width: 70px;
       margin-top: 5%;
     }
-  }
-`;
-
-const PageClipperPadded = styled(PageClipper)`
-  @media (max-width: 1300px) {
-    padding-top: 5%;
-  }
-  @media (max-width: 700px) {
-    padding-top: 10%;
-  }
-  @media (max-width: 500px) {
-    padding-top: 15%;
   }
 `;

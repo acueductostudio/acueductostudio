@@ -115,20 +115,21 @@ function LanguageToggler({ hasLoaded, locale }) {
   return (
     <Toggler reveal={hasLoaded} available={showToggler}>
       <a onClick={handleLink}>
-        <English>
+        <Reveal>
           <span>{locale === "es" ? "switch language" : "cambiar idioma"}</span>
           {locale === "es" ? "english" : "español"}
-        </English>
-        <Stable>
+        </Reveal>
+        <Icon>
           <Arrows />
-        </Stable>
+        </Icon>
       </a>
     </Toggler>
   );
 }
 export default React.memo(LanguageToggler);
 
-const English = styled.div`
+const Reveal = styled.div`
+  mix-blend-mode: exclusion;
   background-color: ${(props) => props.theme.colors.accent};
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
   padding: 9px 10px 10px 23px;
@@ -165,7 +166,7 @@ const English = styled.div`
   }
 `;
 
-const Stable = styled.div`
+const Icon = styled.div`
   svg {
     width: 30px;
     padding: 15px;
@@ -195,11 +196,11 @@ const Toggler = styled.div<{ reveal: boolean; available: boolean }>`
   transition: opacity 0.3s ease 0.35s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      mix-blend-mode: unset;
+      /* mix-blend-mode: unset; */
       svg {
         transform: scale(0.95);
       }
-      ${English} {
+      ${Reveal} {
         opacity: 1;
       }
     }

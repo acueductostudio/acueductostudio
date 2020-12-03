@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
-import styled from "styled-components";
 import Head from "components/layout/Head";
 import TitleSection from "components/shared/TitleSection";
 import CaseList from "components/caseStudy/CaseList";
@@ -24,7 +23,7 @@ export default function Work({ locale, setTitle, pt }) {
   }, [locale]);
 
   return (
-    <PageClipperPadded>
+    <PageClipper>
       <Head
         {...t.head}
         es_canonical={"https://acueducto.studio/portafolio"}
@@ -33,7 +32,7 @@ export default function Work({ locale, setTitle, pt }) {
       <TitleSection {...t.intro} />
       <CaseList />
       <ContactFooter />
-    </PageClipperPadded>
+    </PageClipper>
   );
 }
 export const getStaticProps: GetStaticProps = async (context) => {
@@ -44,15 +43,3 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
-
-const PageClipperPadded = styled(PageClipper)`
-  @media (max-width: 1300px) {
-    padding-top: 5%;
-  }
-  @media (max-width: 700px) {
-    padding-top: 10%;
-  }
-  @media (max-width: 500px) {
-    padding-top: 15%;
-  }
-`;
