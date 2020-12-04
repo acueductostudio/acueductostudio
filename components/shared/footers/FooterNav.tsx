@@ -27,7 +27,6 @@ export default function FooterNav() {
     resources,
     navTitles,
     mailto,
-    lang,
   } = context.contact_footer.footer_nav;
   return (
     <Footer>
@@ -56,7 +55,7 @@ export default function FooterNav() {
             ))}
           </ul>
         </NavList>
-        {lang === "es" && (
+        {context.lang === "es" && (
           <NavList>
             <Fade triggerOnce>
               <h6>{navTitles.resources}</h6>
