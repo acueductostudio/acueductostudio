@@ -15,7 +15,6 @@ const NextStudy = ({
 }) => {
   const context = useContext(LangContext);
   let n = context.next_study;
-  console.log(link);
   return (
     <Link
       href={"/portafolio/" + link}

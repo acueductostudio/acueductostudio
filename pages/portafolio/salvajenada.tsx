@@ -18,15 +18,48 @@ import Marquee from "components/caseStudy/shared/Marquee";
 import Insight from "components/caseStudy/shared/Insight";
 import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
-import { Spotify, AppleMusic, Ig } from "components/shared/Logos";
+
+import Spotify from "public/assets/img/layout/logos/spotify.svg";
+import AppleMusic from "public/assets/img/layout/logos/applemusic.svg";
+import Ig from "public/assets/img/layout/logos/ig.svg";
 
 import Wolf from "public/assets/img/casestudies/salvajenada/wolf.svg";
 import LogoSalvaje from "public/assets/img/casestudies/salvajenada/logoSalvaje.svg";
-import SecondBackImg from "public/assets/img/casestudies/salvajenada/secondBack.svg";
-import ThirdBackImg from "public/assets/img/casestudies/salvajenada/thirdBack.svg";
-import FourthBackImg from "public/assets/img/casestudies/salvajenada/fourthBack.svg";
-import FifthBackImg from "public/assets/img/casestudies/salvajenada/fifthBack.svg";
-import InterBackImg from "public/assets/img/casestudies/salvajenada/interBack.svg";
+
+const InterBackImg = dynamic(
+  import("public/assets/img/casestudies/salvajenada/interBack2.svg"),
+  {
+    ssr: false,
+  }
+);
+
+const SecondBackImg = dynamic(
+  import("public/assets/img/casestudies/salvajenada/secondBack2.svg"),
+  {
+    ssr: false,
+  }
+);
+
+const ThirdBackImg = dynamic(
+  import("public/assets/img/casestudies/salvajenada/thirdBack2.svg"),
+  {
+    ssr: false,
+  }
+);
+
+const FourthBackImg = dynamic(
+  import("public/assets/img/casestudies/salvajenada/fourthBack2.svg"),
+  {
+    ssr: false,
+  }
+);
+
+const FifthBackImg = dynamic(
+  import("public/assets/img/casestudies/salvajenada/fifthBack2.svg"),
+  {
+    ssr: false,
+  }
+);
 
 const FramesEmbed = dynamic(
   import("components/caseStudy/salvajenada/FramesEmbed"),
@@ -90,9 +123,13 @@ export default function Salvajenada({ locale, setTitle, pt }) {
         es_canonical={"https://acueducto.studio/portafolio/salvajenada"}
         en_canonical={"https://acueducto.studio/en/work/salvajenada"}
       />
-      <Land>
-        <LogoSalvaje />
-      </Land>
+      <Fade triggerOnce>
+        <Land>
+          <Fade delay={250} triggerOnce>
+            <LogoSalvaje />
+          </Fade>
+        </Land>
+      </Fade>
       <Intro>
         <Marquee tags={t.intro_section.tags} />
         <IntroVideo link={t.link} />
@@ -312,7 +349,10 @@ export default function Salvajenada({ locale, setTitle, pt }) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const pt = ssrLocale({ locale: context.locale, fileName: "work.salvajenada.json" });
+  const pt = ssrLocale({
+    locale: context.locale,
+    fileName: "work.salvajenada.json",
+  });
   return {
     props: {
       pt,
@@ -920,11 +960,14 @@ const Intro = styled(CommonSection)`
 const Land = styled(CommonSection)`
   min-height: 100vh;
   background-color: ${(props) => props.theme.colors.background};
-  background-image: url("/assets/img/casestudies/salvajenada/landBack.svg");
+  background-image: url("/assets/img/casestudies/salvajenada/landBack2.svg");
   background-position: center bottom;
   background-size: cover;
-  svg {
+  & > div {
     max-width: 800px;
     width: 70%;
+    svg {
+      width: 100%;
+    }
   }
 `;

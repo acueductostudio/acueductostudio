@@ -3,20 +3,30 @@ import { Blockquote } from "components/shared/Dangerously";
 import Mark from "public/assets/img/layout/quoteMark.svg";
 import { Fade } from "react-awesome-reveal";
 
-const Quote = (props) => (
+const Quote = ({
+  color,
+  noMargin,
+  specialMarginBottom,
+  quote,
+}: {
+  color?: any;
+  noMargin?: boolean;
+  specialMarginBottom?: boolean;
+  quote: { quote: string; name: string; label?: string };
+}) => (
   <QuoteWrapper
-    passedColor={props.color}
-    noMargin={props.noMargin}
-    specialMarginBottom={props.specialMarginBottom}
+    passedColor={color}
+    noMargin={noMargin}
+    specialMarginBottom={specialMarginBottom}
   >
     <Fade triggerOnce>
       <QuoteLimiter>
-        <QuoteMark passedColor={props.color}>
+        <QuoteMark passedColor={color}>
           <Mark />
         </QuoteMark>
-        <Blockquote>{props.quote.quote}</Blockquote>
-        <Author>– {props.quote.name}</Author>
-        {props.quote.label ? <Label>{props.quote.label}</Label> : null}
+        <Blockquote>{quote.quote}</Blockquote>
+        <Author>– {quote.name}</Author>
+        {quote.label ? <Label>{quote.label}</Label> : null}
       </QuoteLimiter>
     </Fade>
   </QuoteWrapper>
@@ -39,7 +49,7 @@ const Label = styled.p`
   text-transform: uppercase;
 `;
 
-const QuoteMark = styled.div`
+const QuoteMark = styled.div<{ passedColor: string }>`
   left: -55px;
   top: -15px;
   opacity: 0.07;
@@ -61,7 +71,11 @@ const QuoteLimiter = styled.div`
   position: relative;
 `;
 
-const QuoteWrapper = styled.div`
+const QuoteWrapper = styled.div<{
+  noMargin: boolean;
+  specialMarginBottom: boolean;
+  passedColor: string;
+}>`
   width: 100%;
   font-size: 3.4rem;
   margin: ${(props) => (props.noMargin ? "0" : "6% 0 4% 0")};

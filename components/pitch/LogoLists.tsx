@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import Tooltip from "react-tooltip-lite";
-import { P, H2, H3 } from "components/shared/Dangerously";
+import { H3 } from "components/shared/Dangerously";
 import {
   NodeLogo,
   ReactLogo,
@@ -123,7 +123,7 @@ const RenderLogoList = ({ array }) => (
   </LogoList>
 );
 
-const LogoLists = ({t}) => (
+const LogoLists = ({ t }) => (
   <LogoListContainer>
     <Fade triggerOnce>
       <H3>{t.tools_section.apps}</H3>

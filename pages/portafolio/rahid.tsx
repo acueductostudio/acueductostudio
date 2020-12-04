@@ -46,9 +46,13 @@ function Rahid({ locale, setTitle, pt }) {
         es_canonical={"https://acueducto.studio/portafolio/rahid"}
         en_canonical={"https://acueducto.studio/en/work/rahid"}
       />
-      <LandSection>
-        <LogoRahid />
-      </LandSection>
+      <Fade triggerOnce>
+        <LandSection>
+          <Fade delay={300} triggerOnce>
+            <LogoRahid />
+          </Fade>
+        </LandSection>
+      </Fade>
       <FirstSection>
         <Marquee tags={t.intro_section.tags} />
 
@@ -586,31 +590,34 @@ const LandSection = styled(CommonSection)`
   background-position: left center;
   background-size: cover;
   align-items: flex-end;
-  svg {
+  & > div {
     max-width: 500px;
     width: 70%;
     margin-right: 10%;
+  }
+  svg {
+    width: 100%;
   }
   @media (max-width: 1200px) {
     background-position: 20% 100%;
   }
   @media (max-width: 1100px) {
     background-position: 10% 100%;
-    svg {
+    & > div {
       max-width: 350px;
       margin-right: 10%;
     }
   }
   @media (max-width: 960px) {
     background-position: 15% 100%;
-    svg {
+    & > div {
       max-width: 300px;
       margin-right: 10%;
     }
   }
   @media (max-width: 850px) {
     background-position: 25% 100%;
-    svg {
+    & > div {
       margin-right: 12%;
     }
   }
@@ -619,11 +626,11 @@ const LandSection = styled(CommonSection)`
     background-image: url("/assets/img/casestudies/rahid/landBackMobile.svg");
     background-position: center center;
     align-items: center;
-    svg {
+    & > div {
       max-width: 300px;
       margin-right: 0;
       mix-blend-mode: invert;
-      * {
+      svg * {
         fill: ${rahidBackground};
       }
     }

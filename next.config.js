@@ -1,6 +1,6 @@
-// const withBundleAnalyzer = require("@next/bundle-analyzer")({
-//   enabled: process.env.ANALYZE === "true",
-// });
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 const path = require("path");
 const withOffline = require("next-offline");
 
@@ -33,12 +33,12 @@ const nextConfig = {
         destination: "/portafolio",
       },
       {
-        source: "/privacy",
-        destination: "/privacidad",
-      },
-      {
         source: "/work/:slug",
         destination: "/portafolio/:slug",
+      },
+      {
+        source: "/privacy",
+        destination: "/privacidad",
       },
       {
         source: "/about",
@@ -49,32 +49,6 @@ const nextConfig = {
         destination: "/_next/static/service-worker.js",
         locale: false,
       },
-    ];
-  },
-  async redirects() {
-    return [
-      {
-        source: "/en/contacto",
-        destination: "/contact",
-        permanent: false,
-      },
-      {
-        source: "/en/portafolio",
-        destination: "/en/work",
-        permanent: false,
-      },
-      // {
-      //   source: "en/privacidad",
-      //   destination: "/privacy",
-      // },
-      // {
-      //   source: "en/portafolio/:slug",
-      //   destination: "/work/:slug",
-      // },
-      // {
-      //   source: "/en/nosotros",
-      //   destination: "/about",
-      // },
     ];
   },
   trailingSlash: false,

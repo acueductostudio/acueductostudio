@@ -9,12 +9,10 @@ import { H1, P } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import Logo from "public/assets/img/layout/logo.svg";
 
-import {
-  Spotify,
-  ApplePodcasts,
-  Google,
-  Youtube,
-} from "components/shared/Logos";
+import Spotify from "public/assets/img/layout/logos/spotify.svg";
+import ApplePodcasts from "public/assets/img/layout/logos/applepodcasts.svg";
+import Google from "public/assets/img/layout/logos/googlepodcasts.svg";
+import Youtube from "public/assets/img/layout/logos/youtube.svg";
 
 function Podcast({ locale, setTitle, pt }) {
   let { headerTitle, intro, podcasts, head } = pt;

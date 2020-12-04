@@ -8,7 +8,7 @@ import PageClipper from "components/layout/PageClipper";
 import PinnedSection from "components/shared/pinnedSections/PinnedSection";
 import MetalFooter from "components/shared/footers/MetalFooter";
 import ContactForm from "components/ContactForm";
-import { WhatsApp } from "components/shared/Logos";
+import WhatsApp from "public/assets/img/layout/logos/whatsapp.svg";
 
 export default function Contact({ locale, setTitle, pt }) {
   const [t, setT] = useState(pt);

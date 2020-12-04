@@ -25,9 +25,6 @@ import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
 import Picture from "components/caseStudy/shared/Picture";
 
-// const originalRed = "#C64028";
-// const YoutubeFirstRed = "rgb(221, 56, 20)";
-
 const fierasRed = "rgb(201,32,26)";
 
 const ThePlayer = dynamic(
@@ -62,9 +59,13 @@ function LaDanzaDeLasFieras({ locale, setTitle, pt }) {
         es_canonical={"https://acueducto.studio/portafolio/ladanzadelasfieras"}
         en_canonical={"https://acueducto.studio/en/work/ladanzadelasfieras"}
       />
-      <LandSection>
-        <LogoDanza />
-      </LandSection>
+      <Fade triggerOnce>
+        <LandSection>
+          <Fade delay={300} triggerOnce>
+            <LogoDanza />
+          </Fade>
+        </LandSection>
+      </Fade>
       <FirstSection>
         <Marquee tags={t.intro_section.tags} />
         <IntroVideo link={t.link} />
@@ -855,8 +856,11 @@ const LandSection = styled(CommonSection)`
   background-image: url("/assets/img/casestudies/ladanzadelasfieras/landBack.svg");
   background-position: center bottom;
   background-size: cover;
-  svg {
+  & > div {
     max-width: 650px;
     width: 70%;
+  }
+  svg {
+    width: 100%;
   }
 `;

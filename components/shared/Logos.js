@@ -1,30 +1,30 @@
 // Podcast distributors
-import SpotifyIcon from "public/assets/img/layout/logos/spotify.svg";
-import ApplePodcastsIcon from "public/assets/img/layout/logos/applepodcasts.svg";
-import AppleMusicIcon from "public/assets/img/layout/logos/applemusic.svg";
-import GoogleIcon from "public/assets/img/layout/logos/googlepodcasts.svg";
-import YoutubeIcon from "public/assets/img/layout/logos/youtube.svg";
+// import SpotifyIcon from "public/assets/img/layout/logos/spotify.svg";
+// import ApplePodcastsIcon from "public/assets/img/layout/logos/applepodcasts.svg";
+// import AppleMusicIcon from "public/assets/img/layout/logos/applemusic.svg";
+// import GoogleIcon from "public/assets/img/layout/logos/googlepodcasts.svg";
+// import YoutubeIcon from "public/assets/img/layout/logos/youtube.svg";
 
-export const Spotify = () => <SpotifyIcon />;
-export const ApplePodcasts = () => <ApplePodcastsIcon />;
-export const AppleMusic = () => <AppleMusicIcon />;
-export const Google = () => <GoogleIcon />;
-export const Youtube = () => <YoutubeIcon />;
+// export const Spotify = () => <SpotifyIcon />;
+// export const ApplePodcasts = () => <ApplePodcastsIcon />;
+// export const AppleMusic = () => <AppleMusicIcon />;
+// export const Google = () => <GoogleIcon />;
+// export const Youtube = () => <YoutubeIcon />;
 
 // Role models
-import TeslaIcon from "public/assets/img/layout/logos/tesla.svg";
-import NikeIcon from "public/assets/img/layout/logos/nike.svg";
-import BurberryIcon from "public/assets/img/layout/logos/burberry.svg";
-import CemexIcon from "public/assets/img/layout/logos/cemex.svg";
-import HasbroIcon from "public/assets/img/layout/logos/hasbro.svg";
-import StarbucksIcon from "public/assets/img/layout/logos/starbucks.svg";
+// import TeslaIcon from "public/assets/img/layout/logos/tesla.svg";
+// import NikeIcon from "public/assets/img/layout/logos/nike.svg";
+// import BurberryIcon from "public/assets/img/layout/logos/burberry.svg";
+// import CemexIcon from "public/assets/img/layout/logos/cemex.svg";
+// import HasbroIcon from "public/assets/img/layout/logos/hasbro.svg";
+// import StarbucksIcon from "public/assets/img/layout/logos/starbucks.svg";
 
-export const Tesla = () => <TeslaIcon />;
-export const Nike = () => <NikeIcon />;
-export const Burberry = () => <BurberryIcon />;
-export const Cemex = () => <CemexIcon />;
-export const Hasbro = () => <HasbroIcon />;
-export const Starbucks = () => <StarbucksIcon />;
+// export const Tesla = () => <TeslaIcon />;
+// export const Nike = () => <NikeIcon />;
+// export const Burberry = () => <BurberryIcon />;
+// export const Cemex = () => <CemexIcon />;
+// export const Hasbro = () => <HasbroIcon />;
+// export const Starbucks = () => <StarbucksIcon />;
 
 // Dev tech
 import NodeLogoIcon from "public/assets/img/layout/logos/node.svg";
@@ -93,7 +93,7 @@ import LinkedInIcon from "public/assets/img/layout/logos/linkedin.svg";
 import SnapchatIcon from "public/assets/img/layout/logos/snapchat.svg";
 import TikTokIcon from "public/assets/img/layout/logos/tiktok.svg";
 import WhatsAppBusinessIcon from "public/assets/img/layout/logos/whatsappbusiness.svg";
-import WhatsAppIcon from "public/assets/img/layout/logos/whatsapp.svg";
+// import WhatsAppIcon from "public/assets/img/layout/logos/whatsapp.svg";
 
 export const Ig = () => <IgIcon />;
 export const Fb = () => <FbIcon />;
@@ -102,7 +102,7 @@ export const LinkedIn = () => <LinkedInIcon />;
 export const Snapchat = () => <SnapchatIcon />;
 export const TikTok = () => <TikTokIcon />;
 export const WhatsAppBusiness = () => <WhatsAppBusinessIcon />;
-export const WhatsApp = () => <WhatsAppIcon />;
+// export const WhatsApp = () => <WhatsAppIcon />;
 
 // BI
 import TableauIcon from "public/assets/img/layout/logos/tableau.svg";

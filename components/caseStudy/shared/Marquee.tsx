@@ -1,8 +1,14 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import MarqueeHelper from "utils/react-double-marquee";
+import MarqueeHelper from "react-double-marquee";
 
-const Marquee = ({ tags, amount }: { tags: Array<string>; amount?: number }) => {
+const Marquee = ({
+  tags,
+  amount,
+}: {
+  tags: Array<string>;
+  amount?: number;
+}) => {
   const list = (
     <ul>
       {tags.map((tag, index) => (

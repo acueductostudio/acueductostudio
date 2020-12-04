@@ -1,11 +1,34 @@
 {
-  "name": "acueducto",
-  "version": 2,
   "trailingSlash": false,
   "redirects": [
     {
       "source": "/agendarconsultoria",
       "destination": "https://meetings.hubspot.com/hola250"
+    },
+    {
+      "source": "/en/contacto",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/en/portafolio",
+      "destination": "/en/work",
+      "permanent": true
+    },
+    {
+      "source": "/en/portafolio/:slug",
+      "destination": "/en/work/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/en/privacidad",
+      "destination": "/en/privacy",
+      "permanent": true
+    },
+    {
+      "source": "/en/nosotros",
+      "destination": "/en/about",
+      "permanent": true
     }
   ],
   "rewrites": [

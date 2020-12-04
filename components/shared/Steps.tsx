@@ -3,30 +3,33 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import { P } from "components/shared/Dangerously";
 
-function Steps({ steps, children, iconArray }) {
-  const StepContainer = ({ index, title, p }) => {
-    const StepIcon = iconArray[index];
-    return (
-      <StepBordered>
-        <Step>
-          <Fade triggerOnce>
-            <StepIcon />
-            <h3>{title}</h3>
-            <P>{p}</P>
-          </Fade>
-        </Step>
-      </StepBordered>
-    );
-  };
-  return (
-    <StepsSection>
-      {steps.map((step, index) => (
-        <StepContainer key={"stepContained" + index} index={index} {...step} />
-      ))}
-      <StepBordered>{children}</StepBordered>
-    </StepsSection>
-  );
-}
+const Steps = ({
+  steps,
+  children,
+  iconArray,
+}: {
+  steps: { title: string; p: string }[];
+  children: React.ReactNode;
+  iconArray: any[];
+}) => (
+  <StepsSection>
+    {steps.map((step, index) => {
+      const StepIcon = iconArray[index];
+      return (
+        <StepBordered>
+          <Step>
+            <Fade triggerOnce>
+              <StepIcon />
+              <h3>{step.title}</h3>
+              <P>{step.p}</P>
+            </Fade>
+          </Step>
+        </StepBordered>
+      );
+    })}
+    <StepBordered>{children}</StepBordered>
+  </StepsSection>
+);
 
 export default React.memo(Steps);
 
