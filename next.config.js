@@ -25,29 +25,24 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/en/contact",
-        destination: "/en/contacto",
-        locale: false,
+        source: "/contact",
+        destination: "/contacto",
       },
       {
-        source: "/en/work",
-        destination: "/en/portafolio",
-        locale: false,
+        source: "/work",
+        destination: "/portafolio",
       },
       {
-        source: "/en/privacy",
-        destination: "/en/privacidad",
-        locale: false,
+        source: "/privacy",
+        destination: "/privacidad",
       },
       {
-        source: "/en/work/:slug",
-        destination: "/en/portafolio/:slug",
-        locale: false,
+        source: "/work/:slug",
+        destination: "/portafolio/:slug",
       },
       {
-        source: "/en/about",
-        destination: "/en/nosotros",
-        locale: false,
+        source: "/about",
+        destination: "/nosotros",
       },
       {
         source: "/service-worker.js",

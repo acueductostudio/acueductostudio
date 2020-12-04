@@ -104,7 +104,7 @@ function LanguageToggler({ hasLoaded, locale }) {
           Router.push("/privacidad", "/privacy", { locale: "en" });
           break;
         case "/":
-          Router.push("/", "/en", { locale: "en" });
+          Router.push("/", "/", { locale: "en" });
           break;
         default:
           Router.push(router.route, "/trouble");

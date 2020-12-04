@@ -6,18 +6,13 @@ import Logo from "public/assets/img/layout/logo.svg";
 function Header({ hasLoaded, headerTitle, isOpen, closeNav, locale, route }) {
   const backUp = (e) => {
     closeNav();
-    (route === "/" || route === "/en") &&
+    route === "/" &&
       (e.preventDefault(),
       document.getElementById("land").scrollIntoView({ behavior: "smooth" }));
   };
   return (
     <TopHeader reveal={hasLoaded}>
-      <Link
-        href="/"
-        as={locale === "en" ? "/en" : "/"}
-        passHref
-        locale={locale}
-      >
+      <Link href="/" passHref locale={locale}>
         <LogoLink onClick={backUp}>
           <h1>acueducto</h1>
           <Logo />
@@ -105,7 +100,7 @@ const LogoLink = styled.a`
   }
   svg {
     max-width: 130px;
-    max-height:18px;
+    max-height: 18px;
     width: 100%;
     path {
       fill: ${(props) => props.theme.colors.white};

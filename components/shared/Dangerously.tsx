@@ -1,6 +1,11 @@
 import createMarkup from "utils/createMarkup";
 
-export const H1 = ({ children, ...props }) => (
+type DangerousProps = {
+  children: React.ReactNode;
+  props?: any;
+};
+
+export const H1 = ({ children, ...props }: DangerousProps) => (
   <h1 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 

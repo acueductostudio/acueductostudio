@@ -8,8 +8,7 @@
   "legal_nav": {
     "cookies": {
       "title": "cookie policy",
-      "link": "cookies",
-      "as": "/cookies"
+      "link": "cookies"
     },
     "privacy": {
       "title": "privacy policy",
@@ -29,7 +28,7 @@
       "tags": "Strategy<br/>Product development<br/>Design & digital consulting<br/>Project management",
       "link": "salvajenada"
     },
-    { 
+    {
       "title": "a unique ecommerce in Mexico",
       "tags": "Strategy<br/>Commmunication<br/>Branding<br/>Ecommerce<br/>Digital Marketing<br/>",
       "link": "rahid"

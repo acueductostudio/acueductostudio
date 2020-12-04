@@ -7,6 +7,9 @@ import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import FooterLogoCrop from "./FooterLogoCrop";
 import DefaultForm from "components/shared/DefaultForm";
 import es from "public/locales/es/resourcefooter.json";
+import { createContact } from "utils/sendinBlue";
+import { advancedMatching } from "utils/analytics";
+import ReactPixel from "react-facebook-pixel";
 
 const ResourceFooter = () => {
   let resource = es.resource_footer;
@@ -20,9 +23,9 @@ const ResourceFooter = () => {
       listIds: [2],
       updateEnabled: true,
     });
-    ReactPixel.init("506854653278097", { em: data.email });
+    ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Suscripción a la newsletter
-    ReactPixel.track("Subscribe", { email: data.email });
+    ReactPixel.track("Subscribe", advancedMatching(data.email));
   };
 
   return (
@@ -35,10 +38,11 @@ const ResourceFooter = () => {
           <p>{resource.p}</p>
           <ResourceForm>
             <DefaultForm
+              id="resourceFooter"
               onSubmit={onSubmit}
               text={resource}
               buttonArrow
-              successMarkup={<Message success>{resource.success.p}</Message>}
+              successMarkup={<Message>{resource.success.p}</Message>}
             />
           </ResourceForm>
         </Fade>

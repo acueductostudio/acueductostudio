@@ -99,7 +99,11 @@ function Podcast({ locale, setTitle, pt }) {
 export default React.memo(Podcast);
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const pt = ssrLocale({ locale: context.locale, fileName: "podcast.json", oneLang: "es" });
+  const pt = ssrLocale({
+    locale: context.locale,
+    fileName: "podcast.json",
+    oneLang: "es",
+  });
   return {
     props: {
       pt,
@@ -132,8 +136,11 @@ const PodcastGrid = styled.div`
   }
   span {
     color: ${(props) => props.theme.colors.accent};
-    svg * {
-      fill: ${(props) => props.theme.colors.accent};
+    svg {
+      max-width: 110px;
+      * {
+        fill: ${(props) => props.theme.colors.accent};
+      }
     }
   }
   p {
