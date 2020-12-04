@@ -60,6 +60,7 @@ export default function FooterNav() {
             <Fade triggerOnce>
               <h6>{navTitles.resources}</h6>
             </Fade>
+            {console.log(context.lang)}
             <ul>
               {resources.map((item, index) => (
                 <Fade
@@ -68,7 +69,13 @@ export default function FooterNav() {
                   key={"itemResource" + index}
                 >
                   <li>
-                    <Link href={item.link}>{item.title}</Link>
+                    <Link
+                      href={item.link}
+                      as={item.as ? item.as : item.link}
+                      locale={context.lang}
+                    >
+                      {item.title}
+                    </Link>
                   </li>
                 </Fade>
               ))}

@@ -18,7 +18,7 @@ function LanguageToggler({ hasLoaded, locale }) {
   }, [router.route]);
 
   const handleLink = () => {
-    console.log(router.asPath + " " + router.locale);
+    // console.log(router.asPath + " " + router.locale);
     if (locale == "en") {
       switch (router.asPath) {
         case "/work/rahid":

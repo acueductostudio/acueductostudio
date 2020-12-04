@@ -15,7 +15,7 @@ export type SharedTProps = {
       };
       main: { title: string; link: string; as?: string }[];
       policies: { title: string; link: string; as?: string }[];
-      resources?: { title: string; link: string }[];
+      resources?: { title: string; link: string; as?: string }[];
       mailto: { subject: string; body: string };
     };
   };
