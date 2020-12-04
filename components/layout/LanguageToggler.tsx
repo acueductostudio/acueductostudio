@@ -113,28 +113,83 @@ function LanguageToggler({ hasLoaded, locale }) {
   };
 
   return (
-    <Toggler reveal={hasLoaded} available={showToggler}>
-      <a onClick={handleLink}>
+    <A onClick={handleLink} reveal={hasLoaded} available={showToggler}>
+      <IconWrapper>
+        <Arrows />
+      </IconWrapper>
+      <RevealWrapper>
         <Reveal>
           <span>{locale === "es" ? "switch language" : "cambiar idioma"}</span>
           {locale === "es" ? "english" : "español"}
         </Reveal>
-        <Icon>
-          <Arrows />
-        </Icon>
-      </a>
-    </Toggler>
+      </RevealWrapper>
+    </A>
   );
 }
 export default React.memo(LanguageToggler);
 
+const RevealWrapper = styled.div`
+  cursor: pointer;
+  bottom: 50%;
+  display: flex;
+  z-index: 10;
+  height: 100%;
+  pointer-events: none;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-right: 35px;
+  margin: 0px auto;
+  max-width: 1500px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  @media (max-width: 600px) {
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-right: calc(22px + 1%);
+  }
+  @media (max-width: 450px) {
+    padding-top: 20px;
+    padding-right: 23px;
+  }
+  @media (max-height: 450px) {
+    align-items: flex-start;
+    padding-top: 24px;
+    padding-right: 25px;
+  }
+  @media (max-height: 450px) and (max-width: 600px) {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+`;
+
+const A = styled.a<{ available: boolean; reveal: boolean }>`
+  opacity: ${(props) => (props.available && props.reveal ? 1 : 0)};
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      ${RevealWrapper} {
+        opacity: 1;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    &:hover {
+      ${RevealWrapper} {
+        opacity: 0;
+      }
+    }
+  }
+`;
+
 const Reveal = styled.div`
-  mix-blend-mode: exclusion;
   background-color: ${(props) => props.theme.colors.accent};
   box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2);
   padding: 9px 10px 10px 23px;
   position: absolute;
-  margin-left: -8px;
   border-radius: 30px;
   width: 138px;
   display: flex;
@@ -143,10 +198,11 @@ const Reveal = styled.div`
   flex-direction: column;
   font-weight: 100;
   text-align: left;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
   font-size: 1.5rem;
-  transform: translateX(-100%);
+  transform: translateX(-50%);
+  pointer-events: none;
   span {
     font-size: 1.1rem;
     line-height: 1;
@@ -154,27 +210,9 @@ const Reveal = styled.div`
     color: ${(props) => props.theme.colors.background};
     font-weight: 300;
   }
-  svg {
-    width: 30px;
-    padding: 15px;
-    box-sizing: content-box;
-    * {
-      fill: ${(props) => props.theme.colors.white};
-      font-family: inherit;
-      font-weight: 300;
-    }
-  }
 `;
 
-const Icon = styled.div`
-  svg {
-    width: 30px;
-    padding: 15px;
-    box-sizing: content-box;
-  }
-`;
-
-const Toggler = styled.div<{ reveal: boolean; available: boolean }>`
+const IconWrapper = styled.div`
   cursor: pointer;
   bottom: 50%;
   display: flex;
@@ -192,38 +230,25 @@ const Toggler = styled.div<{ reveal: boolean; available: boolean }>`
   padding-right: 35px;
   margin: 0px auto;
   max-width: 1500px;
-  opacity: ${(props) => (props.available && props.reveal ? 1 : 0)};
+  opacity: 1;
   transition: opacity 0.3s ease 0.35s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      /* mix-blend-mode: unset; */
       svg {
         transform: scale(0.95);
-      }
-      ${Reveal} {
-        opacity: 1;
       }
     }
   }
   svg {
     width: 30px;
-    pointer-events: ${(props) =>
-      props.available && props.reveal ? "auto" : "none"};
+    pointer-events: auto;
     padding: 15px;
     box-sizing: content-box;
     transition: 0.2s ease-in transform;
-    .fill * {
-      fill: ${(props) => props.theme.colors.white};
-    }
-    .stroke * {
-      fill: none;
-      stroke-width: ${(props) => props.theme.stroke};
-      stroke: ${(props) => props.theme.colors.white};
-    }
   }
   &:active {
     svg {
-      transform: scale(0.9);
+      transform: scale(0.95);
     }
   }
   @media (max-width: 600px) {

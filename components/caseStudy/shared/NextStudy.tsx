@@ -55,11 +55,11 @@ const LogoContainer = styled.div`
 
 const Logo = styled.div`
   padding-bottom: 20%;
-  background-size: 90%;
+  background-size: 85%;
   background-position: 50% 50%;
-  transition: transform 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: transform 0.3s ease-out;
   background-repeat: no-repeat;
-  transform: scale(0.97);
+  transform: scale(0.95);
   transform-origin: 50% 0;
 `;
 
@@ -83,7 +83,7 @@ const Wrapper = styled.a<{ margined: boolean }>`
   }
   &:hover {
     ${Logo} {
-      transform: scale(1);
+      transform: scale(0.93);
     }
     svg {
       stroke: ${(props) => props.theme.colors.accent};
