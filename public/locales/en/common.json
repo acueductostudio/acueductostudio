@@ -46,16 +46,16 @@
         "policies": "policies"
       },
       "main": [
-        { "title": "pitch", "link": "/pitch", "as": "/pitch" },
+        { "title": "pitch", "link": "/pitch" },
         { "title": "about", "link": "/nosotros", "as": "/about" },
         { "title": "work", "link": "/portafolio", "as": "/work" },
         { "title": "contact", "link": "/contacto", "as": "/contact" }
       ],
       "policies": [
-        { "title": "cookie policy", "link": "cookies", "as": "/cookies" },
+        { "title": "cookie policy", "link": "/cookies" },
         {
           "title": "privacy policy",
-          "link": "privacidad",
+          "link": "/privacidad",
           "as": "/privacy"
         }
       ],

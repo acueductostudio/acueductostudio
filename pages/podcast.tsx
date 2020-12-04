@@ -102,8 +102,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const pt = ssrLocale({
     locale: context.locale,
     fileName: "podcast.json",
-    oneLang: "es",
   });
+  if (!pt) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       pt,

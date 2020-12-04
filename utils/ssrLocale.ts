@@ -4,18 +4,26 @@ import fs from "fs";
 const ssrLocale = ({
   locale,
   fileName,
-  oneLang,
 }: {
   locale: string;
   fileName: string;
-  oneLang?: string;
 }) => {
   const directory = path.join(
     process.cwd(),
-    `public/locales/${oneLang ? oneLang : locale}/${fileName}`
+    `public/locales/${locale}/${fileName}`
   );
-  const v = fs.readFileSync(directory, "utf8");
-  const x = JSON.parse(v);
-  return x;
+  let fileContents;
+  try {
+    fileContents = fs.readFileSync(directory, "utf8");
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.log('File not found.');
+      return false;
+    } else {
+      throw err;
+    }
+  }
+  fileContents = JSON.parse(fileContents);
+  return fileContents;
 };
 export default ssrLocale;

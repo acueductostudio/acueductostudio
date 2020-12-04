@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-export type AppContext = {
+export type SharedTProps = {
   casestudies: Array<object>;
   contact_footer: {
     title: string;
@@ -26,7 +26,7 @@ export type AppContext = {
   next_study: { p: string };
 };
 
-const LangContext = React.createContext<AppContext | null>(null);
+const LangContext = React.createContext<SharedTProps | null>(null);
 
 export function useLocaleContext() {
   const context = useContext(LangContext);

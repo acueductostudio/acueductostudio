@@ -1,5 +1,5 @@
 {
-  "head":{
+  "head": {
     "title": "Acueducto, a strategic design & technology studio.",
     "description": "We partner with innovators around the globe to develop digital strategies and experiences that tell compelling stories, inspire communities and build meaningful bonds."
   },
@@ -11,7 +11,7 @@
   "intro": {
     "title": "working with partners, not for clients",
     "p": "Unlike client-agency relationships, partnerships allow us to get deeply involved in every project we work in. Relying on close collaboration to produce digital experiences, we can truly connect with their audiences and have a positive impact in brands, business and communities alike.<br/><br/>We are always thrilled by new challenges and the people that come with them: as challenges become projects, partners become friends.",
-    "link": ["/en/pitch", "pitch"],
+    "link": ["/pitch", "pitch"],
     "linktext": "Have we got your attention?<br/>Read our"
   },
   "carousel": ["startups", "brands", "corporations"],

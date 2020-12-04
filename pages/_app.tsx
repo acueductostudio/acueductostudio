@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout/Layout";
 import theme from "styles/theme";
-import type { AppContext } from "utils/LangContext";
+import type { SharedTProps } from "utils/LangContext";
 import delayForLoading from "utils/delayForLoading";
 // import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
@@ -13,7 +13,7 @@ import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 function App({ Component, pageProps, router }: AppProps) {
-  const [locale, setLocale] = useState<AppContext>(es);
+  const [sharedT, setSharedT] = useState<SharedTProps>(es);
   const [hasLoaded, setHasLoaded] = useState(false);
   const LoadingBarRef = useRef(null);
 
@@ -21,8 +21,8 @@ function App({ Component, pageProps, router }: AppProps) {
     clientLocale({
       locale: router.locale,
       fileName: "common.json",
-      callBack: (nT) => {
-        setLocale(nT);
+      callBack: (nT: SharedTProps) => {
+        setSharedT(nT);
       },
     });
   }, [router.locale]);
@@ -98,18 +98,15 @@ function App({ Component, pageProps, router }: AppProps) {
 
   return (
     <ThemeProvider theme={theme}>
-      <LangProvider value={locale}>
+      <LangProvider value={sharedT}>
         <LoadingBar
           ref={LoadingBarRef}
           height={3}
           color={theme.colors.accent}
           className="TopBar"
         />
-        <Layout
-          locale={locale}
-          hasLoaded={hasLoaded}
-        >
-          <Component locale={locale} {...pageProps} lang={router.locale} />
+        <Layout t={sharedT} hasLoaded={hasLoaded}>
+          <Component {...pageProps} lang={router.locale} />
         </Layout>
       </LangProvider>
     </ThemeProvider>

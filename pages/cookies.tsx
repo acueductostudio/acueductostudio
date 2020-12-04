@@ -36,8 +36,8 @@ export default function Cookies({ locale, setTitle, pt }) {
         <p>
           {b.p0}
           <Link
-            href={"/privacidad"}
-            as={locale === "en" ? "privacy" : "/privacidad"}
+            href="/privacidad"
+            as={locale === "en" ? "/privacy" : "/privacidad"}
             locale={locale}
             passHref
           >

@@ -7,16 +7,10 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import GlobalStyles from "../styles/global";
-
-type MyDocumentContext = DocumentContext & {
-  lang: string;
-};
-
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: MyDocumentContext) {
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
-    let lang = ctx.pathname.includes("/en") ? "en" : "es";
     try {
       ctx.renderPage = () =>
         originalRenderPage({
@@ -27,7 +21,6 @@ export default class MyDocument extends Document {
       const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
-        lang,
         styles: (
           <>
             {initialProps.styles}

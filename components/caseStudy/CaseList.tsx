@@ -12,7 +12,9 @@ const SingleCase = (props) => {
     <Link
       href={"/portafolio/" + props.link}
       as={
-        props.lang === "en" ? "work/" + props.link : "/portafolio/" + props.link
+        props.lang === "en"
+          ? "/work/" + props.link
+          : "/portafolio/" + props.link
       }
       locale={props.lang}
       passHref

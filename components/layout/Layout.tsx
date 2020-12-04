@@ -13,12 +13,27 @@ import ReactPixel from "react-facebook-pixel";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NewsletterPopup from "components/NewsletterPopup";
 import TagManager from "react-gtm-module";
+import type { SharedTProps } from "utils/LangContext";
+
+declare global {
+  interface Window {
+    GA_INITIALIZED: boolean;
+  }
+}
 
 const HomeSketch = dynamic(import("../homeSketch/HomeSketch"), {
   ssr: false,
 });
 
-const Layout = ({ locale, hasLoaded, children }) => {
+const Layout = ({
+  t,
+  hasLoaded,
+  children,
+}: {
+  t: SharedTProps;
+  hasLoaded: boolean;
+  children: React.ReactElement;
+}) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
   const [isAbout, setIsAbout] = useState(false);
@@ -98,7 +113,8 @@ const Layout = ({ locale, hasLoaded, children }) => {
       document.body.onscroll = function () {
         checkScroll();
       };
-      document.querySelector("#Clipper").onscroll = function () {
+      let clipper: HTMLDivElement = document.querySelector("#Clipper");
+      clipper.onscroll = function () {
         checkScroll();
       };
     }
@@ -119,7 +135,9 @@ const Layout = ({ locale, hasLoaded, children }) => {
       window.scrollY > 100
     ) {
       document.body.onscroll = null;
-      document.querySelector("#Clipper").onscroll = null;
+
+      let clipper: HTMLDivElement = document.querySelector("#Clipper");
+      clipper.onscroll = null;
       setShowArrow(false);
     }
   };
@@ -135,8 +153,8 @@ const Layout = ({ locale, hasLoaded, children }) => {
     <>
       <PageWrapper
         id="Wrapper"
-        onMouseMove={showSketch | isAbout ? onMouseMove : undefined}
-        onTouchMove={showSketch | isAbout ? onTouchMove : undefined}
+        onMouseMove={showSketch || isAbout ? onMouseMove : undefined}
+        onTouchMove={showSketch || isAbout ? onTouchMove : undefined}
       >
         {hasLoaded && showSketch && <HomeSketch hide={false} mouse={mouse} />}
         <Border />
@@ -155,7 +173,7 @@ const Layout = ({ locale, hasLoaded, children }) => {
         />
         <Nav
           locale={router.locale}
-          t={locale}
+          t={t}
           toggleNav={toggleNav}
           closeNav={closeNav}
           isOpen={isOpen}
@@ -168,11 +186,8 @@ const Layout = ({ locale, hasLoaded, children }) => {
         })}
         <LanguageToggler locale={router.locale} hasLoaded={hasLoaded} />
         <ScrollIncentive hasLoaded={hasLoaded} showArrow={showArrow} />
-        <CookieMessage
-          locale={locale}
-          hasLoaded={hasLoaded}
-        />
-        <BodyOverflow isOpen={isOpen} hasLoaded={hasLoaded} />
+        <CookieMessage t={t} hasLoaded={hasLoaded} />
+        <BodyOverflow hasLoaded={hasLoaded} />
         {showPopup && <NewsletterPopup />}
       </PageWrapper>
     </>
@@ -181,7 +196,7 @@ const Layout = ({ locale, hasLoaded, children }) => {
 
 export default Layout;
 
-const BodyOverflow = createGlobalStyle`
+const BodyOverflow = createGlobalStyle<{ hasLoaded: boolean }>`
   .TopBar div{
      box-shadow: 1px 1px 4px ${(props) => props.theme.colors.accent} !important;
   }

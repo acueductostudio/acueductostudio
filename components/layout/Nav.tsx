@@ -25,22 +25,20 @@ export default function Nav(props) {
         <>
           <NavList onClick={props.closeNav}>
             <ul>
-              {t.map(function (item, index) {
-                return (
-                  <Fade delay={200 + index * 50} key={"item" + index}>
-                    <li>
-                      <span>0{index + 1}</span>
-                      <ActiveLink
-                        href={item.link}
-                        as={item.as ? item.as : item.link}
-                        locale={props.locale}
-                      >
-                        <NavLink active={undefined}>{item.title}</NavLink>
-                      </ActiveLink>
-                    </li>
+              {t.map((item, index) => (
+                <li key={"item" + index}>
+                  <Fade delay={200 + index * 50}>
+                    <span>0{index + 1}</span>
+                    <ActiveLink
+                      href={item.link}
+                      as={item.as ? item.as : item.link}
+                      locale={props.locale}
+                    >
+                      <NavLink active={undefined}>{item.title}</NavLink>
+                    </ActiveLink>
                   </Fade>
-                );
-              })}
+                </li>
+              ))}
             </ul>
           </NavList>
           <BottomNav>

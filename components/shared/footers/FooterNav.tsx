@@ -43,7 +43,11 @@ export default function FooterNav() {
                 key={"itemMain" + index}
               >
                 <li>
-                  <Link href={item.link} as={item.as} locale={context.lang}>
+                  <Link
+                    href={item.link}
+                    as={item.as ? item.as : item.link}
+                    locale={context.lang}
+                  >
                     {item.title}
                   </Link>
                 </li>
@@ -101,7 +105,11 @@ export default function FooterNav() {
                 key={"itemPolicy" + index}
               >
                 <li>
-                  <Link href={item.link} as={item.as} locale={context.lang}>
+                  <Link
+                    href={item.link}
+                    as={item.as ? item.as : item.link}
+                    locale={context.lang}
+                  >
                     {item.title}
                   </Link>
                 </li>

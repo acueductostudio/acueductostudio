@@ -22,7 +22,7 @@ const ContactFooter = () => {
           <p>{p}</p>
           <Link
             href={"/contacto"}
-            as={context.lang === "en" ? "contact" : "/contacto"}
+            as={context.lang === "en" ? "/contact" : "/contacto"}
             locale={context.lang}
             passHref
           >

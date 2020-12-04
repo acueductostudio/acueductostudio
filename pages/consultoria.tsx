@@ -29,7 +29,15 @@ const stepIconArray = [
   Culture,
 ];
 
-const SpinPinnedSection = ({ hasLoaded, children, intro }) => {
+const SpinPinnedSection = ({
+  hasLoaded,
+  children,
+  intro,
+}: {
+  hasLoaded: boolean;
+  children: React.ReactNode;
+  intro: { pre_title: string; words: []; post_title: string };
+}) => {
   const [spinWord, setSpinWord] = useState(0);
   useInterval(
     () => {
@@ -48,7 +56,7 @@ function Consultoria({ locale, setTitle, pt, hasLoaded }) {
     head,
     headerTitle,
     intro,
-    cta, 
+    cta,
     fit_section,
     process_section,
     areas_section,
@@ -118,7 +126,15 @@ function Consultoria({ locale, setTitle, pt, hasLoaded }) {
 export default Consultoria;
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const pt = ssrLocale({ locale: context.locale, fileName: "consultoria.json", oneLang: "es" });
+  const pt = ssrLocale({
+    locale: context.locale,
+    fileName: "consultoria.json",
+  });
+  if (!pt) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       pt,

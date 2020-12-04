@@ -128,8 +128,6 @@ export default function Pitch({ locale, setTitle, pt }) {
                       <li key={"li1" + index}>{item}</li>
                     ))}
                   </ul>
-                  <br />
-                  <p>{step.p2}</p>
                 </Fade>
               </Step>
             </StepBordered>
@@ -205,7 +203,7 @@ const GraphicContainer = styled.div`
     span {
       &:first-of-type {
         right: 70px;
-        left:unset;
+        left: unset;
         top: 30px;
       }
       &:last-of-type {

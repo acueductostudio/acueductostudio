@@ -51,7 +51,34 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/en/contacto",
+        destination: "/contact",
+        permanent: false,
+      },
+      {
+        source: "/en/portafolio",
+        destination: "/en/work",
+        permanent: false,
+      },
+      // {
+      //   source: "en/privacidad",
+      //   destination: "/privacy",
+      // },
+      // {
+      //   source: "en/portafolio/:slug",
+      //   destination: "/work/:slug",
+      // },
+      // {
+      //   source: "/en/nosotros",
+      //   destination: "/about",
+      // },
+    ];
+  },
   trailingSlash: false,
+  reactStrictMode: true,
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,

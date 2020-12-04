@@ -20,13 +20,13 @@
     "subtitle4": "interfaces digitales",
     "p4": "Las interfaces digitales son el medio de comunicación humano-máquina. Pueden ser apps web y móviles, productos o servicios digitales, o incluso interfaces de voz como Alexa o Siri. El diseño del uso de estas interfaces (Experiencia de Usuario o UX) es vital para su funcionamiento adecuado, usabilidad, retención de usuarios y escalabilidad. </br></br>Sin un diseño adecuado a las necesidades de los usuarios y el negocio, la probabilidad de éxito del proyecto se desploma.",
     "subtitle5": "un dato importante",
-    "img_business" : "compañías design-driven",
+    "img_business": "compañías design-driven",
     "alt": "Empresas design-driven superan al S&P500 en 211%",
     "p5": "Las empresas design-driven han conseguido una considerable ventaja en la bolsa, teniendo un mejor rendimiento que las empresas del S&P 500 en un 211%."
   },
   "second_section": {
     "title": "un caso de estudio<br/> habla por si mismo",
-    "p": "Rahid era una marca percibida, incluso por su propio fundador, como poco posicionada. Contaba con una identidad débil y falta de cohesión entre sus canales de venta. </br></br>Después de desarrollar su estrategia de ecommerce y de comunicación, hacer un rebranding, marketing digital y su sitio web, ayudamos a Rahid a estar un paso más cerca de su objetivo: convertirse en la comercializadora de parafernalia cannábica más relevante de México.",
+    "p": "Rahid era una marca percibida, incluso por su propio fundador, como poco posicionada. Contaba con una identidad débil y falta de cohesión entre sus canales de venta.",
     "linktext": "Lee el ",
     "link": ["/portafolio/rahid", "caso de estudio."]
   },
@@ -61,8 +61,7 @@
       {
         "title": "descubre",
         "p": "¿Dónde estamos parados? Se investiga y analiza el contexto del proyecto, su audiencia y sus necesidades.<br/><br/>Evaluamos:",
-        "li": ["Modelos de negocios", "Objetivos", "Identidad", "Mercado"],
-        "p2": "Hacemos entrevistas y juntas creativas con tu organización, además de investigación de campo y de escritorio."
+        "li": ["Modelos de negocios", "Objetivos", "Identidad", "Mercado"]
       },
       {
         "title": "visualiza",
@@ -71,8 +70,7 @@
           "Valor agregado",
           "Diferenciador",
           "Ventaja estratégica y competitiva"
-        ],
-        "p2": "Analizamos el entorno de mercado y los riesgos del proyecto."
+        ]
       },
       {
         "title": "narra",
@@ -82,26 +80,22 @@
           "Brief creativo y storytelling",
           "Identidad",
           "Calendario"
-        ],
-        "p2": "Acordamos junto contigo las estrategias que definirán el rumbo del proyecto, calendarizamos objetivos y definimos entregables."
+        ]
       },
       {
         "title": "diseña, programa y ensambla",
         "p": "Suficiente planeación, en esta etapa se desarrollan los contenidos y aplicaciones del proyecto.<br/><br/>Desarrollamos:",
-        "li": ["Materiales y diseños", "Prototipos", "Copywriting", "Código"],
-        "p2": "Ponemos manos a la obra para producir los entregables que acordamos para cada área del proyecto."
+        "li": ["Materiales y diseños", "Prototipos", "Copywriting", "Código"]
       },
       {
         "title": "lanza",
         "p": "Todo se construyó para este momento. Se administran los cambios organizacionales y lanzamiento del proyecto.<br/><br/>Implementamos:",
-        "li": ["Promoción", "Advertising", "Community Management"],
-        "p2": "Ejecutamos las estrategias de comunicación, monitoreamos su desempeño y documentamos su impacto."
+        "li": ["Promoción", "Advertising", "Community Management"]
       },
       {
         "title": "evalúa",
         "p": "Se analiza la información recopilada sobre el proyecto durante todo su desarrollo.<br/><br/>Entregamos:",
-        "li": ["Reporte de desempeño", "Posibles siguientes pasos"],
-        "p2": "Evaluamos tanto el proyecto como nuestro proceso y nos preparamos para dar el siguiente paso."
+        "li": ["Reporte de desempeño", "Posibles siguientes pasos"]
       }
     ]
   },

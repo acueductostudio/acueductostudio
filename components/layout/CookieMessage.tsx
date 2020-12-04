@@ -6,7 +6,7 @@ import BorderLink from "components/shared/BorderedLink";
 import Cookies from "js-cookie/dist/js.cookie";
 import delayForLoading from "utils/delayForLoading";
 
-const CookieMessage = (props) => {
+const CookieMessage = ({ t, hasLoaded }: { t: any; hasLoaded: boolean }) => {
   const [hasToConsent, setHasToConsent] = useState(false);
   const [showConsentMessage, setShowConsentMessage] = useState(true);
 
@@ -16,12 +16,13 @@ const CookieMessage = (props) => {
         document.body.onscroll = () => {
           checkScroll();
         };
-        document.querySelector("#Clipper").onscroll = () => {
+        let clipper: HTMLDivElement = document.querySelector("#Clipper");
+        clipper.onscroll = () => {
           checkScroll();
         };
       }
     });
-  }, [props.hasLoaded]);
+  }, [hasLoaded]);
 
   const checkScroll = () => {
     if (
@@ -29,7 +30,8 @@ const CookieMessage = (props) => {
       window.scrollY > 100
     ) {
       document.body.onscroll = null;
-      document.querySelector("#Clipper").onscroll = null;
+      let clipper: HTMLDivElement = document.querySelector("#Clipper");
+      clipper.onscroll = null;
       checkForConsent();
       setShowConsentMessage(false);
     }
@@ -50,24 +52,24 @@ const CookieMessage = (props) => {
     setHasToConsent(false);
   };
 
-  let t = props.locale.cookie_message;
+  let tt = t.cookie_message;
   return (
-    <Wrapper borderTop={props.borderTop} clickable={hasToConsent}>
+    <Wrapper clickable={hasToConsent}>
       <Border>
         <Divider onClick={consentToCookies}>
           <Button>
-            <span>{t.title}</span>
+            <span>{tt.title}</span>
           </Button>
           <CrossContainer>
             <Cross />
           </CrossContainer>
         </Divider>
         <p>
-          {t.p}
+          {tt.p}
           <Link href="/cookies" passHref>
-            <Hoverable>{t.link}</Hoverable>
+            <Hoverable>{tt.link}</Hoverable>
           </Link>
-          {t.p_continued}
+          {tt.p_continued}
         </p>
       </Border>
     </Wrapper>
@@ -151,7 +153,7 @@ const CrossContainer = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ clickable: boolean }>`
   pointer-events: ${(props) => (props.clickable ? "auto" : "none")};
   opacity: ${(props) => (props.clickable ? "1" : "0")};
   max-width: 590px;

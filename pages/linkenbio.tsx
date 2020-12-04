@@ -11,15 +11,8 @@ import ContactFooter from "components/shared/footers/ContactFooter";
 import Consultoria from "public/assets/img/layout/linkenbio/consultoria.svg";
 import Podcast from "public/assets/img/layout/linkenbio/podcast.svg";
 
-export default function LinkEnBio({locale, setTitle, pt}) {
-  let {
-    head,
-    headerTitle,
-    title,
-    links,
-    secondary_links,
-    p,
-  } = pt;
+export default function LinkEnBio({ locale, setTitle, pt }) {
+  let { head, headerTitle, title, links, secondary_links, p } = pt;
 
   useEffect(() => {
     setTitle(headerTitle);
@@ -66,11 +59,15 @@ export default function LinkEnBio({locale, setTitle, pt}) {
       <ContactFooter />
     </PageClipper>
   );
-};
-
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const pt = ssrLocale({ locale: context.locale, fileName: "linkenbio.json", oneLang: "es" });
+  const pt = ssrLocale({ locale: context.locale, fileName: "linkenbio.json" });
+  if (!pt) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       pt,
