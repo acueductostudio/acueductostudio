@@ -146,7 +146,7 @@ const RevealWrapper = styled.div`
   margin: 0px auto;
   max-width: 1500px;
   opacity: 0;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.25s ease-in;
   @media (max-width: 600px) {
     align-items: flex-start;
     padding-top: 40px;
@@ -199,7 +199,6 @@ const Reveal = styled.div`
   font-weight: 100;
   text-align: left;
   opacity: 1;
-  transition: opacity 0.3s ease-in;
   font-size: 1.5rem;
   transform: translateX(-50%);
   pointer-events: none;
@@ -231,7 +230,6 @@ const IconWrapper = styled.div`
   margin: 0px auto;
   max-width: 1500px;
   opacity: 1;
-  transition: opacity 0.3s ease 0.35s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       svg {

@@ -25,9 +25,9 @@ const ArrowContainer = styled.span<{ reverse: boolean }>`
     fill: none;
     stroke: ${(props) => props.theme.colors.foreground};
     stroke-width: ${(props) => props.theme.stroke};
-    transition: stroke 0.1s ease-out;
+    transition: stroke 0.2s ease-out;
     * {
-      transition: stroke 0.1s ease-out;
+      transition: stroke 0.2s ease-out;
     }
     ${(p) =>
       p.reverse &&
