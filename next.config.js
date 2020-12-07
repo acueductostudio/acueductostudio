@@ -2,25 +2,12 @@
 //   enabled: process.env.ANALYZE === "true",
 // });
 const path = require("path");
-const withOffline = require("next-offline");
+const withPWA = require("next-pwa");
 
 const nextConfig = {
-  workboxOpts: {
-    swDest: process.env.NEXT_EXPORT
-      ? "service-worker.js"
-      : "static/service-worker.js",
-    runtimeCaching: [
-      {
-        urlPattern: /^https?.*/,
-        handler: "NetworkFirst",
-        options: {
-          cacheName: "offlineCache",
-          expiration: {
-            maxEntries: 200,
-          },
-        },
-      },
-    ],
+  pwa: {
+    dest: "public",
+    disable: process.env.NODE_ENV === "development",
   },
   async rewrites() {
     return [
@@ -43,11 +30,6 @@ const nextConfig = {
       {
         source: "/about",
         destination: "/nosotros",
-      },
-      {
-        source: "/service-worker.js",
-        destination: "/_next/static/service-worker.js",
-        locale: false,
       },
     ];
   },
@@ -80,4 +62,4 @@ const nextConfig = {
 };
 
 // module.exports = withBundleAnalyzer(nextConfig);
-module.exports = withOffline(nextConfig);
+module.exports = withPWA(nextConfig);

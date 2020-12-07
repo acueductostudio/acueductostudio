@@ -60,7 +60,6 @@ export default function FooterNav() {
             <Fade triggerOnce>
               <h6>{navTitles.resources}</h6>
             </Fade>
-            {console.log(context.lang)}
             <ul>
               {resources.map((item, index) => (
                 <Fade

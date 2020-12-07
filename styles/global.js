@@ -1,5 +1,4 @@
 import Theme from "./theme";
-import { css } from "styled-components";
 
 const styles = `
   #revealer {

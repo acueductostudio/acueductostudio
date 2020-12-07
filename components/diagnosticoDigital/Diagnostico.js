@@ -72,7 +72,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
     setResults([estrategia, cultura, competencia, data.firstName]);
     ReactPixel.init("506854653278097", { em: data.email });
     ReactPixel.track("Lead", { email: data.email }); // Hizo el diagnóstico
-
+    //Falta evento de Google: Dejó correo
     delayForLoading(1500).then(() => setTestStatus("done"));
   };
 
@@ -96,6 +96,9 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
 
   useEffect(() => {
     qIndex === aIndex && setAIndexShouldIncrease(true);
+    if (qIndex === NUMBER_OF_QS) {
+      //Falta evento de Google: terminó diagnóstico
+    }
   }, [qIndex]);
 
   function handleClick() {
