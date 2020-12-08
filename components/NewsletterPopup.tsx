@@ -7,7 +7,7 @@ import es from "public/locales/es/newsletter.json";
 import DefaultForm from "components/shared/DefaultForm";
 import { createContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
-import { advancedMatching } from "utils/analytics";
+import { logEvent, advancedMatching } from "utils/analytics";
 
 const NewsletterPopup = () => {
   let newsletter = es.newsletter_component;
@@ -31,6 +31,7 @@ const NewsletterPopup = () => {
     });
     ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Suscripción a la newsletter
+    logEvent("newsletter-popup", "dejó email");
     ReactPixel.track("Subscribe", { email: data.email });
   };
 

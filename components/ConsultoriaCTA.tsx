@@ -10,16 +10,18 @@ import Cookies from "js-cookie/dist/js.cookie.mjs";
 import { useRouter } from "next/router";
 import BorderLink from "components/shared/BorderedLink";
 import delayForLoading from "utils/delayForLoading";
-import {advancedMatching} from "utils/analytics";
+import { logEvent, advancedMatching } from "utils/analytics";
 
 const ConsultoriaCTA = ({
   cta,
   id,
   diagnostico_cta,
+  price,
 }: {
   cta: any;
   id: string;
   diagnostico_cta?: boolean;
+  price?: boolean;
 }) => {
   const router = useRouter();
 
@@ -38,7 +40,7 @@ const ConsultoriaCTA = ({
     ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Pidió consultoría
     ReactPixel.track("SubmitApplication", { email: data.email });
-
+    logEvent("consultoría", "dejó email");
     delayForLoading(1500).then(() => router.push("/consultoria/pago"));
   };
 
@@ -53,7 +55,13 @@ const ConsultoriaCTA = ({
         formMarkup={
           <>
             <h3>{cta.title}</h3>
-            <Span>{`${cta.price} <em>${cta.sessions}</em>`}</Span>
+            {price ? (
+              <Span>{`${cta.price} <em>${cta.sessions}</em>`}</Span>
+            ) : (
+              <span className="noPrice">
+                elevemos tu negocio <em>{cta.sessions}</em>
+              </span>
+            )}
           </>
         }
       />
@@ -85,6 +93,12 @@ const Container = styled.div`
     margin: 0 0 30px 0;
     display: flex;
     font-weight: 200;
+    &.noPrice {
+      font-size: 2.4rem;
+      em {
+        margin-top: 9px;
+      }
+    }
     b {
       font-size: 1.8rem;
       margin-top: 13px;
@@ -116,6 +130,12 @@ const Container = styled.div`
     }
   }
   @media (max-width: 1000px) {
+    span.noPrice {
+      font-size: 2rem;
+      em {
+        margin-top: 5px;
+      }
+    }
     h3 {
       font-size: 2.4rem;
     }
@@ -132,6 +152,14 @@ const Container = styled.div`
       }
       em {
         margin-top: 11px;
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    span.noPrice {
+      margin-bottom: 15px;
+      em {
+        display: none;
       }
     }
   }

@@ -8,7 +8,7 @@ import FooterLogoCrop from "./FooterLogoCrop";
 import DefaultForm from "components/shared/DefaultForm";
 import es from "public/locales/es/resourcefooter.json";
 import { createContact } from "utils/sendinBlue";
-import { advancedMatching } from "utils/analytics";
+import { logEvent, advancedMatching } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
 
 const ResourceFooter = () => {
@@ -25,6 +25,7 @@ const ResourceFooter = () => {
     });
     ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Suscripción a la newsletter
+    logEvent("newsletter-footer", "dejó email");
     ReactPixel.track("Subscribe", advancedMatching(data.email));
   };
 

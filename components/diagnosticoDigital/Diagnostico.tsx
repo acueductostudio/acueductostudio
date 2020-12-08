@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Fade } from "react-awesome-reveal";
 import Arrow from "components/shared/Arrow";
-import { createContact } from "utils/sendinBlue.ts";
-import delayForLoading from "utils/delayForLoading.ts";
+import { createContact } from "utils/sendinBlue";
+import { logEvent, advancedMatching } from "utils/analytics";
+import delayForLoading from "utils/delayForLoading";
 import Results from "./Results";
 import ReactPixel from "react-facebook-pixel";
 import InputField, { SubmitField } from "components/shared/ContactInputField";
@@ -70,9 +71,9 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
       6;
 
     setResults([estrategia, cultura, competencia, data.firstName]);
-    ReactPixel.init("506854653278097", { em: data.email });
+    ReactPixel.init("506854653278097", advancedMatching(data.email));
     ReactPixel.track("Lead", { email: data.email }); // Hizo el diagnóstico
-    //Falta evento de Google: Dejó correo
+    logEvent("diagnostico", "dejó email");
     delayForLoading(1500).then(() => setTestStatus("done"));
   };
 
@@ -96,10 +97,20 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
 
   useEffect(() => {
     qIndex === aIndex && setAIndexShouldIncrease(true);
-    if (qIndex === NUMBER_OF_QS) {
-      //Falta evento de Google: terminó diagnóstico
-    }
   }, [qIndex]);
+
+  useEffect(() => {
+    console.log(aIndex);
+    if (aIndex === 1) {
+      logEvent("diagnostico", "empezó diagnóstico");
+    }
+    if (aIndex === 10) {
+      logEvent("diagnostico", "llegó a pregunta 10");
+    }
+    if (aIndex === NUMBER_OF_QS) {
+      logEvent("diagnostico", "llegó a recolección");
+    }
+  }, [aIndex]);
 
   function handleClick() {
     if (qIndex < NUMBER_OF_QS) {
@@ -239,7 +250,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
               <Arrowx reveal={qIndex > 0} onClick={prevIndex} left>
                 <Arrow reverse />
               </Arrowx>
-              <Arrowx reveal={aIndex > qIndex} onClick={nextIndex} right>
+              <Arrowx reveal={aIndex > qIndex} onClick={nextIndex}>
                 <Arrow />
               </Arrowx>
             </ArrowContainer>
@@ -317,7 +328,7 @@ const Loading = styled.div`
   }
 `;
 
-const Tag = styled.span`
+const Tag = styled.span<{ show: boolean }>`
   opacity: ${(p) => (p.show ? 1 : 0)};
   font-weight: 300;
   letter-spacing: 4px;
@@ -335,7 +346,7 @@ const Tag = styled.span`
   }
 `;
 
-const LineContainer = styled.div`
+const LineContainer = styled.div<{ percentage: string }>`
   grid-column: 4 / span 8;
   max-width: 800px;
   width: 100%;
@@ -393,7 +404,7 @@ const ArrowContainer = styled.div`
   }
 `;
 
-const Arrowx = styled.div`
+const Arrowx = styled.div<{ reveal: boolean; left?: boolean }>`
   width: 40px;
   height: 30px;
   color: white;
@@ -503,7 +514,7 @@ const QuestionGrid = styled.div`
   }
 `;
 
-const Question = styled.div`
+const Question = styled.div<{ selected: boolean; deselected: boolean }>`
   position: absolute;
   transform: translateX(10%);
   opacity: 0;

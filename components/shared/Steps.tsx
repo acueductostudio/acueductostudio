@@ -16,7 +16,7 @@ const Steps = ({
     {steps.map((step, index) => {
       const StepIcon = iconArray[index];
       return (
-        <StepBordered>
+        <StepBordered key={`step${index}`}>
           <Step>
             <Fade triggerOnce>
               <StepIcon />
