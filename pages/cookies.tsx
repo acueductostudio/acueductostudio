@@ -53,8 +53,6 @@ export default function Cookies({ locale, setTitle, pt }) {
         <p>{b.p3}</p>
         <h4>{b.subsubtitle4}</h4>
         <P>{b.p4}</P>
-        <h3>{b.subtitle5}</h3>
-        <p>{b.p5}</p>
         <h4>{b.subsubtitle6}</h4>
         <P>{b.p6}</P>
         <H3>{b.subtitle7}</H3>

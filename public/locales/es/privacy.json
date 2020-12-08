@@ -1,7 +1,7 @@
 {
   "head": {
-    "title": "Política de Privacidad - Acueducto",
-    "description": "Lee nuestra Política de Privacidad y conoce como utilizamos tu información."
+    "title": "Política de privacidad - Acueducto",
+    "description": "Lee nuestra Política de privacidad y conoce como utilizamos tu información."
   },
   "headerTitle": "privacidad",
   "intro": {
@@ -16,7 +16,7 @@
     "list1": "<li>Nombre completo</li><li>Dirección de correo electrónico</li><li>Dirección IP</li><li>Locación</li><li>Navegador y equipo</li><li>Información sobre tus actividades en nuestro sitio</li><li>Otra información que activamente compartas con nosotros</li>",
     "subtitle3": "cómo recolectamos información",
     "p3": "Toda la información que procesamos es adquirida de la siguiente forma:",
-    "listItem1": "Las formas de contacto en esta Aplicación. (Puedes cancelar tu suscripción <a href='https://studio.us19.list-manage.com/unsubscribe?u=c9d7bbb792de4cdbe363fad75&id=434dbf9f3b' target='_blank' rel='nofollow noopener'>aquí</a>).",
+    "listItem1": "Las formas de contacto en esta Aplicación. (Puedes cancelar tu suscripción en cualquiera de los correos que hayas recibido).",
     "listItem2": "Emails enviados a correos con terminación @acueducto.studio",
     "listItem3": "Cookies o tácticas similares. (Lee nuestra ",
     "listItem3Link": "Política de Cookies",
