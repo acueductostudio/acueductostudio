@@ -1,107 +1,30 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import LD from "components/layout/Head/returnLd";
 
 const es_default_keywords =
   "diseño, estudio, studio, acueducto, cdmx, innovación, diseño estratégico, diseño de experiencia, diseño de producto, diseño de servicio, impacto social, diseño de estrategia, tecnología";
 const en_default_keywords =
   "design, studio, acueducto, cdmx, innovation, strategic design, experience design, product design, brand design, social impact, design strategy, technology";
 
-const structuredDefault = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://acueducto.studio",
-  name: "Acueducto",
-  url: "https://acueducto.studio",
-  logo: "https://acueducto.studio/assets/img/og/acueducto.png",
-  sameAs: [
-    "https://www.facebook.com/acueducto.studio",
-    "https://www.instagram.com/acueducto.studio/",
-    "https://www.linkedin.com/company/acueductostudio/",
-    "https://twitter.com/acueductostudio",
-  ],
-};
-
-// let otherStructure = {
-//   "@context": "https://schema.org",
-//   "@graph": [
-//     {
-//       "@type": "Organization",
-//       "@id": "https://https://acueducto.studio/#organization",
-//       name: "Acueducto",
-//       url: "https://acueducto.studio",
-//       logo: {
-//         "@type": "ImageObject",
-//         "@id": "https://www.winwithoutpitching.com/#logo",
-//         inLanguage: lang === "es" ? "es-MX" : "en-US",
-//         url:
-//           "https://s30558.pcdn.co/wp-content/uploads/2018/03/cropped-WWP_logo_512px.png",
-//         width: 512,
-//         height: 512,
-//         caption: "Acueducto",
-//       },
-//       image: { "@id": "https://acueducto.studio/#logo" },
-//     },
-//     {
-//       "@type": "WebSite",
-//       "@id": "https://acueducto.studio/#website",
-//       url: "https://acueducto.studio",
-//       name: "Acueducto",
-//       description:
-//         "Diseño estratégico, desarrollo y lanzamiento de productos y servicios digitales.",
-//       publisher: {
-//         "@id": "https://acueducto.studio/#organization",
-//       },
-//       inLanguage: "en-US",
-//     },
-//     {
-//       "@type": "ImageObject",
-//       "@id": "https://acueducto.studio/#primaryimage",
-//       inLanguage: "es-MX",
-//       url: "https://fast.wistia.com/embed/medias/w9g06r3mhf/swatch",
-//     },
-//     {
-//       "@type": "WebPage",
-//       "@id": "https://acueducto.studio/#webpage",
-//       url: "https://acueducto.studio",
-//       name: "Acueducto",
-//       isPartOf: { "@id": "https://acueducto.studio/#website" },
-//       about: { "@id": "https://acueducto.studio/#organization" },
-//       primaryImageOfPage: {
-//         "@id": "https://acueducto.studio/#primaryimage",
-//       },
-//       datePublished: "2019-07-18T11:37:15+00:00",
-//       dateModified: "2020-10-29T12:45:25+00:00",
-//       description:
-//         "We help creative professionals + agencies learn how to get new clients and close the sale through live and online sales training programs and tools.",
-//       inLanguage: "es-MX",
-//       potentialAction: [
-//         {
-//           "@type": "ReadAction",
-//           target: ["https://acueducto.studio"],
-//         },
-//       ],
-//     },
-//   ],
-// };
-
 type HeadProps = {
   title: string;
   description: string;
+  headerTitle: string;
   keywords?: string;
   en_canonical?: string;
   es_canonical?: string;
   image?: { fileName: string; alt: string };
-  structured?: Object;
 };
 
 const NewHead = ({
   title,
   description,
+  headerTitle,
   keywords,
   en_canonical,
   es_canonical,
   image,
-  structured,
 }: HeadProps) => {
   let router = useRouter();
   let { locale } = router;
@@ -117,18 +40,15 @@ const NewHead = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@acueductostudio" />
       <meta name="twitter:site" content="@acueductostudio" />
-
       <meta name="description" content={description!} />
       <meta
         name="og:description"
         property="og:description"
         content={description}
       />
-
       <meta name="og:title" property="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Acueducto" />
-
       {
         //Locale for Open Graph
         locale === "es" ? (
@@ -211,21 +131,17 @@ const NewHead = ({
           </>
         )
       }
-      {
-        //Rich Results
-        structured && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(structured),
-            }}
-          />
-        )
-      }
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredDefault),
+          __html: LD(
+            locale,
+            router.asPath,
+            description,
+            title,
+            headerTitle,
+            image
+          ),
         }}
       />
       <link rel="preconnect" href="https://connect.facebook.net" />

@@ -1,9 +1,10 @@
 {
   "head": {
     "title": "About Acueducto",
-    "description": "Get to know us better. Read about us."
+    "description": "Get to know us better. Read about us.",
+    "pageName": "about",
+    "headerTitle": "About"
   },
-  "headerTitle": "About",
   "intro": {
     "title": "as experts in the digital context",
     "p": "Without us realizing, we started this studio 15 years ago growing together and sharing design and personal & professional projects.<br/><br/>Motivated by innovation and high quality standards, we joined our professional paths in order to create thoughtful and powerful digital experiences.</br></br>Acueducto is not just a studio, it is the result of a journey that has taken many years to build, as our own friendship has."

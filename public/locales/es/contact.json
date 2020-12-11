@@ -1,9 +1,9 @@
 {
   "head": {
     "title": "¿Somos los indicados? - Contáctanos",
-    "description": "Asociémonos, elevemos tu negocio. Contáctanos por WhatsApp o llenando nuestra forma de contacto."
+    "description": "Asociémonos, elevemos tu negocio. Contáctanos por WhatsApp o llenando nuestra forma de contacto.",
+    "headerTitle": "Contacto"
   },
-  "headerTitle": "Contacto",
   "intro": {
     "title": "¿cómo podemos ayudarte?",
     "p1": "Escríbenos por WhatsApp",

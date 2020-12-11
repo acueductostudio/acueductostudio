@@ -15,10 +15,10 @@ import Google from "public/assets/img/layout/logos/googlepodcasts.svg";
 import Youtube from "public/assets/img/layout/logos/youtube.svg";
 
 function Podcast({ locale, setTitle, pt }) {
-  let { headerTitle, intro, podcasts, head } = pt;
+  let { intro, podcasts, head } = pt;
 
   useEffect(() => {
-    setTitle(headerTitle);
+    setTitle(head.headerTitle);
   }, [locale]);
 
   return (

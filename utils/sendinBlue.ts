@@ -1,8 +1,8 @@
-const capitalize = (string: string) => {
+export const capitalize = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-const capitalizeAll = (string: string) => {
+export const capitalizeAll = (string: string) => {
   return string.split(" ").map(capitalize).join(" ");
 };
 
@@ -110,11 +110,10 @@ export const sendToHola = async (formData: MailForHola) => {
     Nombre: ${completeName}<br/>
     Email: ${email}<br/>
     Empresa: ${capitalizeAll(company)}<br/>
-    ${
-      phoneCheckbox
-        ? `Teléfono: ${phone}<br/>
+    ${phoneCheckbox
+      ? `Teléfono: ${phone}<br/>
       <b>Contactar por WhatsApp</b><br/>`
-        : ""
+      : ""
     }
     Mensaje: ${message}</p>
   `;

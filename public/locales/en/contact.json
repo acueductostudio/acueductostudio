@@ -1,9 +1,9 @@
 {
   "head": {
     "title": "Are we the right fit? - Contact us",
-    "description": "Let's be partners, let's talk business. Contact us via WhatsApp or by filling out our form."
+    "description": "Let's be partners, let's talk business. Contact us via WhatsApp or by filling out our form.",
+    "headerTitle": "Contact"
   },
-  "headerTitle": "Contact",
   "intro": {
     "title": "how may we help you?",
     "p1": "Send us a WhatsApp message",

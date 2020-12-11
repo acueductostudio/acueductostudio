@@ -1,9 +1,9 @@
 {
   "head": {
     "title": "Link en bio - Acueducto",
-    "description": "Agendemos una cita, prueba una consultoría o escucha nuestro podcast."
+    "description": "Agendemos una cita, prueba una consultoría o escucha nuestro podcast.",
+    "headerTitle": "Link en bio"
   },
-  "headerTitle": "Link en bio",
   "title": "¿qué estás buscando?",
   "links": [
     {

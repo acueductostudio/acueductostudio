@@ -109,7 +109,7 @@ export default function Salvajenada({ locale, setTitle, pt }) {
       fileName: "work.salvajenada.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
     setloadAssets(true);

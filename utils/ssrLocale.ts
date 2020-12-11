@@ -17,7 +17,7 @@ const ssrLocale = ({
     fileContents = fs.readFileSync(directory, "utf8");
   } catch (err) {
     if (err.code === 'ENOENT') {
-      console.log('File not found.');
+      // console.log('File not found.');
       return false;
     } else {
       throw err;

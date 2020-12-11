@@ -12,10 +12,10 @@ import Consultoria from "public/assets/img/layout/linkenbio/consultoria.svg";
 import Podcast from "public/assets/img/layout/linkenbio/podcast.svg";
 
 export default function LinkEnBio({ locale, setTitle, pt }) {
-  let { head, headerTitle, title, links, secondary_links, p } = pt;
+  let { head, title, links, secondary_links, p } = pt;
 
   useEffect(() => {
-    setTitle(headerTitle);
+    setTitle(head.headerTitle);
   }, [locale]);
 
   return (

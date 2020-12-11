@@ -8,10 +8,10 @@ import ContactFooter from "components/shared/footers/ContactFooter";
 import TitleSection from "components/shared/TitleSection";
 
 function DiagnosticoDigital({ locale, setTitle, pt }) {
-  let { head, headerTitle, intro, diagnose_section, results_section } = pt;
+  let { head, intro, diagnose_section, results_section } = pt;
 
   useEffect(() => {
-    setTitle(headerTitle);
+    setTitle(head.headerTitle);
   }, [locale]);
   return (
     <PageClipper>

@@ -22,7 +22,7 @@ function Index({ locale, setTitle, pt }) {
       fileName: "home.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
   }, [locale]);

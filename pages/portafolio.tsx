@@ -17,7 +17,7 @@ export default function Work({ locale, setTitle, pt }) {
       fileName: "work.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
   }, [locale]);

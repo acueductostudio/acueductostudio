@@ -54,7 +54,6 @@ const SpinPinnedSection = ({
 function Consultoria({ locale, setTitle, pt, hasLoaded }) {
   let {
     head,
-    headerTitle,
     intro,
     cta,
     fit_section,
@@ -64,7 +63,7 @@ function Consultoria({ locale, setTitle, pt, hasLoaded }) {
   } = pt;
 
   useEffect(() => {
-    setTitle(headerTitle);
+    setTitle(head.headerTitle);
   }, [locale]);
 
   return (

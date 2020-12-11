@@ -45,7 +45,7 @@ function LaDanzaDeLasFieras({ locale, setTitle, pt }) {
       fileName: "work.lddlf.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
     setloadAssets(true);

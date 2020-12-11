@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
@@ -39,7 +38,7 @@ function About({ locale, setTitle, pt, hasLoaded, mouse }) {
       fileName: "about.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
   }, [locale]);
@@ -70,8 +69,8 @@ function About({ locale, setTitle, pt, hasLoaded, mouse }) {
           </Person>
         ))}
       </PinnedSection>
-      <ManifiestoSection t={t.manifesto}/>
-      <Process {...t.process}/>
+      <ManifiestoSection t={t.manifesto} />
+      <Process {...t.process} />
       <TitleSection {...t.values} borderTop />
       <ContactFooter />
     </PageClipper>

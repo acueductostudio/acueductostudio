@@ -19,7 +19,7 @@ export default function Cookies({ locale, setTitle, pt }) {
       fileName: "cookies.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
   }, [locale]);

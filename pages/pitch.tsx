@@ -42,7 +42,7 @@ export default function Pitch({ locale, setTitle, pt }) {
       fileName: "pitch.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
     setloadAssets(true);
@@ -54,25 +54,6 @@ export default function Pitch({ locale, setTitle, pt }) {
         {...t.head}
         es_canonical={"https://acueducto.studio/pitch"}
         en_canonical={"https://acueducto.studio/en/pitch"}
-        structured={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "@id": "https://acueducto.studio",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Home",
-              item: "https://acueducto.studio",
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Pitch",
-              item: "https://acueducto.studio/pitch",
-            },
-          ],
-        }}
       />
       <StyledHeadings />
       <PinnedSection title={t.intro.title}>

@@ -26,6 +26,7 @@ export default function Error({ locale, setTitle, pt }) {
       <Head
         title="Acueducto | 404"
         description={t.description}
+        headerTitle="Error 404"
         es_canonical={"https://acueducto.studio/404"}
         en_canonical={"https://acueducto.studio/en/404"}
       />

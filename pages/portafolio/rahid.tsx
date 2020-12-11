@@ -32,7 +32,7 @@ function Rahid({ locale, setTitle, pt }) {
       fileName: "work.rahid.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
     setloadAssets(true);

@@ -1,10 +1,10 @@
 {
-  "head":{
+  "head": {
     "title": "Consultoría digital para negocios | Acueducto",
-    "description": "Encuentra soluciones tecnológicas. Consultoría digital en transformación digital, branding, marketing digital, estrategia de negocios y/o cultura empresarial."
+    "description": "Encuentra soluciones tecnológicas. Consultoría digital en transformación digital, branding, marketing digital, estrategia de negocios y/o cultura empresarial.",
+    "headerTitle": "pago",
+    "headerTitle_unauthorized": "consultoría"
   },
-  "headerTitle": "pago",
-  "headerTitle_unauthorized": "consultoría",
   "intro": {
     "title": "agenda tu consultoría siguiendo estos pasos",
     "p": "Cada consultoría incluye:",

@@ -17,19 +17,10 @@ import { advancedMatching } from "utils/analytics";
 
 const Pago = ({ locale, setTitle, pt }) => {
   const [isAuthorized, setAuthorized] = useState(false);
-  let {
-    head,
-    headerTitle,
-    headerTitle_unauthorized,
-    intro,
-    step1,
-    step2,
-    step3,
-    cta,
-  } = pt;
+  let { head, intro, step1, step2, step3, cta } = pt;
 
   useEffect(() => {
-    setTitle(headerTitle);
+    setTitle(head.headerTitle);
   }, [locale]);
 
   useEffect(() => {
@@ -55,7 +46,7 @@ const Pago = ({ locale, setTitle, pt }) => {
         window.location.replace("https://meetings.hubspot.com/hola250");
       }
     } else {
-      setTitle(headerTitle_unauthorized);
+      setTitle(head.headerTitle_unauthorized);
     }
   }, [isAuthorized]);
 

@@ -19,7 +19,7 @@ export default function Privacy({ locale, setTitle, pt }) {
       fileName: "privacy.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
   }, [locale]);

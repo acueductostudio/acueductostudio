@@ -19,7 +19,7 @@ export default function Contact({ locale, setTitle, pt }) {
       fileName: "contact.json",
       callBack: (nT) => {
         setT(nT);
-        setTitle(nT.headerTitle);
+        setTitle(nT.head.headerTitle);
       },
     });
   }, [locale]);
