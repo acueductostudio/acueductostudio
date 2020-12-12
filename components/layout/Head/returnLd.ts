@@ -82,17 +82,16 @@ const returnLd = (locale: string, asPath: string, description: string, title: st
                         name: locale === "en" ? "Work" : "Portafolio",
                         item: "https://acueducto.studio" + (locale === "en" ? "/en/work" : "/portafolio"),
                     }) : "",
-                    asPath !== "/" && ({
+                    asPath !== "/" ? ({
                         "@type": "ListItem",
                         position: asPath.includes("/portfolio") || asPath.includes("/work") ? 3 : 2,
                         name: headerTitle,
                         item: "https://acueducto.studio" + (locale === "en" ? "/en" : "") + asPath,
-                    })
+                    }) : ""
                 ],
             },
         ],
     };
-    console.log(structure)
     return JSON.stringify(structure);
 }
 
