@@ -3,11 +3,13 @@
 // });
 const path = require("path");
 const withPWA = require("next-pwa");
+const caching = require("./utils/caching");
 
 const nextConfig = {
   pwa: {
     dest: "public",
     disable: process.env.NODE_ENV === "development",
+    runtimeCaching: caching,
   },
   async rewrites() {
     return [

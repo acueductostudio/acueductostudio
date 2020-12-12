@@ -68,6 +68,7 @@ export default class MyDocument extends Document {
             content="/assets/favicon/browserconfig.xml"
           />
           <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="format-detection" content="telephone=no" />
           <meta name="theme-color" content="#F4F4F4" />
           <meta name="geo.region" content="CDMX" />
           <meta name="geo.placename" content="Acueducto" />
