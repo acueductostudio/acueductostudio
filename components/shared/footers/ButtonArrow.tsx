@@ -52,7 +52,6 @@ const Button = styled.div<{ inverse: boolean; marginTop?: boolean }>`
   color: ${(p) => p.theme.colors.foreground};
   background-color: ${(p) =>
     !p.inverse ? p.theme.colors.background : p.theme.colors.accent};
-  border: 2px solid ${(p) => p.theme.colors.background};
   position: relative;
   display: inline-block;
   align-self: flex-start;

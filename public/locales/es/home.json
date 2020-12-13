@@ -6,23 +6,24 @@
   },
   "landing": {
     "heading": "impulsamos negocios de alto impacto",
-    "tagline": "Acueducto es un estudio de estrategias e interfaces digitales en CDMX."
+    "tagline": "Acueducto es un estudio de estrategias e interfaces digitales en CDMX.",
+    "button": "escríbenos"
   },
   "intro": {
     "title": "trabajando con visionarios digitales",
-    "p": "El boom de internet quedó atrás y es para la cotidianidad digital que hay que estar preparados.<br/><br/>En Acueducto, ayudamos a tomadores de decisiones a innovar con estas tecnologías y, al involucrarnos estructuralmente con cada proyecto, logramos producir en conjunto experiencias significativas para negocios y comunidades por igual.",
-    "link": ["/pitch", "pitch"],
-    "linktext": "¿Tenemos tu atención?<br/>Lee nuestro"
+    "p": "Colaboramos con tomadores de decisiones en busca de oportunidades digitales para sus negocios. </br></br>Las organizaciones que implementan estrategias digitales son 64% más exitosas superando sus objetivos de negocio <cite>(ADOBE, 2019)</cite>. Mejorando procesos existentes o abriendo nuevas líneas de negocio, cualquier empresa puede mejorar sus productos o servicios y reducir costos.",
+    "link": ["/contacto", "Escríbenos"],
+    "linktext": "¿Somos los indicados?"
   },
   "carousel": ["startups", "marcas", "corporativos"],
   "studies": {
     "title": "resolvemos desafiantes retos de negocio",
-    "p": "Estos casos de estudio muestran cómo una sólida estrategia digital agrega un valor extraordinario a cualquier idea.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado."
+    "p": "Una sólida estrategia es la piedra angular de cualquier caso de éxito digital. Desarrollar arquitecturas escalables o construir herramientas personalizadas requiere de un balance entre experiencia vertical e innovación digital. Utilizamos los conocimientos de nuestros clientes para desarrollar experiencias significativas para sus negocios y las comunidades que impactan.</br></br> Conoce los casos de estudio seleccionados que hemos desarrollado. "
   },
   "products_section": {
     "intro": {
       "title": "para desarrollar ideas innovadoras",
-      "p": "Los productos digitales pueden potenciar la cultura innovadora de una organización, automatizar sus procesos y optimizar la experiencia de marca.<br/><br/>Puedes confiar en nosotros para desarrollar:"
+      "p": "Por cada dólar invertido en la experiencia de tus usuarios al diseñar productos, servicios y herramientas, puede haber entre dos y cien dólares de retorno <cite>(Forrester Research, 2017)</cite>. </br></br>Compañías como Airbnb, Uber o Google deben gran parte de su éxito al desarrollo de excelentes experiencias digitales alrededor de sus usuarios. Ultimadamente, se trata de construir las mejores interfaces digitales para que tus clientes o empleados interactúen con tu negocio. </br></br>Puedes confiar en nosotros para desarrollar: "
     },
     "products": [
       {
@@ -46,7 +47,7 @@
   "services": {
     "intro": {
       "title": "de la estrategia al lanzamiento",
-      "p": "– Y todo lo que involucra.<br/><br/>Nuestros proyectos favoritos son los que construimos desde el inicio con nuestros socios, por eso ofrecemos todas las etapas del desarrollo de una experiencia digital."
+      "p": "– Y todo lo que involucra.<br/><br/>Existe mucho que considerar al desarrollar productos y servicios digitales, dotamos a nuestros clientes de un aliado durante su proceso y ofrecemos todas las etapas del desarrollo de una experiencia digital."
     },
     "service_categories": [
       {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
+import Link from "next/link";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
 import styled from "styled-components";
@@ -12,6 +13,7 @@ import CaseList from "components/caseStudy/CaseList";
 import Head from "components/layout/Head";
 import Carousel from "components/Carousel";
 import Products from "components/shared/Products";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 function Index({ locale, setTitle, pt }) {
   const [t, setT] = useState(pt);
@@ -26,6 +28,7 @@ function Index({ locale, setTitle, pt }) {
       },
     });
   }, [locale]);
+
   return (
     <PageClipper unPadded>
       <Head
@@ -37,6 +40,14 @@ function Index({ locale, setTitle, pt }) {
         <LandContainer>
           <H1>{t.landing.heading}</H1>
           <H2>{t.landing.tagline}</H2>
+          <Link
+            href={"/contacto"}
+            as={locale === "en" ? "/contact" : "/contacto"}
+            locale={locale}
+            passHref
+          >
+            <ButtonArrow text={t.landing.button} inverse />
+          </Link>
         </LandContainer>
       </Land>
       <Intro id="removeArrow">
@@ -136,6 +147,9 @@ const LandContainer = styled.div`
   display: flex;
   flex-direction: column;
   grid-column: 2 / span 10;
+  h2 {
+    margin-bottom: 2rem;
+  }
   @media (max-width: 570px) {
     grid-column: 1 / span 11;
   }

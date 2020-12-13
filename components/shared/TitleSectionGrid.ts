@@ -42,6 +42,14 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
       color: ${(props) => props.theme.colors.foreground};
       font-weight: 200;
     }
+    cite {
+      color: ${(props) => props.theme.colors.foreground_lower};
+      text-transform:uppercase;
+      font-weight:300;
+      letter-spacing:1px;
+      font-size:.8em;
+      font-style: normal;
+    }
   }
   a {
     max-width: 445px;

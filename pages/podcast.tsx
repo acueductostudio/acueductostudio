@@ -8,11 +8,8 @@ import ResourceFooter from "components/shared/footers/ResourceFooter";
 import { H1, P } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import Logo from "public/assets/img/layout/logo.svg";
-
-import Spotify from "public/assets/img/layout/logos/spotify.svg";
-import ApplePodcasts from "public/assets/img/layout/logos/applepodcasts.svg";
-import Google from "public/assets/img/layout/logos/googlepodcasts.svg";
-import Youtube from "public/assets/img/layout/logos/youtube.svg";
+import Picture from "components/caseStudy/shared/Picture";
+import { logEvent } from "utils/analytics";
 
 function Podcast({ locale, setTitle, pt }) {
   let { intro, podcasts, head } = pt;
@@ -20,6 +17,10 @@ function Podcast({ locale, setTitle, pt }) {
   useEffect(() => {
     setTitle(head.headerTitle);
   }, [locale]);
+
+  const handleLog = (episode: number, medium: string): void => {
+    logEvent("Podcast_play", `E0${episode + 1}`, medium);
+  };
 
   return (
     <PageClipper>
@@ -46,23 +47,32 @@ function Podcast({ locale, setTitle, pt }) {
                 href="https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"
               >
                 Spotify
-                <Spotify />
+                <img
+                  src="assets/img/layout/logos/spotify.svg"
+                  alt="Escucha en Spotify"
+                />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556?uo=4"
+                href="https://podcasts.apple.com/mx/podcast/cuando-el-r%C3%ADo-suena/id1500473556?i=1000466665137"
               >
                 Apple Podcasts
-                <ApplePodcasts />
+                <img
+                  src="assets/img/layout/logos/applepodcasts.svg"
+                  alt="Escucha en Apple Podcasts"
+                />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://podcasts.google.com/?feed=aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
               >
+                <img
+                  src="assets/img/layout/logos/googlepodcasts.svg"
+                  alt="Escucha en Apple Podcasts"
+                />
                 Google Podcasts
-                <Google />
               </a>
               <a
                 target="_blank"
@@ -70,22 +80,82 @@ function Podcast({ locale, setTitle, pt }) {
                 href="https://www.youtube.com/playlist?list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
               >
                 Youtube
-                <Youtube />
+                <img
+                  src="/assets/img/layout/logos/youtube.svg"
+                  alt="Escucha en YouTube"
+                />
               </a>
             </Fade>
           </LogoList>
           <PodcastList>
             {podcasts.map((pod, index) => (
-              <Pod key={"podentry" + index}>
-                <Fade triggerOnce>
-                  <iframe
-                    title={pod.title}
-                    src={pod.url}
-                    frameBorder="0"
-                    allow="encrypted-media"
-                  ></iframe>
-                </Fade>
-              </Pod>
+              <NewPod key={"npd" + index} episode={index + 1}>
+                <Picture
+                  src={`/assets/img/podcast/${index + 1}.jpg`}
+                  alt={pod.title + " - " + pod.guest}
+                  height={200}
+                  width={200}
+                />
+                <div>
+                  <Fade triggerOnce>
+                    <h2>{pod.title}</h2>
+                    <h3>{pod.guest}</h3>
+                    <p>{pod.text}</p>
+                    <LogoList>
+                      <a
+                        onClick={() => handleLog(index, "Spotify")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={pod.urls.spotify}
+                      >
+                        Spotify
+                        <img
+                          src="assets/img/layout/logos/spotify.svg"
+                          alt="Escucha en Spotify"
+                        />
+                      </a>
+                      <a
+                        onClick={() => handleLog(index, "ApplePodcasts")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={pod.urls.apple}
+                      >
+                        Apple Podcasts
+                        <img
+                          src="assets/img/layout/logos/applepodcasts.svg"
+                          alt="Escucha en Apple Podcasts"
+                        />
+                      </a>
+                      <a
+                        onClick={() => handleLog(index, "GooglePodcasts")}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={pod.urls.google}
+                      >
+                        Google Podcasts
+                        <img
+                          src="assets/img/layout/logos/googlepodcasts.svg"
+                          alt="Escucha en Apple Podcasts"
+                        />
+                      </a>
+                      {pod.urls.youtube && (
+                        <a
+                          onClick={() => handleLog(index, "YouTube")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={pod.urls.youtube}
+                        >
+                          Youtube
+                          <img
+                            src="/assets/img/layout/logos/youtube.svg"
+                            alt="Escucha en YouTube"
+                          />
+                        </a>
+                      )}
+                    </LogoList>
+                  </Fade>
+                </div>
+              </NewPod>
             ))}
           </PodcastList>
         </div>
@@ -113,9 +183,76 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+const NewPod = styled.article<{ episode: number }>`
+  display: flex;
+  margin-top: 10%;
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    line-height: 125%;
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-top: 6px;
+    color: ${(p) => p.theme.colors.foreground_low};
+    &::before {
+      content: ${(p) => `"0${p.episode}"`};
+      display: inline-block;
+      background-color: ${(p) => p.theme.colors.accent};
+      border-radius: 100px;
+      padding: 6px 8px 6px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.8rem;
+      width: 40px;
+      height: 40px;
+      color: ${(p) => p.theme.colors.background};
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+      margin-right: 10px;
+    }
+  }
+  & > div:first-of-type {
+    margin-right: 5%;
+  }
+  img {
+    border-radius: 10px;
+    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+  }
+  @media (max-width: 970px) {
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 7px;
+    }
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    & > div:first-of-type {
+      max-width: 150px;
+      margin-bottom: 2rem;
+    }
+  }
+  @media (max-width: 620px) {
+    margin-top: 20%;
+    h3::before {
+      width: 33px;
+      height: 33px;
+      font-size: 1.7rem;
+      padding: 3px 6px;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+`;
+
 const PodcastGrid = styled.div`
   background-color: ${(p) => p.theme.colors.background};
-  background-image: url("assets/img/layout/podcast_back.svg");
+  background-image: url("assets/img/podcast/back.svg");
   background-size: cover;
   background-position: top right;
   grid-template-columns: repeat(12, 1fr);
@@ -146,7 +283,7 @@ const PodcastGrid = styled.div`
     }
   }
   p {
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
     color: ${(props) => props.theme.colors.foreground_low};
     position: relative;
     max-width: 600px;
@@ -167,8 +304,12 @@ const PodcastGrid = styled.div`
     }
   }
   @media (max-width: 600px) {
+    margin-bottom: 15%;
     & > div {
       grid-column: 1 / span 12;
+    }
+    p {
+      padding-top: 10px;
     }
     h1 {
       line-height: 0.9;
@@ -179,48 +320,59 @@ const PodcastGrid = styled.div`
   }
 `;
 
-const PodcastList = styled.ul`
-  list-style: none;
+const PodcastList = styled.div`
+  display: flex;
+  flex-direction: column-reverse;
   margin-top: 5%;
   max-width: 800px;
-  @media (max-width: 1150px) {
-    max-width: 600px;
-  }
-`;
-
-const Pod = styled.li`
-  grid-column: 2 / span 10;
-  position: relative;
-  margin-bottom: 5%;
-  iframe {
-    height: 160px;
-    width: 100%;
-    background-color: transparent;
-  }
 `;
 
 const LogoList = styled.div`
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  padding-top: 2.5rem;
+  margin-top: 2rem;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 300px;
   p {
-    padding: 0 6px 0 0;
+    padding: 0 !important;
+    margin: 0 6px 0 12px;
   }
   a {
     display: flex;
-    max-height: 30px;
+    min-height: 44px;
+    min-width: 44px;
     font-size: 0rem;
-  }
-  svg {
-    width: 30px;
-    box-sizing: content-box;
-    padding: 0 10px 0 10px;
-    transition: transform 0.3s ease-in;
+    cursor: pointer;
+    img {
+      box-shadow: none;
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      img {
+        transform: scale(0.9);
+      }
+    }
     @media (hover: hover) and (pointer: fine) {
       &:hover {
-        transform: scale(1.1);
-        cursor: pointer;
+        img {
+          transform: scale(1.1);
+        }
       }
+    }
+  }
+  img {
+    width: 33px;
+    height: 43px;
+    box-sizing: content-box;
+    padding: 0 10px 0 10px;
+    transition: transform 0.2s ease-out;
+  }
+  @media (max-width: 430px) {
+    margin-top: 15px;
+    p {
+      display: none;
     }
   }
 `;
