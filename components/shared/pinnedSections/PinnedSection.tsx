@@ -15,6 +15,14 @@ const PinnedSection = styled(MetalPinnedSection)`
       font-weight: 200;
       color: ${(props) => props.theme.colors.foreground};
     }
+    cite {
+      color: ${(props) => props.theme.colors.foreground_lower};
+      text-transform:uppercase;
+      font-weight:300;
+      letter-spacing:1px;
+      font-size:.8em;
+      font-style: normal;
+    }
   }
   @media (max-width: 600px) {
     a {
