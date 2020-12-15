@@ -7,13 +7,17 @@ import Layout from "components/layout/Layout";
 import theme from "styles/theme";
 import type { SharedTProps } from "utils/LangContext";
 import delayForLoading from "utils/delayForLoading";
-// import en from "public/locales/en/common.json";
+import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
 import { LangProvider } from "utils/LangContext";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
+//can we dynamic import es or en accordingly?
+
 function App({ Component, pageProps, router }: AppProps) {
-  const [sharedT, setSharedT] = useState<SharedTProps>(es);
+  const [sharedT, setSharedT] = useState<SharedTProps>(
+    router.locale === "en" ? en : es
+  );
   const [hasLoaded, setHasLoaded] = useState(false);
   const LoadingBarRef = useRef(null);
 
