@@ -50,6 +50,8 @@ function Podcast({ locale, setTitle, pt }) {
                 <img
                   src="assets/img/layout/logos/spotify.svg"
                   alt="Escucha en Spotify"
+                  width="33px"
+                  height="43px"
                 />
               </a>
               <a
@@ -61,6 +63,8 @@ function Podcast({ locale, setTitle, pt }) {
                 <img
                   src="assets/img/layout/logos/applepodcasts.svg"
                   alt="Escucha en Apple Podcasts"
+                  width="33px"
+                  height="43px"
                 />
               </a>
               <a
@@ -71,6 +75,8 @@ function Podcast({ locale, setTitle, pt }) {
                 <img
                   src="assets/img/layout/logos/googlepodcasts.svg"
                   alt="Escucha en Apple Podcasts"
+                  width="33px"
+                  height="43px"
                 />
                 Google Podcasts
               </a>
@@ -83,6 +89,8 @@ function Podcast({ locale, setTitle, pt }) {
                 <img
                   src="/assets/img/layout/logos/youtube.svg"
                   alt="Escucha en YouTube"
+                  width="33px"
+                  height="43px"
                 />
               </a>
             </Fade>
@@ -112,6 +120,8 @@ function Podcast({ locale, setTitle, pt }) {
                         <img
                           src="assets/img/layout/logos/spotify.svg"
                           alt="Escucha en Spotify"
+                          width="33px"
+                          height="43px"
                         />
                       </a>
                       <a
@@ -124,6 +134,8 @@ function Podcast({ locale, setTitle, pt }) {
                         <img
                           src="assets/img/layout/logos/applepodcasts.svg"
                           alt="Escucha en Apple Podcasts"
+                          width="33px"
+                          height="43px"
                         />
                       </a>
                       <a
@@ -136,6 +148,8 @@ function Podcast({ locale, setTitle, pt }) {
                         <img
                           src="assets/img/layout/logos/googlepodcasts.svg"
                           alt="Escucha en Apple Podcasts"
+                          width="33px"
+                          height="43px"
                         />
                       </a>
                       {pod.urls.youtube && (
@@ -149,6 +163,8 @@ function Podcast({ locale, setTitle, pt }) {
                           <img
                             src="/assets/img/layout/logos/youtube.svg"
                             alt="Escucha en YouTube"
+                            width="33px"
+                            height="43px"
                           />
                         </a>
                       )}
@@ -368,6 +384,7 @@ const LogoList = styled.div`
     box-sizing: content-box;
     padding: 0 10px 0 10px;
     transition: transform 0.2s ease-out;
+    aspect-ratio: attr(width) / attr(height);
   }
   @media (max-width: 430px) {
     margin-top: 15px;
