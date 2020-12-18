@@ -14,9 +14,9 @@
       "Los procesos internos",
       "Su modelo de negocio"
     ],
-    "p1": "En Acueducto, nos encargamos de desarrollar las estrategias e interfaces necesarias para materializar tus ideas digitales. Con un acercamiento design-driven, de la ideación al lanzamiento, creando:",
+    "p1": "En Acueducto, nos encargamos de desarrollar las estrategias e interfaces necesarias para materializar tus ideas digitales. De la mano de tu experiencia en tu industria y con un acercamiento design-driven, co-creamos:",
     "subtitle3": "estrategias digitales",
-    "p3": "Variando sus metas e implementaciones, son planes formulados para alcanzar objetivos en medios digitales. Una estrategia de desarrollo podría buscar construir una arquitectura escalable para una app internacional, mientras que una estrategia de marketing digital buscaría aumentar el alcance y generación de leads de un negocio. </br></br>Independientemente de tus objetivos, contar con una sólida estrategia digital es pieza angular de tu proyecto.",
+    "p3": "Independientemente de los objetivos, contar con una sólida estrategia digital es pieza angular de cualquier negocio. Sólo en 2019, 44% de los negocios en EEUU adoptaron estrategias digitales en sus operaciones y experiencia de cliente <cite>(PROGRESS, 2019)</cite>. Con las últimas herramientas del ecosistema digital y tu experiencia en tu industria, creamos las estrategias más inteligentes. Todo empieza con tu idea.",
     "subtitle4": "interfaces digitales",
     "p4": "Las interfaces digitales son el medio de comunicación humano-máquina. Pueden ser apps web y móviles, productos o servicios digitales, o incluso interfaces de voz como Alexa o Siri. El diseño del uso de estas interfaces (Experiencia de Usuario o UX) es vital para su funcionamiento adecuado, usabilidad, retención de usuarios y escalabilidad. </br></br>Sin un diseño adecuado a las necesidades de los usuarios y el negocio, la probabilidad de éxito del proyecto se desploma.",
     "subtitle5": "un dato importante",
@@ -33,7 +33,7 @@
   "products_section": {
     "intro": {
       "title": "damos vida a ideas innovadoras",
-      "p": "Potencializa la cultura innovadora de tu organización, automatiza procesos y optimiza la experiencia de marca con iniciativas digitales.</br></br>Puedes contar con nuestra experiencia para desarrollar:"
+      "p": "Por cada dólar invertido en la experiencia de tus usuarios al diseñar productos, servicios y herramientas, puede haber entre dos y cien dólares de retorno <cite>(Forrester Research, 2017)</cite>. Compañías como Airbnb, Uber o Google deben gran parte de su éxito al desarrollo de excelentes experiencias digitales alrededor de sus usuarios. Ultimadamente, se trata de construir las mejores interfaces digitales para que tus clientes o empleados interactúen con tu negocio.</br></br>Puedes confiar en nuestra experiencia para desarrollar:"
     },
     "products": [
       {
@@ -56,7 +56,7 @@
   },
   "process_section": {
     "title": "siguiendo un proceso estratégico",
-    "p": "Nuestro proceso está diseñado para iterar sobre sí mismo y perfeccionarse con cada proyecto que llevamos a cabo. Llevamos años desarrollándolo y se ha convertido en uno de nuestros recursos más preciados. </br></br>Gracias a él, cada paso que damos nos da la seguridad para dar el siguiente.",
+    "p": "Nuestro proceso está diseñado para iterar sobre sí mismo y perfeccionarse con cada proyecto que llevamos a cabo. Lleva años desarrollándose y se ha convertido en uno de nuestros recursos más preciados. </br></br>Gracias a él, cada paso que damos nos da la seguridad para dar el siguiente. Conócelo.",
     "steps": [
       {
         "title": "descubre",
@@ -101,7 +101,7 @@
   },
   "tools_section": {
     "title": "con las mejores herramientas",
-    "p": "Tu proyecto es único y requiere de un trato personalizado, siempre haremos un análisis detallado y elegiremos las herramientas adecuadas para su desarrollo.<br/><br/>Estas son algunas de nuestras apuestas tecnológicas.",
+    "p": "Cada proyecto es único y requiere de un trato personalizado. Hacer un análisis detallado es fundamental para elegir las herramientas que se implementarán. Entre el mar de posibilidades, elegiremos las que nos ayuden a cumplir tus objetivos de negocio.</br></br> Conoce nuestras apuestas tecnológicas.",
     "apps": "apps web y móviles",
     "platforms": "plataformas y sistemas operativos",
     "marketing": "marketing digital",
