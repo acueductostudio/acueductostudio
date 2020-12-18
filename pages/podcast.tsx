@@ -114,18 +114,20 @@ function Podcast({ locale, setTitle, pt }) {
                           alt="Escucha en Spotify"
                         />
                       </a>
-                      <a
-                        onClick={() => handleLog(index, "ApplePodcasts")}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={pod.urls.apple}
-                      >
-                        Apple Podcasts
-                        <img
-                          src="assets/img/layout/logos/applepodcasts.svg"
-                          alt="Escucha en Apple Podcasts"
-                        />
-                      </a>
+                      {pod.urls.apple && (
+                        <a
+                          onClick={() => handleLog(index, "ApplePodcasts")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={pod.urls.apple}
+                        >
+                          Apple Podcasts
+                          <img
+                            src="assets/img/layout/logos/applepodcasts.svg"
+                            alt="Escucha en Apple Podcasts"
+                          />
+                        </a>
+                      )}
                       <a
                         onClick={() => handleLog(index, "GooglePodcasts")}
                         target="_blank"
