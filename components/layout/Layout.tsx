@@ -68,7 +68,7 @@ const Layout = ({
 
     const options = {
       autoConfig: true,
-      debug: false,
+      debug: true,
     };
     ReactPixel.init("506854653278097", null, options);
     ReactPixel.pageView();

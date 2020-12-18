@@ -21,7 +21,10 @@ function Podcast({ locale, setTitle, pt }) {
 
   const handleLog = (episode: number, medium: string): void => {
     logEvent("Podcast_play", `E0${episode + 1}`, medium);
-    ReactPixel.trackCustom("Podcast_play", `E0${episode + 1} ${medium}`);
+    ReactPixel.trackCustom("Podcast_play", {
+      episode: `E0${episode + 1}`,
+      medio: medium,
+    });
   };
 
   return (
