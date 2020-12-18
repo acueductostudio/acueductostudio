@@ -10,6 +10,7 @@ import { Fade } from "react-awesome-reveal";
 import Logo from "public/assets/img/layout/logo.svg";
 import Picture from "components/caseStudy/shared/Picture";
 import { logEvent } from "utils/analytics";
+import ReactPixel from "react-facebook-pixel";
 
 function Podcast({ locale, setTitle, pt }) {
   let { intro, podcasts, head } = pt;
@@ -20,6 +21,7 @@ function Podcast({ locale, setTitle, pt }) {
 
   const handleLog = (episode: number, medium: string): void => {
     logEvent("Podcast_play", `E0${episode + 1}`, medium);
+    ReactPixel.trackCustom("Podcast_play", `E0${episode + 1} ${medium}`);
   };
 
   return (
