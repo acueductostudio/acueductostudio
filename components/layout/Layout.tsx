@@ -13,6 +13,7 @@ import ReactPixel from "react-facebook-pixel";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NewsletterPopup from "components/NewsletterPopup";
 import TagManager from "react-gtm-module";
+import LinkedInTag from "react-linkedin-insight";
 import type { SharedTProps } from "utils/LangContext";
 
 declare global {
@@ -75,6 +76,7 @@ const Layout = ({
     TagManager.initialize({
       gtmId: "GTM-NQHHFWF",
     });
+    LinkedInTag.init(1943114, "dc", false);
   };
 
   useEffect(() => {
