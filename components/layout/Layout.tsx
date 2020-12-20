@@ -14,6 +14,7 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NewsletterPopup from "components/NewsletterPopup";
 import TagManager from "react-gtm-module";
 import LinkedInTag from "react-linkedin-insight";
+import GA4React from "ga-4-react";
 import type { SharedTProps } from "utils/LangContext";
 
 declare global {
@@ -66,6 +67,17 @@ const Layout = ({
       window.GA_INITIALIZED = true;
     }
     logPageView();
+    const ga4react = new GA4React("G-VEB3KBDN1C");
+    ga4react.initialize();
+    ga4react.initialize().then(
+      (ga4) => {
+        console.log("initialized GA4 ro");
+        ga4.pageview("path");
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
 
     const options = {
       autoConfig: true,
