@@ -12,20 +12,11 @@ import ContactFooter from "components/shared/footers/ContactFooter";
 import PinnedSection from "components/shared/pinnedSections/PinnedSection";
 import { P, H4 } from "components/shared/Dangerously";
 import Process from "components/shared/Process";
-import Picture from "components/caseStudy/shared/Picture";
 import ManifiestoSection from "components/ManifiestoSection";
+import HeadLoader from "components/headSketch/HeadLoader";
 
 const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
-  loading: () => (
-    <HeadLoader>
-      <Picture
-        src="/assets/img/layout/headPlacerHolder.jpg"
-        alt="3DScan"
-        height={400}
-        width={400}
-      />
-    </HeadLoader>
-  ),
+  loading: () => <HeadLoader />,
   ssr: false,
 });
 
@@ -87,24 +78,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
-
-const HeadLoader = styled.div`
-  width: 100%;
-  margin-bottom: 10%;
-  position: relative;
-  max-width: 400px;
-  left: -30%;
-  @media (max-width: 1250px) {
-    margin-bottom: 8%;
-    left: -20%;
-  }
-  @media (max-width: 1000px) {
-    margin-bottom: 7%;
-  }
-  @media (max-width: 600px) {
-    left: -30px;
-  }
-`;
 
 const Person = styled.div`
   display: flex;

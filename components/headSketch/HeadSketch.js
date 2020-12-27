@@ -3,6 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import React, { Suspense, useRef } from "react";
 import { Canvas, useLoader, useFrame } from "react-three-fiber";
 import { GLTFLoader } from "three";
+import HeadLoader from "components/headSketch/HeadLoader";
 
 const Model = React.memo((props) => {
   const ref = useRef();
@@ -10,6 +11,8 @@ const Model = React.memo((props) => {
   const gltf = useLoader(GLTFLoader, "/assets/3d/headexported.glb");
   const actualMouse = useRef([0, 0]);
   const easing = 0.05;
+  const scale = 0.14;
+  // console.log(gltf);
 
   useFrame(() => {
     props.second
@@ -30,11 +33,11 @@ const Model = React.memo((props) => {
       <pointLight
         ref={light}
         position={[0, 0, 10]}
-        color={props.second ? "#ED0924" : "#1A4CE0"}
-        intensity={props.second ? 3 : 5}
+        color={props.second ? "#68BFA3" : "#DA012B"}
+        intensity={props.second ? 5 : 8}
       />
       <scene ref={ref} {...props}>
-        <mesh rotation={[1.5, 0, 0]} scale={[0.14, 0.14, 0.14]}>
+        <mesh rotation={[1.5, 0, 0]} scale={[scale, scale, scale]}>
           <bufferGeometry
             attach="geometry"
             {...gltf.nodes.male_headobj.geometry}
@@ -42,10 +45,12 @@ const Model = React.memo((props) => {
           <meshStandardMaterial
             precision={"lowp"}
             attach="material"
-            roughness={1}
-            metalness={0}
+            roughness={0.7}
+            metalness={1}
             emissive={"#060809"}
-            color={"#3E3E3E"}
+            color={props.second ? "#56027A" : "#1A4CE0"}
+            flatShading={false}
+            computeVertexNormals
           />
         </mesh>
       </scene>
@@ -61,7 +66,7 @@ export default function HeadSketch(props) {
           <ambientLight intensity={1} color={[8, 8, 8]} />
           <directionalLight
             intensity={1}
-            color={props.second ? "#1736BF" : "#690008"}
+            color={props.second ? "#DA5686" : "#43C5A8"}
             position={[-1500, -1500, 200]}
           />
           <Suspense fallback={null}>
