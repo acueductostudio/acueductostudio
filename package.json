@@ -19,7 +19,7 @@
     "next": "^10.0.5",
     "next-pwa": "^5.0.2",
     "react": "17.0.0",
-    "react-awesome-reveal": "3.5.2",
+    "react-awesome-reveal": "3.7.0",
     "react-dom": "17.0.0",
     "react-double-marquee": "^1.0.6",
     "react-facebook-pixel": "^0.1.3",
