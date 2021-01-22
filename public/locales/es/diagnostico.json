@@ -63,14 +63,14 @@
       {
         "question": "¿Tienes medido el Coste Total de Propiedad (TCO) y Retorno de Inversión (ROI) de las tecnologías que empleas en tu negocio?",
         "a1": "Si, así evalúo las tecnologías que integro en mi negocio",
-        "a2": "Sólo sé cuanto invierto en servicios digitales",
+        "a2": "Sólo sé cuánto invierto en servicios digitales",
         "a3": "No los contemplo"
       },
       {
         "question": "Ante un contexto agresivamente cambiante, ¿tienes una cultura de trabajo que promueva la adopción de nuevas tecnologías?",
         "a1": "Si, hacemos manuales y capacitamos a nuestro personal",
         "a2": "Nuestros nuevos empleados aprenden con el tiempo",
-        "a3": "No, cualquiera puede entiender las tecnologías que utilizamos"
+        "a3": "No, cualquiera puede entender las tecnologías que utilizamos"
       },
       {
         "question": "¿Las decisiones de adopción de tecnología consideran a todos los sectores de tu organización?",
@@ -103,7 +103,7 @@
         "a3": "No lo he hecho"
       },
       {
-        "question": "¿Haz desarrollado herramientas tecnológicas que te permitan diferenciarte de la competencia?",
+        "question": "¿Has desarrollado herramientas tecnológicas que te permitan diferenciarte de la competencia?",
         "a1": "Si, tenemos sistemas hechos a la medida",
         "a2": "No, pero tengo ideas claras de qué me gustaría desarrollar",
         "a3": "Nos adaptamos a tecnologías de terceros"
