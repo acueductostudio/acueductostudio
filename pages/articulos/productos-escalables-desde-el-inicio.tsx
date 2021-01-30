@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
-import Image from "next/image";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
 import Head from "components/layout/Head";
@@ -23,7 +22,7 @@ export default function Contact({ locale, setTitle, pt }) {
   }, [locale]);
 
   return (
-    <PageClipper>
+    <PageClipper unPadded>
       <Head
         {...t.head}
         es_canonical={
@@ -31,7 +30,6 @@ export default function Contact({ locale, setTitle, pt }) {
         }
         //image={{ fileName: "productos-escalables-desde-el-inicio.png", alt: t.head.image_alt }}
       ></Head>
-      <Image width="1500px" height="600px" src="/assets/img/articles/1/cover.svg"/>
       <ArticleSection {...t.article} />
       <ResourceFooter />
     </PageClipper>
