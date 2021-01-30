@@ -5,24 +5,19 @@ import Grid from "components/shared/TitleSectionGrid";
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 
-interface TitleProps {
+interface ArticleProps {
   slug: string;
-  title: string;
-  subtitle: string;
-  author: string;
-  date: Date;
-  body: Array<{ p?: string; t1?: string; t2?: string; image_alt?: string }>;
+  data: {
+    title: string;
+    subtitle: string;
+    author: string;
+    date: Date;
+  };
+  content: Array<{ p?: string; t1?: string; t2?: string; image_alt?: string }>;
 }
 
-const ArticleSection = ({
-  slug,
-  title,
-  subtitle,
-  author,
-  date,
-  body,
-}: TitleProps) => {
-  let fullDate = new Date(`${date}T00:00:00`);
+const ArticleSection = ({ slug, data, content }: ArticleProps) => {
+  let fullDate = new Date(`${data.date}T00:00:00`);
   let imgCount = 0;
   return (
     <>
@@ -38,12 +33,12 @@ const ArticleSection = ({
       </Fade>
       <ArticleGrid>
         <Fade triggerOnce>
-          <H1>{title}</H1>
-          <h2>{subtitle}</h2>
+          <H1>{data.title}</H1>
+          <h2>{data.subtitle}</h2>
           <Credits>
-            Por <address>{author}</address>
+            Por <address>{data.author}</address>
             {` | `}
-            <time dateTime={date.toString()}>
+            <time dateTime={data.date.toString()}>
               {fullDate.toLocaleDateString("es", {
                 year: "numeric",
                 month: "long",
@@ -53,7 +48,7 @@ const ArticleSection = ({
           </Credits>
         </Fade>
         <div>
-          {body.map((item, index) => {
+          {content.map((item, index) => {
             if (item.p) {
               return <P key={`p_${index}`}>{item.p}</P>;
             } else if (item.t1) {

@@ -28,7 +28,6 @@ const NewHead = ({
 }: HeadProps) => {
   let router = useRouter();
   let { locale } = router;
-
   return (
     <Head>
       <meta charSet="utf-8" />

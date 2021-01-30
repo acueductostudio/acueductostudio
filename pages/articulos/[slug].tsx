@@ -55,12 +55,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const articles = getAllPosts(["slug"]);
   return {
-    paths: posts.map((post) => {
+    paths: articles.map((article: { slug: string, content?:[] }) => {
       return {
         params: {
-          slug: post.slug,
+          slug: article.slug,
         },
       };
     }),

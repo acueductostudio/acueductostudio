@@ -76,16 +76,22 @@ const returnLd = (locale: string, asPath: string, description: string, title: st
                         name: "Home",
                         item: "https://acueducto.studio" + (locale === "en" ? "/en" : ""),
                     },
-                    asPath.includes("/portfolio") || asPath.includes("/work") ? ({
+                    asPath.includes("/portafolio") || asPath.includes("/work") ? ({
                         "@type": "ListItem",
                         position: 2,
                         name: locale === "en" ? "Work" : "Portafolio",
                         item: "https://acueducto.studio" + (locale === "en" ? "/en/work" : "/portafolio"),
                     }) : "",
-                    asPath !== "/" ? ({
+                    asPath.includes("/articulos") ? ({
                         "@type": "ListItem",
-                        position: asPath.includes("/portfolio") || asPath.includes("/work") ? 3 : 2,
-                        name: headerTitle,
+                        position: 2,
+                        name: "Artículos",
+                        item: "https://acueducto.studio/articulos",
+                    }) : "",
+                    asPath !== "/" && asPath !== "/articulos" && asPath !== "/portafolio" && asPath !== "/work" ? ({
+                        "@type": "ListItem",
+                        position: asPath.includes("/portafolio") || asPath.includes("/work") || asPath.includes("/articles") ? 3 : 2,
+                        name: asPath.includes("/articulos") ? title : headerTitle,
                         item: "https://acueducto.studio" + (locale === "en" ? "/en" : "") + asPath,
                     }) : ""
                 ],
