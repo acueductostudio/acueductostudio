@@ -1,0 +1,36 @@
+{
+  "head": {
+    "title": "Productos digitales escalables desde el inicio - Rodrigo Salmerón",
+    "description": "",
+    "image_alt": "Productos digitales escalables desde el inicio",
+    "headerTitle": "Artículo"
+  },
+  "article": {
+    "title": "piensa tu producto escalable desde el inicio",
+    "subtitle": "Los desarrollos de software que no se preparan para su expansión, limitan a sus negocios exponiéndose a considerables pérdidas de recursos.",
+    "author": "Rodrigo Salmerón",
+    "date": "2021-02-28",
+    "body": [
+      {
+        "p": "paragraph"
+      },
+      {
+        "image_alt": "image alt"
+      },
+      {
+        "t1": "title 1"
+      },
+      {
+        "p": "paragraph2"
+      },
+      {
+        "t2": "title two"
+      }
+    ],
+    "body2": {
+      "p1": "",
+      "image_alt": "",
+      "p2": ""
+    }
+  }
+}
