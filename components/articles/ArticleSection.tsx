@@ -6,21 +6,16 @@ import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 
 interface TitleProps {
-  id: number;
+  slug: string;
   title: string;
   subtitle: string;
   author: string;
   date: Date;
   body: Array<{ p?: string; t1?: string; t2?: string; image_alt?: string }>;
-  p?: string;
-  link?: string;
-  linktext?: string;
-  as?: string;
-  borderTop?: boolean;
 }
 
 const ArticleSection = ({
-  id,
+  slug,
   title,
   subtitle,
   author,
@@ -36,7 +31,7 @@ const ArticleSection = ({
           <Image
             width="1500px"
             height="600px"
-            src={`/assets/img/articles/${id}/header.svg`}
+            src={`/assets/img/articles/${slug}/header.svg`}
           />
           <Fader />
         </Pos>
@@ -70,7 +65,7 @@ const ArticleSection = ({
               return (
                 <Image
                   key={`p_${index}`}
-                  src={`/assets/img/articles/${id}/${imgCount}.svg`}
+                  src={`/assets/img/articles/${slug}/${imgCount}.svg`}
                   width="600px"
                   height="300px"
                   alt={item.image_alt}

@@ -16,7 +16,7 @@
     "@svgr/webpack": "^5.5.0",
     "body-scroll-lock": "^3.1.5",
     "js-cookie": "^3.0.0-rc.1",
-    "next": "^10.0.5",
+    "next": "^10.0.6",
     "next-pwa": "^5.0.2",
     "react": "17.0.0",
     "react-awesome-reveal": "3.7.0",

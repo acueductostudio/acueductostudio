@@ -1,4 +1,4 @@
-import path from "path";
+import { join } from 'path'
 import fs from "fs";
 
 const ssrLocale = ({
@@ -8,7 +8,7 @@ const ssrLocale = ({
   locale: string;
   fileName: string;
 }) => {
-  const directory = path.join(
+  const directory = join(
     process.cwd(),
     `public/locales/${locale}/${fileName}`
   );
