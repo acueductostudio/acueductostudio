@@ -76,7 +76,7 @@ const returnLd = (locale: string, asPath: string, description: string, title: st
                         name: "Home",
                         item: "https://acueducto.studio" + (locale === "en" ? "/en" : ""),
                     },
-                    asPath.includes("/portfolio") || asPath.includes("/work") ? ({
+                    asPath.includes("/portafolio") || asPath.includes("/work") ? ({
                         "@type": "ListItem",
                         position: 2,
                         name: locale === "en" ? "Work" : "Portafolio",
@@ -84,7 +84,7 @@ const returnLd = (locale: string, asPath: string, description: string, title: st
                     }) : "",
                     asPath !== "/" ? ({
                         "@type": "ListItem",
-                        position: asPath.includes("/portfolio") || asPath.includes("/work") ? 3 : 2,
+                        position: asPath.includes("/portafolio") || asPath.includes("/work") ? 3 : 2,
                         name: headerTitle,
                         item: "https://acueducto.studio" + (locale === "en" ? "/en" : "") + asPath,
                     }) : ""
