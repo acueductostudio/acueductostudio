@@ -265,7 +265,7 @@ function LaDanzaDeLasFieras({ locale, setTitle, pt }) {
             <P>{t.fourth_section.stat}</P>
           </Stat>
           <P>{t.fourth_section.p2}</P>
-          <>
+          <div>
             {loadAssets && (
               <video
                 autoPlay
@@ -279,7 +279,7 @@ function LaDanzaDeLasFieras({ locale, setTitle, pt }) {
                 <source src="/assets/video/casestudies/ladanzadelasfieras/incognito.mp4" />
               </video>
             )}
-          </>
+          </div>
         </TextColumn>
       </Fourth>
       <Fifth>
