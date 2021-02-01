@@ -12,6 +12,12 @@ const nextConfig = {
     disable: process.env.NODE_ENV === "development",
     runtimeCaching: caching,
   },
+  transformManifest: (manifest) => ["/"].concat(manifest),
+  generateInDevMode: false,
+  workboxOpts: {
+    swDest: "static/service-worker.js",
+    runtimeCaching: caching,
+  },
   async rewrites() {
     return [
       {
