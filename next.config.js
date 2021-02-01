@@ -1,8 +1,9 @@
-// const withBundleAnalyzer = require("@next/bundle-analyzer")({
-//   enabled: process.env.ANALYZE === "true",
-// });
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 const path = require("path");
 // const withPWA = require("next-pwa");
+// const withOffline = require("next-offline");
 const caching = require("./utils/caching");
 
 const nextConfig = {
@@ -62,6 +63,6 @@ const nextConfig = {
   },
 };
 
-// module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withBundleAnalyzer(nextConfig);
 // module.exports = withPWA(nextConfig);
-module.exports = nextConfig;
+// module.exports = withOffline(nextConfig)
