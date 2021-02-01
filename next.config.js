@@ -63,4 +63,5 @@ const nextConfig = {
 };
 
 // module.exports = withBundleAnalyzer(nextConfig);
-module.exports = withPWA(nextConfig);
+// module.exports = withPWA(nextConfig);
+module.exports = nextConfig;
