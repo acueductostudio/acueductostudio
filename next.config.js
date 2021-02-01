@@ -2,7 +2,7 @@
 //   enabled: process.env.ANALYZE === "true",
 // });
 const path = require("path");
-const withPWA = require("next-pwa");
+// const withPWA = require("next-pwa");
 const caching = require("./utils/caching");
 
 const nextConfig = {
