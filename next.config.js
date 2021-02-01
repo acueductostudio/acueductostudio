@@ -40,6 +40,10 @@ const nextConfig = {
         source: "/about",
         destination: "/nosotros",
       },
+      {
+        source: "/service-worker.js",
+        destination: "/_next/static/service-worker.js",
+      },
     ];
   },
   reactStrictMode: true,
