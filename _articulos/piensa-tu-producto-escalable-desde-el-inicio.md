@@ -1,6 +1,6 @@
 ---
 title: "Piensa tu producto escalable desde el inicio"
-subtitle: "Los desarrollos de software que no se preparan para su expansión, limitan a sus negocios exponiéndose a considerables pérdidas de recursos."
+subtitle: "Los desarrollos de software que no se preparan para su expansión limitan a sus negocios exponiéndose a considerables pérdidas de recursos."
 author: "Rodrigo Salmerón"
 date: "2021-02-28"
 ---
@@ -11,11 +11,11 @@ Aplicar este concepto a los modelos digitales es un ejercicio bastante sencillo.
 
 ## Producto Mínimo Viable - MVP
 
-A pesar de ser una inversión inestimable para todo tipo de negocio, los desarrollos de software son caros, y los buenos desarrollos, aún más. Pocos se los pueden permitir, e incluso para los que pueden son vistos como operaciones delicadas. Aquí entra el concepto del Producto Mínimo Viable –MVP por sus siglas en inglés–. La idea se popularizó hace más de una década y se ha vuelto un estándar en el valle californiano, primer punto de referencia de nuestra vertical. El concepto implica desarrollar únicamente las funciones esenciales que un producto digital necesita para salir al mercado, permitiendo así evaluar la viabilidad del modelo de negocio, recibir retroalimentación de usuarios reales y probar su valor para inversionistas. Además, reduce considerablemente el _time to market_ del producto *–*medida que se ha vuelto crucial en vista de la competencia voraz de los mercados actuales–.
+A pesar de ser una inversión inestimable para todo tipo de negocio, los desarrollos de software son caros, y los buenos desarrollos, aún más. Pocos se los pueden permitir, e incluso para los que pueden son vistos como operaciones delicadas. Aquí entra el concepto del Producto Mínimo Viable –MVP por sus siglas en inglés–. La idea se popularizó hace más de una década y se ha vuelto un estándar en el valle californiano, primer punto de referencia de nuestra vertical. El concepto implica desarrollar únicamente las funciones esenciales que un producto digital necesita para salir al mercado, permitiendo así evaluar la viabilidad del modelo de negocio, recibir retroalimentación de usuarios reales y probar su valor para inversionistas. Además, reduce considerablemente el _time to market_ del producto –medida que se ha vuelto crucial en vista de la competencia voraz de los mercados actuales–.
 
 Sin embargo, la implementación de un MVP sin una sólida estrategia de expansión puede entorpecer la plataforma en el largo plazo. Ya sea requiriendo cambios mayores al _codebase_ del proyecto o incluso volviendo inútil el desarrollo original. Ahora, sabemos que la habilidad de una plataforma de expandirse debe ser fundamental en su desarrollo, la pregunta es ¿cómo prepararse? Para ello, es vital comenzar con un trabajo de exploración que plantee la visión inicial, pero también que permita identificar los elementos, agentes y relaciones que el proyecto final requerirá.
 
-<img src="/assets/img/articles/productos-escalables-desde-el-inicio/1.svg" width="600px" height="300px" alt="MVP comparado con el producto final"/>
+<img src="/assets/img/articles/piensa-tu-producto-escalable-desde-el-inicio/1.svg" width="600px" height="300px" alt="MVP comparado con el producto final"/>
 
 ## Identifica tu endgame
 
@@ -47,7 +47,7 @@ Es tiempo de desvestir el proyecto de todo lo no-esencial para llegar al MVP. La
 
 Todas las funcionalidades de la aplicación (o grupos de funcionalidades ya que algunas no se pueden separar) se despliegan en una matriz de cuatro cuadrantes. En el eje horizontal se coloca la dificultad de desarrollo o complejidad de implementación y en el eje vertical la relevancia para el proyecto o el valor para el usuario. El MVP tiende a resultar del cuadrante superior izquierdo, con alto valor para los usuarios y una baja complejidad de implementación.
 
-<img src="/assets/img/articles/productos-escalables-desde-el-inicio/2.svg" width="600px" height="300px" alt="MVP comparado con el producto final"/>
+<img src="/assets/img/articles/piensa-tu-producto-escalable-desde-el-inicio/2.svg" width="600px" height="300px" alt="MVP comparado con el producto final"/>
 
 Este mismo ejercicio se puede repetir una vez desarrollado el MVP para dirigir la priorización de funcionalidades a implementar más adelante y esta es la manera más sencilla de fijar el norte del desarrollo. También se puede utilizar para identificar las fases o etapas de desarrollo del producto y asegurar que siempre se está avanzando de forma eficiente para entregar más valor a los usuarios. Sin embargo, recordemos que estamos haciendo un análisis de expansión y escalabilidad, y el cuadrante que tiende a estos conceptos es el superior derecho: gran valor pero mayor complejidad. Para mantener una visión escalable, la pregunta principal en esta etapa es: si el proyecto genera tracción ¿Cuáles y qué tan pronto estas funcionalidades se volverán esenciales?
 
@@ -63,4 +63,4 @@ Así completamos el proceso de armado del MVP cumpliendo con lo más importante:
 
 Mantener tu negocio vivo durante toda la etapa del Valle de la Muerte de un negocio digital también requiere de gran esfuerzo e inversión y ésta es una forma de prepararse para ella. Al no entorpecer el desarrollo, ni en el presente ni en el futuro, y apoyar al uso adecuado de los recursos del negocio, podrán enfocarse en verdaderamente escalar, impulsar ventas, abrir nuevos mercados, recopilar la data que necesites para iterar y lo más importante: entregar más valor a tus usuarios.
 
-\*_Es importante mencionar que existe el concepto de escalabilidad de software y se refiere a operaciones o tácticas técnicas que refieren tanto al código como la configuración de los servidores donde vive tu plataforma digital. Este artículo refiere a la escalabilidad estratégica, al plan a largo plazo, y al enfoque global que debe contemplar un negocio digital; no a cuestiones de DevOps, implementación de software o estrategias de availability en producción._
+<p style="opacity:0.6; font-style:italic">*Es importante mencionar que existe el concepto de escalabilidad de software y se refiere a operaciones o tácticas técnicas que refieren tanto al código como la configuración de los servidores donde vive tu plataforma digital. Este artículo refiere a la escalabilidad estratégica, al plan a largo plazo, y al enfoque global que debe contemplar un negocio digital; no a cuestiones de DevOps, implementación de software o estrategias de availability en producción.<p>

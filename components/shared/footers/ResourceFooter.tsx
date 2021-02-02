@@ -11,7 +11,7 @@ import { createContact } from "utils/sendinBlue";
 import { logEvent, advancedMatching } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
 
-const ResourceFooter = () => {
+const ResourceFooter = ({ noshadow }: { noshadow: boolean }) => {
   let resource = es.resource_footer;
 
   const onSubmit = (data) => {
@@ -31,7 +31,7 @@ const ResourceFooter = () => {
 
   return (
     <>
-      <Grid>
+      <Grid noshadow={noshadow}>
         <Fade triggerOnce>
           <H1>{resource.title}</H1>
         </Fade>
@@ -84,14 +84,6 @@ const ResourceForm = styled.div`
       }
     }
   }
-  /* form > div:last-of-type {
-    input {
-      background-color: ${(props) => props.theme.colors.background};
-      &:hover {
-        color: ${(props) => props.theme.colors.accent};
-      }
-    }
-  } */
 `;
 
 const Message = styled.div`
@@ -106,7 +98,8 @@ const Message = styled.div`
 
 const Grid = styled(TitleSectionGrid)`
   background-color: ${(props) => props.theme.colors.accent};
-  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: ${(p) =>
+    p.noshadow ? "none" : "0px -3px 10px rgba(0, 0, 0, 0.1);"}
   padding: 10% 4% 20% 4%;
   h1 {
     color: ${(props) => props.theme.colors.foreground};

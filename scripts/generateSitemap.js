@@ -57,7 +57,7 @@ const routes = [
     priority: 0.7,
   },
   {
-    es: "/articulos/productos-escalables-desde-el-inicio",
+    es: "/articulos/piensa-tu-producto-escalable-desde-el-inicio",
     priority: 0.7,
   },
   {

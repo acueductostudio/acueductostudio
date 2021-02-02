@@ -24,7 +24,7 @@ export default function Contact({ locale, setTitle, post }) {
         image={{ fileName: `${post.slug}.png`, alt: post.title }}
       ></Head>
       <ArticleSection {...post} slug={post.slug} />
-      <ResourceFooter />
+      <ResourceFooter noshadow/>
     </PageClipper>
   );
 }
