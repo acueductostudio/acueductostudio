@@ -7,11 +7,8 @@ import { Fade } from "react-awesome-reveal";
 import {
   FacebookShareButton,
   LinkedinShareButton,
-  LinkedinIcon,
   TwitterShareButton,
-  TwitterIcon,
   WhatsappShareButton,
-  WhatsappIcon,
 } from "react-share";
 import FbIcon from "public/assets/img/layout/logos/fb.svg";
 import LnIcon from "public/assets/img/layout/logos/linkedin.svg";
