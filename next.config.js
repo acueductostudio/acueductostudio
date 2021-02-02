@@ -2,13 +2,20 @@
 //   enabled: process.env.ANALYZE === "true",
 // });
 const path = require("path");
-const withPWA = require("next-pwa");
+// const withPWA = require("next-pwa");
+const withOffline = require("next-offline");
 const caching = require("./utils/caching");
 
 const nextConfig = {
   pwa: {
     dest: "public",
     disable: process.env.NODE_ENV === "development",
+    runtimeCaching: caching,
+  },
+  transformManifest: (manifest) => ["/"].concat(manifest),
+  generateInDevMode: false,
+  workboxOpts: {
+    swDest: "static/service-worker.js",
     runtimeCaching: caching,
   },
   async rewrites() {
@@ -32,6 +39,10 @@ const nextConfig = {
       {
         source: "/about",
         destination: "/nosotros",
+      },
+      {
+        source: "/service-worker.js",
+        destination: "/_next/static/service-worker.js",
       },
     ];
   },
@@ -63,4 +74,5 @@ const nextConfig = {
 };
 
 // module.exports = withBundleAnalyzer(nextConfig);
-module.exports = withPWA(nextConfig);
+// module.exports = withPWA(nextConfig);
+module.exports = withOffline(nextConfig);

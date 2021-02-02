@@ -48,3 +48,7 @@ export const Li = ({ children, ...props }) => (
 export const Ul = ({ children, ...props }) => (
   <ul {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
+
+export const Div = ({ children, ...props }) => (
+  <div {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+);
