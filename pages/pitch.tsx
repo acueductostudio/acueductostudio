@@ -116,7 +116,7 @@ export default function Pitch({ locale, setTitle, pt }) {
         p={t.tools_section.p}
         borderTop
       />
-      <ContactFooter />
+      <ContactFooter/>
     </PageClipper>
   );
 }

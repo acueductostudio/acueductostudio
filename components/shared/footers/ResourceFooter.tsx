@@ -11,7 +11,7 @@ import { createContact } from "utils/sendinBlue";
 import { logEvent, advancedMatching } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
 
-const ResourceFooter = ({ noshadow }: { noshadow: boolean }) => {
+const ResourceFooter = ({ shadow }: { shadow?: boolean }) => {
   let resource = es.resource_footer;
 
   const onSubmit = (data) => {
@@ -31,7 +31,7 @@ const ResourceFooter = ({ noshadow }: { noshadow: boolean }) => {
 
   return (
     <>
-      <Grid noshadow={noshadow}>
+      <Grid shadow={shadow}>
         <Fade triggerOnce>
           <H1>{resource.title}</H1>
         </Fade>
@@ -96,26 +96,26 @@ const Message = styled.div`
   }
 `;
 
-const Grid = styled(TitleSectionGrid)<{ noshadow: boolean }>`
-  background-color: ${(props) => props.theme.colors.accent};
+const Grid = styled(TitleSectionGrid)<{ shadow?: boolean }>`
+  background-color: ${(p) => p.theme.colors.accent};
   box-shadow: ${(p) =>
-    p.noshadow ? "none" : "0px -3px 10px rgba(0, 0, 0, 0.1);"};
+    p.shadow ? "0px -3px 10px rgba(0, 0, 0, 0.1);" : "none"};
   padding: 10% 4% 20% 4%;
   h1 {
-    color: ${(props) => props.theme.colors.foreground};
+    color: ${(p) => p.theme.colors.foreground};
   }
   & > div {
     z-index: 8;
   }
   p {
     z-index: 8;
-    color: ${(props) => props.theme.colors.foreground_low};
+    color: ${(p) => p.theme.colors.foreground_low};
     margin-bottom: 10px;
     margin-top: -20px;
     &:hover {
       b {
-        border-bottom: ${(props) =>
-          props.theme.stroke + " solid " + props.theme.colors.background};
+        border-bottom: ${(p) =>
+          p.theme.stroke + " solid " + p.theme.colors.background};
         border-color: transparent;
         transition: 0.3s ease all;
       }
@@ -123,12 +123,12 @@ const Grid = styled(TitleSectionGrid)<{ noshadow: boolean }>`
     b {
       cursor: pointer;
       position: relative;
-      color: ${(props) => props.theme.colors.foreground};
+      color: ${(p) => p.theme.colors.foreground};
       font-weight: 100;
       transition: 0.3s ease all 0.1s;
       padding-bottom: 2px;
-      border-bottom: ${(props) =>
-        props.theme.stroke + " solid " + props.theme.colors.foreground};
+      border-bottom: ${(p) =>
+        p.theme.stroke + " solid " + p.theme.colors.foreground};
     }
   }
   @media (max-width: 600px) {

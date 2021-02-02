@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { GetStaticProps } from "next";
-import ssrLocale from "utils/ssrLocale";
+import ArticleProps from "utils/types/ArticleProps";
 import markdownToHtml from "utils/markdownToHtml";
 import { getAllPosts, getPostBySlug } from "utils/blogApi";
-import clientLocale from "utils/clientLocale";
 import Head from "components/layout/Head";
 import ArticleSection from "components/articles/ArticleSection";
 import PageClipper from "components/layout/PageClipper";
@@ -24,13 +23,13 @@ export default function Contact({ locale, setTitle, post }) {
         image={{ fileName: `${post.slug}.png`, alt: post.title }}
       ></Head>
       <ArticleSection {...post} slug={post.slug} />
-      <ResourceFooter noshadow/>
+      <ResourceFooter />
     </PageClipper>
   );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const post = getPostBySlug(context.params.slug, [
+  const post: ArticleProps = getPostBySlug(context.params.slug, [
     "title",
     "subtitle",
     "date",
@@ -57,7 +56,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export async function getStaticPaths() {
   const articles = getAllPosts(["slug"]);
   return {
-    paths: articles.map((article: { slug: string; content?: [] }) => {
+    paths: articles.map((article: ArticleProps) => {
       return {
         params: {
           slug: article.slug,

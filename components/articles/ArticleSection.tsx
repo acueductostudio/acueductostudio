@@ -17,15 +17,7 @@ import FbIcon from "public/assets/img/layout/logos/fb.svg";
 import LnIcon from "public/assets/img/layout/logos/linkedin.svg";
 import TwIcon from "public/assets/img/layout/logos/tw.svg";
 import WAIcon from "public/assets/img/layout/logos/whatsapp-inv.svg";
-
-interface ArticleProps {
-  slug: string;
-  title: string;
-  subtitle: string;
-  author: string;
-  date: Date;
-  content: string;
-}
+import ArticleProps from "utils/types/ArticleProps";
 
 const ArticleSection = ({
   title,
