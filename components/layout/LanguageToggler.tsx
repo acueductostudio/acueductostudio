@@ -3,7 +3,13 @@ import styled from "styled-components";
 import Arrows from "public/assets/img/layout/language2.svg";
 import Router, { useRouter } from "next/router";
 
-const oneLangPages = ["consultoria", "podcast", "diagnostico", "linkenbio"];
+const oneLangPages = [
+  "consultoria",
+  "podcast",
+  "diagnostico",
+  "linkenbio",
+  "articulo",
+];
 
 function LanguageToggler({ hasLoaded, locale }) {
   const router = useRouter();

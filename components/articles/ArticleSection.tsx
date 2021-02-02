@@ -1,24 +1,41 @@
 import React from "react";
 import styled from "styled-components";
-import { P, H1 } from "components/shared/Dangerously";
+import { H1, Div } from "components/shared/Dangerously";
 import Grid from "components/shared/TitleSectionGrid";
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+} from "react-share";
 
 interface ArticleProps {
   slug: string;
-  data: {
-    title: string;
-    subtitle: string;
-    author: string;
-    date: Date;
-  };
-  content: Array<{ p?: string; t1?: string; t2?: string; image_alt?: string }>;
+  title: string;
+  subtitle: string;
+  author: string;
+  date: Date;
+  content: string;
 }
 
-const ArticleSection = ({ slug, data, content }: ArticleProps) => {
-  let fullDate = new Date(`${data.date}T00:00:00`);
-  let imgCount = 0;
+const iconSize = 40;
+
+const ArticleSection = ({
+  title,
+  date,
+  subtitle,
+  author,
+  slug,
+  content,
+}: ArticleProps) => {
+  const SHARE_URL = `https://acueducto.studio/articulos/${slug}`;
+  let fullDate = new Date(`${date}T00:00:00`);
   return (
     <>
       <Fade triggerOnce>
@@ -33,12 +50,42 @@ const ArticleSection = ({ slug, data, content }: ArticleProps) => {
       </Fade>
       <ArticleGrid>
         <Fade triggerOnce>
-          <H1>{data.title}</H1>
-          <h2>{data.subtitle}</h2>
+          <H1>{title}</H1>
+          <h2>{subtitle}</h2>
+          <div>
+            <TwitterShareButton url={SHARE_URL}>
+              <TwitterIcon
+                size={iconSize}
+                iconFillColor={"#060809"}
+                bgStyle={{ fill: "transparent" }}
+              />
+            </TwitterShareButton>
+            <FacebookShareButton url={SHARE_URL}>
+              <FacebookIcon
+                size={iconSize}
+                iconFillColor={"#060809"}
+                bgStyle={{ fill: "transparent" }}
+              />
+            </FacebookShareButton>
+            <WhatsappShareButton url={SHARE_URL}>
+              <WhatsappIcon
+                size={iconSize}
+                iconFillColor={"#060809"}
+                bgStyle={{ fill: "transparent" }}
+              />
+            </WhatsappShareButton>
+            <LinkedinShareButton url={SHARE_URL}>
+              <LinkedinIcon
+                size={iconSize}
+                iconFillColor={"#060809"}
+                bgStyle={{ fill: "transparent" }}
+              />
+            </LinkedinShareButton>
+          </div>
           <Credits>
-            Por <address>{data.author}</address>
+            Por <address>{author}</address>
             {` | `}
-            <time dateTime={data.date.toString()}>
+            <time dateTime={date.toString()}>
               {fullDate.toLocaleDateString("es", {
                 year: "numeric",
                 month: "long",
@@ -47,28 +94,7 @@ const ArticleSection = ({ slug, data, content }: ArticleProps) => {
             </time>
           </Credits>
         </Fade>
-        <div>
-          {content.map((item, index) => {
-            if (item.p) {
-              return <P key={`p_${index}`}>{item.p}</P>;
-            } else if (item.t1) {
-              return <h3 key={`p_${index}`}>{item.t1}</h3>;
-            } else if (item.t2) {
-              return <h4 key={`p_${index}`}>{item.t2}</h4>;
-            } else if (item.image_alt) {
-              imgCount = imgCount + 1;
-              return (
-                <Image
-                  key={`p_${index}`}
-                  src={`/assets/img/articles/${slug}/${imgCount}.svg`}
-                  width="600px"
-                  height="300px"
-                  alt={item.image_alt}
-                />
-              );
-            }
-          })}
-        </div>
+        <Div>{content}</Div>
       </ArticleGrid>
     </>
   );
