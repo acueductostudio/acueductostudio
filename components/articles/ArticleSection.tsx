@@ -4,6 +4,7 @@ import { H1, Div } from "components/shared/Dangerously";
 import Grid from "components/shared/TitleSectionGrid";
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
+import Header from "./Header";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -26,18 +27,14 @@ const ArticleSection = ({
 }: ArticleProps) => {
   const SHARE_URL = `https://acueducto.studio/articulos/${slug}`;
   let fullDate = new Date(`${date}T00:00:00`);
+  let formatDate = fullDate.toLocaleDateString("es-MX", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <>
-      <Fade triggerOnce>
-        <Pos>
-          <Image
-            width="1500px"
-            height="600px"
-            src={`/assets/img/articles/${slug}/header.svg`}
-          />
-          <Fader />
-        </Pos>
-      </Fade>
+      <Header slug={slug} />
       <ArticleGrid>
         <Fade triggerOnce>
           <H1>{title.charAt(0).toLowerCase() + title.slice(1)}</H1>
@@ -67,13 +64,7 @@ const ArticleSection = ({
           <Credits>
             Por <address>{author}</address>
             {` | `}
-            <time dateTime={date.toString()}>
-              {fullDate.toLocaleDateString("es", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
+            <time dateTime={date.toString()}>{formatDate}</time>
           </Credits>
           <Content>{content}</Content>
         </Fade>
@@ -88,6 +79,16 @@ const Content = styled(Div)``;
 
 const Shareable = styled.div`
   height: 35px;
+  margin-left: -15px;
+  button:focus, button:active{
+    outline:none;
+    svg {
+        transform: scale(1.2);
+        path {
+          fill: ${(props) => props.theme.colors.accent};
+        }
+      }
+  }
 `;
 
 const Icon = styled.div`
@@ -111,6 +112,16 @@ const Icon = styled.div`
   }
 `;
 
+const Credits = styled.div`
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-bottom: 6%;
+  address {
+    display: inline-block;
+    font-style: normal;
+  }
+`;
+
 const ArticleGrid = styled(Grid)`
   background-color: ${(p) => p.theme.colors.foreground};
   padding-top: 8%;
@@ -121,7 +132,7 @@ const ArticleGrid = styled(Grid)`
     &:nth-of-type(2),
     &:nth-of-type(3),
     &:nth-of-type(4) {
-      grid-column: 2 / span 12;
+      grid-column: 2 / span 10;
     }
     &:not(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4)) {
       grid-column: 4 / span 8;
@@ -138,10 +149,11 @@ const ArticleGrid = styled(Grid)`
     font-weight: 200;
     max-width: 690px;
     color: ${(p) => p.theme.colors.accent};
+    line-height: 130%;
   }
   ${Content} {
-    img{
-      max-width:100%;
+    img {
+      max-width: 100%;
       height: auto;
       margin: 2rem 0;
     }
@@ -150,18 +162,19 @@ const ArticleGrid = styled(Grid)`
       margin-bottom: 1rem;
       font-weight: 200;
       color: ${(p) => p.theme.colors.background};
+      line-height: 120%;
     }
     h3 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
-
+      line-height: 120%;
       font-weight: 200;
       color: ${(p) => p.theme.colors.background};
     }
     h4 {
       font-size: 2rem;
       margin-bottom: 1rem;
-
+      line-height: 120%;
       font-weight: 200;
       color: ${(p) => p.theme.colors.background};
     }
@@ -199,17 +212,37 @@ const ArticleGrid = styled(Grid)`
       grid-column: 3 / span 8;
     }
   }
+  @media (max-width: 1250px) {
+    h2 {
+      font-size: 2.3rem;
+    }
+  }
   @media (max-width: 1100px) {
     div:not(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4)) {
       grid-column: 2 / span 10;
     }
   }
   @media (max-width: 1000px) {
+    h2 {
+      font-size: 2rem;
+    }
     ${Content} {
       p,
       ul {
         font-size: 1.7rem;
         line-height: 25px;
+      }
+      h2 {
+        font-size: 2.6rem;
+        font-weight: 300;
+      }
+      h3 {
+        font-size: 2.1rem;
+        font-weight: 300;
+      }
+      h4 {
+        font-size: 1.7rem;
+        font-weight: 300;
       }
     }
     div:not(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4)) {
@@ -217,6 +250,10 @@ const ArticleGrid = styled(Grid)`
     }
   }
   @media (max-width: 800px) {
+    ${Credits} {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
     div {
       &:nth-of-type(1),
       &:nth-of-type(2),
@@ -229,27 +266,24 @@ const ArticleGrid = styled(Grid)`
       }
     }
   }
-`;
-
-const Pos = styled.div`
-  position: relative;
-`;
-
-const Fader = styled.div`
-  width: 100%;
-  height: 60%;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(0deg, rgba(6, 8, 9, 1) 0%, rgba(6, 8, 9, 0) 100%);
-`;
-
-const Credits = styled.div`
-  text-transform: uppercase;
-  font-weight: 200;
-  margin-bottom: 6%;
-  address {
-    display: inline-block;
-    font-style: normal;
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    grid-gap: 1.2rem;
+    h2 {
+      font-size: 1.85rem;
+      line-height: 120%;
+    }
+  }
+  @media (max-width: 400px) {
+    ${Content} {
+      p,
+      ul {
+        font-weight:200;
+      }
+   
+    }
+    h1 {
+      font-size: 3.2rem;
+    }
   }
 `;

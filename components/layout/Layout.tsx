@@ -78,12 +78,6 @@ const Layout = ({
       gtmId: "GTM-NQHHFWF",
     });
     LinkedInTag.init(1943114, "dc", false);
-    // let _hsq: Array<String[]> = window._hsq = window._hsq || [];
-    //   _hsq.push(['setPath', window.location.pathname]);
-    //   console.log(window._hsq)
-
-    //   _hsq.push(['trackPageView']);
-    //   console.log(_hsq)
   };
 
   useEffect(() => {

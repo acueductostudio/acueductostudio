@@ -47,7 +47,8 @@
       ],
       "resources": [
         { "title": "podcast", "link": "/podcast" },
-        { "title": "diagnóstico", "link": "/diagnostico" }
+        { "title": "diagnóstico", "link": "/diagnostico" },
+        { "title": "artículos", "link": "/articulos/piensa-tu-producto-escalable-desde-el-inicio" }
       ],
       "policies": [
         { "title": "cookies", "link": "/cookies" },
