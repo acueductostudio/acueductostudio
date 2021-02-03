@@ -1,16 +1,11 @@
 import styled from "styled-components";
-import Fade from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 
 const Header = ({ slug }: { slug: string }) => (
   <Fade triggerOnce>
     <Pos>
-      <Image
-        // width="1500px"
-        // height="600px"
-        layout="fill"
-        src={`/assets/img/articles/${slug}/header.svg`}
-      />
+      <Image layout="fill" src={`/assets/img/articles/${slug}/header.svg`} />
       <Fader />
     </Pos>
   </Fade>
@@ -40,9 +35,13 @@ const Pos = styled.div`
 
 const Fader = styled.div`
   width: 100%;
-  height: 60%;
+  height: 30%;
   display: block;
   position: absolute;
   bottom: 0;
-  background: linear-gradient(0deg, rgba(6, 8, 9, 1) 0%, rgba(6, 8, 9, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(6, 8, 9, 1) 30%,
+    rgba(6, 8, 9, 0) 100%
+  );
 `;

@@ -80,14 +80,15 @@ const Content = styled(Div)``;
 const Shareable = styled.div`
   height: 35px;
   margin-left: -15px;
-  button:focus, button:active{
-    outline:none;
+  button:focus,
+  button:active {
+    outline: none;
     svg {
-        transform: scale(1.2);
-        path {
-          fill: ${(props) => props.theme.colors.accent};
-        }
+      transform: scale(1.2);
+      path {
+        fill: ${(props) => props.theme.colors.accent};
       }
+    }
   }
 `;
 
@@ -124,7 +125,6 @@ const Credits = styled.div`
 
 const ArticleGrid = styled(Grid)`
   background-color: ${(p) => p.theme.colors.foreground};
-  padding-top: 8%;
   color: ${(p) => p.theme.colors.background};
   grid-gap: 2rem;
   div {
@@ -155,7 +155,7 @@ const ArticleGrid = styled(Grid)`
     img {
       max-width: 100%;
       height: auto;
-      margin: 2rem 0;
+      margin-bottom: 2rem;
     }
     h2 {
       font-size: 3rem;
@@ -250,6 +250,7 @@ const ArticleGrid = styled(Grid)`
     }
   }
   @media (max-width: 800px) {
+    padding-top: 8%;
     ${Credits} {
       font-size: 1.5rem;
       font-weight: 300;
@@ -278,9 +279,8 @@ const ArticleGrid = styled(Grid)`
     ${Content} {
       p,
       ul {
-        font-weight:200;
+        font-weight: 200;
       }
-   
     }
     h1 {
       font-size: 3.2rem;
