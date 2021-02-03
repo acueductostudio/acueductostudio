@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "node scripts/generateSitemap.js && next build",
+    "build": "NODE_ICU_DATA=node_modules/full-icu node scripts/generateSitemap.js && next build",
     "start": "next start",
     "export": "next export",
     "analyze": "ANALYZE=true yarn build",
