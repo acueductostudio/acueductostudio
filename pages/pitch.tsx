@@ -26,10 +26,6 @@ import {
   Apps,
 } from "components/shared/Icons";
 
-const LogoLists = dynamic(import("components/pitch/LogoLists"), {
-  ssr: false,
-});
-
 const stepsIconArray = [Discover, Envision, BuildStory, Craft, Launch, Review];
 
 export default function Pitch({ locale, setTitle, pt }) {
@@ -120,8 +116,7 @@ export default function Pitch({ locale, setTitle, pt }) {
         p={t.tools_section.p}
         borderTop
       />
-      {loadAssets && <LogoLists t={t} />}
-      <ContactFooter />
+      <ContactFooter/>
     </PageClipper>
   );
 }

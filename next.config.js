@@ -2,7 +2,6 @@
 //   enabled: process.env.ANALYZE === "true",
 // });
 const path = require("path");
-// const withPWA = require("next-pwa");
 const withOffline = require("next-offline");
 const caching = require("./utils/caching");
 
@@ -74,5 +73,4 @@ const nextConfig = {
 };
 
 // module.exports = withBundleAnalyzer(nextConfig);
-// module.exports = withPWA(nextConfig);
 module.exports = withOffline(nextConfig);

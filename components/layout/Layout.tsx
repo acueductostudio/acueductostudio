@@ -19,6 +19,7 @@ import type { SharedTProps } from "utils/LangContext";
 declare global {
   interface Window {
     GA_INITIALIZED: boolean;
+    _hsq?: [];
   }
 }
 

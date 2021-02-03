@@ -99,12 +99,6 @@
   },
   "tools_section": {
     "title": "with the<br/>best tools only",
-    "p": "Your project is unique and requieres personalized treatment, that’s why we perform careful analysis to find the toolkit best fit for its development.<br/><br/>This is some of our favorite tech to get the work done.",
-    "apps": "mobile and web apps",
-    "platforms": "platforms and operating systems",
-    "marketing": "digital marketing",
-    "content": "content platforms",
-    "bi": "business intelligence",
-    "collaboration": "co-creation"
+    "p": "Your project is unique and requieres personalized treatment, that’s why we perform careful analysis to find the toolkit best fit for its development."
   }
 }
