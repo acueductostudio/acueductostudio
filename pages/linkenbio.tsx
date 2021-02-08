@@ -9,6 +9,7 @@ import MetalPinnedSection from "components/shared/pinnedSections/MetalPinnedSect
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import Consultoria from "public/assets/img/layout/linkenbio/consultoria.svg";
+import Articulos from "public/assets/img/layout/linkenbio/articulos.svg";
 import Podcast from "public/assets/img/layout/linkenbio/podcast.svg";
 
 export default function LinkEnBio({ locale, setTitle, pt }) {
@@ -28,7 +29,8 @@ export default function LinkEnBio({ locale, setTitle, pt }) {
         <ul>
           {links.map((link, index) => (
             <Resource key={"linkentry" + index}>
-              {index === 2 && <Consultoria />}
+              {index === 3 && <Consultoria />}
+              {index === 2 && <Articulos />}
               {index === 1 && <Podcast />}
               <Link href={link.url} passHref locale={locale}>
                 <a>

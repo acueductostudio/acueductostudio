@@ -21,7 +21,7 @@
     "next": "^10.0.6",
     "next-offline": "^5.0.3",
     "react": "17.0.1",
-    "react-awesome-reveal": "3.7.0",
+    "react-awesome-reveal": "3.4.0",
     "react-dom": "17.0.1",
     "react-double-marquee": "^1.0.7",
     "react-facebook-pixel": "^0.1.3",
