@@ -1,5 +1,9 @@
 {
   "trailingSlash": false,
+  "rewrites" :[{
+    "source" : "/static/assets/img/og/og_main.jpg",
+    "destination" : "/assets/img/og/og_main.jpg"
+  }],
   "redirects": [
     {
       "source": "/agendarconsultoria",

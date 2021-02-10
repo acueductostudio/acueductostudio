@@ -10,10 +10,10 @@
   },
   "body": {
     "subtitle1": "sobre Acueducto",
-    "p1": "Ayudamos a nuestros Socios (“Empresas”, “Marcas”, “Otros”) a construír experiencias digitales y productos. Brindamos servicios para otras compañías y procesamos datos para los Socios con los que trabajamos. Esta Política de Privacidad no refleja las políticas y prácticas de privacidad de nuestros Socios. Por lo tanto, no somos responsables por dichas prácticas o políticas fuera de este sitio.",
+    "p1": "Ayudamos a nuestros Clientes (“Empresas”, “Marcas”, “Otros”) a construír experiencias digitales y productos. Brindamos servicios para otras compañías y procesamos datos para los Clientes con los que trabajamos. Esta Política de Privacidad no refleja las políticas y prácticas de privacidad de nuestros Clientes. Por lo tanto, no somos responsables por dichas prácticas o políticas fuera de este sitio.",
     "subtitle2": "información que procesamos",
     "p2": "Acueducto procesa tu información personal al usar nuestros servicios y/o al proveer cualquiera de esta información a nosotros:",
-    "list1": "<li>Nombre completo</li><li>Dirección de correo electrónico</li><li>Dirección IP</li><li>Locación</li><li>Navegador y equipo</li><li>Información sobre tus actividades en nuestro sitio</li><li>Otra información que activamente compartas con nosotros</li>",
+    "list1": "<li>Nombre completo</li><li>Dirección de correo electrónico</li><li>Dirección IP</li><li>Ubicación geográfica</li><li>Navegador, equipo y versión</li><li>Sistema operativo</li><li>Proveedor de internet</li><li>Duración de tu visita</li><li>URL de referencia (reference URL)</li><li>Hora de acceso</li><li>Información sobre tus actividades en nuestro sitio</li><li>Otra información que activamente compartas con nosotros</li>",
     "subtitle3": "cómo recolectamos información",
     "p3": "Toda la información que procesamos es adquirida de la siguiente forma:",
     "listItem1": "Las formas de contacto en esta Aplicación. (Puedes cancelar tu suscripción en cualquiera de los correos que hayas recibido).",
@@ -24,10 +24,10 @@
     "p4": "Acueducto no pretende recolectar datos de visitantes menores de 16 años a menos que tengan permiso de sus padres o guardianes, sin embargo, no podemos confirmar si todos nuestros visitantes superan dicha edad. Si crees que hemos recolectado datos de un menor y eres su padre o guardián, por favor contáctanos en <a href='mailto:soporte@acueducto'>soporte@acueducto.studio</a> e inmediatamente eliminaremos dichos datos.",
     "subtitle5": "con qué propósito y bajo qué circunstancias procesamos información personal",
     "p5": "Acueducto recolecta información personal cuando busca:",
-    "list2": "<li>Optimizar el funcionamiento de su Aplicación</li><li>Ponerse en contacto con posibles Socios</li><li>Mejorar el posicionamiento (SEO) de su Aplicación</li>",
+    "list2": "<li>Optimizar el funcionamiento de su Aplicación</li><li>Ponerse en contacto con posibles socios o clientes</li><li>Mejorar el posicionamiento (SEO) de su Aplicación</li>",
     "subtitle6": "protección de datos",
     "p6": "En Acueducto se toman múltiples medidas para proteger la información que recolectamos tal como resguardar los datos en la nube con contraseñas que cambian periódicamente; sin embargo ninguna medida garantiza que estos datos puedan caer en las manos equivocadas. <br/><br/>Ten la seguridad de que si Acueducto sufre un ataque y tus datos son adquiridos por un tercero no autorizado, se tomarán las medidas apropiadas y serás debidamente notificado.",
-    "subtitle7": "cambios a estas Políticas de Privacidad",
-    "p7": "Estas Políticas de Privacidad son vigentes desde el 1ro de Mayo de 2020 y se mantendrán vigentes hasta que haya cambios en ellas en el futuro, los cuales tendrán un efecto inmediato tras ser publicados en esta página. Nos reservamos el derecho a actualizar o cambiar nuestras Políticas de Privacidad en cualquier momento por lo que te invitamos a revisar esta página periódicamente. El que uses esta Aplicación después de que modifiquemos sus Políticas de Privacidad, constituirá tu reconocimiento de las modificaciones y tu consentimiento la modificada Política de Privacidad. Al realizar cualquier cambio en estas Políticas de Privacidad, te notificaremos a través del correo electrónico que nos brindaste o publicando un anuncio en nuestro sitio."
+    "subtitle7": "cambios a estas Política de Privacidad",
+    "p7": "Esta Política de Privacidad está vigente desde el 1ro de Mayo de 2020 y se mantendrá vigentes hasta que haya cambios en ella en el futuro, los cuales tendrán un efecto inmediato tras ser publicados en esta página. Nos reservamos el derecho a actualizar o cambiar nuestra Política de Privacidad en cualquier momento por lo que te invitamos a revisar esta página periódicamente. El que uses esta Aplicación después de que modifiquemos su Políticaa de Privacidad, constituirá tu reconocimiento de las modificaciones y tu consentimiento de la modificada Política de Privacidad. Al realizar cualquier cambio en esta Política de Privacidad, te notificaremos a través del correo electrónico que nos brindaste o publicando un anuncio en nuestro sitio."
   }
 }

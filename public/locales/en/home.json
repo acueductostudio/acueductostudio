@@ -5,30 +5,30 @@
     "header_title": ""
   },
   "landing": {
-    "heading": "boosting high impact businesses",
-    "tagline": "Acueducto is a digital strategy and interface design studio.",
+    "heading": "propelling high-impact businesses",
+    "tagline": "Acueducto is a digital strategy and interface design studio based in Mexico City.",
     "button": "get in touch"
   },
   "intro": {
-    "title": "working with partners, not for clients",
-    "p": "Unlike client-agency relationships, partnerships allow us to get deeply involved in every project we work in. Relying on close collaboration to produce digital experiences, we can truly connect with their audiences and have a positive impact in brands, business and communities alike.<br/><br/>We are always thrilled by new challenges and the people that come with them: as challenges become projects, partners become friends.",
-    "link": ["/pitch", "pitch"],
-    "linktext": "Have we got your attention?<br/>Read our"
+    "title": "hand in hand with digital visionaries",
+    "p": "We work with decision-makers who look for better digital opportunities for their businesses.</br></br>Data has shown that implementing digital strategies has helped organizations boost their success by 64%, surpassing their objectives <cite>(ADOBE, 2019)</cite> Why? Because optimizing any business process with digital technology or expanding to new business avenues results in better products and services, while also reducing costs.</br>",
+    "link": ["/contact", "Get in touch"],
+    "linktext": "Are we the right fit for your business?</br>"
   },
   "carousel": ["startups", "brands", "corporations"],
   "studies": {
     "title": "tackling complex<br/>business challenges",
-    "p": "We crafted these stories to show how a strong and thoughtful digital strategy adds tremendous value to any idea.<br/><br/>Read about selected projects we have launched alongside our partners."
+    "p": "Having a solid strategy is the cornerstone of any digital success story. Developing scalable architectures or building personalized tools requires a balance of vertical expertise and digital innovation.</br></br>At Acueducto, we use our client’s knowledge to develop meaningful experiences for their businesses and the communities they impact.</br></br>Read about a selection of case studies we’ve developed."
   },
   "products_section": {
     "intro": {
-      "title": "to develop innovative ideas",
-      "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
+      "title": "to develop</br> innovative ideas",
+      "p": "Each dollar invested in user experience by designing products, services, and tools can see anywhere from 2 to 100 dollars in return <cite>(FORRESTER RESEARCH, 2017)</cite>.</br></br>Companies like Airbnb, Uber, or Google owe a large part of their success to developing excellent digital experiences around their users. Essentially, the goal is to build the best digital interfaces for both your customers and employees to interact with your business.</br></br>You can trust us to develop:"
     },
     "products": [
       {
-        "title": "digital strategy",
-        "p": "Elevate the perception of your product, service or organization through strategic design."
+        "title": "digital strategies",
+        "p": "Analyze external and internal trends, and your business’s data to make optimal decisions."
       },
       {
         "title": "mobile<br/>and web apps",
@@ -46,38 +46,37 @@
   },
   "services": {
     "intro": {
-      "title": "from ideation to launch",
-      "p": "– And everything in between.<br/><br/> Our favorite projects are the ones we build from scratch with our partners, that’s why we offer all the phases of digital experience development."
+      "title": "from seed to launch",
+      "p": "– And everything in between.<br/><br/>There’s a lot to take into consideration when developing digital products and services so we make sure to support our clients throughout their process, offering every stage of development for a digital experience."
     },
     "service_categories": [
       {
         "title": "strategy",
         "tags": [
-          "Digital Consulting",
-          "Research",
-          "Project Management",
-          "Community Management",
-          "Digital Advertising"
+          "Project management",
+          "Digital consulting",
+          "Research and insights",
+          "User experience (UX)",
+          "Impact evaluation"
         ]
       },
       {
         "title": "design & content",
         "tags": [
-          "Art Direction",
-          "Transmedia Development",
-          "UX Design",
-          "Motion Design",
+          "Art direction",
+          "Content production",
           "Copywriting",
-          "Impact Evaluation"
+          "Prototyping",
+          "Programming and development"
         ]
       },
       {
-        "title": "development",
+        "title": "launch",
         "tags": [
-          "Prototyping",
-          "Development",
-          "User Testing",
-          "Platform Integration",
+          "Marketing strategies",
+          "Paid advertising",
+          "Community management",
+          "User testing",
           "Change Management"
         ]
       }
