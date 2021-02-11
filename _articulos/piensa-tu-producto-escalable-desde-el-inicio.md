@@ -1,6 +1,7 @@
 ---
 title: "Piensa tu producto escalable desde el inicio"
 subtitle: "Los desarrollos de software que no se preparan para su expansión limitan a sus negocios exponiéndose a considerables pérdidas de recursos."
+excerpt: "El alcance de los desarrollos digitales no tiene límite. Esta es su principal promesa: la escalabilidad, por eso los llaman negocios de alto impacto."
 author: "Rodrigo Salmerón"
 date: "2021-02-28"
 ---

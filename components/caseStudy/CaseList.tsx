@@ -6,6 +6,7 @@ import { Fade } from "react-awesome-reveal";
 import Arrow from "components/shared/Arrow";
 import Link from "next/link";
 import LangContext from "utils/LangContext";
+import CaseGrid from "./CaseGrid";
 
 const SingleCase = (props) => {
   const LinkComplex = ({ children }: { children: React.ReactNode }) => (
@@ -24,7 +25,7 @@ const SingleCase = (props) => {
   );
 
   return (
-    <Case>
+    <CaseGrid>
       <LinkComplex>
         <a>
           <Fade triggerOnce>
@@ -63,7 +64,7 @@ const SingleCase = (props) => {
           </LinkComplex>
         </Flexed>
       </Info>
-    </Case>
+    </CaseGrid>
   );
 };
 
@@ -124,11 +125,6 @@ const Flexed = styled.div`
 `;
 
 const Info = styled.div`
-  padding: 10% 10% 10% 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
   a {
     text-decoration: none;
   }
@@ -183,6 +179,14 @@ const Info = styled.div`
     }
     p {
       font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 700px) {
+    div:nth-of-type(2) {
+      margin-top: 5px;
+    }
+    h4 {
+      margin-bottom: 20px;
     }
   }
   @media (max-width: 600px) {
@@ -267,36 +271,10 @@ const VidContainer = styled.div`
     will-change: transform, opacity;
     transition: transform 0.3s ease-out, opacity 0.5s ease;
   }
-`;
-
-const Case = styled.div`
-  display: grid;
-  border-top: ${(props) =>
-    props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
-  grid-template-columns: repeat(2, 1fr);
-  a {
-    cursor: pointer;
-  }
   @media (max-width: 700px) {
-    display: flex;
-    flex-direction: column;
-    ${VidContainer} {
-      margin: 5% 5% 10px 5%;
-      width: 90%;
-      padding-bottom: 45%;
-      video {
-        top: -50%;
-      }
-    }
-    ${Info} {
-      padding: 0 5% 5% 5%;
-      div:nth-of-type(2) {
-        margin-top: 5px;
-      }
-      h4 {
-        margin-bottom: 20px;
-      }
-    }
+    margin: 5% 5% 10px 5%;
+    width: 90%;
+    padding-bottom: 45%;
   }
 `;
 

@@ -8,7 +8,7 @@ import ArticleSection from "components/articles/ArticleSection";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
 
-export default function Contact({ locale, setTitle, post }) {
+export default function Article({ locale, setTitle, post }) {
   useEffect(() => {
     setTitle("Artículo");
   }, [locale]);

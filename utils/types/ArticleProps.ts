@@ -1,7 +1,8 @@
 
- interface ArticleProps {
+interface ArticleProps {
     slug?: string;
     title?: string;
+    excerpt?: string;
     subtitle?: string;
     author?: string;
     date?: Date;
