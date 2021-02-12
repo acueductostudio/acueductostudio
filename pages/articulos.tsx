@@ -5,7 +5,7 @@ import ssrLocale from "utils/ssrLocale";
 import { getAllPosts, getPostBySlug } from "utils/blogApi";
 import Head from "components/layout/Head";
 import TitleSection from "components/shared/TitleSection";
-import Featured from "components/articles/Featured";
+import SingleArticle from "components/articles/SingleArticle";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
 
@@ -24,7 +24,14 @@ export default function Articles({ locale, setTitle, posts, pt }) {
         // image={{ fileName: `${post.slug}.png`, alt: post.title }}
       ></Head>
       <TitleSection {...intro} />
-      <Featured {...posts[0]} />
+      {posts.reverse().map((post, i) => (
+        <SingleArticle
+          {...post}
+          featured={i === 0}
+          reverse={i % 2}
+          key={`article${i}`}
+        />
+      ))}
       <ResourceFooter />
     </PageClipper>
   );
@@ -45,9 +52,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "articulos.json" });
   return {
     props: {
-      posts: {
-        ...posts,
-      },
+      posts: [...posts],
       pt,
     },
   };

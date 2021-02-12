@@ -4,11 +4,11 @@ import ArticleProps from "utils/types/ArticleProps";
 import markdownToHtml from "utils/markdownToHtml";
 import { getAllPosts, getPostBySlug } from "utils/blogApi";
 import Head from "components/layout/Head";
-import ArticleSection from "components/articles/ArticleSection";
+import ArticlePage from "components/articles/ArticlePage";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
 
-export default function Article({ locale, setTitle, post }) {
+export default function Article({ locale, setTitle, article }) {
   useEffect(() => {
     setTitle("Artículo");
   }, [locale]);
@@ -16,20 +16,20 @@ export default function Article({ locale, setTitle, post }) {
   return (
     <PageClipper unPadded>
       <Head
-        title={post.title}
-        description={post.subtitle}
+        title={article.title}
+        description={article.subtitle}
         headerTitle="Artículo"
-        es_canonical={`https://acueducto.studio/articulos/${post.slug}`}
-        image={{ fileName: `${post.slug}.png`, alt: post.title }}
+        es_canonical={`https://acueducto.studio/articulos/${article.slug}`}
+        image={{ fileName: `${article.slug}.png`, alt: article.title }}
       ></Head>
-      <ArticleSection {...post} slug={post.slug} />
+      <ArticlePage {...article} slug={article.slug} />
       <ResourceFooter />
     </PageClipper>
   );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const post: ArticleProps = getPostBySlug(context.params.slug, [
+  const article: ArticleProps = getPostBySlug(context.params.slug, [
     "title",
     "subtitle",
     "date",
@@ -37,16 +37,16 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "author",
     "content",
   ]);
-  const content = await markdownToHtml(post.content || "");
-  if (!post) {
+  const content = await markdownToHtml(article.content || "");
+  if (!article) {
     return {
       notFound: true,
     };
   }
   return {
     props: {
-      post: {
-        ...post,
+     article: {
+        ...article,
         content,
       },
     },

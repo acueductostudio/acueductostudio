@@ -3,45 +3,54 @@ import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
 import ArticleProps from "utils/types/ArticleProps";
 import BorderLink from "components/shared/BorderedLink";
-import Image from "next/image";
 import Arrow from "components/shared/Arrow";
 import CaseGrid from "components/caseStudy/CaseGrid";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
 
-const Featured = ({ title, subtitle, excerpt, slug }: ArticleProps) => {
+interface ArticleReverse extends ArticleProps {
+  featured?: boolean;
+  reverse?: boolean;
+}
+
+const SingleArticle = ({
+  title,
+  subtitle,
+  excerpt,
+  slug,
+  featured,
+  reverse,
+}: ArticleReverse) => {
   const LinkComplex = ({ children }: { children: React.ReactNode }) => (
     <Link href={"/articulos/" + slug} passHref>
       <a>{children}</a>
     </Link>
   );
-  console.log(excerpt);
   return (
-    <CaseGrid>
+    <CaseGrid reverse={reverse}>
       <LinkComplex>
         <Fade triggerOnce>
-          <Pos>
-            <Image
-              layout="fill"
-              src={`/assets/img/articles/${slug}/header.svg`}
-            />
-            <Fader />
-          </Pos>
+          <ImageContainer
+            style={{
+              backgroundImage: `url(/assets/img/articles/${slug}/header.svg)`,
+            }}
+          />
+          <Fader />
         </Fade>
       </LinkComplex>
       <Info>
         <Fade triggerOnce>
-          <span>Artículo destacado</span>
+          <div>{featured && <span>Artículo destacado</span>}</div>
           <LinkComplex>
             <Hoverable>
               {title.charAt(0).toLowerCase() + title.slice(1)}
             </Hoverable>
           </LinkComplex>
           <h3>{subtitle}</h3>
-          <p>{excerpt}</p>
-          <CTA>
-            <LinkComplex>
-              <span>leer más</span>
-              <Arrow />
-            </LinkComplex>
+          <div>{featured && <p>{excerpt}</p>}</div>
+          <CTA featured={featured}>
+            <Link href={"/articulos/" + slug} passHref>
+              <ButtonArrow text="leer más" />
+            </Link>
           </CTA>
         </Fade>
       </Info>
@@ -49,7 +58,35 @@ const Featured = ({ title, subtitle, excerpt, slug }: ArticleProps) => {
   );
 };
 
-export default Featured;
+export default SingleArticle;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.4s ease transform;
+  transform: scale(1);
+  will-change: transform;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  &:focus,
+  &:active {
+    transform: scale(1.05);
+  }
+  @media (max-width: 700px) {
+    min-height: 200px;
+    position: relative;
+    margin: 5% 5% 10px 5%;
+    width: 90%;
+    padding-bottom: 45%;
+  }
+`;
 
 const Info = styled.div`
   padding-left: 10%;
@@ -89,34 +126,14 @@ const Hoverable = styled.h2`
   ${BorderLink({ showLink: false })}
 `;
 
-const CTA = styled.div`
+const CTA = styled.div<{ featured?: boolean }>`
   border-radius: 40px;
   border: 3px solid ${(p) => p.theme.colors.accent};
   display: inline-flex;
-  margin-top: 20%;
+  margin-top: ${(p) => (p.featured ? "20%" : 0)};
   a {
     display: flex;
     flex-direction: row;
-  }
-`;
-
-const Pos = styled.div`
-  position: relative;
-  div img {
-    object-fit: cover;
-  }
-  height: 600px;
-  @media (max-width: 1250px) {
-    height: 500px;
-  }
-  @media (max-width: 900px) {
-    height: 400px;
-  }
-  @media (max-width: 700px) {
-    height: 300px;
-  }
-  @media (max-width: 600px) {
-    height: 200px;
   }
 `;
 

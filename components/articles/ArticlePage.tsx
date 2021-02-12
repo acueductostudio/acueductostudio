@@ -17,7 +17,7 @@ import TwIcon from "public/assets/img/layout/logos/tw.svg";
 import WAIcon from "public/assets/img/layout/logos/whatsapp-inv.svg";
 import ArticleProps from "utils/types/ArticleProps";
 
-const ArticleSection = ({
+const ArticlePage = ({
   title,
   date,
   subtitle,
@@ -73,7 +73,7 @@ const ArticleSection = ({
   );
 };
 
-export default React.memo(ArticleSection);
+export default React.memo(ArticlePage);
 
 const Content = styled(Div)``;
 
