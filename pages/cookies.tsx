@@ -67,8 +67,8 @@ export default function Cookies({ locale, setTitle, pt }) {
         <P>{b.p11}</P>
         <h4>{b.subtitle12}</h4>
         <P>{b.p12}</P>
-        {/* <h4>{b.subtitle13}</h4>
-        <P>{b.p13}</P> */}
+        <h4>{b.subtitle13}</h4>
+        <P>{b.p13}</P>
       </SimplePinnedSection>
       <ContactFooter />
     </PageClipper>
