@@ -17,11 +17,10 @@ export default function Articles({ locale, setTitle, posts, pt }) {
   }, [locale]);
 
   return (
-    <PageClipper unPadded>
+    <PageClipper>
       <Head
         {...head}
         es_canonical={`https://acueducto.studio/articulos`}
-        // image={{ fileName: `${post.slug}.png`, alt: post.title }}
       ></Head>
       <TitleSection {...intro} />
       {posts.reverse().map((post, i) => (

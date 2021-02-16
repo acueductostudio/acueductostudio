@@ -1,9 +1,11 @@
 {
   "trailingSlash": false,
-  "rewrites" :[{
-    "source" : "/static/assets/img/og/og_main.jpg",
-    "destination" : "/assets/img/og/og_main.jpg"
-  }],
+  "rewrites": [
+    {
+      "source": "/static/assets/img/og/og_main.jpg",
+      "destination": "/assets/img/og/og_main.jpg"
+    }
+  ],
   "redirects": [
     {
       "source": "/agendarconsultoria",
@@ -34,11 +36,6 @@
       "source": "/en/nosotros",
       "destination": "/en/about",
       "permanent": true
-    },
-    {
-      "source": "/articulos",
-      "destination": "/articulos/piensa-tu-producto-escalable-desde-el-inicio",
-      "permanent": false
     }
   ],
   "headers": [

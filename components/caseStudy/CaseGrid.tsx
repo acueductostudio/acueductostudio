@@ -4,12 +4,14 @@ import styled from "styled-components";
 const CaseGrid = ({
   children,
   reverse,
+  early,
 }: {
   children: ReactNode;
   reverse?: boolean;
+  early?: number;
 }) => {
   return (
-    <Case reverse={reverse}>
+    <Case reverse={reverse} early={early}>
       <Img>{children[0]}</Img>
       <Info>{children[1]}</Info>
     </Case>
@@ -33,7 +35,7 @@ export const Info = styled.div`
   grid-row: 1 / span 1;
 `;
 
-export const Case = styled.div<{ reverse: boolean }>`
+export const Case = styled.div<{ reverse: boolean; early: number }>`
   display: grid;
   border-top: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
@@ -47,7 +49,7 @@ export const Case = styled.div<{ reverse: boolean }>`
   ${Img} {
     grid-column-start: ${(p) => (p.reverse ? 2 : 1)};
   }
-  @media (max-width: 700px) {
+  @media (max-width: ${(p) => (p.early ? p.early : 700)}px) {
     display: flex;
     flex-direction: column;
     ${Info} {

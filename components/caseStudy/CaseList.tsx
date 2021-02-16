@@ -125,6 +125,10 @@ const Flexed = styled.div`
 `;
 
 const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   a {
     text-decoration: none;
   }

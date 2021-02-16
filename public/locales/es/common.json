@@ -4,7 +4,7 @@
     { "title": "nosotros", "link": "/nosotros" },
     { "title": "portafolio", "link": "/portafolio" },
     { "title": "contacto", "link": "/contacto" }
-  ], 
+  ],
   "legal_nav": {
     "cookies": { "title": "política de cookies", "link": "/cookies" },
     "privacy": { "title": "política de privacidad", "link": "/privacidad" }
@@ -48,7 +48,7 @@
       "resources": [
         { "title": "podcast", "link": "/podcast" },
         { "title": "diagnóstico", "link": "/diagnostico" },
-        { "title": "artículos", "link": "/articulos/piensa-tu-producto-escalable-desde-el-inicio" }
+        { "title": "artículos", "link": "/articulos" }
       ],
       "policies": [
         { "title": "cookies", "link": "/cookies" },

@@ -57,6 +57,10 @@ const routes = [
     priority: 0.7,
   },
   {
+    es: "/articulos",
+    priority: 0.7,
+  },
+  {
     es: "/articulos/piensa-tu-producto-escalable-desde-el-inicio",
     priority: 0.7,
   },
@@ -99,7 +103,9 @@ const enRoute = (route) =>
       route.es !== undefined
         ? `<xhtml:link rel="alternate" hreflang="en" href="${url + route.en}"/>
            <xhtml:link rel="alternate" hreflang="es" href="${url + route.es}"/>
-           <xhtml:link rel="alternate" hreflang="x-default" href="${url + route.en}"/>`
+           <xhtml:link rel="alternate" hreflang="x-default" href="${
+             url + route.en
+           }"/>`
         : `<language>en</language>`
     }
     <priority>${route.priority}</priority>

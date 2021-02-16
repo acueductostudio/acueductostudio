@@ -1,9 +1,9 @@
 ---
 title: "Piensa tu producto escalable desde el inicio"
-subtitle: "Los desarrollos de software que no se preparan para su expansión limitan a sus negocios exponiéndose a considerables pérdidas de recursos."
+subtitle: "Los productos digitales que no se preparan para su expansión se exponen a pérdidas considerables"
 excerpt: "El alcance de los desarrollos digitales no tiene límite. Esta es su principal promesa: la escalabilidad, por eso los llaman negocios de alto impacto."
 author: "Rodrigo Salmerón"
-date: "2021-02-28"
+date: "2021-02-09"
 ---
 
 El alcance de los desarrollos digitales no tiene límite. Disponibles **en** todo el planeta y **para** todo el planeta, estas plataformas permiten modelos de negocios poco accesibles para los negocios tradicionales, pues son modelos por autonomasia escalables. Esta es su principal promesa: la escalabilidad, por eso los llaman negocios de alto impacto. A diferencia de su crecimiento, la escalabilidad de un negocio es la posibilidad de incrementar sus utilidades **sin** incurrir en costos significativos -de vender más sin gastar más- y puede ser la diferencia entre el éxito o no de su incursión en los canales digitales.
