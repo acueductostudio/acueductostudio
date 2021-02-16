@@ -6,8 +6,8 @@
     "headerTitle": "About"
   },
   "intro": {
-    "title": "as experts in the digital context",
-    "p": "Without us realizing, we started this studio 15 years ago growing together and sharing design and personal & professional projects.<br/><br/>Motivated by innovation and high quality standards, we joined our professional paths in order to create thoughtful and powerful digital experiences.</br></br>Acueducto is not just a studio, it is the result of a journey that has taken many years to build, as our own friendship has."
+    "title": "a duo that can grow your business",
+    "p": "Without realizing it, we started this studio 15 years ago, growing together and sharing professional and personal projects. </br></br>Motivated by innovation and high-quality standards, we came together professionally to create inspirational digital strategies. </br></br>Acueducto isn’t just a studio, it’s the result of a path that has taken us years to travel, just like our friendship."
   },
   "team": [
     {
@@ -18,7 +18,7 @@
     {
       "name": "artemio<br/>pedraza",
       "position": "strategy & communication / co-founder",
-      "bio": "A communication strategist, project and community manager with six years of experience as a freelancer.<br/><br/>He has gone from copywriter to content manager, and marketing consultant and is one of the first licensed digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own digital record label Bludot."
+      "bio": "A communication strategist, project and community manager with 7 years of experience as a freelancer.<br/><br/>He has gone from copywriter to content manager, and marketing consultant and is one of the first licensed digital communicators in Mexico.<br/><br/>When he’s not directing the strategy department or managing a project at Acueducto, he runs his own digital record label Bludot."
     }
   ],
   "manifesto": {
@@ -70,8 +70,8 @@
     }
   },
   "process": {
-    "title": "is placing strategy<br/>at the core",
-    "p": "Innovation happens not by a spontaneous spark of creativity, but through a process that looks for real pain points and the best way to solve them.<br/><br/>Approaching challenges through Strategic Design means working, alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.<br/><br/><b>Discover our process.</b>",
+    "title": "placing strategy<br/>at the core",
+    "p": "Innovation happens not by a spontaneous spark of creativity, but through a process that looks for real pain points, areas of opportunity, and the best way to solve them.</br></br>Approaching challenges through a design-driven perspective means working, alongside our partners, from the inception of the project, to develop strategies that deliver the best results for them and their users.</br></br><b>Discover our process.</b>",
     "steps": [
       {
         "title": "discover",
@@ -100,7 +100,7 @@
     ]
   },
   "values": {
-    "title": "to build better<br/>communities",
+    "title": "build better<br/>communities",
     "p": "To the benefit of both final users and stakeholders, we are always looking for ways to make a positive impact through our work.<br/><br/>That’s why we founded Acueducto, to ask the hard questions, test the ground on which we stand, and help brands and businesses enhance their surroundings and empower their users."
   }
 }
