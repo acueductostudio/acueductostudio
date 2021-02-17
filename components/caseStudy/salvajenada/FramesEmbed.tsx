@@ -4,22 +4,11 @@ const FramesEmbed = () => (
   <FramesWrapper>
     <Frame>
       <iframe
-        title="Apple Music Player"
-        allow="autoplay *; encrypted-media *;"
-        frameBorder="0"
-        height="400"
-        width="300"
-        src="https://embed.music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP?l=en"
-      ></iframe>
-    </Frame>
-    <Frame>
-      <iframe
         title="Spotify Player"
         src="https://open.spotify.com/embed/playlist/4GjrIoPOl6xNo9ZPOhF3tz"
         width="300"
         height="400"
         frameBorder="0"
-        allowtransparency="true"
         allow="encrypted-media"
       ></iframe>
     </Frame>
@@ -41,22 +30,16 @@ const Frame = styled.div`
 `;
 
 const FramesWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10rem;
-  max-width: 85%;
-  width: 100%;
-  margin: 2% 0 5% 0;
-  padding: 0 5%;
-  @media (max-width: 1200px) {
-    max-width: 100%;
-  }
-  @media (max-width: 1200px) {
-    grid-gap: 2rem;
-  }
-  @media (max-width: 700px) {
+  div {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+  }
+  max-width: 100%;
+  width: 100%;
+  margin: 0% 0 5% 0;
+  padding: 0 5%;
+  @media (max-width: 700px) {
     ${Frame} {
       iframe {
         max-width: 100%;

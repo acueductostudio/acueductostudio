@@ -6,37 +6,39 @@
   },
   "intro": {
     "title": "and now,<br/>our pitch",
-    "p0": "Digital technology has drastically restructured industry after industry, so many businesses have undergone dramatic transformations either to benefit from this trend or simply to keep their organization competitive.<br/><br/>At Acueducto we seek to develop the strategies and products that you need to keep your business healthy in the digital era. In this page we explain in detail how we generate value to organizations that look for competitive solutions in digital tools. ",
-    "subtitle1": "innovation areas",
+    "p0": "Digital technology has drastically restructured market after market. The world’s top businesses have developed digital products and services, web and mobile apps, marketing strategies, and/or automated their processes to keep up with the digital world and remain competitive.",
+    "subtitle1": "design and technology to innovate in areas like",
     "li1": [
-      "User/Client experience",
+      "Customer/user experience",
       "Brand development",
-      "Business operations",
-      "Digital business models"
+      "Internal processes",
+      "Business models"
     ],
-    "p1": "At Acueducto, we develop the strategies and interfaces needed to materialize your digital ideas. Always with a design-driven approach, from ideation to launch, developing:",
-    "subtitle3": "strategic design",
-    "p3": "<b>Strategic design</b> develops business solutions applying design principles to maximize innovation and competitiveness in your organization. It analyzes external and internal trends alongside your business’ hard data in order to make fact-based decisions instead of following esthetics or intuition.",
-    "subtitle4": "digital transformation",
-    "p4": "<b>Digital transformation</b> refers to the adoption of digital processes and tools in order to achieve strategic business goals. With the implementation of technological advances we can find innovative ways to stimulate the growth of your organization.",
-    "subtitle5": "one important fact",
+    "p1": "At Acueducto, we develop the necessary strategies and interfaces to materialize your digital ideas. Hand in hand with your industry experience and a design-driven approach, we co-create:",
+    "subtitle3": "digital strategies",
+    "p3": "Having a solid digital strategy is the cornerstone of any business, regardless of its objective. In 2019 alone, 44% of businesses in the US adopted digital strategies into their customer experience and operations <cite>(PROGRESS, 2019)</cite>.With the latest digital ecosystem tools and your industry expertise, we create bold strategies. It all starts with your idea.",
+    "subtitle4": "digital interfaces",
+    "p4": "Digital interfaces are the human-machine means of interaction. They can be web and mobile apps, digital products and services, or even voice interfaces like Siri or Alexa. Designing the use of those interfaces (User Experience or UX) is vital for optimal functionality, usability, user retention, and scalability.</br></br>Without design tailored to the user’s needs and the business’ goals, any project’s success rate suffers severely.",
+    "subtitle5": "an important fact",
     "img_business": "design-driven companies",
-    "alt": "Design-driven companies outperformed the S&P500 by 211% in the last 10 years.",
-    "p5": "Design-driven companies outperformed the S&P500 by 211% in the last 10 years."
+    "alt": "Design-driven companies have won a considerable lead in the stock market, performing better than S&P500 companies by 211%.",
+    "p5": "Design-driven companies have won a considerable lead in the stock market, performing better than S&P 500 companies by 211%."
   },
   "second_section": {
-    "title": "we look for partners,<br/> not clients",
-    "p": "In Acueducto we firmly believe in the value of partnerships. Unlike the client-agency relationship that dominates the market, partnering with you allows us to get involved in the structure of your project and apply design processes and strategies of greater impact."
+    "title": "case studies speak for themselves",
+    "p": "Rahid was perceived, even by its founder, as a low profile brand. Its identity was weak and it lacked cohesion between its sales channels.",
+    "linktext": "Read ",
+    "link": ["/portafolio/rahid", "about it"]
   },
   "products_section": {
     "intro": {
-      "title": "to develop innovative ideas",
-      "p": "Innovation is now a necessity for every business. To keep your company relevant in digital contexts you can rely on us to develop:"
+      "title": "to develop</br> innovative ideas",
+      "p": "Each dollar invested in user experience by designing products, services, and tools can see anywhere from 2 to 100 dollars in return <cite>(FORRESTER RESEARCH, 2017)</cite>.</br></br>Companies like Airbnb, Uber, or Google owe a large part of their success to developing excellent digital experiences around their users. Essentially, the goal is to build the best digital interfaces for both your customers and employees to interact with your business.</br></br>You can trust us to develop:"
     },
     "products": [
       {
-        "title": "digital strategy",
-        "p": "Elevate the perception of your product, service or organization through strategic design."
+        "title": "digital strategies",
+        "p": "Analyze external and internal trends, and your business’s data to make optimal decisions."
       },
       {
         "title": "mobile<br/>and web apps",
@@ -54,7 +56,7 @@
   },
   "process_section": {
     "title": "following a strategic process",
-    "p": "Our process is the most valuable resource we have. It’s designed to operate in any industry and we follow through it in every project. We iterate over it each time we use it so every step we take gives us the security to take the next one.",
+    "p": "Our process is designed to iterate onto itself, getting closer to perfection with each project we see come to fruition. We’ve been developing it for years and it’s become one of our most precious assets. </br></br>It’s thanks to our process that we can confidently take one step after another. </br>Get acquainted with it.",
     "steps": [
       {
         "title": "discover",
@@ -98,7 +100,7 @@
     ]
   },
   "tools_section": {
-    "title": "with the<br/>best tools only",
-    "p": "Your project is unique and requieres personalized treatment, that’s why we perform careful analysis to find the toolkit best fit for its development."
+    "title": "working only</br> with the best tools",
+    "p": "Each project is unique and requires personalized treatment, that’s why we perform careful analyses to find the toolkit best fit for its development. In a sea of possibilities, we pick those that will help us achieve your business goals."
   }
 }
