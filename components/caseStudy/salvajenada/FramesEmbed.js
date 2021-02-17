@@ -5,10 +5,11 @@ const FramesEmbed = () => (
     <Frame>
       <iframe
         title="Apple Music Player"
-        allow="autoplay *; encrypted-media *;"
+        allow="autoplay *; encrypted-media *; fullscreen *"
         frameBorder="0"
         height="400"
         width="300"
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
         src="https://embed.music.apple.com/mx/playlist/canasta-b%C3%A1sica/pl.u-e98lkq9hK27VzP?l=en"
       ></iframe>
     </Frame>
