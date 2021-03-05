@@ -28,7 +28,10 @@ const NewsletterPopup = () => {
       email: data.email,
       listIds: [2],
       updateEnabled: true,
-    });
+      attributes: {
+        SUBSCRIBED_FROM: "popup",
+      },
+    }); 
     ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Suscripción a la newsletter
     logEvent("newsletter-popup", "dejó email");

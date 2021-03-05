@@ -23,7 +23,7 @@ export default function Article({ locale, setTitle, article }) {
         image={{ fileName: `${article.slug}.png`, alt: article.title }}
       ></Head>
       <ArticlePage {...article} slug={article.slug} />
-      <ResourceFooter />
+      <ResourceFooter identify={article.slug}/>
     </PageClipper>
   );
 }

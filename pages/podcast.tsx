@@ -181,7 +181,7 @@ function Podcast({ locale, setTitle, pt }) {
           </PodcastList>
         </div>
       </PodcastGrid>
-      <ResourceFooter shadow/>
+      <ResourceFooter shadow identify="podcast"/>
     </PageClipper>
   );
 }

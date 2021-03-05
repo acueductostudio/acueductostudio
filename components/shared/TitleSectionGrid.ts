@@ -65,6 +65,7 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
   @media (max-width: 1250px) {
     h1 {
       font-size: 6rem;
+      line-height: 110%;
     }
   }
   @media (max-width: 1100px) {

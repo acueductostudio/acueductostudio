@@ -31,7 +31,7 @@ export default function Articles({ locale, setTitle, posts, pt }) {
           key={`article${i}`}
         />
       ))}
-      <ResourceFooter />
+      <ResourceFooter identify="articulos"/>
     </PageClipper>
   );
 }

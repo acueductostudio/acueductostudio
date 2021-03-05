@@ -11,7 +11,13 @@ import { createContact } from "utils/sendinBlue";
 import { logEvent, advancedMatching } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
 
-const ResourceFooter = ({ shadow }: { shadow?: boolean }) => {
+const ResourceFooter = ({
+  shadow,
+  identify,
+}: {
+  shadow?: boolean;
+  identify?: string;
+}) => {
   let resource = es.resource_footer;
 
   const onSubmit = (data) => {
@@ -22,6 +28,9 @@ const ResourceFooter = ({ shadow }: { shadow?: boolean }) => {
       email: data.email,
       listIds: [2],
       updateEnabled: true,
+      attributes: {
+        SUBSCRIBED_FROM: identify ? identify : "sin identificar",
+      },
     });
     ReactPixel.init("506854653278097", advancedMatching(data.email));
     // Suscripción a la newsletter
@@ -87,10 +96,10 @@ const ResourceForm = styled.div`
 `;
 
 const Message = styled.div`
-  color: ${(p) => p.theme.colors.background};
+  color: ${(p) => p.theme.colors.foreground};
   font-size: 1.8rem;
   padding-bottom: 5px;
-  font-weight: 200;
+  font-weight: 300;
   @media (max-width: 600px), (max-height: 450px) {
     font-size: 1.5rem;
   }
