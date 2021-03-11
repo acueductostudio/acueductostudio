@@ -38,7 +38,7 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
     "styled-components": "^5.2.1",
-    "three": "^0.125.2"
+    "three": "^0.126"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^10.0.6",
