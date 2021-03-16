@@ -126,7 +126,7 @@ export default function FooterNav() {
       </Navs>
       <Colophon>
         <Fade triggerOnce>
-          <p>© 2020, Acueducto</p>
+          <p>© 2021, Acueducto</p>
           <a
             href={`mailto:hola@acueducto.studio?subject=${mailto.subject}&body=${mailto.body}`}
           >
