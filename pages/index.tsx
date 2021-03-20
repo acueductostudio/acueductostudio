@@ -85,6 +85,7 @@ const Land = styled.section`
   h2 {
     font-size: 2.1rem;
     margin-top: 15px;
+    max-width: 520px;
     color: ${(props) => props.theme.colors.white};
   }
   h1 {
@@ -116,19 +117,22 @@ const Land = styled.section`
   @media (max-width: 900px) {
     h1 {
       font-size: 5rem;
+      max-width:360px;
     }
     h2 {
       font-size: 1.8rem;
+      max-width:420px;
     }
   }
   @media (max-width: 700px) {
     h1 {
       font-size: 4rem;
+      max-width:450px;
     }
   }
   @media (max-width: 520px) {
     h1 {
-      max-width: 300px;
+      max-width: 280px;
     }
   }
   @media (max-width: 420px) {
@@ -138,7 +142,7 @@ const Land = styled.section`
     }
     h2 {
       font-size: 1.6rem;
-      max-width: 240px;
+      max-width: 280px;
     }
   }
 `;
