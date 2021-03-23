@@ -12,7 +12,7 @@
   "podcasts": [
     {
       "title": "Protección legal digital",
-      "guest": "Salvador Camacho",
+      "guest": "Salvador Camacho, Kalpa",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/2840290-e01-proteccion-legal-digital-salvador-camacho.mp3?blob_id=9780370&download=true",
         "spotify": "https://open.spotify.com/episode/6tE3seBLPt0GB6tYdHaqwf?si=UD7Sl2ztQ0auvs41nAh3Ow",
@@ -24,7 +24,7 @@
     },
     {
       "title": "Neutralidad de la red",
-      "guest": "Carlos Fuentes",
+      "guest": "Carlos Fuentes, Geek End",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/2931472-e02-neutralidad-de-la-red-carlos-fuentes.mp3?blob_id=10933045&download=true",
         "spotify": "https://open.spotify.com/episode/4b9f0kCHFzfF1fOHLpUmTj?si=6YL8yy7XSpyZ4eBvXf3ReA",
@@ -36,7 +36,7 @@
     },
     {
       "title": "Negocios en cuarentena",
-      "guest": "Juan Pablo Sánchez",
+      "guest": "Juan Pablo Sánchez, BlueBox",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/3608812-e03-negocios-en-cuarentena-juan-pablo-sanchez.mp3?blob_id=13343389&download=true",
         "spotify": "https://open.spotify.com/episode/0jtAKm8v3O6UWEVkZHiUbR?si=7PyEweQDSdmVWuP6WVZ8tA",
@@ -48,7 +48,7 @@
     },
     {
       "title": "Branding digital para negocios",
-      "guest": "Tania Lili",
+      "guest": "Tania Lili, Pratt Institute",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/4459301-e04-branding-digital-para-negocios-tania-lili.mp3?blob_id=17551106&download=true",
         "spotify": "https://open.spotify.com/episode/5M9L984seHD9isRPqdXdus?si=6mxlY-8-S9uOqgYIWfDj-w",
@@ -56,11 +56,11 @@
         "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC00NDU5MzAx",
         "youtube": "https://www.youtube.com/watch?v=n8qaGKmbgVo&t=9s"
       },
-      "text": "Tuvimos una charla remota con Tania Lili, una diseñadora multidisciplinaria con base en Brooklyn, Nueva York; para desmenuzar el concepto de Branding Digital para Negocios, así como ahondar en sus mejores prácticas, tendencias y recursos."
+      "text": "Tuvimos una charla remota con Tania Lili, una diseñadora multidisciplinaria y profesora adjunta del Pratt Institute con base en Brooklyn, Nueva York; para desmenuzar el concepto de Branding Digital para Negocios, así como ahondar en sus mejores prácticas, tendencias y recursos."
     },
     {
       "title": "Educación y transformación digital",
-      "guest": "Noemí Valencia",
+      "guest": "Noemí Valencia, Knotion",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/5377567-e05-educacion-y-transformacion-digital-noemi-valencia.mp3?blob_id=21845899&download=true",
         "spotify": "https://open.spotify.com/episode/1uIGMGR7NSjqgmCdf5XrRK?si=mDsIrgKxQvG0ZKEKlwSX9Q",
@@ -72,7 +72,7 @@
     },
     {
       "title": "Movilidad inteligente y venture capital",
-      "guest": "Nadim Matuk",
+      "guest": "Nadim Matuk, Liil Ventures",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/6829186-e06-movilidad-inteligente-y-venture-capital-nadim-matuk.mp3?blob_id=29316308&download=true",
         "spotify": "https://open.spotify.com/episode/0glZ5p5fpchsnAvdgTMxqA",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Experiencia de usuario y fintech",
-      "guest": "María Fernanda Herrera",
+      "guest": "María Fernanda Herrera, Rappi",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/7567648-e07-experiencia-de-usuario-y-fintech-maria-fernanda-herrera.mp3?blob_id=33594316&download=true",
         "spotify": "https://open.spotify.com/episode/1aYPu763hSEOMwdm5QitWc",
@@ -93,6 +93,17 @@
         "youtube" : "https://www.youtube.com/watch?v=BE5Xo8Uj3uQ"
       },
       "text": "Nuestra primer conversación del año fue con María Fernanda Herrera, directora en diseño de producto en RappiPay, donde acaban de lanzar RappiCard: la tarjeta de crédito de Rappi. En la charla abordamos la experiencia de usuario, mejores prácticas en el tema, consideraciones y aprendizajes del sector Fintech y las recomendaciones para negocios que tiene Mafer para nuestra comunidad."
+    },
+    {
+      "title": "Hospitalidad y operaciones",
+      "guest": "Maricarmen Herrerías, Casai",
+      "urls": {
+        "file": "https://www.buzzsprout.com/895972/8148990-e08-hospitalidad-y-operaciones-maricarmen-herrerias-casai.mp3?blob_id=36901568&download=true",
+        "spotify": "https://open.spotify.com/episode/6CNou3oRhZXH3SBUcVqZx3",
+        "apple": "https://podcasts.apple.com/mx/podcast/e07-experiencia-usuario-y-fintech-mar%C3%ADa-fernanda-herrera/id1500473556?i=1000507484722",
+        "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC03NTY3NjQ4"
+      },
+      "text": "En este episodio hablamos con Maricarmen Herrerías, COO y cofundadora de Casai, acerca del rol de un director de operaciones, sus mejores consejos para emprendedores y la trayectoria de su startup para levantar 53 millones de dólares en inversión."
     }
   ]
 }
