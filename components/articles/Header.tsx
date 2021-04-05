@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 
-const Header = ({ slug }: { slug: string }) => (
+const Header = ({ slug, title }: { slug: string; title: string }) => (
   <Fade triggerOnce>
     <Pos>
-      <Image layout="fill" src={`/assets/img/articles/${slug}/header.svg`} />
+      <Image layout="fill" src={`/assets/img/articles/${slug}/header.svg`} alt={title}/>
       <Fader />
     </Pos>
   </Fade>

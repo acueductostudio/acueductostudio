@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { H1, Div } from "components/shared/Dangerously";
 import Grid from "components/shared/TitleSectionGrid";
-import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 import Header from "./Header";
 import {
@@ -34,7 +33,7 @@ const ArticlePage = ({
   });
   return (
     <>
-      <Header slug={slug} />
+      <Header slug={slug} title={title}/>
       <ArticleGrid>
         <Fade triggerOnce>
           <H1>{title.charAt(0).toLowerCase() + title.slice(1)}</H1>
