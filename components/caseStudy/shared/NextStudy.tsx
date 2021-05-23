@@ -32,10 +32,10 @@ const NextStudy = ({
         </LogoContainer>
         <Fade triggerOnce>
           <P>{n.p}</P>
-          <ArrowContainer>
-            <Arrow />
-          </ArrowContainer>
         </Fade>
+        <ArrowContainer>
+          <Arrow />
+        </ArrowContainer>
       </Wrapper>
     </Link>
   );
@@ -44,7 +44,7 @@ const NextStudy = ({
 export default React.memo(NextStudy);
 
 const ArrowContainer = styled.div`
-  margin-top: 10%;
+  margin-top: 15px;
 `;
 
 const LogoContainer = styled.div`

@@ -41,7 +41,7 @@ const jumping = keyframes`
     opacity:1;
   }
 `;
-const Jumper = styled.div`
+const Jumper = styled.div<{reveal?:boolean, showArrow:boolean}>`
   animation-name: ${p=>p.reveal ? jumping : "none"};
   transform: translateY(0) rotate(90deg);
   opacity: 0;
@@ -55,7 +55,7 @@ const Jumper = styled.div`
   cursor: pointer;
 `;
 
-const Container = styled.div`
+const Container = styled.div<{reveal?:boolean, showArrow:boolean}>`
   bottom: 50%;
   display: flex;
   z-index: 7;
