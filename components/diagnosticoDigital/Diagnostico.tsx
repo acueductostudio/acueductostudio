@@ -13,19 +13,19 @@ import InputField, { SubmitField } from "components/shared/ContactInputField";
 const NUMBER_OF_QS = 15;
 
 const Diagnostico = ({ diagnose_section, results_section }) => {
-  let {
-    questions,
-    collection_form,
-    progressLine,
-    analyzing_results,
-  } = diagnose_section;
+  let { questions, collection_form, progressLine, analyzing_results } =
+    diagnose_section;
 
   const [qIndex, setQIndex] = useState(0);
   const [aIndex, setAIndex] = useState(0);
   const [aIndexShouldIncrease, setAIndexShouldIncrease] = useState(true);
   const [testStatus, setTestStatus] = useState("");
   const [results, setResults] = useState([]);
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = (data) => {
     setTestStatus("loading");
@@ -152,7 +152,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                         name={"Q" + index}
                         type="radio"
                         value={10}
-                        ref={register}
+                        {...register("Q" + index)}
                         onClick={handleClick}
                       />
                       <span />
@@ -163,7 +163,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                         name={"Q" + index}
                         type="radio"
                         value={5}
-                        ref={register}
+                        {...register("Q" + index)}
                         onClick={handleClick}
                       />
                       <span />
@@ -174,7 +174,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                         name={"Q" + index}
                         type="radio"
                         value={0}
-                        ref={register}
+                        {...register("Q" + index)}
                         onClick={handleClick}
                       />
                       <span />
@@ -197,7 +197,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       type="text"
                       id="firstName"
                       placeholder={collection_form.firstName.placeholder}
-                      ref={register({ required: true })}
+                      {...register("firstName", { required: true })}
                     />
                     {errors.firstName && (
                       <span>{collection_form.firstName.errorMissing}</span>
@@ -213,7 +213,7 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       type="text"
                       id="lastName"
                       placeholder={collection_form.lastName.placeholder}
-                      ref={register({ required: true })}
+                      {...register("lastName", { required: true })}
                     />
                     {errors.lastName && (
                       <span>{collection_form.lastName.errorMissing}</span>
@@ -227,13 +227,11 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
                       type="email"
                       id="email"
                       placeholder={collection_form.email.placeholder}
-                      ref={register({
-                        required: {
-                          value: true,
-                          message: collection_form.email.errorMissing,
-                        },
+                      {...register("email", {
+                        required: collection_form.email.errorMissing,
                         pattern: {
-                          value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                          value:
+                            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
                           message: collection_form.email.errorInvalid,
                         },
                       })}
@@ -286,10 +284,10 @@ const Diagnostico = ({ diagnose_section, results_section }) => {
 export default React.memo(Diagnostico);
 
 const fadeIn = keyframes`
-  0% {
+  from {
     width: 5%;
   }
-  100% {
+  to {
     width: 70%;
   }
 `;

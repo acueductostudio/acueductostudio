@@ -6,7 +6,7 @@ import delayForLoading from "utils/delayForLoading";
 import InputField, { SubmitField } from "components/shared/ContactInputField";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 
-type FormInput = {
+type FormProps = {
   text: {
     firstName: {
       label: string;
@@ -25,7 +25,7 @@ type FormInput = {
       errorInvalid: string;
     };
     loading: string;
-    submit:string;
+    submit: string;
   };
   onSubmit: (data: object) => void;
   formMarkup?: React.ReactNode;
@@ -45,9 +45,13 @@ const DefaultForm = ({
   successMarkup,
   id,
   infinite,
-}: FormInput) => {
+}: FormProps) => {
   const [formStatus, setFormStatus] = useState("");
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSubmitInside = (data) => {
     console.log(data);
@@ -70,7 +74,7 @@ const DefaultForm = ({
                 id={`${id}firstName`}
                 type="text"
                 placeholder={text.firstName.placeholder}
-                ref={register({ required: true })}
+                {...register("firstName", { required: true })}
               />
               {errors.firstName && <span>{text.firstName.errorMissing}</span>}
             </InputField>
@@ -81,7 +85,7 @@ const DefaultForm = ({
                 id={`${id}lastName`}
                 type="text"
                 placeholder={text.lastName.placeholder}
-                ref={register({ required: true })}
+                {...register("lastName", { required: true })}
               />
               {errors.lastName && <span>{text.lastName.errorMissing}</span>}
             </InputField>
@@ -92,13 +96,11 @@ const DefaultForm = ({
                 id={`${id}email`}
                 type="email"
                 placeholder={text.email.placeholder}
-                ref={register({
-                  required: {
-                    value: true,
-                    message: text.email.errorMissing,
-                  },
+                {...register("email", {
+                  required: text.email.errorMissing,
                   pattern: {
-                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                    value:
+                      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
                     message: text.email.errorInvalid,
                   },
                 })}
@@ -135,10 +137,10 @@ const DefaultForm = ({
 export default DefaultForm;
 
 const fadeIn = keyframes`
-  0% {
+  from {
     width: 5%;
   }
-  100% {
+  to {
     width: 100%;
   }
 `;

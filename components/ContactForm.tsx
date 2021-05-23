@@ -2,17 +2,21 @@ import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import delayForLoading from "utils/delayForLoading.ts";
-import { sendToHola } from "utils/sendinBlue.ts";
+import delayForLoading from "utils/delayForLoading";
+import { sendToHola } from "utils/sendinBlue";
 import InputField, { CheckMark } from "components/shared/ContactInputField";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 
-const DefaultForm = ({ text }) => {
+const ContactForm = ({ text }) => {
   const [formStatus, setFormStatus] = useState("");
   const [requirePhone, setRequirePhone] = useState(false);
   const formRef = useRef(null);
 
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSubmitInside = (data) => {
     document.getElementById("Scroll").scrollIntoView({ behavior: "smooth" });
@@ -36,13 +40,11 @@ const DefaultForm = ({ text }) => {
                 id={`cp_email`}
                 type="email"
                 placeholder={text.email.placeholder}
-                ref={register({
-                  required: {
-                    value: true,
-                    message: text.email.errorMissing,
-                  },
+                {...register("email", {
+                  required: text.email.errorMissing,
                   pattern: {
-                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
+                    value:
+                      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i,
                     message: text.email.errorInvalid,
                   },
                 })}
@@ -57,14 +59,9 @@ const DefaultForm = ({ text }) => {
                 id={`cp_firstName`}
                 type="text"
                 placeholder={text.firstName.placeholder}
-                ref={register({
-                  required: {
-                    value: true,
-                    message: text.firstName.errorMissing,
-                  },
-                })}
+                {...register("firstName", { required: true })}
               />
-              <span>{errors?.firstName?.message}</span>
+              {errors.firstName && <span>{text.firstName.errorMissing}</span>}
             </InputField>
 
             <InputField>
@@ -74,7 +71,7 @@ const DefaultForm = ({ text }) => {
                 id={`cp_lastName`}
                 type="text"
                 placeholder={text.lastName.placeholder}
-                ref={register({ required: true })}
+                {...register("lastName", { required: true })}
               />
               {errors.lastName && <span>{text.lastName.errorMissing}</span>}
             </InputField>
@@ -85,7 +82,7 @@ const DefaultForm = ({ text }) => {
                 id={`cp_company`}
                 type="text"
                 placeholder={text.company.placeholder}
-                ref={register({ required: true })}
+                {...register("company", { required: true })}
               />
               {errors.company && <span>{text.company.errorMissing}</span>}
             </InputField>
@@ -95,7 +92,7 @@ const DefaultForm = ({ text }) => {
                 name="message"
                 id={`cp_message`}
                 placeholder={text.message.placeholder}
-                ref={register({ required: true })}
+                {...register("message", { required: true })}
               />
               {errors.message && <span>{text.message.errorMissing}</span>}
             </InputField>
@@ -108,7 +105,7 @@ const DefaultForm = ({ text }) => {
                 id={`cp_phoneCheckbox`}
                 type="checkbox"
                 placeholder={text.message.placeholder}
-                ref={register()}
+                {...register("phoneCheckbox")}
                 onChange={phoneFieldChange}
               />
               <span className="checkmark"></span>
@@ -122,11 +119,8 @@ const DefaultForm = ({ text }) => {
                     id={`cp_phone`}
                     type="phone"
                     placeholder={"+52 55 8778 8778"}
-                    ref={register({
-                      required: {
-                        value: true,
-                        message: text.phone.errorMissing,
-                      },
+                    {...register("phone", {
+                      required: text.phone.errorMissing,
                       pattern: {
                         value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/i,
                         message: text.phone.errorInvalid,
@@ -152,12 +146,12 @@ const DefaultForm = ({ text }) => {
           </Loading>
         </Fade>
       )}
-      {formStatus === "done" && <Message success>{text.success.p}</Message>}
+      {formStatus === "done" && <Message>{text.success.p}</Message>}
     </>
   );
 };
 
-export default DefaultForm;
+export default ContactForm;
 
 const Message = styled.div`
   color: ${(p) => p.theme.colors.success};
@@ -171,10 +165,10 @@ const Message = styled.div`
 `;
 
 const fadeIn = keyframes`
-  0% {
+  from {
     width: 5%;
   }
-  100% {
+  to {
     width: 100%;
   }
 `;
