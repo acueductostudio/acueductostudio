@@ -11,7 +11,7 @@
   },
   "podcasts": [
     {
-      "title": "Protección legal digital",
+      "title": "El 101 de la protección legal digital",
       "guest": "Salvador Camacho, Kalpa",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/2840290-e01-proteccion-legal-digital-salvador-camacho.mp3?blob_id=9780370&download=true",
@@ -23,7 +23,7 @@
       "text": "Inauguramos nuestro podcast platicando con el abogado digital Salvador Camacho, con quien exploramos cuáles son las consideraciones legales de la siguiente década para un negocio con prácticas digitales."
     },
     {
-      "title": "Neutralidad de la red",
+      "title": "¿Qué es la neutralidad de la red?",
       "guest": "Carlos Fuentes, Geek End",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/2931472-e02-neutralidad-de-la-red-carlos-fuentes.mp3?blob_id=10933045&download=true",
@@ -35,7 +35,7 @@
       "text": "A escasas semanas de que termine la consulta pública del IFT sobre los lineamientos para proteger la neutralidad de la red en México, nos sentamos con Carlos Fuentes, experto en desarrollo de proyectos de innovación y tecnología, para discutir a detalle cómo estos lineamientos, en vez de proteger la neutralidad, la ponen en riesgo así como a todos los negocios digitales construidos a su alrededor."
     },
     {
-      "title": "Negocios en cuarentena",
+      "title": "Cómo reaccionar a la pandemia con tu negocio",
       "guest": "Juan Pablo Sánchez, BlueBox",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/3608812-e03-negocios-en-cuarentena-juan-pablo-sanchez.mp3?blob_id=13343389&download=true",
@@ -47,7 +47,7 @@
       "text": "Recibimos de forma remota a Juan Pablo Sánchez (COO en Bluebox) para platicar sobre negocios en esta cuarentena y responder ¿Cómo afecta esta situación a las startups y emprendimientos del país? ¿Cómo es recomendable reaccionar? y ¿Qué oportunidades existen en este momento? entre otros temas."
     },
     {
-      "title": "Branding digital para negocios",
+      "title": "Construye identidades que cuenten historias",
       "guest": "Tania Lili, Pratt Institute",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/4459301-e04-branding-digital-para-negocios-tania-lili.mp3?blob_id=17551106&download=true",
@@ -59,7 +59,7 @@
       "text": "Tuvimos una charla remota con Tania Lili, una diseñadora multidisciplinaria y profesora adjunta del Pratt Institute con base en Brooklyn, Nueva York; para desmenuzar el concepto de Branding Digital para Negocios, así como ahondar en sus mejores prácticas, tendencias y recursos."
     },
     {
-      "title": "Educación y transformación digital",
+      "title": "Transforma digitalmente tu negocio a escala",
       "guest": "Noemí Valencia, Knotion",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/5377567-e05-educacion-y-transformacion-digital-noemi-valencia.mp3?blob_id=21845899&download=true",
@@ -71,7 +71,7 @@
       "text": "En este episodio platicamos con Noemí Valencia, quien está al frente de Knotion, una empresa de EdTech que está revolucionando la industria educativa en toda Latinoamérica. En la conversación recorremos la historia de Noemí, principios de transformación digital y sus mejores prácticas y consejos para los negocios del mundo."
     },
     {
-      "title": "Movilidad inteligente y venture capital",
+      "title": "¿Cómo es el mundo del venture capital en Latinoamérica?",
       "guest": "Nadim Matuk, Liil Ventures",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/6829186-e06-movilidad-inteligente-y-venture-capital-nadim-matuk.mp3?blob_id=29316308&download=true",
@@ -83,7 +83,7 @@
       "text": "Cerramos el año con una conversación con Nadim Matuk, quien forma parte integral de Liil Ventures donde encuentra, invierte y escala negocios para crear un impacto en el futuro de la Movilidad, Urbantech y Ciudades Inteligentes. En 45 minutos, desmenuzamos las mejores prácticas que encuentra Nadim en su vertical y los consejos que tiene para negocios de la actualidad."
     },
     {
-      "title": "Experiencia de usuario y fintech",
+      "title": "¿Cómo se diseñan las apps más exitosas?",
       "guest": "María Fernanda Herrera, Rappi",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/7567648-e07-experiencia-de-usuario-y-fintech-maria-fernanda-herrera.mp3?blob_id=33594316&download=true",
@@ -95,7 +95,7 @@
       "text": "Nuestra primer conversación del año fue con María Fernanda Herrera, directora en diseño de producto en RappiPay, donde acaban de lanzar RappiCard: la tarjeta de crédito de Rappi. En la charla abordamos la experiencia de usuario, mejores prácticas en el tema, consideraciones y aprendizajes del sector Fintech y las recomendaciones para negocios que tiene Mafer para nuestra comunidad."
     },
     {
-      "title": "Hospitalidad y operaciones",
+      "title": "¿Cuál es el trabajo de un director de operaciones en una startup?",
       "guest": "Maricarmen Herrerías, Casai",
       "urls": {
         "file": "https://www.buzzsprout.com/895972/8148990-e08-hospitalidad-y-operaciones-maricarmen-herrerias-casai.mp3?blob_id=36901568&download=true",
@@ -105,6 +105,17 @@
         "youtube": "https://www.youtube.com/watch?v=M3AT9QuUvFw"
       },
       "text": "En este episodio hablamos con Maricarmen Herrerías, COO y cofundadora de Casai, acerca del rol de un director de operaciones, sus mejores consejos para emprendedores y la trayectoria de su startup para levantar 53 millones de dólares en inversión."
+    },
+    {
+      "title": "Así funcionan las startups basadas en ciencia",
+      "guest": "Pablo Zamora, NotCo",
+      "urls": {
+        "file": "https://www.buzzsprout.com/895972/8589448-asi-funcionan-las-startups-basadas-en-ciencia-pablo-zamora-notco.mp3?download=true",
+        "spotify": "https://open.spotify.com/episode/43nouAir3lzFjoVPFtgzgc",
+        "apple": "https://podcasts.apple.com/mx/podcast/as%C3%AD-funcionan-las-startups-basadas-en-ciencia-pablo/id1500473556?i=1000523118936",
+        "google": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC04NTg5NDQ4"
+      },
+      "text": "Esta vez hablamos con Pablo Zamora (co-fundador de The NotCompany, biotecnólogo, investigador y empresario) acerca de las startups de investigación científica, sus reflexiones para emprendedores y su experiencia fundando, impulsando e invirtiendo en startups latinoamericanas."
     }
   ]
 }
