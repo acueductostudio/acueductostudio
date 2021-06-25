@@ -143,6 +143,7 @@ function Podcast({ locale, setTitle, pt }) {
                           />
                         </a>
                       )}
+                     {pod.urls.google && (
                       <a
                         onClick={() => handleLog(index, "GooglePodcasts")}
                         target="_blank"
@@ -157,6 +158,7 @@ function Podcast({ locale, setTitle, pt }) {
                           height="43px"
                         />
                       </a>
+                       )}
                       {pod.urls.youtube && (
                         <a
                           onClick={() => handleLog(index, "YouTube")}
@@ -219,7 +221,7 @@ const NewPod = styled.article<{ episode: number }>`
     margin-top: 6px;
     color: ${(p) => p.theme.colors.foreground_low};
     &::before {
-      content: ${(p) => `"0${p.episode}"`};
+      content: ${(p) => `"${p.episode < 10 ? "0" + p.episode : p.episode}"`};
       display: inline-block;
       background-color: ${(p) => p.theme.colors.accent};
       border-radius: 100px;
