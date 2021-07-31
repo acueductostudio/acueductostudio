@@ -12,7 +12,7 @@ import TitleSection from "components/shared/TitleSection";
 import DefaultForm from "components/shared/DefaultForm";
 import Cards from "public/assets/img/layout/logos/cards.svg";
 import Cash from "public/assets/img/layout/logos/cash.svg";
-import Cookies from "js-cookie/dist/js.cookie.mjs";
+import Cookies from "js-cookie";
 import { advancedMatching } from "utils/analytics";
 
 const Pago = ({ locale, setTitle, pt }) => {

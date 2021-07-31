@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import Cross from "public/assets/img/layout/cross.svg";
 import BorderLink from "components/shared/BorderedLink";
-import Cookies from "js-cookie/dist/js.cookie";
+import Cookies from "js-cookie";
 import delayForLoading from "utils/delayForLoading";
 
 const CookieMessage = ({ t, hasLoaded }: { t: any; hasLoaded: boolean }) => {

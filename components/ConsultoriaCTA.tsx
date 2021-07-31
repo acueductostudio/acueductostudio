@@ -6,7 +6,7 @@ import { Span } from "components/shared/Dangerously";
 import { createContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
 import DefaultForm from "components/shared/DefaultForm";
-import Cookies from "js-cookie/dist/js.cookie.mjs";
+import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import BorderLink from "components/shared/BorderedLink";
 import delayForLoading from "utils/delayForLoading";
