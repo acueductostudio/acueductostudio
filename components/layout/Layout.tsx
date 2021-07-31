@@ -77,7 +77,7 @@ const Layout = ({
     TagManager.initialize({
       gtmId: "GTM-NQHHFWF",
     });
-    LinkedInTag.init(1943114, "dc", false);
+    LinkedInTag.init("1943114", "dc", false);
   };
 
   useEffect(() => {
