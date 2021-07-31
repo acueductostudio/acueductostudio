@@ -46,9 +46,7 @@ const nextConfig = {
     ];
   },
   reactStrictMode: true,
-  future: {
-    webpack5: true,
-  },
+  webpack5: true,
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.svg$/,
