@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import Tooltip from "react-tooltip-lite";
+// import Tooltip from "react-tooltip-lite";
 import { H3 } from "components/shared/Dangerously";
 import {
   NodeLogo,
@@ -108,7 +108,7 @@ const RenderLogoList = ({ array }) => (
       let LogoIcon = array[index].i;
       return (
         <li key={array[index].p + index}>
-          <Tooltip
+          {/* <Tooltip
             direction="bottom"
             tagName="span"
             hoverDelay={300}
@@ -116,7 +116,7 @@ const RenderLogoList = ({ array }) => (
             eventOff="onScroll"
           >
             <LogoIcon />
-          </Tooltip>
+          </Tooltip> */}
         </li>
       );
     })}
