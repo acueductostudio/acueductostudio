@@ -106,8 +106,8 @@ function Podcast({ locale, setTitle, pt }) {
                 <Picture
                   src={`/assets/img/podcast/${index + 1}.jpg`}
                   alt={pod.title + " - " + pod.guest}
-                  height={200}
-                  width={200}
+                  height={180}
+                  width={180}
                 />
                 <div>
                   <Fade triggerOnce>
@@ -143,22 +143,22 @@ function Podcast({ locale, setTitle, pt }) {
                           />
                         </a>
                       )}
-                     {pod.urls.google && (
-                      <a
-                        onClick={() => handleLog(index, "GooglePodcasts")}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={pod.urls.google}
-                      >
-                        Google Podcasts
-                        <img
-                          src="assets/img/layout/logos/googlepodcasts.svg"
-                          alt="Escucha en Apple Podcasts"
-                          width="33px"
-                          height="43px"
-                        />
-                      </a>
-                       )}
+                      {pod.urls.google && (
+                        <a
+                          onClick={() => handleLog(index, "GooglePodcasts")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={pod.urls.google}
+                        >
+                          Google Podcasts
+                          <img
+                            src="assets/img/layout/logos/googlepodcasts.svg"
+                            alt="Escucha en Apple Podcasts"
+                            width="33px"
+                            height="43px"
+                          />
+                        </a>
+                      )}
                       {pod.urls.youtube && (
                         <a
                           onClick={() => handleLog(index, "YouTube")}
@@ -183,7 +183,7 @@ function Podcast({ locale, setTitle, pt }) {
           </PodcastList>
         </div>
       </PodcastGrid>
-      <ResourceFooter shadow identify="podcast"/>
+      <ResourceFooter shadow identify="podcast" />
     </PageClipper>
   );
 }
@@ -238,6 +238,7 @@ const NewPod = styled.article<{ episode: number }>`
   }
   & > div:first-of-type {
     margin-right: 5%;
+    min-width: 180px;
   }
   img {
     border-radius: 10px;
@@ -252,6 +253,7 @@ const NewPod = styled.article<{ episode: number }>`
   @media (max-width: 900px) {
     flex-direction: column;
     & > div:first-of-type {
+      min-width: unset;
       max-width: 150px;
       margin-bottom: 2rem;
     }
