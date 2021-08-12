@@ -33,14 +33,14 @@ const returnLd = (locale: string, asPath: string, description: string, title: st
                 caption: image.alt,
                 inLanguage: locale === "en" ? "en" : "es",
             } : {
-                    "@type": "ImageObject",
-                    "@id": `https://acueducto.studio${locale === "en" ? "/en" : ""}${asPath}#primaryimage`,
-                    contentUrl: `https://acueducto.studio/assets/img/og/acueducto.png`,
-                    width: 1200,
-                    height: 1200,
-                    caption: "Acueducto",
-                    inLanguage: locale === "en" ? "en" : "es",
-                }
+                "@type": "ImageObject",
+                "@id": `https://acueducto.studio${locale === "en" ? "/en" : ""}${asPath}#primaryimage`,
+                contentUrl: `https://acueducto.studio/assets/img/og/acueducto.png`,
+                width: 1200,
+                height: 1200,
+                caption: "Acueducto",
+                inLanguage: locale === "en" ? "en" : "es",
+            }
             ,
             {
                 "@type": "WebSite",
@@ -88,10 +88,16 @@ const returnLd = (locale: string, asPath: string, description: string, title: st
                         name: "Artículos",
                         item: "https://acueducto.studio/articulos",
                     }) : "",
-                    asPath !== "/" && asPath !== "/articulos" && asPath !== "/portafolio" && asPath !== "/work" ? ({
+                    asPath.includes("/podcast") ? ({
                         "@type": "ListItem",
-                        position: asPath.includes("/portafolio") || asPath.includes("/work") || asPath.includes("/articles") ? 3 : 2,
-                        name: asPath.includes("/articulos") ? title : headerTitle,
+                        position: 2,
+                        name: "Podcast",
+                        item: "https://acueducto.studio/podcast",
+                    }) : "",
+                    asPath !== "/" && asPath !== "/articulos" && asPath !== "/portafolio" && asPath !== "/work" && asPath !== "/podcast" ? ({
+                        "@type": "ListItem",
+                        position: asPath.includes("/portafolio") || asPath.includes("/work") || asPath.includes("/articles") || asPath.includes("/podcast") ? 3 : 2,
+                        name: asPath.includes("/articulos") || asPath.includes("/podcast") ? title : headerTitle,
                         item: "https://acueducto.studio" + (locale === "en" ? "/en" : "") + asPath,
                     }) : ""
                 ],

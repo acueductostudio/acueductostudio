@@ -12,3 +12,8 @@
 - 🙋🏻‍♀️ [Facebook](https://www.facebook.com/acueducto.studio/)
 - 🦜 [Twitter](https://twitter.com/acueductostudio)
 - 🔌 [LinkedIn](https://www.linkedin.com/company/acueductostudio/)
+
+#Sitemap con nuevos podcasts
+#CONFIRMAR RETURN LD
+#Qué hace a artículos no traducirse y a podcast requerir la bandera? Se puede hacer lo mismo para podcastnuevo?
+#Tenemos un problema de sorting en podcastAPI
