@@ -39,7 +39,7 @@ const BroadcastRouter = ({
         >
           Spotify
           <img
-            src="assets/img/layout/logos/spotify.svg"
+            src="/assets/img/layout/logos/spotify.svg"
             alt="Escucha en Spotify"
             width="33px"
             height="43px"
@@ -57,7 +57,7 @@ const BroadcastRouter = ({
         >
           Apple Podcasts
           <img
-            src="assets/img/layout/logos/applepodcasts.svg"
+            src="/assets/img/layout/logos/applepodcasts.svg"
             alt="Escucha en Apple Podcasts"
             width="33px"
             height="43px"
@@ -75,7 +75,7 @@ const BroadcastRouter = ({
         >
           Google Podcasts
           <img
-            src="assets/img/layout/logos/googlepodcasts.svg"
+            src="/assets/img/layout/logos/googlepodcasts.svg"
             alt="Escucha en Apple Podcasts"
             width="33px"
             height="43px"

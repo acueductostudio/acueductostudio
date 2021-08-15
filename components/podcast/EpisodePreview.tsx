@@ -5,10 +5,6 @@ import EpisodeProps from "utils/types/EpisodeProps";
 import BroadcastRouter from "components/podcast/BroadcastRouter";
 import Picture from "components/caseStudy/shared/Picture";
 
-interface EpisodeComplete extends EpisodeProps {
-  episode?: number;
-}
-
 const EpisodePreview = ({
   title,
   guest,
@@ -20,9 +16,9 @@ const EpisodePreview = ({
   google,
   youtube,
   episode,
-}: EpisodeComplete) => {
+}: EpisodeProps) => {
   const LinkComplex = ({ children }: { children: React.ReactNode }) => (
-    <Link href={"/podcast/episodios/" + slug} passHref>
+    <Link href={"/podcast/" + slug} passHref>
       <a>{children}</a>
     </Link>
   );

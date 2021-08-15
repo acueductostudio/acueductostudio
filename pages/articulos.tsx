@@ -31,7 +31,7 @@ export default function Articles({ locale, setTitle, posts, pt }) {
           key={`article${i}`}
         />
       ))}
-      <ResourceFooter identify="articulos"/>
+      <ResourceFooter identify="articulos" />
     </PageClipper>
   );
 }
@@ -49,6 +49,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
     ])
   );
   const pt = ssrLocale({ locale: context.locale, fileName: "articulos.json" });
+  if (!pt) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       posts: [...posts],

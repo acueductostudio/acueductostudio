@@ -13,7 +13,7 @@ import Logo from "public/assets/img/layout/logo.svg";
 import { H1 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 
-export default function Articles({ locale, setTitle, episodes, pt }) {
+export default function Podcasts({ locale, setTitle, episodes, pt }) {
   const { intro, head } = pt;
 
   useEffect(() => {
@@ -47,11 +47,7 @@ export default function Articles({ locale, setTitle, episodes, pt }) {
           </BroadcastRouter>
           <PodcastList>
             {episodes.map((episode, index) => (
-              <EpisodePreview
-                {...episode}
-                key={"npd" + index}
-                episode={index + 1}
-              />
+              <EpisodePreview {...episode} key={"npd" + index} />
             ))}
           </PodcastList>
         </div>
@@ -62,13 +58,16 @@ export default function Articles({ locale, setTitle, episodes, pt }) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const episodeCollection = getAllEpisodes(["slug"]);
-  const episodes = episodeCollection.map((episode: EpisodeProps) =>
+  const sortedEpisodes = getAllEpisodes(["slug", "episode"]).sort((ep1, ep2) =>
+    ep1.episode > ep2.episode ? 1 : -1
+  );
+  const episodes = sortedEpisodes.map((episode: EpisodeProps) =>
     getEpisodeBySlug(episode.slug, [
       "title",
       "guest",
       "business",
       "description",
+      "episode",
       "slug",
       "spotify",
       "apple",
@@ -77,6 +76,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
     ])
   );
   const pt = ssrLocale({ locale: context.locale, fileName: "podcast.json" });
+  if (!pt) {
+    return {
+      notFound: true,
+    };
+  }
   return {
     props: {
       episodes: [...episodes],

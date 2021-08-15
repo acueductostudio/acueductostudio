@@ -1,10 +1,10 @@
 ---
+episode: 1
 title: El 101 de la protección legal digital
 guest: Salvador Camacho
 business: Kalpa
 category: Founder
 description: Inauguramos nuestro podcast platicando con el abogado digital Salvador Camacho, con quien exploramos cuáles son las consideraciones legales de la siguiente década para un negocio con prácticas digitales.
-episode: 1
 file: https://www.buzzsprout.com/895972/2840290-e01-proteccion-legal-digital-salvador-camacho.mp3?blob_id=9780370&download=true
 spotify: https://open.spotify.com/episode/6tE3seBLPt0GB6tYdHaqwf?si=UD7Sl2ztQ0auvs41nAh3Ow
 apple: https://podcasts.apple.com/mx/podcast/cuando-el-r%C3%ADo-suena/id1500473556?i=1000466665137

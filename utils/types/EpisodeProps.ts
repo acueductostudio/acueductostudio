@@ -12,6 +12,7 @@ interface EpisodeProps {
     google?: string;
     youtube?: string;
     consolify?: any;
+    content?: string;
 }
 
 export default EpisodeProps;

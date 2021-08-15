@@ -15,5 +15,5 @@
 
 #Sitemap con nuevos podcasts
 #CONFIRMAR RETURN LD
-#Qué hace a artículos no traducirse y a podcast requerir la bandera? Se puede hacer lo mismo para podcastnuevo?
-#Tenemos un problema de sorting en podcastAPI
+#Diseñar y armar página de podcast individual
+#Terminar de subir los podcasts

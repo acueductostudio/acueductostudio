@@ -10,7 +10,6 @@ export function getEpisodeSlugs() {
 }
 
 export function getEpisodeBySlug(slug, fields = []) {
-  console.log(fields);
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(episodesDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -38,7 +37,5 @@ export function getEpisodeBySlug(slug, fields = []) {
 export function getAllEpisodes(fields = []) {
   const slugs = getEpisodeSlugs();
   const episodes = slugs.map((slug) => getEpisodeBySlug(slug, fields));
-  const sortedEpisodes = episodes.sort((post1, post2) => (post1.episode > post2.episode ? 1 : -1));
-  console.log(sortedEpisodes)
   return episodes;
 }
