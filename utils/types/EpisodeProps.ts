@@ -1,6 +1,7 @@
 
 interface EpisodeProps {
     slug?: string;
+    date?: string;
     title?: string;
     guest?: string;
     business?: string;

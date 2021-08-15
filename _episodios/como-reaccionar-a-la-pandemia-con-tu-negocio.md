@@ -1,5 +1,6 @@
 ---
 episode: 3
+date: "2020-05-03"
 title: Cómo reaccionar a la pandemia con tu negocio
 guest: Juan Pablo Sánchez
 business: BlueBox
@@ -23,5 +24,3 @@ youtube: https://www.youtube.com/watch?v=gTVO-XBFDWc
 **Artemio**: We’re recording this on a Sunday. By the time this goes to air the thing that you’re doing next week will have passed. And that is you’re holding a two-day event and I’m coming out to Nashville to speak on the second day and then you and I and our spouses are going on vacation for a week. And then we won’t talk to each other for a few months just to reset things.
 
 **Rodrigo**: Blessed peace.
-
-fundadores, inversores, marketing/growth, diseño

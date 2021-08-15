@@ -16,4 +16,3 @@
 #Sitemap con nuevos podcasts
 #CONFIRMAR RETURN LD
 #Diseñar y armar página de podcast individual
-#Terminar de subir los podcasts

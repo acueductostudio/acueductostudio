@@ -18,6 +18,7 @@ import PodcastProps from "utils/types/EpisodeProps";
 
 const EpisodePage = ({
   title,
+  date,
   guest,
   business,
   description,
@@ -30,12 +31,12 @@ const EpisodePage = ({
   content,
 }: PodcastProps) => {
   const SHARE_URL = `https://acueducto.studio/podcast/${slug}`;
-  // let fullDate = new Date(`${date}T00:00:00`);
-  // let formatDate = fullDate.toLocaleDateString("es-MX", {
-  //   year: "numeric",
-  //   month: "long",
-  //   day: "numeric",
-  // });
+  let fullDate = new Date(`${date}T00:00:00`);
+  let formatDate = fullDate.toLocaleDateString("es-MX", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
     <>
       <ArticleGrid>
@@ -75,11 +76,9 @@ const EpisodePage = ({
               </Icon>
             </LinkedinShareButton>
           </Shareable>
-          {/* <Credits>
-            Por <address>{author}</address>
-            {` | `}
+          <Credits>
             <time dateTime={date.toString()}>{formatDate}</time>
-          </Credits> */}
+          </Credits>
           <Content>{content}</Content>
         </Fade>
       </ArticleGrid>

@@ -35,6 +35,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const episode: EpisodeProps = getEpisodeBySlug(context.params.slug, [
     "title",
     "guest",
+    "date",
     "business",
     "description",
     "episode",

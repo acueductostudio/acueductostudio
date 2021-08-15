@@ -1,5 +1,6 @@
 ---
 episode: 1
+date: "2020-02-25"
 title: El 101 de la protección legal digital
 guest: Salvador Camacho
 business: Kalpa
@@ -23,5 +24,3 @@ youtube: https://www.youtube.com/watch?v=WrWYD-JxAag
 **Artemio**: We’re recording this on a Sunday. By the time this goes to air the thing that you’re doing next week will have passed. And that is you’re holding a two-day event and I’m coming out to Nashville to speak on the second day and then you and I and our spouses are going on vacation for a week. And then we won’t talk to each other for a few months just to reset things.
 
 **Rodrigo**: Blessed peace.
-
-fundadores, inversores, marketing/growth, diseño
