@@ -17,6 +17,11 @@ youtube: https://www.youtube.com/watch?v=jMpzUGFQAEM
 
 **Rodrigo**: It has. Have you missed me?
 
+## Rodrigo
+
+> Aquí hay una pieza de valor, tadadada. By the time this goes to air the thing that you’re doing next week will have passed. And that is you’re holding a two-day event and I’m coming.
+
+
 **Artemio**: I’ve missed you tremendously, but ask me that in two weeks.
 
 **Rodrigo**: Yeah, I know. We do our two single weeks things, it just helps remind us why we really could never work together for long. It’s just a good reminder of that.
