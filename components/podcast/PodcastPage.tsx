@@ -15,6 +15,7 @@ import LnIcon from "public/assets/img/layout/logos/linkedin.svg";
 import TwIcon from "public/assets/img/layout/logos/tw.svg";
 import WAIcon from "public/assets/img/layout/logos/whatsapp-inv.svg";
 import PodcastProps from "utils/types/EpisodeProps";
+import Logo from "public/assets/img/layout/logo.svg";
 
 const EpisodePage = ({
   title,
@@ -39,8 +40,15 @@ const EpisodePage = ({
   });
   return (
     <>
-      <ArticleGrid>
+      <ArticleGrid episode={episode}>
         <Fade triggerOnce>
+          <IntroLogo>
+            cuando el río suena
+            <span>
+              por <Logo />
+            </span>
+          </IntroLogo>
+          <H1>{title.charAt(0).toLowerCase() + title.slice(1)}</H1>
           <EpisodePreview
             title={title}
             guest={guest}
@@ -53,7 +61,6 @@ const EpisodePage = ({
             episode={episode}
             description={description}
           />
-          <H1>{title.charAt(0).toLowerCase() + title.slice(1)}</H1>
           <Shareable>
             <TwitterShareButton url={SHARE_URL}>
               <Icon>
@@ -136,9 +143,36 @@ const Credits = styled.div`
   }
 `;
 
-const ArticleGrid = styled(Grid)`
-  background-color: ${(p) => p.theme.colors.foreground};
-  color: ${(p) => p.theme.colors.background};
+const IntroLogo = styled.p`
+  letter-spacing: 0;
+  line-height: 100%;
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 3px;
+  max-width: unset;
+  color: ${(props) => props.theme.colors.foreground};
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 100;
+    color: ${(props) => props.theme.colors.accent};
+    svg {
+      max-width: 110px;
+      * {
+        fill: ${(props) => props.theme.colors.accent};
+      }
+    }
+  }
+`;
+
+const ArticleGrid = styled(Grid)<{ episode: number }>`
+  background-color: ${(p) => p.theme.colors.background};
+  background-image: url("/assets/img/podcast/back.svg");
+  background-size: cover;
+  background-position: top right;
   grid-gap: 2rem;
   div {
     &:nth-of-type(1),
@@ -152,9 +186,29 @@ const ArticleGrid = styled(Grid)`
     }
   }
   h1 {
-    color: ${(p) => p.theme.colors.background};
+    color: ${(p) => p.theme.colors.foreground};
+    font-weight: 200;
     margin-bottom: 0;
     max-width: 900px;
+    text-align: center;
+    &::before {
+      display: block;
+      content: ${(p) => `"${p.episode < 10 ? "0" + p.episode : p.episode}"`};
+      background-color: ${(p) => p.theme.colors.accent};
+      border-radius: 100px;
+      padding: 10px 12px 10px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      color: ${(p) => p.theme.colors.background};
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+      margin-right: 10px;
+      line-height: initial;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
   }
   h2 {
     font-size: 2.5rem;
