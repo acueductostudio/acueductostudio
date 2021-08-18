@@ -15,9 +15,9 @@ export default function Episodio({ locale, setTitle, episode }) {
 
   return (
     <PageClipper>
-      <Head
+      <Head 
         title={episode.title + " | " + episode.guest + ", " + episode.business}
-        description={episode.subtitle}
+        description={episode.description}
         headerTitle="Episodio"
         es_canonical={`https://acueducto.studio/podcast/${episode.slug}`}
         image={{
