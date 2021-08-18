@@ -4,42 +4,81 @@ import Link from "next/link";
 import EpisodeProps from "utils/types/EpisodeProps";
 import BroadcastRouter from "components/podcast/BroadcastRouter";
 import Picture from "components/caseStudy/shared/Picture";
+import EpisodeNumber from "./EpisodeNumber";
+import ShareRouter from "./ShareRouter";
+import BorderLink from "components/shared/BorderedLink";
+import ssrLocale from "utils/ssrLocale";
+
+interface EpisodeFormat extends EpisodeProps {
+  longFormat?: boolean;
+}
 
 const EpisodePreview = ({
   title,
   guest,
   business,
   description,
+  category,
   slug,
+  date,
   spotify,
   apple,
   google,
   youtube,
   episode,
-}: EpisodeProps) => {
+  longFormat,
+}: EpisodeFormat) => {
   const LinkComplex = ({ children }: { children: React.ReactNode }) => (
     <Link href={"/podcast/" + slug} passHref>
       <a>{children}</a>
     </Link>
   );
+  let fullDate = new Date(`${date}T00:00:00`);
+  let formatDate = fullDate.toLocaleDateString("es-MX", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
   return (
-    <NewPod key={"npd" + episode} episode={episode}>
-      <LinkComplex>
-        <Picture
-          src={`/assets/img/podcast/${episode}.jpg`}
-          alt={title + " - " + guest}
-          height={180}
-          width={180}
-        />
-      </LinkComplex>
+    <NewPod key={"npd" + episode}>
+      <PictureContainer hoverable={!longFormat}>
+        {longFormat ? (
+          <Picture
+            src={`/assets/img/podcast/${episode}.jpg`}
+            alt={title + " - " + guest}
+            height={180}
+            width={180}
+          />
+        ) : (
+          <LinkComplex>
+            <Picture
+              src={`/assets/img/podcast/${episode}.jpg`}
+              alt={title + " - " + guest}
+              height={180}
+              width={180}
+            />
+          </LinkComplex>
+        )}
+      </PictureContainer>
       <div>
         <Fade triggerOnce>
-          <LinkComplex>
-            <h2>{title}</h2>
-          </LinkComplex>
-          <h3>
-            {guest}, {business}
-          </h3>
+          <HoverableContainer>
+            {!longFormat && (
+              <LinkComplex>
+                <H2overable>{title}</H2overable>
+              </LinkComplex>
+            )}
+          </HoverableContainer>
+          <Guest>
+            {!longFormat && <EpisodeNumber episode={episode} />}
+            <h3>
+              {guest} <span>{business}</span>
+            </h3>
+          </Guest>
+          <DateCat>
+            {longFormat && <time dateTime={date.toString()}>{formatDate}</time>}
+            <span>{category}</span>
+          </DateCat>
           <p>{description}</p>
           <BroadcastRouter
             trackClicks
@@ -48,7 +87,18 @@ const EpisodePreview = ({
             apple={apple}
             google={google}
             youtube={youtube}
-          />
+          >
+            {longFormat && "Escúchalo en"}
+          </BroadcastRouter>
+          <div>
+            {longFormat && (
+              <ShareRouter
+                shareUrl={`https://acueducto.studio/podcast/${slug}`}
+              >
+                Comparte
+              </ShareRouter>
+            )}
+          </div>
         </Fade>
       </div>
     </NewPod>
@@ -57,9 +107,71 @@ const EpisodePreview = ({
 
 export default EpisodePreview;
 
-const NewPod = styled.article<{ episode: number }>`
+const HoverableContainer = styled.div`
+  margin-bottom: 8px;
+`;
+
+const H2overable = styled.h2`
+  ${BorderLink({ showLink: false })}
+`;
+
+const PictureContainer = styled.div<{ hoverable: boolean }>`
+  min-width: 180px;
+  margin-right: 5%;
+  img {
+    border-radius: 20px;
+    transition: transform 0.25s ease-out;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      img {
+        transform: ${(p) => (p.hoverable ? "scale(0.95)" : "scale(1)")};
+      }
+    }
+  }
+  &:active {
+    img {
+      transform: scale(0.95);
+    }
+  }
+`;
+
+const Guest = styled.div`
+  display: flex;
+  div {
+    margin-right: 15px;
+  }
+`;
+
+const DateCat = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${(p) => p.theme.colors.foreground};
+  margin-top: 10px;
+  margin-bottom: 0px;
+  address {
+    display: inline-block;
+    font-style: normal;
+  }
+  time {
+    margin-right: 10px;
+  }
+  span {
+    border: 2px solid ${(p) => p.theme.colors.accent};
+    border-radius: 50px;
+    padding: 4px 13px 8px 14px;
+    text-transform: lowercase;
+    color: ${(p) => p.theme.colors.foreground_low};
+    font-size: 1.5rem;
+    mix-blend-mode: exclusion;
+    background-color: ${(p) => p.theme.colors.background};
+  }
+`;
+
+const NewPod = styled.article`
   display: flex;
   margin-top: 10%;
+  max-width: 800px;
   a {
     text-decoration: none;
   }
@@ -68,114 +180,55 @@ const NewPod = styled.article<{ episode: number }>`
     font-weight: 200;
     line-height: 125%;
     margin-top: 0;
-    margin-bottom: 0px;
+    margin-bottom: 12px;
+    transition: 0.3s ease all;
   }
   h3 {
-    font-size: 2rem;
-    margin-top: 6px;
-    color: ${(p) => p.theme.colors.foreground_low};
-    &::before {
-      content: ${(p) => `"${p.episode < 10 ? "0" + p.episode : p.episode}"`};
-      display: inline-block;
-      background-color: ${(p) => p.theme.colors.accent};
-      border-radius: 100px;
-      padding: 6px 8px 6px;
-      text-align: center;
-      font-weight: 300;
-      font-size: 1.8rem;
-      width: 40px;
-      height: 40px;
-      color: ${(p) => p.theme.colors.background};
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-      margin-right: 10px;
+    font-size: 2.2rem;
+    color: ${(p) => p.theme.colors.foreground};
+    margin-top: -4px;
+    span {
+      display: block;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      font-weight: 200;
+      color: ${(p) => p.theme.colors.foreground_low};
     }
   }
-  & > a:first-of-type {
-    margin-right: 5%;
-    min-width: 180px;
-  }
-  img {
-    border-radius: 10px;
-    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
+  div p {
+    color: ${(p) => p.theme.colors.foreground_low};
+    padding-top: 1.3rem;
+    line-height: 145%;
   }
   @media (max-width: 970px) {
     h2 {
       font-size: 2.2rem;
-      margin-bottom: 7px;
     }
   }
   @media (max-width: 900px) {
     flex-direction: column;
-    & > div:first-of-type {
+    ${PictureContainer} {
       min-width: unset;
       max-width: 150px;
       margin-bottom: 2rem;
     }
   }
   @media (max-width: 620px) {
+    ${DateCat} {
+      span {
+        font-size: 1.3rem;
+      }
+    }
     margin-top: 20%;
-    h3::before {
-      width: 33px;
-      height: 33px;
-      font-size: 1.7rem;
-      padding: 3px 6px;
+    p {
+      padding-top: 9px;
     }
     h2 {
       font-size: 2rem;
     }
     h3 {
       font-size: 1.8rem;
-    }
-  }
-`;
-
-const LogoList = styled.div`
-  display: inline-flex;
-  align-items: center;
-  margin-top: 2rem;
-  padding: 10px;
-  border: 2px solid white;
-  border-radius: 300px;
-  p {
-    padding: 0 !important;
-    margin: 0 6px 0 12px;
-  }
-  a {
-    display: flex;
-    min-height: 44px;
-    min-width: 44px;
-    font-size: 0rem;
-    cursor: pointer;
-    img {
-      box-shadow: none;
-    }
-    &:active,
-    &:focus {
-      outline: none;
-      img {
-        transform: scale(0.9);
-      }
-    }
-    @media (hover: hover) and (pointer: fine) {
-      &:hover {
-        img {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-  img {
-    width: 33px;
-    height: 43px;
-    box-sizing: content-box;
-    padding: 0 10px 0 10px;
-    transition: transform 0.2s ease-out;
-    aspect-ratio: attr(width) / attr(height);
-  }
-  @media (max-width: 430px) {
-    margin-top: 15px;
-    p {
-      display: none;
     }
   }
 `;

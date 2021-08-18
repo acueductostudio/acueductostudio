@@ -15,8 +15,7 @@ const BorderLink = ({ showLink }: { showLink: boolean }) => css`
   padding-bottom: 2px;
   background-image: ${showLink ? normalLink : invisibleLink};
   &:active,
-  &:focus,
-  &:hover {
+  &:focus, &:hover {
     outline: none;
     background-image: ${highlightedLink};
   }

@@ -4,7 +4,7 @@ import EpisodeProps from "utils/types/EpisodeProps";
 import markdownToHtml from "utils/markdownToHtml";
 import { getAllEpisodes, getEpisodeBySlug } from "utils/podcastApi";
 import Head from "components/layout/Head";
-import PodcastPage from "components/podcast/PodcastPage";
+import EpisodePage from "components/podcast/EpisodePage";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
 
@@ -21,12 +21,12 @@ export default function Episodio({ locale, setTitle, episode }) {
         headerTitle="Episodio"
         es_canonical={`https://acueducto.studio/podcast/${episode.slug}`}
         image={{
-          fileName: `/assets/img/podcast/${episode.episode}.jpg`,
+          fileName: `/assets/img/podcast/${episode.episode}og.jpg`,
           alt: episode.title + " | " + episode.guest + ", " + episode.business,
         }}
       ></Head>
-      <PodcastPage {...episode} slug={episode.slug} />
-      <ResourceFooter identify={episode.slug} />
+      <EpisodePage {...episode} slug={episode.slug} />
+      <ResourceFooter shadow identify={episode.slug} />
     </PageClipper>
   );
 }
@@ -37,6 +37,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "guest",
     "date",
     "business",
+    "category",
     "description",
     "episode",
     "slug",

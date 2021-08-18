@@ -3,7 +3,7 @@ const formatDate = require("./formatDate");
 
 const url = "https://acueducto.studio";
 
-const routes = [
+const staticRoutes = [
   {
     es: "",
     en: "/en",
@@ -31,7 +31,7 @@ const routes = [
   },
   {
     es: "/consultoria",
-    priority: 0.8,
+    priority: 0.7,
   },
   {
     es: "/diagnostico",
@@ -39,7 +39,7 @@ const routes = [
   },
   {
     es: "/podcast",
-    priority: 0.7,
+    priority: 0.9,
   },
   {
     es: "/portafolio/rahid",
@@ -61,10 +61,6 @@ const routes = [
     priority: 0.7,
   },
   {
-    es: "/articulos/piensa-tu-producto-escalable-desde-el-inicio",
-    priority: 0.7,
-  },
-  {
     es: "/cookies",
     en: "/en/cookies",
     priority: 0.5,
@@ -76,9 +72,22 @@ const routes = [
   },
 ];
 
+const dinamicPodcasts = fs.readdirSync("_episodios").map((staticPagePath) => {
+  return {
+    es: `/episodios/${staticPagePath.replace(".md", "")}`,
+    priority: 0.7,
+  };
+});
+const dinamicArticles = fs.readdirSync("_articulos").map((staticPagePath) => {
+  return {
+    es: `/articulos/${staticPagePath.replace(".md", "")}`,
+    priority: 0.7,
+  };
+});
+
 const esRoute = (route) =>
-  route.es !== undefined &&
-  `<url>
+  route.es !== undefined
+    ? `<url>
     <loc>${url + route.es}</loc>
     ${
       route.en !== undefined
@@ -93,11 +102,12 @@ const esRoute = (route) =>
     <lastmod>${
       route.lastModified ? formatDate(new Date(route.lastModified)) : today
     }</lastmod>
-  </url>`;
+  </url>`
+    : "";
 
 const enRoute = (route) =>
-  route.en !== undefined &&
-  `<url>
+  route.en !== undefined
+    ? `<url>
     <loc>${url + route.en}</loc>
     ${
       route.es !== undefined
@@ -113,14 +123,16 @@ const enRoute = (route) =>
       route.lastModified ? formatDate(new Date(route.lastModified)) : today
     }</lastmod>
   </url>
-  `;
+  `
+    : "";
 
 // SITEMAP.XML
 const today = formatDate(new Date());
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"> 
-  ${routes.map((route) => esRoute(route) + enRoute(route)).join("")}
-</urlset>`;
+  ${staticRoutes.map((route) => esRoute(route) + enRoute(route)).join("")}
+  ${dinamicArticles.map((route) => esRoute(route))}
+  ${dinamicPodcasts.map((route) => esRoute(route))}</urlset>`;
 
 fs.writeFileSync("public/sitemap.xml", sitemapXml);
 console.log("sitemap.xml saved!");

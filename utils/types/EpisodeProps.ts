@@ -5,6 +5,7 @@ interface EpisodeProps {
     title?: string;
     guest?: string;
     business?: string;
+    category?: string;
     description?: string;
     episode?: number;
     file?: string;

@@ -3,10 +3,11 @@ import EpisodeProps from "utils/types/EpisodeProps";
 import { logEvent } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
 import { P } from "components/shared/Dangerously";
+import { Fade } from "react-awesome-reveal";
+
 
 interface EpisodeComplete extends EpisodeProps {
   episode?: number;
-  text?: string;
   children?: React.ReactNode;
   trackClicks?: boolean;
 }
@@ -28,6 +29,7 @@ const BroadcastRouter = ({
     });
   };
   return (
+    <Fade triggerOnce>
     <LogoList>
       {children && <P>{children + " "}</P>}
       {spotify && (
@@ -99,6 +101,7 @@ const BroadcastRouter = ({
         </a>
       )}
     </LogoList>
+    </Fade>
   );
 };
 
@@ -109,11 +112,11 @@ const LogoList = styled.div`
   align-items: center;
   margin-top: 2rem;
   padding: 10px;
-  border: 2px solid white;
+  border: 2px solid ${(p) => p.theme.colors.foreground_low};
   border-radius: 300px;
   p {
     padding: 0 !important;
-    margin: 0 6px 0 12px;
+    margin: -4px 6px 0 12px;
   }
   a {
     display: flex;

@@ -12,9 +12,3 @@
 - 🙋🏻‍♀️ [Facebook](https://www.facebook.com/acueducto.studio/)
 - 🦜 [Twitter](https://twitter.com/acueductostudio)
 - 🔌 [LinkedIn](https://www.linkedin.com/company/acueductostudio/)
-
-#Sitemap con nuevos podcasts
-#CONFIRMAR RETURN LD
-#Diseñar y armar página de podcast individual
-#Headerimages nuevas 
-#Responsive en /podcast
