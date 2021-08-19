@@ -7,7 +7,6 @@ import Picture from "components/caseStudy/shared/Picture";
 import EpisodeNumber from "./EpisodeNumber";
 import ShareRouter from "./ShareRouter";
 import BorderLink from "components/shared/BorderedLink";
-import ssrLocale from "utils/ssrLocale";
 
 interface EpisodeFormat extends EpisodeProps {
   longFormat?: boolean;
@@ -70,10 +69,18 @@ const EpisodePreview = ({
             )}
           </HoverableContainer>
           <Guest>
-            {!longFormat && <EpisodeNumber episode={episode} />}
-            <h3>
-              {guest} <span>{business}</span>
-            </h3>
+            {!longFormat ? (
+              <LinkComplex>
+                <EpisodeNumber episode={episode} />
+                <h3>
+                  {guest} <span>{business}</span>
+                </h3>
+              </LinkComplex>
+            ) : (
+              <h3>
+                {guest} <span>{business}</span>
+              </h3>
+            )}
           </Guest>
           <DateCat>
             {longFormat && <time dateTime={date.toString()}>{formatDate}</time>}
@@ -120,26 +127,47 @@ const PictureContainer = styled.div<{ hoverable: boolean }>`
   margin-right: 5%;
   img {
     border-radius: 20px;
-    transition: transform 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    opacity: ${(p) => (p.hoverable ? 0.9 : 1)};
+    background-color: black;
+    transform: scale(1);
   }
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       img {
-        transform: ${(p) => (p.hoverable ? "scale(0.95)" : "scale(1)")};
+        opacity: 1;
+        transform: ${(p) => (p.hoverable ? "scale(0.99)" : "scale(1)")};
       }
     }
   }
   &:active {
     img {
-      transform: scale(0.95);
+      opacity: 1;
+      transform: scale(0.99);
     }
   }
 `;
 
 const Guest = styled.div`
   display: flex;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      div {
+        transform: scale(0.97);
+      }
+    }
+  }
+  &:active {
+    div {
+      transform: scale(0.95);
+    }
+  }
+  a {
+    display: flex;
+  }
   div {
     margin-right: 15px;
+    transition: transform 0.3s ease;
   }
 `;
 

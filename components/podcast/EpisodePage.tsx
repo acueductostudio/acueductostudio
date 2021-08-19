@@ -6,6 +6,8 @@ import EpisodePreview from "components/podcast/EpisodePreview";
 import PodcastProps from "utils/types/EpisodeProps";
 import Logo from "public/assets/img/layout/logo.svg";
 import EpisodeNumber from "./EpisodeNumber";
+import Link from "next/link";
+import BorderLink from "components/shared/BorderedLink";
 
 const EpisodePage = ({
   title,
@@ -27,11 +29,16 @@ const EpisodePage = ({
       <ArticleGrid>
         <Fade triggerOnce>
           <IntroLogo>
-            cuando el río suena
-            <span>
-              por <Logo />
-            </span>
+            <Link href="/podcast" passHref>
+              <a>
+                <THoverable>cuando el río suena</THoverable>
+                <span>
+                  por <Logo />
+                </span>
+              </a>
+            </Link>
           </IntroLogo>
+
           <EpisodeNumberStyled>
             <EpisodeNumber episode={episode} />
           </EpisodeNumberStyled>
@@ -62,6 +69,9 @@ export default React.memo(EpisodePage);
 
 const Content = styled(Div)``;
 const EpisodeNumberStyled = styled.div``;
+const THoverable = styled.div`
+  ${BorderLink({ showLink: false })}
+`;
 
 const IntroLogo = styled.p`
   line-height: 100%;
@@ -71,6 +81,11 @@ const IntroLogo = styled.p`
   color: ${(props) => props.theme.colors.foreground};
   text-align: center;
   margin-bottom: 15%;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+  }
   span {
     display: block;
     font-size: 2rem;
