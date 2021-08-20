@@ -10,4 +10,5 @@ file: https://www.buzzsprout.com/895972/9046378-el-coo-de-una-fintech-nos-habla-
 spotify: https://open.spotify.com/episode/1vHpwazvhoG4585S9hRNIU?si=TQ6-uUJjR7GxMUsJd6dxUQ
 apple: https://podcasts.apple.com/mx/podcast/el-coo-de-una-fintech-nos-habla/id1500473556?i=1000532454369
 youtube: https://www.youtube.com/watch?v=TqZ7nopYCOM
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05MDQ2Mzc4
 ---
