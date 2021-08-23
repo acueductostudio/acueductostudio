@@ -74,7 +74,7 @@ const staticRoutes = [
 
 const dinamicPodcasts = fs.readdirSync("_episodios").map((staticPagePath) => {
   return {
-    es: `/episodios/${staticPagePath.replace(".md", "")}`,
+    es: `/podcast/${staticPagePath.replace(".md", "")}`,
     priority: 0.7,
   };
 });

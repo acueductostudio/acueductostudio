@@ -10,12 +10,12 @@ import ResourceFooter from "components/shared/footers/ResourceFooter";
 
 export default function Episodio({ locale, setTitle, episode }) {
   useEffect(() => {
-    setTitle("Episodio");
+    setTitle("Podcast");
   }, [locale]);
 
   return (
     <PageClipper>
-      <Head 
+      <Head
         title={episode.title + " | " + episode.guest + ", " + episode.business}
         description={episode.description}
         headerTitle="Episodio"
