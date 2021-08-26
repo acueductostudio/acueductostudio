@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { H1, Div } from "components/shared/Dangerously";
+import { H1 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import EpisodePreview from "components/podcast/EpisodePreview";
 import PodcastProps from "utils/types/EpisodeProps";
@@ -8,7 +8,7 @@ import Logo from "public/assets/img/layout/logo.svg";
 import EpisodeNumber from "./EpisodeNumber";
 import Link from "next/link";
 import BorderLink from "components/shared/BorderedLink";
-// import CenteredSection, { Content } from "components/shared/CenteredSection";
+import CenteredSection, { Content } from "components/shared/CenteredSection";
 
 const EpisodePage = ({
   title,
@@ -27,7 +27,7 @@ const EpisodePage = ({
 }: PodcastProps) => {
   return (
     <>
-      <ArticleGrid>
+      <CenteredSection customBackground={"/assets/img/podcast/backOld.svg"}>
         <Fade triggerOnce>
           <IntroLogo>
             <Link href="/podcast" passHref>
@@ -39,7 +39,8 @@ const EpisodePage = ({
               </a>
             </Link>
           </IntroLogo>
-
+        </Fade>
+        <Fade triggerOnce>
           <EpisodeNumberStyled>
             <EpisodeNumber episode={episode} />
           </EpisodeNumberStyled>
@@ -61,17 +62,25 @@ const EpisodePage = ({
           />
           <Content>{content}</Content>
         </Fade>
-      </ArticleGrid>
+      </CenteredSection>
     </>
   );
 };
 
 export default React.memo(EpisodePage);
 
-const Content = styled(Div)``;
-const EpisodeNumberStyled = styled.div``;
-const THoverable = styled.div`
+const THoverable = styled.b`
+  font-weight: 300;
   ${BorderLink({ showLink: false })}
+`;
+
+const EpisodeNumberStyled = styled.div`
+  @media (max-width: 1000px) {
+    transform: scale(0.9);
+  }
+  @media (max-width: 800px) {
+    transform: scale(0.8);
+  }
 `;
 
 const IntroLogo = styled.p`
@@ -83,7 +92,7 @@ const IntroLogo = styled.p`
   text-align: center;
   margin-bottom: 15%;
   text-decoration: none;
-
+  padding-top: 120px;
   a {
     text-decoration: none;
   }
@@ -99,201 +108,31 @@ const IntroLogo = styled.p`
       }
     }
   }
-`;
-
-const ArticleGrid = styled.div`
-  background-color: ${(p) => p.theme.colors.background};
-  background-image: url("/assets/img/podcast/backOld.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top right;
-  padding: 10% 4%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h1 {
-    color: ${(p) => p.theme.colors.foreground};
-    font-weight: 200;
-    margin-bottom: 0;
-    max-width: 900px;
-    text-align: center;
-    font-size: 7rem;
-    letter-spacing: 0;
-    line-height: 100%;
-    margin-top: 20px;
-  }
-  h2 {
-    font-size: 2.5rem;
-    grid-column: 1 / span 5;
-    font-weight: 200;
-    max-width: 690px;
-    color: ${(p) => p.theme.colors.accent};
-    line-height: 130%;
-  }
-  ${Content} {
-    background-color: ${(props) => props.theme.colors.foreground};
-    padding: 10%;
-    border-radius: 70px;
-    margin-top: 8%;
-    max-width: 900px;
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 2rem;
-    }
-    h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      font-weight: 200;
-      color: ${(p) => p.theme.colors.background};
-      line-height: 120%;
-    }
-    h3 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 120%;
-      font-weight: 200;
-      color: ${(p) => p.theme.colors.background};
-    }
-    h4 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      line-height: 120%;
-      font-weight: 200;
-      color: ${(p) => p.theme.colors.background};
-    }
-    p {
-      color: ${(p) => p.theme.colors.foreground_lowest};
-      max-width: calc(680px + 10%);
-      letter-spacing: -0.003em;
-      line-height: 29px;
-      font-size: 1.85rem;
-      margin-bottom: 2rem;
-      word-break: break-word;
-      overflow-wrap: break-word;
-      strong,
-      b {
-        font-weight: 300;
-        color: ${(p) => p.theme.colors.background};
-      }
-    }
-    ul {
-      margin-bottom: 2rem;
-      max-width: 680px;
-      letter-spacing: -0.003em;
-      line-height: 29px;
-      font-size: 1.85rem;
-      list-style: none;
-      li {
-        &:before {
-          content: "– ";
-          font-weight: 300;
-          font-size: 2rem;
-        }
-      }
-    }
+  @media (max-width: 1300px) {
+    padding-top: 50px;
   }
   @media (max-width: 1250px) {
-    ${IntroLogo} {
-      font-size: 3rem;
-    }
-    h1 {
-      font-size: 6rem;
-      line-height: 110%;
-    }
-    h2 {
-      font-size: 2.3rem;
-    }
-  }
-  @media (max-width: 1000px) {
-    h2 {
-      font-size: 2rem;
-    }
-    ${EpisodeNumberStyled} {
-      transform: scale(0.9);
-    }
-    ${Content} {
-      border-radius: 40px;
-      p,
-      ul {
-        font-size: 1.7rem;
-        line-height: 25px;
-      }
-      h2 {
-        font-size: 2.6rem;
-        font-weight: 300;
-      }
-      h3 {
-        font-size: 2.1rem;
-        font-weight: 300;
-      }
-      h4 {
-        font-size: 1.7rem;
-        font-weight: 300;
-      }
-    }
+    font-size: 3rem;
   }
   @media (max-width: 950px) {
-    ${IntroLogo} {
-      font-size: 2.5rem;
-      span {
-        margin-top: 5px;
-        font-size: 1.5rem;
-        svg {
-          max-width: 90px;
-        }
+    font-size: 2.5rem;
+    span {
+      margin-top: 5px;
+      font-size: 1.5rem;
+      svg {
+        max-width: 90px;
       }
-    }
-    h1 {
-      font-size: 5rem;
     }
   }
   @media (max-width: 800px) {
-    padding-top: 8%;
-    ${EpisodeNumberStyled} {
-      transform: scale(0.8);
-    }
-    ${IntroLogo} {
-      font-size: 2rem;
-      span {
-        margin-top: 0px;
-        font-size: 1.3rem;
-        svg {
-          max-width: 70px;
-        }
-      }
-    }
-    h1 {
-      font-size: 4rem;
-      margin-top: 10px;
-    }
-  }
-  @media (max-width: 650px) {
-    padding-top: 30px;
-    h1 {
-      font-size: 3.4rem;
+    font-size: 2rem;
+    padding-top: 35px;
+    span {
       margin-top: 0px;
-    }
-    h2 {
-      font-size: 1.85rem;
-      line-height: 120%;
-    }
-    ${Content} {
-      padding: 8%;
-      border-radius: 30px;
-    }
-  }
-  @media (max-width: 400px) {
-    ${Content} {
-      padding: 5%;
-      border-radius: 20px;
-      p,
-      ul {
-        font-weight: 200;
+      font-size: 1.3rem;
+      svg {
+        max-width: 70px;
       }
-    }
-    h1 {
-      font-size: 3.2rem;
     }
   }
 `;
