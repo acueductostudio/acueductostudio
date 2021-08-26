@@ -1,113 +1,15 @@
-import React from "react";
 import styled from "styled-components";
-import { H1, Div } from "components/shared/Dangerously";
-import { Fade } from "react-awesome-reveal";
-import EpisodePreview from "components/podcast/EpisodePreview";
-import PodcastProps from "utils/types/EpisodeProps";
-import Logo from "public/assets/img/layout/logo.svg";
-import EpisodeNumber from "./EpisodeNumber";
-import Link from "next/link";
-import BorderLink from "components/shared/BorderedLink";
-// import CenteredSection, { Content } from "components/shared/CenteredSection";
+import { Div } from "components/shared/Dangerously";
 
-const EpisodePage = ({
-  title,
-  date,
-  guest,
-  business,
-  category,
-  description,
-  slug,
-  spotify,
-  apple,
-  google,
-  youtube,
-  episode,
-  content,
-}: PodcastProps) => {
-  return (
-    <>
-      <ArticleGrid>
-        <Fade triggerOnce>
-          <IntroLogo>
-            <Link href="/podcast" passHref>
-              <a>
-                <THoverable>cuando el río suena</THoverable>
-                <span>
-                  por <Logo />
-                </span>
-              </a>
-            </Link>
-          </IntroLogo>
+export const Content = styled(Div)``;
 
-          <EpisodeNumberStyled>
-            <EpisodeNumber episode={episode} />
-          </EpisodeNumberStyled>
-          <H1>{title.charAt(0).toLowerCase() + title.slice(1)}</H1>
-          <EpisodePreview
-            title={title}
-            guest={guest}
-            business={business}
-            slug={slug}
-            spotify={spotify}
-            apple={apple}
-            google={google}
-            youtube={youtube}
-            episode={episode}
-            description={description}
-            date={date}
-            category={category}
-            longFormat
-          />
-          <Content>{content}</Content>
-        </Fade>
-      </ArticleGrid>
-    </>
-  );
-};
-
-export default React.memo(EpisodePage);
-
-const Content = styled(Div)``;
-const EpisodeNumberStyled = styled.div``;
-const THoverable = styled.div`
-  ${BorderLink({ showLink: false })}
-`;
-
-const IntroLogo = styled.p`
-  line-height: 100%;
-  font-size: 3.5rem;
-  font-weight: 500;
-  margin-bottom: 3px;
-  color: ${(props) => props.theme.colors.foreground};
-  text-align: center;
-  margin-bottom: 15%;
-  text-decoration: none;
-
-  a {
-    text-decoration: none;
-  }
-  span {
-    display: block;
-    font-size: 2rem;
-    font-weight: 100;
-    color: ${(props) => props.theme.colors.accent};
-    svg {
-      max-width: 110px;
-      * {
-        fill: ${(props) => props.theme.colors.accent};
-      }
-    }
-  }
-`;
-
-const ArticleGrid = styled.div`
+const CenteredSection = styled.div<{ customBackground?: string }>`
   background-color: ${(p) => p.theme.colors.background};
-  background-image: url("/assets/img/podcast/backOld.svg");
+  background-image: ${(p) => p.customBackground ? `url(${p.customBackground})` : "none"};
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top right;
-  padding: 10% 4%;
+  padding: 30px 4% 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,6 +27,7 @@ const ArticleGrid = styled.div`
   h2 {
     font-size: 2.5rem;
     grid-column: 1 / span 5;
+    text-align:center;
     font-weight: 200;
     max-width: 690px;
     color: ${(p) => p.theme.colors.accent};
@@ -139,18 +42,21 @@ const ArticleGrid = styled.div`
     img {
       max-width: 100%;
       height: auto;
-      margin-bottom: 2rem;
+      margin: 2rem 0;
     }
     h2 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.3rem;
+      margin-top: 4rem;
       font-weight: 200;
       color: ${(p) => p.theme.colors.background};
       line-height: 120%;
+      text-align:left;
     }
     h3 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      margin-top: 3rem;
       line-height: 120%;
       font-weight: 200;
       color: ${(p) => p.theme.colors.background};
@@ -173,11 +79,12 @@ const ArticleGrid = styled.div`
       overflow-wrap: break-word;
       strong,
       b {
-        font-weight: 300;
+        font-weight: 200;
         color: ${(p) => p.theme.colors.background};
       }
     }
     ul {
+      color: ${(p) => p.theme.colors.foreground_lowest};
       margin-bottom: 2rem;
       max-width: 680px;
       letter-spacing: -0.003em;
@@ -194,9 +101,6 @@ const ArticleGrid = styled.div`
     }
   }
   @media (max-width: 1250px) {
-    ${IntroLogo} {
-      font-size: 3rem;
-    }
     h1 {
       font-size: 6rem;
       line-height: 110%;
@@ -208,9 +112,6 @@ const ArticleGrid = styled.div`
   @media (max-width: 1000px) {
     h2 {
       font-size: 2rem;
-    }
-    ${EpisodeNumberStyled} {
-      transform: scale(0.9);
     }
     ${Content} {
       border-radius: 40px;
@@ -234,35 +135,12 @@ const ArticleGrid = styled.div`
     }
   }
   @media (max-width: 950px) {
-    ${IntroLogo} {
-      font-size: 2.5rem;
-      span {
-        margin-top: 5px;
-        font-size: 1.5rem;
-        svg {
-          max-width: 90px;
-        }
-      }
-    }
     h1 {
       font-size: 5rem;
     }
   }
   @media (max-width: 800px) {
     padding-top: 8%;
-    ${EpisodeNumberStyled} {
-      transform: scale(0.8);
-    }
-    ${IntroLogo} {
-      font-size: 2rem;
-      span {
-        margin-top: 0px;
-        font-size: 1.3rem;
-        svg {
-          max-width: 70px;
-        }
-      }
-    }
     h1 {
       font-size: 4rem;
       margin-top: 10px;
@@ -297,3 +175,5 @@ const ArticleGrid = styled.div`
     }
   }
 `;
+
+export default CenteredSection;

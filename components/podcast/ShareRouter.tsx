@@ -74,7 +74,7 @@ const LogoList = styled.div`
   border-radius: 300px;
   p {
     padding: 0 !important;
-    margin: -4px 6px 0 12px;
+    margin: -5px 6px 0 12px;
   }
   a {
     display: flex;
