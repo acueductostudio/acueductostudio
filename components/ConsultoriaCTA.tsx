@@ -10,6 +10,7 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import BorderLink from "components/shared/BorderedLink";
 import delayForLoading from "utils/delayForLoading";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
 import { logEvent, advancedMatching } from "utils/analytics";
 
 const ConsultoriaCTA = ({
@@ -23,7 +24,8 @@ const ConsultoriaCTA = ({
   diagnostico_cta?: boolean;
   price?: boolean;
 }) => {
-  const router = useRouter();
+  // const router = useRouter();
+  // solo es necesario para las consultorías
 
   const onSubmit = (data) => {
     // Create contact and add to list 3 (Consulting funnel) w/ test results
@@ -41,12 +43,27 @@ const ConsultoriaCTA = ({
     // Pidió consultoría
     ReactPixel.track("SubmitApplication", { email: data.email });
     logEvent("consultoría", "dejó email");
-    delayForLoading(1500).then(() => router.push("/consultoria/pago"));
+    // delayForLoading(1500).then(() => router.push("/consultoria/pago"));
+    // estamos usando el agendador de hubspot para reuniones, no consultorías
   };
 
   return (
     <Container>
-      <DefaultForm
+      <h3>{cta.title}</h3>
+      {price ? (
+        <Span>{`${cta.price} <em>${cta.sessions}</em>`}</Span>
+      ) : (
+        <span className="noPrice">
+          elevemos tu negocio
+        </span>
+      )}
+      <SpecialA>
+        <Link href={"/contacto"} passHref>
+          <ButtonArrow text={cta.submit} inverse className="clean"/>
+        </Link>
+      </SpecialA>
+
+      {/* <DefaultForm
         onSubmit={onSubmit}
         id={id}
         text={cta}
@@ -64,7 +81,7 @@ const ConsultoriaCTA = ({
             )}
           </>
         }
-      />
+      /> */}
       {diagnostico_cta && (
         <Diagnostico>
           <Fade triggerOnce>
@@ -85,6 +102,10 @@ const ConsultoriaCTA = ({
 
 export default React.memo(ConsultoriaCTA);
 
+const SpecialA = styled.div`
+  margin-bottom: 30px;
+`;
+
 const Container = styled.div`
   max-width: 450px;
   & > span {
@@ -95,6 +116,7 @@ const Container = styled.div`
     font-weight: 200;
     &.noPrice {
       font-size: 2.4rem;
+      margin-bottom: 13px;
       em {
         margin-top: 9px;
       }

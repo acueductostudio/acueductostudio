@@ -25,12 +25,12 @@ const PinnedSection = styled(MetalPinnedSection)`
     }
   }
   @media (max-width: 600px) {
-    a {
+    a:not(.clean) {
       background-position: 0 2rem;
       padding-bottom: 3px;
     }
   }
-  a {
+  a:not(.clean) {
     color: ${(props) => props.theme.colors.foreground};
     background-position: 0 2.3rem;
     background-position: 0 90%;

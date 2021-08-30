@@ -115,7 +115,7 @@ function Consultoria({ locale, setTitle, pt, hasLoaded }) {
         ))}
       </StepGrid>
       <TitleSection {...last_section.intro} borderTop>
-        <ConsultoriaCTA cta={cta} id="second" diagnostico_cta price />
+        <ConsultoriaCTA cta={cta} id="second" diagnostico_cta />
       </TitleSection>
       <ContactFooter />
     </PageClipper>

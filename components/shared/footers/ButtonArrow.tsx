@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-type ButtonProps = { inverse?: boolean; text: string; submitButton?: boolean };
+type ButtonProps = {
+  inverse?: boolean;
+  text: string;
+  submitButton?: boolean;
+  className?: string;
+};
 export type ButtonRef = any;
 
 export const ButtonArrow = React.forwardRef<ButtonRef, ButtonProps>(
