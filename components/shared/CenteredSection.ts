@@ -5,7 +5,8 @@ export const Content = styled(Div)``;
 
 const CenteredSection = styled.div<{ customBackground?: string }>`
   background-color: ${(p) => p.theme.colors.background};
-  background-image: ${(p) => p.customBackground ? `url(${p.customBackground})` : "none"};
+  background-image: ${(p) =>
+    p.customBackground ? `url(${p.customBackground})` : "none"};
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top right;
@@ -27,7 +28,7 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
   h2 {
     font-size: 2.5rem;
     grid-column: 1 / span 5;
-    text-align:center;
+    text-align: center;
     font-weight: 200;
     max-width: 690px;
     color: ${(p) => p.theme.colors.accent};
@@ -39,6 +40,28 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
     border-radius: 70px;
     margin-top: 8%;
     max-width: 900px;
+    a {
+      color: ${(props) => props.theme.colors.accent};
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.25rem;
+      text-decoration-color: ${(props) => props.theme.colors.accent};
+      transition: .3s ease all;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: ${(props) => props.theme.colors.background};
+          text-decoration-color: ${(props) => props.theme.colors.accent};
+        }
+      }
+      &:focus,
+      &:active {
+        color: ${(props) => props.theme.colors.background};
+        text-decoration-color: ${(props) => props.theme.colors.accent};
+      }
+    }
+    ul,
+    ol {
+      margin-left: 25px;
+    }
     img {
       max-width: 100%;
       height: auto;
@@ -51,7 +74,7 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       font-weight: 200;
       color: ${(p) => p.theme.colors.background};
       line-height: 120%;
-      text-align:left;
+      text-align: left;
     }
     h3 {
       font-size: 2.5rem;
@@ -68,7 +91,9 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       font-weight: 200;
       color: ${(p) => p.theme.colors.background};
     }
-    p {
+    p,
+    ol li,
+    ul li {
       color: ${(p) => p.theme.colors.foreground_lowest};
       max-width: calc(680px + 10%);
       letter-spacing: -0.003em;

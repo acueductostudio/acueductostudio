@@ -9,6 +9,7 @@ import EpisodeNumber from "./EpisodeNumber";
 import Link from "next/link";
 import BorderLink from "components/shared/BorderedLink";
 import CenteredSection, { Content } from "components/shared/CenteredSection";
+import ShareRouter from "./ShareRouter";
 
 const EpisodePage = ({
   title,
@@ -61,6 +62,10 @@ const EpisodePage = ({
             longFormat
           />
           <Content>{content}</Content>
+          <RouterSpace>
+          Si crees que a alguien le seria útil este contenido, compártelo con esa persona.
+          </RouterSpace>
+          <ShareRouter shareUrl={`https://acueducto.studio/podcast/${slug}`} />
         </Fade>
       </CenteredSection>
     </>
@@ -72,6 +77,17 @@ export default React.memo(EpisodePage);
 const THoverable = styled.b`
   font-weight: 300;
   ${BorderLink({ showLink: false })}
+`;
+
+const RouterSpace = styled.div`
+  padding-top: 10%;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 450px;
+  @media (max-width: 800px) {
+    max-width: 400px;
+    padding-top: 5%;
+  }
 `;
 
 const EpisodeNumberStyled = styled.div`

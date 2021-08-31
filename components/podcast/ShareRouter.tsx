@@ -15,7 +15,7 @@ const ShareRouter = ({
   children,
   shareUrl,
 }: {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   shareUrl: string;
 }) => {
   return (
