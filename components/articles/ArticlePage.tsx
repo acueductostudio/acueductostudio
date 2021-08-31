@@ -42,6 +42,11 @@ const ArticlePage = ({
           <Content>
             <Transcript>{content}</Transcript>
           </Content>
+          <RouterSpace>
+            Si crees que a alguien le seria útil este contenido, compártelo con
+            esa persona.
+          </RouterSpace>
+          <ShareRouter shareUrl={`https://acueducto.studio/podcast/${slug}`} />
         </Fade>
       </CenteredSection>
     </>
@@ -60,5 +65,19 @@ const Credits = styled.div`
   address {
     display: inline-block;
     font-style: normal;
+  }
+`;
+
+const RouterSpace = styled.div`
+  padding-top: 20%;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 450px;
+  @media (max-width: 800px) {
+    max-width: 400px;
+    padding-top: 10%;
+  }
+  @media (max-width: 500px) {
+    padding-top: 6%;
   }
 `;
