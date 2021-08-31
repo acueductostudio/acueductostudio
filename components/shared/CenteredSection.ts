@@ -141,7 +141,7 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
     ${Content} {
       border-radius: 40px;
       p,
-      ul {
+      ul, ol {
         font-size: 1.7rem;
         line-height: 25px;
       }
@@ -191,7 +191,7 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       padding: 5%;
       border-radius: 20px;
       p,
-      ul {
+      ul, ol {
         font-weight: 200;
       }
     }
