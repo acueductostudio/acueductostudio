@@ -5,7 +5,10 @@ import { Fade } from "react-awesome-reveal";
 import Header from "./Header";
 import ArticleProps from "utils/types/ArticleProps";
 import ShareRouter from "components/podcast/ShareRouter";
-import CenteredSection, { Content } from "components/shared/CenteredSection";
+import CenteredSection, {
+  Content,
+  Transcript,
+} from "components/shared/CenteredSection";
 
 const ArticlePage = ({
   title,
@@ -36,7 +39,9 @@ const ArticlePage = ({
           <ShareRouter shareUrl={`https://acueducto.studio/articulos/${slug}`}>
             Comparte
           </ShareRouter>
-          <Content>{content}</Content>
+          <Content>
+            <Transcript>{content}</Transcript>
+          </Content>
         </Fade>
       </CenteredSection>
     </>

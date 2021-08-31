@@ -8,7 +8,10 @@ import Logo from "public/assets/img/layout/logo.svg";
 import EpisodeNumber from "./EpisodeNumber";
 import Link from "next/link";
 import BorderLink from "components/shared/BorderedLink";
-import CenteredSection, { Content } from "components/shared/CenteredSection";
+import CenteredSection, {
+  Content,
+  Transcript,
+} from "components/shared/CenteredSection";
 import ShareRouter from "./ShareRouter";
 
 const EpisodePage = ({
@@ -61,9 +64,13 @@ const EpisodePage = ({
             category={category}
             longFormat
           />
-          <Content>{content}</Content>
+          <Content>
+            <ContentType>Transcript</ContentType>
+            <Transcript>{content}</Transcript>
+          </Content>
           <RouterSpace>
-          Si crees que a alguien le seria útil este contenido, compártelo con esa persona.
+            Si crees que a alguien le seria útil este contenido, compártelo con
+            esa persona.
           </RouterSpace>
           <ShareRouter shareUrl={`https://acueducto.studio/podcast/${slug}`} />
         </Fade>
@@ -79,14 +86,41 @@ const THoverable = styled.b`
   ${BorderLink({ showLink: false })}
 `;
 
+const ContentType = styled.span`
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align:center;
+  letter-spacing: 6px;
+  color: ${(props) => props.theme.colors.background};
+  margin-bottom: 2rem;
+  font-size:1.5rem;
+  width:100%;
+  display:block;
+  transform: translateY(-100%);
+  @media (max-width: 900px) {
+    margin-top:10px;
+  }
+  @media (max-width: 650px) {
+    margin-top:30px;
+    margin-bottom:1rem;
+  }
+  @media (max-width: 500px) {
+    font-size:1.3rem;
+    margin-top:40px;
+  }
+`;
+
 const RouterSpace = styled.div`
-  padding-top: 10%;
+  padding-top: 20%;
   margin-top: 20px;
   text-align: center;
   max-width: 450px;
   @media (max-width: 800px) {
     max-width: 400px;
-    padding-top: 5%;
+    padding-top: 10%;
+  }
+  @media (max-width: 500px) {
+    padding-top: 6%;
   }
 `;
 

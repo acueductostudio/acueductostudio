@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Div } from "components/shared/Dangerously";
 
-export const Content = styled(Div)``;
+export const Content = styled.div``;
+
+export const Transcript = styled(Div)``;
 
 const CenteredSection = styled.div<{ customBackground?: string }>`
   background-color: ${(p) => p.theme.colors.background};
@@ -45,7 +47,7 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       text-decoration-thickness: 2px;
       text-underline-offset: 0.25rem;
       text-decoration-color: ${(props) => props.theme.colors.accent};
-      transition: .3s ease all;
+      transition: 0.3s ease all;
       @media (hover: hover) and (pointer: fine) {
         &:hover {
           color: ${(props) => props.theme.colors.background};
@@ -68,6 +70,9 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       margin: 2rem 0;
     }
     h2 {
+      &:first-of-type{
+        margin-top:2rem;
+      }
       font-size: 3rem;
       margin-bottom: 1.3rem;
       margin-top: 4rem;
@@ -141,7 +146,8 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
     ${Content} {
       border-radius: 40px;
       p,
-      ul, ol {
+      ul,
+      ol {
         font-size: 1.7rem;
         line-height: 25px;
       }
@@ -184,15 +190,32 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
     ${Content} {
       padding: 8%;
       border-radius: 30px;
+      h2 {
+        font-size: 2.4rem;
+      }
+      h3 {
+        font-size: 1.9rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
     }
   }
   @media (max-width: 400px) {
     ${Content} {
       padding: 5%;
       border-radius: 20px;
+      h2 {
+        font-size: 2.1rem;
+      }
       p,
-      ul, ol {
+      ul,
+      ol {
         font-weight: 200;
+        strong,
+        b {
+          font-weight: 300;
+        }
       }
     }
     h1 {
