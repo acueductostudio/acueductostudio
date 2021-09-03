@@ -65,14 +65,22 @@ const EpisodePage = ({
             longFormat
           />
           <Content>
-            <ContentType>Transcript</ContentType>
+            {content && <ContentType>Transcript</ContentType>}
             <Transcript>{content}</Transcript>
           </Content>
-          <RouterSpace>
-            Si crees que a alguien le seria útil este contenido, compártelo con
-            esa persona.
-          </RouterSpace>
-          <ShareRouter shareUrl={`https://acueducto.studio/podcast/${slug}`} />
+          <CenteredDiv>
+            {content && (
+              <>
+                <RouterSpace>
+                  Si crees que a alguien le seria útil este contenido,
+                  compártelo con esa persona.
+                </RouterSpace>
+                <ShareRouter
+                  shareUrl={`https://acueducto.studio/podcast/${slug}`}
+                />
+              </>
+            )}
+          </CenteredDiv>
         </Fade>
       </CenteredSection>
     </>
@@ -86,27 +94,34 @@ const THoverable = styled.b`
   ${BorderLink({ showLink: false })}
 `;
 
+const CenteredDiv = styled.div`
+align-items: center;
+justify-content: center;
+display:flex;
+flex-direction:column;
+`;
+
 const ContentType = styled.span`
   font-weight: 300;
   text-transform: uppercase;
-  text-align:center;
+  text-align: center;
   letter-spacing: 6px;
   color: ${(props) => props.theme.colors.background};
   margin-bottom: 2rem;
-  font-size:1.5rem;
-  width:100%;
-  display:block;
+  font-size: 1.5rem;
+  width: 100%;
+  display: block;
   transform: translateY(-100%);
   @media (max-width: 900px) {
-    margin-top:10px;
+    margin-top: 10px;
   }
   @media (max-width: 650px) {
-    margin-top:30px;
-    margin-bottom:1rem;
+    margin-top: 30px;
+    margin-bottom: 1rem;
   }
   @media (max-width: 500px) {
-    font-size:1.3rem;
-    margin-top:40px;
+    font-size: 1.3rem;
+    margin-top: 40px;
   }
 `;
 
