@@ -10,6 +10,7 @@ file: https://www.buzzsprout.com/895972/9062718-asi-es-el-marketing-b2b-en-las-g
 spotify: https://open.spotify.com/episode/160bIlsMAqha5SIl6gjepu
 apple: https://podcasts.apple.com/mx/podcast/as%C3%AD-es-el-marketing-b2b-en-las-grandes-ligas-isabel/id1500473556?i=1000534182426
 youtube: https://www.youtube.com/watch?v=y407jPkBoo8
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05MDYyNzE4
 ---
 **Artemio:** Hoy platicamos con Isabel Cabrero, Head of Marketing and Communications en Belvo, la SaaS de *Open Finance* diseñada para Latinoamérica, acerca de sus mejores prácticas y consejos para marketing Business 2 Business, marketing de contenido, y la importancia de la automatización para generar nuevos clientes.
 
