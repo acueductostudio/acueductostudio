@@ -14,7 +14,7 @@ google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8
 ---
 **Artemio:** Hoy platicamos con Isabel Cabrero, Head of Marketing and Communications en Belvo, la SaaS de *Open Finance* diseñada para Latinoamérica, acerca de sus mejores prácticas y consejos para marketing Business 2 Business, marketing de contenido, y la importancia de la automatización para generar nuevos clientes.
 
-## **¿Quién es Isabel Cabrero? Head of Marketing and Communications en Belvo. ¿Qué hace todos los días?**
+## ¿Quién es Isabel Cabrero? Head of Marketing and Communications en Belvo. ¿Qué hace todos los días?
 
 **Artemio:** Bienvenidos a un episodio más en el que recibiremos a un experto en el mundo del emprendimiento y la tecnología, esta vez, en el área de marketing. Nos acompaña el día de hoy Isabel Cabrero, de Belvo, que es una de las *fintech* más emocionantes no solo en Latinoamérica, sino en todo el mundo. Me acompaña aquí Isabel. ¡Hola, Isabel! ¿Cómo estás?
 
@@ -28,7 +28,7 @@ Isabel también ha sido Senior Marketing en CARTO y Events and Sponsorship Manag
 
 Otra cosa que he estado haciendo es preparar una campaña de contenido que lanzaremos la próxima semana, así que ese es mi día a día.
 
-## **¿Cómo se dirige un equipo en tres diferentes países?**
+## ¿Cómo se dirige un equipo en tres diferentes países?
 
 **Rodrigo:** Este es un equipo de tres países, porque Belvo opera en México, en Brasil y en Colombia. ¿cómo es el hecho de operar en varios territorios, de manejar un equipo en tres países?
 
@@ -38,7 +38,7 @@ Otra cosa que he estado haciendo es preparar una campaña de contenido que lanza
 
 **Isabel:** Claro, no solo tenemos nuestro equipo de marketing local, sino que también tenemos equipo de producto, de ventas, de c*ustomer success* y el equipo de *people* para lo que tú decías, para alinear las culturas entre países, que esa cultura que tenemos en Belvo sea igual en donde estés trabajando, también porque somos una empresa en remoto, que muchos de nuestros empleados ni siquiera tienen una oficina cerca. Yo soy empleada en remoto, por ejemplo, que trabajo en Madrid. Es súper importante tener equipo en los países en los que estamos operando y no solo en marketing, sino en todos los departamentos.
 
-## **¿Cómo es el proceso de compra en una Saas company? ¿Cómo se diferencia el marketing de Belvo con el de una app como Uber o Rappi?**
+## ¿Cómo es el proceso de compra en una Saas company? ¿Cómo se diferencia el marketing de Belvo con el de una app como Uber o Rappi?
 
 **Artemio:** Queríamos preguntarte cómo es distinto el marketing de una app, tal vez, como Rappi o Uber, donde sí hay un producto físico o un servicio tangible, ¿cómo dista eso de una *SaaS company*? De vender un software, de vender una API, así como ustedes lo hacen.
 
@@ -52,7 +52,7 @@ Otra cosa que he estado haciendo es preparar una campaña de contenido que lanza
 
 **Isabel:** Desde luego. Ahí la decisión, como tú dices, es súper racional y tú tienes que ir educando a lo largo de todo este camino y darle el contenido que necesita en cada parte del camino. Y claro, al final es mucho más racional porque yo pienso y digo “vale, qué retorno me va a aportar a mí Belvo si yo soy un *business profile*”, pero igual si soy un *developer* pienso: “con Belvo voy a integrar esto en dos segundos, ¡maravilloso!” Tenemos diferentes personas y cada persona tiene un *pain point*, que es la tecla que tienes que tocar. Identificar esos *pain* *points* y saber quiénes son nuestras personas, y que hay varias personas, creo que es la clave para tener una buena estrategia de B2B marketing y es una de las cosas por las que yo empezaría y por las que yo empecé.
 
-## **¿Cuál es la estrategia para elaborar content marketing? ¿Cómo miden sus resultados?**
+## ¿Cuál es la estrategia para elaborar content marketing? ¿Cómo miden sus resultados?
 
 **Rodrigo:** Isabel Cabrero, hablando de tácticas un poco más específicas, ustedes usan un blog, tienen recursos, hay *white* *papers*, hay casos de estudio, pero ¿cómo miden ustedes los resultados de sus esfuerzos de *content marketing*?
 
