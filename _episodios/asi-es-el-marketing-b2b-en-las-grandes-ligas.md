@@ -98,7 +98,7 @@ O, por ejemplo, alguien que se ha registrado a un webinar nuestro sobre el verti
 
 Sobre tu pregunta de cómo han cambiado con el tiempo, sí es verdad que nos hemos tenido que adaptar mucho. Cuando yo hacía *lead generation* hace cinco años, una gran fuente de leads eran los eventos físicos, el networking, tu stand donde venían los clientes, esa era una gran fuente de leads y empezaban muchas relaciones comerciales. Este año, como todos sabemos, toda esta parte está en *stand by*, que esperemos que vuelva pronto, y hemos tenido que reinventarnos en nuevos formatos, como el webinar o el podcast, que son formatos que creo que han resurgido en los últimos años y es lo que ha cambiado.
 
-## ¿Qué deben considerar los emprendedores al optimizar su página web  y al realizar cambios significativos en su negocio?
+## ¿Qué deben considerar los emprendedores al optimizar su página web y al realizar cambios significativos en su negocio?
 
 **Artemio:** 100%, creo que mencionas una parte bien importante, que es que ustedes crean cierto contenido y luego lo diseccionan a través de todos estos canales y le sacan toda la carnita que se pueda. Y esto solo es posible cuando tu contenido madre, núcleo o de donde partes realmente tiene toda esa carnita para poder sacarle el mayor jugo posible. También mencionabas que su sitio web era algo fundamental. Nosotros creemos que es una pieza angular de cualquier negocio hoy en día que opere en internet o que se venda en internet, es realmente la fachada que tú pones al mundo y puede ser lo que termine dictando si confía en ti o no la persona que está visitando el sitio o que está tratando de descubrir información de tu negocio.
 
