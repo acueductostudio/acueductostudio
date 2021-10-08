@@ -16,14 +16,8 @@ interface NewContact {
 }
 
 export const createContact = async (submittedData: NewContact) => {
-  let {
-    firstName,
-    lastName,
-    email,
-    listIds,
-    updateEnabled,
-    attributes,
-  } = submittedData;
+  let { firstName, lastName, email, listIds, updateEnabled, attributes } =
+    submittedData;
   let capitalizedName = capitalize(firstName);
   let capitalizedLastName = capitalize(lastName);
 
@@ -87,6 +81,7 @@ interface MailForHola {
   lastName: string;
   email: string;
   company: string;
+  job: string;
   message: string;
   phoneCheckbox: boolean;
   phone: string;
@@ -98,6 +93,7 @@ export const sendToHola = async (formData: MailForHola) => {
     lastName,
     email,
     company,
+    job,
     phone,
     phoneCheckbox,
     message,
@@ -110,10 +106,12 @@ export const sendToHola = async (formData: MailForHola) => {
     Nombre: ${completeName}<br/>
     Email: ${email}<br/>
     Empresa: ${capitalizeAll(company)}<br/>
-    ${phoneCheckbox
-      ? `Teléfono: ${phone}<br/>
+    Puesto: ${job}</br>
+    ${
+      phoneCheckbox
+        ? `Teléfono: ${phone}<br/>
       <b>Contactar por WhatsApp</b><br/>`
-      : ""
+        : ""
     }
     Mensaje: ${message}</p>
   `;
@@ -131,7 +129,7 @@ export const sendToHola = async (formData: MailForHola) => {
         name: completeName,
       },
       to: [{ name: "Acueducto", email: "hola@acueducto.studio" }],
-      subject: "Nuevo proyecto",
+      subject: "Nuevo proyecto - desde /contacto",
       replyTo: { email: email, name: completeName },
       textContent: htmlContent,
     }),

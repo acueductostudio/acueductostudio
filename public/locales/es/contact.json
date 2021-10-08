@@ -36,6 +36,11 @@
       "placeholder": "nombre de tu empresa",
       "errorMissing": "*falta tu empresa"
     },
+    "job": {
+      "label": "tu puesto",
+      "placeholder": "nombre de tu puesto",
+      "errorMissing": "*falta tu puesto"
+    },
     "employees": {
       "label": "número de empleados"
     },

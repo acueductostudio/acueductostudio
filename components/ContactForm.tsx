@@ -51,30 +51,31 @@ const ContactForm = ({ text }) => {
               />
               <span>{errors?.email?.message}</span>
             </InputField>
+            <OneLine>
+              <InputField>
+                <label htmlFor={`cp_firstName`}>{text.firstName.label}</label>
+                <input
+                  name="firstName"
+                  id={`cp_firstName`}
+                  type="text"
+                  placeholder={text.firstName.placeholder}
+                  {...register("firstName", { required: true })}
+                />
+                {errors.firstName && <span>{text.firstName.errorMissing}</span>}
+              </InputField>
 
-            <InputField>
-              <label htmlFor={`cp_firstName`}>{text.firstName.label}</label>
-              <input
-                name="firstName"
-                id={`cp_firstName`}
-                type="text"
-                placeholder={text.firstName.placeholder}
-                {...register("firstName", { required: true })}
-              />
-              {errors.firstName && <span>{text.firstName.errorMissing}</span>}
-            </InputField>
-
-            <InputField>
-              <label htmlFor={`cp_lastName`}>{text.lastName.label}</label>
-              <input
-                name="lastName"
-                id={`cp_lastName`}
-                type="text"
-                placeholder={text.lastName.placeholder}
-                {...register("lastName", { required: true })}
-              />
-              {errors.lastName && <span>{text.lastName.errorMissing}</span>}
-            </InputField>
+              <InputField>
+                <label htmlFor={`cp_lastName`}>{text.lastName.label}</label>
+                <input
+                  name="lastName"
+                  id={`cp_lastName`}
+                  type="text"
+                  placeholder={text.lastName.placeholder}
+                  {...register("lastName", { required: true })}
+                />
+                {errors.lastName && <span>{text.lastName.errorMissing}</span>}
+              </InputField>
+            </OneLine>
             <InputField>
               <label htmlFor={`cp_company`}>{text.company.label}</label>
               <input
@@ -85,6 +86,17 @@ const ContactForm = ({ text }) => {
                 {...register("company", { required: true })}
               />
               {errors.company && <span>{text.company.errorMissing}</span>}
+            </InputField>
+            <InputField>
+              <label htmlFor={`cp_job`}>{text.job.label}</label>
+              <input
+                name="job"
+                id={`cp_job`}
+                type="text"
+                placeholder={text.job.placeholder}
+                {...register("job", { required: true })}
+              />
+              {errors.job && <span>{text.job.errorMissing}</span>}
             </InputField>
             <InputField>
               <label htmlFor={`cp_message`}>{text.message.label}</label>
@@ -152,6 +164,15 @@ const ContactForm = ({ text }) => {
 };
 
 export default ContactForm;
+
+const OneLine = styled.div`
+  flex-direction: row;
+  display: flex;
+  gap: 2rem;
+  @media (max-width: 600px), (max-height: 450px) {
+    display:unset;
+  }
+`;
 
 const Message = styled.div`
   color: ${(p) => p.theme.colors.success};

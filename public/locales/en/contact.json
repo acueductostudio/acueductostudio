@@ -36,6 +36,11 @@
       "placeholder": "name of your company",
       "errorMissing": "*missing company"
     },
+    "job": {
+      "label": "your job position",
+      "placeholder": "name of your position",
+      "errorMissing": "*missing position"
+    },
     "employees": {
       "label": "number of employees"
     },
