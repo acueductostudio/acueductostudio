@@ -8,7 +8,7 @@ category: Founder
 description: Recibimos de forma remota a Juan Pablo Sánchez, COO de Bluebox, para platicar sobre negocios en esta cuarentena y responder ¿Cómo afecta esta situación a las startups y emprendimientos del país? ¿Cómo es recomendable reaccionar? y ¿Qué oportunidades existen en este momento? entre otros temas.
 file: https://www.buzzsprout.com/895972/3608812-e03-negocios-en-cuarentena-juan-pablo-sanchez.mp3?blob_id=13343389&download=true
 spotify: https://open.spotify.com/episode/0jtAKm8v3O6UWEVkZHiUbR?si=7PyEweQDSdmVWuP6WVZ8tA
-apple: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0zNjA4ODEy
+apple: https://podcasts.apple.com/mx/podcast/c%C3%B3mo-reaccionar-a-la-pandemia-con-tu-negocio-juan/id1500473556?i=1000473579240
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0zNjA4ODEy
 youtube: https://www.youtube.com/watch?v=gTVO-XBFDWc
 ---
