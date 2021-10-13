@@ -20,6 +20,37 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
     setTitle(head.headerTitle);
   }, [locale]);
 
+  const categories = [
+    "founder",
+    "diseño",
+    "inversor",
+    "growth-marketing",
+    "todas",
+  ];
+
+  const sort = (category) => {
+    let allCats: any = document.querySelectorAll(`.out`);
+    for (let epis of allCats) {
+      epis.style.backgroundColor = "#060809";
+    }
+    let selected = document.getElementById(`${category}out`)
+    selected.style.backgroundColor = "#1A4CE0";
+
+    let allEpisodes: any = document.querySelectorAll(`.npd`);
+    for (let epis of allEpisodes) {
+      epis.style.display = "flex";
+    }
+
+    if (category != "todas") {
+      let allNotEpisodes: any = document.querySelectorAll(
+        `.npd:not(.${category})`
+      );
+      for (let epis of allNotEpisodes) {
+        epis.style.display = "none";
+      }
+    }
+  };
+
   return (
     <PageClipper>
       <Head
@@ -44,6 +75,14 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
           >
             Escúchalo en
           </BroadcastRouter>
+          <p>¿Buscas una categoría en especial?</p>
+          <CatList>
+            {categories.map((cat, i) => (
+              <Category key={"cat" + i} id={cat+"out"} className="out" onClick={(e) => sort(cat)}>
+                {cat == "growth-marketing" ? "growth/marketing" : cat}
+              </Category>
+            ))}
+          </CatList>
           <PodcastList>
             {episodes.map((episode, index) => (
               <EpisodePreview {...episode} key={"npd" + index} />
@@ -91,6 +130,41 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
+
+const CatList = styled.div`
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  & > :last-child {
+    border-color: ${(p) => p.theme.colors.foreground_low};
+  }
+`;
+
+const Category = styled.div`
+  border: 2px solid ${(p) => p.theme.colors.accent};
+  border-radius: 50px;
+  padding: 4px 13px 8px 14px;
+  color: ${(p) => p.theme.colors.foreground_low};
+  font-size: 1.5rem;
+  background-color: ${(p) => p.theme.colors.background};
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(0.97);
+    }
+  }
+  &:focus,
+  &:active {
+    transform: scale(0.97);
+    border-color: ${(p) => p.theme.colors.foreground_low};
+  }
+  @media (max-width: 620px) {
+    font-size: 1.3rem;
+  }
+`;
 
 const PodcastGrid = styled.div`
   background-color: ${(p) => p.theme.colors.background};

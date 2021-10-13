@@ -39,7 +39,7 @@ const EpisodePreview = ({
     day: "numeric",
   });
   return (
-    <NewPod key={"npd" + episode}>
+    <NewPod key={"npd" + episode} className={`${category == "Growth/marketing" ? "growth-marketing" : category.toLowerCase()} npd`}>
       <PictureContainer hoverable={!longFormat}>
         {longFormat ? (
           <Picture
