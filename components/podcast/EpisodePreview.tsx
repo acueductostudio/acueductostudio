@@ -129,9 +129,13 @@ const EpisodePreview = ({
           </Fade>
           <ButtonSpace>
             {nextEpisode && (
-              <LinkComplex>
-                <ButtonArrow text={"seguir aprendiendo"} inverse />
-              </LinkComplex>
+              <Link href={"/podcast/" + slug} passHref>
+                <ButtonArrow
+                  text={"seguir aprendiendo"}
+                  inverse
+                  className="leftFix"
+                />
+              </Link>
             )}
           </ButtonSpace>
         </div>
@@ -147,6 +151,9 @@ const ButtonSpace = styled.div`
   display: flex;
   align-items: flex-start;
   margin-top: 2rem;
+  .leftFix span::after {
+    margin-left: -6px;
+  }
   @media (max-width: 600px) {
     min-width: 241px;
   }
