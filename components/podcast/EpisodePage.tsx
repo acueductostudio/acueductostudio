@@ -28,7 +28,9 @@ const EpisodePage = ({
   youtube,
   episode,
   content,
+  next,
 }: PodcastProps) => {
+
   return (
     <>
       <CenteredSection customBackground={"/assets/img/podcast/backOld.svg"}>
@@ -82,6 +84,9 @@ const EpisodePage = ({
             )}
           </CenteredDiv>
         </Fade>
+        {/* <EpisodePreview
+            {...next}
+          /> */}
       </CenteredSection>
     </>
   );
@@ -95,10 +100,10 @@ const THoverable = styled.b`
 `;
 
 const CenteredDiv = styled.div`
-align-items: center;
-justify-content: center;
-display:flex;
-flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ContentType = styled.span`

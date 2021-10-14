@@ -39,3 +39,34 @@ export function getAllEpisodes(fields = []) {
   const episodes = slugs.map((slug) => getEpisodeBySlug(slug, fields));
   return episodes;
 }
+
+export function getNextEpisodeSlug(currentEpisode) {
+  //retreive object with episodes in alphabetical order
+  const allIds = getAllEpisodes(["episode"]);
+
+  //turn object into simple array, same order
+  let slugArr: number[] = [];
+  allIds.map((obj) => {
+    for (var [key, value] of Object.entries(obj)) {
+      slugArr.push(value);
+    }
+  });
+
+  //identify next episode number
+  let nextEp = currentEpisode + 1;
+
+  //identify next episode position in array by looking for its episode num in the simple array
+  let nextEpPosInArr = slugArr.indexOf(nextEp, 0);
+
+  //if the next position doesn't exist (last episode + 1), return to first episode
+  //this also prevents mislabeled episodes from breaking 
+  nextEpPosInArr == -1
+    ? (nextEpPosInArr = slugArr.indexOf(1, 0))
+    : (nextEpPosInArr = nextEpPosInArr);
+
+  //retreive object with episodes slug in alphabetical order
+  const allSlugs = getAllEpisodes(["slug"]);
+
+  //find slug by looking for next episode position in slug array
+  return allSlugs[nextEpPosInArr].slug;
+}

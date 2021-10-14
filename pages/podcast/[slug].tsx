@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { GetStaticProps } from "next";
 import EpisodeProps from "utils/types/EpisodeProps";
 import markdownToHtml from "utils/markdownToHtml";
-import { getAllEpisodes, getEpisodeBySlug } from "utils/podcastApi";
+import { getAllEpisodes, getEpisodeBySlug, getNextEpisodeSlug } from "utils/podcastApi";
 import Head from "components/layout/Head";
 import EpisodePage from "components/podcast/EpisodePage";
 import PageClipper from "components/layout/PageClipper";
@@ -25,7 +25,7 @@ export default function Episodio({ locale, setTitle, episode }) {
           alt: episode.title + " | " + episode.guest + ", " + episode.business,
         }}
       ></Head>
-      <EpisodePage {...episode} slug={episode.slug} />
+      <EpisodePage {...episode} slug={episode.slug}/>
       <ResourceFooter shadow identify={episode.slug} />
     </PageClipper>
   );
@@ -47,6 +47,21 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "youtube",
     "content",
   ]);
+  const next: EpisodeProps = getEpisodeBySlug(getNextEpisodeSlug(episode.episode), [
+    "title",
+    "guest",
+    "date",
+    "business",
+    "category",
+    "description",
+    "episode",
+    "slug",
+    "spotify",
+    "apple",
+    "google",
+    "youtube",
+  ]);
+
   const content = await markdownToHtml(episode.content || "");
   if (!episode) {
     return {
@@ -58,7 +73,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
       episode: {
         ...episode,
         content,
+        next,
       },
+      nextEpisode:{
+        ...next,
+      }
     },
   };
 };
