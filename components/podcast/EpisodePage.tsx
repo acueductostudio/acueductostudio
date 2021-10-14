@@ -30,7 +30,6 @@ const EpisodePage = ({
   content,
   next,
 }: PodcastProps) => {
-
   return (
     <>
       <CenteredSection customBackground={"/assets/img/podcast/backOld.svg"}>
@@ -84,15 +83,29 @@ const EpisodePage = ({
             )}
           </CenteredDiv>
         </Fade>
-        {/* <EpisodePreview
-            {...next}
-          /> */}
+        <NextEp>
+          <p>Escucha otro episodio</p>
+          <EpisodePreview {...next} nextEpisode />
+        </NextEp>
       </CenteredSection>
     </>
   );
 };
 
 export default React.memo(EpisodePage);
+
+const NextEp = styled.div`
+  margin-top: 10%;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${(props) => props.theme.colors.foreground_low};
+  @media (max-width: 620px) {
+    margin-top: 20%;
+  }
+`;
 
 const THoverable = styled.b`
   font-weight: 300;
@@ -135,6 +148,7 @@ const RouterSpace = styled.div`
   margin-top: 20px;
   text-align: center;
   max-width: 450px;
+  color: ${(props) => props.theme.colors.foreground_low};
   @media (max-width: 800px) {
     max-width: 400px;
     padding-top: 10%;

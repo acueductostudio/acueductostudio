@@ -37,7 +37,7 @@ const Pin = styled.span<{ inverse: boolean }>`
   border-radius: 100%;
   margin-left: 15px;
   transition: 0.3s ease all;
-  &:after {
+  &::after {
     content: " ";
     border: solid
       ${(p) => (!p.inverse ? p.theme.colors.accent : p.theme.colors.background)};

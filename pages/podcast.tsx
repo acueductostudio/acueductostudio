@@ -33,7 +33,7 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
     for (let epis of allCats) {
       epis.style.backgroundColor = "#060809";
     }
-    let selected = document.getElementById(`${category}out`)
+    let selected = document.getElementById(`${category}out`);
     selected.style.backgroundColor = "#1A4CE0";
 
     let allEpisodes: any = document.querySelectorAll(`.npd`);
@@ -75,14 +75,21 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
           >
             Escúchalo en
           </BroadcastRouter>
-          <p>¿Buscas una categoría en especial?</p>
-          <CatList>
-            {categories.map((cat, i) => (
-              <Category key={"cat" + i} id={cat+"out"} className="out" onClick={(e) => sort(cat)}>
-                {cat == "growth-marketing" ? "growth/marketing" : cat}
-              </Category>
-            ))}
-          </CatList>
+          <Fade>
+            <p>¿Buscas una categoría en especial?</p>
+            <CatList>
+              {categories.map((cat, i) => (
+                <Category
+                  key={"cat" + i}
+                  id={cat + "out"}
+                  className="out"
+                  onClick={(e) => sort(cat)}
+                >
+                  {cat == "growth-marketing" ? "growth/marketing" : cat}
+                </Category>
+              ))}
+            </CatList>
+          </Fade>
           <PodcastList>
             {episodes.map((episode, index) => (
               <EpisodePreview {...episode} key={"npd" + index} />

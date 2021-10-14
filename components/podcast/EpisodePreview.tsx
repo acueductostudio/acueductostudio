@@ -7,9 +7,11 @@ import Picture from "components/caseStudy/shared/Picture";
 import EpisodeNumber from "./EpisodeNumber";
 import ShareRouter from "./ShareRouter";
 import BorderLink from "components/shared/BorderedLink";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 interface EpisodeFormat extends EpisodeProps {
   longFormat?: boolean;
+  nextEpisode?: boolean;
 }
 
 const EpisodePreview = ({
@@ -26,6 +28,8 @@ const EpisodePreview = ({
   youtube,
   episode,
   longFormat,
+  next,
+  nextEpisode,
 }: EpisodeFormat) => {
   const LinkComplex = ({ children }: { children: React.ReactNode }) => (
     <Link href={"/podcast/" + slug} passHref>
@@ -39,80 +43,114 @@ const EpisodePreview = ({
     day: "numeric",
   });
   return (
-    <NewPod key={"npd" + episode} className={`${category == "Growth/marketing" ? "growth-marketing" : category.toLowerCase()} npd`}>
-      <PictureContainer hoverable={!longFormat}>
-        {longFormat ? (
-          <Picture
-            src={`/assets/img/podcast/${episode}.jpg`}
-            alt={title + " - " + guest}
-            height={180}
-            width={180}
-          />
-        ) : (
-          <LinkComplex>
+    <>
+      <NewPod
+        key={"npd" + episode}
+        nextEpisode={nextEpisode}
+        className={`${
+          category == "Growth/marketing"
+            ? "growth-marketing"
+            : category.toLowerCase()
+        } npd`}
+      >
+        <PictureContainer hoverable={!longFormat}>
+          {longFormat ? (
             <Picture
               src={`/assets/img/podcast/${episode}.jpg`}
               alt={title + " - " + guest}
               height={180}
               width={180}
             />
-          </LinkComplex>
-        )}
-      </PictureContainer>
-      <div>
-        <Fade triggerOnce>
-          <HoverableContainer>
-            {!longFormat && (
-              <LinkComplex>
-                <H2overable>{title}</H2overable>
-              </LinkComplex>
-            )}
-          </HoverableContainer>
-          <Guest>
-            {!longFormat ? (
-              <LinkComplex>
-                <EpisodeNumber episode={episode} />
+          ) : (
+            <LinkComplex>
+              <Picture
+                src={`/assets/img/podcast/${episode}.jpg`}
+                alt={title + " - " + guest}
+                height={nextEpisode ? 200 : 180}
+                width={nextEpisode ? 200 : 180}
+              />
+            </LinkComplex>
+          )}
+        </PictureContainer>
+        <div>
+          <Fade triggerOnce>
+            <HoverableContainer>
+              {!longFormat && !nextEpisode && (
+                <LinkComplex>
+                  {console.log(next)}
+                  <H2overable>{title}</H2overable>
+                </LinkComplex>
+              )}
+            </HoverableContainer>
+            <Guest>
+              {!longFormat ? (
+                <LinkComplex>
+                  <EpisodeNumber episode={episode} />
+                  <h3>
+                    {guest} <span>{business}</span>
+                  </h3>
+                </LinkComplex>
+              ) : (
                 <h3>
                   {guest} <span>{business}</span>
                 </h3>
+              )}
+            </Guest>
+            <DateCat>
+              {longFormat && (
+                <time dateTime={date.toString()}>{formatDate}</time>
+              )}
+              <span>{category}</span>
+            </DateCat>
+            <p>{!nextEpisode && description}</p>
+            <div>
+              {!nextEpisode && (
+                <BroadcastRouter
+                  trackClicks
+                  episode={episode}
+                  spotify={spotify}
+                  apple={apple}
+                  google={google}
+                  youtube={youtube}
+                >
+                  {longFormat && "Escúchalo en"}
+                </BroadcastRouter>
+              )}
+            </div>
+            <div>
+              {longFormat && (
+                <ShareRouter
+                  shareUrl={`https://acueducto.studio/podcast/${slug}`}
+                >
+                  Comparte
+                </ShareRouter>
+              )}
+            </div>
+          </Fade>
+          <ButtonSpace>
+            {nextEpisode && (
+              <LinkComplex>
+                <ButtonArrow text={"seguir aprendiendo"} inverse />
               </LinkComplex>
-            ) : (
-              <h3>
-                {guest} <span>{business}</span>
-              </h3>
             )}
-          </Guest>
-          <DateCat>
-            {longFormat && <time dateTime={date.toString()}>{formatDate}</time>}
-            <span>{category}</span>
-          </DateCat>
-          <p>{description}</p>
-          <BroadcastRouter
-            trackClicks
-            episode={episode}
-            spotify={spotify}
-            apple={apple}
-            google={google}
-            youtube={youtube}
-          >
-            {longFormat && "Escúchalo en"}
-          </BroadcastRouter>
-          <div>
-            {longFormat && (
-              <ShareRouter
-                shareUrl={`https://acueducto.studio/podcast/${slug}`}
-              >
-                Comparte
-              </ShareRouter>
-            )}
-          </div>
-        </Fade>
-      </div>
-    </NewPod>
+          </ButtonSpace>
+        </div>
+      </NewPod>
+    </>
   );
 };
 
 export default EpisodePreview;
+
+const ButtonSpace = styled.div`
+  min-width: 270px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+  @media (max-width: 600px) {
+    min-width: 241px;
+  }
+`;
 
 const HoverableContainer = styled.div`
   margin-bottom: 8px;
@@ -196,10 +234,12 @@ const DateCat = styled.div`
   }
 `;
 
-const NewPod = styled.article`
+const NewPod = styled.article<{ nextEpisode: boolean }>`
   display: flex;
-  margin-top: 10%;
   max-width: 800px;
+  margin-top: ${(p) => (p.nextEpisode ? "3.5rem" : "10%")};
+  width: ${(p) => (p.nextEpisode ? "100%" : "inherit")};
+  justify-content: ${(p) => (p.nextEpisode ? "center" : "inherit")};
   a {
     text-decoration: none;
   }
@@ -215,6 +255,7 @@ const NewPod = styled.article`
     font-size: 2.2rem;
     color: ${(p) => p.theme.colors.foreground};
     margin-top: -4px;
+    text-align: left;
     span {
       display: block;
       font-size: 1.4rem;
@@ -236,6 +277,7 @@ const NewPod = styled.article`
   }
   @media (max-width: 900px) {
     flex-direction: column;
+    align-items: ${(p) => (p.nextEpisode ? "center" : "inherit")};
     ${PictureContainer} {
       min-width: unset;
       max-width: 150px;
@@ -248,7 +290,7 @@ const NewPod = styled.article`
         font-size: 1.3rem;
       }
     }
-    margin-top: 20%;
+    margin-top: ${(p) => (p.nextEpisode ? "3.5rem" : "20%")};
     p {
       padding-top: 9px;
     }
