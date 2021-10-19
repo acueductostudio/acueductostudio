@@ -37,6 +37,7 @@ const EpisodePreview = ({
     </Link>
   );
   let fullDate = new Date(`${date}T00:00:00`);
+  let shortDate = fullDate.toLocaleDateString("es-MX");
   let formatDate = fullDate.toLocaleDateString("es-MX", {
     year: "numeric",
     month: "long",
@@ -97,28 +98,31 @@ const EpisodePreview = ({
               )}
             </Guest>
             <DateCat>
-              {longFormat && (
+              {longFormat && youtube && (
                 <time dateTime={date.toString()}>{formatDate}</time>
               )}
               <span>{category}</span>
             </DateCat>
             <p>{!nextEpisode && description}</p>
             <div>
-              {!nextEpisode && (
-                <BroadcastRouter
-                  trackClicks
-                  episode={episode}
-                  spotify={spotify}
-                  apple={apple}
-                  google={google}
-                  youtube={youtube}
-                >
-                  {longFormat && "Escúchalo en"}
-                </BroadcastRouter>
-              )}
+              {!nextEpisode &&
+                (youtube ? (
+                  <BroadcastRouter
+                    trackClicks
+                    episode={episode}
+                    spotify={spotify}
+                    apple={apple}
+                    google={google}
+                    youtube={youtube}
+                  >
+                    {longFormat && "Escúchalo en"}
+                  </BroadcastRouter>
+                ) : (
+                  <ToBeReleased>Disponible el {shortDate}</ToBeReleased>
+                ))}
             </div>
             <div>
-              {longFormat && (
+              {longFormat && youtube && (
                 <ShareRouter
                   shareUrl={`https://acueducto.studio/podcast/${slug}`}
                 >
@@ -146,13 +150,25 @@ const EpisodePreview = ({
 
 export default EpisodePreview;
 
+const ToBeReleased = styled.div`
+  border: 2px solid orange;
+  border-radius: 100px;
+  padding: 10px 20px 14px 20px;
+  display: inline-block;
+  margin-top: 15px;
+  color: 2px solid ${(p) => p.theme.colors.foreground_low};
+`;
+
 const ButtonSpace = styled.div`
   min-width: 270px;
   display: flex;
   align-items: flex-start;
   margin-top: 2rem;
-  .leftFix span::after {
-    margin-left: -6px;
+  .leftFix {
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 15%);
+    span::after {
+      margin-left: -6px;
+    }
   }
   @media (max-width: 600px) {
     min-width: 241px;

@@ -76,19 +76,21 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
             Escúchalo en
           </BroadcastRouter>
           <Fade>
-            <p>¿Buscas una categoría en especial?</p>
-            <CatList>
-              {categories.map((cat, i) => (
-                <Category
-                  key={"cat" + i}
-                  id={cat + "out"}
-                  className="out"
-                  onClick={(e) => sort(cat)}
-                >
-                  {cat == "growth-marketing" ? "growth/marketing" : cat}
-                </Category>
-              ))}
-            </CatList>
+            <CatFilter>
+              <p>¿Buscas una categoría en especial?</p>
+              <CatList>
+                {categories.map((cat, i) => (
+                  <Category
+                    key={"cat" + i}
+                    id={cat + "out"}
+                    className="out"
+                    onClick={(e) => sort(cat)}
+                  >
+                    {cat == "growth-marketing" ? "growth/marketing" : cat}
+                  </Category>
+                ))}
+              </CatList>
+            </CatFilter>
           </Fade>
           <PodcastList>
             {episodes.map((episode, index) => (
@@ -137,6 +139,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
+
+const CatFilter = styled.div`
+  margin-top: 10px;
+`;
 
 const CatList = styled.div`
   display: block;

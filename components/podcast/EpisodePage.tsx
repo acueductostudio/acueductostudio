@@ -65,12 +65,18 @@ const EpisodePage = ({
             category={category}
             longFormat
           />
-          <Content>
-            {content && <ContentType>Transcript</ContentType>}
-            <Transcript>{content}</Transcript>
-          </Content>
+        </Fade>
+        <Fade>
+          {youtube && (
+            <Content>
+              {content && <ContentType>Transcript</ContentType>}
+              <Transcript>{content}</Transcript>
+            </Content>
+          )}
+        </Fade>
+        <Fade>
           <CenteredDiv>
-            {content && (
+            {content && youtube && (
               <>
                 <RouterSpace>
                   Si crees que a alguien le seria útil este contenido,
