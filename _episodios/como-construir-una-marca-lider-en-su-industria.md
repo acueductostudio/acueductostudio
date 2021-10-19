@@ -7,6 +7,10 @@ business: Gaia
 category: Diseño
 description: En esta ocasión hablamos con Roxana Escoto, ex Head of Brand de Gaia. Platicamos acerca de los retos de las marcas omnicanal, el manejo de equipos multidisciplinarios de diseño y la importancia de la data en la validación de acciones del departamento creativo.
 file: https://www.buzzsprout.com/895972/9356188-como-construir-una-marca-lider-en-su-industria-roxana-escoto-gaia.mp3?download=true
+youtube: https://www.youtube.com/watch?v=IqsA_HZYVbY
+spotify: https://open.spotify.com/episode/2AmrwRbx1UJwFrIvUYF4tA
+apple: https://podcasts.apple.com/mx/podcast/c%C3%B3mo-construir-una-marca-l%C3%ADder-en-su-industria-roxana/id1500473556?i=1000539021899
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05MzU2MTg4
 ---
 
 **Rodrigo:** En esta ocasión hablamos con Roxana Escoto, ex Head of Brand de Gaia. Platicamos acerca de los retos de las marcas omnicanal, el manejo de equipos multidisciplinarios de diseño y la importancia de la data en la validación de acciones del departamento creativo.
