@@ -53,7 +53,7 @@ export function getNextEpisodeSlug(currentEpisode) {
   });
 
   //identify next episode number
-  let nextEp = currentEpisode + 1;
+  let nextEp = currentEpisode - 1;
 
   //identify next episode position in array by looking for its episode num in the simple array
   let nextEpPosInArr = slugArr.indexOf(nextEp, 0);
@@ -61,7 +61,7 @@ export function getNextEpisodeSlug(currentEpisode) {
   //if the next position doesn't exist (last episode + 1), return to first episode
   //this also prevents mislabeled episodes from breaking 
   nextEpPosInArr == -1
-    ? (nextEpPosInArr = slugArr.indexOf(1, 0))
+    ? (nextEpPosInArr = slugArr.indexOf(slugArr.length, 0))
     : (nextEpPosInArr = nextEpPosInArr);
 
   //retreive object with episodes slug in alphabetical order

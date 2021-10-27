@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import delayForLoading from "utils/delayForLoading";
-import { sendToHola } from "utils/sendinBlue";
+import { sendToHola, createContact } from "utils/sendinBlue";
 import InputField, { CheckMark } from "components/shared/ContactInputField";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 
@@ -19,9 +19,23 @@ const ContactForm = ({ text }) => {
   } = useForm();
 
   const onSubmitInside = (data) => {
+    let listData = {
+      listIds: [10], //PidioExploracion
+      updateEnabled: true,
+      attributes: {
+        SUBSCRIBED_FROM: "Contact Form",
+        COMPANY: data.company,
+        POSITION: data.job,
+        CONTACT_BY_PHONE: data.phoneCheckbox,
+        PHONE: data.phone ? data.phone : " ",
+        JOB: data.job,
+      },
+    };
+    let completeData = { ...data, ...listData };
     document.getElementById("Scroll").scrollIntoView({ behavior: "smooth" });
     delayForLoading(300).then(() => setFormStatus("loading"));
     sendToHola(data);
+    createContact(completeData); 
     delayForLoading(1800).then(() => setFormStatus("done"));
   };
 
@@ -170,7 +184,7 @@ const OneLine = styled.div`
   display: flex;
   gap: 2rem;
   @media (max-width: 600px), (max-height: 450px) {
-    display:unset;
+    display: unset;
   }
 `;
 
