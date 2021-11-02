@@ -66,7 +66,7 @@ const EpisodePage = ({
             longFormat
           />
         </Fade>
-        <Fade>
+        <Fade triggerOnce>
           {youtube && (
             <Content>
               {content && <ContentType>Transcript</ContentType>}
@@ -74,7 +74,7 @@ const EpisodePage = ({
             </Content>
           )}
         </Fade>
-        <Fade>
+        <Fade triggerOnce>
           <CenteredDiv>
             {content && youtube && (
               <>
