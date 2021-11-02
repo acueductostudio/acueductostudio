@@ -7,6 +7,10 @@ business: Cargamos
 category: Growth/marketing
 description: En este capítulo nos acompañó Marcos Subía, Head of Growth & Innovation en Cargamos; la empresa de última milla más grande de México. Conversamos sobre el paradigma de la última milla, la motivación de las startups cuando tienen competencia, modalidades de trabajo inusuales pero que rinden grandes resultados y la importancia de tener aliados.
 file: https://www.buzzsprout.com/895972/9356205-la-interseccion-entre-el-crecimiento-y-la-innovacion-marcos-subia-cargamos.mp3?download=true
+youtube: https://www.youtube.com/watch?v=awwtJXfuwho
+spotify: https://open.spotify.com/episode/7CsVNMcdWxLXV0Ozc2Ylno
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05MzU2MjA1
+apple: https://podcasts.apple.com/mx/podcast/la-intersecci%C3%B3n-entre-el-crecimiento-y-la-innovaci%C3%B3n/id1500473556?i=1000539968467
 ---
 
 **Artemio:** En este capítulo nos acompañó Marcos Subía, _Head of Growth & Innovation_ en Cargamos; la empresa de última milla más grande de México. Conversamos sobre el paradigma de la última milla, la motivación de las startups cuando tienen competencia, modalidades de trabajo inusuales, pero que rinden grandes resultados y la importancia de tener aliados.
