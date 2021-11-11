@@ -8,6 +8,9 @@ category: Diseño
 description: En este capítulo nos acompañó Ana Montoya, Lead UX Designer en Gaia. Platicamos sobre mejores prácticas en UX, la evolución de los departamentos de diseño y de sus empleados en una startup en crecimiento, y la importancia de los datos para tomar decisiones de diseño.
 youtube: https://www.youtube.com/watch?v=AAp5t-AhY94
 file: https://www.buzzsprout.com/895972/9500226-detras-del-equipo-de-ux-de-un-ecommerce-exitoso-ana-montoya-gaia.mp3?download=true
+spotify: https://open.spotify.com/episode/4ujPnocLL2GmffINbU1vX4
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05NTAwMjI2
+apple: https://podcasts.apple.com/mx/podcast/detr%C3%A1s-del-equipo-de-ux-de-un-ecommerce/id1500473556?i=1000541525540
 ---
 
 **Rodrigo:** En este capítulo nos acompañó Ana Montoya, _Lead UX Designer_ en Gaia. Platicamos sobre mejores prácticas en UX, la evolución de los departamentos de diseño y de sus empleados en una startup en crecimiento, y la importancia de los datos para tomar decisiones de diseño.
