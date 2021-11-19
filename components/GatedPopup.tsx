@@ -8,47 +8,29 @@ import DefaultForm from "components/shared/DefaultForm";
 import { createContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
 import { logEvent, advancedMatching } from "utils/analytics";
+import GateForm from "components/GateForm"
 
 const NewsletterPopup = () => {
   let newsletter = es.newsletter_component;
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    let timer1 = setTimeout(() => popupShow(), 13000);
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
+  const [showPopup, setShowPopup] = useState(true);
 
   const onSubmit = (data) => {
-    // Create contact and add to list 3 (Consulting funnel) w/ test results
-    createContact({
-      firstName: data.firstName,
-      lastName: data.lastName,
-      email: data.email,
-      listIds: [2],
-      updateEnabled: true,
-      attributes: {
-        SUBSCRIBED_FROM: "popup",
-      },
-    }); 
-    ReactPixel.init("506854653278097", advancedMatching(data.email));
-    // Suscripción a la newsletter
-    logEvent("newsletter-popup", "dejó email");
-    ReactPixel.track("Subscribe", { email: data.email });
-  };
-
-  const popupShow = () => {
-    // Disable scroll
-    const targetElement = document.querySelector("#NewsletterPopup"); //dummy
-    disableBodyScroll(targetElement);
-    setShowPopup(true);
-  };
-
-  const unlockScreen = () => {
-    const targetElement = document.querySelector("#NewsletterPopup"); //dummy
-    enableBodyScroll(targetElement);
-    setShowPopup(false);
+    // // Create contact and add to list 3 (Consulting funnel) w/ test results
+    // createContact({
+    //   firstName: data.firstName,
+    //   lastName: data.lastName,
+    //   email: data.email,
+    //   listIds: [2],
+    //   updateEnabled: true,
+    //   attributes: {
+    //     SUBSCRIBED_FROM: "popup",
+    //   },
+    // });
+    // ReactPixel.init("506854653278097", advancedMatching(data.email));
+    // // Suscripción a la newsletter
+    // logEvent("newsletter-popup", "dejó email");
+    // ReactPixel.track("Subscribe", { email: data.email });
+    console.log(data);
   };
 
   return (
@@ -57,19 +39,15 @@ const NewsletterPopup = () => {
         <Border>
           <H4>{newsletter.title}</H4>
           <p>{newsletter.p}</p>
-          <DefaultForm
-            id="newsletter"
+          {/* <GateForm
             onSubmit={onSubmit}
             text={newsletter}
             buttonArrowInverse
             successMarkup={<Message success>{newsletter.success.p}</Message>}
-          />
-          <CrossContainer>
-            <Cross onClick={unlockScreen} />
-          </CrossContainer>
+          /> */}
         </Border>
       </Wrapper>
-      <Background visible={showPopup} onClick={unlockScreen} />
+      <Background visible={showPopup} />
     </>
   );
 };
@@ -77,16 +55,17 @@ const NewsletterPopup = () => {
 export default NewsletterPopup;
 
 const Background = styled.div<{ visible: boolean }>`
-  background-color: ${(props) => props.theme.colors.background};
-  opacity: ${(props) => (props.visible ? 0.6 : 0)};
-  position: fixed;
+  background-color: transparent;
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  position: absolute;
   pointer-events: ${(props) => (props.visible ? "auto" : "none")};
-  left: 0;
+  backdrop-filter: blur(6px);
   bottom: 0;
   right: 0;
-  top: 0;
-  z-index: 13;
+  top: 13%;
+  z-index: 13 !important;
   transition: opacity 0.4s ease;
+  left:-15px;
 `;
 
 const Message = styled.div<{ success: boolean }>`
@@ -109,34 +88,22 @@ const Border = styled.div`
   }
 `;
 
-const CrossContainer = styled.div`
-  width: 50px;
-  height: 50px;
-  padding: 12px;
-  position: absolute;
-  top: 2.4%;
-  right: 3%;
-  svg {
-    width: 100%;
-    cursor: pointer;
-  }
-`;
-
 const Wrapper = styled.div<{ clickable: boolean }>`
+  grid-column: 7 / span 5;
   pointer-events: ${(props) => (props.clickable ? "auto" : "none")};
   opacity: ${(props) => (props.clickable ? "1" : "0")};
   max-width: 440px;
-  width: 80%;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%)
-    ${(props) => (props.clickable ? "translateY(0%)" : "translateY(5%)")};
+  width: 100%;
+  top: 12%;
+  left: 0;
+  right: 0;
   font-weight: 100;
-  position: fixed;
+  position: sticky;
   transition: opacity 0.4s ease, transform 0.5s ease;
-  z-index: 14;
+  z-index: 15 !important;
+  height: ${(props) => (props.clickable ? "auto" : 0)};
   p {
-    color: ${(props) => props.theme.colors.over_black};
+    color: ${(props) => props.theme.colors.foreground_low};
     padding-bottom: 20px;
   }
   h4 {

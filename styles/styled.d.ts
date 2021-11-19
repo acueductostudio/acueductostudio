@@ -6,6 +6,7 @@ declare module "styled-components" {
     colors: {
       background: string;
       foreground: string;
+      over_black: string;
       foreground_low: string;
       foreground_lower: string;
       foreground_lowest: string;

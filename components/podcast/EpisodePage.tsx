@@ -91,7 +91,7 @@ const EpisodePage = ({
         </Fade>
         <NextEp>
           <p>Escucha otro episodio</p>
-          <EpisodePreview {...next} nextEpisode />
+          <EpisodePreview {...next} simplest />
         </NextEp>
       </CenteredSection>
     </>
@@ -102,12 +102,14 @@ export default React.memo(EpisodePage);
 
 const NextEp = styled.div`
   margin-top: 10%;
-  text-align: center;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: ${(props) => props.theme.colors.foreground_low};
+  p {
+    text-align: center;
+  }
   @media (max-width: 620px) {
     margin-top: 20%;
   }

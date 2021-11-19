@@ -10,6 +10,7 @@ type PinnedProps = {
   borderTop?: boolean;
   id?: string;
   children: React.ReactNode;
+  disableFade?: boolean;
 };
 
 const MetalPinnedSection = ({
@@ -18,13 +19,14 @@ const MetalPinnedSection = ({
   className,
   borderTop,
   id,
+  disableFade,
 }: PinnedProps) => (
   <Pinned className={className} borderTop={borderTop} id={id}>
     <Fade triggerOnce>
       <H1>{title}</H1>
     </Fade>
     <ScrollDown>
-      <Fade triggerOnce>{children}</Fade>
+      {disableFade ? children : <Fade triggerOnce>{children}</Fade>}
     </ScrollDown>
   </Pinned>
 );
@@ -37,7 +39,7 @@ const ScrollDown = styled.div`
   position: relative;
 `;
 
-const Pinned = styled.div<{borderTop:boolean}>`
+const Pinned = styled.div<{ borderTop: boolean }>`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2.2rem;
   width: 100%;

@@ -4,8 +4,8 @@ import MetalPinnedSection from "./MetalPinnedSection";
 
 const PinnedSection = styled(MetalPinnedSection)`
   p {
-    max-width: 445px;
-    color: ${(props) => props.theme.colors.foreground_low};
+    max-width: 475px;
+    color: ${(props) => props.theme.colors.over_black};
     margin-bottom: 5%;
     margin-top: 0;
     &:first-of-type {
