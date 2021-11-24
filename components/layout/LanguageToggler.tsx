@@ -6,6 +6,7 @@ import Router, { useRouter } from "next/router";
 const oneLangPages = [
   "consultoria",
   "podcast",
+  "mvs",
   "diagnostico",
   "linkenbio",
   "articulo",

@@ -5,6 +5,7 @@ const Theme: DefaultTheme = {
     background: "#060809",
     foreground: "#F4F4F4",
     foreground_low: "#D6D6D6",
+    over_black: "#C8C8C8",
     foreground_lower: "#8D8D8D",
     foreground_lowest: "#4F4F4F",
     accent: "#1A4CE0",

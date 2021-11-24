@@ -11,7 +11,8 @@ import ButtonArrow from "components/shared/footers/ButtonArrow";
 
 interface EpisodeFormat extends EpisodeProps {
   longFormat?: boolean;
-  nextEpisode?: boolean;
+  simplest?: boolean;
+  text?:string;
 }
 
 const EpisodePreview = ({
@@ -29,11 +30,12 @@ const EpisodePreview = ({
   episode,
   longFormat,
   next,
-  nextEpisode,
+  simplest,
+  text,
 }: EpisodeFormat) => {
   const LinkComplex = ({ children }: { children: React.ReactNode }) => (
     <Link href={"/podcast/" + slug} passHref>
-      <a>{children}</a>
+      <a className="clean">{children}</a>
     </Link>
   );
   let fullDate = new Date(`${date}T00:00:00`);
@@ -47,7 +49,7 @@ const EpisodePreview = ({
     <>
       <NewPod
         key={"npd" + episode}
-        nextEpisode={nextEpisode}
+        simplest={simplest}
         className={`${
           category == "Growth/marketing"
             ? "growth-marketing"
@@ -67,8 +69,8 @@ const EpisodePreview = ({
               <Picture
                 src={`/assets/img/podcast/${episode}.jpg`}
                 alt={title + " - " + guest}
-                height={nextEpisode ? 200 : 180}
-                width={nextEpisode ? 200 : 180}
+                height={simplest ? 185 : 180}
+                width={simplest ? 185 : 180}
               />
             </LinkComplex>
           )}
@@ -76,7 +78,7 @@ const EpisodePreview = ({
         <div>
           <Fade triggerOnce>
             <HoverableContainer>
-              {!longFormat && !nextEpisode && (
+              {!longFormat && !simplest && (
                 <LinkComplex>
                   {console.log(next)}
                   <H2overable>{title}</H2overable>
@@ -103,9 +105,9 @@ const EpisodePreview = ({
               )}
               <span>{category}</span>
             </DateCat>
-            <p>{!nextEpisode && description}</p>
+            <p>{!simplest && description}</p>
             <div>
-              {!nextEpisode &&
+              {!simplest &&
                 (youtube ? (
                   <BroadcastRouter
                     trackClicks
@@ -132,12 +134,12 @@ const EpisodePreview = ({
             </div>
           </Fade>
           <ButtonSpace>
-            {nextEpisode && (
+            {simplest && (
               <Link href={"/podcast/" + slug} passHref>
                 <ButtonArrow
-                  text={"seguir aprendiendo"}
+                  text={text? text: "seguir aprendiendo"}
                   inverse
-                  className="leftFix"
+                  className="leftFix clean"
                 />
               </Link>
             )}
@@ -166,9 +168,6 @@ const ButtonSpace = styled.div`
   margin-top: 2rem;
   .leftFix {
     box-shadow: 0px 3px 10px rgb(0 0 0 / 15%);
-    span::after {
-      margin-left: -6px;
-    }
   }
   @media (max-width: 600px) {
     min-width: 241px;
@@ -257,12 +256,12 @@ const DateCat = styled.div`
   }
 `;
 
-const NewPod = styled.article<{ nextEpisode: boolean }>`
+const NewPod = styled.article<{ simplest: boolean }>`
   display: flex;
   max-width: 800px;
-  margin-top: ${(p) => (p.nextEpisode ? "3.5rem" : "10%")};
-  width: ${(p) => (p.nextEpisode ? "100%" : "inherit")};
-  justify-content: ${(p) => (p.nextEpisode ? "center" : "inherit")};
+  margin-top: ${(p) => (p.simplest ? "3.5rem" : "10%")};
+  width: ${(p) => (p.simplest ? "100%" : "inherit")};
+  justify-content: ${(p) => (p.simplest ? "center" : "inherit")};
   a {
     text-decoration: none;
   }
@@ -292,6 +291,9 @@ const NewPod = styled.article<{ nextEpisode: boolean }>`
     color: ${(p) => p.theme.colors.foreground_low};
     padding-top: 1.3rem;
     line-height: 145%;
+    &:empty{
+      display:none;
+    }
   }
   @media (max-width: 970px) {
     h2 {
@@ -300,7 +302,7 @@ const NewPod = styled.article<{ nextEpisode: boolean }>`
   }
   @media (max-width: 900px) {
     flex-direction: column;
-    align-items: ${(p) => (p.nextEpisode ? "center" : "inherit")};
+    align-items: ${(p) => (p.simplest ? "center" : "inherit")};
     ${PictureContainer} {
       min-width: unset;
       max-width: 150px;
@@ -313,7 +315,7 @@ const NewPod = styled.article<{ nextEpisode: boolean }>`
         font-size: 1.3rem;
       }
     }
-    margin-top: ${(p) => (p.nextEpisode ? "3.5rem" : "20%")};
+    margin-top: ${(p) => (p.simplest ? "3.5rem" : "20%")};
     p {
       padding-top: 9px;
     }

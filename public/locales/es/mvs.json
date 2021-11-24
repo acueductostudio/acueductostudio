@@ -1,0 +1,32 @@
+{
+  "head": {
+    "title": "Minimum Viable Startup | Acueducto",
+    "headerTitle": "MVS",
+    "description": "Los requisitos para conseguir tener un negocio saludable de internet"  },
+  "intro": {
+    "title": "minimum</br> viable startup",
+    "p": "La Minimum Viable Startup es un concepto que nació aquí en el estudio. Con este framework, desarrollamos los conceptos básicos y vitales para construir un negocio saludable de internet.</br></br>Esta guía busca ayudar a construir negocios que crecen exponencialmente, transforman industrias y contribuyen a la sociedad con tecnología digital. Desde el caos, por supuesto, pero siempre creciendo y divirtiéndose.</br></br>Explora las cinco lecciones más valiosas que hemos encontrado durante las grabaciones de nuestro podcast, Cuando el Río Suena. Cada una acompañada del capítulo más emblemático que trata al tema en cuestión."
+  },
+  "lessons": [
+    {
+      "title": "equipo complementario</br> y comprometido",
+      "p": "Existe un patrón que se ha repetido en distintas conversaciones con inversionistas, fundadores y líderes.</br></br>Este va de construir un equipo comprometido con una visión ambiciosa, pero también complementario. Es fundamental rodearte de gente que es mejor en las áreas donde tú cogeas.</br></br>A veces pareciera que este es el punto más importante para alcanzar el éxito de tu startup."
+    },
+    {
+      "title": "modelo de negocios</br> escalable y expandible",
+      "p": "Los modelos de negocios más atractivos para los inversionistas de Venture Capital son aquellos que hoy venden A, pero que por arquitectura en el futuro podrán vender B, C y D.</br></br>¿Qué significa esto? Que tu startup no puede ser un one-trick pony que sólo ofrece un servicio/producto.</br></br>Es fundamental que encuentres los distintos tentáculos de crecimiento en tu startup y que comiences a trabajar en una arquitectura escalable y expandible. "
+    },
+    {
+      "title": "el tamaño del mercado",
+      "p": "No sirve de mucho tener una gran caña de pescar si el río en el que pescamos no hay suficientes peces. O si no es el momento adecuado para pescar.</br>En pocas (y otras) palabras: sin público no hay teatro."
+    },
+    {
+      "title": "tu cultura",
+      "p": "Nunca había sido tan importante que a tu negocio lo permeara una cultura inspiradora para sus empleados.</br></br>Hoy en día, el mejor talento busca formar parte un propósito mucho más grande que él sumergido en una cultura que le permita desarrollar al máximo sus habilidades."
+    },
+    {
+      "title": "siempre cerca de tus usuarios y con datos en la mano",
+      "p": "El mejor consejo que un fundador de negocio puede seguir es uno muy sencillo. Esforzarse en mantener a sus clientes actuales felices.</br></br>Te puedes acercar a este objetivo mediante entrevistas de usuario y método cualitativos; pero también es igual de fundamental cubrir el frente cuantitativo con análisis de uso de producto, comportamientos y datos duros."
+    }
+  ]
+}
