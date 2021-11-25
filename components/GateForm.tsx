@@ -3,20 +3,11 @@ import { useForm } from "react-hook-form";
 import styled, { keyframes } from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import delayForLoading from "utils/delayForLoading";
-import { sendToHola, createContact } from "utils/sendinBlue";
-import InputField, { CheckMark } from "components/shared/ContactInputField";
+import InputField from "components/shared/ContactInputField";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 
-const GateForm = ({
-  text,
-  onSubmit,
-  formMarkup,
-  buttonArrow,
-  buttonArrowInverse,
-  successMarkup,
-}) => {
+const GateForm = ({ text, onSubmit }) => {
   const [formStatus, setFormStatus] = useState("");
-  const [requirePhone, setRequirePhone] = useState(false);
   const formRef = useRef(null);
 
   const {
@@ -27,17 +18,14 @@ const GateForm = ({
 
   const onSubmitInside = (data) => {
     console.log(data);
-
     setFormStatus("loading");
-    onSubmit(data);
-    delayForLoading(1500).then(() => setFormStatus("done"));
+    delayForLoading(1000).then(() => onSubmit(data));
   };
 
   return (
     <>
       {formStatus === "" && (
         <>
-          <p>{text.p3}</p>
           <Form onSubmit={handleSubmit(onSubmitInside)} ref={formRef}>
             <InputField>
               <label htmlFor={`cp_email`}>{text.email.label}</label>
@@ -104,16 +92,6 @@ const GateForm = ({
               />
               {errors.job && <span>{text.job.errorMissing}</span>}
             </InputField>
-            <InputField>
-              <label htmlFor={`cp_message`}>{text.message.label}</label>
-              <textarea
-                name="message"
-                id={`cp_message`}
-                placeholder={text.message.placeholder}
-                {...register("message", { required: true })}
-              />
-              {errors.message && <span>{text.message.errorMissing}</span>}
-            </InputField>
             <ButtonArrow text={text.submit} submitButton inverse />
           </Form>
         </>
@@ -125,7 +103,6 @@ const GateForm = ({
           </Loading>
         </Fade>
       )}
-      {formStatus === "done" && <Message>{text.success.p}</Message>}
     </>
   );
 };
@@ -138,17 +115,6 @@ const OneLine = styled.div`
   gap: 2rem;
   @media (max-width: 600px), (max-height: 450px) {
     display: unset;
-  }
-`;
-
-const Message = styled.div`
-  color: ${(p) => p.theme.colors.success};
-  font-size: 1.8rem;
-  padding-bottom: 5px;
-  max-width: 250px;
-  @media (max-width: 600px), (max-height: 450px) {
-    font-size: 1.5rem;
-    max-width: 200px;
   }
 `;
 
@@ -192,10 +158,6 @@ const Loading = styled.div`
 `;
 
 const Form = styled.form`
-  padding: 5% 7.5%;
-  border: 2px solid ${(p) => p.theme.colors.foreground_lowest};
-  border-radius: 30px;
-  margin-top: -10px;
   display: flex;
   flex-direction: column;
 `;

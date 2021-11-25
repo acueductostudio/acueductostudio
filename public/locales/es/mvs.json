@@ -2,10 +2,11 @@
   "head": {
     "title": "Minimum Viable Startup | Acueducto",
     "headerTitle": "MVS",
-    "description": "Los requisitos para conseguir tener un negocio saludable de internet"  },
+    "description": "Los requisitos para conseguir tener un negocio saludable de internet"
+  },
   "intro": {
     "title": "minimum</br> viable startup",
-    "p": "La Minimum Viable Startup es un concepto que nació aquí en el estudio. Con este framework, desarrollamos los conceptos básicos y vitales para construir un negocio saludable de internet.</br></br>Esta guía busca ayudar a construir negocios que crecen exponencialmente, transforman industrias y contribuyen a la sociedad con tecnología digital. Desde el caos, por supuesto, pero siempre creciendo y divirtiéndose.</br></br>Explora las cinco lecciones más valiosas que hemos encontrado durante las grabaciones de nuestro podcast, Cuando el Río Suena. Cada una acompañada del capítulo más emblemático que trata al tema en cuestión."
+    "p": "La Minimum Viable Startup es un concepto que nació aquí en el estudio. Con este framework, desarrollamos los conceptos básicos y vitales para construir un negocio saludable de internet.</br></br>Esta guía busca ayudar a construir negocios que crecen exponencialmente, transforman industrias y contribuyen a la sociedad con tecnología digital.</br></br>Explora las cinco lecciones más valiosas que hemos encontrado durante las grabaciones de nuestro podcast, Cuando el Río Suena. Cada una acompañada del capítulo más emblemático que trata al tema en cuestión."
   },
   "lessons": [
     {
@@ -28,5 +29,37 @@
       "title": "siempre cerca de tus usuarios y con datos en la mano",
       "p": "El mejor consejo que un fundador de negocio puede seguir es uno muy sencillo. Esforzarse en mantener a sus clientes actuales felices.</br></br>Te puedes acercar a este objetivo mediante entrevistas de usuario y método cualitativos; pero también es igual de fundamental cubrir el frente cuantitativo con análisis de uso de producto, comportamientos y datos duros."
     }
-  ]
+  ],
+  "gate_component": {
+    "title": "conoce las lecciones más importantes",
+    "p": "Y consulta lo más valioso de 25 charlas con emprendedores y profesionales del ecosistema digital latinoamericano.",
+    "firstName": {
+      "label": "nombre",
+      "placeholder": "tu nombre",
+      "errorMissing": "*falta tu nombre"
+    },
+    "lastName": {
+      "label": "apellido",
+      "placeholder": "tu apellido",
+      "errorMissing": "*falta tu apellido"
+    },
+    "email": {
+      "label": "email de trabajo",
+      "placeholder": "tu email",
+      "errorMissing": "*falta tu email",
+      "errorInvalid": "*email inválido"
+    },
+    "company": {
+      "label": "tu empresa",
+      "placeholder": "nombre de tu empresa",
+      "errorMissing": "*falta tu empresa"
+    },
+    "job": {
+      "label": "puesto de trabajo",
+      "placeholder": "tu puesto",
+      "errorMissing": "*falta tu puesto"
+    },
+    "submit": "ver las lecciones",
+    "loading": "cargando..."
+  }
 }

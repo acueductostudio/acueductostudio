@@ -1,18 +1,14 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { H4 } from "components/shared/Dangerously";
-import Cross from "public/assets/img/layout/cross.svg";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import es from "public/locales/es/newsletter.json";
-import DefaultForm from "components/shared/DefaultForm";
 import { createContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
 import { logEvent, advancedMatching } from "utils/analytics";
-import GateForm from "components/GateForm"
+import GateForm from "components/GateForm";
 
-const NewsletterPopup = () => {
-  let newsletter = es.newsletter_component;
+const NewsletterPopup = ({ content }) => {
   const [showPopup, setShowPopup] = useState(true);
+  console.log(content);
 
   const onSubmit = (data) => {
     // // Create contact and add to list 3 (Consulting funnel) w/ test results
@@ -30,6 +26,7 @@ const NewsletterPopup = () => {
     // // Suscripción a la newsletter
     // logEvent("newsletter-popup", "dejó email");
     // ReactPixel.track("Subscribe", { email: data.email });
+    setShowPopup(false);
     console.log(data);
   };
 
@@ -37,16 +34,14 @@ const NewsletterPopup = () => {
     <>
       <Wrapper clickable={showPopup} id="NewsletterPopup">
         <Border>
-          <H4>{newsletter.title}</H4>
-          <p>{newsletter.p}</p>
-          {/* <GateForm
-            onSubmit={onSubmit}
-            text={newsletter}
-            buttonArrowInverse
-            successMarkup={<Message success>{newsletter.success.p}</Message>}
-          /> */}
+          <H4>{content.title}</H4>
+          <p>{content.p}</p>
+          <GateForm onSubmit={onSubmit} text={content} />
         </Border>
       </Wrapper>
+      <StickyReminder visible={showPopup}>
+        Deja tus datos para seguir leyendo
+      </StickyReminder>
       <Background visible={showPopup} />
     </>
   );
@@ -54,34 +49,35 @@ const NewsletterPopup = () => {
 
 export default NewsletterPopup;
 
+const StickyReminder = styled.div<{ visible: boolean }>`
+  opacity: ${(props) => (props.visible ? 1 : 0)};
+  height: ${(props) => (props.visible ? "auto" : 0)};
+  position: sticky;
+  z-index: 16;
+  text-align: center;
+  max-width: 440px;
+  padding: ${(props) => (props.visible ? "10% 0 0" : 0)};
+  top: 5%;
+`;
+
 const Background = styled.div<{ visible: boolean }>`
-  background-color: transparent;
   opacity: ${(props) => (props.visible ? 1 : 0)};
   position: absolute;
   pointer-events: ${(props) => (props.visible ? "auto" : "none")};
   backdrop-filter: blur(6px);
   bottom: 0;
   right: 0;
-  top: 13%;
+  top: 25%;
   z-index: 13 !important;
   transition: opacity 0.4s ease;
-  left:-15px;
-`;
-
-const Message = styled.div<{ success: boolean }>`
-  color: ${(p) => p.theme.colors.success};
-  font-size: 1.8rem;
-  padding-bottom: 5px;
-  @media (max-width: 600px), (max-height: 450px) {
-    font-size: 1.5rem;
-  }
+  left: -15px;
 `;
 
 const Border = styled.div`
   border: ${(props) => props.theme.stroke} solid
     ${(props) => props.theme.colors.foreground};
   background-color: ${(props) => props.theme.colors.background};
-  padding: 10% 15% 14% 15%;
+  padding: 8% 10% 8% 10%;
   border-radius: 30px;
   @media (max-width: 380px) {
     padding: 10% 10% 14% 10%;
@@ -94,11 +90,11 @@ const Wrapper = styled.div<{ clickable: boolean }>`
   opacity: ${(props) => (props.clickable ? "1" : "0")};
   max-width: 440px;
   width: 100%;
-  top: 12%;
   left: 0;
+  margin-top: -20%;
   right: 0;
   font-weight: 100;
-  position: sticky;
+  position: relative;
   transition: opacity 0.4s ease, transform 0.5s ease;
   z-index: 15 !important;
   height: ${(props) => (props.clickable ? "auto" : 0)};

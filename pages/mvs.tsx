@@ -14,7 +14,7 @@ import { P, H3 } from "components/shared/Dangerously";
 import GatedPopup from "components/GatedPopup";
 
 function Mvs({ locale, setTitle, pt, episodes }) {
-  let { head, intro, lessons } = pt;
+  let { head, intro, lessons, gate_component } = pt;
   useEffect(() => {
     setTitle(head.headerTitle);
   }, [locale]);
@@ -29,16 +29,23 @@ function Mvs({ locale, setTitle, pt, episodes }) {
       <PinnedSection disableFade title={intro.title}>
         <>
           <P>{intro.p}</P>
-          <GatedPopup/>
+          {/* <GatedPopup content={gate_component} /> */}
           <FitSection>
             {lessons.map((lesson, index) => (
               <React.Fragment key={"nps" + index}>
                 <Fade triggerOnce>
                   <H3>{lesson.title}</H3>
+                </Fade>
+                <Fade triggerOnce>
                   <P>{lesson.p}</P>
                 </Fade>
+                {index == 1 && <GatedPopup content={gate_component} />}
                 <ColumnedPreview>
-                  <EpisodePreview simplest {...episodes[index]} text="escuchar episodio"/>
+                  <EpisodePreview
+                    simplest
+                    {...episodes[index]}
+                    text="escuchar episodio"
+                  />
                 </ColumnedPreview>
               </React.Fragment>
             ))}
