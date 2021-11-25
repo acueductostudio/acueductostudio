@@ -21,11 +21,7 @@ function Mvs({ locale, setTitle, pt, episodes }) {
 
   return (
     <PageClipper>
-      <Head
-        {...head}
-        image={{ fileName: "og_image_consultoria.jpg", alt: head.image_alt }}
-        es_canonical="https://acueducto.studio/consultoria"
-      />
+      <Head {...head} es_canonical="https://acueducto.studio/consultoria" />
       <PinnedSection disableFade title={intro.title}>
         <>
           <P>{intro.p}</P>
