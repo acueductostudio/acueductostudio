@@ -35,7 +35,6 @@ function Mvs({ locale, setTitle, pt, episodes }) {
                 <Fade triggerOnce>
                   <P>{lesson.p}</P>
                 </Fade>
-                {index == 1 && <GatedPopup content={gate_component} />}
                 <ColumnedPreview>
                   <EpisodePreview
                     simplest
@@ -43,6 +42,7 @@ function Mvs({ locale, setTitle, pt, episodes }) {
                     text="escuchar episodio"
                   />
                 </ColumnedPreview>
+                {index == 0 && <GatedPopup content={gate_component} />}
               </React.Fragment>
             ))}
           </FitSection>
@@ -118,7 +118,7 @@ const ColumnedPreview = styled.div`
 `;
 
 const FitSection = styled.div`
-  margin-top: 10%;
+  margin-top: 4%;
   h3 {
     font-size: 3.2rem;
     line-height: 130%;

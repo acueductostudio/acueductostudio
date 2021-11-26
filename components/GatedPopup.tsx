@@ -8,7 +8,6 @@ import GateForm from "components/GateForm";
 
 const NewsletterPopup = ({ content }) => {
   const [showPopup, setShowPopup] = useState(true);
-  console.log(content);
 
   const onSubmit = (data) => {
     // // Create contact and add to list 3 (Consulting funnel) w/ test results
@@ -19,13 +18,16 @@ const NewsletterPopup = ({ content }) => {
     //   listIds: [2],
     //   updateEnabled: true,
     //   attributes: {
-    //     SUBSCRIBED_FROM: "popup",
+    //     SUBSCRIBED_FROM: "MVS Gated Page",
+    //     COMPANY: data.company,
+    //     POSITION: data.job,
     //   },
     // });
     // ReactPixel.init("506854653278097", advancedMatching(data.email));
     // // Suscripción a la newsletter
-    // logEvent("newsletter-popup", "dejó email");
-    // ReactPixel.track("Subscribe", { email: data.email });
+    // logEvent("mvs-gated", "dejó datos");
+    ReactPixel.track("Subscribe", { email: data.email });
+
     setShowPopup(false);
     console.log(data);
   };
@@ -67,10 +69,70 @@ const Background = styled.div<{ visible: boolean }>`
   backdrop-filter: blur(6px);
   bottom: 0;
   right: 0;
-  top: 25%;
+  top: 19%;
   z-index: 13 !important;
   transition: opacity 0.4s ease;
   left: -15px;
+  @media(max-width:1226px){
+    top:20%;
+  }
+  @media(max-width:1116px){
+    top:21%;
+  }
+  @media(max-width:1100px){
+    top:18.5%;
+  }
+  @media(max-width:900px){
+    top:15.5%;
+  }
+  @media(max-width:884px){
+    top:16%;
+  }
+  @media(max-width:847px){
+    top:17%;
+  }
+  @media(max-width:800px){
+    top:15.5%;
+  }
+  @media(max-width:760px){
+    top:16%;
+  }
+  @media(max-width:741px){
+    top:17%;
+  }
+  @media(max-width:662px){
+    top:17.5%;
+  }
+  @media(max-width:650px){
+    top:18%;
+  }
+  @media(max-width:636px){
+    top:18.5%;
+  }
+  @media(max-width:600px){
+    top:13%;
+  }
+  @media(max-width:495px){
+    top:14%;
+  }
+  @media(max-width:448px){
+    top:13.5%;
+  }
+  @media(max-width:441px){
+    top:14%;
+  }
+  @media(max-width:424px){
+    top:15%;
+  }
+  @media(max-width:372px){
+    top:15.5%;
+  }
+  @media(max-width:364px){
+    top:16%;
+  }
+  @media(max-width:317px){
+    top:17%;
+  }
 `;
 
 const Border = styled.div`
@@ -114,11 +176,11 @@ const Wrapper = styled.div<{ clickable: boolean }>`
   @media (max-width: 600px) {
     max-width: calc(100% - 36px);
     width: 100%;
+    margin-top:0%;
     margin-left: 18px;
     margin-right: 18px;
     z-index: 100;
     left: 0;
-    transform: translateX(0px) translateY(-50%);
     h4 {
       font-size: 2.5rem;
     }
