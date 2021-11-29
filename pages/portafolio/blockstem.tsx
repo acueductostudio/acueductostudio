@@ -9,6 +9,7 @@ import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoRahid from "public/assets/img/casestudies/rahid/logoRahid.svg";
+import LogoBlockstem from "public/assets/img/casestudies/blockstem/logoBlockstem.svg";
 import { H2, H3, P } from "components/shared/Dangerously";
 import IntroVideo from "components/caseStudy/shared/IntroVideo";
 import Marquee from "components/caseStudy/shared/Marquee";
@@ -19,8 +20,9 @@ import Picture from "components/caseStudy/shared/Picture";
 
 const rahidBackground = "#F9F5F0";
 const rahidForeground = "#31302E";
-const rahidAccent = "#8893CE";
-const rahidAccentDarker = "#7A84B9";
+const bAccent1 = "#4EA68E";
+const bAccent2 = "#2B67DD";
+const bAccent1Darker = "#7A84B9";
 
 function Rahid({ locale, setTitle, pt }) {
   const [loadAssets, setloadAssets] = useState(false);
@@ -39,17 +41,23 @@ function Rahid({ locale, setTitle, pt }) {
   }, [locale]);
 
   return (
-    <PageClipper unPadded>
+    <PageClipper
+      unPadded
+      style={{
+        background:
+          "linear-gradient(96.9deg, #060809 12.06%, #3A3A3A 113.48%);",
+      }}
+    >
       <Head
         {...t.head}
-        image={{ fileName: "og_image_rahid.png", alt: t.head.image_alt }}
+        image={{ fileName: "og_image_blockstem.png", alt: t.head.image_alt }}
         es_canonical={"https://acueducto.studio/portafolio/blockstem"}
         en_canonical={"https://acueducto.studio/en/work/blockstem"}
       />
       <Fade triggerOnce>
         <LandSection>
           <Fade delay={300} triggerOnce>
-            <LogoRahid />
+            <LogoBlockstem />
           </Fade>
         </LandSection>
       </Fade>
@@ -61,16 +69,12 @@ function Rahid({ locale, setTitle, pt }) {
         <TextColumn>
           <H2>{t.intro_section.title}</H2>
           <P>{t.intro_section.p}</P>
-          <OldBrand>
-            {loadAssets && (
-              <img
-                src="/assets/img/casestudies/rahid/oldLogo.svg"
-                alt="El Rahid"
-              />
-            )}
-            <p>{t.intro_section.graphicp}</p>
-          </OldBrand>
-          <P>{t.intro_section.p2}</P>
+          {t.intro_section.lessons.map((lesson, index) => (
+            <>
+              <h4>{lesson.title}</h4>
+              <p>{lesson.p}</p>
+            </>
+          ))}
         </TextColumn>
       </FirstSection>
       <SecondSection>
@@ -281,7 +285,7 @@ const InsertBlock = styled.figure`
 `;
 
 const Applications = styled.div`
-  background-color: ${rahidAccent};
+  background-color: ${bAccent1};
   width: 90%;
   max-width: 1200px;
   margin: 8% 0;
@@ -387,7 +391,7 @@ const Stat = styled.div`
     line-height: 1.3;
     margin-top: -20px;
     b {
-      color: ${rahidAccent};
+      color: ${bAccent1};
     }
   }
   p {
@@ -423,7 +427,7 @@ const Stat = styled.div`
 
 const SixthSection = styled(CommonSection)`
   min-height: 100vh;
-  background-color: ${rahidAccent};
+  background-color: ${bAccent1};
   background-image: url("/assets/img/casestudies/rahid/landBack.svg");
   background-repeat: no-repeat;
   background-position: left top;
@@ -479,7 +483,7 @@ const FifthSection = styled(CommonSection)`
   color: ${rahidForeground};
   padding-bottom: 10%;
   h2 b {
-    color: ${rahidAccentDarker};
+    color: ${bAccent1Darker};
   }
   blockquote,
   p {
@@ -528,7 +532,7 @@ const ThirdSection = styled(CommonSection)`
   h2 {
     color: ${rahidForeground};
     b {
-      color: ${rahidAccentDarker};
+      color: ${bAccent1Darker};
     }
   }
   p {
@@ -568,25 +572,23 @@ const OldBrand = styled.div`
 `;
 
 const FirstSection = styled(CommonSection)`
-  background-color: ${rahidBackground};
-  color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.colors.foreground};
   padding-bottom: 10%;
   h2 {
-    color: ${rahidForeground};
+    color: ${(props) => props.theme.colors.foreground};
     b {
-      color: ${rahidAccentDarker};
+      color: ${bAccent1};
     }
   }
   ul li,
   p {
-    color: ${rahidForeground};
+    color: ${(props) => props.theme.colors.over_black};
   }
 `;
 
 const LandSection = styled(CommonSection)`
   min-height: 100vh;
-  background-color: ${rahidBackground};
-  background-image: url("/assets/img/casestudies/rahid/landBack.svg");
+  background-image: url("/assets/img/casestudies/blockstem/main-bg.png");
   background-position: left center;
   background-size: cover;
   align-items: flex-end;
@@ -625,6 +627,7 @@ const LandSection = styled(CommonSection)`
     background-position: 25% 100%;
     background-image: url("/assets/img/casestudies/rahid/landBackMobile.svg");
     background-position: center center;
+    background-color: transparent;
     align-items: center;
     & > div {
       max-width: 300px;

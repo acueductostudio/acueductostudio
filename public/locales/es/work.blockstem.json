@@ -1,0 +1,87 @@
+{
+  "head": {
+    "title": "Un ecommerce único en México | Blockstem & Acueducto",
+    "description": "¿Qué necesitas para lanzar un ecommerce exitoso en México? Lee este caso de estudio con la tienda en línea de Rahid.",
+    "image_alt": "Blockstem, caso de estudio por Acueducto",
+    "headerTitle": "Blockstem"
+  },
+  "headerTitle": "Blockstem",
+  "title": "un ecommerce único en México",
+  "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
+  "video": "rahid.mp4",
+  "logo": "blockstem.svg",
+  "link": "blockstem",
+  "intro_section": {
+    "tags": [
+      "estrategia de proyecto",
+      "branding",
+      "ecommerce",
+      "community management",
+      "estrategia de contenido",
+      "tov digital",
+      "copywriting"
+    ],
+    "video": "rahid_intro.mp4",
+    "title": "<b>Acto I</b><br/>Una startup con una visión ambiciosa",
+    "p": "Una de las cosas que amamos de trabajar en el ecosistema tecnológico es que tenemos la oportunidad de poner nuestro tiempo e intelecto al servicio de emprendedores que buscan desafiar el status quo. Trabajamos con fundadores de negocios que están convencidos de que pueden ofrecer una alternativa viable a los problemas que enfrentamos hoy con soluciones tecnológicas.</br></br>Catalina Rodríguez y Gonzalo Bañuelos son una dupla de cofundadores que buscan una democracia más participativa, transparente y con la innovación en el núcleo utilizando Blockchain. De ahí nace Blockstem, una startup que brinda un servicio de votación virtualmente inhackeable para organizaciones privadas y públicas en Latinoamérica.</br></br>Cuando Cata y Gonzalo se acercaron con nosotros la charla de exploración giró entorno a varios retos que enfrentaban:",
+    "lessons": [
+      {
+        "title": "Inversionistas",
+        "p": "Como toda startup tecnológica, se encontraban en una etapa de constante levantamiento de capital"
+      },
+      {
+        "title": "Gobiernos",
+        "p": "No habían tenido éxito para prestar sus servicios a una institución pública como una gobernatura o municipalidad y"
+      },
+      {
+        "title": "Ecosistema",
+        "p": "La conversación alrededor de Blockchain y su potencial para mejorar las democracias de Latinoamérica, tanto en el sector privado como en el público, estaba prácticamente en pañales."
+      }
+    ]
+  },
+  "second_section": {
+    "subtitle": "Un giro de 180º con una poderosa experiencia de ecommerce",
+    "p": "Después de la fase de descubrimiento, decidimos explotar y desarrollar tres áreas para crear la mejor experiencia con un <i>marketplace</i> de punta de lanza: marca, desarrollo y lanzamiento.",
+    "quote": {
+      "quote": "Llevaba 8 años buscando construir una marca que generara confianza a nuestros compradores en línea, pues están acostumbrados a utilizar sitios con funcionalidades y diseño de primera calidad.",
+      "name": "Rodrigo H. Maldonado",
+      "label": "CEO / Fundador, Rahid"
+    }
+  },
+  "third_section": {
+    "title": "<b>Acto II</b><br/>Desarrollo de marca y tono de voz",
+    "p": "Desde la primer reunión que tuvimos con Rodrigo notamos un problema con su identidad: a pesar de llevar 10 años en el mercado, se percibía débil, faltaba cohesión entre sus canales de venta y estaba poco posicionada. Nos dimos a la tarea de ahondar en su modelo y objetivos de negocio, valores, propósito, experiencia, clientes y muchos factores más para construir un branding y tono de voz a la medida. Era fundamental para el proyecto reflejar no sólo la historia de Rahid y su comunidad, sino también marcar una dirección de crecimiento para percibirse como un proyecto escalable. Cuando la intención es ser el mejor postor en tu área, es vital tener una marca que ofrezca una experiencia de calidad, bien construida y que comunique exáctamente lo que buscas.",
+    "spans": [
+      "Logotipo",
+      "Imagotipo",
+      "Primario",
+      "Mayoreo",
+      "Paleta de color",
+      "Tipografía"
+    ]
+  },
+  "fourth_section": {
+    "subtitle": "Un ecommerce nunca antes visto en la industria mexicana",
+    "p": "Tras nuestra investigación de mercado descubrimos que sólo un grupo muy reducido de las <i>smoke shops</i> del país contaban con una experiencia web. Incluso dentro del nicho, encontramos una carencia en común: ninguna marca de parafernalia tenía un ecommerce capaz de hacer transacciones.<br/><br/>Para diferenciarnos, decidimos montar el sitio en Shopify, la plataforma de ecommerce más poderosa del momento, y aprovechar sus herramientas para desarrollar campañas de mailing automatizado (como un mail de carrito abandonado), una forma de pago eficiente, productos relacionados, pagos recurrentes, múltiples administradores y más.",
+    "p2": "Nuestra hambre por innovar no se detuvo en ofrecer a nuestro socio un ecommerce sencillo de administrar, escalable y con las mejores tarifas. De la mano del equipo de Rahid, desarrollamos las Canastas Verdes, un sistema de suscripción que permite a los usuarios recibir mensualmente productos a precios preferenciales y, a Rahid, distribuir su inventario y conseguir una relación más cercana con sus mejores clientes.",
+    "graphicp": "*En el mes de lanzamiento, este fue el tercer producto más vendido del <i>marketplace</i>.",
+    "p3": "El engranaje de este proyecto y su funcionamiento son evidentemente complejos, por lo que brindamos a nuestro socio una serie de manuales y atención personalizada para mantener de manera óptima la tienda en línea y sus canales de comunicación. Como parte de nuestro trabajo, consideramos indispensable capacitar a nuestros socios en tecnología y contextos digitales desarrollando procesos de <i>onboarding</i> para ellos y sus empleados."
+  },
+  "fifth_section": {
+    "title": "<b>Acto III</b><br/>Un lanzamiento que celebró una nueva era para Rahid",
+    "p": "Este es un dato importante: ningún negocio que oferte productos relacionados al tabaco puede hacer publicidad directa o indirecta. Fue indispensable alejarnos de la marca preestablecida \"Tobacco House\" e inclinarnos a una visión más progresiva enfocada en la parafernalia de cannabis. Sin embargo seguíamos limitados ya que, debido a sus políticas de uso, ningún tipo de publicidad pagada era posible en plataformas como Google y Facebook ¿Qué hicimos? Una campaña de <i>referral marketing</i> apoyada de <i>influencers</i>.",
+    "p2": "7 perfiles de 10k+ seguidores del nicho fueron seleccionados para apoyar la difusión de la campaña de lanzamiento, la cual consistía en invitar a tus contactos a suscribirse a la newsletter de Rahid a cambio de productos gratis en tu primer envío.",
+    "stat": "Tasa de conversión<br/>en la campaña de lanzamiento",
+    "p3": "El resultado fue una tasa de conversión fenomenal, el 77% de los usuarios dejaron su correo electrónico, lo que nos permitió crear una base de datos de 1.000+ usuarios durante el pre-lanzamiento que hicieron toda la diferencia al momento de inaugurar el ecommerce.",
+    "p4": "Llegó el mes del lanzamiento y, con ayuda de los <i>influencers</i>, en solo 30 días crecimos 400% la cantidad de seguidores en el Instagram de Rahid, además de concretar conversiones casi diariamente en medio de la crisis del COVID-19.",
+    "quote": {
+      "quote": "Nos encontramos en una oportunidad de crecimiento sin límites. Con un sitio funcional que refleja nuestra identidad estamos exponenciando nuestra oferta a los clientes. A pesar de estar en medio de una pandemia y operar a puerta cerrada en sucursales, nuestro ecommerce nos permite seguir activos y creciendo.",
+      "name": "Rodrigo H. Maldonado",
+      "label": "CEO / Fundador, RAHID"
+    },
+    "p5": "Y éste no es el final del proyecto, seguimos en contacto con Rodrigo. Cada trimestre, el equipo de Rahid nos muestra su plan de contenidos en social media y damos consultoría sobre correcciones, sugerencias, mejores prácticas y conocimiento.<br/><br/>Con certeza podemos decir que Rahid está un paso más cerca de su objetivo: ser la comercializadora de parafernalia más grande del país."
+  },
+  "sixth_section": {
+    "linkp": "visita"
+  }
+}
