@@ -37,7 +37,7 @@ const SingleCase = (props) => {
               />
               <VidReplacer
                 style={{
-                  backgroundImage: `url(/assets/img/casestudies/${props.link}/portfolio_poster.svg`,
+                  backgroundImage: `url(/assets/img/casestudies/${props.link}/portfolio_poster.${props.bg_format}`,
                 }}
               />
             </VidContainer>
