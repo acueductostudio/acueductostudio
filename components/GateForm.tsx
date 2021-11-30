@@ -17,7 +17,6 @@ const GateForm = ({ text, onSubmit }) => {
   } = useForm();
 
   const onSubmitInside = (data) => {
-    console.log(data);
     setFormStatus("loading");
     delayForLoading(1000).then(() => onSubmit(data));
   };

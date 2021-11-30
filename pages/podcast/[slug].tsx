@@ -2,13 +2,17 @@ import { useEffect } from "react";
 import { GetStaticProps } from "next";
 import EpisodeProps from "utils/types/EpisodeProps";
 import markdownToHtml from "utils/markdownToHtml";
-import { getAllEpisodes, getEpisodeBySlug, getNextEpisodeSlug } from "utils/podcastApi";
+import {
+  getAllEpisodes,
+  getEpisodeBySlug,
+  getNextEpisodeSlug,
+} from "utils/podcastApi";
 import Head from "components/layout/Head";
 import EpisodePage from "components/podcast/EpisodePage";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
 
-export default function Episodio({ locale, setTitle, episode }) {
+export default function Episodio({ locale, setTitle, episode, numberOfE }) {
   useEffect(() => {
     setTitle("Podcast");
   }, [locale]);
@@ -25,8 +29,12 @@ export default function Episodio({ locale, setTitle, episode }) {
           alt: episode.title + " | " + episode.guest + ", " + episode.business,
         }}
       ></Head>
-      <EpisodePage {...episode} slug={episode.slug}/>
-      <ResourceFooter shadow identify={episode.slug} />
+      <EpisodePage {...episode} slug={episode.slug} />
+      <ResourceFooter
+        shadow
+        identify={episode.slug}
+        podcastEpisodes={numberOfE}
+      />
     </PageClipper>
   );
 }
@@ -47,22 +55,30 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "youtube",
     "content",
   ]);
-  const next: EpisodeProps = getEpisodeBySlug(getNextEpisodeSlug(episode.episode), [
-    "title",
-    "guest",
-    "date",
-    "business",
-    "category",
-    "description",
-    "episode",
-    "slug",
-    "spotify",
-    "apple",
-    "google",
-    "youtube",
-  ]);
+  const next: EpisodeProps = getEpisodeBySlug(
+    getNextEpisodeSlug(episode.episode),
+    [
+      "title",
+      "guest",
+      "date",
+      "business",
+      "category",
+      "description",
+      "episode",
+      "slug",
+      "spotify",
+      "apple",
+      "google",
+      "youtube",
+    ]
+  );
 
   const content = await markdownToHtml(episode.content || "");
+
+  //For podcast episode number in footer
+  const episodes = getAllEpisodes(["slug"]);
+  const numberOfE = Object.keys(episodes).length;
+
   if (!episode) {
     return {
       notFound: true,
@@ -70,14 +86,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
   return {
     props: {
+      numberOfE: numberOfE,
       episode: {
         ...episode,
         content,
         next,
       },
-      nextEpisode:{
+      nextEpisode: {
         ...next,
-      }
+      },
     },
   };
 };

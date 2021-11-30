@@ -5,41 +5,43 @@ import { createContact } from "utils/sendinBlue";
 import ReactPixel from "react-facebook-pixel";
 import { logEvent, advancedMatching } from "utils/analytics";
 import GateForm from "components/GateForm";
+import { Fade } from "react-awesome-reveal";
 
 const NewsletterPopup = ({ content }) => {
   const [showPopup, setShowPopup] = useState(true);
 
   const onSubmit = (data) => {
-    // // Create contact and add to list 3 (Consulting funnel) w/ test results
-    // createContact({
-    //   firstName: data.firstName,
-    //   lastName: data.lastName,
-    //   email: data.email,
-    //   listIds: [2],
-    //   updateEnabled: true,
-    //   attributes: {
-    //     SUBSCRIBED_FROM: "MVS Gated Page",
-    //     COMPANY: data.company,
-    //     POSITION: data.job,
-    //   },
-    // });
-    // ReactPixel.init("506854653278097", advancedMatching(data.email));
-    // // Suscripción a la newsletter
-    // logEvent("mvs-gated", "dejó datos");
+    // Create contact and add to list 3 (Consulting funnel) w/ test results
+    createContact({
+      firstName: data.firstName,
+      lastName: data.lastName,
+      email: data.email,
+      listIds: [11],
+      updateEnabled: true,
+      attributes: {
+        SUBSCRIBED_FROM: "MVS Gated Page",
+        COMPANY: data.company,
+        POSITION: data.job,
+      },
+    });
+    ReactPixel.init("506854653278097", advancedMatching(data.email));
+    // Suscripción a la newsletter
+    logEvent("mvs-gated", "dejó datos");
     ReactPixel.track("Subscribe", { email: data.email });
 
     setShowPopup(false);
-    console.log(data);
   };
 
   return (
     <>
       <Wrapper clickable={showPopup} id="NewsletterPopup">
-        <Border>
-          <H4>{content.title}</H4>
-          <p>{content.p}</p>
-          <GateForm onSubmit={onSubmit} text={content} />
-        </Border>
+        <Fade triggerOnce>
+          <Border>
+            <H4>{content.title}</H4>
+            <p>{content.p}</p>
+            <GateForm onSubmit={onSubmit} text={content} />
+          </Border>
+        </Fade>
       </Wrapper>
       <StickyReminder visible={showPopup}>
         Deja tus datos para seguir leyendo
@@ -73,65 +75,65 @@ const Background = styled.div<{ visible: boolean }>`
   z-index: 13 !important;
   transition: opacity 0.4s ease;
   left: -15px;
-  @media(max-width:1226px){
-    top:20%;
+  @media (max-width: 1226px) {
+    top: 20%;
   }
-  @media(max-width:1116px){
-    top:21%;
+  @media (max-width: 1116px) {
+    top: 21%;
   }
-  @media(max-width:1100px){
-    top:18.5%;
+  @media (max-width: 1100px) {
+    top: 18.5%;
   }
-  @media(max-width:900px){
-    top:15.5%;
+  @media (max-width: 900px) {
+    top: 15.5%;
   }
-  @media(max-width:884px){
-    top:16%;
+  @media (max-width: 884px) {
+    top: 16%;
   }
-  @media(max-width:847px){
-    top:17%;
+  @media (max-width: 847px) {
+    top: 17%;
   }
-  @media(max-width:800px){
-    top:15.5%;
+  @media (max-width: 800px) {
+    top: 15.5%;
   }
-  @media(max-width:760px){
-    top:16%;
+  @media (max-width: 760px) {
+    top: 16%;
   }
-  @media(max-width:741px){
-    top:17%;
+  @media (max-width: 741px) {
+    top: 17%;
   }
-  @media(max-width:662px){
-    top:17.5%;
+  @media (max-width: 662px) {
+    top: 17.5%;
   }
-  @media(max-width:650px){
-    top:18%;
+  @media (max-width: 650px) {
+    top: 18%;
   }
-  @media(max-width:636px){
-    top:18.5%;
+  @media (max-width: 636px) {
+    top: 18.5%;
   }
-  @media(max-width:600px){
-    top:13%;
+  @media (max-width: 600px) {
+    top: 13%;
   }
-  @media(max-width:495px){
-    top:14%;
+  @media (max-width: 495px) {
+    top: 14%;
   }
-  @media(max-width:448px){
-    top:13.5%;
+  @media (max-width: 448px) {
+    top: 13.5%;
   }
-  @media(max-width:441px){
-    top:14%;
+  @media (max-width: 441px) {
+    top: 14%;
   }
-  @media(max-width:424px){
-    top:15%;
+  @media (max-width: 424px) {
+    top: 15%;
   }
-  @media(max-width:372px){
-    top:15.5%;
+  @media (max-width: 372px) {
+    top: 15.5%;
   }
-  @media(max-width:364px){
-    top:16%;
+  @media (max-width: 364px) {
+    top: 16%;
   }
-  @media(max-width:317px){
-    top:17%;
+  @media (max-width: 317px) {
+    top: 17%;
   }
 `;
 
@@ -176,7 +178,7 @@ const Wrapper = styled.div<{ clickable: boolean }>`
   @media (max-width: 600px) {
     max-width: calc(100% - 36px);
     width: 100%;
-    margin-top:0%;
+    margin-top: 0%;
     margin-left: 18px;
     margin-right: 18px;
     z-index: 100;

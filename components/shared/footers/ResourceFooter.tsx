@@ -10,13 +10,16 @@ import es from "public/locales/es/resourcefooter.json";
 import { createContact } from "utils/sendinBlue";
 import { logEvent, advancedMatching } from "utils/analytics";
 import ReactPixel from "react-facebook-pixel";
+import Link from "next/link";
 
 const ResourceFooter = ({
   shadow,
   identify,
+  podcastEpisodes,
 }: {
   shadow?: boolean;
   identify?: string;
+  podcastEpisodes?: number;
 }) => {
   let resource = es.resource_footer;
 
@@ -46,6 +49,21 @@ const ResourceFooter = ({
         </Fade>
         <Fade triggerOnce>
           <p>{resource.p}</p>
+        </Fade>
+        {identify !== "mvs" && (
+          <Fade triggerOnce>
+            <p>
+              {resource.p2}
+              {podcastEpisodes ? podcastEpisodes : "decenas de"}
+              {resource.p3}
+              <Link href={"/mvs"} passHref>
+                <a>Minimum Viable Startup</a>
+              </Link>
+              .
+            </p>
+          </Fade>
+        )}
+        <Fade triggerOnce>
           <ResourceForm>
             <DefaultForm
               id="resourceFooter"

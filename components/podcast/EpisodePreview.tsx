@@ -80,7 +80,6 @@ const EpisodePreview = ({
             <HoverableContainer>
               {!longFormat && !simplest && (
                 <LinkComplex>
-                  {console.log(next)}
                   <H2overable>{title}</H2overable>
                 </LinkComplex>
               )}
