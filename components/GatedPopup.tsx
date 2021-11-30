@@ -25,10 +25,8 @@ const NewsletterPopup = ({ content }) => {
       },
     });
     ReactPixel.init("506854653278097", advancedMatching(data.email));
-    // Suscripción a la newsletter
     logEvent("mvs-gated", "dejó datos");
-    ReactPixel.track("Subscribe", { email: data.email });
-
+    ReactPixel.track("QualifiedLead", { email: data.email });
     setShowPopup(false);
   };
 
