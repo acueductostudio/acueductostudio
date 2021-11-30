@@ -24,8 +24,9 @@ function Mvs({ locale, setTitle, pt, episodes }) {
       <Head {...head} es_canonical="https://acueducto.studio/consultoria" />
       <PinnedSection disableFade title={intro.title}>
         <>
-          <P>{intro.p}</P>
-          {/* <GatedPopup content={gate_component} /> */}
+          <Fade>
+            <P>{intro.p}</P>
+          </Fade>
           <FitSection>
             {lessons.map((lesson, index) => (
               <React.Fragment key={"nps" + index}>
@@ -42,7 +43,9 @@ function Mvs({ locale, setTitle, pt, episodes }) {
                     text="escuchar episodio"
                   />
                 </ColumnedPreview>
-                {index == 0 && <GatedPopup content={gate_component} />}
+                {index == 0 && (
+                    <GatedPopup content={gate_component} />
+                )}
               </React.Fragment>
             ))}
           </FitSection>

@@ -99,7 +99,7 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
           </PodcastList>
         </div>
       </PodcastGrid>
-      <ResourceFooter shadow identify="podcast" />
+      <ResourceFooter shadow identify="podcast" podcastEpisodes={Object.keys(episodes).length}/>
     </PageClipper>
   );
 }

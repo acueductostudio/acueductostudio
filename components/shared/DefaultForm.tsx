@@ -54,8 +54,6 @@ const DefaultForm = ({
   } = useForm();
 
   const onSubmitInside = (data) => {
-    console.log(data);
-
     setFormStatus("loading");
     onSubmit(data);
     !infinite && delayForLoading(1500).then(() => setFormStatus("done"));

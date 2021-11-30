@@ -3,12 +3,13 @@ import { GetStaticProps } from "next";
 import ArticleProps from "utils/types/ArticleProps";
 import markdownToHtml from "utils/markdownToHtml";
 import { getAllPosts, getPostBySlug } from "utils/blogApi";
+import { getAllEpisodes } from "utils/podcastApi";
 import Head from "components/layout/Head";
 import ArticlePage from "components/articles/ArticlePage";
 import PageClipper from "components/layout/PageClipper";
 import ResourceFooter from "components/shared/footers/ResourceFooter";
 
-export default function Article({ locale, setTitle, article }) {
+export default function Article({ locale, setTitle, article, numberOfE }) {
   useEffect(() => {
     setTitle("Artículo");
   }, [locale]);
@@ -23,7 +24,7 @@ export default function Article({ locale, setTitle, article }) {
         image={{ fileName: `${article.slug}.png`, alt: article.title }}
       ></Head>
       <ArticlePage {...article} slug={article.slug} />
-      <ResourceFooter identify={article.slug}/>
+      <ResourceFooter identify={article.slug} podcastEpisodes={numberOfE} />
     </PageClipper>
   );
 }
@@ -38,6 +39,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "content",
   ]);
   const content = await markdownToHtml(article.content || "");
+
+  //For podcast episode number in footer
+  const episodes = getAllEpisodes(["slug"]);
+  const numberOfE = Object.keys(episodes).length;
+
   if (!article) {
     return {
       notFound: true,
@@ -45,7 +51,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
   return {
     props: {
-     article: {
+      numberOfE: numberOfE,
+      article: {
         ...article,
         content,
       },
