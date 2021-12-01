@@ -40,25 +40,27 @@
     ]
   },
   "second_section": {
-    "subtitle": "Un giro de 180º con una poderosa experiencia de ecommerce",
-    "p": "Después de la fase de descubrimiento, decidimos explotar y desarrollar tres áreas para crear la mejor experiencia con un <i>marketplace</i> de punta de lanza: marca, desarrollo y lanzamiento.",
     "quote": {
-      "quote": "Llevaba 8 años buscando construir una marca que generara confianza a nuestros compradores en línea, pues están acostumbrados a utilizar sitios con funcionalidades y diseño de primera calidad.",
-      "name": "Rodrigo H. Maldonado",
-      "label": "CEO / Fundador, Rahid"
-    }
+      "quote": "Llevaba diez años intentando solidificar mi marca para poder alcanzar mis objetivos, para poder crecer.",
+      "name": "Catalina Rodríguez",
+      "label": "Cofundadora, Blockstem"
+    },
+    "p": "Blockstem había tenido éxito con instituciones privadas tales como el Tec de Monterrey y Global Shapers Community validando el valor de sus servicios, sin embargo carecían de un portal web que respaldara y presentara su iniciativa, y que atendiera todas las posibles objeciones que podían tener tanto clientes potenciales como posibles inversionistas. Buscaban una herramienta para recargarse sobre ella al momento de salir a vender su empresa, así que comenzamos a trabajar."
   },
   "third_section": {
-    "title": "<b>Acto II</b><br/>Desarrollo de marca y tono de voz",
-    "p": "Desde la primer reunión que tuvimos con Rodrigo notamos un problema con su identidad: a pesar de llevar 10 años en el mercado, se percibía débil, faltaba cohesión entre sus canales de venta y estaba poco posicionada. Nos dimos a la tarea de ahondar en su modelo y objetivos de negocio, valores, propósito, experiencia, clientes y muchos factores más para construir un branding y tono de voz a la medida. Era fundamental para el proyecto reflejar no sólo la historia de Rahid y su comunidad, sino también marcar una dirección de crecimiento para percibirse como un proyecto escalable. Cuando la intención es ser el mejor postor en tu área, es vital tener una marca que ofrezca una experiencia de calidad, bien construida y que comunique exáctamente lo que buscas.",
-    "spans": [
-      "Logotipo",
-      "Imagotipo",
-      "Primario",
-      "Mayoreo",
-      "Paleta de color",
-      "Tipografía"
-    ]
+    "title": "<b>Acto II</b><br/>La educación como piedra angular",
+    "p": "Cuando estás en la punta de lanza de la innovación es casi imposible que aquellos que no lo están no entiendan de qué estás hablando. Esto es algo que sucede actualmente con las tecnologías alrededor de Blockchain. Lo primero que hicimos fue desarrollar un whitepaper que introdujera a sus lectores en los siguientes aspectos:",
+    "aspects": [
+      {
+        "p": "Los problemas que amenazan las actuales democracias de Latinoamérica tales como corrupción, desconfianza y mala administración"
+      },
+      {
+        "p": "La solución que representa Blockchain para solucionar estos problemas y ofrecer una alternativa más segura, confiable y escalable."
+      }
+    ],
+    "p2": "Esta pieza de contenido, co-creada de la mano e intelecto de Cata y Gonzalo, ayuda a que cualquier interesado en el proyecto pueda tener un panorama completo de la propuesta de valor que ofrece Blockstem.",
+    "subtitle": "Un sitio pensado para clientes pero también para inversionistas",
+    "p3": "El sitio de Blockstem no sólo resuelve los aspectos básicos que un cliente prospecto puede buscar: propuesta de valor, solución, contacto, confianza, etc. sino que también apela a preguntas fundamentales que se hacen inversionistas antes de depositar su capital y confianza en un proyecto, tales como ¿cuál es el mercado de esta compañía?, ¿qué los hace únicos?, ¿cómo sobrevivirán en el futuro?, ¿por qué la oportunidad es ahora?"
   },
   "fourth_section": {
     "subtitle": "Un ecommerce nunca antes visto en la industria mexicana",

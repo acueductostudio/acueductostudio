@@ -8,7 +8,6 @@ import PageClipper from "components/layout/PageClipper";
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
-import LogoRahid from "public/assets/img/casestudies/rahid/logoRahid.svg";
 import LogoBlockstem from "public/assets/img/casestudies/blockstem/logoBlockstem.svg";
 import { H2, H3, P } from "components/shared/Dangerously";
 import IntroVideo from "components/caseStudy/shared/IntroVideo";
@@ -22,6 +21,8 @@ const rahidBackground = "#F9F5F0";
 const rahidForeground = "#31302E";
 const bAccent1 = "#4EA68E";
 const bAccent2 = "#2B67DD";
+const mainGradient =
+  "linear-gradient(96.9deg, #060809 12.06%, #3A3A3A 113.48%);";
 const bAccent1Darker = "#7A84B9";
 
 function Rahid({ locale, setTitle, pt }) {
@@ -40,12 +41,12 @@ function Rahid({ locale, setTitle, pt }) {
     setloadAssets(true);
   }, [locale]);
 
+  console.log(t.intro_section.lessons);
   return (
     <PageClipper
       unPadded
       style={{
-        background:
-          "linear-gradient(96.9deg, #060809 12.06%, #3A3A3A 113.48%);",
+        background: mainGradient,
       }}
     >
       <Head
@@ -69,86 +70,55 @@ function Rahid({ locale, setTitle, pt }) {
         <TextColumn>
           <H2>{t.intro_section.title}</H2>
           <P>{t.intro_section.p}</P>
-          {t.intro_section.lessons.map((lesson, index) => (
+          {/* {t.intro_section.lessons.map((lesson, i) => (
             <>
               <h4>{lesson.title}</h4>
               <p>{lesson.p}</p>
             </>
-          ))}
+          ))} */}
         </TextColumn>
       </FirstSection>
       <SecondSection>
+        <Quote quote={t.second_section.quote} color={"#1F2A2D"} />
+        {loadAssets && (
+          <>
+            <img
+              src="/assets/img/casestudies/blockstem/tec.svg"
+              alt="Tecnológico de Monterrey"
+            />
+            <img
+              src="/assets/img/casestudies/blockstem/global.svg"
+              alt="Global Shapers Community"
+            />
+          </>
+        )}
         <TextColumn>
-          <H3>{"– " + t.second_section.subtitle}</H3>
           <P>{t.second_section.p}</P>
         </TextColumn>
-        <Quote quote={t.second_section.quote} color={rahidBackground} />
       </SecondSection>
       <ThirdSection>
         <TextColumn>
           <H2>{t.third_section.title}</H2>
           <P>{t.third_section.p}</P>
+          {t.third_section.aspects.map((aspect, i) => (
+            <>
+              <span>{i + 1}</span>
+              <p>{aspect.p}</p>
+            </>
+          ))}
+          <P>{t.third_section.p2}</P>
+          {
+            //Piezas de whitepaper
+          }
+          <H3>{"– " + t.third_section.subtitle}</H3>
+          <P>{t.third_section.p3}</P>
         </TextColumn>
-        <Branding>
-          <Fade triggerOnce>
-            <div>
-              {t.third_section.spans.map((span, index) => (
-                <span key={index + "span"}>{span}</span>
-              ))}
-              {loadAssets && (
-                <img
-                  src="/assets/img/casestudies/rahid/brandGroup.svg"
-                  alt="Branding"
-                />
-              )}
-            </div>
-          </Fade>
-        </Branding>
-        <Applications>
-          <Picture
-            src="/assets/img/casestudies/rahid/box.png"
-            alt="Packaging: Rahid"
-            width={279}
-            height={261}
-          />
-          <Picture
-            src="/assets/img/casestudies/rahid/fb.jpg"
-            alt="Facebook Post: Rahid"
-            width={372}
-            height={579}
-          />
-          <Picture
-            src="/assets/img/casestudies/rahid/ig.jpg"
-            alt="Instagram Post: Rahid"
-            width={465}
-            height={298}
-          />
-        </Applications>
       </ThirdSection>
       <FourthSection>
         <TextColumn>
-          <H3>{"– " + t.fourth_section.subtitle}</H3>
           <P>{t.fourth_section.p}</P>
-          <Picture
-            src="/assets/img/casestudies/rahid/home.jpg"
-            alt="Home Rahid.co"
-            width={800}
-            height={412}
-            withWrapper
-          />
-          <P>{t.fourth_section.p2}</P>
-        </TextColumn>
-        <InsertBlock>
-          <Picture
-            src="/assets/img/casestudies/rahid/boxes.png"
-            alt="Home Rahid.co"
-            width={960}
-            height={754}
-          />
-          <P>{t.fourth_section.graphicp}</P>
-        </InsertBlock>
-        <TextColumn>
-          <P>{t.fourth_section.p3}</P>
+          <span>{t.fourth_section.body}</span>
+          <span>{t.fourth_section.titles}</span>
         </TextColumn>
       </FourthSection>
       <FifthSection>
@@ -527,48 +497,20 @@ const FourthSection = styled(CommonSection)`
 `;
 
 const ThirdSection = styled(CommonSection)`
-  color: ${(props) => props.theme.colors.background};
-  background-color: ${(props) => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.over_black};
+  background: ${mainGradient};
   h2 {
-    color: ${rahidForeground};
+    color: ${(props) => props.theme.colors.foreground};
     b {
-      color: ${bAccent1Darker};
+      color: ${bAccent1};
     }
-  }
-  p {
-    color: ${rahidForeground};
   }
 `;
 
 const SecondSection = styled(CommonSection)`
-  background-color: ${rahidForeground};
-  color: ${rahidBackground};
+  background-color: ${(props) => props.theme.colors.foreground};
+  color: ${(props) => props.theme.colors.over_white};
   padding-bottom: 8%;
-  h2 {
-    color: ${rahidBackground};
-  }
-`;
-
-const OldBrand = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 10% auto;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  img {
-    max-width: 170px;
-  }
-  p {
-    line-height: 1;
-    margin-top: 20px;
-    color: #828282;
-  }
-  @media (max-width: 500px) {
-    img {
-      max-width: 130px;
-    }
-  }
 `;
 
 const FirstSection = styled(CommonSection)`
