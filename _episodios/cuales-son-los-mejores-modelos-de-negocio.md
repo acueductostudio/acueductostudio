@@ -3,9 +3,15 @@ episode: 25
 date: "2021-12-13"
 title: ¿Cuáles son los mejores modelos de negocio?
 guest: Damián Alcedo
-business: Polymath Ventures
+business: Polymath Ventures 
 category: Inversor
 description: En este episodio hablamos con Damián Alcedo, Director de Polymath Ventures, uno de los venture studios más importantes de LATAM. Nos concentramos en construcción de startups desde etapas tempranas, los mejores modelos de negocio y sus mejores consejos para emprendedores.
+file: https://www.buzzsprout.com/895972/9658479-cuales-son-los-mejores-modelos-de-negocio-damian-alcedo.mp3?download=true
+spotify: https://open.spotify.com/episode/6DQSpGWjxrJ5aOzdHdfPnQ
+youtube: https://open.spotify.com/episode/6DQSpGWjxrJ5aOzdHdfPnQ
+apple: https://podcasts.apple.com/mx/podcast/cu%C3%A1les-son-los-mejores-modelos-de-negocio-dami%C3%A1n-alcedo/id1500473556?i=1000544773178
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05NjU4NDc5
+
 ---
 
 **Artemio:** Hola, ¿qué tal? Bienvenidos a todos a una edición más de Cuando El Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores _insights_ y consejos con todos aquellos emprendedores que estamos buscando construir un negocio saludable de internet o con tecnología e innovación en el núcleo. Me pone muy contento saludarlos el día de hoy. Me acompaña aquí mi socio Rodrigo Salmerón, ¿cómo estás, Ro?
