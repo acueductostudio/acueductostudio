@@ -9,6 +9,7 @@ import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import NextStudy from "components/caseStudy/shared/NextStudy";
 import LogoBlockstem from "public/assets/img/casestudies/blockstem/logoBlockstem.svg";
+import Brand1 from "public/assets/img/casestudies/blockstem/Brand1.svg";
 import { H2, H3, P } from "components/shared/Dangerously";
 import IntroVideo from "components/caseStudy/shared/IntroVideo";
 import Marquee from "components/caseStudy/shared/Marquee";
@@ -41,7 +42,7 @@ function Rahid({ locale, setTitle, pt }) {
     setloadAssets(true);
   }, [locale]);
 
-  console.log(t.intro_section.lessons);
+  // console.log(t.intro_section.lessons);
   return (
     <PageClipper
       unPadded
@@ -70,29 +71,31 @@ function Rahid({ locale, setTitle, pt }) {
         <TextColumn>
           <H2>{t.intro_section.title}</H2>
           <P>{t.intro_section.p}</P>
-          {/* {t.intro_section.lessons.map((lesson, i) => (
-            <>
-              <h4>{lesson.title}</h4>
-              <p>{lesson.p}</p>
-            </>
-          ))} */}
+          {/* <LessonContainer>
+            {t.intro_section.lessons.map((lesson, i) => (
+              <Lesson key={`lessn${i}`}>
+                <span>{lesson.title}</span>
+                <p>{lesson.p}</p>
+              </Lesson>
+            ))}
+          </LessonContainer> */}
         </TextColumn>
       </FirstSection>
       <SecondSection>
         <Quote quote={t.second_section.quote} color={"#1F2A2D"} />
-        {loadAssets && (
-          <>
-            <img
-              src="/assets/img/casestudies/blockstem/tec.svg"
-              alt="Tecnológico de Monterrey"
-            />
-            <img
-              src="/assets/img/casestudies/blockstem/global.svg"
-              alt="Global Shapers Community"
-            />
-          </>
-        )}
         <TextColumn>
+          {loadAssets && (
+            <LogosContainer>
+              <img
+                src="/assets/img/casestudies/blockstem/tec.svg"
+                alt="Tecnológico de Monterrey"
+              />
+              <img
+                src="/assets/img/casestudies/blockstem/global.svg"
+                alt="Global Shapers Community"
+              />
+            </LogosContainer>
+          )}
           <P>{t.second_section.p}</P>
         </TextColumn>
       </SecondSection>
@@ -100,12 +103,12 @@ function Rahid({ locale, setTitle, pt }) {
         <TextColumn>
           <H2>{t.third_section.title}</H2>
           <P>{t.third_section.p}</P>
-          {t.third_section.aspects.map((aspect, i) => (
-            <>
+          {/* {t.third_section.aspects.map((aspect, i) => (
+            <Aspect key={`aspect${i}`}>
               <span>{i + 1}</span>
               <p>{aspect.p}</p>
-            </>
-          ))}
+            </Aspect>
+          ))} */}
           <P>{t.third_section.p2}</P>
           {
             //Piezas de whitepaper
@@ -117,8 +120,11 @@ function Rahid({ locale, setTitle, pt }) {
       <FourthSection>
         <TextColumn>
           <P>{t.fourth_section.p}</P>
-          <span>{t.fourth_section.body}</span>
-          <span>{t.fourth_section.titles}</span>
+          <SpanContainer>
+            <span>{t.fourth_section.body}</span>
+            <span>{t.fourth_section.titles}</span>
+          </SpanContainer>
+          <Brand1 />
         </TextColumn>
       </FourthSection>
       <FifthSection>
@@ -194,6 +200,98 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+const SpanContainer = styled.div`
+flex-direction:row;
+`;
+
+const Aspect = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 5% 0;
+  span {
+    background: ${bAccent2};
+    width: 28px;
+    line-height: 0;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 100%;
+    font-weight: 300;
+    color: ${(p) => p.theme.colors.background};
+    margin-top: 2px;
+  }
+  p {
+    max-width: 630px;
+  }
+`;
+
+const LogosContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10%;
+  justify-content: space-around;
+  margin-top: 5%;
+  img {
+    max-height: 100px;
+    width: auto;
+  }
+`;
+
+const Lesson = styled.div`
+  max-width: 500px;
+  &:not(:last-of-type) {
+    margin-bottom: 10%;
+  }
+  &:nth-of-type(2) {
+    span {
+      &::before,
+      &::after {
+        background: linear-gradient(92.93deg, #1e6a5a -6.6%, #4da38b 150.71%);
+      }
+    }
+  }
+  p {
+    margin-top: 20px;
+    margin-left: 42px;
+  }
+  span {
+    font-size: 2.6rem;
+    position: relative;
+    &::before,
+    &::after {
+      content: " ";
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(70.86deg, #1a4ce0 23.81%, #81edce 385.7%);
+      border-radius: 100%;
+    }
+    &::before {
+      content: " ";
+      display: inline-block;
+      position: relative;
+      margin-right: 12px;
+      margin-left: 7px;
+    }
+    &::after {
+      content: " ";
+      display: block;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+    }
+  }
+`;
+
+const LessonContainer = styled.div`
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const LaunchGrid = styled.div`
   max-width: 800px;
   width: 100%;
@@ -250,96 +348,6 @@ const InsertBlock = styled.figure`
       font-size: 1.4rem;
       max-width: unset;
       bottom: unset;
-    }
-  }
-`;
-
-const Applications = styled.div`
-  background-color: ${bAccent1};
-  width: 90%;
-  max-width: 1200px;
-  margin: 8% 0;
-  padding: 9%;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 0.7fr 1fr;
-  & > div {
-    &:nth-of-type(1) {
-      grid-column: 1 / span 3;
-      margin-top: -5%;
-    }
-    &:nth-of-type(2) {
-      grid-column: 7 / span 4;
-      grid-row: 1 / span 2;
-    }
-    &:nth-of-type(3) {
-      grid-column: 1 / span 5;
-      grid-row: 2;
-      align-self: flex-end;
-    }
-  }
-  img {
-    border-radius: 3px;
-  }
-  @media (max-width: 500px) {
-    margin-bottom: 15%;
-    border-radius: 2px;
-  }
-`;
-
-const Branding = styled.div`
-  width: 80%;
-  max-width: 800px;
-  margin-top: 6%;
-  position: relative;
-  img {
-    width: 100%;
-  }
-  span {
-    font-size: 1.2rem;
-    width: 100%;
-    position: absolute;
-    max-width: 36%;
-    border-bottom: 2px solid #686153;
-    padding-bottom: 4px;
-    color: ${rahidForeground};
-
-    &:nth-of-type(even) {
-      right: 0;
-    }
-    &:nth-of-type(3),
-    &:nth-of-type(4) {
-      top: 34.3%;
-    }
-    &:nth-of-type(5),
-    &:nth-of-type(6) {
-      top: 63.6%;
-    }
-  }
-  @media (max-width: 1000px) {
-    max-width: unset;
-    width: 90%;
-    margin-right: 5%;
-    margin-left: 5%;
-  }
-  @media (max-width: 600px) {
-    margin-top: 10%;
-    margin-bottom: 8%;
-    span {
-      padding-bottom: 3px;
-      border-bottom: 1px solid #686153;
-      &:nth-of-type(1),
-      &:nth-of-type(2) {
-        top: -2%;
-      }
-      &:nth-of-type(3),
-      &:nth-of-type(4) {
-        top: 32%;
-      }
-      &:nth-of-type(5),
-      &:nth-of-type(6) {
-        top: 60%;
-      }
     }
   }
 `;
@@ -475,9 +483,17 @@ const FifthSection = styled(CommonSection)`
 `;
 
 const FourthSection = styled(CommonSection)`
-  background-color: ${rahidForeground};
-  color: ${(props) => props.theme.colors.foreground_low};
-  padding-bottom: 10%;
+  background-color: #f3f4f5;
+  color: ${(props) => props.theme.colors.over_white};
+  padding: 10% 0;
+
+  span {
+    margin-top: 5%;
+    display:inline-block;
+    &:nth-of-type(2){
+      margin-left:30px;
+    }
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -497,6 +513,7 @@ const FourthSection = styled(CommonSection)`
 `;
 
 const ThirdSection = styled(CommonSection)`
+  padding-bottom: 8%;
   color: ${(props) => props.theme.colors.over_black};
   background: ${mainGradient};
   h2 {
@@ -508,9 +525,10 @@ const ThirdSection = styled(CommonSection)`
 `;
 
 const SecondSection = styled(CommonSection)`
-  background-color: ${(props) => props.theme.colors.foreground};
+  background-color: #f3f4f5;
   color: ${(props) => props.theme.colors.over_white};
   padding-bottom: 8%;
+  padding-top: 3%;
 `;
 
 const FirstSection = styled(CommonSection)`

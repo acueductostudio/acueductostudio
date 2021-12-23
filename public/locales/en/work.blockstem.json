@@ -41,9 +41,9 @@
   },
   "second_section": {
     "quote": {
-      "quote": "El mayor reto era explicar la compleja intersección entre la tecnología blockchain y la democracia de una manera emocionante para el lector. Necesitábamos una página que pudiera comunicar de manera clara y rápida lo que es Blockstem.",
-      "name": "Gonzalo Bañuelos",
-      "label": "Cofundador, Blockstem"
+      "quote": "Llevaba diez años intentando solidificar mi marca para poder alcanzar mis objetivos, para poder crecer.",
+      "name": "Catalina Rodríguez",
+      "label": "Cofundadora, Blockstem"
     },
     "p": "Blockstem había tenido éxito con instituciones privadas tales como el Tec de Monterrey y Global Shapers Community validando el valor de sus servicios, sin embargo carecían de un portal web que respaldara y presentara su iniciativa, y que atendiera todas las posibles objeciones que podían tener tanto clientes potenciales como posibles inversionistas. Buscaban una herramienta para recargarse sobre ella al momento de salir a vender su empresa, así que comenzamos a trabajar."
   },
@@ -52,7 +52,7 @@
     "p": "Cuando estás en la punta de lanza de la innovación es casi imposible que aquellos que no lo están no entiendan de qué estás hablando. Esto es algo que sucede actualmente con las tecnologías alrededor de Blockchain. Lo primero que hicimos fue desarrollar un whitepaper que introdujera a sus lectores en los siguientes aspectos:",
     "aspects": [
       {
-        "p": "Los problemas que amenazan las actuales democracias de Latinoamérica tales como la corrupción, la desconfianza y la mala administración"
+        "p": "Los problemas que amenazan las actuales democracias de Latinoamérica tales como corrupción, desconfianza y mala administración"
       },
       {
         "p": "La solución que representa Blockchain para solucionar estos problemas y ofrecer una alternativa más segura, confiable y escalable."
@@ -63,9 +63,11 @@
     "p3": "El sitio de Blockstem no sólo resuelve los aspectos básicos que un cliente prospecto puede buscar: propuesta de valor, solución, contacto, confianza, etc. sino que también apela a preguntas fundamentales que se hacen inversionistas antes de depositar su capital y confianza en un proyecto, tales como ¿cuál es el mercado de esta compañía?, ¿qué los hace únicos?, ¿cómo sobrevivirán en el futuro?, ¿por qué la oportunidad es ahora?"
   },
   "fourth_section": {
-    "p": "Vale la pena mencionar que al iniciar el proyecto hicimos un análisis del diseño de marca y producto de Blockstem. Este dejó ver que las bases visuales del proyecto necesitaban ser reforzadas, por lo que nos dimos a la tarea de refinar gráficos, tipografías y el look & feel de la experiencia web para dar un sentido mucho más minimalista y elegante a Blockstem.",
-    "body": "cuerpo de texto",
-    "titles": "títulos"
+    "subtitle": "Un ecommerce nunca antes visto en la industria mexicana",
+    "p": "Tras nuestra investigación de mercado descubrimos que sólo un grupo muy reducido de las <i>smoke shops</i> del país contaban con una experiencia web. Incluso dentro del nicho, encontramos una carencia en común: ninguna marca de parafernalia tenía un ecommerce capaz de hacer transacciones.<br/><br/>Para diferenciarnos, decidimos montar el sitio en Shopify, la plataforma de ecommerce más poderosa del momento, y aprovechar sus herramientas para desarrollar campañas de mailing automatizado (como un mail de carrito abandonado), una forma de pago eficiente, productos relacionados, pagos recurrentes, múltiples administradores y más.",
+    "p2": "Nuestra hambre por innovar no se detuvo en ofrecer a nuestro socio un ecommerce sencillo de administrar, escalable y con las mejores tarifas. De la mano del equipo de Rahid, desarrollamos las Canastas Verdes, un sistema de suscripción que permite a los usuarios recibir mensualmente productos a precios preferenciales y, a Rahid, distribuir su inventario y conseguir una relación más cercana con sus mejores clientes.",
+    "graphicp": "*En el mes de lanzamiento, este fue el tercer producto más vendido del <i>marketplace</i>.",
+    "p3": "El engranaje de este proyecto y su funcionamiento son evidentemente complejos, por lo que brindamos a nuestro socio una serie de manuales y atención personalizada para mantener de manera óptima la tienda en línea y sus canales de comunicación. Como parte de nuestro trabajo, consideramos indispensable capacitar a nuestros socios en tecnología y contextos digitales desarrollando procesos de <i>onboarding</i> para ellos y sus empleados."
   },
   "fifth_section": {
     "title": "<b>Acto III</b><br/>Un lanzamiento que celebró una nueva era para Rahid",
