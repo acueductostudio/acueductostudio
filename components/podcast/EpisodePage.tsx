@@ -32,7 +32,7 @@ const EpisodePage = ({
 }: PodcastProps) => {
   return (
     <>
-      <CenteredSection customBackground={"/assets/img/podcast/backOld.svg"}>
+      <CenteredSection customBackground={"/assets/img/podcast/backOld.svg"} id="cuandoelriosuena">
         <Fade triggerOnce>
           <IntroLogo>
             <Link href="/podcast" passHref>
