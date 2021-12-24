@@ -19,6 +19,18 @@
   "lang": "en",
   "casestudies": [
     {
+      "title": "cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria",
+      "tags": "Strategy<br/>Comunicación<br/>Branding<br/>No-code<br/>Posicionamiento<br/>",
+      "link": "blockstem",
+      "bg_format": "png"
+    },
+    {
+      "title": "a unique ecommerce niche in Mexico",
+      "tags": "Strategy<br/>Commmunication<br/>Branding<br/>Ecommerce<br/>Digital Marketing<br/>",
+      "link": "rahid",
+      "bg_format": "svg"
+    },
+    {
       "title": "from strategy to production in the filmmaking industry",
       "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
       "link": "ladanzadelasfieras",
@@ -29,18 +41,6 @@
       "tags": "Strategy<br/>Product development<br/>Design & digital consulting<br/>Project management",
       "link": "salvajenada",
       "bg_format": "svg"
-    },
-    {
-      "title": "a unique ecommerce niche in Mexico",
-      "tags": "Strategy<br/>Commmunication<br/>Branding<br/>Ecommerce<br/>Digital Marketing<br/>",
-      "link": "rahid",
-      "bg_format": "svg"
-    },
-    {
-      "title": "cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria",
-      "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Desarrollo No-code<br/>Posicionamiento<br/>",
-      "link": "blockstem",
-      "bg_format": "png"
     }
   ],
   "contact_footer": {

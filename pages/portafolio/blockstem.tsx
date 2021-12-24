@@ -115,31 +115,32 @@ function Rahid({ locale, setTitle, pt }) {
         <WhitepaperGrid>
           <Picture
             src="/assets/img/casestudies/blockstem/cover.jpg"
-            alt="Printed assets for film attendants"
+            alt="Whitepaper cover"
             width={544}
             height={395}
           />
+
           <Picture
             src="/assets/img/casestudies/blockstem/small1.jpg"
-            alt="Printed assets for film attendants"
+            alt="Whitepaper page"
             width={306}
             height={223}
           />
           <Picture
             src="/assets/img/casestudies/blockstem/small2.jpg"
-            alt="Printed assets for film attendants"
+            alt="Whitepaper page"
             width={306}
             height={223}
           />
           <Picture
             src="/assets/img/casestudies/blockstem/small3.jpg"
-            alt="Printed assets for film attendants"
+            alt="Whitepaper page"
             width={306}
             height={223}
           />
           <Picture
             src="/assets/img/casestudies/blockstem/small4.jpg"
-            alt="Printed assets for film attendants"
+            alt="Whitepaper page"
             width={306}
             height={223}
           />
@@ -168,14 +169,14 @@ function Rahid({ locale, setTitle, pt }) {
           />
           <Picture
             src="/assets/img/casestudies/blockstem/ballot.png"
-            alt="Conversation"
+            alt="Ballot"
             width={270}
             height={270}
             withWrapper
           />
           <Picture
             src="/assets/img/casestudies/blockstem/latam.png"
-            alt="Conversation"
+            alt="LATAM"
             width={270}
             height={270}
             withWrapper
@@ -186,7 +187,7 @@ function Rahid({ locale, setTitle, pt }) {
         <TransitionWrapper>
           <Picture
             src="/assets/img/casestudies/blockstem/transition.jpg"
-            alt="Printed assets for film attendants"
+            alt="Ballot cover"
             width={1150}
             height={612}
           />
@@ -194,19 +195,19 @@ function Rahid({ locale, setTitle, pt }) {
         <ScreenGrid>
           <Picture
             src="/assets/img/casestudies/blockstem/leftphone.png"
-            alt="Printed assets for film attendants"
-            width={380}
-            height={710}
+            alt="Blockstem homepage mobile"
+            width={300}
+            height={628}
           />
           <Picture
             src="/assets/img/casestudies/blockstem/rightphone.png"
-            alt="Printed assets for film attendants"
-            width={380}
-            height={710}
+            alt="Blockstem page mobile"
+            width={300}
+            height={628}
           />
           <Picture
             src="/assets/img/casestudies/blockstem/mac.png"
-            alt="Printed assets for film attendants"
+            alt="Blockstem homepage desktop"
             width={1010}
             height={650}
           />
@@ -234,13 +235,13 @@ function Rahid({ locale, setTitle, pt }) {
         </TextColumn>
       </SixthSection>
       <SeventhSection>
+        <Picture
+          src="/assets/img/casestudies/blockstem/main-bg.png"
+          alt="Blockstem ballots"
+          width={979}
+          height={853}
+        />
         <Fade triggerOnce>
-          <Picture
-            src="/assets/img/casestudies/blockstem/main-bg.png"
-            alt="Printed assets for film attendants"
-            width={979}
-            height={853}
-          />
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -250,7 +251,7 @@ function Rahid({ locale, setTitle, pt }) {
           </a>
         </Fade>
       </SeventhSection>
-      <NextStudy link="ladanzadelasfieras" />
+      <NextStudy link="rahid" />
       <ContactFooter />
     </PageClipper>
   );
@@ -281,6 +282,21 @@ const WhitepaperGrid = styled.div`
   div {
     border-radius: 5px;
     overflow: hidden;
+  }
+  @media (max-width: 1000px) {
+    padding: 8% 8% 0 8%;
+  }
+  @media (max-width: 780px) {
+    padding: 8% 5% 0 5%;
+    grid-gap: 1rem;
+  }
+  @media (max-width: 580px) {
+    grid-template-columns: 1fr;
+    & > div {
+      display: flex;
+      justify-content: center;
+      max-width: 309px;
+    }
   }
 `;
 
@@ -313,22 +329,25 @@ const Stat = styled.div`
       font-size: 4rem;
     }
   }
-  @media (max-width: 700px) {
-    max-width: 330px;
-    margin: 16% auto 12%;
+  @media (max-width: 730px) {
+    margin-bottom: 20px;
   }
   @media (max-width: 600px) {
-    max-width: 240px;
-    margin: 20% auto 14%;
+    max-width: unset;
+    width: 100%;
+    padding: 30px;
+    &:nth-of-type(1) {
+      margin-right: 0px;
+    }
     b {
       font-size: 6rem;
     }
-    svg {
-      width: 13%;
-    }
   }
-  @media (max-width: 400px) {
-    margin: 14% auto 14%;
+  @media (max-width: 600px) {
+    border-radius: 30px;
+    span {
+      font-size: 7rem;
+    }
   }
 `;
 
@@ -337,21 +356,67 @@ const StatGrid = styled.div`
   display: flex;
   max-width: 670px;
   justify-content: flex-end;
+  @media (max-width: 730px) {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+  }
 `;
+
 const ScreenGrid = styled.div`
   display: grid;
   grid-template: 1fr 1fr;
   padding: 12% 5% 2%;
-  div:nth-child(1) {
-    grid-column: 1 / span 1;
-    justify-self: center;
+  grid-gap: 0 10%;
+  & > div:nth-child(1),
+  & > div:nth-child(2) {
+    & > div {
+      box-shadow: -30px 40px 40px #1a4ba8;
+      border-radius: 40px;
+    }
   }
-  div:nth-child(2) {
+  & > div:nth-child(1) {
+    grid-column: 1 / span 1;
+    justify-self: flex-end;
+  }
+  & > div:nth-child(2) {
     grid-column: 2 / span 1;
   }
-  div:nth-child(3) {
-    margin-top: 10%;
+  & > div:nth-child(3) {
+    padding-top: 10%;
     grid-column: 1 / span 2;
+    box-shadow: none;
+  }
+  @media (max-width: 1100px) {
+    & > div:nth-child(1) {
+      padding-left: 35%;
+    }
+    & > div:nth-child(2) {
+      padding-right: 35%;
+    }
+    & > div:nth-child(1),
+    & > div:nth-child(2) {
+      & > div {
+        border-radius: 30px;
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    & > div:nth-child(1),
+    & > div:nth-child(2) {
+      & > div {
+        border-radius: 20px;
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    & > div:nth-child(1),
+    & > div:nth-child(2) {
+      & > div {
+        border-radius: 14px;
+        box-shadow: -20px 20px 30px #1a4ba8;
+      }
+    }
   }
 `;
 
@@ -380,6 +445,16 @@ const TransitionWrapper = styled.div`
     width: 100%;
     background-color: #f3f4f5;
   }
+  @media (max-width: 800px) {
+    & > div img {
+      border-radius: 20px;
+    }
+  }
+  @media (max-width: 400px) {
+    & > div img {
+      border-radius: 15px;
+    }
+  }
 `;
 
 const KeyShotGrid = styled.div`
@@ -388,6 +463,15 @@ const KeyShotGrid = styled.div`
   width: 100%;
   padding: 5% 0 0;
   justify-content: space-evenly;
+  @media (max-width: 1300px) {
+    .image {
+      max-width: 25%;
+    }
+  }
+  @media (max-width: 1100px) {
+    justify-content: space-between;
+    padding: 5% 5% 0 5%;
+  }
 `;
 
 const SpanContainer = styled.div`
@@ -408,8 +492,10 @@ const Aspect = styled.div`
   margin: 5% 0;
   span {
     background: ${bAccent2};
+    min-width: 28px;
     width: 28px;
     line-height: 0;
+    min-height: 28px;
     height: 28px;
     display: flex;
     justify-content: center;
@@ -423,6 +509,16 @@ const Aspect = styled.div`
   p {
     max-width: 630px;
   }
+  @media (max-width: 600px) {
+    span {
+      min-width: 24px;
+      min-height: 24px;
+      height: 24px;
+      width: 24px;
+      font-size: 1.3rem;
+      line-height: 130%;
+    }
+  }
 `;
 
 const LogosContainer = styled.div`
@@ -435,6 +531,12 @@ const LogosContainer = styled.div`
   img {
     max-height: 100px;
     width: auto;
+    max-width: 50%;
+  }
+  @media (max-width: 650px) {
+    img {
+      max-height: 65px;
+    }
   }
 `;
 
@@ -479,6 +581,19 @@ const Lesson = styled.div`
       position: absolute;
       left: 0px;
       bottom: 0px;
+    }
+  }
+  @media (max-width: 600px) {
+    span {
+      font-size: 2rem;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 450px) {
+    p {
+      margin-left: 0px;
     }
   }
 `;
@@ -536,6 +651,14 @@ const SeventhSection = styled(CommonSection)`
     margin-top: 15%;
     display: block;
     margin-left: 30px;
+    border: 2px solid transparent;
+    transition: 0.4s ease all;
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: ${bAccent2};
+      background: black;
+    }
   }
   @media (max-width: 900px) {
     a {
@@ -644,42 +767,21 @@ const LandSection = styled(CommonSection)`
   svg {
     width: 100%;
   }
-  @media (max-width: 1200px) {
-    background-position: 20% 100%;
-  }
-  @media (max-width: 1100px) {
-    background-position: 10% 100%;
-    & > div {
-      max-width: 350px;
-      margin-right: 10%;
-    }
-  }
   @media (max-width: 960px) {
-    background-position: 15% 100%;
     & > div {
       max-width: 300px;
       margin-right: 10%;
     }
   }
   @media (max-width: 850px) {
-    background-position: 25% 100%;
     & > div {
       margin-right: 12%;
     }
   }
   @media (max-width: 800px) {
-    background-position: 25% 100%;
-    background-image: url("/assets/img/casestudies/rahid/landBackMobile.svg");
-    background-position: center center;
-    background-color: transparent;
     align-items: center;
     & > div {
       max-width: 300px;
-      margin-right: 0;
-      mix-blend-mode: invert;
-      svg * {
-        fill: ${rahidBackground};
-      }
     }
   }
 `;

@@ -12,9 +12,15 @@
   "lang": "es",
   "casestudies": [
     {
-      "title": "¿cómo compartir música hoy en día?",
-      "tags": "Estrategia<br/>Desarrollo de producto<br/>Consultoría digital y de diseño<br/>Project management",
-      "link": "salvajenada",
+      "title": "cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria",
+      "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>No-code<br/>Posicionamiento<br/>",
+      "link": "blockstem",
+      "bg_format": "png"
+    },
+    {
+      "title": "un ecommerce único en México",
+      "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
+      "link": "rahid",
       "bg_format": "svg"
     },
     {
@@ -24,16 +30,10 @@
       "bg_format": "svg"
     },
     {
-      "title": "un ecommerce único en México",
-      "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
-      "link": "rahid",
+      "title": "¿cómo compartir música hoy en día?",
+      "tags": "Estrategia<br/>Desarrollo de producto<br/>Consultoría digital y de diseño<br/>Project management",
+      "link": "salvajenada",
       "bg_format": "svg"
-    },
-    {
-      "title": "cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria",
-      "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Desarrollo no-code<br/>Posicionamiento<br/>",
-      "link": "blockstem",
-      "bg_format": "png"
     }
   ],
   "contact_footer": {
