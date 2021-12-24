@@ -41,9 +41,9 @@
   },
   "second_section": {
     "quote": {
-      "quote": "Llevaba diez años intentando solidificar mi marca para poder alcanzar mis objetivos, para poder crecer.",
-      "name": "Catalina Rodríguez",
-      "label": "Cofundadora, Blockstem"
+      "quote": "El mayor reto era explicar la compleja intersección entre la tecnología blockchain y la democracia de una manera emocionante para el lector. Necesitábamos una página que pudiera comunicar de manera clara y rápida lo que es Blockstem.",
+      "name": "Gonzalo Bañuelos",
+      "label": "Cofundador, Blockstem"
     },
     "p": "Blockstem había tenido éxito con instituciones privadas tales como el Tec de Monterrey y Global Shapers Community validando el valor de sus servicios, sin embargo carecían de un portal web que respaldara y presentara su iniciativa, y que atendiera todas las posibles objeciones que podían tener tanto clientes potenciales como posibles inversionistas. Buscaban una herramienta para recargarse sobre ella al momento de salir a vender su empresa, así que comenzamos a trabajar."
   },
@@ -52,7 +52,7 @@
     "p": "Cuando estás en la punta de lanza de la innovación es casi imposible que aquellos que no lo están no entiendan de qué estás hablando. Esto es algo que sucede actualmente con las tecnologías alrededor de Blockchain. Lo primero que hicimos fue desarrollar un whitepaper que introdujera a sus lectores en los siguientes aspectos:",
     "aspects": [
       {
-        "p": "Los problemas que amenazan las actuales democracias de Latinoamérica tales como corrupción, desconfianza y mala administración"
+        "p": "Los problemas que amenazan las actuales democracias de Latinoamérica tales como la corrupción, la desconfianza y la mala administración"
       },
       {
         "p": "La solución que representa Blockchain para solucionar estos problemas y ofrecer una alternativa más segura, confiable y escalable."
@@ -63,27 +63,23 @@
     "p3": "El sitio de Blockstem no sólo resuelve los aspectos básicos que un cliente prospecto puede buscar: propuesta de valor, solución, contacto, confianza, etc. sino que también apela a preguntas fundamentales que se hacen inversionistas antes de depositar su capital y confianza en un proyecto, tales como ¿cuál es el mercado de esta compañía?, ¿qué los hace únicos?, ¿cómo sobrevivirán en el futuro?, ¿por qué la oportunidad es ahora?"
   },
   "fourth_section": {
-    "subtitle": "Un ecommerce nunca antes visto en la industria mexicana",
-    "p": "Tras nuestra investigación de mercado descubrimos que sólo un grupo muy reducido de las <i>smoke shops</i> del país contaban con una experiencia web. Incluso dentro del nicho, encontramos una carencia en común: ninguna marca de parafernalia tenía un ecommerce capaz de hacer transacciones.<br/><br/>Para diferenciarnos, decidimos montar el sitio en Shopify, la plataforma de ecommerce más poderosa del momento, y aprovechar sus herramientas para desarrollar campañas de mailing automatizado (como un mail de carrito abandonado), una forma de pago eficiente, productos relacionados, pagos recurrentes, múltiples administradores y más.",
-    "p2": "Nuestra hambre por innovar no se detuvo en ofrecer a nuestro socio un ecommerce sencillo de administrar, escalable y con las mejores tarifas. De la mano del equipo de Rahid, desarrollamos las Canastas Verdes, un sistema de suscripción que permite a los usuarios recibir mensualmente productos a precios preferenciales y, a Rahid, distribuir su inventario y conseguir una relación más cercana con sus mejores clientes.",
-    "graphicp": "*En el mes de lanzamiento, este fue el tercer producto más vendido del <i>marketplace</i>.",
-    "p3": "El engranaje de este proyecto y su funcionamiento son evidentemente complejos, por lo que brindamos a nuestro socio una serie de manuales y atención personalizada para mantener de manera óptima la tienda en línea y sus canales de comunicación. Como parte de nuestro trabajo, consideramos indispensable capacitar a nuestros socios en tecnología y contextos digitales desarrollando procesos de <i>onboarding</i> para ellos y sus empleados."
-  },
-  "fifth_section": {
-    "title": "<b>Acto III</b><br/>Un lanzamiento que celebró una nueva era para Rahid",
-    "p": "Este es un dato importante: ningún negocio que oferte productos relacionados al tabaco puede hacer publicidad directa o indirecta. Fue indispensable alejarnos de la marca preestablecida \"Tobacco House\" e inclinarnos a una visión más progresiva enfocada en la parafernalia de cannabis. Sin embargo seguíamos limitados ya que, debido a sus políticas de uso, ningún tipo de publicidad pagada era posible en plataformas como Google y Facebook ¿Qué hicimos? Una campaña de <i>referral marketing</i> apoyada de <i>influencers</i>.",
-    "p2": "7 perfiles de 10k+ seguidores del nicho fueron seleccionados para apoyar la difusión de la campaña de lanzamiento, la cual consistía en invitar a tus contactos a suscribirse a la newsletter de Rahid a cambio de productos gratis en tu primer envío.",
-    "stat": "Tasa de conversión<br/>en la campaña de lanzamiento",
-    "p3": "El resultado fue una tasa de conversión fenomenal, el 77% de los usuarios dejaron su correo electrónico, lo que nos permitió crear una base de datos de 1.000+ usuarios durante el pre-lanzamiento que hicieron toda la diferencia al momento de inaugurar el ecommerce.",
-    "p4": "Llegó el mes del lanzamiento y, con ayuda de los <i>influencers</i>, en solo 30 días crecimos 400% la cantidad de seguidores en el Instagram de Rahid, además de concretar conversiones casi diariamente en medio de la crisis del COVID-19.",
-    "quote": {
-      "quote": "Nos encontramos en una oportunidad de crecimiento sin límites. Con un sitio funcional que refleja nuestra identidad estamos exponenciando nuestra oferta a los clientes. A pesar de estar en medio de una pandemia y operar a puerta cerrada en sucursales, nuestro ecommerce nos permite seguir activos y creciendo.",
-      "name": "Rodrigo H. Maldonado",
-      "label": "CEO / Fundador, RAHID"
-    },
-    "p5": "Y éste no es el final del proyecto, seguimos en contacto con Rodrigo. Cada trimestre, el equipo de Rahid nos muestra su plan de contenidos en social media y damos consultoría sobre correcciones, sugerencias, mejores prácticas y conocimiento.<br/><br/>Con certeza podemos decir que Rahid está un paso más cerca de su objetivo: ser la comercializadora de parafernalia más grande del país."
+    "p": "Vale la pena mencionar que al iniciar el proyecto hicimos un análisis del diseño de marca y producto de Blockstem. Este dejó ver que las bases visuales del proyecto necesitaban ser reforzadas, por lo que nos dimos a la tarea de refinar gráficos, tipografías y el look & feel de la experiencia web para dar un sentido mucho más minimalista y elegante a Blockstem.",
+    "body": "cuerpo de texto",
+    "titles": "títulos"
   },
   "sixth_section": {
+    "title": "<b>Acto III</b><br/>CMS accesible para equipos sin experiencia en programación",
+    "p": "La edición de los textos y contenidos del sitio son de fácil acceso y tienen efectos inmediatos. No es necesario levantar un ticket con un equipo de programación para hacer modificaciones en él. El equipo de Blockstem puede sencillamente entrar a un editor intuitivo y cambiar títulos, imágenes, textos, agregar artículos a su blog y más; lo que permite un acercamiento ágil a la narrativa que quieren dar con su sitio.",
+    "stat1": "Descargas del Whitepaper en los primeros dos meses",
+    "stat2": "Menciones intencionales en coloquios blockchain",
+    "quote": {
+      "quote": "Nuestro sitio es muy profesional y elegante. Esto refleja la seriedad con la que tomamos nuestra misión como empresa, misma que se pulió muchísimo en los talleres de negocio y marca que tuvimos. Ahora podemos comunicar Blockstem como un proyecto que inspira confianza tanto a posibles usuarios de nuestra tecnología así como a inversionistas.",
+      "name": "Catalina Rodriguez",
+      "label": "Cofundadora, Blockstem"
+    },
+    "p2": "No cualquiera tiene el estómago para intentar cambiar problemas tan profundos como los que presenta Latinoamérica en sus democracias. Estamos felices de haber ayudado en el camino de Cata y Gonzalo y le deseamos todo el éxito posible a este proyecto."
+  },
+  "seventh_section": {
     "linkp": "visita"
   }
 }
