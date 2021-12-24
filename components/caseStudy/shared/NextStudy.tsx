@@ -76,6 +76,7 @@ const Wrapper = styled.a<{ margined: boolean }>`
   cursor: pointer;
   text-decoration: none;
   color: ${(props) => props.theme.colors.foreground};
+  background-color: ${(props) => props.theme.colors.background};
   p {
     margin-bottom: 1%;
     margin-top: ${(props) => (props.margined ? "1%" : "0")};

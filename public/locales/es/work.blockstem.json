@@ -67,21 +67,19 @@
     "body": "cuerpo de texto",
     "titles": "títulos"
   },
-  "fifth_section": {
-    "title": "<b>Acto III</b><br/>Un lanzamiento que celebró una nueva era para Rahid",
-    "p": "Este es un dato importante: ningún negocio que oferte productos relacionados al tabaco puede hacer publicidad directa o indirecta. Fue indispensable alejarnos de la marca preestablecida \"Tobacco House\" e inclinarnos a una visión más progresiva enfocada en la parafernalia de cannabis. Sin embargo seguíamos limitados ya que, debido a sus políticas de uso, ningún tipo de publicidad pagada era posible en plataformas como Google y Facebook ¿Qué hicimos? Una campaña de <i>referral marketing</i> apoyada de <i>influencers</i>.",
-    "p2": "7 perfiles de 10k+ seguidores del nicho fueron seleccionados para apoyar la difusión de la campaña de lanzamiento, la cual consistía en invitar a tus contactos a suscribirse a la newsletter de Rahid a cambio de productos gratis en tu primer envío.",
-    "stat": "Tasa de conversión<br/>en la campaña de lanzamiento",
-    "p3": "El resultado fue una tasa de conversión fenomenal, el 77% de los usuarios dejaron su correo electrónico, lo que nos permitió crear una base de datos de 1.000+ usuarios durante el pre-lanzamiento que hicieron toda la diferencia al momento de inaugurar el ecommerce.",
-    "p4": "Llegó el mes del lanzamiento y, con ayuda de los <i>influencers</i>, en solo 30 días crecimos 400% la cantidad de seguidores en el Instagram de Rahid, además de concretar conversiones casi diariamente en medio de la crisis del COVID-19.",
-    "quote": {
-      "quote": "Nos encontramos en una oportunidad de crecimiento sin límites. Con un sitio funcional que refleja nuestra identidad estamos exponenciando nuestra oferta a los clientes. A pesar de estar en medio de una pandemia y operar a puerta cerrada en sucursales, nuestro ecommerce nos permite seguir activos y creciendo.",
-      "name": "Rodrigo H. Maldonado",
-      "label": "CEO / Fundador, RAHID"
-    },
-    "p5": "Y éste no es el final del proyecto, seguimos en contacto con Rodrigo. Cada trimestre, el equipo de Rahid nos muestra su plan de contenidos en social media y damos consultoría sobre correcciones, sugerencias, mejores prácticas y conocimiento.<br/><br/>Con certeza podemos decir que Rahid está un paso más cerca de su objetivo: ser la comercializadora de parafernalia más grande del país."
-  },
   "sixth_section": {
+    "title": "<b>Acto III</b><br/>CMS accesible para equipos sin experiencia en programación",
+    "p": "La edición de los textos y contenidos del sitio son de fácil acceso y tienen efectos inmediatos. No es necesario levantar un ticket con un equipo de programación para hacer modificaciones en él. El equipo de Blockstem puede sencillamente entrar a un editor intuitivo y cambiar títulos, imágenes, textos, agregar artículos a su blog y más; lo que permite un acercamiento ágil a la narrativa que quieren dar con su sitio.",
+    "stat1": "Descargas del Whitepaper en los primeros dos meses",
+    "stat2": "Menciones intencionales en coloquios blockchain",
+    "quote": {
+      "quote": "Nuestro sitio es muy profesional y elegante. Esto refleja la seriedad con la que tomamos nuestra misión como empresa, misma que se pulió muchísimo en los talleres de negocio y marca que tuvimos. Ahora podemos comunicar Blockstem como un proyecto que inspira confianza tanto a posibles usuarios de nuestra tecnología así como a inversionistas.",
+      "name": "Catalina Rodriguez",
+      "label": "Cofundadora, Blockstem"
+    },
+    "p2": "No cualquiera tiene el estómago para intentar cambiar problemas tan profundos como los que presenta Latinoamérica en sus democracias. Estamos felices de haber ayudado en el camino de Cata y Gonzalo y le deseamos todo el éxito posible a este proyecto."
+  },
+  "seventh_section": {
     "linkp": "visita"
   }
 }

@@ -42,7 +42,6 @@ function Rahid({ locale, setTitle, pt }) {
     setloadAssets(true);
   }, [locale]);
 
-  // console.log(t.intro_section.lessons);
   return (
     <PageClipper
       unPadded
@@ -71,31 +70,33 @@ function Rahid({ locale, setTitle, pt }) {
         <TextColumn>
           <H2>{t.intro_section.title}</H2>
           <P>{t.intro_section.p}</P>
-          {/* <LessonContainer>
+          <LessonContainer>
             {t.intro_section.lessons.map((lesson, i) => (
               <Lesson key={`lessn${i}`}>
                 <span>{lesson.title}</span>
                 <p>{lesson.p}</p>
               </Lesson>
             ))}
-          </LessonContainer> */}
+          </LessonContainer>
         </TextColumn>
       </FirstSection>
       <SecondSection>
         <Quote quote={t.second_section.quote} color={"#1F2A2D"} />
         <TextColumn>
-          {loadAssets && (
-            <LogosContainer>
-              <img
-                src="/assets/img/casestudies/blockstem/tec.svg"
-                alt="Tecnológico de Monterrey"
-              />
-              <img
-                src="/assets/img/casestudies/blockstem/global.svg"
-                alt="Global Shapers Community"
-              />
-            </LogosContainer>
-          )}
+          <>
+            {loadAssets && (
+              <LogosContainer>
+                <img
+                  src="/assets/img/casestudies/blockstem/tec.svg"
+                  alt="Tecnológico de Monterrey"
+                />
+                <img
+                  src="/assets/img/casestudies/blockstem/global.svg"
+                  alt="Global Shapers Community"
+                />
+              </LogosContainer>
+            )}
+          </>
           <P>{t.second_section.p}</P>
         </TextColumn>
       </SecondSection>
@@ -103,16 +104,47 @@ function Rahid({ locale, setTitle, pt }) {
         <TextColumn>
           <H2>{t.third_section.title}</H2>
           <P>{t.third_section.p}</P>
-          {/* {t.third_section.aspects.map((aspect, i) => (
+          {t.third_section.aspects.map((aspect, i) => (
             <Aspect key={`aspect${i}`}>
               <span>{i + 1}</span>
               <p>{aspect.p}</p>
             </Aspect>
-          ))} */}
+          ))}
           <P>{t.third_section.p2}</P>
-          {
-            //Piezas de whitepaper
-          }
+        </TextColumn>
+        <WhitepaperGrid>
+          <Picture
+            src="/assets/img/casestudies/blockstem/cover.jpg"
+            alt="Printed assets for film attendants"
+            width={544}
+            height={395}
+          />
+          <Picture
+            src="/assets/img/casestudies/blockstem/small1.jpg"
+            alt="Printed assets for film attendants"
+            width={306}
+            height={223}
+          />
+          <Picture
+            src="/assets/img/casestudies/blockstem/small2.jpg"
+            alt="Printed assets for film attendants"
+            width={306}
+            height={223}
+          />
+          <Picture
+            src="/assets/img/casestudies/blockstem/small3.jpg"
+            alt="Printed assets for film attendants"
+            width={306}
+            height={223}
+          />
+          <Picture
+            src="/assets/img/casestudies/blockstem/small4.jpg"
+            alt="Printed assets for film attendants"
+            width={306}
+            height={223}
+          />
+        </WhitepaperGrid>
+        <TextColumn>
           <H3>{"– " + t.third_section.subtitle}</H3>
           <P>{t.third_section.p3}</P>
         </TextColumn>
@@ -126,63 +158,98 @@ function Rahid({ locale, setTitle, pt }) {
           </SpanContainer>
           <Brand1 />
         </TextColumn>
+        <KeyShotGrid>
+          <Picture
+            src="/assets/img/casestudies/blockstem/conversation.png"
+            alt="Conversation"
+            width={270}
+            height={270}
+            withWrapper
+          />
+          <Picture
+            src="/assets/img/casestudies/blockstem/ballot.png"
+            alt="Conversation"
+            width={270}
+            height={270}
+            withWrapper
+          />
+          <Picture
+            src="/assets/img/casestudies/blockstem/latam.png"
+            alt="Conversation"
+            width={270}
+            height={270}
+            withWrapper
+          />
+        </KeyShotGrid>
       </FourthSection>
       <FifthSection>
-        <TextColumn>
-          <H2>{t.fifth_section.title}</H2>
-          <P>{t.fifth_section.p}</P>
-        </TextColumn>
-        <LaunchGrid>
+        <TransitionWrapper>
           <Picture
-            src="/assets/img/casestudies/rahid/desktop.png"
-            alt="Festival awards"
-            width={558}
-            height={340}
-            withWrapper
+            src="/assets/img/casestudies/blockstem/transition.jpg"
+            alt="Printed assets for film attendants"
+            width={1150}
+            height={612}
+          />
+        </TransitionWrapper>
+        <ScreenGrid>
+          <Picture
+            src="/assets/img/casestudies/blockstem/leftphone.png"
+            alt="Printed assets for film attendants"
+            width={380}
+            height={710}
           />
           <Picture
-            src="/assets/img/casestudies/rahid/mobile.png"
-            alt="Festival awards"
-            width={162}
-            height={339}
-            withWrapper
+            src="/assets/img/casestudies/blockstem/rightphone.png"
+            alt="Printed assets for film attendants"
+            width={380}
+            height={710}
           />
-        </LaunchGrid>
-        <TextColumn>
-          <P>{t.fifth_section.p2}</P>
-          <Stat>
-            <span>
-              77<b>%</b>
-            </span>
-            <P>{t.fifth_section.stat}</P>
-          </Stat>
-          <P>{t.fifth_section.p3}</P>
-        </TextColumn>
-        <Picture
-          src="/assets/img/casestudies/rahid/referral.jpg"
-          alt="Email Marketing"
-          width={800}
-          height={450}
-        />
-
-        <TextColumn>
-          <P>{t.fifth_section.p4}</P>
-        </TextColumn>
-        <Quote
-          quote={t.fifth_section.quote}
-          color={(props) => props.theme.colors.background}
-        />
-        <TextColumn>
-          <P>{t.fifth_section.p5}</P>
-        </TextColumn>
+          <Picture
+            src="/assets/img/casestudies/blockstem/mac.png"
+            alt="Printed assets for film attendants"
+            width={1010}
+            height={650}
+          />
+        </ScreenGrid>
       </FifthSection>
       <SixthSection>
+        <TextColumn>
+          <H2>{t.sixth_section.title}</H2>
+          <P>{t.sixth_section.p}</P>
+          <StatGrid>
+            <Stat>
+              <span>
+                <b>+</b>950
+              </span>{" "}
+              <P>{t.sixth_section.stat1}</P>
+            </Stat>
+            <Stat>
+              <span>7</span> <P>{t.sixth_section.stat2}</P>
+            </Stat>
+          </StatGrid>
+          <Quote quote={t.sixth_section.quote} color={"#1F2A2D"} />
+          <div className="lastP">
+            <P>{t.sixth_section.p2}</P>
+          </div>
+        </TextColumn>
+      </SixthSection>
+      <SeventhSection>
         <Fade triggerOnce>
-          <a target="_blank" rel="noopener noreferrer" href="https://rahid.co">
-            {t.sixth_section.linkp} rahid.co
+          <Picture
+            src="/assets/img/casestudies/blockstem/main-bg.png"
+            alt="Printed assets for film attendants"
+            width={979}
+            height={853}
+          />
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://blockstem.org"
+          >
+            {t.seventh_section.linkp} blockstem.org
           </a>
         </Fade>
-      </SixthSection>
+      </SeventhSection>
       <NextStudy link="ladanzadelasfieras" />
       <ContactFooter />
     </PageClipper>
@@ -192,7 +259,10 @@ function Rahid({ locale, setTitle, pt }) {
 export default React.memo(Rahid);
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const pt = ssrLocale({ locale: context.locale, fileName: "work.rahid.json" });
+  const pt = ssrLocale({
+    locale: context.locale,
+    fileName: "work.blockstem.json",
+  });
   return {
     props: {
       pt,
@@ -200,8 +270,136 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+const WhitepaperGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 10% 10% 0 10%;
+  div:nth-child(1) {
+    grid-row: 1 / span 2;
+  }
+  div {
+    border-radius: 5px;
+    overflow: hidden;
+  }
+`;
+
+const Stat = styled.div`
+  position: relative;
+  max-width: 310px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  color: ${rahidForeground};
+  border: 2px solid;
+  padding: 5%;
+  border-radius: 50px;
+  &:nth-of-type(1) {
+    border-color: ${bAccent1};
+    margin-right: 20px;
+  }
+  &:nth-of-type(2) {
+    border-color: ${bAccent2};
+  }
+  span {
+    font-size: 8rem;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    z-index: 1;
+    line-height: 1.3;
+    margin-top: -20px;
+    b {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 700px) {
+    max-width: 330px;
+    margin: 16% auto 12%;
+  }
+  @media (max-width: 600px) {
+    max-width: 240px;
+    margin: 20% auto 14%;
+    b {
+      font-size: 6rem;
+    }
+    svg {
+      width: 13%;
+    }
+  }
+  @media (max-width: 400px) {
+    margin: 14% auto 14%;
+  }
+`;
+
+const StatGrid = styled.div`
+  padding: 10% 0;
+  display: flex;
+  max-width: 670px;
+  justify-content: flex-end;
+`;
+const ScreenGrid = styled.div`
+  display: grid;
+  grid-template: 1fr 1fr;
+  padding: 12% 5% 2%;
+  div:nth-child(1) {
+    grid-column: 1 / span 1;
+    justify-self: center;
+  }
+  div:nth-child(2) {
+    grid-column: 2 / span 1;
+  }
+  div:nth-child(3) {
+    margin-top: 10%;
+    grid-column: 1 / span 2;
+  }
+`;
+
+const TransitionWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  & > div {
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    img {
+      border-radius: 30px;
+    }
+  }
+  &:before {
+    content: " ";
+    z-index: 0;
+    position: absolute;
+    height: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f3f4f5;
+  }
+`;
+
+const KeyShotGrid = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 5% 0 0;
+  justify-content: space-evenly;
+`;
+
 const SpanContainer = styled.div`
-flex-direction:row;
+  flex-direction: row;
+  span {
+    margin-top: 10%;
+    margin-bottom: 7px;
+    display: inline-block;
+    &:nth-of-type(2) {
+      margin-left: 37%;
+    }
+  }
 `;
 
 const Aspect = styled.div`
@@ -312,117 +510,34 @@ const LaunchGrid = styled.div`
   }
 `;
 
-const InsertBlock = styled.figure`
-  width: 90%;
-  background-color: ${rahidBackground};
-  margin: 8% 0;
-  padding: 8%;
-  position: relative;
-  max-width: 1200px;
-  p {
-    color: #4f4f4f;
-    margin-top: 20px;
-    position: absolute;
-    max-width: 220px;
-    right: 5%;
-    bottom: 25%;
-  }
-  @media (max-width: 1120px) {
-    p {
-      font-size: 1.5rem;
-      bottom: 23%;
-      max-width: 200px;
-    }
-  }
-  @media (max-width: 950px) {
-    p {
-      right: 3%;
-      font-size: 1.4rem;
-      max-width: 180px;
-    }
-  }
-  @media (max-width: 830px) {
-    p {
-      right: unset;
-      position: relative;
-      font-size: 1.4rem;
-      max-width: unset;
-      bottom: unset;
-    }
-  }
-`;
-
-const Stat = styled.div`
-  position: relative;
-  margin: 12% auto;
-  max-width: 310px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  color: ${rahidForeground};
-  span {
-    font-size: 8rem;
-    font-weight: 300;
-    display: block;
-    text-align: center;
-    z-index: 1;
-    line-height: 1.3;
-    margin-top: -20px;
-    b {
-      color: ${bAccent1};
-    }
-  }
-  p {
-    z-index: 1;
-  }
-  svg {
-    position: absolute;
-    margin: 0 auto;
-    width: 15%;
-    display: flex;
-    z-index: 0;
-    align-self: center;
-    top: -12px;
-  }
-  @media (max-width: 700px) {
-    max-width: 330px;
-    margin: 16% auto 12%;
-  }
-  @media (max-width: 600px) {
-    max-width: 240px;
-    margin: 20% auto 14%;
-    b {
-      font-size: 6rem;
-    }
-    svg {
-      width: 13%;
-    }
-  }
-  @media (max-width: 400px) {
-    margin: 14% auto 14%;
-  }
-`;
-
-const SixthSection = styled(CommonSection)`
+const SeventhSection = styled(CommonSection)`
   min-height: 100vh;
-  background-color: ${bAccent1};
-  background-image: url("/assets/img/casestudies/rahid/landBack.svg");
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: auto 100%;
-  align-items: flex-end;
+  background: ${mainGradient};
+  align-items: center;
+  padding: 10% 0;
+  div {
+    max-width: 700px;
+  }
   a {
-    font-size: 4.5rem;
+    font-size: 3.3rem;
     text-decoration: none;
     line-height: 100%;
-    border-bottom: 3px solid ${(props) => props.theme.colors.foreground};
-  }
-  & > div {
-    margin-right: 20%;
-    margin-bottom: 5%;
+    background: linear-gradient(
+      90.27deg,
+      #1a4ce0 -6.41%,
+      #2f6edc 106.96%,
+      #3c81da 172.14%,
+      #53a5d6 294%,
+      #81edce 537.74%
+    );
+    padding: 16px 40px 22px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 15%;
+    display: block;
+    margin-left: 30px;
   }
   @media (max-width: 900px) {
-    background-position: left top;
     a {
       font-size: 3rem;
     }
@@ -433,20 +548,8 @@ const SixthSection = styled(CommonSection)`
     }
   }
   @media (max-width: 500px), (max-height: 450px) {
-    align-items: center;
-    & > div {
-      margin-right: 0;
-      display: contents;
-    }
     a {
       font-size: 1.5rem;
-      padding: 5%;
-      border-radius: 4px;
-      background-color: #f6e27f;
-      color: ${rahidForeground};
-      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
-      border: 0;
-      margin-right: 0;
       transition: 0.2s ease-out all;
       &:active,
       &:focus {
@@ -456,67 +559,47 @@ const SixthSection = styled(CommonSection)`
   }
 `;
 
-const FifthSection = styled(CommonSection)`
-  background-color: ${rahidBackground};
-  color: ${rahidForeground};
-  padding-bottom: 10%;
-  h2 b {
-    color: ${bAccent1Darker};
+const SixthSection = styled(CommonSection)`
+  background-color: #f3f4f5;
+  color: ${(props) => props.theme.colors.over_white};
+  padding-bottom: 8%;
+  .lastP {
+    margin-top: 10%;
   }
-  blockquote,
-  p {
-    color: ${rahidForeground};
-  }
-  .image div div {
-    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.05);
-  }
-  & > div:nth-last-of-type(4) {
-    max-width: 800px;
-    margin: 6% 0;
-  }
-  @media (max-width: 1000px) {
-    & > div:nth-last-of-type(4) {
-      max-width: unset;
-      width: 90%;
+  h2 {
+    color: ${(props) => props.theme.colors.background};
+    b {
+      color: ${bAccent1};
     }
   }
+`;
+
+const FifthSection = styled(CommonSection)`
+  background: linear-gradient(
+      90.27deg,
+      #1a4ce0 -6.41%,
+      #2f6edc 106.96%,
+      #3c81da 172.14%,
+      #53a5d6 294%,
+      #81edce 537.74%
+    ),
+    #3f3f3f;
+  color: ${rahidForeground};
+  padding-bottom: 5%;
 `;
 
 const FourthSection = styled(CommonSection)`
   background-color: #f3f4f5;
   color: ${(props) => props.theme.colors.over_white};
   padding: 10% 0;
-
-  span {
-    margin-top: 5%;
-    display:inline-block;
-    &:nth-of-type(2){
-      margin-left:30px;
-    }
-  }
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .image {
-    width: 100%;
-    padding: 12% 0;
-    max-width: 800px;
-  }
-  figure img {
-    width: 100%;
-  }
-  h3 {
-    color: ${(props) => props.theme.colors.foreground};
-  }
 `;
 
 const ThirdSection = styled(CommonSection)`
   padding-bottom: 8%;
   color: ${(props) => props.theme.colors.over_black};
   background: ${mainGradient};
-  h2 {
+  h2,
+  h3 {
     color: ${(props) => props.theme.colors.foreground};
     b {
       color: ${bAccent1};
@@ -550,10 +633,11 @@ const LandSection = styled(CommonSection)`
   min-height: 100vh;
   background-image: url("/assets/img/casestudies/blockstem/main-bg.png");
   background-position: left center;
-  background-size: cover;
+  background-size: auto 75%;
+  background-repeat: no-repeat;
   align-items: flex-end;
   & > div {
-    max-width: 500px;
+    max-width: 400px;
     width: 70%;
     margin-right: 10%;
   }
