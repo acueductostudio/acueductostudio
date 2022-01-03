@@ -54,10 +54,9 @@ function Index({ locale, setTitle, pt }) {
         <TitleSection {...t.intro} borderTop />
       </Intro>
       <Carousel items={t.carousel} />
-      <TitleSection {...t.studies} borderTop />
-      <CaseList />
-      <Products {...t.products_section} />
       <Services services={t.services} />
+      <Products {...t.products_section} />
+      <CaseList />
       <ContactFooter />
     </PageClipper>
   );
@@ -117,17 +116,17 @@ const Land = styled.section`
   @media (max-width: 900px) {
     h1 {
       font-size: 5rem;
-      max-width:360px;
+      max-width: 360px;
     }
     h2 {
       font-size: 1.8rem;
-      max-width:420px;
+      max-width: 420px;
     }
   }
   @media (max-width: 700px) {
     h1 {
       font-size: 4rem;
-      max-width:450px;
+      max-width: 450px;
     }
   }
   @media (max-width: 520px) {

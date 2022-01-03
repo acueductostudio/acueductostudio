@@ -27,22 +27,23 @@ const Products = ({
     <ProductsSection>
       <TitleSection {...intro} borderTop />
       <ProductsList>
-        {products.map((t: { title: string; p: string }, index) => {
-          const ProductIcon = productIconArray[index];
-          const letter = letterArray[index];
-          return (
-            <Product key={"product" + index} longer={longer}>
-              <Fade triggerOnce>
-                <span>{letter}.</span>
-                <ProductIcon />
-                <div>
-                  <H2>{t.title}</H2>
-                  <P>{t.p}</P>
-                </div>
-              </Fade>
-            </Product>
-          );
-        })}
+        {products &&
+          products.map((t: { title: string; p: string }, index) => {
+            const ProductIcon = productIconArray[index];
+            const letter = letterArray[index];
+            return (
+              <Product key={"product" + index} longer={longer}>
+                <Fade triggerOnce>
+                  <span>{letter}.</span>
+                  <ProductIcon />
+                  <div>
+                    <H2>{t.title}</H2>
+                    <P>{t.p}</P>
+                  </div>
+                </Fade>
+              </Product>
+            );
+          })}
       </ProductsList>
     </ProductsSection>
   );

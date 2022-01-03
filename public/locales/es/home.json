@@ -6,80 +6,67 @@
   },
   "landing": {
     "heading": "impulsamos negocios para escalar",
-    "tagline": "Desarrollamos estrategias, interfaces y campañas digitales para negocios ambiciosos.",
-    "button": "escríbenos"
+    "tagline": "Desarrollamos estrategias, interfaces y productos digitales.",
+    "button": "casos de estudio"
   },
   "intro": {
-    "title": "de la mano de visionarios digitales",
-    "p": "Colaboramos con tomadores de decisiones en busca de oportunidades digitales para sus negocios. </br></br>Datos han arrojado que las organizaciones que implementan estrategias digitales son 64% más exitosas superando sus objetivos de negocio <cite>(ADOBE, 2019)</cite> ¿Por qué? Eficientar cualquier proceso de una empresa con tecnología digital o abrir nuevas líneas de negocio, resulta en mejores productos o servicios y reducción de costos.",
-    "link": ["/contacto", "Escríbenos"],
-    "linktext": "¿Somos los indicados?"
+    "title": "junto a líderes con soluciones innovadoras",
+    "p": "Trabajamos con tomadores de decisiones en busca de oportunidades digitales para sus negocios."
   },
   "carousel": ["startups", "marcas", "corporativos"],
-  "studies": {
-    "title": "resolvemos desafiantes retos de negocio",
-    "p": "Una sólida estrategia es la piedra angular de cualquier caso de éxito digital. Al desarrollar arquitecturas escalables o construir herramientas personalizadas, se requiere de un balance entre experiencia vertical e innovación digital. </br></br>En Acueducto, utilizamos los conocimientos de nuestros clientes para desarrollar experiencias significativas para sus negocios y las comunidades que impactan.</br></br> Conoce los casos de estudio seleccionados que hemos desarrollado."
-  },
-  "products_section": {
-    "intro": {
-      "title": "para desarrollar ideas innovadoras",
-      "p": "Por cada dólar invertido en la experiencia de tus usuarios al diseñar productos, servicios y herramientas, puede haber entre dos y cien dólares de retorno <cite>(Forrester Research, 2017)</cite>. </br></br>Compañías como Airbnb, Uber o Google deben gran parte de su éxito al desarrollo de excelentes experiencias digitales alrededor de sus usuarios. Ultimadamente, se trata de construir las mejores interfaces digitales para que tus clientes o empleados interactúen con tu negocio. </br></br>Puedes confiar en nosotros para desarrollar: "
-    },
-    "products": [
-      {
-        "title": "estrategias digitales",
-        "p": "Analiza las tendencias externas, internas y la data de tu negocio para tomar las mejores decisiones."
-      },
-      {
-        "title": "apps web y móviles",
-        "p": "Conecta con tus usuarios desde cualquier dispositivo, haz crecer tu negocio con un sitio web o una aplicación."
-      },
-      {
-        "title": "productos<br/>y servicios digitales",
-        "p": "Desarrolla tecnologías veloces, escalables y atractivas que inspiren a las comunidades que las rodeen."
-      },
-      {
-        "title": "estrategias de<br/>marketing digital",
-        "p": "Potencializa tus ventas mediante estrategias de comunicación, contenidos creativos y publicidad pautada."
-      }
-    ]
-  },
   "services": {
     "intro": {
-      "title": "de la estrategia al lanzamiento",
-      "p": "– Y todo lo que involucra.<br/><br/>Existe mucho que considerar al desarrollar productos y servicios digitales, dotamos a nuestros clientes de un aliado durante su proceso y ofrecemos todas las etapas del desarrollo de una experiencia digital."
+      "title": "que necesitan interfaces intuitivas",
+      "p": "Nuestra energía e intelecto están al servicio de aquellos emprendedores que buscan ofrecer herramientas para sus comunidades que:",
+      "ul": [
+        "Pidan pensar el mínimo",
+        "Indiquen naturalmente cuál es el siguiente paso a seguir",
+        "Entreguen resultados veloces"
+      ],
+      "link": ["/portafolio", "casos de estudio"],
+      "linktext": "Lee nuestros"
     },
     "service_categories": [
       {
         "title": "estrategia",
         "tags": [
           "Administración de proyectos",
-          "Consultoría digital",
+          "Workshops estratégicos",
           "Investigación e insights",
-          "Experiencia de usuario (UX)",
-          "Evaluación de impacto"
+          "Estrategia de web y de producto",
+          "Entrevistas de usuario",
+          "Consultoría digital",
+          "Gestión con equipos de desarrollo"
         ]
       },
       {
-        "title": "diseño & desarrollo",
+        "title": "diseño",
         "tags": [
-          "Dirección de arte",
-          "Producción de contenido",
-          "Copywriting",
+          "UX (Experiencia de usuario)",
+          "UI (Diseño de interfaces)",
+          "Sprints de diseño",
+          "Sistemas de diseño",
+          "UX writing",
           "Prototipado",
-          "Desarrollo y programación"
-        ]
-      },
-      {
-        "title": "lanzamiento",
-        "tags": [
-          "Estrategias de marketing",
-          "Publicidad pautada",
-          "Community management",
-          "User testing",
-          "Administración de cambio"
+          "Branding"
         ]
       }
     ]
+  },
+  "products_section": {
+    "intro": {
+      "title": "para fortalecer el ecosistema",
+      "p": "Impulsamos a la siguiente generación de startups construyendo interfaces funcionales e intuitivas, pero también compartimos recursos que buscan ayudar a:",
+      "ul": [
+        "Construir equipos complementarios y altamente capaces",
+        "Empujar culturas de trabajo que permiten el mejor y libre desarrollo",
+        "Diseñar modelos de negocios escalables y expandibles",
+        "Crear productos que resuelven problemas",
+        "Salir al mercado",
+        "Y mucho más"
+      ],
+      "link": ["/podcast", "recursos gratuitos"],
+      "linktext": "Lee nuestros"
+    }
   }
 }
