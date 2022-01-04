@@ -41,8 +41,8 @@ function Index({ locale, setTitle, pt }) {
           <H1>{t.landing.heading}</H1>
           <H2>{t.landing.tagline}</H2>
           <Link
-            href={"/contacto"}
-            as={locale === "en" ? "/contact" : "/contacto"}
+            href={"/portafolio"}
+            as={locale === "en" ? "/work" : "/portafolio"}
             locale={locale}
             passHref
           >
@@ -55,8 +55,8 @@ function Index({ locale, setTitle, pt }) {
       </Intro>
       <Carousel items={t.carousel} />
       <Services services={t.services} />
-      <Products {...t.products_section} />
       <CaseList />
+      <Products {...t.products_section} />
       <ContactFooter />
     </PageClipper>
   );
