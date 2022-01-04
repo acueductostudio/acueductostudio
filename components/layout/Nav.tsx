@@ -42,7 +42,7 @@ export default function Nav(props) {
             </ul>
           </NavList>
           <BottomNav>
-            <Registered>© MMXXI</Registered>
+            <Registered>© MMXXII</Registered>
             <Social>
               <Hoverable
                 target="_blank"
