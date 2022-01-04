@@ -16,15 +16,8 @@
   "carousel": ["startups", "marcas", "corporativos"],
   "services": {
     "intro": {
-      "title": "que necesitan interfaces intuitivas",
-      "p": "Nuestra energía e intelecto están al servicio de aquellos emprendedores que buscan ofrecer herramientas para sus comunidades que:",
-      "ul": [
-        "Pidan pensar el mínimo",
-        "Indiquen naturalmente cuál es el siguiente paso a seguir",
-        "Entreguen resultados veloces"
-      ],
-      "link": ["/portafolio", "casos de estudio"],
-      "linktext": "Lee nuestros"
+      "title": "de la estrategia al lanzamiento",
+      "p": "– Y todo lo que involucra.<br/><br/>Existe mucho que considerar al desarrollar productos y servicios digitales, dotamos a nuestros clientes de un aliado durante su proceso y ofrecemos todas las etapas del desarrollo de una experiencia digital."
     },
     "service_categories": [
       {
@@ -52,6 +45,17 @@
         ]
       }
     ]
+  },
+  "studies": {
+    "intro": {
+      "title": "que necesitan interfaces intuitivas",
+      "p": "Nuestra energía e intelecto están al servicio de aquellos emprendedores que buscan ofrecer herramientas para sus comunidades que:",
+      "ul": [
+        "Pidan pensar el mínimo",
+        "Indiquen naturalmente cuál es el siguiente paso a seguir",
+        "Entreguen resultados veloces"
+      ]
+    }
   },
   "products_section": {
     "intro": {
