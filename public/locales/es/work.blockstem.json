@@ -1,27 +1,26 @@
 {
   "head": {
-    "title": "Blockchain y content marketing | Blockstem & Acueducto",
-    "description": "Cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria.",
-    "image_alt": "Blockstem, caso de estudio por Acueducto",
-    "headerTitle": "Blockstem"
-  },
+    "head": {
+      "title": "Blockchain y content marketing | Blockstem & Acueducto",
+      "description": "Cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria.",
+      "image_alt": "Blockstem, caso de estudio por Acueducto",
+      "headerTitle": "Blockstem"
+    },
   "headerTitle": "Blockstem",
-  "title": "un ecommerce único en México",
-  "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>Ecommerce<br/>Marketing Digital<br/>",
-  "video": "rahid.mp4",
+  "title": "cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria",
+  "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>No-code<br/>Posicionamiento",
+  "video": "blockstem.mp4",
   "logo": "blockstem.svg",
   "link": "blockstem",
   "intro_section": {
     "tags": [
       "estrategia de proyecto",
+      "comunicación",
       "branding",
-      "ecommerce",
-      "community management",
-      "estrategia de contenido",
-      "tov digital",
+      "no-code",
+      "posicionamiento",
       "copywriting"
     ],
-    "video": "rahid_intro.mp4",
     "title": "<b>Acto I</b><br/>Una startup con una visión ambiciosa",
     "p": "Una de las cosas que amamos de trabajar en el ecosistema tecnológico es que tenemos la oportunidad de poner nuestro tiempo e intelecto al servicio de emprendedores que buscan desafiar el status quo. Trabajamos con fundadores de negocios que están convencidos de que pueden ofrecer una alternativa viable a los problemas que enfrentamos hoy con soluciones tecnológicas.</br></br>Catalina Rodríguez y Gonzalo Bañuelos son una dupla de cofundadores que buscan una democracia más participativa, transparente y con la innovación en el núcleo utilizando Blockchain. De ahí nace Blockstem, una startup que brinda un servicio de votación virtualmente inhackeable para organizaciones privadas y públicas en Latinoamérica.</br></br>Cuando Cata y Gonzalo se acercaron con nosotros la charla de exploración giró entorno a varios retos que enfrentaban:",
     "lessons": [
