@@ -21,13 +21,8 @@ const socialNav = [
 
 export default function FooterNav() {
   const context = useLocaleContext();
-  let {
-    main,
-    policies,
-    resources,
-    navTitles,
-    mailto,
-  } = context.contact_footer.footer_nav;
+  let { main, policies, resources, navTitles, mailto } =
+    context.contact_footer.footer_nav;
   return (
     <Footer>
       <Navs>
@@ -126,7 +121,7 @@ export default function FooterNav() {
       </Navs>
       <Colophon>
         <Fade triggerOnce>
-          <p>© 2021, Acueducto</p>
+          <p>© 2022, Acueducto</p>
           <a
             href={`mailto:hola@acueducto.studio?subject=${mailto.subject}&body=${mailto.body}`}
           >
