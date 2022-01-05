@@ -23,8 +23,6 @@ const bAccent1 = "#4EA68E";
 const bAccent2 = "#2B67DD";
 const mainGradient =
   "linear-gradient(96.9deg, #060809 12.06%, #3A3A3A 113.48%);";
-const mainGradientMobile =
-  "background: linear-gradient(97.9deg, #060809 0.06%, #3A3A3A 42.48%);";
 
 function Blockstem({ locale, setTitle, pt }) {
   const [loadAssets, setloadAssets] = useState(false);
@@ -43,12 +41,7 @@ function Blockstem({ locale, setTitle, pt }) {
   }, [locale]);
 
   return (
-    <PageClipper
-      unPadded
-      style={{
-        background: mainGradient,
-      }}
-    >
+    <PageClipperBlockstem unPadded>
       <Head
         {...t.head}
         image={{ fileName: "og_image_blockstem.png", alt: t.head.image_alt }}
@@ -253,7 +246,7 @@ function Blockstem({ locale, setTitle, pt }) {
       </SeventhSection>
       <NextStudy link="rahid" />
       <ContactFooter />
-    </PageClipper>
+    </PageClipperBlockstem>
   );
 }
 
@@ -271,11 +264,27 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+const PageClipperBlockstem = styled(PageClipper)`
+  background: ${mainGradient};
+  @media (max-width: 600px) {
+    background: linear-gradient(97.9deg, #060809 0.06%, #3a3a3a 42.48%);
+  }
+`;
+
 const EditVideo = styled.div`
-  padding: 30px;
+  padding: 5% 20px;
+  border-radius: 40px;
   background-color: ${bAccent2};
-  & > div {
-    padding: 30px;
+  @media (max-width: 1300px) {
+    margin: 0 30px;
+  }
+  @media (max-width: 700px) {
+    padding: 5% 0px;
+    margin: 0 20px;
+  }
+  @media (max-width: 500px) {
+    margin: 0 5%;
+    border-radius: 25px;
   }
 `;
 
