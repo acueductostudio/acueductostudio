@@ -18,15 +18,15 @@ import TextColumn from "components/caseStudy/shared/TextColumn";
 import CommonSection from "components/caseStudy/shared/CommonSection";
 import Picture from "components/caseStudy/shared/Picture";
 
-const rahidBackground = "#F9F5F0";
 const rahidForeground = "#31302E";
 const bAccent1 = "#4EA68E";
 const bAccent2 = "#2B67DD";
 const mainGradient =
   "linear-gradient(96.9deg, #060809 12.06%, #3A3A3A 113.48%);";
-const bAccent1Darker = "#7A84B9";
+const mainGradientMobile =
+  "background: linear-gradient(97.9deg, #060809 0.06%, #3A3A3A 42.48%);";
 
-function Rahid({ locale, setTitle, pt }) {
+function Blockstem({ locale, setTitle, pt }) {
   const [loadAssets, setloadAssets] = useState(false);
   const [t, setT] = useState(pt);
 
@@ -64,9 +64,9 @@ function Rahid({ locale, setTitle, pt }) {
       </Fade>
       <FirstSection>
         <Marquee tags={t.intro_section.tags} />
-
-        <IntroVideo link={t.link} />
-
+        <EditVideo>
+          <IntroVideo link={t.link} />
+        </EditVideo>
         <TextColumn>
           <H2>{t.intro_section.title}</H2>
           <P>{t.intro_section.p}</P>
@@ -257,7 +257,7 @@ function Rahid({ locale, setTitle, pt }) {
   );
 }
 
-export default React.memo(Rahid);
+export default React.memo(Blockstem);
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const pt = ssrLocale({
@@ -270,6 +270,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
+
+const EditVideo = styled.div`
+  padding: 30px;
+  background-color: ${bAccent2};
+  & > div {
+    padding: 30px;
+  }
+`;
 
 const WhitepaperGrid = styled.div`
   display: grid;
@@ -661,17 +669,23 @@ const SeventhSection = styled(CommonSection)`
     }
   }
   @media (max-width: 900px) {
+    min-height: unset;
+    & > div:nth-of-type(1) {
+      max-width: 80%;
+    }
     a {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
   @media (max-width: 600px) {
     a {
-      font-size: 2rem;
+      font-size: 1.7rem;
+      margin-left: 0;
     }
   }
   @media (max-width: 500px), (max-height: 450px) {
     a {
+      padding: 15px 22px 18px;
       font-size: 1.5rem;
       transition: 0.2s ease-out all;
       &:active,
@@ -767,21 +781,31 @@ const LandSection = styled(CommonSection)`
   svg {
     width: 100%;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 1000px) {
+    background-size: auto 65%;
     & > div {
       max-width: 300px;
       margin-right: 10%;
     }
   }
   @media (max-width: 850px) {
+    background-size: auto 55%;
+    svg {
+      overflow: visible;
+      path {
+        filter: drop-shadow(0px 0px 45px rgba(43, 44, 4, 1));
+      }
+    }
     & > div {
       margin-right: 12%;
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 730px) {
     align-items: center;
+    background-position: center center;
     & > div {
       max-width: 300px;
+      margin-right: 0;
     }
   }
 `;
