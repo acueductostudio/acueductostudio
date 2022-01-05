@@ -68,9 +68,7 @@
         "Crear productos que resuelven problemas",
         "Salir al mercado",
         "Y mucho más"
-      ],
-      "link": ["/podcast", "recursos gratuitos"],
-      "linktext": "Lee nuestros"
+      ]
     }
   }
 }

@@ -211,7 +211,7 @@ const Fader = styled.div`
   bottom: 0;
   background: linear-gradient(
     0deg,
-    rgba(6, 8, 9, 1) 30%,
-    rgba(6, 8, 9, 0) 100%
+    rgba(12, 17, 18, 1) 30%,
+    rgba(12, 17, 18, 0) 100%
   );
 `;

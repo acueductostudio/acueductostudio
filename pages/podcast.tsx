@@ -31,7 +31,7 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
   const sort = (category) => {
     let allCats: any = document.querySelectorAll(`.out`);
     for (let epis of allCats) {
-      epis.style.backgroundColor = "#060809";
+      epis.style.backgroundColor = "#0C1112";
     }
     let selected = document.getElementById(`${category}out`);
     selected.style.backgroundColor = "#1A4CE0";
@@ -99,7 +99,11 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
           </PodcastList>
         </div>
       </PodcastGrid>
-      <ResourceFooter shadow identify="podcast" podcastEpisodes={Object.keys(episodes).length}/>
+      <ResourceFooter
+        shadow
+        identify="podcast"
+        podcastEpisodes={Object.keys(episodes).length}
+      />
     </PageClipper>
   );
 }
