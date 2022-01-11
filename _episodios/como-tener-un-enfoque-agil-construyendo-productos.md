@@ -10,6 +10,7 @@ file: https://www.buzzsprout.com/895972/9860720-como-tener-un-enfoque-agil-const
 spotify: https://open.spotify.com/episode/6DWQIIAFeTsfZALMICkJ6n
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05ODYwNzIw
 apple: https://podcasts.apple.com/mx/podcast/c%C3%B3mo-tener-un-enfoque-%C3%A1gil-construyendo-productos/id1500473556?i=1000547449831
+youtube: https://www.youtube.com/watch?v=4q-arwi5Vx8
 ---
 
 **Artemio**: ¿Qué tal? Bienvenidos a todos a un capítulo más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del ecosistema digital latinoamericano para que compartan con nosotros sus mejores _insights_ y consejos. Todos nosotros nos encontramos en esta carrera llamada construir un negocio saludable de internet, nos llevamos muchísimo de este tipo de conversaciones y la que hoy nos espera es muy especial. Me acompaña mi socio Rodrigo Salmerón.
