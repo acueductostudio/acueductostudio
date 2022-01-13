@@ -65,7 +65,8 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       margin-left: 25px;
     }
     img {
-      max-width: 100%;
+      width: 100%;
+      max-width:600px;
       height: auto;
       margin: 2rem 0;
     }

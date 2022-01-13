@@ -5,7 +5,7 @@ import Image from "next/image";
 const Header = ({ slug, title }: { slug: string; title: string }) => (
   <Fade triggerOnce>
     <Pos>
-      <Image layout="fill" src={`/assets/img/articles/${slug}/header.svg`} alt={title}/>
+      <Image height="600" width="1500" priority src={`/assets/img/articles/${slug}/header.svg`} alt={title}/>
       <Fader />
     </Pos>
   </Fade>
