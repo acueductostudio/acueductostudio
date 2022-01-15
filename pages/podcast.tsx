@@ -20,13 +20,7 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
     setTitle(head.headerTitle);
   }, [locale]);
 
-  const categories = [
-    "founder",
-    "diseño",
-    "inversor",
-    "growth-marketing",
-    "todas",
-  ];
+  const categories = ["founder", "producto", "inversor", "growth", "todas"];
 
   const sort = (category) => {
     let allCats: any = document.querySelectorAll(`.out`);
@@ -86,7 +80,7 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
                     className="out"
                     onClick={(e) => sort(cat)}
                   >
-                    {cat == "growth-marketing" ? "growth/marketing" : cat}
+                    {cat}
                   </Category>
                 ))}
               </CatList>
@@ -99,7 +93,11 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
           </PodcastList>
         </div>
       </PodcastGrid>
-      <ResourceFooter shadow identify="podcast" podcastEpisodes={Object.keys(episodes).length}/>
+      <ResourceFooter
+        shadow
+        identify="podcast"
+        podcastEpisodes={Object.keys(episodes).length}
+      />
     </PageClipper>
   );
 }
@@ -164,6 +162,7 @@ const Category = styled.div`
   transition: 0.3s ease;
   display: inline-block;
   margin: 0 1rem 1rem 0;
+  text-transform: capitalize;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       transform: scale(0.97);

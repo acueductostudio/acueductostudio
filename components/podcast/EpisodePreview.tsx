@@ -246,7 +246,7 @@ const DateCat = styled.div`
     border: 2px solid ${(p) => p.theme.colors.accent};
     border-radius: 50px;
     padding: 4px 13px 8px 14px;
-    text-transform: lowercase;
+    text-transform: capitalize;
     color: ${(p) => p.theme.colors.foreground_low};
     font-size: 1.5rem;
     mix-blend-mode: exclusion;

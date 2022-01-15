@@ -4,7 +4,7 @@ date: "2021-10-12"
 title: Cómo tener un enfoque ágil construyendo productos
 guest: Matías Presta
 business: dLocal
-category: Diseño
+category: Producto
 description: Esta ocasión nos acompaña Matías Presta, Head of UX en dLocal, la plataforma 360 de pagos para mercados emergentes más importante de LATAM. Platicamos sobre la importancia de los equipos interdiciplinarios en UX, cómo tener un enfoque ágil construyendo interfaces y sus más grandes lecciones.
 file: https://www.buzzsprout.com/895972/9860720-como-tener-un-enfoque-agil-construyendo-productos-matias-presta-dlocal.mp3?download=true
 spotify: https://open.spotify.com/episode/6DWQIIAFeTsfZALMICkJ6n
