@@ -4,7 +4,7 @@ date: "2021-11-18"
 title: Así se construyen las marcas poderosas en el ecosistema de startups
 guest: Grisel Olmedo
 business: Albo
-category: Diseño
+category: Producto
 description: En esta ocasión hablamos con Grisel Olmedo, Head of Brand de Albo, la startup y cuenta bancaria emergente con más usuarios de México. Platicamos sobre la importancia de escuchar a tus clientes y sentar las bases de tu marca, así como la conformación de equipos de diseño y sus mejores consejos de liderazgo.
 youtube: https://www.youtube.com/watch?v=sDIEIDX_sek
 spotify: https://open.spotify.com/episode/7JfYDGW0z88VIl0c1XCW6H

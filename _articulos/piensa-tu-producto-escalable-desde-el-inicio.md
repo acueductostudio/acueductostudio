@@ -16,7 +16,7 @@ A pesar de ser una inversión inestimable para todo tipo de negocio, los desarro
 
 Sin embargo, la implementación de un MVP sin una sólida estrategia de expansión puede entorpecer la plataforma en el largo plazo. Ya sea requiriendo cambios mayores al _codebase_ del proyecto o incluso volviendo inútil el desarrollo original. Ahora, sabemos que la habilidad de una plataforma de expandirse debe ser fundamental en su desarrollo, la pregunta es ¿cómo prepararse? Para ello, es vital comenzar con un trabajo de exploración que plantee la visión inicial, pero también que permita identificar los elementos, agentes y relaciones que el proyecto final requerirá.
 
-<img src="/assets/img/articles/piensa-tu-producto-escalable-desde-el-inicio/1.svg" width="600px" height="300px" alt="MVP comparado con el producto final"/>
+![MVP comparado con el producto final](/assets/img/articles/piensa-tu-producto-escalable-desde-el-inicio/1.svg)
 
 ## Identifica tu endgame
 
@@ -48,7 +48,8 @@ Es tiempo de desvestir el proyecto de todo lo no-esencial para llegar al MVP. La
 
 Todas las funcionalidades de la aplicación (o grupos de funcionalidades ya que algunas no se pueden separar) se despliegan en una matriz de cuatro cuadrantes. En el eje horizontal se coloca la dificultad de desarrollo o complejidad de implementación y en el eje vertical la relevancia para el proyecto o el valor para el usuario. El MVP tiende a resultar del cuadrante superior izquierdo, con alto valor para los usuarios y una baja complejidad de implementación.
 
-<img src="/assets/img/articles/piensa-tu-producto-escalable-desde-el-inicio/2.svg" width="600px" height="300px" alt="MVP comparado con el producto final"/>
+![MVP en cuadrantes](/assets/img/articles/piensa-tu-producto-escalable-desde-el-inicio/2.svg)
+
 
 Este mismo ejercicio se puede repetir una vez desarrollado el MVP para dirigir la priorización de funcionalidades a implementar más adelante y esta es la manera más sencilla de fijar el norte del desarrollo. También se puede utilizar para identificar las fases o etapas de desarrollo del producto y asegurar que siempre se está avanzando de forma eficiente para entregar más valor a los usuarios. Sin embargo, recordemos que estamos haciendo un análisis de expansión y escalabilidad, y el cuadrante que tiende a estos conceptos es el superior derecho: gran valor pero mayor complejidad. Para mantener una visión escalable, la pregunta principal en esta etapa es: si el proyecto genera tracción ¿Cuáles y qué tan pronto estas funcionalidades se volverán esenciales?
 

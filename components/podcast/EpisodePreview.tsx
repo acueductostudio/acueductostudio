@@ -12,7 +12,7 @@ import ButtonArrow from "components/shared/footers/ButtonArrow";
 interface EpisodeFormat extends EpisodeProps {
   longFormat?: boolean;
   simplest?: boolean;
-  text?:string;
+  text?: string;
 }
 
 const EpisodePreview = ({
@@ -29,7 +29,6 @@ const EpisodePreview = ({
   youtube,
   episode,
   longFormat,
-  next,
   simplest,
   text,
 }: EpisodeFormat) => {
@@ -99,7 +98,7 @@ const EpisodePreview = ({
               )}
             </Guest>
             <DateCat>
-              {longFormat && youtube && (
+              {longFormat && spotify && (
                 <time dateTime={date.toString()}>{formatDate}</time>
               )}
               <span>{category}</span>
@@ -107,7 +106,7 @@ const EpisodePreview = ({
             <p>{!simplest && description}</p>
             <div>
               {!simplest &&
-                (youtube ? (
+                (spotify ? (
                   <BroadcastRouter
                     trackClicks
                     episode={episode}
@@ -123,7 +122,7 @@ const EpisodePreview = ({
                 ))}
             </div>
             <div>
-              {longFormat && youtube && (
+              {longFormat && spotify && (
                 <ShareRouter
                   shareUrl={`https://acueducto.studio/podcast/${slug}`}
                 >
@@ -134,9 +133,9 @@ const EpisodePreview = ({
           </Fade>
           <ButtonSpace>
             {simplest && (
-              <Link href={"/podcast/" + slug+"#cuandoelriosuena"} passHref>
+              <Link href={"/podcast/" + slug + "#cuandoelriosuena"} passHref>
                 <ButtonArrow
-                  text={text? text: "seguir aprendiendo"}
+                  text={text ? text : "seguir aprendiendo"}
                   inverse
                   className="leftFix clean"
                 />
@@ -247,7 +246,7 @@ const DateCat = styled.div`
     border: 2px solid ${(p) => p.theme.colors.accent};
     border-radius: 50px;
     padding: 4px 13px 8px 14px;
-    text-transform: lowercase;
+    text-transform: capitalize;
     color: ${(p) => p.theme.colors.foreground_low};
     font-size: 1.5rem;
     mix-blend-mode: exclusion;
@@ -290,8 +289,8 @@ const NewPod = styled.article<{ simplest: boolean }>`
     color: ${(p) => p.theme.colors.foreground_low};
     padding-top: 1.3rem;
     line-height: 145%;
-    &:empty{
-      display:none;
+    &:empty {
+      display: none;
     }
   }
   @media (max-width: 970px) {

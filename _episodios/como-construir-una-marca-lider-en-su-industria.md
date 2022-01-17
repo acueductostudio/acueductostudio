@@ -4,7 +4,7 @@ date: "2021-10-19"
 title: Cómo construir una marca líder en su industria
 guest: Roxana Escoto
 business: Gaia
-category: Diseño
+category: Producto
 description: En esta ocasión hablamos con Roxana Escoto, ex Head of Brand de Gaia. Platicamos acerca de los retos de las marcas omnicanal, el manejo de equipos multidisciplinarios de diseño y la importancia de la data en la validación de acciones del departamento creativo.
 file: https://www.buzzsprout.com/895972/9356188-como-construir-una-marca-lider-en-su-industria-roxana-escoto-gaia.mp3?download=true
 youtube: https://www.youtube.com/watch?v=IqsA_HZYVbY

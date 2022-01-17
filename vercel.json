@@ -36,6 +36,16 @@
       "source": "/en/nosotros",
       "destination": "/en/about",
       "permanent": true
+    },
+    {
+      "source": "/pitch",
+      "destination": "/nosotros",
+      "permanent": false
+    },
+    {
+      "source": "/en/pitch",
+      "destination": "/en/about",
+      "permanent": false
     }
   ],
   "headers": [

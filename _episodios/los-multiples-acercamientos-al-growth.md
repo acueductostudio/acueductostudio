@@ -4,7 +4,7 @@ date: "2021-11-04"
 title: Los múltiples acercamientos al growth
 guest: Sebastián Yerovi
 business: Dondo
-category: Growth/marketing
+category: Growth
 description: En este capítulo nos acompañó Sebastián Yerovi, Head of Growth de Dondo, la empresa que está digitalizando el trueque. Platicamos sobre distintos acercamientos al Growth, la importancia de estar cerca de tus usuarios y las ventajas y desventajas de implementar inteligencia artificial.
 file: https://www.buzzsprout.com/895972/9477511-los-multiples-acercamientos-al-growth-sebastian-yerovi-dondo.mp3?download=true
 youtube: https://www.youtube.com/watch?v=w0CANuyJiGY

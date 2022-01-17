@@ -6,7 +6,9 @@ const Header = ({ slug, title }: { slug: string; title: string }) => (
   <Fade triggerOnce>
     <Pos>
       <Image
-        layout="fill"
+        height="600"
+        width="1500"
+        priority
         src={`/assets/img/articles/${slug}/header.svg`}
         alt={title}
       />

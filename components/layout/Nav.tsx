@@ -47,6 +47,14 @@ export default function Nav(props) {
               <Hoverable
                 target="_blank"
                 rel="noopener noreferrer"
+                href="https://www.linkedin.com/company/acueductostudio/"
+              >
+                linkedin
+                <span>ln</span>
+              </Hoverable>
+              <Hoverable
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.instagram.com/acueducto.studio/"
               >
                 instagram
@@ -67,14 +75,6 @@ export default function Nav(props) {
               >
                 facebook
                 <span>fb</span>
-              </Hoverable>
-              <Hoverable
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.linkedin.com/company/acueductostudio/"
-              >
-                linkedin
-                <span>ln</span>
               </Hoverable>
             </Social>
             <Policies onClick={props.closeNav}>

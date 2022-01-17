@@ -32,7 +32,10 @@ const EpisodePage = ({
 }: PodcastProps) => {
   return (
     <>
-      <CenteredSection customBackground={"/assets/img/podcast/backOld.svg"} id="cuandoelriosuena">
+      <CenteredSection
+        customBackground={"/assets/img/podcast/backOld.svg"}
+        id="cuandoelriosuena"
+      >
         <Fade triggerOnce>
           <IntroLogo>
             <Link href="/podcast" passHref>
@@ -67,7 +70,7 @@ const EpisodePage = ({
           />
         </Fade>
         <Fade triggerOnce>
-          {youtube && (
+          {spotify && (
             <Content>
               {content && <ContentType>Transcript</ContentType>}
               <Transcript>{content}</Transcript>
@@ -76,7 +79,7 @@ const EpisodePage = ({
         </Fade>
         <Fade triggerOnce>
           <CenteredDiv>
-            {content && youtube && (
+            {content && spotify && (
               <>
                 <RouterSpace>
                   Si crees que a alguien le seria útil este contenido,

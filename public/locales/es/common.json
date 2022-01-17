@@ -1,6 +1,6 @@
 {
   "nav": [
-    { "title": "pitch", "link": "/pitch" },
+    { "title": "home", "link": "/" },
     { "title": "nosotros", "link": "/nosotros" },
     { "title": "portafolio", "link": "/portafolio" },
     { "title": "contacto", "link": "/contacto" }
@@ -39,7 +39,7 @@
         "policies": "políticas"
       },
       "main": [
-        { "title": "pitch", "link": "/pitch" },
+        { "title": "home", "link": "/" },
         { "title": "nosotros", "link": "/nosotros" },
         { "title": "portafolio", "link": "/portafolio" },
         { "title": "consultoría", "link": "/consultoria" },
@@ -47,8 +47,8 @@
       ],
       "resources": [
         { "title": "podcast", "link": "/podcast" },
-        { "title": "diagnóstico", "link": "/diagnostico" },
-        { "title": "artículos", "link": "/articulos" }
+        { "title": "artículos", "link": "/articulos" },
+        { "title": "diagnóstico", "link": "/diagnostico" }
       ],
       "policies": [
         { "title": "cookies", "link": "/cookies" },

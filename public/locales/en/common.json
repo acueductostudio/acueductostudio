@@ -1,6 +1,6 @@
 {
   "nav": [
-    { "title": "pitch", "link": "/pitch" },
+    { "title": "home", "link": "/" },
     { "title": "about", "link": "/nosotros", "as": "/about" },
     { "title": "work", "link": "/portafolio", "as": "/work" },
     { "title": "contact", "link": "/contacto", "as": "/contact" }
@@ -45,7 +45,7 @@
         "policies": "policies"
       },
       "main": [
-        { "title": "pitch", "link": "/pitch" },
+        { "title": "home", "link": "/" },
         { "title": "about", "link": "/nosotros", "as": "/about" },
         { "title": "work", "link": "/portafolio", "as": "/work" },
         { "title": "contact", "link": "/contacto", "as": "/contact" }
