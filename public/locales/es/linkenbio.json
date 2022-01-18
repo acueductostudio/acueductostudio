@@ -7,9 +7,9 @@
   "title": "¿qué estás buscando?",
   "links": [
     {
-      "url": "/contacto",
-      "subtitle": "¿Somos los indicados?",
-      "title": "Agenda una cita"
+      "url": "https://latamstartup.club",
+      "subtitle": "Conferencia anual",
+      "title": "Latam Startup 2022"
     },
     {
       "url": "/podcast",
@@ -20,22 +20,19 @@
       "url": "/articulos/piensa-tu-producto-escalable-desde-el-inicio",
       "subtitle": "artículo",
       "title": "Piensa tu producto escalable desde el inicio"
-    },
-    {
-      "url": "/consultoria",
-      "subtitle": "Desarrollo de negocios",
-      "title": "Consultorías digitales"
     }
   ],
-  "p": "revisa nuestro",
+  "p": "visita también",
   "secondary_links": [
     {
-      "url": "/pitch",
-      "title": "pitch"
+      "url": "/portafolio",
+      "title": "casos de estudio",
+      "subtitle": "Nuestro trabajo"
     },
     {
-      "url": "/portafolio",
-      "title": "portafolio"
+      "url": "/contacto",
+      "subtitle": "¿Somos los indicados?",
+      "title": "Agenda una llamada"
     }
   ]
 }

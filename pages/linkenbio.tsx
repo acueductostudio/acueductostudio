@@ -9,6 +9,7 @@ import MetalPinnedSection from "components/shared/pinnedSections/MetalPinnedSect
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import Consultoria from "public/assets/img/layout/linkenbio/consultoria.svg";
+import Latam from "public/assets/img/layout/linkenbio/latamstartup.svg";
 import Articulos from "public/assets/img/layout/linkenbio/articulos.svg";
 import Podcast from "public/assets/img/layout/linkenbio/podcast.svg";
 
@@ -29,7 +30,9 @@ export default function LinkEnBio({ locale, setTitle, pt }) {
         <ul>
           {links.map((link, index) => (
             <Resource key={"linkentry" + index}>
-              {index === 3 && <Consultoria />}
+              {index === 0 && (
+                <img src="/assets/img/layout/linkenbio/latamstartup.svg" alt="Latam Startup 2022"/>
+              )}
               {index === 2 && <Articulos />}
               {index === 1 && <Podcast />}
               <Link href={link.url} passHref locale={locale}>
@@ -44,19 +47,23 @@ export default function LinkEnBio({ locale, setTitle, pt }) {
           ))}
         </ul>
         <Subtitle>{p}</Subtitle>
-        <SecondaryUl>
+        <ul>
           {secondary_links.map((link, index) => (
-            <Resource key={"linkentry" + index}>
+            <Resource key={"linkentry2" + index}>
+                            {index === 0 && (
+                <img src="/assets/img/layout/linkenbio/portafolio.png" alt="Casos de estudio"/>
+              )}
               <Link href={link.url} passHref>
                 <a>
                   <Fade triggerOnce>
-                    <h3>{link.title}</h3>
+                    <span>{link.subtitle}</span>
+                    <h2>{link.title}</h2>
                   </Fade>
                 </a>
               </Link>
             </Resource>
           ))}
-        </SecondaryUl>
+        </ul>
       </MetalPinnedSection>
       <ContactFooter />
     </PageClipper>
@@ -138,7 +145,7 @@ const Resource = styled.li`
     font-weight: 200;
     transition: 0.3s ease-out color;
   }
-  svg {
+  svg, img {
     height: 100%;
     position: absolute;
     top: 0;
