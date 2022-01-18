@@ -24,7 +24,7 @@ export default function Articles({ locale, setTitle, posts, pt, numberOfE }) {
         es_canonical={`https://acueducto.studio/articulos`}
       ></Head>
       <TitleSection {...intro} />
-      {posts.reverse().map((post, i) => (
+      {posts.map((post, i) => (
         <SingleArticle
           {...post}
           featured={i === 0}
@@ -48,7 +48,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
       "author",
       "excerpt",
     ])
-  );
+  ).sort((a,b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+
   const pt = ssrLocale({ locale: context.locale, fileName: "articulos.json" });
 
   //For podcast episode number in footer

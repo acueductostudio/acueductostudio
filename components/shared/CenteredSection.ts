@@ -43,78 +43,73 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
     margin-top: 8%;
     max-width: 900px;
     a {
-      color: ${(props) => props.theme.colors.accent};
+      color: ${(props) => props.theme.colors.background};
+      text-decoration-color: ${(props) => props.theme.colors.accent};
       text-decoration-thickness: 2px;
       text-underline-offset: 0.25rem;
-      text-decoration-color: ${(props) => props.theme.colors.accent};
       transition: 0.3s ease all;
       @media (hover: hover) and (pointer: fine) {
         &:hover {
-          color: ${(props) => props.theme.colors.background};
-          text-decoration-color: ${(props) => props.theme.colors.accent};
+          color: ${(props) => props.theme.colors.accent};
         }
       }
       &:focus,
       &:active {
-        color: ${(props) => props.theme.colors.background};
-        text-decoration-color: ${(props) => props.theme.colors.accent};
+        color: ${(props) => props.theme.colors.accent};
       }
-    }
-    ul,
-    ol {
-      margin-left: 25px;
     }
     img {
       width: 100%;
-      max-width:600px;
+      max-width: 600px;
       height: auto;
       margin: 2rem 0;
     }
     h2 {
-      &:first-of-type{
-        margin-top:2rem;
-      }
       font-size: 3rem;
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.1rem;
       margin-top: 4rem;
       font-weight: 200;
-      color: ${(p) => p.theme.colors.background};
+      color: #182024;
       line-height: 120%;
       text-align: left;
     }
     h3 {
       font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       margin-top: 3rem;
       line-height: 120%;
       font-weight: 200;
-      color: ${(p) => p.theme.colors.background};
+      color: #182024;
     }
     h4 {
       font-size: 2rem;
       margin-bottom: 1rem;
       line-height: 120%;
       font-weight: 200;
-      color: ${(p) => p.theme.colors.background};
+      color: #182024;
     }
     p,
     ol li,
     ul li {
       color: ${(p) => p.theme.colors.foreground_lowest};
       max-width: calc(680px + 10%);
-      letter-spacing: -0.003em;
-      line-height: 29px;
-      font-size: 1.85rem;
-      margin-bottom: 2rem;
+      letter-spacing: -0.002em;
+      line-height: 150%;
+      font-size: 1.95rem;
+      margin-bottom: 1rem;
       word-break: break-word;
       overflow-wrap: break-word;
       strong,
       b {
         font-weight: 200;
-        color: ${(p) => p.theme.colors.background};
+        color: #182024;
       }
     }
-    ul {
+    p {
+      margin-bottom: 2rem;
+    }
+    ul,
+    ol {
       color: ${(p) => p.theme.colors.foreground_lowest};
       margin-bottom: 2rem;
       max-width: 680px;
@@ -122,12 +117,26 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       line-height: 29px;
       font-size: 1.85rem;
       list-style: none;
+      counter-reset: my-awesome-counter;
+      margin-left: 12px;
+      margin-top: 18px;
       li {
-        &:before {
-          content: "– ";
-          font-weight: 300;
-          font-size: 2rem;
-        }
+        counter-increment: my-awesome-counter;
+      }
+    }
+    ul li {
+      &:before {
+        content: "–";
+        font-weight: 300;
+        font-size: 2rem;
+        color: #182024;
+        margin-right: 12px;
+      }
+    }
+    ol li {
+      &:before {
+        content: counter(my-awesome-counter) ". ";
+        margin-right: 6px;
       }
     }
   }
