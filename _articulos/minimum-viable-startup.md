@@ -23,7 +23,7 @@ Esta guía busca ayudar a construir negocios que crecen exponencialmente, transf
 
 ![Clase de pizarrón](/assets/img/articles/minimum-viable-startup/2.svg)
 
-Y antes de comenzar, porque qué es la vida sin suspenso y trasfondos que enriquecen las historias que nos contamos, vale la pena ahondar en el estado actual del ecosistema digital en Latinoamérica.
+Antes de comenzar vale la pena ahondar en el estado actual del ecosistema digital en Latinoamérica.
 
 ## Hoy es el mejor momento para fundar una startup de tecnología en Latinoamérica
 
