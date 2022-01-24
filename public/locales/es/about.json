@@ -62,11 +62,7 @@
         "title": "somos accesibles",
         "p": "Escuchar tu opinión es parte fundamental de nuestro proceso."
       }
-    ],
-    "cases": {
-      "title": "casos de estudio seleccionados",
-      "p": "Cada proyecto que desarrollamos es único, así que elegimos estos casos de estudio para retratar cómo trabaja Acueducto y lo que puede lograr.<br/><br/>Lee sobre los proyectos seleccionados que hemos desarrollado con nuestros socios."
-    }
+    ]
   },
   "process": {
     "title": "con la estrategia<br/>en el núcleo",
@@ -99,7 +95,7 @@
     ]
   },
   "values": {
-    "title": "construyendo mejores comunidades",
-    "p": "Para el beneficio de los usuarios finales, así como el de nuestros clientes, buscamos crear un impacto positivo con nuestro trabajo.<br/><br/>Por eso fundamos Acueducto, para hacer las preguntas incómodas, evaluar el terreno en el que estamos parados y así ayudar a marcas y negocios a mejorar su entorno y empoderar a sus usuarios."
+    "title": "echa un vistazo a cómo pensamos",
+    "p": "Consulta conversaciones y reflexiones alrededor de una sola pregunta: ¿cómo construir negocios saludables de internet?"
   }
 }

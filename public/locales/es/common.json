@@ -68,5 +68,9 @@
   },
   "next_study": {
     "p": "Haz click para ver el siguiente caso de estudio"
+  },
+  "resources":{
+    "p":"Conoce nuestros recursos gratuitos:", 
+    "articles": "artículos" 
   }
 }

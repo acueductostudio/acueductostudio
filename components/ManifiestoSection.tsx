@@ -8,7 +8,7 @@ const ManifiestoSection = ({ t }) => {
   let { intro, beliefs } = t;
 
   return (
-    <PinnedSection title={intro.title} borderTop>
+    <PinnedSection title={intro.title}>
       <P>{intro.p}</P>
       <ol>
         {beliefs.map(function (belief, index) {

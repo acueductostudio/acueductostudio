@@ -14,7 +14,7 @@ const NextStudy = ({
   margined?: boolean;
 }) => {
   const context = useContext(LangContext);
-  let n = context.next_study;
+  let n = context.next_study; 
   return (
     <Link
       href={"/portafolio/" + link}
