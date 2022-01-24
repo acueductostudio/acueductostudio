@@ -51,7 +51,7 @@ function Index({ locale, setTitle, pt }) {
         </LandContainer>
       </Land>
       <Intro id="removeArrow">
-        <TitleSection {...t.intro} borderTop />
+        <NoPadBottomTitle {...t.intro} borderTop />
       </Intro>
       <Carousel items={t.carousel} />
       <TitleSection {...t.studies.intro} borderTop />
@@ -73,6 +73,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
+
+const NoPadBottomTitle = styled(TitleSection)`
+padding-bottom:20px !important;
+&>div{
+  padding-bottom:20px !important;
+
+}
+background-color:pink;
+`;
 
 const Land = styled.section`
   min-height: 100vh;

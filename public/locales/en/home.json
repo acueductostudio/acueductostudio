@@ -1,48 +1,43 @@
 {
   "head": {
-    "title": "Digital strategies and interfaces for businesses | Acueducto",
-    "description": "We design digital strategies, web and mobile apps, digital products and marketing campaigns. Let's elevate your business.",
+    "title": "Acueducto | We build digital products and interfaces",
+    "description": "Acueducto helps ambitious Latin American companies design, build and launch digital products and services.",
     "header_title": ""
   },
   "landing": {
-    "heading": "propelling high-impact businesses",
+    "heading": "propelling businesses to scale",
     "tagline": "Acueducto is a digital strategy and interface design studio based in Mexico City.",
-    "button": "get in touch"
+    "button": "case studies"
   },
   "intro": {
-    "title": "hand in hand with digital visionaries",
-    "p": "We work with decision-makers who look for better digital opportunities for their businesses.</br></br>Data has shown that implementing digital strategies has helped organizations boost their success by 64%, surpassing their objectives <cite>(ADOBE, 2019)</cite> Why? Because optimizing any business process with digital technology or expanding to new business avenues results in better products and services, while also reducing costs.</br>",
-    "link": ["/contact", "Get in touch"],
-    "linktext": "Are we the right fit for your business?</br>"
+    "title": "hand in hand with innovative leaders",
+    "p": "We work with decision-makers who look for better digital opportunities for their businesses."
   },
   "carousel": ["startups", "brands", "corporations"],
   "studies": {
-    "title": "tackling complex<br/>business challenges",
-    "p": "Having a solid strategy is the cornerstone of any digital success story. Developing scalable architectures or building personalized tools requires a balance of vertical expertise and digital innovation.</br></br>At Acueducto, we use our client’s knowledge to develop meaningful experiences for their businesses and the communities they impact.</br></br>Read about a selection of case studies we’ve developed."
+    "intro": {
+      "title": "who need intuitive interfaces",
+      "p": "Our energy and expertise are at the service of those entrepreneurs who seek to provide their communities with tools that:",
+      "ul": [
+        "Don’t make them think",
+        "Naturally show what the next step is",
+        "Deliver fast results"
+      ]
+    }
   },
   "products_section": {
     "intro": {
-      "title": "to develop</br> innovative ideas",
-      "p": "Each dollar invested in user experience by designing products, services, and tools can see anywhere from 2 to 100 dollars in return <cite>(FORRESTER RESEARCH, 2017)</cite>.</br></br>Companies like Airbnb, Uber, or Google owe a large part of their success to developing excellent digital experiences around their users. Essentially, the goal is to build the best digital interfaces for both your customers and employees to interact with your business.</br></br>You can trust us to develop:"
-    },
-    "products": [
-      {
-        "title": "digital strategies",
-        "p": "Analyze external and internal trends, and your business’s data to make optimal decisions."
-      },
-      {
-        "title": "mobile<br/>and web apps",
-        "p": "Connect with your audience through any device, grow your business with a web experience or an app."
-      },
-      {
-        "title": "digital products<br/>and services",
-        "p": "Develop fast, scalable and attractive technologies to inspire the communities around them."
-      },
-      {
-        "title": "digital marketing strategies",
-        "p": "Grow your sales with communication strategies, creative content and paid advertising."
-      }
-    ]
+      "title": "to strengthen the ecosystem",
+      "p": "We drive the next generation of Latin American startups by building functional and intuitive interfaces, but we also share resources that are intended to help:",
+      "ul": [
+        "Build complementary and highly capable teams",
+        "Foster work cultures that allow for better development",
+        "Design scalable and expandable business models",
+        "Create products that solve problems",
+        "Go to market",
+        "And much more"
+      ]
+    }
   },
   "services": {
     "intro": {
@@ -54,30 +49,24 @@
         "title": "strategy",
         "tags": [
           "Project management",
-          "Digital consulting",
+          "Strategic workshops",
           "Research and insights",
-          "User experience (UX)",
-          "Impact evaluation"
+          "Product and web strategy",
+          "User interviews",
+          "Digital consulting",
+          "Development teams management"
         ]
       },
       {
-        "title": "design & content",
+        "title": "design",
         "tags": [
-          "Art direction",
-          "Content production",
-          "Copywriting",
-          "Prototyping",
-          "Programming and development"
-        ]
-      },
-      {
-        "title": "launch",
-        "tags": [
-          "Marketing strategies",
-          "Paid advertising",
-          "Community management",
-          "User testing",
-          "Change Management"
+          "UX",
+          "UI",
+          "Design sprints",
+          "Design systems",
+          "UX writing",
+          "Prototiping",
+          "Branding"
         ]
       }
     ]
