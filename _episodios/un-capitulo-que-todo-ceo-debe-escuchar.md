@@ -6,7 +6,12 @@ guest: Alfonso de los Ríos
 business: Nowports
 category: Founder
 description: Esta ocasión platicamos con Alfonso de los Ríos, CEO y cofundador de Nowports, el primer agente digital de carga en LATAM. Charlamos sobre expansión a otros países, aprender a delegar y el rol del Chief Excecutive en una startup en crecimiento.
----
+spotify: https://open.spotify.com/episode/1IUBA5ZsSAqQR8TtTILAPq
+apple: https://podcasts.apple.com/mx/podcast/un-cap%C3%ADtulo-que-todo-ceo-debe-escuchar-alfonso-de/id1500473556?i=1000548782999
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05OTI4NTIw
+file: https://www.buzzsprout.com/895972/9928520-un-capitulo-que-todo-ceo-debe-escuchar-alfonso-de-los-rios-nowports.mp3?download=true
+youtube: https://www.youtube.com/watch?v=q87cpNLf-5A
+--- 
 
 En esta ocasión platicamos con Alfonso de los Ríos, CEO y cofundador de Nowports, el primer agente digital de carga en LATAM. Charlamos sobre expansión a otros países, aprender a delegar y el rol del *Chief Excecutive* en una startup en crecimiento.
 
