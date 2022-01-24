@@ -8,8 +8,6 @@ import PageClipper from "components/layout/PageClipper";
 import MetalPinnedSection from "components/shared/pinnedSections/MetalPinnedSection";
 import { Fade } from "react-awesome-reveal";
 import ContactFooter from "components/shared/footers/ContactFooter";
-import Consultoria from "public/assets/img/layout/linkenbio/consultoria.svg";
-import Latam from "public/assets/img/layout/linkenbio/latamstartup.svg";
 import Articulos from "public/assets/img/layout/linkenbio/articulos.svg";
 import Podcast from "public/assets/img/layout/linkenbio/podcast.svg";
 
