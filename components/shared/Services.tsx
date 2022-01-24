@@ -6,12 +6,15 @@ import TitleSection from "components/shared/TitleSection";
 const Services = ({
   services,
 }: {
-  services: { intro: { title: string; p: string }; service_categories: any };
+  services: {
+    intro: { title: string; p: string; link: string; linktext: string };
+    service_categories: any;
+  };
 }) => {
   const { intro, service_categories } = services;
   return (
     <ServicesSection>
-      <TitleSection {...intro} />
+      <TitleSection {...intro} borderTop />
       <ServiceGrid>
         {service_categories.map((service, index) => (
           <Service key={"service" + index}>
@@ -44,8 +47,7 @@ const Info = styled.div`
 
 const ServiceGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-bottom: 15%;
+  grid-template-columns: repeat(2, 1fr);
   @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
@@ -61,14 +63,9 @@ const Service = styled.div`
   border: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-width: ${(props) =>
-    props.theme.stroke +
-    " " +
-    props.theme.stroke +
-    " " +
-    props.theme.stroke +
-    " 0"};
+    props.theme.stroke + " " + props.theme.stroke + " " + " 0" + " 0"};
   padding: 20%;
-  &:nth-child(3) {
+  &:nth-child(2) {
     border-right: 0;
   }
   ul {
@@ -76,7 +73,7 @@ const Service = styled.div`
   }
   li {
     list-style: none;
-    line-height: 135%;
+    line-height: 155%;
     color: ${(props) => props.theme.colors.foreground_low};
     &:before {
       content: "– ";

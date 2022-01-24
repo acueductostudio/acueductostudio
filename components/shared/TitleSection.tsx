@@ -9,10 +9,11 @@ interface TitleProps {
   p?: string;
   link?: string;
   linktext?: string;
-  as?:string;
+  as?: string;
   borderTop?: boolean;
+  ul?: Array<String>;
   children?: React.ReactNode;
-};
+}
 
 const TitleSection = ({
   title,
@@ -20,9 +21,9 @@ const TitleSection = ({
   link,
   linktext,
   as,
-  borderTop, 
+  borderTop,
+  ul,
   children,
-  ...intro
 }: TitleProps) => {
   return (
     <Grid borderTop={borderTop}>
@@ -34,10 +35,21 @@ const TitleSection = ({
           <P>{p}</P>
         </Fade>
       )}
+      {ul && (
+        <Container>
+          <Fade triggerOnce>
+            <ul>
+              {ul.map((t: string, index) => (
+                <li key={"li" + index}>{t}</li>
+              ))}
+            </ul>
+          </Fade>
+        </Container>
+      )}
       {link && (
         <Container>
           <Fade triggerOnce>
-            <LinkWithArrow link={link} linktext={linktext} as={as}/>
+            <LinkWithArrow link={link} linktext={linktext} as={as} />
           </Fade>
         </Container>
       )}

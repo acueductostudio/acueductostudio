@@ -41,8 +41,8 @@ function Index({ locale, setTitle, pt }) {
           <H1>{t.landing.heading}</H1>
           <H2>{t.landing.tagline}</H2>
           <Link
-            href={"/contacto"}
-            as={locale === "en" ? "/contact" : "/contacto"}
+            href={"/portafolio"}
+            as={locale === "en" ? "/work" : "/portafolio"}
             locale={locale}
             passHref
           >
@@ -54,7 +54,7 @@ function Index({ locale, setTitle, pt }) {
         <TitleSection {...t.intro} borderTop />
       </Intro>
       <Carousel items={t.carousel} />
-      <TitleSection {...t.studies} borderTop />
+      <TitleSection {...t.studies.intro} borderTop />
       <CaseList />
       <Products {...t.products_section} />
       <Services services={t.services} />
@@ -117,17 +117,17 @@ const Land = styled.section`
   @media (max-width: 900px) {
     h1 {
       font-size: 5rem;
-      max-width:360px;
+      max-width: 360px;
     }
     h2 {
       font-size: 1.8rem;
-      max-width:420px;
+      max-width: 420px;
     }
   }
   @media (max-width: 700px) {
     h1 {
       font-size: 4rem;
-      max-width:450px;
+      max-width: 450px;
     }
   }
   @media (max-width: 520px) {

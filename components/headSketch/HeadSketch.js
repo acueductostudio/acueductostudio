@@ -47,7 +47,7 @@ const Model = React.memo((props) => {
             attach="material"
             roughness={0.7}
             metalness={1}
-            emissive={"#060809"}
+            emissive={"#0C1112"}
             color={props.second ? "#56027A" : "#1A4CE0"}
             flatShading={false}
             computeVertexNormals
