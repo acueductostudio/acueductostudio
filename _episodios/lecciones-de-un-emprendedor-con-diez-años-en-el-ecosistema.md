@@ -1,6 +1,6 @@
 ---
 episode: 29
-date: "2021-01-31"
+date: "2022-01-31"
 title: Lecciones de un emprendedor con diez años en el ecosistema
 guest: Héctor Cárdenas
 business: Conekta
