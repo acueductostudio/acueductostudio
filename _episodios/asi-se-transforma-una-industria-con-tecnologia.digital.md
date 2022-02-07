@@ -1,11 +1,15 @@
 ---
 episode: 30
-date: "2022-02-08"
+date: "2022-02-07"
 title: Así se transforma una industria con tecnología digital
 guest: Arturo Sánchez, Manuel Andere y Sebastián Jimenez
 business: Sofía
 category: Founder
 description: En este capítulo hablamos con Arturo Sánchez, Manuel Andere y Sebastián Jiménez, CEO, CTO y CPO respectivamente de Sofía, la startup mexicana que está transformando el sector salud del país. Estamos celebrando nuestro capítulo número 30 con este equipo de cofundadores aprovechando sus diferentes perspectivas.
+file: https://www.buzzsprout.com/895972/10008989-asi-se-transforma-una-industria-con-tecnologia-digital-equipo-fundador-de-sofia.mp3?download=true
+spotify: https://open.spotify.com/episode/3a8b9B7ln3IvMuJV9xPREV
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDAwODk4OQ
+apple: https://podcasts.apple.com/mx/podcast/as%C3%AD-se-transforma-una-industria-con-tecnolog%C3%ADa-digital/id1500473556?i=1000550273765
 ---
 
 **Artemio:** Hola, ¿qué tal? Bienvenidos a todos a un capítulo más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la innovación y de la tecnología para que compartan con nosotros sus mejores insights y consejos en este camino tan turbulento pero tan emocionante que es construir un negocio de internet o con la tecnología en el núcleo.
