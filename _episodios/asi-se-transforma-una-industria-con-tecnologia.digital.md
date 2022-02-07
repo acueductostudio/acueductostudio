@@ -1,6 +1,6 @@
 ---
 episode: 30
-date: "2022-02-07"
+date: "2022-02-08"
 title: Así se transforma una industria con tecnología digital
 guest: Arturo Sánchez, Manuel Andere y Sebastián Jimenez
 business: Sofía
