@@ -10,6 +10,7 @@ file: https://www.buzzsprout.com/895972/10008989-asi-se-transforma-una-industria
 spotify: https://open.spotify.com/episode/3a8b9B7ln3IvMuJV9xPREV
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDAwODk4OQ
 apple: https://podcasts.apple.com/mx/podcast/as%C3%AD-se-transforma-una-industria-con-tecnolog%C3%ADa-digital/id1500473556?i=1000550273765
+youtube: https://www.youtube.com/watch?v=mxn3nROsZjU
 ---
 
 **Artemio:** Hola, ¿qué tal? Bienvenidos a todos a un capítulo más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la innovación y de la tecnología para que compartan con nosotros sus mejores insights y consejos en este camino tan turbulento pero tan emocionante que es construir un negocio de internet o con la tecnología en el núcleo.
