@@ -6,6 +6,11 @@ guest: Damian Horn
 business: Tiendanube
 category: Producto
 description: En este episodio hablamos con Damian Horn, Head of Design en Tiendanube, una plataforma de ecommerce latinoamericana ahora unicornio después de una inversión de 500MDD. Charlamos sobre sus mejores consejos construyendo interfaces, reclutando talento y entendiendo el mundo a través del diseño.
+file: https://www.buzzsprout.com/895972/10058778-consejos-construyendo-interfaces-y-reclutando-talento-damian-horn.mp3?download=true
+spotify: https://open.spotify.com/episode/4GMLUKJNgsTDK8ZRWrgTOm
+apple: https://podcasts.apple.com/mx/podcast/consejos-construyendo-interfaces-y-reclutando-talento/id1500473556?i=1000551000683
+youtube: https://www.youtube.com/watch?v=YUZvAR2FRSg
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDA1ODc3OA
 ---
 
 **Artemio:** Hola a todos, ¿cómo se encuentran? Bienvenidos a un capítulo más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores _insights_ y consejos del ecosistema. Si tú eres un emprendedor allá afuera que está construyendo su startup, te puedes llevar muchísimo de estás pláticas, así que te invitamos a quedarte porque la que nos espera es muy emocionante.
