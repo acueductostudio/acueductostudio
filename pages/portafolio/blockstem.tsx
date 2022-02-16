@@ -272,9 +272,12 @@ const PageClipperBlockstem = styled(PageClipper)`
 `;
 
 const EditVideo = styled.div`
-  padding: 5% 20px;
+  padding: 3%;
   border-radius: 40px;
-  background-color: ${bAccent2};
+  background-color: #ffffff;
+  & > div {
+    padding: 0px;
+  }
   @media (max-width: 1300px) {
     margin: 0 30px;
   }
@@ -295,6 +298,7 @@ const WhitepaperGrid = styled.div`
   padding: 10% 10% 0 10%;
   div:nth-child(1) {
     grid-row: 1 / span 2;
+    border-radius: 5px;
   }
   div {
     border-radius: 5px;
@@ -522,6 +526,7 @@ const Aspect = styled.div`
     font-weight: 300;
     color: ${(p) => p.theme.colors.background};
     margin-top: 2px;
+    padding-bottom:3px;
   }
   p {
     max-width: 630px;
@@ -622,26 +627,6 @@ const LessonContainer = styled.div`
   align-items: center;
 `;
 
-const LaunchGrid = styled.div`
-  max-width: 800px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 7fr 1fr 2.038fr;
-  margin: 5% 0;
-  position: relative;
-  max-height: 340px;
-  & > div {
-    &:nth-of-type(even) {
-      grid-column-start: 3;
-    }
-  }
-  @media (max-width: 1000px) {
-    max-width: unset;
-    width: 90%;
-    margin: 5%;
-  }
-`;
-
 const SeventhSection = styled(CommonSection)`
   min-height: 100vh;
   background: ${mainGradient};
@@ -715,7 +700,7 @@ const SixthSection = styled(CommonSection)`
   h2 {
     color: ${(props) => props.theme.colors.background};
     b {
-      color: ${bAccent1};
+      color: ${bAccent2};
     }
   }
 `;
@@ -748,7 +733,7 @@ const ThirdSection = styled(CommonSection)`
   h3 {
     color: ${(props) => props.theme.colors.foreground};
     b {
-      color: ${bAccent1};
+      color: ${bAccent2};
     }
   }
 `;
@@ -766,7 +751,7 @@ const FirstSection = styled(CommonSection)`
   h2 {
     color: ${(props) => props.theme.colors.foreground};
     b {
-      color: ${bAccent1};
+      color: ${bAccent2};
     }
   }
   ul li,
