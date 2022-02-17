@@ -282,12 +282,12 @@ const EditVideo = styled.div`
     margin: 0 30px;
   }
   @media (max-width: 700px) {
-    padding: 5% 0px;
+    padding: 10px;
+    border-radius: 20px;
     margin: 0 20px;
   }
   @media (max-width: 500px) {
-    margin: 0 5%;
-    border-radius: 25px;
+    border-radius: 17px;
   }
 `;
 
