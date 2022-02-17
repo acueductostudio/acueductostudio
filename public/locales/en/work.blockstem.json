@@ -1,83 +1,83 @@
 {
   "head": {
-    "title": "Blockchain y content marketing | Blockstem & Acueducto",
-    "description": "Cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria.",
-    "image_alt": "Blockstem, caso de estudio por Acueducto",
+    "title": "Blockchain and content marketing | Blockstem & Acueducto",
+    "description": "How to educate your customers and investors to become a leader in your industry.",
+    "image_alt": "Blockstem, case study by Acueducto",
     "headerTitle": "Blockstem"
   },
   "headerTitle": "Blockstem",
-  "title": "cómo educar a tus clientes e inversionistas para posicionarte como líder de tu industria",
-  "tags": "Estrategia<br/>Comunicación<br/>Branding<br/>No-code<br/>Posicionamiento",
+  "title": "how to educate your customers and investors to become a leader in your industry.",
+  "tags": "Project Strategy<br/>Media<br/>Branding<br/>No-code<br/>Positioning",
   "video": "blockstem.mp4",
   "logo": "blockstem.svg",
   "link": "blockstem",
   "intro_section": {
     "tags": [
-      "estrategia de proyecto",
-      "comunicación",
-      "branding",
-      "no-code",
-      "posicionamiento",
-      "copywriting"
+      "Project strategy",
+      "Media",
+      "Branding",
+      "No-code",
+      "Positioning",
+      "Copywriting"
     ],
-    "title": "<b>Acto I</b><br/>Una startup con una visión ambiciosa",
-    "p": "Una de las cosas que amamos de trabajar en el ecosistema tecnológico es que tenemos la oportunidad de poner nuestro tiempo e intelecto al servicio de emprendedores que buscan desafiar el status quo. Trabajamos con fundadores de negocios que están convencidos de que pueden ofrecer una alternativa viable a los problemas que enfrentamos hoy con soluciones tecnológicas.</br></br>Catalina Rodríguez y Gonzalo Bañuelos son una dupla de cofundadores que buscan una democracia más participativa, transparente y con la innovación en el núcleo utilizando Blockchain. De ahí nace Blockstem, una startup que brinda un servicio de votación virtualmente inhackeable para organizaciones privadas y públicas en Latinoamérica.</br></br>Cuando Cata y Gonzalo se acercaron con nosotros la charla de exploración giró entorno a varios retos que enfrentaban:",
+    "title": "<b>Act I</b><br/>An ambitious visioned startup",
+    "p": "One of the things we love about working in the technology ecosystem is that we have the opportunity to put our time and brainpower at the service of entrepreneurs who are looking to challenge the status quo. We work with business founders who are convinced that they can offer a viable alternative to the problems we face today with technological solutions.</br></br>Catalina Rodríguez and Gonzalo Bañuelos founded Blockstem to build more participatory and transparent democracies. This startup provides a virtually unhackable voting service for both private and public organizations in Latin America.</br></br>When Cata and Gonzalo approached us, the discovery workshop revolved around several challenges they were facing:",
     "lessons": [
       {
-        "title": "Inversionistas",
-        "p": "Como toda startup tecnológica, se encontraban en una etapa de constante levantamiento de capital"
+        "title": "Investors",
+        "p": "Like every technology startup, they were in a stage of constant funding"
       },
       {
-        "title": "Gobiernos",
-        "p": "No habían tenido éxito para prestar sus servicios a una institución pública como una gobernatura o municipalidad y"
+        "title": "Governments",
+        "p": "They had not been successful yet in getting a public institution–such as governor’s offices or municipalities– to try their service, and"
       },
       {
-        "title": "Ecosistema",
-        "p": "La conversación alrededor de Blockchain y su potencial para mejorar las democracias de Latinoamérica, tanto en el sector privado como en el público, estaba prácticamente en pañales."
+        "title": "Ecosystem",
+        "p": "The conversation around Blockchain and its potential to disrupt Latin American democracies, both in the private and public sectors, was practically in its infancy."
       }
     ]
   },
   "second_section": {
     "quote": {
-      "quote": "El mayor reto era explicar la compleja intersección entre la tecnología blockchain y la democracia de una manera emocionante para el lector. Necesitábamos una página que pudiera comunicar de manera clara y rápida lo que es Blockstem.",
+      "quote": "The main challenge was to explain the complex intersection between blockchain technology and democracy in an exciting way. Blockstem needed a site that could communicate quickly and clearly what the startup is all about.",
       "name": "Gonzalo Bañuelos",
-      "label": "Cofundador, Blockstem"
+      "label": "Cofounder, Blockstem"
     },
-    "p": "Blockstem había tenido éxito con instituciones privadas tales como el Tec de Monterrey y Global Shapers Community validando el valor de sus servicios, sin embargo carecían de un portal web que respaldara y presentara su iniciativa, y que atendiera todas las posibles objeciones que podían tener tanto clientes potenciales como posibles inversionistas. Buscaban una herramienta para recargarse sobre ella al momento de salir a vender su empresa, así que comenzamos a trabajar."
+    "p": "Blockstem was successful validating the value of their product with private institutions such as Tec de Monterrey and Global Shapers Community, however, they lacked the web presence to support and present their initiative, and also to address the possible concerns that potential clients and investors might have. They were looking for a tool to rely on when going out to pitch their company, so we started working."
   },
   "third_section": {
-    "title": "<b>Acto II</b><br/>La educación como piedra angular",
-    "p": "Cuando estás en la punta de lanza de la innovación es casi imposible que aquellos que no lo están no entiendan de qué estás hablando. Esto es algo que sucede actualmente con las tecnologías alrededor de Blockchain. Lo primero que hicimos fue desarrollar un whitepaper que introdujera a sus lectores en los siguientes aspectos:",
+    "title": "<b>Act II</b><br/>Education as a cornerstone",
+    "p": "When you are at the bleeding edge of innovation, it is almost impossible for those who are not to understand what you are talking about. This is currently happening with Blockchain technologies. The first thing we did was developing a whitepaper that would introduce its readers to:",
     "aspects": [
       {
-        "p": "Los problemas que amenazan las actuales democracias de Latinoamérica tales como la corrupción, la desconfianza y la mala administración"
+        "p": "The problems that threaten current democracies in Latin America such as corruption, distrust and mismanagement."
       },
       {
-        "p": "La solución que representa Blockchain para solucionar estos problemas y ofrecer una alternativa más segura, confiable y escalable."
+        "p": "The solution that Blockchain represents to solve these problems and offer a more secure, reliable and scalable alternative."
       }
     ],
-    "p2": "Esta pieza de contenido, co-creada de la mano e intelecto de Cata y Gonzalo, ayuda a que cualquier interesado en el proyecto pueda tener un panorama completo de la propuesta de valor que ofrece Blockstem.",
-    "subtitle": "Un sitio pensado para clientes pero también para inversionistas",
-    "p3": "El sitio de Blockstem no sólo resuelve los aspectos básicos que un cliente prospecto puede buscar: propuesta de valor, solución, contacto, confianza, etc. sino que también apela a preguntas fundamentales que se hacen inversionistas antes de depositar su capital y confianza en un proyecto, tales como ¿cuál es el mercado de esta compañía?, ¿qué los hace únicos?, ¿cómo sobrevivirán en el futuro?, ¿por qué la oportunidad es ahora?"
+    "p2": "This piece of content, co-created hand in hand Cata and Gonzalo, helps anyone interested in the project to get a complete picture of the value proposition offered by Blockstem.",
+    "subtitle": "A site designed for customers but also for investors",
+    "p3": "Blockstem's site not only addresses the basic aspects a prospective client may be looking for: value proposition, solution, contact, trust, etc. but also appeals to fundamental questions that investors ask themselves before placing their capital and trust in any project, such as: what is the market for this company, what makes them unique, how will they survive in the future, and why is it the right time to do it now?"
   },
   "fourth_section": {
-    "p": "Vale la pena mencionar que al iniciar el proyecto hicimos un análisis del diseño de marca y producto de Blockstem. Este dejó ver que las bases visuales del proyecto necesitaban ser reforzadas, por lo que nos dimos a la tarea de refinar gráficos, tipografías y el look & feel de la experiencia web para dar un sentido mucho más minimalista y elegante a Blockstem.",
-    "body": "cuerpo de texto",
-    "titles": "títulos"
+    "p": "It is worth mentioning that at the beginning of the project we analyzed Blockstem's brand and product design. This showed that the visual foundations of the project needed to be strengthened, so we set out to polish graphics, type and the look & feel of the web experience to give Blockstem a much more minimalist and elegant feel.",
+    "body": "body text",
+    "titles": "titles"
   },
   "sixth_section": {
-    "title": "<b>Acto III</b><br/>CMS accesible para equipos sin experiencia en programación",
-    "p": "La edición de los textos y contenidos del sitio son de fácil acceso y tienen efectos inmediatos. No es necesario levantar un ticket con un equipo de programación para hacer modificaciones en él. El equipo de Blockstem puede sencillamente entrar a un editor intuitivo y cambiar títulos, imágenes, textos, agregar artículos a su blog y más; lo que permite un acercamiento ágil a la narrativa que quieren dar con su sitio.",
-    "stat1": "Descargas del Whitepaper en los primeros dos meses",
-    "stat2": "Menciones intencionales en coloquios blockchain",
+    "title": "<b>Act III</b><br/>Accessible CMS for teams without programming experience",
+    "p": "It is easy and instantaneous for anyone (with permission of course) to edit the texts and contents of the whole website. There is no need to raise a ticket with IT to make updates to it. The Blockstem team can simply go into an intuitive and visual editor to change titles, images, text, add articles to their blog and more, allowing for an agile approach to the narrative they want to foster with their site.",
+    "stat1": "Whitepaper downloads in the first two months",
+    "stat2": "Mentions in blockchain colloquiums",
     "quote": {
-      "quote": "Nuestro sitio es muy profesional y elegante. Esto refleja la seriedad con la que tomamos nuestra misión como empresa, misma que se pulió muchísimo en los talleres de negocio y marca que tuvimos. Ahora podemos comunicar Blockstem como un proyecto que inspira confianza tanto a posibles usuarios de nuestra tecnología así como a inversionistas.",
+      "quote": "Our site is very professional and elegant. It reflects the seriousness with which we take our mission as a company, which we polished a lot in the business and branding workshops we had. Now we can present Blockstem as a project that inspires confidence to potential users of our technology as well as to investors.",
       "name": "Catalina Rodríguez",
-      "label": "Cofundadora, Blockstem"
+      "label": "Cofounder, Blockstem"
     },
-    "p2": "No cualquiera tiene el estómago para intentar cambiar problemas tan profundos como los que presenta Latinoamérica en sus democracias. Estamos felices de haber ayudado en el camino de Cata y Gonzalo y le deseamos todo el éxito posible a este proyecto."
+    "p2": "Not everyone has the guts to try to change problems as deep as the ones that Latin America’s democracies have. We are happy to have helped Cata and Gonzalo along the way and we wish this project every possible success."
   },
   "seventh_section": {
-    "linkp": "visita"
+    "linkp": "visit"
   }
 }
