@@ -6,7 +6,11 @@ guest: Courtney McClogan
 business: Runa
 category: Founder
 description: En esta ocasión platicamos con Courtney McColgan, CEO y confundadora de Runa, la startup de nómina de México. Platicamos sobre oportunidades de negocio, la importancia de hacer tu tarea antes de bajar capital y como validar tu producto antes de salir al mercado.
+file: https://www.buzzsprout.com/895972/10124003-como-validar-tu-producto-antes-de-salir-al-mercado-courtney-mccolgan.mp3?download=true
 youtube: https://www.youtube.com/watch?v=-6nLL-Pra5Q
+spotify: https://open.spotify.com/episode/2dGAVHu0xEUgAMGTdTUJAX
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDEyNDAwMw
+apple: https://podcasts.apple.com/mx/podcast/c%C3%B3mo-validar-tu-producto-antes-de-salir-al-mercado/id1500473556?i=1000551917831
 ---
 
 **Artemio:** ¿Qué tal? Bienvenidos a todos a una edición más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores _insights_ y consejos en esta travesía en la que todos nos encontramos que es construir negocios saludables en internet.
@@ -91,7 +95,7 @@ Haz lo que puedas hacer para confiar en tu concepto, haz una página web o una c
 
 ## ¿Cómo mide Runa el _growth_ de la empresa?
 
-**Artemio:**Siguiendo con cosas que le pueden servir a todos los emprendedores que nos están escuchando, ahí en Runa, ¿cómo miden este concepto tan nuevo y ambiguo que es el _growth_ o crecimiento? ¿Es un tema de adquisición de clientes?
+**Artemio:** Siguiendo con cosas que le pueden servir a todos los emprendedores que nos están escuchando, ahí en Runa, ¿cómo miden este concepto tan nuevo y ambiguo que es el _growth_ o crecimiento? ¿Es un tema de adquisición de clientes?
 
 **Courtney:** Tú, como fundador, eres el más apasionado sobre tu producto. Para el resto, es matemática. Quizás, como CPO, tienes que ponerle emociones a lo que quieres hacer, a la visión, como que queremos revolucionar la nómina para América Latina, queremos revolucionar la fuerza laboral con este producto. Pero cuando llegas a cierto tamaño donde el producto está en el mercado, te toca crecer y cuando estás hablando con los VCs, tienen una línea de tiempo. Por ejemplo, Nubank empezó en el 2011, hace 10 años, eso es como la mayoría de las empresas que todos nosotros admiramos, como Slack, Uber, Nubank ahora, salen a la bolsa 10 años después de lanzar, a veces un poco más o un poco menos, pero suelen ser a los 10 años de crear un unicornio. Entonces, lo que necesitas hacer en ese tiempo es escalar lo más rápido posible, y escalar son números. ¿Cuánto cuesta adquirir un cliente? Bien, necesito un equipo de ventas, un equipo de marketing digital; necesito un software para manejar todos esos contactos, software para hacer las ventas, y todo esto suma un costo de adquisición para cada mes y con eso ves cuántos clientes sacaste con eso. El costo de adquisición tiene que ser mucho menor que tu valor de cliente, y ahí es donde entran los temas de _churn_. Si tienes clientes entrando y saliendo, significa que tu valor de cliente es muy chiquito y tu costo de adquisición después tiene que ser muy chiquito. Entonces es mejor tener un valor muy fuerte para que puedas gastar más en crecer.
 
