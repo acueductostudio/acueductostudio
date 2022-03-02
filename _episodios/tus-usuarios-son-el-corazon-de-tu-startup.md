@@ -10,6 +10,7 @@ file: https://www.buzzsprout.com/895972/10145540-tus-usuarios-son-el-corazon-de-
 spotify: https://open.spotify.com/episode/1O8pTcVXwwVOQMY9x4XpMd
 apple: https://podcasts.apple.com/mx/podcast/tus-usuarios-son-el-coraz%C3%B3n-de-tu-startup-luz-borchardt/id1500473556?i=1000552543089
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDE0NTU0MA
+youtube: https://www.youtube.com/watch?v=NHiw2bUwpo4
 ---
 
 **Artemio:** Bienvenidos a todos a una edición más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores _insights_ y consejos en esta travesía en la que todos nos encontramos de construir un negocio saludable en internet. Mi nombre es Artemio Pedraza y, el día de hoy, me acompaña mi socio Rodrigo Salmerón, ¿cómo estás, Ro?
