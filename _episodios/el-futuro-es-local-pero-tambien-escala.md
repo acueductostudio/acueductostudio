@@ -9,6 +9,7 @@ description: En este capítulo platicamos con Sebastián Hernandez, CEO de Super
 spotify: https://open.spotify.com/episode/5zyONwazNZvoHPIlUPd1Pu
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDMzMjgxOQ
 apple: https://podcasts.apple.com/mx/podcast/el-futuro-es-local-pero-tambi%C3%A9n-escala-sebasti%C3%A1n/id1500473556?i=1000555491277
+youtube: https://www.youtube.com/watch?v=8smMj3DJYvY
 ---
 
 **Artemio:** Hola, ¿qué tal? bienvenidos a todos a una edición más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores _insights_ y consejos para construir negocios saludables de internet. Henos aquí una vez más, invitando a personas a este espacio a que nos cuenten desde su experiencia el camino que han recorrido, que es muy similar al que muchos de ustedes y nosotros estamos recorriendo. El día de hoy me acompaña mi socio Rodrigo Salmerón, ¿cómo estás, Ro?
