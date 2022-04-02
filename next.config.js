@@ -43,12 +43,6 @@ const nextConfig = {
         source: "/service-worker.js",
         destination: "/_next/static/service-worker.js",
       },
-      {
-        source:
-          "/podcast/como-es-el-mundo-del-venture-capital-en-latinoamerica",
-        destination:
-          "/podcast/guia-inicial-al-venture-capital-en-latinoamerica",
-      },
     ];
   },
   reactStrictMode: true,
