@@ -5,7 +5,6 @@ import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout/Layout";
 import theme from "styles/theme";
-import type { SharedTProps } from "utils/LangContext";
 import delayForLoading from "utils/delayForLoading";
 import en from "public/locales/en/common.json";
 import es from "public/locales/es/common.json";
@@ -14,10 +13,8 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 //can we dynamic import es or en accordingly?
 
-function App({ Component, pageProps, router }: AppProps) {
-  const [sharedT, setSharedT] = useState<SharedTProps>(
-    router.locale === "en" ? en : es
-  );
+function App({ Component, pageProps, router }) {
+  const [sharedT, setSharedT] = useState(router.locale === "en" ? en : es);
   const [hasLoaded, setHasLoaded] = useState(false);
   const LoadingBarRef = useRef(null);
 
@@ -25,7 +22,7 @@ function App({ Component, pageProps, router }: AppProps) {
     clientLocale({
       locale: router.locale,
       fileName: "common.json",
-      callBack: (nT: SharedTProps) => {
+      callBack: (nT) => {
         setSharedT(nT);
       },
     });

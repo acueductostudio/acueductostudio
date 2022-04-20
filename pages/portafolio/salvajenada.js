@@ -88,8 +88,7 @@ const meaningfulness_covers = [
   { alt: "Salvajenada - Canásta Básica - Miel" },
   { alt: "Salvajenada - Canásta Básica - One Eye Open" },
   {
-    alt:
-      "Salvajenada - Canásta Básica - Un Arpa Descansa Dentro de un Piano de Cola",
+    alt: "Salvajenada - Canásta Básica - Un Arpa Descansa Dentro de un Piano de Cola",
   },
 ];
 
@@ -348,7 +347,7 @@ export default function Salvajenada({ locale, setTitle, pt }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({
     locale: context.locale,
     fileName: "work.salvajenada.json",
