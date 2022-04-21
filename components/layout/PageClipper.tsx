@@ -17,7 +17,7 @@ export default PageClipper;
 
 const Wrapper = styled.main<{ unPadded: boolean }>`
   display: flex;
-  width: calc(100% - 40px);
+  width: calc(100% - 41px);
   height: calc(100% - 40px);
   position: absolute;
   flex-direction: column;
@@ -27,10 +27,9 @@ const Wrapper = styled.main<{ unPadded: boolean }>`
   left: 20px;
   bottom: 20px;
   right: 20px;
-  overflow-x: hidden;
-  overflow-y: scroll;
   border-radius: 58px;
   overflow: overlay;
+  overflow-x: hidden;
 
   /* length */
   ::-webkit-scrollbar {
