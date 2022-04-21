@@ -30,6 +30,28 @@ const Wrapper = styled.main<{ unPadded: boolean }>`
   overflow-x: hidden;
   overflow-y: scroll;
   border-radius: 58px;
+  overflow: overlay;
+
+  /* length */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 50px 0 50px 0;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1744c9;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1744c9;
+    border-radius: 50px;
+  }
   @media (max-width: 1530px) {
     border-radius: 38px;
   }
