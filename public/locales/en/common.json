@@ -19,7 +19,7 @@
   "lang": "en",
   "casestudies": [
     {
-      "title": "how to educate your customers and investors to become a leader in your industry.",
+      "title": "how to educate your customers and investors to become a leader in your industry",
       "tags": "Strategy<br/>Comunicación<br/>Branding<br/>No-code<br/>Posicionamiento<br/>",
       "link": "blockstem",
       "bg_format": "png"
@@ -90,8 +90,8 @@
       "p": "This page doesn’t exist, please check if the URL is correct. If you think this is a problem on our end please contact us at <a class='inline' href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>."
     }
   },
-  "resources":{
-    "p":"Learn about our free resources <b>(spanish)</b>:", 
-    "articles":"articles"
+  "resources": {
+    "p": "Learn about our free resources <b>(spanish)</b>:",
+    "articles": "articles"
   }
 }
