@@ -321,7 +321,7 @@ function LaDanzaDeLasFieras({ locale, setTitle, pt }) {
 
 export default React.memo(LaDanzaDeLasFieras);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "work.lddlf.json" });
   return {
     props: {

@@ -7,9 +7,9 @@
   "title": "¿qué estás buscando?",
   "links": [
     {
-      "url": "/contacto",
-      "subtitle": "¿Somos los indicados?",
-      "title": "Agenda una cita"
+      "url": "https://latamstartup.club",
+      "subtitle": "Conferencia anual",
+      "title": "Latam Startup 2022"
     },
     {
       "url": "/podcast",
@@ -17,25 +17,22 @@
       "title": "Cuando el río suena"
     },
     {
-      "url": "/articulos/piensa-tu-producto-escalable-desde-el-inicio",
+      "url": "/articulos/minimum-viable-startup",
       "subtitle": "artículo",
-      "title": "Piensa tu producto escalable desde el inicio"
-    },
-    {
-      "url": "/consultoria",
-      "subtitle": "Desarrollo de negocios",
-      "title": "Consultorías digitales"
+      "title": "Minimum viable startup"
     }
   ],
-  "p": "revisa nuestro",
+  "p": "visita también",
   "secondary_links": [
     {
-      "url": "/pitch",
-      "title": "pitch"
+      "url": "/portafolio",
+      "title": "casos de estudio",
+      "subtitle": "Nuestro trabajo"
     },
     {
-      "url": "/portafolio",
-      "title": "portafolio"
+      "url": "/contacto",
+      "subtitle": "¿Somos los indicados?",
+      "title": "Agenda una llamada"
     }
   ]
 }

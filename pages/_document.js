@@ -8,7 +8,7 @@ import Document, {
 import { ServerStyleSheet } from "styled-components";
 import GlobalStyles from "../styles/global";
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
     try {

@@ -7,6 +7,10 @@ business: Vozy
 category: Founder
 description: Esta vez platicamos con Humberto Pertuz, Co-founder y CEO de Vozy, una plataforma Latinoamericana de Inteligencia Artificial y voz enfocada en atención al cliente. Charlamos sobre el rol del CEO en las distintas etapas de una startup, lo vital del go to market en el éxito de tu producto y más lecciones.
 file: https://www.buzzsprout.com/895972/9888848-el-rol-del-ceo-en-las-distintas-etapas-de-una-startup-humberto-pertuz-vozy.mp3?download=true
+spotify: https://open.spotify.com/episode/770yV3CshctL12A4Rtb1CB
+youtube: https://www.youtube.com/watch?v=swCNEf6miWE
+apple: https://podcasts.apple.com/mx/podcast/el-rol-del-ceo-en-las-distintas-etapas-de-una/id1500473556?i=1000548082042
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC05ODg4ODQ4
 ---
 
 **Artemio:** Hola, ¿qué tal? Buenos días, buenas tardes, buenas noches a todas las personas que están escuchando Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la innovación y la tecnología, del ecosistema digital latinoamericano, para que compartan con nosotros sus mejores _insights_ y consejos en esta carrera en la que estamos todos que es construir negocios saludables con un impacto positivo en la sociedad.

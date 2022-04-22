@@ -3,11 +3,12 @@ import styled from "styled-components";
 type ClipProps = {
   className?: string;
   unPadded?: boolean;
+  style?: any;
   children: React.ReactNode;
 };
 
-const PageClipper = ({ children, className, unPadded }: ClipProps) => (
-  <Wrapper id="Clipper" className={className} unPadded={unPadded}>
+const PageClipper = ({ children, className, unPadded, style }: ClipProps) => (
+  <Wrapper id="Clipper" className={className} unPadded={unPadded} style={style}>
     {children}
   </Wrapper>
 );
@@ -16,7 +17,7 @@ export default PageClipper;
 
 const Wrapper = styled.main<{ unPadded: boolean }>`
   display: flex;
-  width: calc(100% - 40px);
+  width: calc(100% - 41px);
   height: calc(100% - 40px);
   position: absolute;
   flex-direction: column;
@@ -26,9 +27,30 @@ const Wrapper = styled.main<{ unPadded: boolean }>`
   left: 20px;
   bottom: 20px;
   right: 20px;
-  overflow-x: hidden;
-  overflow-y: scroll;
   border-radius: 58px;
+  overflow: overlay;
+  overflow-x: hidden;
+
+  /* length */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 50px 0 50px 0;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1744c9;
+    border-radius: 50px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1744c9;
+    border-radius: 50px;
+  }
   @media (max-width: 1530px) {
     border-radius: 38px;
   }

@@ -70,7 +70,7 @@ function About({ locale, setTitle, pt, hasLoaded, mouse }) {
 
 export default React.memo(About);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "about.json" });
   return {
     props: {

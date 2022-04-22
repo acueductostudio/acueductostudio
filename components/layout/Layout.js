@@ -14,28 +14,12 @@ import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import NewsletterPopup from "components/NewsletterPopup";
 import TagManager from "react-gtm-module";
 import LinkedInTag from "react-linkedin-insight";
-import type { SharedTProps } from "utils/LangContext";
-
-declare global {
-  interface Window {
-    GA_INITIALIZED: boolean;
-    _hsq?: [];
-  }
-}
 
 const HomeSketch = dynamic(import("../homeSketch/HomeSketch"), {
   ssr: false,
 });
 
-const Layout = ({
-  t,
-  hasLoaded,
-  children,
-}: {
-  t: SharedTProps;
-  hasLoaded: boolean;
-  children: React.ReactElement;
-}) => {
+const Layout = ({ t, hasLoaded, children }) => {
   const [isOpen, setOpen] = useState(false);
   const [showSketch, setShowSketch] = useState(true);
   const [isAbout, setIsAbout] = useState(false);
@@ -116,7 +100,7 @@ const Layout = ({
       document.body.onscroll = function () {
         checkScroll();
       };
-      let clipper: HTMLDivElement = document.querySelector("#Clipper");
+      let clipper = document.querySelector("#Clipper");
       clipper.onscroll = function () {
         checkScroll();
       };
@@ -139,7 +123,7 @@ const Layout = ({
     ) {
       document.body.onscroll = null;
 
-      let clipper: HTMLDivElement = document.querySelector("#Clipper");
+      let clipper = document.querySelector("#Clipper");
       clipper.onscroll = null;
       setShowArrow(false);
     }
@@ -199,7 +183,7 @@ const Layout = ({
 
 export default Layout;
 
-const BodyOverflow = createGlobalStyle<{ hasLoaded: boolean }>`
+const BodyOverflow = createGlobalStyle`
   .TopBar div{
      box-shadow: 1px 1px 4px ${(props) => props.theme.colors.accent} !important;
   }

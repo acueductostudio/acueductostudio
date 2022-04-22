@@ -1,0 +1,83 @@
+{
+  "head": {
+    "title": "Blockchain and content marketing | Blockstem & Acueducto",
+    "description": "How to educate your customers and investors to become a leader in your industry.",
+    "image_alt": "Blockstem, case study by Acueducto",
+    "headerTitle": "Blockstem"
+  },
+  "headerTitle": "Blockstem",
+  "title": "how to educate your customers and investors to become a leader in your industry.",
+  "tags": "Project Strategy<br/>Media<br/>Branding<br/>No-code<br/>Positioning",
+  "video": "blockstem.mp4",
+  "logo": "blockstem.svg",
+  "link": "blockstem",
+  "intro_section": {
+    "tags": [
+      "Project strategy",
+      "Media",
+      "Branding",
+      "No-code",
+      "Positioning",
+      "Copywriting"
+    ],
+    "title": "<b>Act I</b><br/>An ambitious visioned startup",
+    "p": "One of the things we love about working in the technology ecosystem is that we have the opportunity to put our time and brainpower at the service of entrepreneurs who are looking to challenge the status quo. We work with business founders who are convinced that they can offer a viable alternative to the problems we face today with technological solutions.</br></br>Catalina Rodríguez and Gonzalo Bañuelos founded Blockstem to build more participatory and transparent democracies. This startup provides a virtually unhackable voting service for both private and public organizations in Latin America.</br></br>When Cata and Gonzalo approached us, the discovery workshop revolved around several challenges they were facing:",
+    "lessons": [
+      {
+        "title": "Investors",
+        "p": "Like every technology startup, they were in a stage of constant funding"
+      },
+      {
+        "title": "Governments",
+        "p": "They had not been successful yet in getting a public institution–such as governor’s offices or municipalities– to try their service, and"
+      },
+      {
+        "title": "Ecosystem",
+        "p": "The conversation around Blockchain and its potential to disrupt Latin American democracies, both in the private and public sectors, was practically in its infancy."
+      }
+    ]
+  },
+  "second_section": {
+    "quote": {
+      "quote": "The main challenge was to explain the complex intersection between blockchain technology and democracy in an exciting way. Blockstem needed a site that could communicate quickly and clearly what the startup is all about.",
+      "name": "Gonzalo Bañuelos",
+      "label": "Cofounder, Blockstem"
+    },
+    "p": "Blockstem was successful validating the value of their product with private institutions such as Tec de Monterrey and Global Shapers Community, however, they lacked the web presence to support and present their initiative, and also to address the possible concerns that potential clients and investors might have. They were looking for a tool to rely on when going out to pitch their company, so we started working."
+  },
+  "third_section": {
+    "title": "<b>Act II</b><br/>Education as a cornerstone",
+    "p": "When you are at the bleeding edge of innovation, it is almost impossible for those who are not to understand what you are talking about. This is currently happening with Blockchain technologies. The first thing we did was developing a whitepaper that would introduce its readers to:",
+    "aspects": [
+      {
+        "p": "The problems that threaten current democracies in Latin America such as corruption, distrust and mismanagement."
+      },
+      {
+        "p": "The solution that Blockchain represents to solve these problems and offer a more secure, reliable and scalable alternative."
+      }
+    ],
+    "p2": "This piece of content, co-created hand in hand Cata and Gonzalo, helps anyone interested in the project to get a complete picture of the value proposition offered by Blockstem.",
+    "subtitle": "A site designed for customers but also for investors",
+    "p3": "Blockstem's site not only addresses the basic aspects a prospective client may be looking for: value proposition, solution, contact, trust, etc. but also appeals to fundamental questions that investors ask themselves before placing their capital and trust in any project, such as: what is the market for this company, what makes them unique, how will they survive in the future, and why is it the right time to do it now?"
+  },
+  "fourth_section": {
+    "p": "It is worth mentioning that at the beginning of the project we analyzed Blockstem's brand and product design. This showed that the visual foundations of the project needed to be strengthened, so we set out to polish graphics, type and the look & feel of the web experience to give Blockstem a much more minimalist and elegant feel.",
+    "body": "body text",
+    "titles": "titles"
+  },
+  "sixth_section": {
+    "title": "<b>Act III</b><br/>Accessible CMS for teams without programming experience",
+    "p": "It is easy and instantaneous for anyone (with permission of course) to edit the texts and contents of the whole website. There is no need to raise a ticket with IT to make updates to it. The Blockstem team can simply go into an intuitive and visual editor to change titles, images, text, add articles to their blog and more, allowing for an agile approach to the narrative they want to foster with their site.",
+    "stat1": "Whitepaper downloads in the first two months",
+    "stat2": "Mentions in blockchain colloquiums",
+    "quote": {
+      "quote": "Our site is very professional and elegant. It reflects the seriousness with which we take our mission as a company, which we polished a lot in the business and branding workshops we had. Now we can present Blockstem as a project that inspires confidence to potential users of our technology as well as to investors.",
+      "name": "Catalina Rodríguez",
+      "label": "Cofounder, Blockstem"
+    },
+    "p2": "Not everyone has the guts to try to change problems as deep as the ones that Latin America’s democracies have. We are happy to have helped Cata and Gonzalo along the way and we wish this project every possible success."
+  },
+  "seventh_section": {
+    "linkp": "visit"
+  }
+}

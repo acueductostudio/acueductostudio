@@ -19,19 +19,28 @@
   "lang": "en",
   "casestudies": [
     {
-      "title": "from strategy to production in the filmmaking industry",
-      "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
-      "link": "ladanzadelasfieras"
-    },
-    {
-      "title": "how do you share music nowadays?",
-      "tags": "Strategy<br/>Product development<br/>Design & digital consulting<br/>Project management",
-      "link": "salvajenada"
+      "title": "how to educate your customers and investors to become a leader in your industry.",
+      "tags": "Strategy<br/>Comunicación<br/>Branding<br/>No-code<br/>Posicionamiento<br/>",
+      "link": "blockstem",
+      "bg_format": "png"
     },
     {
       "title": "a unique ecommerce niche in Mexico",
       "tags": "Strategy<br/>Commmunication<br/>Branding<br/>Ecommerce<br/>Digital Marketing<br/>",
-      "link": "rahid"
+      "link": "rahid",
+      "bg_format": "svg"
+    },
+    {
+      "title": "from strategy to production in the filmmaking industry",
+      "tags": "Strategy<br/>Communication<br/>Branding<br/>Animation<br/>Web App<br/>",
+      "link": "ladanzadelasfieras",
+      "bg_format": "svg"
+    },
+    {
+      "title": "how do you share music nowadays?",
+      "tags": "Strategy<br/>Product development<br/>Design & digital consulting<br/>Project management",
+      "link": "salvajenada",
+      "bg_format": "svg"
     }
   ],
   "contact_footer": {
