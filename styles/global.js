@@ -9,7 +9,7 @@ const styles = `
     bottom: 0;
     top: 0;
     padding: 19px;
-    background-color: #0C1112;
+    background-color: #0D1111;
     transition: opacity 0.4s ease-out;
     will-change: opacity;
   }

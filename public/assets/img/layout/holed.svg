@@ -1,5 +1,15 @@
-<svg fill="none"
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 619">
-    <path d="m0 0 .5 619h1399V0H0Zm1292 563c0 27.614-22.39 50-50 50H57c-27.614 0-50-22.386-50-50V56C7 28.386 29.386 6 57 6h1185c27.61 0 50 22.386 50 50v507Z" fill="#0C1112"/>
-    <path d="M1290.5 56v507c0 26.786-21.71 48.5-48.5 48.5H57c-26.786 0-48.5-21.714-48.5-48.5V56C8.5 29.214 30.214 7.5 57 7.5h1185c26.79 0 48.5 21.714 48.5 48.5Z" fill="none" stroke="#c8c8c8" stroke-width="2" vector-effect="non-scaling-stroke"/>
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1299 619">
+    <g clip-path="url(#a)">
+        <path
+            d="m0 0 .5 619h1299V0H0Zm1292 563a50 50 0 0 1-50 50H57a50 50 0 0 1-50-50V56A50 50 0 0 1 57 6h1185a50 50 0 0 1 50 50v507Z"
+            fill="#0D1111" />
+        <path
+            d="M1290.5 56v507a48.5 48.5 0 0 1-48.5 48.5H57A48.5 48.5 0 0 1 8.5 563V56A48.5 48.5 0 0 1 57 7.5h1185a48.5 48.5 0 0 1 48.5 48.5Z"
+            stroke="#C8C8C8" stroke-width="2" vector-effect="non-scaling-stroke" />
+    </g>
+    <defs>
+        <clipPath id="a">
+            <path fill="#fff" d="M0 0h1299v619H0z" />
+        </clipPath>
+    </defs>
 </svg>

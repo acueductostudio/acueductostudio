@@ -51,13 +51,13 @@ function Index({ locale, setTitle, pt }) {
         </LandContainer>
       </Land>
       <Intro id="removeArrow">
-        <NoPadBottomTitle {...t.intro} borderTop />
+        <TitleSection {...t.intro} borderTop />
       </Intro>
       <Carousel items={t.carousel} />
       <TitleSection {...t.studies.intro} borderTop />
       <CaseList />
-      <Products {...t.products_section} />
       <Services services={t.services} />
+      <Products {...t.products_section} />
       <ContactFooter />
     </PageClipper>
   );
@@ -73,15 +73,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     },
   };
 };
-
-const NoPadBottomTitle = styled(TitleSection)`
-padding-bottom:20px !important;
-&>div{
-  padding-bottom:20px !important;
-
-}
-background-color:pink;
-`;
 
 const Land = styled.section`
   min-height: 100vh;
@@ -175,4 +166,10 @@ const Intro = styled.section`
   color: ${(props) => props.theme.colors.foreground};
   background-color: ${(props) => props.theme.colors.background};
   transition: 0.3s ease all;
+  & > div {
+    padding-bottom: 6%;
+  }
+  @media (max-width: 900px) {
+    padding-bottom: 6%;
+  }
 `;

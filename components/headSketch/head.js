@@ -41,7 +41,7 @@ export default function head(p) {
   };
 
   p.draw = () => {
-    p.background("#0C1112");
+    p.background("#0D1111");
     p.rotateZ(3.15);
     p.translate(20, 0, 0);
     p.ambientLight(8, 8, 8);

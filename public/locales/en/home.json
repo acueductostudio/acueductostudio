@@ -10,8 +10,13 @@
     "button": "case studies"
   },
   "intro": {
-    "title": "hand in hand with innovative leaders",
-    "p": "We work with decision-makers who look for better digital opportunities for their businesses."
+    "title": "pushing ideas of visionary leaders",
+    "p": "We work with startup leaders and founders who seek to:",
+    "ul": [
+      "Build a Minimum Viable Product (MVP)",
+      "Validate a product solution with real users",
+      "Iterate the design of existing systems and tools"
+    ]
   },
   "carousel": ["startups", "brands", "corporations"],
   "studies": {
@@ -28,12 +33,12 @@
   "products_section": {
     "intro": {
       "title": "to strengthen the ecosystem",
-      "p": "We drive the next generation of Latin American startups by building functional and intuitive interfaces, but we also share resources that are intended to help:",
+      "p": "We help the next generation of Latin American startups by building functional and intuitive interfaces, but we also share resources on:",
       "ul": [
-        "Build complementary and highly capable teams",
-        "Foster work cultures that allow for better development",
+        "Building complementary and high-talented teams",
+        "Fostering an organizational culture that allows best development for your team",
         "Design scalable and expandable business models",
-        "Create products that solve problems",
+        "Create products that solve real problems",
         "Go to market",
         "And much more"
       ]

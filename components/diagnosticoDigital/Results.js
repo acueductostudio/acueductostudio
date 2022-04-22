@@ -77,16 +77,16 @@ const Results = ({ results, results_section, setTestStatus }) => {
             <p>{last_message.p1}</p>
             <h3>{last_message.title1}</h3>
             <TwitterShareButton url={SHARE_URL}>
-              <TwitterIcon size={55} bgStyle={{ fill: "#0C1112" }} />
+              <TwitterIcon size={55} bgStyle={{ fill: "#0D1111" }} />
             </TwitterShareButton>
             <FacebookShareButton url={SHARE_URL}>
-              <FacebookIcon size={55} bgStyle={{ fill: "#0C1112" }} />
+              <FacebookIcon size={55} bgStyle={{ fill: "#0D1111" }} />
             </FacebookShareButton>
             <WhatsappShareButton url={SHARE_URL}>
-              <WhatsappIcon size={55} bgStyle={{ fill: "#0C1112" }} />
+              <WhatsappIcon size={55} bgStyle={{ fill: "#0D1111" }} />
             </WhatsappShareButton>
             <LinkedinShareButton url={SHARE_URL}>
-              <LinkedinIcon size={55} bgStyle={{ fill: "#0C1112" }} />
+              <LinkedinIcon size={55} bgStyle={{ fill: "#0D1111" }} />
             </LinkedinShareButton>
             <p>
               {last_message.p2}

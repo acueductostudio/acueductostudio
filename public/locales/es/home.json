@@ -1,7 +1,7 @@
 {
   "head": {
     "title": "Acueducto | Construimos interfaces y productos digitales",
-    "description": "Acueducto ayuda a compañías ambiciosas de Latinoamérica a diseñar, construir y lanzar productos y servicios digitales.",
+    "description": "En Acueducto ayudamos a fundadores y líderes de startups a diseñar, construir y lanzar productos y servicios digitales.",
     "header_title": ""
   },
   "landing": {
@@ -11,7 +11,12 @@
   },
   "intro": {
     "title": "junto a líderes con soluciones innovadoras",
-    "p": "Trabajamos con tomadores de decisiones en busca de oportunidades digitales para sus negocios."
+    "p": "Trabajamos con fundadores y líderes de startups que buscan:",
+    "ul": [
+      "Construir un Minimum Viable Product (MVP)",
+      "Validar su producto con usuarios reales",
+      "Mejorar el diseño de interfaces y herramientas existentes"
+    ]
   },
   "carousel": ["startups", "marcas", "corporativos"],
   "services": {

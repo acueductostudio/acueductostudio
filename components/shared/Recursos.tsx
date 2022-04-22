@@ -5,15 +5,14 @@ import Link from "next/link";
 import LangContext from "utils/LangContext";
 import { P } from "components/shared/Dangerously";
 
-
 const Products = () => {
   const context = useContext(LangContext);
-  let t = context.resources; 
-  return ( 
+  let t = context.resources;
+  return (
     <>
       <P className="separator">{t.p}</P>
       <RecursoCont>
-        <Link href="/podcast">
+        <Link href="/podcast" locale="es">
           <a>
             <Picture
               src="/assets/img/layout/recursopodcast.jpg"
@@ -24,7 +23,7 @@ const Products = () => {
             <span>podcast</span>
           </a>
         </Link>
-        <Link href="/articulos">
+        <Link href="/articulos" locale="es">
           <a>
             <Picture
               src="/assets/img/layout/recursoarticulo.jpg"
@@ -57,9 +56,9 @@ const RecursoCont = styled.div`
     & > div {
       border-radius: 25px;
       overflow: hidden;
-      box-shadow: 0px 0px 20px rgba(2, 3, 3, 0.2);
       border: 2px solid transparent;
       transition: 0.3s ease all;
+      height: 120px;
       & > div {
         display: block !important;
       }

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
-import styled from "styled-components";
 import Head from "components/layout/Head";
 import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/layout/PageClipper";
