@@ -89,5 +89,9 @@
       "title": "oops!<br/> page not found",
       "p": "This page doesn’t exist, please check if the URL is correct. If you think this is a problem on our end please contact us at <a class='inline' href='mailto:soporte@acueducto.studio'>soporte@acueducto.studio</a>."
     }
+  },
+  "resources":{
+    "p":"Learn about our free resources <b>(spanish)</b>:", 
+    "articles":"articles"
   }
 }

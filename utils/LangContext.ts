@@ -24,6 +24,7 @@ export type SharedTProps = {
   legal_nav: object;
   nav: Array<object>;
   next_study: { p: string };
+  resources: { p: string; articles: string };
 };
 
 const LangContext = React.createContext<SharedTProps | null>(null);

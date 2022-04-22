@@ -66,27 +66,39 @@ const Carousel = ({ items }) => {
 
   return (
     <>
-      <HoledSection ref={ref}>
-        <Holed />
-        <CarouselContainer>
-          {items.map((word, index) => (
-            <Word
-              key={"word" + index}
-              show={index === activeIndex ? true : false}
-            >
-              {word}
-            </Word>
-          ))}
-        </CarouselContainer>
-        <ButtonLeft onClick={prevManualIndex} />
-        <ButtonRight onClick={nextManualIndex} />
-      </HoledSection>
+      <HalfContainer>
+        <LeftSection />
+        <HoledSection ref={ref}>
+          <Holed />
+          <CarouselContainer>
+            {items.map((word, index) => (
+              <Word
+                key={"word" + index}
+                show={index === activeIndex ? true : false}
+              >
+                {word}
+              </Word>
+            ))}
+          </CarouselContainer>
+          <ButtonLeft onClick={prevManualIndex} />
+          <ButtonRight onClick={nextManualIndex} />
+        </HoledSection>
+      </HalfContainer>
       <FakePadding />
     </>
   );
 };
 
 export default Carousel;
+
+const HalfContainer = styled.div`
+  width: 100%;
+  display: flex;
+`;
+const LeftSection = styled.div`
+  background-color: ${(p) => p.theme.colors.background};
+  width: 50%;
+`;
 
 const FakePadding = styled.div`
   width: 100%;
@@ -95,7 +107,8 @@ const FakePadding = styled.div`
 `;
 
 const HoledSection = styled.div`
-  width: 100%;
+  width: 50%;
+  align-self: end;
   display: flex;
   flex: 0 0 auto;
   align-content: center;
