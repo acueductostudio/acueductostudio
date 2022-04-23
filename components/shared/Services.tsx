@@ -47,7 +47,8 @@ const Info = styled.div`
 
 const ServiceGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 15%;
   @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
@@ -63,9 +64,14 @@ const Service = styled.div`
   border: ${(props) =>
     props.theme.stroke + " solid " + props.theme.colors.foreground_lowest};
   border-width: ${(props) =>
-    props.theme.stroke + " " + props.theme.stroke + " " + " 0" + " 0"};
+    props.theme.stroke +
+    " " +
+    props.theme.stroke +
+    " " +
+    props.theme.stroke +
+    " 0"};
   padding: 20%;
-  &:nth-child(2) {
+  &:nth-child(3) {
     border-right: 0;
   }
   ul {
@@ -73,7 +79,7 @@ const Service = styled.div`
   }
   li {
     list-style: none;
-    line-height: 155%;
+    line-height: 135%;
     color: ${(props) => props.theme.colors.foreground_low};
     &:before {
       content: "– ";
