@@ -71,7 +71,7 @@ const CaseList = ({ limit }: { limit?: number }) => {
   const context = useContext(LangContext);
   return (
     <CaseStudiesWrapper>
-      {context.casestudies.reverse().map(function (study, index) {
+      {context.casestudies.map(function (study, index) {
         if (limit !== undefined && index + 1 > limit) {
           return;
         } else {
