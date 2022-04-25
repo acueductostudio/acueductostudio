@@ -6,6 +6,9 @@ guest: Renato Picardo
 business: Urbvan
 category: Founder
 description: Este episodio platicamos con Renato Picard, CEO y Cofundador de Urbvan, la red de movilidad inteligente que está revolucionando el transporte público en México. Charlamos sobre efectos de red, pivotear en tiempos de crisis y sus mejores consejos para nuestra comunidad de emprendedores.
+spotify: https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t
+apple: https://podcasts.apple.com/us/podcast/e40-c%C3%B3mo-pivotear-y-crecer-2x-en-una-pandemia-renato/id1500473556?i=1000558574686
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz
 ---
 
 **Artemio:** ¿Qué tal? Bienvenidos a todos a Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y la innovación para que compartan con nosotros sus mejores _insights_ y consejos para construir negocios saludables de internet. El día de hoy me acompaña mi socio Rodrigo Salmerón, ¿cómo estás, Ro?
