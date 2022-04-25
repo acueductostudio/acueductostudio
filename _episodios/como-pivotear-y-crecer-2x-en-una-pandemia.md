@@ -9,6 +9,7 @@ description: Este episodio platicamos con Renato Picard, CEO y Cofundador de Urb
 spotify: https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t
 apple: https://podcasts.apple.com/us/podcast/e40-c%C3%B3mo-pivotear-y-crecer-2x-en-una-pandemia-renato/id1500473556?i=1000558574686
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz
+youtube: https://www.youtube.com/watch?v=WR_sJxr9j1M
 ---
 
 **Artemio:** ¿Qué tal? Bienvenidos a todos a Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y la innovación para que compartan con nosotros sus mejores _insights_ y consejos para construir negocios saludables de internet. El día de hoy me acompaña mi socio Rodrigo Salmerón, ¿cómo estás, Ro?
