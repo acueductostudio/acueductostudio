@@ -7,11 +7,6 @@
   "title": "¿qué estás buscando?",
   "links": [
     {
-      "url": "https://latamstartup.club",
-      "subtitle": "Conferencia anual",
-      "title": "Latam Startup 2022"
-    },
-    {
       "url": "/podcast",
       "subtitle": "Podcast",
       "title": "Cuando el río suena"
@@ -20,6 +15,11 @@
       "url": "/articulos/minimum-viable-startup",
       "subtitle": "artículo",
       "title": "Minimum viable startup"
+    },
+    {
+      "url": "https://latamstartup.club",
+      "subtitle": "Conferencia anual",
+      "title": "Latam Startup 2022"
     }
   ],
   "p": "visita también",
@@ -30,9 +30,10 @@
       "subtitle": "Nuestro trabajo"
     },
     {
-      "url": "/contacto",
-      "subtitle": "¿Somos los indicados?",
-      "title": "Agenda una llamada"
+      "url": "https://acueducto.notion.site/Vacantes-223b939ba9a14051bca07f8546e8ad26",
+      "subtitle": "¿Quieres trabajar con nosotros?",
+      "title": "Conoce nuestras vacantes"
     }
+    
   ]
 }
