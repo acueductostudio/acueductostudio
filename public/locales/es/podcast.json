@@ -6,7 +6,23 @@
     "headerTitle": "Podcast"
   },
   "intro": {
-    "title": "cuando el río suena",
-    "p": "Conversaciones con expertos y profesionales del ecosistema digital latinoamericano alrededor de sus mejores consejos para construir negocios saludables de internet o con la tecnología en el núcleo."
+    "title": "construye un negocio saludable de internet",
+    "p": "Este es un podcast con guía y mentoría para empresas tecnológicas sin importar si están en etapa pre-semilla o a punto de salir a la bolsa. Conoce la experiencia y mejores consejos de los líderes de las startups más emocionantes de Latinoamérica.",
+    "form": {
+      "email": {
+        "placeholder": "ingresa tu email",
+        "errorMissing": "*falta tu email",
+        "errorInvalid": "*email inválido"
+      },
+      "submit": "suscríbeme",
+      "loading": "enviando...",
+      "success": {
+        "p": "¡Éxito! Ahora revisa tu email para confirmar tu suscripción."
+      }
+    }
+  },
+  "banner": {
+    "title": "aprende desde la experiencia de quienes ya recorrieron el camino que tú buscas recorrer",
+    "p": "Platicamos con fundadores heads of design y chiefs of growth de startups tecnológicas así como con inversionistas de ventura capital"
   }
 }

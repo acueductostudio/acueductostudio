@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "nvm use 14 && next",
     "build": "node scripts/generateSitemap.js && next build",
     "start": "next start",
     "export": "next export",
