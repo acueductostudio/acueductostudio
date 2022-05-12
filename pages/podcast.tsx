@@ -1,22 +1,28 @@
 import styled from "styled-components";
 import React, { useEffect } from "react";
 import { GetStaticProps } from "next";
+import Link from "next/link";
 import EpisodeProps from "utils/types/EpisodeProps";
-import EpisodePreview from "components/podcast/EpisodePreview";
+import EpisodeFeature from "components/podcast/EpisodeFeature";
 import ssrLocale from "utils/ssrLocale";
-import { getAllEpisodes, getEpisodeBySlug } from "utils/podcastApi";
+import { getEpisodeBySlug } from "utils/podcastApi";
 import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
-import { H1 } from "components/shared/Dangerously";
+import { H1, H5 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
 import TitleSection from "components/shared/TitleSection";
 import MetalForm from "components/shared/MetalForm";
+import ButtonArrow from "components/shared/footers/ButtonArrow";
+import Tilt from "react-parallax-tilt";
+import { Persona, Check, BuildStory } from "components/shared/Icons";
+
+const iconArray = [Persona, Check, BuildStory];
 
 function PodcastLanding({ locale, setTitle, episodes, pt }) {
-  const { intro, head, banner } = pt;
+  const { intro, head, banner, favorites, chapters, closing } = pt;
 
   useEffect(() => {
     setTitle(head.headerTitle);
@@ -50,25 +56,74 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
           <div>
             <H1>{intro.title}</H1>
             <p>{intro.p}</p>
-            <MetalForm onSubmit={onSubmit} id={"podcastOL"} text={intro.form} infinite />
+            <MetalForm onSubmit={onSubmit} id={"podcastOL"} text={intro.form} />
           </div>
-          <Image
-            width={380}
-            height={380}
-            src={"/assets/img/layout/podcast_cover.svg"}
-            alt={"Cuando el río suena"}
-          />
+          <Tilt trackOnWindow={true} gyroscope={true}>
+            <Image
+              width={380}
+              height={380}
+              src={"/assets/img/layout/podcast_cover.svg"}
+              alt={"Cuando el río suena"}
+            />
+          </Tilt>
         </Fade>
       </PodcastGrid>
       <FullSection>
-        <h2>{banner.title}</h2>
-        <p>{banner.p}</p>
+        <Fade triggerOnce>
+          <h2>{banner.title}</h2>
+          <p>{banner.p}</p>
+        </Fade>
       </FullSection>
-      <PodcastList>
-        {episodes.map((episode, index) =>
-          index < 5 ? <EpisodePreview {...episode} key={"npd" + index} /> : null
-        )}
-      </PodcastList>
+      <EpisodesSection>
+        <TitleSection title={favorites.title} />
+        <FeatureList>
+          <div>
+            {episodes.map((episode, index) => (
+              <div key={"npd" + index}>
+                <Tilt gyroscope={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+                  <EpisodeFeature {...episode} />
+                </Tilt>
+              </div>
+            ))}
+          </div>
+        </FeatureList>
+        <Fade>
+          <Link href={"/podcast/archivo"} passHref>
+            <ButtonArrow text={favorites.button} inverse={true} />
+          </Link>
+        </Fade>
+      </EpisodesSection>
+      <FeaturesSection>
+        <TitleSection title={chapters.title} borderTop />
+        <Fade triggerOnce>
+          <FeatureList narrow>
+            <div>
+              {chapters.themes.map((chapter, index) => {
+                const Icon = iconArray[index];
+                return (
+                  <Feature key={"chtr" + index}>
+                    <div>
+                      <Icon />
+                    </div>
+                    <H5>{chapter.title}</H5>
+                    <p>{chapter.p}</p>
+                  </Feature>
+                );
+              })}
+            </div>
+          </FeatureList>
+        </Fade>
+      </FeaturesSection>
+      <FullLastSection>
+        <Fade triggerOnce>
+          <span>{closing.label}</span>
+          <h5>{closing.title}</h5>
+          <p>{closing.p}</p>
+          <div>
+            <MetalForm onSubmit={onSubmit} id={"podcastOL"} text={intro.form} />
+          </div>
+        </Fade>
+      </FullLastSection>
       <ContactFooter />
     </PageClipper>
   );
@@ -77,10 +132,16 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
 export default React.memo(PodcastLanding);
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const sortedEpisodes = getAllEpisodes(["slug", "episode"]).sort((ep1, ep2) =>
-    ep1.episode > ep2.episode ? 1 : -1
-  );
-  const episodes = sortedEpisodes.map((episode: EpisodeProps) =>
+  const featuredSlugs = [
+    { slug: "construye-identidades-que-cuenten-historias" },
+    { slug: "un-capitulo-que-todo-ceo-debe-escuchar" },
+    { slug: "como-se-disenan-las-apps-mas-exitosas" },
+    { slug: "growth-es-el-nuevo-marketing" },
+    { slug: "cual-es-el-trabajo-de-un-director-de-operaciones-en-una-startup" },
+    { slug: "asi-funcionan-las-startups-basadas-en-ciencia" },
+  ];
+
+  const episodes = featuredSlugs.map((episode: EpisodeProps) =>
     getEpisodeBySlug(episode.slug, [
       "title",
       "guest",
@@ -110,38 +171,137 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
+const Feature = styled.article`
+  display: flex;
+  flex-direction: column;
+  background-color: #101213;
+  border-radius: 50px;
+  padding: 3.5rem 3.5rem 3.5rem 3.5rem;
+  h5 {
+    font-size: 2rem;
+    font-weight: 100;
+    margin: 20px 0;
+  }
+  p {
+    color: ${(p) => p.theme.colors.foreground_lower};
+    font-size: 1.7rem;
+  }
+  div {
+    padding: 20px;
+    background-color: #1e2224;
+    border-radius: 40px;
+    display: flex;
+    align-self: flex-start;
+  }
+  svg {
+    width: 40px;
+    * {
+      stroke: ${(p) => p.theme.colors.foreground};
+      stroke-width: 8px;
+      fill: transparent;
+    }
+    .accent {
+      stroke: ${(p) => p.theme.colors.accent};
+    }
+  }
+`;
+
+const FeaturesSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8%;
+  & > :first-child {
+    padding-bottom: 4%;
+  }
+`;
+
+const EpisodesSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > :first-child {
+    padding-bottom: 4%;
+  }
+  & > :last-child {
+    align-self: center;
+    margin-bottom: 8%;
+    margin-top: 2%;
+  }
+`;
+
 const FullSection = styled.section`
   background-color: ${(p) => p.theme.colors.accent};
-  text-align:center;
-  padding: 10% 4%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  h2{
-    max-width:1100px;
+  text-align: center;
+  padding: 8% 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 118%;
+    margin-bottom: 28px;
+    max-width: 930px;
+  }
+  p {
+    color: ${(p) => p.theme.colors.foreground_low};
+    max-width: 610px;
+  }
+`;
+
+const FullLastSection = styled.section`
+  text-align: center;
+  padding: 0 4% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h5 {
+    max-width: 1100px;
+    font-weight: 400;
+    font-size: 6.5rem;
+    line-height: 110%;
+    margin-bottom: 28px;
+    margin-top: 0px;
+    max-width: 850px;
+    color: ${(p) => p.theme.colors.accent};
+  }
+  & > div > span {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+  }
+  & > p {
+    color: ${(p) => p.theme.colors.foreground_low};
+    max-width: 610px;
+  }
+  & > div {
+    min-width: 455px;
   }
 `;
 
 const PodcastGrid = styled(TitleSectionGrid)`
   background-color: ${(p) => p.theme.colors.background};
-  background-image: url("/assets/img/podcast/back.svg");
+  background-image: url("/assets/img/podcast/backOld.svg");
   background-size: cover;
   background-position: top right;
+  background-attachment: fixed;
   width: 100%;
   padding: 10% 4%;
   position: relative;
   margin-bottom: -1px;
   align-items: center;
+  min-height: 85vh;
   & > div:nth-of-type(2) {
     grid-column: 8 / span 4;
     padding-left: 5%;
   }
-  & > div:nth-of-type(1){
+  & > div:nth-of-type(1) {
     grid-column: 2 / span 6;
   }
   h1 {
     letter-spacing: 0;
-    line-height: 100%;
+    line-height: 105%;
     font-size: 7rem;
     margin-bottom: 3px;
     max-width: 810px;
@@ -185,9 +345,22 @@ const PodcastGrid = styled(TitleSectionGrid)`
   }
 `;
 
-const PodcastList = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  margin-top: 5%;
-  max-width: 800px;
+const FeatureList = styled(TitleSectionGrid)<{ narrow?: boolean }>`
+  padding-top: 0;
+  padding-bottom: 2%;
+  & > div {
+    grid-column: 2 span 9;
+    display: flex;
+    gap: ${(props) => (props.narrow ? "1rem" : "3.5rem")};
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  article {
+    width: ${(props) =>
+      props.narrow ? "calc(33% - 1rem)" : "calc(33% - 2.5rem)"};
+  }
+  & > div > div {
+    width: ${(props) =>
+      props.narrow ? "calc(33% - 1rem)" : "calc(33% - 2.5rem)"};
+  }
 `;

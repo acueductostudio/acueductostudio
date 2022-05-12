@@ -12,6 +12,7 @@ interface TitleProps {
   as?:string;
   borderTop?: boolean;
   children?: React.ReactNode;
+  heading?:string;
 };
 
 const TitleSection = ({
@@ -22,6 +23,7 @@ const TitleSection = ({
   as,
   borderTop, 
   children,
+  heading,
   ...intro
 }: TitleProps) => {
   return (

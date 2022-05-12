@@ -11,18 +11,42 @@
     "form": {
       "email": {
         "placeholder": "ingresa tu email",
-        "errorMissing": "*falta tu email",
-        "errorInvalid": "*email inválido"
+        "errorMissing": "falta tu email",
+        "errorInvalid": "email inválido"
       },
       "submit": "suscríbeme",
       "loading": "enviando...",
-      "success": {
-        "p": "¡Éxito! Ahora revisa tu email para confirmar tu suscripción."
-      }
+      "success": "¡Éxito! Ahora revisa tu email para confirmar tu suscripción"
     }
   },
   "banner": {
     "title": "aprende desde la experiencia de quienes ya recorrieron el camino que tú buscas recorrer",
-    "p": "Platicamos con fundadores heads of design y chiefs of growth de startups tecnológicas así como con inversionistas de ventura capital"
+    "p": "Platicamos con fundadores heads of design y chiefs of growth de startups tecnológicas así como con inversionistas de venture capital"
+  },
+  "favorites": {
+    "title": "episodios</br>más escuchados",
+    "button": "ver todos los episodios"
+  },
+  "chapters": {
+    "title": "en cada capítulo encontrarás",
+    "themes": [
+      {
+        "title": "experiencias de</br> líderes y profesionales",
+        "p": "Aprende de los mejores jugadores de la industria tecnológica en LATAM"
+      },
+      {
+        "title": "medidas accionables</br> para tu startup",
+        "p": "Siempre buscamos poner sobre la mesa tácticas tangibles para aplicar en el mundo real"
+      },
+      {
+        "title": "recursos para ti</br> y para tu equipo",
+        "p": "Compartimos blogs, podcasts, artículos, newsletters y cualquier otro recurso"
+      }
+    ]
+  },
+  "closing": {
+    "label": "encuentra",
+    "title": "los mejores recursos para negocios digitales",
+    "p": "Descubre cómo funcionan las mejores empresas del sector"
   }
 }

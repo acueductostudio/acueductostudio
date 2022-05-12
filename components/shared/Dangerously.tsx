@@ -21,6 +21,10 @@ export const H4 = ({ children, ...props }) => (
   <h4 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
+export const H5 = ({ children, ...props }) => (
+  <h5 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
+);
+
 export const P = ({ children, ...props }) => (
   <p {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );

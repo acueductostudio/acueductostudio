@@ -12,3 +12,13 @@
 - 🙋🏻‍♀️ [Facebook](https://www.facebook.com/acueducto.studio/)
 - 🦜 [Twitter](https://twitter.com/acueductostudio)
 - 🔌 [LinkedIn](https://www.linkedin.com/company/acueductostudio/)
+
+
+
+## TODO:
+- headings on descending order
+- error de emotion / Fade
+- última pill descentrada
+- activar la lista de email
+- meta tags
+- mobile

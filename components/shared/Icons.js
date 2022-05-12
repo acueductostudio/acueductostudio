@@ -8,6 +8,9 @@ import ReviewIcon from "public/assets/img/layout/icons/review.svg";
 import DigitalTransformationIcon from "public/assets/img/layout/icons/digitaltransformation.svg";
 import StrategicDesignIcon from "public/assets/img/layout/icons/strategicdesign.svg";
 
+import PersonaIcon from "public/assets/img/layout/icons/persona.svg";
+import CheckIcon from "public/assets/img/layout/icons/check.svg"
+
 import AppsIcon from "public/assets/img/layout/icons/apps.svg";
 import DigitalProductsIcon from "public/assets/img/layout/icons/products.svg";
 import StrategyIcon from "public/assets/img/layout/icons/strategy.svg";
@@ -25,6 +28,10 @@ export const Review = () => <ReviewIcon />;
 // Grand Areas
 export const DigitalTransformation = () => <DigitalTransformationIcon />;
 export const StrategicDesign = () => <StrategicDesignIcon />;
+
+//Podcast Icons
+export const Persona = () => <PersonaIcon />;
+export const Check = () => <CheckIcon />;
 
 // Products
 export const Apps = () => <AppsIcon />;
