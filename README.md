@@ -17,7 +17,6 @@
 
 ## TODO:
 - headings on descending order
-- error de emotion / Fade
 - última pill descentrada
 - activar la lista de email
 - meta tags

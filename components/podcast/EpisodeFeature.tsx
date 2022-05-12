@@ -5,7 +5,7 @@ import EpisodeProps from "utils/types/EpisodeProps";
 import Picture from "components/caseStudy/shared/Picture";
 import BorderLink from "components/shared/BorderedLink";
 
-const EpisodePreview = ({
+const EpisodeFeature = ({
   title,
   guest,
   business,
@@ -30,11 +30,9 @@ const EpisodePreview = ({
         </PictureContainer>
         <Fade triggerOnce>
           <Guest>
-            <LinkComplex>
               <h3>
                 {guest} <span>{business}</span>   
               </h3>
-            </LinkComplex>
           </Guest>
           <HoverableContainer>
             <H2overable>{title}</H2overable>
@@ -45,7 +43,7 @@ const EpisodePreview = ({
   );
 };
 
-export default EpisodePreview;
+export default EpisodeFeature;
 
 const HoverableContainer = styled.div`
   margin-bottom: 8px;
