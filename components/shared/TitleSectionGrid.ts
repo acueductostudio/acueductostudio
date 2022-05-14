@@ -26,11 +26,12 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
     props.borderTop
       ? `${props.theme.stroke} solid ${props.theme.colors.foreground}`
       : "none"};
-  h1 {
+  .h1 {
     letter-spacing: 0;
     line-height: 100%;
     font-size: 7rem;
     margin-bottom: 5%;
+    font-weight: 400;
     max-width: 810px;
     color: ${(props) => props.theme.colors.accent};
   }
@@ -63,7 +64,7 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
     }
   }
   @media (max-width: 1250px) {
-    h1 {
+    .h1 {
       font-size: 6rem;
       line-height: 110%;
     }
@@ -74,13 +75,13 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
     }
   }
   @media (max-width: 950px) {
-    h1 {
+    .h1 {
       font-size: 5rem;
     }
   }
   @media (max-width: 800px) {
     padding-top: 15%;
-    h1 {
+    .h1 {
       font-size: 4rem;
     }
     div {
@@ -94,7 +95,7 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
   }
   @media (max-width: 600px) {
     grid-column-gap: 0rem;
-    h1 {
+    .h1 {
       margin-bottom: 0;
       font-size: 3.4rem;
     }

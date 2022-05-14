@@ -75,7 +75,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
         </Fade>
       </FullSection>
       <EpisodesSection>
-        <TitleSection title={favorites.title} />
+        <TitleSection title={favorites.title} heading={2}/>
         <FeatureList>
           <div>
             {episodes.map((episode, index) => (
@@ -94,7 +94,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
         </Fade>
       </EpisodesSection>
       <FeaturesSection>
-        <TitleSection title={chapters.title} borderTop />
+        <TitleSection title={chapters.title} borderTop heading={2} />
         <Fade triggerOnce>
           <FeatureList narrow>
             <div>
@@ -248,6 +248,12 @@ const FullSection = styled.section`
     color: ${(p) => p.theme.colors.foreground_low};
     max-width: 610px;
   }
+  @media(max-width:1250px){
+    h2{
+      font-size: 4rem;
+      max-width: 750px;
+    }
+  }
 `;
 
 const FullLastSection = styled.section`
@@ -282,6 +288,7 @@ const FullLastSection = styled.section`
 
 const PodcastGrid = styled(TitleSectionGrid)`
   background-color: ${(p) => p.theme.colors.background};
+  background-repeat: no-repeat;
   background-image: url("/assets/img/podcast/backOld.svg");
   background-size: cover;
   background-position: top right;
@@ -313,34 +320,55 @@ const PodcastGrid = styled(TitleSectionGrid)`
     position: relative;
     max-width: 510px;
   }
-  @media (max-width: 1250px) {
+  @media (max-width: 1480px) {
     h1 {
       font-size: 6rem;
     }
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1280px) {
     h1 {
       font-size: 5rem;
     }
   }
+  @media (max-width: 1100px) {
+    & > div:nth-of-type(2),
+    & > div:nth-of-type(1) {
+      grid-column: 2 / span 12;
+      padding-left: 0;
+    }
+  }
   @media (max-width: 800px) {
+    padding-top: 15%;
+    & > div:nth-of-type(2),
+    & > div:nth-of-type(1) {
+      grid-column: 3 / span 8;
+    }
     h1 {
+      margin-bottom: 5%;
       font-size: 4rem;
+      font-weight: 200;
+      line-height: 110%;
     }
   }
   @media (max-width: 600px) {
-    margin-bottom: 15%;
+    background-attachment: auto;
     & > div {
       grid-column: 1 / span 12;
     }
+    & > div:nth-of-type(2),
+    & > div:nth-of-type(1) {
+      grid-column: 1 / span 12;
+    }
+    & > div:nth-of-type(2) {
+      padding: 5%;
+    }
+
     p {
       padding-top: 10px;
     }
     h1 {
-      line-height: 0.9;
-      padding-top: 5%;
-      padding-bottom: 3%;
-      grid-column-end: 12;
+      font-size: 3.4rem;
+      line-height: 110%;
     }
   }
 `;
@@ -362,5 +390,26 @@ const FeatureList = styled(TitleSectionGrid)<{ narrow?: boolean }>`
   & > div > div {
     width: ${(props) =>
       props.narrow ? "calc(33% - 1rem)" : "calc(33% - 2.5rem)"};
+  }
+  @media (max-width: 1360px) {
+    & > div {
+      gap: ${(props) => (props.narrow ? "1rem" : "4rem")};
+      & > div,
+      article {
+        width: ${(props) =>
+          props.narrow ? "calc(50% - 1rem)" : "calc(50% - 2rem)"};
+        a {
+          max-width: unset;
+        }
+      }
+    }
+  }
+  @media (max-width: 950px) {
+    & > div {
+      & > div,
+      article {
+        width: 100%;
+      }
+    }
   }
 `;

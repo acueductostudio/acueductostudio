@@ -3,25 +3,26 @@ import createMarkup from "utils/createMarkup";
 type DangerousProps = {
   children: React.ReactNode;
   props?: any;
+  className?: string;
 };
 
 export const H1 = ({ children, ...props }: DangerousProps) => (
   <h1 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
-export const H2 = ({ children, ...props }) => (
+export const H2 = ({ children, ...props }: DangerousProps) => (
   <h2 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
-export const H3 = ({ children, ...props }) => (
+export const H3 = ({ children, ...props }: DangerousProps) => (
   <h3 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
-export const H4 = ({ children, ...props }) => (
+export const H4 = ({ children, ...props }: DangerousProps) => (
   <h4 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 
-export const H5 = ({ children, ...props }) => (
+export const H5 = ({ children, ...props }: DangerousProps) => (
   <h5 {...props} dangerouslySetInnerHTML={createMarkup(children)} />
 );
 

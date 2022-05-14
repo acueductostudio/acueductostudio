@@ -120,6 +120,22 @@ const PillForm = styled.form`
     margin-left: -2px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
   }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    & div:nth-of-type(1) {
+      input {
+        border-radius: 100px;
+        height: 57px;
+        padding: 11px 16px 16px 24px;
+      }
+    }
+    & div:nth-of-type(2) {
+      border-radius: 100px;
+      margin-left: inherit;
+      align-self: auto;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
 `;
 
 const fadeIn = keyframes`

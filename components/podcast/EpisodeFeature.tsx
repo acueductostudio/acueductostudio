@@ -12,11 +12,6 @@ const EpisodeFeature = ({
   slug,
   episode,
 }: EpisodeProps) => {
-  const LinkComplex = ({ children }: { children: React.ReactNode }) => (
-    <Link href={"/podcast/" + slug} passHref>
-      <a>{children}</a>
-    </Link>
-  );
   return (
     <Link href={"/podcast/" + slug} passHref key={"npd" + episode}>
       <NewPod>
@@ -30,9 +25,9 @@ const EpisodeFeature = ({
         </PictureContainer>
         <Fade triggerOnce>
           <Guest>
-              <h3>
+              <h4>
                 {guest} <span>{business}</span>   
-              </h3>
+              </h4>
           </Guest>
           <HoverableContainer>
             <H2overable>{title}</H2overable>
@@ -49,7 +44,7 @@ const HoverableContainer = styled.div`
   margin-bottom: 8px;
 `;
 
-const H2overable = styled.h5`
+const H2overable = styled.h3`
   ${BorderLink({ showLink: false })}
   &:first-letter {
     text-transform: lowercase;
@@ -100,7 +95,7 @@ const NewPod = styled.a`
   a {
     text-decoration: none;
   }
-  h5 {
+  h3 {
     font-size: 2.1rem;
     font-weight: 100;
     line-height: 125%;
@@ -108,7 +103,7 @@ const NewPod = styled.a`
     margin-bottom: 12px;
     transition: 0.3s ease all;
   }
-  h3 {
+  h4 {
     font-size: 2rem;
     color: ${(p) => p.theme.colors.foreground};
     margin-top: -4px;

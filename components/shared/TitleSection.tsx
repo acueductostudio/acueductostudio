@@ -1,5 +1,5 @@
 import React from "react";
-import { P, H1 } from "components/shared/Dangerously";
+import { P, H1, H2 } from "components/shared/Dangerously";
 import Grid, { Container } from "./TitleSectionGrid";
 import LinkWithArrow from "components/shared/LinkWithArrow";
 import { Fade } from "react-awesome-reveal";
@@ -9,11 +9,11 @@ interface TitleProps {
   p?: string;
   link?: string;
   linktext?: string;
-  as?:string;
+  as?: string;
   borderTop?: boolean;
   children?: React.ReactNode;
-  heading?:string;
-};
+  heading?: number;
+}
 
 const TitleSection = ({
   title,
@@ -21,16 +21,22 @@ const TitleSection = ({
   link,
   linktext,
   as,
-  borderTop, 
+  borderTop,
   children,
   heading,
-  ...intro
 }: TitleProps) => {
   return (
     <Grid borderTop={borderTop}>
-      <Fade triggerOnce>
-        <H1>{title}</H1>
-      </Fade>
+      {(!heading || heading === 1) && (
+        <Fade triggerOnce>
+          <H1 className="h1">{title}</H1>
+        </Fade>
+      )}
+      {heading === 2 && (
+        <Fade triggerOnce>
+          <H2 className="h1">{title}</H2>
+        </Fade>
+      )}
       {p && (
         <Fade triggerOnce>
           <P>{p}</P>
@@ -39,7 +45,7 @@ const TitleSection = ({
       {link && (
         <Container>
           <Fade triggerOnce>
-            <LinkWithArrow link={link} linktext={linktext} as={as}/>
+            <LinkWithArrow link={link} linktext={linktext} as={as} />
           </Fade>
         </Container>
       )}
