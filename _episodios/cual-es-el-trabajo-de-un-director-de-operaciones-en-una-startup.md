@@ -1,7 +1,7 @@
 ---
 episode: 8
 date: "2021-03-31"
-title: ¿Cuál es el trabajo de un director de operaciones en una startup?
+title: ¿Cuál es el trabajo de una directora de operaciones en una startup?
 guest: Maricarmen Herrerías
 business: Casai
 category: Founder

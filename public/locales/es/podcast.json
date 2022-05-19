@@ -6,7 +6,47 @@
     "headerTitle": "Podcast"
   },
   "intro": {
-    "title": "cuando el río suena",
-    "p": "Conversaciones con expertos y profesionales del ecosistema digital latinoamericano alrededor de sus mejores consejos para construir negocios saludables de internet o con la tecnología en el núcleo."
+    "title": "construye un negocio saludable de internet",
+    "p": "Este es un podcast con guía y mentoría para empresas tecnológicas sin importar si están en etapa pre-semilla o a punto de salir a la bolsa. Conoce la experiencia y mejores consejos de los líderes de las startups más emocionantes de Latinoamérica.",
+    "form": {
+      "email": {
+        "placeholder": "ingresa tu email",
+        "errorMissing": "falta tu email",
+        "errorInvalid": "email inválido"
+      },
+      "submit": "suscríbeme",
+      "loading": "enviando...",
+      "success": "¡Éxito! Ahora revisa tu email para confirmar tu suscripción"
+    }
+  },
+  "banner": {
+    "title": "aprende desde la experiencia de quienes ya recorrieron el camino que tú buscas recorrer",
+    "p": "Platicamos con fundadores heads of design y chiefs of growth de startups tecnológicas así como con inversionistas de venture capital"
+  },
+  "favorites": {
+    "title": "episodios</br>más escuchados",
+    "button": "ver todos los episodios"
+  },
+  "chapters": {
+    "title": "en cada capítulo encontrarás",
+    "themes": [
+      {
+        "title": "experiencias de</br> líderes y profesionales",
+        "p": "Aprende de los mejores jugadores de la industria tecnológica en LATAM"
+      },
+      {
+        "title": "medidas accionables</br> para tu startup",
+        "p": "Siempre buscamos poner sobre la mesa tácticas tangibles para aplicar en el mundo real"
+      },
+      {
+        "title": "recursos para ti</br> y para tu equipo",
+        "p": "Compartimos blogs, podcasts, artículos, newsletters y cualquier otro recurso"
+      }
+    ]
+  },
+  "closing": {
+    "label": "encuentra",
+    "title": "los mejores recursos para negocios digitales",
+    "p": "Descubre cómo funcionan las mejores empresas del sector"
   }
 }

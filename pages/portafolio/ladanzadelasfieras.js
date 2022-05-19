@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
 import Head from "components/layout/Head";
