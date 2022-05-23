@@ -6,6 +6,10 @@ guest: Natalia Amaya
 business: InstaFit
 category: Founder
 description: Esta ocasión platicamos con Natalia Amaya, CEO de InstaFit, una empresa de wellness latinoamericana con más de ocho años en el mercado. Hablamos de mejores prácticas en las appstores, la importancia de poder pivotear y herramientas no-code.
+spotify: https://open.spotify.com/episode/0OTn3M7C7yQb9hKLGnAk8S
+apple: https://podcasts.apple.com/us/podcast/las-dos-cosas-que-necesitas-para-que-tu-startup-sea/id1500473556?i=1000563226640
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDY1NDA2Mw
+youtube: https://www.youtube.com/watch?v=q4X8oYqn5_Q
 ---
 
 **Artemio:** Hola a todos, bienvenidos a un episodio más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la innovación y la tecnología para que compartan con nosotros sus mejores _insights_ y consejos para construir negocios saludables de internet.
