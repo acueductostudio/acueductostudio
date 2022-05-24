@@ -75,7 +75,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
         </Fade>
       </FullSection>
       <EpisodesSection>
-        <TitleSection title={favorites.title} heading={2}/>
+        <TitleSection title={favorites.title} heading={2} />
         <FeatureList>
           <div>
             {episodes.map((episode, index) => (
@@ -116,8 +116,10 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
       </FeaturesSection>
       <FullLastSection>
         <Fade triggerOnce>
-          <span>{closing.label}</span>
-          <h5>{closing.title}</h5>
+          <h5>
+            <span>{closing.label}</span>
+            {closing.title}
+          </h5>
           <p>{closing.p}</p>
           <div>
             <MetalForm onSubmit={onSubmit} id={"podcastOL"} text={intro.form} />
@@ -248,8 +250,8 @@ const FullSection = styled.section`
     color: ${(p) => p.theme.colors.foreground_low};
     max-width: 610px;
   }
-  @media(max-width:1250px){
-    h2{
+  @media (max-width: 1250px) {
+    h2 {
       font-size: 4rem;
       max-width: 750px;
     }
@@ -271,11 +273,15 @@ const FullLastSection = styled.section`
     margin-top: 0px;
     max-width: 850px;
     color: ${(p) => p.theme.colors.accent};
-  }
-  & > div > span {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    letter-spacing: 4px;
+    & > span {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      color: ${(p) => p.theme.colors.foreground_low};
+      display: block;
+      text-align: center;
+      line-height: 30px;
+    }
   }
   & > p {
     color: ${(p) => p.theme.colors.foreground_low};
