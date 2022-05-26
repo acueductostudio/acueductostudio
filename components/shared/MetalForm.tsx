@@ -88,6 +88,7 @@ const PillForm = styled.form`
   position: relative;
   display: flex;
   margin-top: 6%;
+  text-align:left;
   & div:nth-of-type(1) {
     width: auto;
     margin: 0;
@@ -120,19 +121,27 @@ const PillForm = styled.form`
     margin-left: -2px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
   }
-  @media (max-width: 480px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     & div:nth-of-type(1) {
+      max-width: 350px;
       input {
         border-radius: 100px;
         height: 57px;
         padding: 11px 16px 16px 24px;
       }
+      span {
+        position: relative;
+        display: inline-block;
+        margin: 0;
+        bottom: -5px;
+      }
     }
     & div:nth-of-type(2) {
       border-radius: 100px;
+      margin-top: 10px;
       margin-left: inherit;
-      align-self: auto;
+      align-self: flex-start;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
     }
   }

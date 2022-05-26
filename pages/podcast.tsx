@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import EpisodeProps from "utils/types/EpisodeProps";
@@ -9,7 +9,7 @@ import { getEpisodeBySlug } from "utils/podcastApi";
 import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
-import { H1, H5 } from "components/shared/Dangerously";
+import { H1, H3 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
@@ -18,30 +18,52 @@ import MetalForm from "components/shared/MetalForm";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 import Tilt from "react-parallax-tilt";
 import { Persona, Check, BuildStory } from "components/shared/Icons";
+import { createContact } from "utils/sendinBlue";
+import ReactPixel from "react-facebook-pixel";
+import { logEvent, advancedMatching } from "utils/analytics";
 
 const iconArray = [Persona, Check, BuildStory];
 
 function PodcastLanding({ locale, setTitle, episodes, pt }) {
   const { intro, head, banner, favorites, chapters, closing } = pt;
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setTitle(head.headerTitle);
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      setIsMobile(true);
+    }
   }, [locale]);
 
-  const onSubmit = (data) => {
-    console.log("Desactivado", data);
-    // // Create contact and add to list 3 (Consulting funnel) w/ test results
-    // createContact({
-    //   firstName: data.firstName,
-    //   lastName: data.lastName,
-    //   email: data.email,
-    //   listIds: [3],
-    //   updateEnabled: true,
-    // });
-    // Cookies.set("ue", data.email);
-    // ReactPixel.init("506854653278097", advancedMatching(data.email));
-    // // Pidió consultoría
-    // ReactPixel.track("SubmitApplication", { email: data.email });
+  const activateSubscribePixels = (data) => {
+    ReactPixel.init("506854653278097", advancedMatching(data.email));
+    // Suscripción a la newsletter
+    logEvent("newsletter-popup", "dejó email");
+    ReactPixel.track("Subscribe", { email: data.email });
+  }
+
+  const onSubmitHeader = (data) => {
+    createContact({
+      email: data.email,
+      listIds: [2],
+      updateEnabled: true,
+      attributes: {
+        SUBSCRIBED_FROM: "Landing Header",
+      },
+    }); 
+    activateSubscribePixels(data);
+  };
+
+  const onSubmitFooter = (data) => {
+    createContact({
+      email: data.email,
+      listIds: [2],
+      updateEnabled: true,
+      attributes: {
+        SUBSCRIBED_FROM: "Landing Footer",
+      },
+    }); 
+    activateSubscribePixels(data);
   };
 
   return (
@@ -56,16 +78,18 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
           <div>
             <H1>{intro.title}</H1>
             <p>{intro.p}</p>
-            <MetalForm onSubmit={onSubmit} id={"podcastOL"} text={intro.form} />
+            <MetalForm onSubmit={onSubmitHeader} id={"podcastOL"} text={intro.form} />
           </div>
-          <Tilt trackOnWindow={true} gyroscope={true}>
-            <Image
-              width={380}
-              height={380}
-              src={"/assets/img/layout/podcast_cover.svg"}
-              alt={"Cuando el río suena"}
-            />
-          </Tilt>
+          <div>
+            <Tilt trackOnWindow={true}>
+              <Image
+                width={380}
+                height={380}
+                src={"/assets/img/layout/podcast_cover.svg"}
+                alt={"Cuando el río suena"}
+              />
+            </Tilt>
+          </div>
         </Fade>
       </PodcastGrid>
       <FullSection>
@@ -80,7 +104,12 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
           <div>
             {episodes.map((episode, index) => (
               <div key={"npd" + index}>
-                <Tilt gyroscope={true} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+                <Tilt
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  tiltEnable={!isMobile}
+                >
+                  {!isMobile}
                   <EpisodeFeature {...episode} />
                 </Tilt>
               </div>
@@ -105,7 +134,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
                     <div>
                       <Icon />
                     </div>
-                    <H5>{chapter.title}</H5>
+                    <H3>{chapter.title}</H3>
                     <p>{chapter.p}</p>
                   </Feature>
                 );
@@ -116,13 +145,13 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
       </FeaturesSection>
       <FullLastSection>
         <Fade triggerOnce>
-          <h5>
-            <span>{closing.label}</span>
+          <h4>
+            <span>{closing.label} </span>
             {closing.title}
-          </h5>
+          </h4>
           <p>{closing.p}</p>
           <div>
-            <MetalForm onSubmit={onSubmit} id={"podcastOL"} text={intro.form} />
+            <MetalForm onSubmit={onSubmitFooter} id={"podcastOL"} text={intro.form} />
           </div>
         </Fade>
       </FullLastSection>
@@ -179,8 +208,9 @@ const Feature = styled.article`
   background-color: #101213;
   border-radius: 50px;
   padding: 3.5rem 3.5rem 3.5rem 3.5rem;
-  h5 {
+  h3 {
     font-size: 2rem;
+    line-height: 130%;
     font-weight: 100;
     margin: 20px 0;
   }
@@ -205,6 +235,20 @@ const Feature = styled.article`
     .accent {
       stroke: ${(p) => p.theme.colors.accent};
     }
+  }
+  @media (max-width: 900px) {
+    padding: 3rem;
+    border-radius: 40px;
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+  @media (max-width: 620px) {
+    p {
+      font-size: 1.5rem;
+    }
+    padding: 2.5rem;
+    border-radius: 30px;
   }
 `;
 
@@ -256,6 +300,23 @@ const FullSection = styled.section`
       max-width: 750px;
     }
   }
+  @media (max-width: 900px) {
+    h2 {
+      font-size: 3.4rem;
+      margin-bottom: 18px;
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 10% 4%;
+    h2 {
+      font-size: 3rem;
+    }
+  }
+  @media (max-width: 450px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
 `;
 
 const FullLastSection = styled.section`
@@ -264,7 +325,7 @@ const FullLastSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  h5 {
+  h4 {
     max-width: 1100px;
     font-weight: 400;
     font-size: 6.5rem;
@@ -290,6 +351,39 @@ const FullLastSection = styled.section`
   & > div {
     min-width: 455px;
   }
+  @media (max-width: 960px) {
+    h4 {
+      font-size: 5rem;
+    }
+  }
+  @media (max-width: 800px) {
+    text-align: left;
+    align-items: flex-start;
+    padding: 0 20% 14%;
+    & > div {
+      min-width: unset;
+    }
+    p {
+      width: 100%;
+    }
+    h4 {
+      font-size: 4rem;
+      max-width: unset;
+      span {
+        text-align: left;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    padding: 0 4% 14%;
+    form {
+      margin-top: 10%;
+    }
+    h4 {
+      font-size: 3.4rem;
+      margin-bottom: 16px;
+    }
+  }
 `;
 
 const PodcastGrid = styled(TitleSectionGrid)`
@@ -297,7 +391,6 @@ const PodcastGrid = styled(TitleSectionGrid)`
   background-repeat: no-repeat;
   background-image: url("/assets/img/podcast/backOld.svg");
   background-size: cover;
-  background-position: top right;
   background-attachment: fixed;
   width: 100%;
   padding: 10% 4%;
@@ -326,6 +419,12 @@ const PodcastGrid = styled(TitleSectionGrid)`
     position: relative;
     max-width: 510px;
   }
+  /*      height      */
+  @media (max-height: 800px), (max-width: 1100px) {
+    min-height: unset;
+  }
+
+  /*      width      */
   @media (max-width: 1480px) {
     h1 {
       font-size: 6rem;
@@ -337,10 +436,21 @@ const PodcastGrid = styled(TitleSectionGrid)`
     }
   }
   @media (max-width: 1100px) {
-    & > div:nth-of-type(2),
     & > div:nth-of-type(1) {
       grid-column: 2 / span 12;
       padding-left: 0;
+      form {
+        margin-top: 4%;
+      }
+    }
+    & > div:nth-of-type(2) {
+      grid-column: 2 / span 12;
+      padding: 5% 5% 5% 1%;
+      display: flex;
+      & > div {
+        width: 100%;
+        max-width: 300px;
+      }
     }
   }
   @media (max-width: 800px) {
@@ -355,9 +465,17 @@ const PodcastGrid = styled(TitleSectionGrid)`
       font-weight: 200;
       line-height: 110%;
     }
+    & > div:nth-of-type(2) {
+      justify-content: center;
+      padding-top: 10%;
+      & > div {
+        max-width: 200px;
+      }
+    }
   }
   @media (max-width: 600px) {
-    background-attachment: auto;
+    background-position: right center;
+    background-attachment: scroll;
     & > div {
       grid-column: 1 / span 12;
     }
@@ -365,10 +483,9 @@ const PodcastGrid = styled(TitleSectionGrid)`
     & > div:nth-of-type(1) {
       grid-column: 1 / span 12;
     }
-    & > div:nth-of-type(2) {
-      padding: 5%;
+    & > div:nth-of-type(2) > div {
+      max-width: 200px;
     }
-
     p {
       padding-top: 10px;
     }
@@ -411,7 +528,9 @@ const FeatureList = styled(TitleSectionGrid)<{ narrow?: boolean }>`
     }
   }
   @media (max-width: 950px) {
+    margin: 20px 0;
     & > div {
+      gap: 2rem;
       & > div,
       article {
         width: 100%;

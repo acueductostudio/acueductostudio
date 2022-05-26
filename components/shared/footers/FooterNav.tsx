@@ -28,7 +28,7 @@ export default function FooterNav() {
       <Navs>
         <NavList>
           <Fade triggerOnce>
-            <h6>{navTitles.main}</h6>
+            <h3>{navTitles.main}</h3>
           </Fade>
           <ul>
             {main.map((item, index) => (
@@ -53,7 +53,7 @@ export default function FooterNav() {
         {context.lang === "es" && (
           <NavList>
             <Fade triggerOnce>
-              <h6>{navTitles.resources}</h6>
+              <h3>{navTitles.resources}</h3>
             </Fade>
             <ul>
               {resources.map((item, index) => (
@@ -78,7 +78,7 @@ export default function FooterNav() {
         )}
         <NavList id="community">
           <Fade triggerOnce>
-            <h6>{navTitles.community}</h6>
+            <h3>{navTitles.community}</h3>
           </Fade>
           <ul>
             {socialNav.map((item, index) => (
@@ -96,7 +96,7 @@ export default function FooterNav() {
         </NavList>
         <NavList accentColor>
           <Fade triggerOnce>
-            <h6>{navTitles.policies}</h6>
+            <h3>{navTitles.policies}</h3>
           </Fade>
           <ul>
             {policies.map((item, index) => (
@@ -176,7 +176,7 @@ const NavList = styled.div<{ accentColor?: boolean }>`
       margin-bottom: 20px;
     }
   }
-  h6 {
+  h3 {
     font-size: 2.1rem;
     font-weight: 200;
     margin: 0 0 30px;
@@ -184,7 +184,7 @@ const NavList = styled.div<{ accentColor?: boolean }>`
       p.accentColor ? p.theme.colors.accent : p.theme.colors.foreground_low};
   }
   @media (max-width: 950px) {
-    h6 {
+    h3 {
       font-size: 2rem;
     }
   }
@@ -194,7 +194,7 @@ const NavList = styled.div<{ accentColor?: boolean }>`
       grid-column-start: 2;
       grid-row-start: 1;
     }
-    h6 {
+    h3 {
       margin-bottom: 20px;
       margin-top: 20px;
     }

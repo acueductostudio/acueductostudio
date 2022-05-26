@@ -114,7 +114,7 @@ const NewPod = styled.a`
       text-transform: uppercase;
       letter-spacing: 0.2rem;
       font-weight: 200;
-      color: #C8C8C8};
+      color: #C8C8C8;
     }
   }
   div p {
@@ -142,6 +142,8 @@ const NewPod = styled.a`
   }
   @media (max-width: 900px) {
     flex-direction: column;
+    padding: 3rem 3rem 2rem 3rem;
+    border-radius: 40px;
     ${PictureContainer} {
       min-width: unset;
       max-width: 150px;
@@ -149,7 +151,8 @@ const NewPod = styled.a`
     }
   }
   @media (max-width: 620px) {
-    margin-top: 20%;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    border-radius: 30px;
     p {
       padding-top: 9px;
     }

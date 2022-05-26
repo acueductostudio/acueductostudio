@@ -7,8 +7,8 @@ export const capitalizeAll = (string: string) => {
 };
 
 interface NewContact {
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
   email: string;
   listIds: number[];
   updateEnabled: boolean;
@@ -18,8 +18,8 @@ interface NewContact {
 export const createContact = async (submittedData: NewContact) => {
   let { firstName, lastName, email, listIds, updateEnabled, attributes } =
     submittedData;
-  let capitalizedName = capitalize(firstName);
-  let capitalizedLastName = capitalize(lastName);
+  let capitalizedName = firstName ? capitalize(firstName) : " ";
+  let capitalizedLastName = lastName ? capitalize(lastName) : " "; 
 
   let requestOptions = {
     method: "POST",

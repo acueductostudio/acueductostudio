@@ -2,7 +2,7 @@ import React from "react";
 import { useLocaleContext } from "utils/LangContext";
 import styled from "styled-components";
 import Link from "next/link";
-import { H1 } from "components/shared/Dangerously";
+import { H2 } from "components/shared/Dangerously";
 import FooterNav from "./FooterNav";
 import { Fade } from "react-awesome-reveal";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
@@ -13,10 +13,10 @@ const ContactFooter = () => {
   const context = useLocaleContext();
   let { title, p, button_text } = context.contact_footer;
   return (
-    <>
+    <footer>
       <Grid>
         <Fade triggerOnce>
-          <H1>{title}</H1>
+          <H2 className="h1">{title}</H2>
         </Fade>
         <Fade triggerOnce>
           <p>{p}</p>
@@ -32,7 +32,7 @@ const ContactFooter = () => {
         <FooterLogoCrop />
       </Grid>
       <FooterNav />
-    </>
+    </footer>
   );
 };
 
@@ -42,7 +42,7 @@ const Grid = styled(TitleSectionGrid)`
   background-color: ${(props) => props.theme.colors.accent};
   box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.1);
   padding: 10% 4% 20% 4%;
-  h1 {
+  .h1 {
     color: ${(props) => props.theme.colors.foreground};
   }
   & > div {

@@ -84,7 +84,7 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
     .h1 {
       font-size: 4rem;
     }
-    div {
+    & > div {
       &:nth-of-type(1) {
         grid-column: 3 / span 8;
       }
@@ -99,7 +99,7 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
       margin-bottom: 0;
       font-size: 3.4rem;
     }
-    div {
+    & > div {
       &:nth-of-type(1) {
         grid-column: 1 / span 12;
       }
