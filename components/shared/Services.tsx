@@ -6,12 +6,15 @@ import TitleSection from "components/shared/TitleSection";
 const Services = ({
   services,
 }: {
-  services: { intro: { title: string; p: string }; service_categories: any };
+  services: {
+    intro: { title: string; p: string; link: string; linktext: string };
+    service_categories: any;
+  };
 }) => {
   const { intro, service_categories } = services;
   return (
     <ServicesSection>
-      <TitleSection {...intro} />
+      <TitleSection {...intro} borderTop />
       <ServiceGrid>
         {service_categories.map((service, index) => (
           <Service key={"service" + index}>

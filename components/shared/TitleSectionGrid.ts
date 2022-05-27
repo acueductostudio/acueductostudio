@@ -52,6 +52,19 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
       font-style: normal;
     }
   }
+  ul {
+    color: ${(props) => props.theme.colors.foreground_low};
+    position: relative;
+    max-width: 445px;
+    li {
+      list-style: none;
+        &:before {
+        content: "– ";
+        font-weight: 300;
+        color: ${(props) => props.theme.colors.accent};
+      }
+    }
+  }
   a {
     max-width: 445px;
   }

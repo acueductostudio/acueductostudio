@@ -11,6 +11,7 @@ interface TitleProps {
   linktext?: string;
   as?: string;
   borderTop?: boolean;
+  ul?: Array<String>;
   children?: React.ReactNode;
   heading?: number;
 }
@@ -23,6 +24,7 @@ const TitleSection = ({
   as,
   borderTop,
   children,
+  ul,
   heading,
 }: TitleProps) => {
   return (
@@ -41,6 +43,17 @@ const TitleSection = ({
         <Fade triggerOnce>
           <P>{p}</P>
         </Fade>
+      )}
+      {ul && (
+        <Container>
+          <Fade triggerOnce>
+            <ul>
+              {ul.map((t: string, index) => (
+                <li key={"li" + index}>{t}</li>
+              ))}
+            </ul>
+          </Fade>
+        </Container>
       )}
       {link && (
         <Container>
