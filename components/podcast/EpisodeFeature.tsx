@@ -55,14 +55,13 @@ const PictureContainer = styled.div<{ hoverable: boolean }>`
   margin-bottom: 7%;
   & > div {
     border-radius: 25px;
-    background-color: pink;
     overflow: hidden;
     display: inline-block;
     height: 142px;
   }
   img {
     transition: all 0.25s ease-out;
-    background-color: black;
+    background-color: #131516;
     transform: scale(1.01);
   }
 `;
@@ -87,7 +86,7 @@ const NewPod = styled.a`
   background-image: url("/assets/img/podcast/backCard.svg");
   background-size: cover;
   background-position: bottom;
-  background-color: #101213;
+  background-color: #131516;
   border-radius: 50px;
   padding: 3.5rem 3.5rem 2.5rem 3.5rem;
   text-decoration:none;
@@ -128,11 +127,11 @@ const NewPod = styled.a`
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: #151819;
+      background-color: #171A1C;
     }
   }
   &:active {
-    background-color: #151819;
+    background-color: #171A1C;
   }
 
   @media (max-width: 970px) {

@@ -25,7 +25,7 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
   const sort = (category) => {
     let allCats: any = document.querySelectorAll(`.out`);
     for (let epis of allCats) {
-      epis.style.backgroundColor = "##0D1111";
+      epis.style.backgroundColor = "#0D1111";
     }
     let selected = document.getElementById(`${category}out`);
     selected.style.backgroundColor = "#1A4CE0";

@@ -47,7 +47,7 @@ const Model = React.memo((props) => {
             attach="material"
             roughness={0.7}
             metalness={1}
-            emissive={"#0D1111"}
+            emissive={"#080C0C"}
             color={props.second ? "#56027A" : "#1A4CE0"}
             flatShading={false}
             computeVertexNormals
@@ -63,7 +63,7 @@ export default function HeadSketch(props) {
     <Fade triggerOnce>
       <SketchContainer>
         <Canvas camera={{ position: [0, -0.1, 5] }} raycaster={false}>
-          <ambientLight intensity={1} color={[8, 8, 8]} />
+          <ambientLight intensity={0.1} color={[100, 100, 100]} />
           <directionalLight
             intensity={1}
             color={props.second ? "#DA5686" : "#43C5A8"}
@@ -98,16 +98,7 @@ const SketchContainer = styled.div`
   }
   > div {
     mix-blend-mode: difference;
-  }
-  div div div {
-    width: 100%;
-    height: 100%;
-    padding-left: 10%;
-    color: ${(props) => props.theme.colors.foreground_lowest};
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    letter-spacing: 3.5px;
-  }
+  } 
   canvas {
     width: 100%;
     height: 100%;
