@@ -117,7 +117,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
           </div>
         </FeatureList>
         <Fade>
-          <Link href={"/podcast/archivo"} passHref>
+          <Link href={"/podcast/episodios"} passHref>
             <ButtonArrow text={favorites.button} inverse={true} />
           </Link>
         </Fade>
