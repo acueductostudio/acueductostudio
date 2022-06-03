@@ -6,7 +6,6 @@ guest: Andrew Devlyn
 business: FairPlay
 category: Founder
 description: En este episodio platicamos con Andrew James Devlyn, COO y Cofundador de Fairplay, la startup de inversión basada en ingresos de México. Tocamos temas como la cultura remota, automatizaciones de procesos en una startup y sus mejores consejos de operaciones.
-spotify: 0
 ---
 
 **Artemio:** ¿Qué tal? Bienvenidos a todos a una edición más de Cuando el Río suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y la innovación para que compartan con nosotros sus mejores _insights_ y consejos para construir negocios saludables de internet. El día de hoy me acompaña como ya es costumbre mi socio Rodrigo Salmerón. ¿Cómo estás Ro?
