@@ -60,6 +60,7 @@ const Button = styled.div<{ inverse: boolean; marginTop?: boolean }>`
   position: relative;
   display: inline-block;
   align-self: flex-start;
+  text-align:left;
   font-weight: 100;
   -webkit-appearance: button-bevel;
   margin-top: ${(p) => (p.marginTop ? "10px" : "0px")};

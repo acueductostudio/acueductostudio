@@ -5,16 +5,21 @@ import EpisodeProps from "utils/types/EpisodeProps";
 import Picture from "components/caseStudy/shared/Picture";
 import BorderLink from "components/shared/BorderedLink";
 
+type FullEpisodeProps = EpisodeProps & {
+  blue?: boolean;
+};
+
 const EpisodeFeature = ({
   title,
   guest,
   business,
   slug,
   episode,
-}: EpisodeProps) => {
+  blue,
+}: FullEpisodeProps) => {
   return (
     <Link href={"/podcast/" + slug} passHref key={"npd" + episode}>
-      <NewPod>
+      <NewPod blue={blue}>
         <PictureContainer hoverable={true}>
           <Picture
             src={`/assets/img/podcast/solas/${episode}.jpg`}
@@ -25,9 +30,9 @@ const EpisodeFeature = ({
         </PictureContainer>
         <Fade triggerOnce>
           <Guest>
-              <h4>
-                {guest} <span>{business}</span>   
-              </h4>
+            <h4>
+              {guest} <span>{business}</span>
+            </h4>
           </Guest>
           <HoverableContainer>
             <H2overable>{title}</H2overable>
@@ -78,18 +83,22 @@ const Guest = styled.div`
   }
 `;
 
-const NewPod = styled.a`
+const NewPod = styled.a<{ blue: boolean }>`
   display: flex;
   flex-direction: column;
+  text-align: left;
   max-width: 800px;
-  width:100%;
-  background-image: url("/assets/img/podcast/backCard.svg");
+  width: 100%;
+  background-image: ${(p) =>
+    p.blue
+      ? 'url("/assets/img/podcast/backCardWhite.svg")'
+      : 'url("/assets/img/podcast/backCard.svg")'};
   background-size: cover;
   background-position: bottom;
-  background-color: #131516;
+  background-color: ${(p) => (p.blue ? "#305EE3" : "#131516")};
   border-radius: 50px;
   padding: 3.5rem 3.5rem 2.5rem 3.5rem;
-  text-decoration:none;
+  text-decoration: none;
   transition: 0.3s ease-out all;
   a {
     text-decoration: none;
@@ -113,7 +122,7 @@ const NewPod = styled.a`
       text-transform: uppercase;
       letter-spacing: 0.2rem;
       font-weight: 200;
-      color: #C8C8C8;
+      color: #c8c8c8;
     }
   }
   div p {
@@ -127,11 +136,11 @@ const NewPod = styled.a`
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: #171A1C;
+      background-color: ${(p) => (p.blue ? "#3A65E4" : "#171a1c")};
     }
   }
   &:active {
-    background-color: #171A1C;
+    background-color: ${(p) => (p.blue ? "#3A65E4" : "#171a1c")};
   }
 
   @media (max-width: 970px) {

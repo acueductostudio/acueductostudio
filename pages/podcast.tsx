@@ -5,7 +5,7 @@ import Link from "next/link";
 import EpisodeProps from "utils/types/EpisodeProps";
 import EpisodeFeature from "components/podcast/EpisodeFeature";
 import ssrLocale from "utils/ssrLocale";
-import { getEpisodeBySlug } from "utils/podcastApi";
+import { getEpisodeBySlug, getAllEpisodes } from "utils/podcastApi";
 import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
@@ -24,7 +24,7 @@ import { logEvent, advancedMatching } from "utils/analytics";
 
 const iconArray = [Persona, Check, BuildStory];
 
-function PodcastLanding({ locale, setTitle, episodes, pt }) {
+function PodcastLanding({ locale, setTitle, episodes, lastEpisode, pt }) {
   const { intro, head, banner, favorites, chapters, closing } = pt;
   const [isMobile, setIsMobile] = useState(false);
 
@@ -40,7 +40,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
     // Suscripción a la newsletter
     logEvent("newsletter-popup", "dejó email");
     ReactPixel.track("Subscribe", { email: data.email });
-  }
+  };
 
   const onSubmitHeader = (data) => {
     createContact({
@@ -50,7 +50,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
       attributes: {
         SUBSCRIBED_FROM: "Landing Header",
       },
-    }); 
+    });
     activateSubscribePixels(data);
   };
 
@@ -62,7 +62,7 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
       attributes: {
         SUBSCRIBED_FROM: "Landing Footer",
       },
-    }); 
+    });
     activateSubscribePixels(data);
   };
 
@@ -78,7 +78,11 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
           <div>
             <H1>{intro.title}</H1>
             <p>{intro.p}</p>
-            <MetalForm onSubmit={onSubmitHeader} id={"podcastOL"} text={intro.form} />
+            <MetalForm
+              onSubmit={onSubmitHeader}
+              id={"podcastOL"}
+              text={intro.form}
+            />
           </div>
           <div>
             <Tilt trackOnWindow={true}>
@@ -93,10 +97,22 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
         </Fade>
       </PodcastGrid>
       <FullSection>
-        <Fade triggerOnce>
-          <h2>{banner.title}</h2>
-          <p>{banner.p}</p>
-        </Fade>
+        <div>
+          <Fade triggerOnce>
+            <h2>{banner.title}</h2>
+            <p>{banner.p}</p>
+            <div>
+              <Link href={"/podcast/" + lastEpisode.slug} passHref>
+                <ButtonArrow text={banner.button} />
+              </Link>
+            </div>
+          </Fade>
+        </div>
+        <Limiter>
+          <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} tiltEnable={!isMobile}>
+            <EpisodeFeature {...lastEpisode} blue />
+          </Tilt>
+        </Limiter>
       </FullSection>
       <EpisodesSection>
         <TitleSection title={favorites.title} heading={2} />
@@ -151,7 +167,11 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
           </h4>
           <p>{closing.p}</p>
           <div>
-            <MetalForm onSubmit={onSubmitFooter} id={"podcastOL"} text={intro.form} />
+            <MetalForm
+              onSubmit={onSubmitFooter}
+              id={"podcastOL"}
+              text={intro.form}
+            />
           </div>
         </Fade>
       </FullLastSection>
@@ -163,6 +183,27 @@ function PodcastLanding({ locale, setTitle, episodes, pt }) {
 export default React.memo(PodcastLanding);
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const sortedEpisodes = getAllEpisodes(["slug", "episode"]).sort((ep1, ep2) =>
+    ep1.episode > ep2.episode ? 1 : -1
+  );
+
+  const lastEpisodePop = sortedEpisodes.pop();
+
+  const lastEpisode = getEpisodeBySlug(lastEpisodePop.slug, [
+    "title",
+    "guest",
+    "business",
+    "description",
+    "category",
+    "episode",
+    "date",
+    "slug",
+    "spotify",
+    "apple",
+    "google",
+    "youtube",
+  ]);
+
   const featuredSlugs = [
     { slug: "construye-identidades-que-cuenten-historias" },
     { slug: "un-capitulo-que-todo-ceo-debe-escuchar" },
@@ -197,10 +238,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       episodes: [...episodes],
+      lastEpisode: lastEpisode,
       pt,
     },
   };
 };
+
+const Limiter = styled.div`
+  max-width: 350px;
+`;
 
 const Feature = styled.article`
   display: flex;
@@ -278,26 +324,52 @@ const EpisodesSection = styled.section`
 
 const FullSection = styled.section`
   background-color: ${(p) => p.theme.colors.accent};
-  text-align: center;
-  padding: 8% 4%;
+  padding: 8% 4% 8% 12%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: row-reverse;
+  & > div:first-of-type {
+    padding-left: 5%;
+  }
+  & > div > div:last-of-type {
+    margin-top: 5%;
+  }
   h2 {
     font-weight: 400;
-    font-size: 5rem;
+    font-size: 4.5rem;
     line-height: 118%;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     max-width: 930px;
   }
   p {
     color: ${(p) => p.theme.colors.foreground_low};
     max-width: 610px;
   }
-  @media (max-width: 1250px) {
+  @media (max-width: 1400px) {
     h2 {
       font-size: 4rem;
+    }
+  }
+  @media (max-width: 1250px) {
+    h2 {
+      font-size: 3.8rem;
       max-width: 750px;
+    }
+  }
+  @media (max-width: 1100px) {
+    padding: 8% 4%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    & > div:first-of-type {
+      padding-left: 0;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    & > div > div:last-of-type {
+      margin-top: 28px;
+      margin-bottom: 5%;
     }
   }
   @media (max-width: 900px) {
@@ -314,7 +386,7 @@ const FullSection = styled.section`
   }
   @media (max-width: 450px) {
     h2 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
     }
   }
 `;
