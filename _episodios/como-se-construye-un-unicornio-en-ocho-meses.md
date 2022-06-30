@@ -1,7 +1,7 @@
 ---
 episode: 50
 date: "2021-07-04"
-title: Cómo se construye un unicornio en ocho meses
+title: Cómo se construye un unicornio en ocho meses 
 guest: Gerry Giacomán y Diego Iván García
 business: Clara
 category: Founder
