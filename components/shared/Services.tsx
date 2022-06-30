@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import TitleSection from "components/shared/TitleSection";
 
-const Services = ({
+const Services = ({ 
   services,
 }: {
   services: {
