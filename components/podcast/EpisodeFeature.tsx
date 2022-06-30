@@ -29,10 +29,10 @@ const EpisodeFeature = ({
           />
         </PictureContainer>
         <Fade triggerOnce>
-          <Guest>
-            <h4>
+          <Guest blue={blue}>
+            <h3>
               {guest} <span>{business}</span>
-            </h4>
+            </h3>
           </Guest>
           <HoverableContainer>
             <H2overable>{title}</H2overable>
@@ -71,9 +71,13 @@ const PictureContainer = styled.div<{ hoverable: boolean }>`
   }
 `;
 
-const Guest = styled.div`
+const Guest = styled.div<{ blue: boolean }>`
   display: flex;
   margin-bottom: 10px;
+  text-shadow: ${(p) =>
+    p.blue
+      ? "-1px -1px 0 #305EE3,  1px -1px 0 #305EE3,-1px 1px 0 #305EE3,1px 1px 0 #305EE3;"
+      : "-1px -1px 0 #131516,  1px -1px 0 #131516,-1px 1px 0 #131516,1px 1px 0 #131516;"};
   a {
     display: flex;
   }
@@ -106,12 +110,12 @@ const NewPod = styled.a<{ blue: boolean }>`
   h3 {
     font-size: 2.1rem;
     font-weight: 100;
-    line-height: 125%;
+    line-height: 120%;
     margin-top: 0;
     margin-bottom: 12px;
     transition: 0.3s ease all;
   }
-  h4 {
+  h3 {
     font-size: 2rem;
     color: ${(p) => p.theme.colors.foreground};
     margin-top: -4px;

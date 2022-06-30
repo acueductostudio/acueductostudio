@@ -9,7 +9,7 @@ import { getEpisodeBySlug, getAllEpisodes } from "utils/podcastApi";
 import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
-import { H1, H3 } from "components/shared/Dangerously";
+import { H1, H2, H3 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 import TitleSectionGrid from "components/shared/TitleSectionGrid";
@@ -76,7 +76,8 @@ function PodcastLanding({ locale, setTitle, episodes, lastEpisode, pt }) {
       <PodcastGrid>
         <Fade triggerOnce>
           <div>
-            <H1>{intro.title}</H1>
+            <h1>{intro.subtitle}</h1>
+            <H2 className="h1">{intro.title}</H2>
             <p>{intro.p}</p>
             <MetalForm
               onSubmit={onSubmitHeader}
@@ -478,6 +479,17 @@ const PodcastGrid = styled(TitleSectionGrid)`
     grid-column: 2 / span 6;
   }
   h1 {
+    display: block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 200;
+    color: ${(props) => props.theme.colors.foreground_lower};
+  }
+  .h1 {
+    color: ${(props) => props.theme.colors.foreground};
+  }
+  h2 {
     letter-spacing: 0;
     line-height: 105%;
     font-size: 7rem;
@@ -498,12 +510,12 @@ const PodcastGrid = styled(TitleSectionGrid)`
 
   /*      width      */
   @media (max-width: 1480px) {
-    h1 {
+    h2 {
       font-size: 6rem;
     }
   }
   @media (max-width: 1280px) {
-    h1 {
+    h2 {
       font-size: 5rem;
     }
   }
@@ -531,7 +543,7 @@ const PodcastGrid = styled(TitleSectionGrid)`
     & > div:nth-of-type(1) {
       grid-column: 3 / span 8;
     }
-    h1 {
+    h2 {
       margin-bottom: 5%;
       font-size: 4rem;
       font-weight: 200;
@@ -561,7 +573,7 @@ const PodcastGrid = styled(TitleSectionGrid)`
     p {
       padding-top: 10px;
     }
-    h1 {
+    h2 {
       font-size: 3.4rem;
       line-height: 110%;
     }

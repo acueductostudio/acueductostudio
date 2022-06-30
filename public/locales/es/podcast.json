@@ -6,6 +6,7 @@
     "headerTitle": "Podcast"
   },
   "intro": {
+    "subtitle": "Cuando el río suena",
     "title": "construye un negocio saludable de internet",
     "p": "Este es un podcast con guía y mentoría para empresas tecnológicas sin importar si están en etapa pre-semilla o a punto de salir a la bolsa. Conoce la experiencia y mejores consejos de los líderes de las startups más emocionantes de Latinoamérica.",
     "form": {
@@ -25,7 +26,7 @@
     "button": "ver último episodio"
   },
   "favorites": {
-    "title": "episodios</br>más escuchados",
+    "title": "episodios</br> más escuchados",
     "button": "ver todos los episodios"
   },
   "chapters": {
