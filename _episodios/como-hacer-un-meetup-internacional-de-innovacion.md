@@ -1,7 +1,7 @@
 ---
 episode: 51
 date: "2022-07-11"
-title: Cómo hacer un meet up internacional de innovación 
+title: Cómo hacer un summit internacional de innovación 
 guest: Janma Bardi
 business: Volcano Summit
 category: Founder
