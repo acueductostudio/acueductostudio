@@ -5,7 +5,7 @@ title: Cómo hacer un meet up internacional de innovación
 guest: Janma Bardi
 business: Volcano Summit
 category: Founder
-description: En este capítulo platicamos con Janma Bardi, cofundadora de Volcano Summit, el meetup de innovación más grande de Guatemala. Charlamos sobre por qué asistir a eventos de networking para startups, mejores prácticas para desarrollarlos y cómo ofrecer experiencias fuera de lo común.
+description: En este capítulo platicamos con Janma Bardi, cofundadora de Volcano Summit, la conferencia de innovación más grande de Centroamérica que busca conectar el ecosistema de innovación y tecnología del mundo con LATAM. Charlamos sobre porqué asistir a eventos de networking para startups, mejores prácticas para desarrollarlos y cómo ofrecer experiencias que generen puentes de colaboración para acelerar la innovación en países emergentes.
 spotify: https://open.spotify.com/episode/5pmh8n2EFyGOiXVEi1ROqn
 apple: https://podcasts.apple.com/us/podcast/c%C3%B3mo-hacer-un-meet-up-internacional-de-innovaci%C3%B3n/id1500473556?i=1000569490748
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMDkyNDYxNg
