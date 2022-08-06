@@ -13,6 +13,7 @@ interface EpisodeFormat extends EpisodeProps {
   longFormat?: boolean;
   simplest?: boolean;
   text?: string;
+  hideImageMobile?: boolean;
 }
 
 const EpisodePreview = ({
@@ -31,6 +32,7 @@ const EpisodePreview = ({
   longFormat,
   simplest,
   text,
+  hideImageMobile,
 }: EpisodeFormat) => {
   const LinkComplex = ({ children }: { children: React.ReactNode }) => (
     <Link href={"/podcast/" + slug} passHref>
@@ -55,7 +57,10 @@ const EpisodePreview = ({
             : category.toLowerCase()
         } npd`}
       >
-        <PictureContainer hoverable={!longFormat}>
+        <PictureContainer
+          hoverable={!longFormat}
+          hideImageMobile={hideImageMobile}
+        >
           {longFormat ? (
             <Picture
               src={`/assets/img/podcast/${episode}.jpg`}
@@ -180,7 +185,10 @@ const H2overable = styled.h2`
   ${BorderLink({ showLink: false })}
 `;
 
-const PictureContainer = styled.div<{ hoverable: boolean }>`
+const PictureContainer = styled.div<{
+  hoverable: boolean;
+  hideImageMobile: boolean;
+}>`
   min-width: 180px;
   margin-right: 5%;
   img {
@@ -203,6 +211,9 @@ const PictureContainer = styled.div<{ hoverable: boolean }>`
       opacity: 1;
       transform: scale(0.99);
     }
+  }
+  @media (max-width: 900px) {
+    display: ${(p) => (p.hideImageMobile ? "none" : "inherit")};
   }
 `;
 

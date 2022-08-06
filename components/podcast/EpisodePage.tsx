@@ -13,6 +13,7 @@ import CenteredSection, {
   Transcript,
 } from "components/shared/CenteredSection";
 import ShareRouter from "./ShareRouter";
+import YouTubePlayer from "react-player/youtube";
 
 const EpisodePage = ({
   title,
@@ -30,6 +31,7 @@ const EpisodePage = ({
   content,
   next,
 }: PodcastProps) => {
+  const embedYoutube = youtube && youtube.replace("watch?v=", "embed/");
   return (
     <>
       <CenteredSection
@@ -49,11 +51,32 @@ const EpisodePage = ({
           </IntroLogo>
         </Fade>
         <Fade triggerOnce>
-          <EpisodeNumberStyled>
-            <EpisodeNumber episode={episode} />
-          </EpisodeNumberStyled>
-          <H1>{title.charAt(0).toLowerCase() + title.slice(1)}</H1>
+          <>
+            <EpisodeNumberStyled>
+              <EpisodeNumber episode={episode} />
+            </EpisodeNumberStyled>
+            <H1>{title.charAt(0).toLowerCase() + title.slice(1)}</H1>
+          </>
+        </Fade>
+        {youtube && (
+          <VideoContainer>
+            <Video>
+              <Fade triggerOnce>
+                <YouTubePlayer
+                  className="react-player"
+                  light={`/assets/img/podcast/youtube/${episode}.jpg`}
+                  url={embedYoutube}
+                  controls={true}
+                  width="100%"
+                  height="100%"
+                />
+              </Fade>
+            </Video>
+          </VideoContainer>
+        )}
+        <Fade triggerOnce>
           <EpisodePreview
+            hideImageMobile
             title={title}
             guest={guest}
             business={business}
@@ -102,6 +125,29 @@ const EpisodePage = ({
 };
 
 export default React.memo(EpisodePage);
+
+const VideoContainer = styled.div`
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin-top: 5%;
+  @media (max-width: 620px) {
+    margin-top: 10%;
+  }
+`;
+
+const Video = styled.div`
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 30px;
+  overflow: hidden;
+
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+`;
 
 const NextEp = styled.div`
   margin-top: 10%;
@@ -170,6 +216,9 @@ const RouterSpace = styled.div`
 `;
 
 const EpisodeNumberStyled = styled.div`
+  align-items: center;
+  justify-content: center;
+  display: flex;
   @media (max-width: 1000px) {
     transform: scale(0.9);
   }
