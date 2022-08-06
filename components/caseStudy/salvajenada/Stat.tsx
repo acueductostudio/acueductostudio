@@ -13,8 +13,10 @@ const Stat = ({
     <StatWrapper>
       <Fade triggerOnce>
         <p>
-          <B>{stat.big}</B>
-          {stat.small}
+          <>
+            <B>{stat.big}</B>
+            {stat.small}
+          </>
         </p>
       </Fade>
       {children}

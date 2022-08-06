@@ -35,7 +35,7 @@ const ContactForm = ({ text }) => {
     document.getElementById("Scroll").scrollIntoView({ behavior: "smooth" });
     delayForLoading(300).then(() => setFormStatus("loading"));
     sendToHola(data);
-    createContact(completeData); 
+    createContact(completeData);
     delayForLoading(1800).then(() => setFormStatus("done"));
   };
 
@@ -63,7 +63,9 @@ const ContactForm = ({ text }) => {
                   },
                 })}
               />
-              <span>{errors?.email?.message}</span>
+              <span>
+                <>{errors?.email?.message}</>
+              </span>
             </InputField>
             <OneLine>
               <InputField>
@@ -157,7 +159,9 @@ const ContactForm = ({ text }) => {
                       },
                     })}
                   />
-                  <span>{errors?.phone?.message}</span>
+                  <span>
+                    <>{errors?.phone?.message}</>
+                  </span>
                 </InputField>
               </Fade>
             )}
