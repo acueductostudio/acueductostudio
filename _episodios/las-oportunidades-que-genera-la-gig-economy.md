@@ -1,7 +1,7 @@
 ---
 episode: 54
 date: "2022-08-01"
-title: Las oportunidades que genera la Gig Economy
+title: Las oportunidades que genera la gig economy
 guest: Stiven Rodríguez
 business: Heru
 category: Founder
