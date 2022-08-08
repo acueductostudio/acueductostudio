@@ -6,6 +6,10 @@ guest: Salvador Reynoso
 business: Aflore
 category: Producto
 description: Bienvenidos a una charla con Salvador Reynoso, Director de UX en Aflore, una de las startups de inclusión financiera más importantes de Latinoamérica. Platicamos sobre mejores prácticas en UX y Diseño de Interfaces; el rol de la experiencia de usuario como pieza angular de un negocio y su camino de casi 20 años construyendo interfaces.
+apple: https://podcasts.apple.com/us/podcast/un-episodio-que-todo-dise%C3%B1ador-ux-debe-escuchar/id1500473556
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTA4NzgyNg
+spotify: https://open.spotify.com/episode/29pgPCR6b5L0QrAibrBFl3
+youtube: https://www.youtube.com/watch?v=eKobH0y5iuw
 ---
 
 **Artemio:** ¿Qué tal? Bienvenidos a todos a una edición más de Cuando el Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y la innovación para que compartan con nosotros sus mejores insights y consejos en este camino que es construir negocios saludables de internet. Bienvenidos sean todos a una edición más, ¿cómo estás, Ro?
