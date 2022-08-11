@@ -95,8 +95,8 @@ const NewPod = styled.a<{ blue: boolean }>`
   width: 100%;
   background-image: ${(p) =>
     p.blue
-      ? 'url("/assets/img/podcast/backCardWhite.svg")'
-      : 'url("/assets/img/podcast/backCard.svg")'};
+      ? 'url("/assets/img/layout/backCardWhite.svg")'
+      : 'url("/assets/img/layout/backCard.svg")'};
   background-size: cover;
   background-position: bottom;
   background-color: ${(p) => (p.blue ? "#305EE3" : "#131516")};

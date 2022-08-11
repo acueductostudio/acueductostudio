@@ -165,6 +165,9 @@ const NavList = styled.div<{ accentColor?: boolean }>`
   width: 100%;
   display: flex;
   flex-direction: column;
+  &:hover {
+    background-image: none !important;
+  }
   ul {
     list-style: none;
     font-size: 1.8rem;

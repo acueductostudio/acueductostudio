@@ -180,7 +180,7 @@ const Category = styled.div`
 
 const PodcastGrid = styled.div`
   background-color: ${(p) => p.theme.colors.background};
-  background-image: url("/assets/img/podcast/back.svg");
+  background-image: url("/assets/img/layout/back.svg");
   background-size: cover;
   background-position: top right;
   grid-template-columns: repeat(12, 1fr);

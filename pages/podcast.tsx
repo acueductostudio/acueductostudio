@@ -462,7 +462,7 @@ const FullLastSection = styled.section`
 const PodcastGrid = styled(TitleSectionGrid)`
   background-color: ${(p) => p.theme.colors.background};
   background-repeat: no-repeat;
-  background-image: url("/assets/img/podcast/backOld.svg");
+  background-image: url("/assets/img/layout/backOld.svg");
   background-size: cover;
   background-attachment: fixed;
   width: 100%;

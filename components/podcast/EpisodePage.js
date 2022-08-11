@@ -34,7 +34,7 @@ const EpisodePage = ({
   return (
     <>
       <CenteredSection
-        customBackground={"/assets/img/podcast/backOld.svg"}
+        customBackground={"/assets/img/layout/backOld.svg"}
         id="cuandoelriosuena"
       >
         <Fade triggerOnce>
