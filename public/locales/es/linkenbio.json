@@ -7,6 +7,11 @@
   "title": "¿qué estás buscando?",
   "links": [
     {
+      "url": "https://www.latamstartup.club/kit-de-inicio-para-startups",
+      "subtitle": "Latam Startup 2022",
+      "title": "Kit de inicio para startups"
+    },
+    {
       "url": "/podcast",
       "subtitle": "Podcast",
       "title": "Cuando el río suena"
@@ -15,11 +20,6 @@
       "url": "/articulos/minimum-viable-startup",
       "subtitle": "artículo",
       "title": "Minimum viable startup"
-    },
-    {
-      "url": "https://latamstartup.club",
-      "subtitle": "Conferencia anual",
-      "title": "Latam Startup 2022"
     }
   ],
   "p": "visita también",
