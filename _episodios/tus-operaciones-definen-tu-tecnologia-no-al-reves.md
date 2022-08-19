@@ -13,7 +13,7 @@ google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8
 file: https://www.buzzsprout.com/895972/9607723-tus-operaciones-definen-tu-tecnologia-no-al-reves-everton-viana-cargamos.mp3?download=true
 ---
 
-**Artemio:** En esta edición platicamos con Éverton Viana, cofundador y COO de Cargamos, uno de los servicios de última milla más grandes de México. Profundizamos en la importancia de anteponer las operaciones a la tecnología, nuevas formas de levantar capital pre-semilla y la distribución de liderazgo como cultura empresarial.
+**Artemio:** En esta edición platicamos con Éverton Viana, Cofundador y COO de Cargamos, uno de los servicios de última milla más grandes de México. Profundizamos en la importancia de anteponer las operaciones a la tecnología, nuevas formas de levantar capital pre-semilla y la distribución de liderazgo como cultura empresarial.
 
 **Artemio:** Hola, ¿qué tal? Bienvenidos a todos a una edición más de Cuando El Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la innovación y de la tecnología para que compartan con nosotros los mejores _insights_ y consejos que tienen para todos los emprendedores de Latinoamérica que nos encontramos en este camino tan largo y arduo que es emprender en internet o con la tecnología en el núcleo. El día de hoy, me acompaña mi socio, como ya es costumbre, Rodrigo, ¿cómo estás?
 
