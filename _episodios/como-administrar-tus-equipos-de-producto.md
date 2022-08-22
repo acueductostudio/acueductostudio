@@ -6,6 +6,10 @@ guest: Maite Muñiz
 business: Truora
 category: Producto
 description: Tuvimos una charla con Maite Muñiz, Cofounder y Product Manager en Truora, una SaaS enfocada en soluciones de identidad digital y experiencia de usuario. Platicamos sobre los requerimientos de talento en una SaaS, como administrar equipos de producto y procesos de onboarding para startups en expansión.
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTE2NTkyMQ
+youtube: https://www.youtube.com/watch?v=tc00GnXlRfw
+spotify: https://open.spotify.com/episode/5sI51tn4fvrLHbRfcXAuYG
+apple: https://podcasts.apple.com/us/podcast/c%C3%B3mo-administrar-tus-equipos-de-producto-maite-mu%C3%B1iz/id1500473556?i=1000576883863
 ---
 **Artemio:** Hola, ¿qué tal? Bienvenidos a todos a una edición más de Cuando El Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores consejos e insights en este camino que es construir un negocio saludable de internet. Me acompaña mi socio Rodrigo, ¿cómo estás, Ro?
 
