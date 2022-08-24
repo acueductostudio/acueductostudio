@@ -90,7 +90,7 @@ const NewHead = ({
           <>
             <meta
               property="og:image"
-              content="https://acueducto.studio/assets/img/og/og_main.jpg"
+              content="https://acueducto.studio/assets/img/og/og_main.gif"
             />
             <meta property="og:image:alt" content="Acueducto Studio" />
           </>
