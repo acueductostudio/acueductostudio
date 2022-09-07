@@ -86,8 +86,6 @@ Los modelos de negocio más interesantes hoy en día tienen dos características
 
 [La premisa de los negocios digitales escalables](https://acueducto.studio/podcast/como-reaccionar-a-la-pandemia-con-tu-negocio) es que mientras los ingresos generados por estos pueden crecer exponencialmente, los costos de operación se mantienen relativamente bajos si la clientela del producto aumenta de cientos, a miles o millones repentinamente. Esa es una característica clave de los negocios de alto impacto.
 
-Esquema: HOY: tarjeta de débito; mañana: tarjeta de crédito, préstamo, crédito para negocios, todos los perros servicios bancarios
-
 Por otra parte, un negocio expandible es aquel capaz de ofrecer una gama de productos y servicios amplia e inteligente. Es muy diferente la valuación de una startup que vende A; a una startup que ahora vende A, pero que en el futuro planea vender B, C o D. No lo digo yo. Lo dice [el fondo que invirtió en Clip, el tercer unicornio mexicano](https://acueducto.studio/podcast/el-fondo-de-inversion-detras-de-clip-el-tercer-unicornio-mexicano).
 
 Y los mercados predican con el ejemplo. Cuando la empresa colombiana Rappi se presentó al mercado como una _delivery app_, nadie pensó que eventualmente se convertirían en [uno de los servicios de créditos más accesibles y solicitados en Latinoamérica](https://www.portafolio.co/negocios/empresas/rappipay-llega-a-los-110-000-usuarios-con-rappicard-558018). Pero ahí reside el valor de su base de usuarios con millones de personas que confían en la empresa.
