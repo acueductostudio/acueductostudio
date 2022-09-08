@@ -206,12 +206,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
   ]);
 
   const featuredSlugs = [
-    { slug: "construye-identidades-que-cuenten-historias" },
     { slug: "un-capitulo-que-todo-ceo-debe-escuchar" },
-    { slug: "como-se-disenan-las-apps-mas-exitosas" },
+    { slug: "construye-identidades-que-cuenten-historias" },
     { slug: "growth-es-el-nuevo-marketing" },
-    { slug: "cual-es-el-trabajo-de-un-director-de-operaciones-en-una-startup" },
-    { slug: "asi-funcionan-las-startups-basadas-en-ciencia" },
+    { slug: "como-se-disenan-las-apps-mas-exitosas" },
+    { slug: "tus-usuarios-son-el-corazon-de-tu-startup" },
+    { slug: "como-construyen-equipos-los-unicornios" },
   ];
 
   const episodes = featuredSlugs.map((episode: EpisodeProps) =>
