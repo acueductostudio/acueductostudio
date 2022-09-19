@@ -6,6 +6,10 @@ guest: Jenaro Martínez
 business: Axtel
 category: Producto
 description: En este capítulo hablamos con Jenaro Martínez, Director de Innovación y Alianzas Estratégicas de Axtel, el corporativo de infraestructura y servicios de TI más grande de México. Hablamos sobre cultura de innovación, nuevas tecnologías y cómo servir al sector corporativo. 
+spotify: https://open.spotify.com/episode/0OS9sOF2TQZOKf0E0PF3n6
+apple: https://podcasts.apple.com/us/podcast/c%C3%B3mo-innova-un-corporativo-con-m%C3%A1s-de-20-a%C3%B1os/id1500473556?i=1000579887679
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTMyNjI0OQ
+youtube: https://www.youtube.com/watch?v=svW_FH5uLLA
 ---
 
 **Artemio:** Hola, ¿qué tal? Bienvenidos todos a una edición más de Cuando El Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores insights y consejos para construir negocios saludables de internet, negocios que escalan, negocios que terminan por impactar positivamente a la sociedad.
