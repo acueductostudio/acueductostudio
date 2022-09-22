@@ -207,8 +207,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   const featuredSlugs = [
     { slug: "un-capitulo-que-todo-ceo-debe-escuchar" },
+    {
+      slug: "de-mercado-libre-a-la-mesa-de-inversion-con-retornos-inimaginables",
+    },
     { slug: "construye-identidades-que-cuenten-historias" },
-    { slug: "growth-es-el-nuevo-marketing" },
     { slug: "como-se-disenan-las-apps-mas-exitosas" },
     { slug: "tus-usuarios-son-el-corazon-de-tu-startup" },
     { slug: "como-construyen-equipos-los-unicornios" },
