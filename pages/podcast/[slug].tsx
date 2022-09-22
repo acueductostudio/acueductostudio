@@ -77,7 +77,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   //For podcast episode number in footer
   const episodes = getAllEpisodes(["slug"]);
-  const numberOfE = Object.keys(episodes).length;
+  const numberOfE = Object.keys(episodes).length + 1;
 
   if (!episode) {
     return {
