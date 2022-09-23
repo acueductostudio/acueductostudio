@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import React, { Suspense, useRef } from "react";
@@ -77,7 +78,7 @@ function HeadSketch(props) {
     </Fade>
   );
 }
-HeadSketch.displayName = "HeadSketch";
+
 export default HeadSketch;
 
 const SketchContainer = styled.div`

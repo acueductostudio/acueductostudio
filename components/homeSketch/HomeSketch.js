@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import styled from "styled-components";
 import React, { useRef } from "react";
 import { Canvas, useThree, useFrame, extend } from "react-three-fiber";
@@ -57,8 +58,6 @@ const HomeSketch = ({ hide, mouse }) => {
     </SketchContainer>
   );
 };
-
-HomeSketch.displayName = 'HomeSketch';
 
 export default HomeSketch;
 
