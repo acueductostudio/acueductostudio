@@ -18,11 +18,6 @@ const ConsultoriaCTA = ({
   id,
   diagnostico_cta,
   price,
-}: {
-  cta: any;
-  id: string;
-  diagnostico_cta?: boolean;
-  price?: boolean;
 }) => {
   // const router = useRouter();
   // solo es necesario para las consultorías
