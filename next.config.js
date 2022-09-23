@@ -2,20 +2,13 @@
 //   enabled: process.env.ANALYZE === "true",
 // });
 const path = require("path");
-const withOffline = require("next-offline");
-const caching = require("./utils/caching");
 
 const nextConfig = {
-  pwa: {
-    dest: "public",
-    disable: process.env.NODE_ENV === "development",
-    runtimeCaching: caching,
-  },
-  transformManifest: (manifest) => ["/"].concat(manifest),
-  generateInDevMode: false,
-  workboxOpts: {
-    swDest: "static/service-worker.js",
-    runtimeCaching: caching,
+  compiler: {
+    styledComponents: {
+      displayName: true,
+      ssr: true,
+    },
   },
   async rewrites() {
     return [
@@ -80,4 +73,4 @@ const nextConfig = {
 };
 
 // module.exports = withBundleAnalyzer(nextConfig);
-module.exports = withOffline(nextConfig);
+module.exports = nextConfig;

@@ -58,7 +58,7 @@ const Model = React.memo((props) => {
   );
 });
 
-export default function HeadSketch(props) {
+function HeadSketch(props) {
   return (
     <Fade triggerOnce>
       <SketchContainer>
@@ -77,6 +77,8 @@ export default function HeadSketch(props) {
     </Fade>
   );
 }
+HeadSketch.displayName = "HeadSketch";
+export default HeadSketch;
 
 const SketchContainer = styled.div`
   width: 100%;
@@ -98,7 +100,7 @@ const SketchContainer = styled.div`
   }
   > div {
     mix-blend-mode: difference;
-  } 
+  }
   canvas {
     width: 100%;
     height: 100%;

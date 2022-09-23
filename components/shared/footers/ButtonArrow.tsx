@@ -24,6 +24,7 @@ export const ButtonArrow = React.forwardRef<ButtonRef, ButtonProps>(
       </Button>
     )
 );
+ButtonArrow.displayName = 'ButtonArrow';
 
 export default ButtonArrow;
 

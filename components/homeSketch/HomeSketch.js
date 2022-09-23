@@ -58,6 +58,8 @@ const HomeSketch = ({ hide, mouse }) => {
   );
 };
 
+HomeSketch.displayName = 'HomeSketch';
+
 export default HomeSketch;
 
 const SketchContainer = styled.div`
