@@ -43,7 +43,6 @@
     "@next/bundle-analyzer": "^11.0.1",
     "@types/node": "^18.7.19",
     "@types/react": "^18.0.21",
-    "@types/styled-components": "^5.1.11",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.1",
     "fs-extra": "^10.0.0",

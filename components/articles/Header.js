@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 
-const Header = ({ slug, title }: { slug: string; title: string }) => (
+const Header = ({ slug, title }) => (
   <Fade triggerOnce>
     <Pos>
       <Image

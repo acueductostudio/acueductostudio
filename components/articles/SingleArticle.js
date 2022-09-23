@@ -6,11 +6,6 @@ import BorderLink from "components/shared/BorderedLink";
 import CaseGrid from "components/caseStudy/CaseGrid";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 
-interface ArticleReverse extends ArticleProps {
-  featured?: boolean;
-  reverse?: boolean;
-}
-
 const SingleArticle = ({
   title,
   subtitle,
@@ -18,8 +13,8 @@ const SingleArticle = ({
   slug,
   featured,
   reverse,
-}: ArticleReverse) => {
-  const LinkComplex = ({ children }: { children: React.ReactNode }) => (
+}) => {
+  const LinkComplex = ({ children }) => (
     <Link href={"/articulos/" + slug} passHref>
       <a>{children}</a>
     </Link>
@@ -65,7 +60,7 @@ const SingleArticle = ({
 
 export default SingleArticle;
 
-const CTA = styled.div<{ featured?: boolean }>`
+const CTA = styled.div`
   a {
     border-radius: 40px;
     border: 2px solid ${(p) => p.theme.colors.accent};

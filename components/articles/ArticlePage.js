@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { H1 } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import Header from "./Header";
-import ArticleProps from "utils/types/ArticleProps";
 import ShareRouter from "components/podcast/ShareRouter";
 import CenteredSection, {
   Content,
@@ -17,7 +16,7 @@ const ArticlePage = ({
   author,
   slug,
   content,
-}: ArticleProps) => {
+}) => {
   let fullDate = new Date(`${date}T00:00:00`);
   let formatDate = fullDate.toLocaleDateString("es-MX", {
     year: "numeric",
