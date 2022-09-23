@@ -9,13 +9,6 @@ import ShareRouter from "./ShareRouter";
 import BorderLink from "components/shared/BorderedLink";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 
-interface EpisodeFormat extends EpisodeProps {
-  longFormat?: boolean;
-  simplest?: boolean;
-  text?: string;
-  hideImageMobile?: boolean;
-}
-
 const EpisodePreview = ({
   title,
   guest,
@@ -33,8 +26,8 @@ const EpisodePreview = ({
   simplest,
   text,
   hideImageMobile,
-}: EpisodeFormat) => {
-  const LinkComplex = ({ children }: { children: React.ReactNode }) => (
+}) => {
+  const LinkComplex = ({ children }) => (
     <Link href={"/podcast/" + slug} passHref>
       <a className="clean">{children}</a>
     </Link>
@@ -185,10 +178,7 @@ const H2overable = styled.h2`
   ${BorderLink({ showLink: false })}
 `;
 
-const PictureContainer = styled.div<{
-  hoverable: boolean;
-  hideImageMobile: boolean;
-}>`
+const PictureContainer = styled.div`
   min-width: 180px;
   margin-right: 5%;
   img {

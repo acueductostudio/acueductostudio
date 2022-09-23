@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
 import Head from "components/layout/Head";
@@ -35,7 +34,7 @@ export default function Work({ locale, setTitle, pt }) {
     </PageClipper>
   );
 }
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "work.json" });
   return {
     props: {

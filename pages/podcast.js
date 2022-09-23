@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import Link from "next/link";
 import EpisodeProps from "utils/types/EpisodeProps";
 import EpisodeFeature from "components/podcast/EpisodeFeature";
@@ -183,7 +182,7 @@ function PodcastLanding({ locale, setTitle, episodes, lastEpisode, pt }) {
 
 export default React.memo(PodcastLanding);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const sortedEpisodes = getAllEpisodes(["slug", "episode"]).sort((ep1, ep2) =>
     ep1.episode > ep2.episode ? 1 : -1
   );
@@ -216,7 +215,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     { slug: "como-construyen-equipos-los-unicornios" },
   ];
 
-  const episodes = featuredSlugs.map((episode: EpisodeProps) =>
+  const episodes = featuredSlugs.map((episodes) =>
     getEpisodeBySlug(episode.slug, [
       "title",
       "guest",
@@ -582,7 +581,7 @@ const PodcastGrid = styled(TitleSectionGrid)`
   }
 `;
 
-const FeatureList = styled(TitleSectionGrid)<{ narrow?: boolean }>`
+const FeatureList = styled(TitleSectionGrid)`
   padding-top: 0;
   padding-bottom: 2%;
   & > div {

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import Link from "next/link";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
@@ -65,7 +64,7 @@ function Index({ locale, setTitle, pt }) {
 
 export default React.memo(Index);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "home.json" });
   return {
     props: {

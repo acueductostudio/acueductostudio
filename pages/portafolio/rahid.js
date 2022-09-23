@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
 import styled from "styled-components";
@@ -211,7 +210,7 @@ function Rahid({ locale, setTitle, pt }) {
 
 export default React.memo(Rahid);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "work.rahid.json" });
   return {
     props: {

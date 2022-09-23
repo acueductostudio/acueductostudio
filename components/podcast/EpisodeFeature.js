@@ -1,13 +1,8 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
-import EpisodeProps from "utils/types/EpisodeProps";
 import Picture from "components/caseStudy/shared/Picture";
 import BorderLink from "components/shared/BorderedLink";
-
-type FullEpisodeProps = EpisodeProps & {
-  blue?: boolean;
-};
 
 const EpisodeFeature = ({
   title,
@@ -16,7 +11,7 @@ const EpisodeFeature = ({
   slug,
   episode,
   blue,
-}: FullEpisodeProps) => {
+}) => {
   return (
     <Link href={"/podcast/" + slug} passHref key={"npd" + episode}>
       <NewPod blue={blue}>
