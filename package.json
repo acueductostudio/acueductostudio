@@ -36,13 +36,13 @@
     "react-top-loading-bar": "^2.0.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.2",
-    "styled-components": "^5.3.0",
+    "styled-components": "^5.3.5",
     "three": "^0.127.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
     "@types/node": "^18.7.19",
-    "@types/react": "^18.0.21",
+    "@types/react": "^17.0.0",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.1",
     "fs-extra": "^10.0.0",

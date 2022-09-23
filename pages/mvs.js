@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import styled from "styled-components";
-import EpisodeProps from "utils/types/EpisodeProps";
 import { getEpisodeBySlug } from "utils/podcastApi";
 import Head from "components/layout/Head";
 import EpisodePreview from "components/podcast/EpisodePreview";
@@ -58,7 +56,7 @@ function Mvs({ locale, setTitle, pt, episodes }) {
 
 export default Mvs;
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const selectedEpisodes = [
     {
       slug: "como-es-invertir-en-mas-de-200-empresas-tecnologicas",
@@ -76,7 +74,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       slug: "cual-es-el-trabajo-de-un-director-de-operaciones-en-una-startup",
     },
   ];
-  const episodes = selectedEpisodes.map((episode: EpisodeProps) =>
+  const episodes = selectedEpisodes.map((episode) =>
     getEpisodeBySlug(episode.slug, [
       "title",
       "guest",

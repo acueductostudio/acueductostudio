@@ -5,9 +5,6 @@ import { B } from "components/shared/Dangerously";
 const Stat = ({
   stat,
   children,
-}: {
-  stat: string;
-  children?: React.ReactNode;
 }) => {
   return (
     <StatWrapper>

@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import React, { useEffect } from "react";
-import { GetStaticProps } from "next";
-import EpisodeProps from "utils/types/EpisodeProps";
 import EpisodePreview from "components/podcast/EpisodePreview";
 import BroadcastRouter from "components/podcast/BroadcastRouter";
 import ssrLocale from "utils/ssrLocale";
@@ -23,20 +21,20 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
   const categories = ["founder", "producto", "inversor", "growth", "todas"];
 
   const sort = (category) => {
-    let allCats: any = document.querySelectorAll(`.out`);
+    let allCats = document.querySelectorAll(`.out`);
     for (let epis of allCats) {
       epis.style.backgroundColor = "#0D1111";
     }
     let selected = document.getElementById(`${category}out`);
     selected.style.backgroundColor = "#1A4CE0";
 
-    let allEpisodes: any = document.querySelectorAll(`.npd`);
+    let allEpisodes = document.querySelectorAll(`.npd`);
     for (let epis of allEpisodes) {
       epis.style.display = "flex";
     }
 
     if (category != "todas") {
-      let allNotEpisodes: any = document.querySelectorAll(
+      let allNotEpisodes = document.querySelectorAll(
         `.npd:not(.${category})`
       );
       for (let epis of allNotEpisodes) {
@@ -104,11 +102,11 @@ function Podcasts({ locale, setTitle, episodes, pt }) {
 
 export default React.memo(Podcasts);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const sortedEpisodes = getAllEpisodes(["slug", "episode"]).sort((ep1, ep2) =>
     ep1.episode > ep2.episode ? 1 : -1
   );
-  const episodes = sortedEpisodes.map((episode: EpisodeProps) =>
+  const episodes = sortedEpisodes.map((episode) =>
     getEpisodeBySlug(episode.slug, [
       "title",
       "guest",

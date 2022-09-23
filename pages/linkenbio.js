@@ -68,7 +68,7 @@ export default function LinkEnBio({ locale, setTitle, pt }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "linkenbio.json" });
   if (!pt) {
     return {

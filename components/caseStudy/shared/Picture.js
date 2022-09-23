@@ -8,13 +8,6 @@ const Picture = ({
   height,
   fraction,
   withWrapper,
-}: {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  fraction?: number;
-  withWrapper?: boolean;
 }) => {
   let imageFaded = (
     <Fade fraction={fraction ? fraction : 0.1} triggerOnce>

@@ -9,7 +9,7 @@ import LangContext from "utils/LangContext";
 import CaseGrid from "./CaseGrid";
 
 const SingleCase = (props) => {
-  const LinkComplex = ({ children }: { children: React.ReactNode }) => (
+  const LinkComplex = ({ children }) => (
     <Link
       href={"/portafolio/" + props.link}
       as={
@@ -67,7 +67,7 @@ const SingleCase = (props) => {
   );
 };
 
-const CaseList = ({ limit }: { limit?: number }) => {
+const CaseList = ({ limit }) => {
   const context = useContext(LangContext);
   return (
     <CaseStudiesWrapper>

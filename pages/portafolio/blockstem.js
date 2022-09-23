@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
 import styled from "styled-components";
@@ -252,7 +251,7 @@ function Blockstem({ locale, setTitle, pt }) {
 
 export default React.memo(Blockstem);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({
     locale: context.locale,
     fileName: "work.blockstem.json",

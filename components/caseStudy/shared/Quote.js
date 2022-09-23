@@ -8,11 +8,6 @@ const Quote = ({
   noMargin,
   specialMarginBottom,
   quote,
-}: {
-  color?: any;
-  noMargin?: boolean;
-  specialMarginBottom?: boolean;
-  quote: { quote: string; name: string; label?: string };
 }) => (
   <QuoteWrapper
     passedColor={color}
@@ -71,11 +66,7 @@ const QuoteLimiter = styled.div`
   position: relative;
 `;
 
-const QuoteWrapper = styled.div<{
-  noMargin: boolean;
-  specialMarginBottom: boolean;
-  passedColor: string;
-}>`
+const QuoteWrapper = styled.div`
   width: 100%;
   font-size: 3.4rem;
   margin: ${(props) => (props.noMargin ? "0" : "6% 0 4% 0")};

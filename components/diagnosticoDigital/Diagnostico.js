@@ -402,7 +402,7 @@ const ArrowContainer = styled.div`
   }
 `;
 
-const Arrowx = styled.div<{ reveal: boolean; left?: boolean }>`
+const Arrowx = styled.div`
   width: 40px;
   height: 30px;
   color: white;
@@ -512,7 +512,7 @@ const QuestionGrid = styled.div`
   }
 `;
 
-const Question = styled.div<{ selected: boolean; deselected: boolean }>`
+const Question = styled.div`
   position: absolute;
   transform: translateX(10%);
   opacity: 0;

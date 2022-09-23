@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
@@ -121,7 +120,7 @@ const Pago = ({ locale, setTitle, pt }) => {
 
 export default React.memo(Pago);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({
     locale: context.locale,
     fileName: "consultoria.pago.json",
