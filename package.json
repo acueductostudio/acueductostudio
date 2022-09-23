@@ -10,7 +10,8 @@
     "start": "next start",
     "export": "next export",
     "analyze": "ANALYZE=true yarn build",
-    "sitemap": "node scripts/generateSitemap.js"
+    "sitemap": "node scripts/generateSitemap.js",
+    "lint": "next lint"
   },
   "dependencies": {
     "@svgr/webpack": "^6.2.0",
@@ -41,10 +42,12 @@
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^11.0.1",
-    "@types/node": "^16.4.10",
-    "@types/react": "^17.0.15",
+    "@types/node": "^18.7.19",
+    "@types/react": "^18.0.21",
     "@types/styled-components": "^5.1.11",
     "babel-plugin-styled-components": "^1.13.2",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.1",
     "fs-extra": "^10.0.0",
     "serve": "^13.0.2",
     "typescript": "^4.3.5",
