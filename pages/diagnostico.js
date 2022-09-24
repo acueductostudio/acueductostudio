@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import ssrLocale from "utils/ssrLocale";
 import Head from "components/layout/Head";
 import PageClipper from "components/layout/PageClipper";
@@ -31,7 +30,7 @@ function DiagnosticoDigital({ locale, setTitle, pt }) {
 }
 export default React.memo(DiagnosticoDigital);
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({
     locale: context.locale,
     fileName: "diagnostico.json",

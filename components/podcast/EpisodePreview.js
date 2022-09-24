@@ -255,7 +255,7 @@ const DateCat = styled.div`
   }
 `;
 
-const NewPod = styled.article<{ simplest: boolean }>`
+const NewPod = styled.article`
   display: flex;
   max-width: 800px;
   margin-top: ${(p) => (p.simplest ? "3.5rem" : "10%")};

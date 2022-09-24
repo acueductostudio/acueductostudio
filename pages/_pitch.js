@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { GetStaticProps } from "next";
 import dynamic from "next/dynamic";
 import ssrLocale from "utils/ssrLocale";
 import clientLocale from "utils/clientLocale";
@@ -121,7 +120,7 @@ export default function Pitch({ locale, setTitle, pt }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps = async (context) => {
   const pt = ssrLocale({ locale: context.locale, fileName: "pitch.json" });
   return {
     props: {

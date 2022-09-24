@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import clientLocale from "utils/clientLocale";
-import { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import LoadingBar from "react-top-loading-bar";
 import Layout from "components/layout/Layout";

@@ -44,7 +44,7 @@ const Label = styled.p`
   text-transform: uppercase;
 `;
 
-const QuoteMark = styled.div<{ passedColor: string }>`
+const QuoteMark = styled.div`
   left: -55px;
   top: -15px;
   opacity: 0.07;

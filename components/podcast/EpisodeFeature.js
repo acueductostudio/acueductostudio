@@ -51,7 +51,7 @@ const H2overable = styled.h3`
   }
 `;
 
-const PictureContainer = styled.div<{ hoverable: boolean }>`
+const PictureContainer = styled.div`
   margin-bottom: 7%;
   & > div {
     border-radius: 25px;
@@ -66,7 +66,7 @@ const PictureContainer = styled.div<{ hoverable: boolean }>`
   }
 `;
 
-const Guest = styled.div<{ blue: boolean }>`
+const Guest = styled.div`
   display: flex;
   margin-bottom: 10px;
   text-shadow: ${(p) =>
@@ -82,7 +82,7 @@ const Guest = styled.div<{ blue: boolean }>`
   }
 `;
 
-const NewPod = styled.a<{ blue: boolean }>`
+const NewPod = styled.a`
   display: flex;
   flex-direction: column;
   text-align: left;

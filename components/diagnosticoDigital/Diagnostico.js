@@ -326,7 +326,7 @@ const Loading = styled.div`
   }
 `;
 
-const Tag = styled.span<{ show: boolean }>`
+const Tag = styled.span`
   opacity: ${(p) => (p.show ? 1 : 0)};
   font-weight: 300;
   letter-spacing: 4px;
@@ -344,7 +344,7 @@ const Tag = styled.span<{ show: boolean }>`
   }
 `;
 
-const LineContainer = styled.div<{ percentage: string }>`
+const LineContainer = styled.div`
   grid-column: 4 / span 8;
   max-width: 800px;
   width: 100%;

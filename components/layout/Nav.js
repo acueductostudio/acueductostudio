@@ -107,7 +107,7 @@ const Hoverable = styled.a`
   ${BorderLink({ showLink: false })}
 `;
 
-const NavLink = styled.a<{ active: boolean }>`
+const NavLink = styled.a`
   font-weight: 300;
   transition: all 0.3s ease 0s;
   cursor: pointer;
@@ -298,7 +298,7 @@ const NavList = styled.nav`
   }
 `;
 
-const NavWrapper = styled.div<{ open: boolean }>`
+const NavWrapper = styled.div`
   opacity: 0;
   pointer-events: none;
   z-index: 9;

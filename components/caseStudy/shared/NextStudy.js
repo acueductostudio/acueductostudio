@@ -60,7 +60,7 @@ const Logo = styled.div`
   transform-origin: 50% 0;
 `;
 
-const Wrapper = styled.a<{ margined: boolean }>`
+const Wrapper = styled.a`
   align-items: center;
   display: flex;
   flex-direction: column;

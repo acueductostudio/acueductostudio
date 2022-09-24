@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import EpisodeProps from "utils/types/EpisodeProps";
 import EpisodeFeature from "components/podcast/EpisodeFeature";
 import ssrLocale from "utils/ssrLocale";
 import { getEpisodeBySlug, getAllEpisodes } from "utils/podcastApi";
@@ -215,7 +214,7 @@ export const getStaticProps = async (context) => {
     { slug: "como-construyen-equipos-los-unicornios" },
   ];
 
-  const episodes = featuredSlugs.map((episodes) =>
+  const episodes = featuredSlugs.map((episode) =>
     getEpisodeBySlug(episode.slug, [
       "title",
       "guest",
