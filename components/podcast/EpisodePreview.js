@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
-import EpisodeProps from "utils/types/EpisodeProps";
-import BroadcastRouter from "components/podcast/BroadcastRouter";
+import { P } from "components/shared/Dangerously";
 import Picture from "components/caseStudy/shared/Picture";
 import EpisodeNumber from "./EpisodeNumber";
 import ShareRouter from "./ShareRouter";
@@ -101,7 +100,7 @@ const EpisodePreview = ({
               )}
               <span>{category}</span>
             </DateCat>
-            <p>{!simplest && description}</p>
+            <P>{!simplest && description}</P>
             <div>
               {!simplest &&
                 (spotify ? (
