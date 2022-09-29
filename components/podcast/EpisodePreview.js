@@ -3,6 +3,7 @@ import { Fade } from "react-awesome-reveal";
 import Link from "next/link";
 import { P } from "components/shared/Dangerously";
 import Picture from "components/caseStudy/shared/Picture";
+import BroadcastRouter from "./BroadcastRouter";
 import EpisodeNumber from "./EpisodeNumber";
 import ShareRouter from "./ShareRouter";
 import BorderLink from "components/shared/BorderedLink";
