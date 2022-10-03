@@ -101,7 +101,7 @@ const EpisodePreview = ({
               )}
               <span>{category}</span>
             </DateCat>
-            <P>{!simplest && description}</P>
+            <div>{!simplest ? <P>{description}</P> : null}</div>
             <div>
               {!simplest &&
                 (spotify ? (
