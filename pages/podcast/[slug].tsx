@@ -25,7 +25,7 @@ export default function Episodio({ locale, setTitle, episode, numberOfE }) {
         headerTitle="Episodio"
         es_canonical={`https://acueducto.studio/podcast/${episode.slug}`}
         image={{
-          fileName: `og_image_e${episode.episode}.png`,
+          fileName: episode.episode >= 63 ? `og_image_e${episode.episode}.gif` : `og_image_e${episode.episode}.png`,
           alt: episode.title + " | " + episode.guest + ", " + episode.business,
         }}
       ></Head>
