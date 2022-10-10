@@ -11,6 +11,10 @@ description: "Si solo tienes un minuto, lo más importante de este capítulo es:
 - Un error común en las startups es que los equipos trabajen en direcciones que no están relacionadas entre si, esto entorpece su efectividad y su atención</br>
 y Los roadmaps de producto no están escritos en piedra, mientras más lejos en el horizonte, más flexibilidad debes tener.</br></br>
 Acompáñanos con Elisa Hernández, Director Product Manager de Kueski, la plataforma de préstamos más grande de México."
+apple: https://podcasts.apple.com/us/podcast/c%C3%B3mo-trabaja-un-departamento-de-producto/id1500473556?i=1000582108977
+spotify: https://open.spotify.com/episode/1LmtrZgjsQIIEkgXOmNsJz
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTQ1ODc1Ng
+youtube: https://www.youtube.com/watch?v=VmevJ6BVhB4
 ---
 
 **Artemio:** ¡Hola, qué tal! Bienvenidos sean todos a una edición más de Cuando El Río Suena, el podcast en el que invitamos a expertos y profesionales del mundo de la tecnología y de la innovación para que compartan con nosotros sus mejores consejos en este camino tan turbulento que es construir un negocio saludable de internet. El día de hoy me acompaña, como ya es costumbre en cada uno de los episodios, mi socio Rodrigo Salmerón, ¿cómo estás, Ro?
