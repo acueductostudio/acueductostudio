@@ -14,7 +14,7 @@ Si solo tienes un minuto, lo más importante de este capítulo es:</br>
 - Formar una comunidad al rededor de tu negocio puede marcar la diferencia con tu competencia"
 apple: https://podcasts.apple.com/us/podcast/por-qu%C3%A9-entrar-a-un-programa-de-aceleraci%C3%B3n/id1500473556?i=1000582854551
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz
-apple: https://open.spotify.com/episode/02kzTITOVlXKMlFGuadEkx
+spotify: https://open.spotify.com/episode/02kzTITOVlXKMlFGuadEkx
 youtube: https://www.youtube.com/watch?v=M4fwiHwG8uA
 ---
 
