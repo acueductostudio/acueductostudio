@@ -1,7 +1,7 @@
 ---
 episode: 65
 date: "2022-10-17"
-title: ¿Por qué entrar a un programa de aceleración?
+title: ¿por qué entrar a un programa de aceleración?
 guest: Gina Gotthilf
 business: Latitud
 category: Inversor
