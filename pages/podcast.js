@@ -88,7 +88,7 @@ function PodcastLanding({ locale, setTitle, episodes, lastEpisode, pt }) {
               <Image
                 width={380}
                 height={380}
-                src={"/assets/img/layout/podcast_cover.svg"}
+                src={"/assets/img/layout/podcast_cover.png"}
                 alt={"Cuando el río suena"}
               />
             </Tilt>
