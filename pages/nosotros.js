@@ -6,19 +6,13 @@ import TitleSection from "components/shared/TitleSection";
 import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import PinnedSection from "components/shared/pinnedSections/PinnedSection";
-import { P, H4 } from "components/shared/Dangerously";
+import { P } from "components/shared/Dangerously";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import dynamic from "next/dynamic";
+import TitleSectionGrid from "components/shared/TitleSectionGrid.ts";
 import Recursos from "components/shared/Recursos";
-import Process from "components/shared/Process";
+import Picture from "components/caseStudy/shared/Picture";
 import ManifiestoSection from "components/ManifiestoSection";
-import HeadLoader from "components/headSketch/HeadLoader";
-
-const HeadSketch = dynamic(import("components/headSketch/HeadSketch"), {
-  loading: () => <HeadLoader />,
-  ssr: false,
-});
 
 function About({ locale, setTitle, pt, hasLoaded, mouse }) {
   const [t, setT] = useState(pt);
@@ -40,28 +34,26 @@ function About({ locale, setTitle, pt, hasLoaded, mouse }) {
         es_canonical={"https://acueducto.studio/nosotros"}
         en_canonical={"https://acueducto.studio/en/about"}
       />
-      <PinnedSection title={t.intro.title}>
+      <Team as={TitleSectionGrid}>
+        <Picture
+          src="/assets/img/layout/team.png"
+          width={1200}
+          height={606}
+          alt="Equipo de Acueducto"
+        />
+      </Team>
+      <ControlledPadding as={PinnedSection} title={t.intro.title} notSticky>
         <P>{t.intro.p}</P>
-        {t.team.map((person, index) => (
-          <Person key={"personX" + index}>
-            {hasLoaded && (
-              <HeadSketch
-                mouse={mouse}
-                second={index > 0}
-                invertRotation={index > 0}
-                rotationStart={index > 0 ? 50 : 0}
-              />
-            )}
-            <Fade triggerOnce>
-              <H4>{person.name}</H4>
-              <span>{person.position}</span>
-              <P>{person.bio}</P>
-            </Fade>
-          </Person>
-        ))}
-      </PinnedSection>
+      </ControlledPadding>
+      <PaperPlane>
+        <Picture
+          src="/assets/img/layout/paper.png"
+          width={600}
+          height={400}
+          alt="Gran lugar para trabajar"
+        />
+      </PaperPlane>
       <ManifiestoSection t={t.manifesto} />
-      <Process {...t.process} />
       <TitleSection {...t.values} borderTop>
         <Recursos />
       </TitleSection>
@@ -81,38 +73,18 @@ export const getStaticProps = async (context) => {
   };
 };
 
-const Person = styled.div`
+const ControlledPadding = styled.div`
+  padding-bottom: 5%;
+`;
+
+const PaperPlane = styled.div`
+  padding-bottom: calc(70px + 5%);
   display: flex;
-  flex-direction: column;
-  margin-top: 20%;
-  h4 {
-    font-size: 4.5rem;
-    margin-bottom: 3.5%;
-    font-weight: 200;
-    line-height: 1;
-  }
-  span {
-    color: ${(props) => props.theme.colors.accent_smalltext};
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    letter-spacing: 2.5px;
-    margin-bottom: 3.5%;
-    font-weight: 300;
-  }
-  @media (max-width: 1250px) {
-    h4 {
-      font-size: 4rem;
-    }
-  }
-  @media (max-width: 1000px) {
-    h4 {
-      font-size: 3.5rem;
-    }
-  }
-  @media (max-width: 600px) {
-    h4 {
-      font-size: 3rem;
-    }
-    margin-top: 5%;
-  }
+  align-items: center;
+  justify-content: center;
+`;
+
+const Team = styled.div`
+  padding-top: 140px;
+  padding-bottom: 0;
 `;

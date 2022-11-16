@@ -171,7 +171,7 @@ const Layout = ({ t, hasLoaded, children }) => {
           locale: router.locale,
           mouse: mouse,
         })}
-        <LanguageToggler locale={router.locale} hasLoaded={hasLoaded} />
+        {/* <LanguageToggler locale={router.locale} hasLoaded={hasLoaded} /> */}
         <ScrollIncentive hasLoaded={hasLoaded} showArrow={showArrow} />
         <CookieMessage t={t} hasLoaded={hasLoaded} />
         <BodyOverflow hasLoaded={hasLoaded} />

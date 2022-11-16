@@ -1,7 +1,7 @@
 {
   "newsletter_component": {
-    "title": " suscríbete y <br />te actualizamos",
-    "p": "Recibe un correo cada vez que publiquemos un capítulo nuevo.",
+    "title": "aprende cómo construyen producto los mejores negocios de internet",
+    "p": "Recibe medidas accionables para tu negocio cada lunes.",
     "firstName": {
       "label": "nombre",
       "placeholder": "tu nombre",

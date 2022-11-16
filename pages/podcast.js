@@ -488,6 +488,7 @@ const PodcastGrid = styled(TitleSectionGrid)`
   }
   .h1 {
     color: ${(props) => props.theme.colors.foreground};
+    font-size: 6.9rem;
   }
   h2 {
     letter-spacing: 0;

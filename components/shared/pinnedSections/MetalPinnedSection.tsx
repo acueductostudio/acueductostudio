@@ -7,6 +7,7 @@ type PinnedProps = {
   title: string;
   className?: string;
   unPadded?: boolean;
+  notSticky?: boolean;
   borderTop?: boolean;
   id?: string;
   children: React.ReactNode;
@@ -20,8 +21,14 @@ const MetalPinnedSection = ({
   borderTop,
   id,
   disableFade,
+  notSticky,
 }: PinnedProps) => (
-  <Pinned className={className} borderTop={borderTop} id={id}>
+  <Pinned
+    className={className}
+    borderTop={borderTop}
+    id={id}
+    notSticky={notSticky}
+  >
     <Fade triggerOnce>
       <H1>{title}</H1>
     </Fade>
@@ -39,7 +46,7 @@ const ScrollDown = styled.div`
   position: relative;
 `;
 
-const Pinned = styled.div<{ borderTop: boolean }>`
+const Pinned = styled.div<{ borderTop: boolean; notSticky: boolean }>`
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 2.2rem;
   width: 100%;
@@ -54,10 +61,11 @@ const Pinned = styled.div<{ borderTop: boolean }>`
     grid-column: 2 / span 5;
     z-index: 1;
   }
-  h1 {
-    position: sticky;
+  h1,
+  .h1 {
+    position: ${(p) => (p.notSticky ? "relative" : "sticky")};
     max-height: 300px;
-    top: 150px;
+    top: ${(p) => (p.notSticky ? "0px" : "150px")};
     letter-spacing: 0px;
     line-height: 100%;
     font-size: 7rem;

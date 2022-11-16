@@ -1,31 +1,23 @@
 {
   "head": {
     "title": "Sobre Acueducto",
-    "description": "Acueducto no es sólo un estudio, es el resultado de una trayectoria que nos ha tomado años construir.",
+    "description": "Somos un grupo de profesionales cuya energía está al servicio de líderes que empujan la innovación en sus negocios.",
     "headerTitle": "Nosotros"
   },
   "intro": {
-    "title": "una dupla que hace crecer tu negocio",
-    "p": "Sin darnos cuenta, comenzamos este estudio 15 años atrás creciendo juntos y compartiendo proyectos personales y profesionales.<br/><br/>Motivados por la innovación y los altos estándares de calidad, unimos nuestros caminos profesionales para crear inspiradoras estrategias digitales.<br/><br/>Acueducto no es sólo un estudio, es el resultado de una trayectoria que nos ha tomado años construir, como nuestra amistad."
+    "title": "bienvenido a acueducto",
+    "p": "Este es un lugar diseñado para personas que construyen cosas donde antes no había nada y son optimistas respecto al impacto que tiene la tecnología en la sociedad y en los negocios.</br></br>Somos un grupo de profesionales, <b>distribuidos en el mundo</b>, cuya energía e intelecto están al servicio de organizaciones que necesitan soluciones con tecnología digital a los problemas que enfrentan.</br></br>Para nuestros clientes somos eficientes e innovadores; para nuestro equipo, la oportunidad para hacer el mejor trabajo de nuestras vidas y crecer tanto personal como profesionalmente."
   },
-  "team": [
-    {
-      "name": "rodrigo<br/>salmerón",
-      "position": "diseño y desarrollo, cofundador",
-      "bio": "Diseñador de interacción, visual y de movimiento; también desarrollador de software con una Maestría en Diseño de Interacción en The Harbour Space University con más de 10 años de experiencia en el campo.<br/><br/>Ha trabajado para agencias de diseño, productoras de cine y desarrolladoras de software.<br/><br/>Rodrigo es también productor musical, compositor y letrista. Y ya se trate de música, código o de interacciones humano-máquina, siempre busca nuevos retos para probar las últimas herramientas tecnológicas."
-    },
-    {
-      "name": "artemio<br/>pedraza",
-      "position": "estrategia y comunicación, cofundador",
-      "bio": "Estratega en comunicación, <i>project manager</i> y <i>community manager</i> con más de 7 años de experiencia como freelance.<br/><br/>También se ha desarrollado en ámbitos como <i>content management</i>, consultoría de marketing y <i>copywriting</i>. Es uno de los primeros licenciados especialistas en Comunicación Digital en México.<br/><br/>Cuando no está dirigiendo el departamento de estrategias en Acueducto, representa artistas en su sello discográfico digital Bludot."
-    }
-  ],
   "manifesto": {
     "intro": {
       "title": "¿qué nos hace distintos?",
-      "p": "Años de experiencia han forjado los valores fundamentales de Acueducto. Siguiendo estos principios, desarrollamos las mejores estrategias digitales para construir poderosos servicios, productos y aplicaciones.<br/><br/>Este es nuestro manifiesto."
+      "p": "Años de experiencia han forjado los valores fundamentales de Acueducto. Siguiendo estos principios, desarrollamos las mejores estrategias digitales para construir poderosos servicios, productos y aplicaciones. <br/><br/>Este es nuestro manifiesto."
     },
     "beliefs": [
+      {
+        "title": "vamos de menos a más",
+        "p": "Nos concentramos en las funcionalidades que realmente mueven la aguja."
+      },
       {
         "title": "nos involucramos contigo",
         "p": "Confía en nosotros, las relaciones a largo plazo llegan a resultados más significativos."
@@ -51,10 +43,6 @@
         "p": "Siempre a la vanguardia, ofrecemos soluciones para el futuro."
       },
       {
-        "title": "somos justos",
-        "p": "Valuamos nuestro trabajo según el valor que agregamos a tu negocio."
-      },
-      {
         "title": "nos encanta aprender",
         "p": "Aceptamos el cambio, pues muchas veces es parte de la solución."
       },
@@ -64,38 +52,8 @@
       }
     ]
   },
-  "process": {
-    "title": "con la estrategia<br/>en el núcleo",
-    "p": "La innovación no es producto de una simple chispa de creatividad, sino de un proceso que busca puntos débiles, áreas de oportunidad y sus mejores soluciones.<br/><br/>Abordar los problemas con una perspectiva design-driven significa desarrollar desde el inicio de cada proyecto, junto con nuestros clientes, estrategias que buscan los mejores resultados para ellos y sus usuarios.<br/><br/><b>Conoce nuestro proceso.</b>",
-    "steps": [
-      {
-        "title": "descubre",
-        "p": "Entendemos el contexto, audiencia, necesidades y retos del proyecto.<br/>Nos informamos."
-      },
-      {
-        "title": "visualiza",
-        "p": "Replanteamos el problema para resaltar nuevos hallazgos y oportunidades.<br/>Fijamos el trayecto."
-      },
-      {
-        "title": "narra",
-        "p": "Creamos una estrategia que guíe la conceptualización, priorización y co-creación.<br/>Creamos empatía."
-      },
-      {
-        "title": "diseña, programa y ensambla",
-        "p": "Diseñamos y refinamos prototipos, procesos y <i>copywriting</i>.<br/>Desarrollamos."
-      },
-      {
-        "title": "lanza",
-        "p": "Implementamos las nuevas soluciones y apoyamos la adopción de cambios organizacionales y de innovación.<br/>Guiamos el cambio."
-      },
-      {
-        "title": "evalúa",
-        "p": "Reflexionamos, documentamos e iteramos el proceso y acercamiento.<br/>Mejoramos."
-      }
-    ]
-  },
   "values": {
     "title": "echa un vistazo a cómo pensamos",
-    "p": "Consulta conversaciones y reflexiones alrededor de una sola pregunta: ¿cómo construir negocios saludables de internet?"
+    "p": "Consulta conversaciones y reflexiones alrededor de una sola pregunta: ¿cómo construir productos digitales increíbles?"
   }
 }

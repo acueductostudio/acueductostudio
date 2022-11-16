@@ -15,7 +15,10 @@ const ManifiestoSection = ({ t }) => {
           return (
             <Belief key={"belief" + index}>
               <Fade triggerOnce>
-                <span>0{index + 1}</span>
+                <span>
+                  {index < 9 ? "0" : ""}
+                  {index + 1}
+                </span>
                 <h3>{belief.title}</h3>
                 <p>{belief.p}</p>
               </Fade>
