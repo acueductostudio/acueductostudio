@@ -66,6 +66,9 @@ const Pinned = styled.div<{ borderTop: boolean }>`
   a {
     text-decoration: none;
   }
+  &:hover {
+    background-image: none;
+  }
   @media (max-width: 1300px) {
     padding-top: 100px;
     h1 {
