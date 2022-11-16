@@ -82,9 +82,35 @@ const PaperPlane = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1300px) {
+    & > div {
+      max-width: 500px;
+    }
+  }
+  @media (max-width: 1100px) {
+    padding-bottom: 9%;
+    & > div {
+      max-width: 400px;
+      padding-top: 2%;
+    }
+  }
+  @media (max-width: 800px) {
+    & > div {
+      max-width: 300px;
+    }
+  }
 `;
 
 const Team = styled.div`
   padding-top: 140px;
   padding-bottom: 0;
+  @media (max-width: 1300px) {
+    padding-top: 6.5%;
+  }
+  @media (max-width: 950px) {
+    padding-top: 10%;
+  }
+  @media (max-width: 750px) {
+    padding-top: 15%;
+  }
 `;
