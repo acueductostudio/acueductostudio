@@ -63,9 +63,11 @@ const RecursoCont = styled.div`
         display: block !important;
       }
     }
-    &:hover {
-      & > div {
-        border-color: ${(p) => p.theme.colors.accent};
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        & > div {
+          border-color: ${(p) => p.theme.colors.accent};
+        }
       }
     }
     span {

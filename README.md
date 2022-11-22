@@ -1,3 +1,6 @@
+- Traducción home y about
+- Página de podcast snippet en negro
+
 <p align="left">
   <a href="https://acueducto.studio/" target='_blank'>
     <img alt="Acueducto" src="https://acueducto.studio/signatures/logostroke.svg" width="220">
@@ -11,4 +14,4 @@
 - 🤹🏻‍♂️ [Instagram](https://www.instagram.com/acueducto.studio/)
 - 🙋🏻‍♀️ [Facebook](https://www.facebook.com/acueducto.studio/)
 - 🦜 [Twitter](https://twitter.com/acueductostudio)
-- 🔌 [LinkedIn](https://www.linkedin.com/company/acueductostudio/) 
+- 🔌 [LinkedIn](https://www.linkedin.com/company/acueductostudio/)

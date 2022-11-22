@@ -8,14 +8,16 @@ import PageClipper from "components/layout/PageClipper";
 import ContactFooter from "components/shared/footers/ContactFooter";
 import { H1, H2 } from "components/shared/Dangerously";
 import Services from "components/shared/Services";
-import CaseList from "components/caseStudy/CaseList";
 import Head from "components/layout/Head";
 import Carousel from "components/Carousel";
-import Products from "components/shared/Products";
+import { Fade } from "react-awesome-reveal";
+import Picture from "components/caseStudy/shared/Picture";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
+import BroadcastRouter from "components/podcast/BroadcastRouter.tsx";
 
 function Index({ locale, setTitle, pt }) {
   const [t, setT] = useState(pt);
+  const [isMobile, setIsMobile] = useState();
 
   useEffect(() => {
     clientLocale({
@@ -26,6 +28,11 @@ function Index({ locale, setTitle, pt }) {
         setTitle(nT.head.headerTitle);
       },
     });
+    if (window.innerWidth < 760) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
   }, [locale]);
 
   return (
@@ -53,10 +60,66 @@ function Index({ locale, setTitle, pt }) {
         <TitleSection {...t.intro} borderTop />
       </Intro>
       <Carousel items={t.carousel} />
-      <TitleSection {...t.studies.intro} borderTop />
-      <CaseList />
       <Services services={t.services} />
-      <Products {...t.products_section} />
+      <TitleSection {...t.clients.intro} borderTop />
+      <LogosSection>
+        <Fade>
+          <span>{t.clients.span}</span>
+          <>
+            {!isMobile ? (
+              <Picture
+                src="/assets/img/layout/clients.png"
+                width={932}
+                height={108}
+                alt="Clientes"
+              />
+            ) : (
+              <Picture
+                src="/assets/img/layout/clientsMobile.png"
+                width={616}
+                height={150}
+                alt="Clientes"
+              />
+            )}
+          </>
+          <Link
+            href={"/portafolio"}
+            as={locale === "en" ? "/work" : "/portafolio"}
+            locale={locale}
+            passHref
+          >
+            <ButtonArrow text={t.clients.cta} inverse />
+          </Link>
+        </Fade>
+      </LogosSection>
+      <TitleSection {...t.podcast.intro} borderTop>
+        <Fade>
+          <Link href={"/podcast"} passHref>
+            <HoverablePicture>
+              <Picture
+                src="/assets/img/layout/podcast_cover.png"
+                width={230}
+                height={230}
+                alt="Cuando el río suena"
+              />
+            </HoverablePicture>
+          </Link>
+          <BroadcastRouter
+            trackClicks
+            episode={3}
+            spotify={"https://open.spotify.com/show/2YLB7SOeJsLp5DtDuIwX8t"}
+            apple={
+              "https://podcasts.apple.com/us/podcast/cuando-el-r%C3%ADo-suena/id1500473556"
+            }
+            google={
+              "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz"
+            }
+            youtube={
+              "https://www.youtube.com/watch?v=k4CDIGcQ3gc&list=PLX3VC_2vq4TTRsyLoyWOHutWND0hQt9lD"
+            }
+          />
+        </Fade>
+      </TitleSection>
       <ContactFooter />
     </PageClipper>
   );
@@ -170,5 +233,53 @@ const Intro = styled.section`
   }
   @media (max-width: 900px) {
     padding-bottom: 6%;
+  }
+`;
+
+const LogosSection = styled.div`
+  background-color: ${(props) => props.theme.colors.background};
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: calc(70px + 5%);
+  & > :nth-child(1) {
+    color: ${(props) => props.theme.colors.foreground_lower};
+    margin-bottom: 3.5rem;
+  }
+  & > :nth-last-child(1) {
+    margin-top: 5.5rem;
+  }
+  @media (max-width: 1100px) {
+    img {
+      max-width: 700px !important;
+    }
+  }
+  @media (max-width: 850px) {
+    img {
+      max-width: 400px !important;
+    }
+  }
+  @media (max-width: 500px) {
+    img {
+      max-width: 300px !important;
+    }
+  }
+  @media (max-width: 400px) {
+    img {
+      max-width: 250px !important;
+    }
+  }
+`;
+
+const HoverablePicture = styled.a`
+  & > div span {
+    border: 2.5px solid transparent !important;
+    transition: 0.3s ease-out;
+    border-radius: 35px;
+    width: auto;
+    &:hover {
+      border-color: ${(p) => p.theme.colors.accent} !important;
+    }
   }
 `;

@@ -5,85 +5,69 @@
     "header_title": ""
   },
   "landing": {
-    "heading": "propelling businesses to scale",
-    "tagline": "Acueducto is a digital product studio based in Mexico City.",
-    "button": "case studies"
+    "heading": "apalanca tu negocio con tecnología",
+    "tagline": "Somos un estudio de productos digitales en CDMX.",
+    "button": "casos de estudio"
   },
   "intro": {
-    "title": "pushing ideas of visionary leaders",
-    "p": "We work with startup leaders and founders who seek to:",
-    "ul": [
-      "Build a Minimum Viable Product (MVP)",
-      "Validate a product solution with real users",
-      "Iterate the design of existing systems and tools"
-    ]
+    "title": "con increíbles productos digitales",
+    "p": "Nuestro equipo se alinea a tus objetivos de negocio para echar a andar proyectos tecnológicos en tu empresa.<br/><br/>Convertimos el problema que estás enfrentando en una idea, tu idea en una solución y esta solución en software de la mano de:"
   },
-  "carousel": ["startups", "brands", "corporations"],
-  "studies": {
-    "intro": {
-      "title": "who need intuitive interfaces",
-      "p": "Our energy and expertise are at the service of those entrepreneurs who seek to provide their communities with tools that:",
-      "ul": [
-        "Don’t make them think",
-        "Naturally show what the next step is",
-        "Deliver fast results"
-      ]
-    }
-  },
-  "products_section": {
-    "intro": {
-      "title": "to strengthen the ecosystem",
-      "p": "We help the next generation of Latin American startups by building functional and intuitive interfaces, but we also share resources on:",
-      "ul": [
-        "Building complementary and high-talented teams",
-        "Fostering an organizational culture that allows best development for your team",
-        "Design scalable and expandable business models",
-        "Create products that solve real problems",
-        "Go to market",
-        "And much more"
-      ]
-    }
-  },
+  "carousel": ["ingenieros", "diseñadores", "product managers"],
   "services": {
-    "intro": {
-      "title": "from seed to launch",
-      "p": "– And everything in between.<br/><br/>There’s a lot to take into consideration when developing digital products and services so we make sure to support our clients throughout their process, offering every stage of development for a digital experience."
-    },
-    "service_categories": [
+    "title": "diseñados para escalar",
+    "areas": [
       {
-        "title": "strategy",
-        "tags": [
-          "Project management",
-          "Strategic workshops",
-          "Research and insights",
-          "Product and web strategy",
-          "User interviews",
-          "Digital consulting",
-          "Development teams management"
-        ]
+        "title": "investigación y facilitación",
+        "p": "Analizamos junto a ti tus objetivos de negocios y las necesidades de tus usuarios. Paralelamente, hacemos un análisis de herramientas que ya resuelven el problema que estamos solucionando para entender patrones y expectativas de usuario."
       },
       {
-        "title": "design",
-        "tags": [
-          "UX",
-          "UI",
-          "Design sprints",
-          "Design systems",
-          "UX writing",
-          "Prototiping",
-          "Branding"
-        ]
+        "title": "diseño",
+        "p": "Construimos una experiencia que te hace pensar el mínimo, muestra naturalmente cuál es el siguiente paso y entrega resultados lo más rápido posible"
       },
       {
-        "title": "growth",
-        "tags": [
-          "Marketing strategies",
-          "Paid advertising",
-          "Community management",
-          "User testing",
-          "Change Management"
-        ]
+        "title": "desarrollo",
+        "p": "Desarrollamos arquitecturas escalables y escribimos código de calidad"
+      },
+      {
+        "title": "crecimiento",
+        "p": "Una vez vivo, empujamos la evolución de tu producto iterando progresivamente para alcanzar nuevos objetivos"
       }
     ]
+  },
+  "clients": {
+    "intro": {
+      "title": "para negocios que buscan innovar",
+      "p": "Te ayudamos a ejecutar proyectos que pueden transformar tu organización en una con mejores operaciones, una arquitectura escalable y una experiencia de cliente de primer nivel."
+    },
+    "span": "Hemos trabajado con",
+    "cta": "ve nuestro trabajo"
+  },
+  "faq": {
+    "title": "para negocios que buscan innovar",
+    "questions": [
+      {
+        "title": "¿qué tipo de proyectos pueden construir?",
+        "p": "Analizamos junto a ti tus objetivos de negocios y las necesidades de tus usuarios. Paralelamente, hacemos un análisis de herramientas que ya resuelven el problema que estamos solucionando para entender patrones y expectativas de usuario"
+      },
+      {
+        "title": "¿en cuánto tiempo podrían construir algo para mi negocio?",
+        "p": "Construimos una experiencia que te hace pensar el mínimo, muestra naturalmente cuál es el siguiente paso y entrega resultados lo más rápido posible"
+      },
+      {
+        "title": "¿ofrecen servicios de diseño?",
+        "p": "Desarrollamos arquitecturas escalables y escribimos código de calidad"
+      },
+      {
+        "title": "¿cuánto cuesta un proyecto?",
+        "p": "Una vez vivo, empujamos la evolución de tu producto iterando progresivamente para alcanzar nuevos objetivos"
+      }
+    ]
+  },
+  "podcast": {
+    "intro": {
+      "title": "conoce la historia detrás de productos increíbles",
+      "p": "Aprende cómo construyen producto las empresas de servicios digitales más importantes de Latinoamérica de la mano de nuestro CEO, Artemio Pedraza y nuestro COO, Rodrigo Salmerón.<br/><br/>Disponible en todas las plataformas de streaming."
+    }
   }
 }

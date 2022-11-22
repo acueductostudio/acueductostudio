@@ -11,79 +11,63 @@
   },
   "intro": {
     "title": "con increíbles productos digitales",
-    "p": "Trabajamos con fundadores y líderes de startups que buscan:",
-    "ul": [
-      "Construir un Minimum Viable Product (MVP)",
-      "Validar su producto con usuarios reales",
-      "Mejorar el diseño de interfaces y herramientas existentes"
-    ]
+    "p": "Nuestro equipo se alinea a tus objetivos de negocio para echar a andar proyectos tecnológicos en tu empresa.<br/><br/>Convertimos el problema que estás enfrentando en una idea, tu idea en una solución y esta solución en software de la mano de:"
   },
-  "carousel": ["startups", "marcas", "corporativos"],
+  "carousel": ["ingenieros", "diseñadores", "product managers"],
   "services": {
-    "intro": {
-      "title": "de la estrategia al lanzamiento",
-      "p": "– Y todo lo que involucra.<br/><br/>Existe mucho que considerar al desarrollar productos y servicios digitales, dotamos a nuestros clientes de un aliado durante su proceso y ofrecemos todas las etapas del desarrollo de una experiencia digital."
-    },
-    "service_categories": [
+    "title": "diseñados para escalar",
+    "areas": [
       {
-        "title": "estrategia",
-        "tags": [
-          "Administración de proyectos",
-          "Workshops estratégicos",
-          "Investigación e insights",
-          "Estrategia de web y de producto",
-          "Entrevistas de usuario",
-          "Consultoría digital",
-          "Gestión con equipos de desarrollo"
-        ]
+        "title": "investigación y facilitación",
+        "p": "Analizamos junto a ti tus objetivos de negocios y las necesidades de tus usuarios. Paralelamente, hacemos un análisis de herramientas que ya resuelven el problema que estamos solucionando para entender patrones y expectativas de usuario."
       },
       {
         "title": "diseño",
-        "tags": [
-          "UX (Experiencia de usuario)",
-          "UI (Diseño de interfaces)",
-          "Sprints de diseño",
-          "Sistemas de diseño",
-          "UX writing",
-          "Prototipado",
-          "Branding"
-        ]
+        "p": "Construimos una experiencia que te hace pensar el mínimo, muestra naturalmente cuál es el siguiente paso y entrega resultados lo más rápido posible"
+      },
+      {
+        "title": "desarrollo",
+        "p": "Desarrollamos arquitecturas escalables y escribimos código de calidad"
       },
       {
         "title": "crecimiento",
-        "tags": [
-          "Estrategias de marketing",
-          "Publicidad pautada",
-          "Community management",
-          "User testing",
-          "Administración de cambio"
-        ]
+        "p": "Una vez vivo, empujamos la evolución de tu producto iterando progresivamente para alcanzar nuevos objetivos"
       }
     ]
   },
-  "studies": {
+  "clients": {
     "intro": {
-      "title": "diseñados para escalar",
-      "p": "Nuestra energía e intelecto están al servicio de aquellos emprendedores que buscan ofrecer herramientas para sus comunidades que:",
-      "ul": [
-        "Pidan pensar el mínimo",
-        "Indiquen naturalmente cuál es el siguiente paso a seguir",
-        "Entreguen resultados veloces"
-      ]
-    }
+      "title": "para negocios que buscan innovar",
+      "p": "Te ayudamos a ejecutar proyectos que pueden transformar tu organización en una con mejores operaciones, una arquitectura escalable y una experiencia de cliente de primer nivel."
+    },
+    "span": "Hemos trabajado con",
+    "cta": "ve nuestro trabajo"
   },
-  "products_section": {
+  "faq": {
+    "title": "para negocios que buscan innovar",
+    "questions": [
+      {
+        "title": "¿qué tipo de proyectos pueden construir?",
+        "p": "Analizamos junto a ti tus objetivos de negocios y las necesidades de tus usuarios. Paralelamente, hacemos un análisis de herramientas que ya resuelven el problema que estamos solucionando para entender patrones y expectativas de usuario"
+      },
+      {
+        "title": "¿en cuánto tiempo podrían construir algo para mi negocio?",
+        "p": "Construimos una experiencia que te hace pensar el mínimo, muestra naturalmente cuál es el siguiente paso y entrega resultados lo más rápido posible"
+      },
+      {
+        "title": "¿ofrecen servicios de diseño?",
+        "p": "Desarrollamos arquitecturas escalables y escribimos código de calidad"
+      },
+      {
+        "title": "¿cuánto cuesta un proyecto?",
+        "p": "Una vez vivo, empujamos la evolución de tu producto iterando progresivamente para alcanzar nuevos objetivos"
+      }
+    ]
+  },
+  "podcast": {
     "intro": {
-      "title": "para fortalecer el ecosistema",
-      "p": "Impulsamos a la siguiente generación de startups latinoamericanas construyendo interfaces funcionales e intuitivas, pero también compartimos recursos que buscan ayudar a:",
-      "ul": [
-        "Construir equipos complementarios y altamente capaces",
-        "Empujar culturas de trabajo que permiten el mejor y libre desarrollo",
-        "Diseñar modelos de negocios escalables y expandibles",
-        "Crear productos que resuelven problemas",
-        "Salir al mercado",
-        "Y mucho más"
-      ]
+      "title": "conoce la historia detrás de productos increíbles",
+      "p": "Aprende cómo construyen producto las empresas de servicios digitales más importantes de Latinoamérica de la mano de nuestro CEO, Artemio Pedraza y nuestro COO, Rodrigo Salmerón.<br/><br/>Disponible en todas las plataformas de streaming."
     }
   }
 }
