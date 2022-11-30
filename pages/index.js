@@ -14,6 +14,7 @@ import { Fade } from "react-awesome-reveal";
 import Picture from "components/caseStudy/shared/Picture";
 import ButtonArrow from "components/shared/footers/ButtonArrow";
 import BroadcastRouter from "components/podcast/BroadcastRouter.tsx";
+import FAQSection from "components/shared/FAQ";
 
 function Index({ locale, setTitle, pt }) {
   const [t, setT] = useState(pt);
@@ -92,6 +93,7 @@ function Index({ locale, setTitle, pt }) {
           </Link>
         </Fade>
       </LogosSection>
+      <FAQSection t={t.faq}/>
       <TitleSection {...t.podcast.intro} borderTop>
         <Fade>
           <Link href={"/podcast"} passHref>

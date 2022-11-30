@@ -143,7 +143,7 @@ const Layout = ({ t, hasLoaded, children }) => {
         onMouseMove={showSketch || isAbout ? onMouseMove : undefined}
         onTouchMove={showSketch || isAbout ? onTouchMove : undefined}
       >
-        {hasLoaded && showSketch && <HomeSketch hide={false} mouse={mouse} />}
+        {/* {hasLoaded && showSketch && <HomeSketch hide={false} mouse={mouse} />} */}
         <Border />
         <NavTrigger
           toggleNav={toggleNav}

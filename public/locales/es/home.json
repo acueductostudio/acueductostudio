@@ -44,23 +44,23 @@
     "cta": "ve nuestro trabajo"
   },
   "faq": {
-    "title": "para negocios que buscan innovar",
+    "title": "preguntas frecuentes",
     "questions": [
       {
         "title": "¿qué tipo de proyectos pueden construir?",
-        "p": "Analizamos junto a ti tus objetivos de negocios y las necesidades de tus usuarios. Paralelamente, hacemos un análisis de herramientas que ya resuelven el problema que estamos solucionando para entender patrones y expectativas de usuario"
+        "p": "Prácticamente lo que sea: sitios web, aplicaciones web, aplicaciones móviles, blogs, plataformas, dashboards internos… lo que tu negocio necesite. También podemos ayudarte a automatizar operaciones de negocio con formularios dinámicos, manipulación de data y bases de dato para digitalizar y optimizar tu trabajo."
       },
       {
         "title": "¿en cuánto tiempo podrían construir algo para mi negocio?",
-        "p": "Construimos una experiencia que te hace pensar el mínimo, muestra naturalmente cuál es el siguiente paso y entrega resultados lo más rápido posible"
+        "p": "Dependiendo las especificaciones, pero aproximadamente 16 semanas."
       },
       {
         "title": "¿ofrecen servicios de diseño?",
-        "p": "Desarrollamos arquitecturas escalables y escribimos código de calidad"
+        "p": "Somos un estudio de diseño antes que nada. Estamos convencidos que las increíbles experiencias de usuario también deben ser hermosas."
       },
       {
         "title": "¿cuánto cuesta un proyecto?",
-        "p": "Una vez vivo, empujamos la evolución de tu producto iterando progresivamente para alcanzar nuevos objetivos"
+        "p": "Cada proyecto tiene una mensualidad fija por lo que sabrás cuánto gastarás desde el principio. Habrá que considerar algunos costos de otras herramientas/servicios que utilicemos para construir tu proyecto. Estos costos serán cobrados directamente a ti de forma transparente."
       }
     ]
   },
