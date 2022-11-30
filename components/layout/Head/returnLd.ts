@@ -12,6 +12,7 @@ const returnLd = (locale: string, asPath: string, description: string, title: st
                     "https://www.instagram.com/acueducto.studio/",
                     "https://www.linkedin.com/company/acueductostudio/",
                     "https://twitter.com/acueductostudio",
+                    "https://www.tiktok.com/@acueducto.studio",
                 ],
                 logo: {
                     "@type": "ImageObject",

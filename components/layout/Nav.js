@@ -19,6 +19,47 @@ export default function Nav(props) {
     );
   };
 
+  const yearRoman = () => {
+    var year = new Date().getFullYear();
+    var digits = String(+year).split(""),
+      key = [
+        "",
+        "C",
+        "CC",
+        "CCC",
+        "CD",
+        "D",
+        "DC",
+        "DCC",
+        "DCCC",
+        "CM",
+        "",
+        "X",
+        "XX",
+        "XXX",
+        "XL",
+        "L",
+        "LX",
+        "LXX",
+        "LXXX",
+        "XC",
+        "",
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX",
+      ],
+      roman = "",
+      i = 3;
+    while (i--) roman = (key[+digits.pop() + i * 10] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
+  };
+
   return (
     <NavWrapper open={props.isOpen} id="Nav">
       {props.isOpen && (
@@ -42,7 +83,7 @@ export default function Nav(props) {
             </ul>
           </NavList>
           <BottomNav>
-            <Registered>© MMXXII</Registered>
+            <Registered>© {yearRoman()} </Registered>
             <Social>
               <Hoverable
                 target="_blank"
@@ -63,10 +104,10 @@ export default function Nav(props) {
               <Hoverable
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://twitter.com/AcueductoStudio/"
+                href="https://www.tiktok.com/@acueducto.studio"
               >
-                twitter
-                <span>tw</span>
+                tiktok
+                <span>tk</span>
               </Hoverable>
               <Hoverable
                 target="_blank"

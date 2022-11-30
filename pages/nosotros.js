@@ -13,6 +13,9 @@ import TitleSectionGrid from "components/shared/TitleSectionGrid.ts";
 import Recursos from "components/shared/Recursos";
 import Picture from "components/caseStudy/shared/Picture";
 import ManifiestoSection from "components/ManifiestoSection";
+import pTeam from '../public/assets/img/layout/team.png'
+import pPaper from '../public/assets/img/layout/paper.png'
+
 
 function About({ locale, setTitle, pt, hasLoaded, mouse }) {
   const [t, setT] = useState(pt);
@@ -36,10 +39,10 @@ function About({ locale, setTitle, pt, hasLoaded, mouse }) {
       />
       <Team as={TitleSectionGrid}>
         <Picture
-          src="/assets/img/layout/team.png"
-          width={1200}
-          height={606}
+          src={pTeam}
           alt="Equipo de Acueducto"
+          placeholder="blur" 
+          priority
         />
       </Team>
       <ControlledPadding as={PinnedSection} title={t.intro.title} notSticky>
@@ -47,9 +50,10 @@ function About({ locale, setTitle, pt, hasLoaded, mouse }) {
       </ControlledPadding>
       <PaperPlane>
         <Picture
-          src="/assets/img/layout/paper.png"
+          src={pPaper}
           width={600}
           height={400}
+          placeholder="blur" 
           alt="Gran lugar para trabajar"
         />
       </PaperPlane>

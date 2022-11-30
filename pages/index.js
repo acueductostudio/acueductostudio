@@ -269,7 +269,7 @@ const LogosSection = styled.div`
   }
   @media (max-width: 400px) {
     img {
-      max-width: 250px !important;
+      max-width: 280px !important;
     }
   }
 `;

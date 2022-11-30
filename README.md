@@ -14,4 +14,5 @@
 - 🤹🏻‍♂️ [Instagram](https://www.instagram.com/acueducto.studio/)
 - 🙋🏻‍♀️ [Facebook](https://www.facebook.com/acueducto.studio/)
 - 🦜 [Twitter](https://twitter.com/acueductostudio)
+- 📷 [Tiktok](https://www.tiktok.com/@acueducto.studio)
 - 🔌 [LinkedIn](https://www.linkedin.com/company/acueductostudio/)

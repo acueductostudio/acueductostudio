@@ -7,7 +7,7 @@ import BorderLink from "components/shared/BorderedLink";
 
 const socialNav = [
   { title: "facebook", link: "https://www.facebook.com/acueducto.studio/" },
-  { title: "twitter", link: "https://twitter.com/AcueductoStudio/" },
+  { title: "tiktok", link: "https://www.tiktok.com/@acueducto.studio" },
   { title: "instagram", link: "https://www.instagram.com/acueducto.studio/" },
   {
     title: "youtube",
@@ -23,6 +23,8 @@ export default function FooterNav() {
   const context = useLocaleContext();
   let { main, policies, resources, navTitles, mailto } =
     context.contact_footer.footer_nav;
+  
+    let year = new Date().getFullYear();
   return (
     <Footer>
       <Navs>
@@ -121,7 +123,7 @@ export default function FooterNav() {
       </Navs>
       <Colophon>
         <Fade triggerOnce>
-          <p>© 2022, Acueducto</p>
+          <p>© {year}, Acueducto</p>
           <a
             href={`mailto:hola@acueducto.studio?subject=${mailto.subject}&body=${mailto.body}`}
           >
