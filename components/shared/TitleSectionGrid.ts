@@ -29,7 +29,7 @@ const TitleSectionGrid = styled.div<{ borderTop?: boolean }>`
   .h1 {
     letter-spacing: 0;
     line-height: 100%;
-    font-size: 7rem;
+    font-size: 6.9rem;
     margin-bottom: 5%;
     font-weight: 400;
     max-width: 810px;

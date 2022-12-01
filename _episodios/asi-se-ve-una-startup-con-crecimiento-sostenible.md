@@ -5,14 +5,12 @@ title: Así se ve una startup con crecimiento sostenible
 guest: Claudia Shehin y Denis Cantú
 business: Come bien
 category: Founder
-description: "Acompáñanos con Claudia Shehin y Denis Cantú, Head of Growth y CEO respectivamente de Come Bien, el servicio de suscripción de comida saludable para negocios y particulares. </br></br>
-
-Si solo tienes un minuto, lo más importante que pueden aprender operadores, inversionistas y fundadores de la historia de Come Bien es lo siguiente: </br>
-
-- Crecimiento sostenible. En Come Bien analizan el Life Time Value de sus usuarios entre el Costo de Adquisición de Cliente para analizar si tienen métricas saludables de growth.</br>
-- Siempre adáptate. Esta startup pivoteó de un modelo B2B a uno B2C con la llegada de la pandemia. En ese entonces perdieron una ronda de inversión que tenían programada pero tras un periodo de experimentación lograron bajar exitosamente una nueva ronda con su nuevo modelo. </br>
-- Orgánico sobre pagado. Después de experimentar con canales de publicidad pagada, identificaron en Come Bien que a largo plazo es más redituable trabajar canales orgánicos como el SEO e indicadores como el Net Promoter Score</br>
-- Y por último: prepara tus operaciones para el crecimiento exponencial. Teniendo componentes físicos en su operación, en Come Bien trabajan constantemente en prepararse para crecer exponencialmente con inversión sin poner en riesgo la calidad de su producto."
+description: "Acompáñanos con Claudia Shehin y Denis Cantú, Head of Growth y CEO respectivamente de Come Bien, el servicio de suscripción de comida saludable para negocios y particulares."
+insights:
+- <b>Crecimiento sostenible.</b> En Come Bien analizan el Life Time Value de sus usuarios entre el Costo de Adquisición de Cliente para analizar si tienen métricas saludables de growth.
+- <b>Siempre adáptate.</b> Esta startup pivoteó de un modelo B2B a uno B2C con la llegada de la pandemia. En ese entonces perdieron una ronda de inversión que tenían programada pero tras un periodo de experimentación lograron bajar exitosamente una nueva ronda con su nuevo modelo.
+- <b>Orgánico sobre pagado.</b> Después de experimentar con canales de publicidad pagada, identificaron en Come Bien que a largo plazo es más redituable trabajar canales orgánicos como el SEO e indicadores como el Net Promoter Score
+- "<b>Y por último: prepara tus operaciones para el crecimiento exponencial.</b> Teniendo componentes físicos en su operación, en Come Bien trabajan constantemente en prepararse para crecer exponencialmente con inversión sin poner en riesgo la calidad de su producto."
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTYzMjI3MQ
 youtube: https://www.youtube.com/watch?v=LRen9OBPStA
 spotify: https://open.spotify.com/episode/6wxQ7lP2depFwUXyKqYvdV

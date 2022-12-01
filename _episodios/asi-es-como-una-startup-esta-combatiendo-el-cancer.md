@@ -5,14 +5,12 @@ title: Así es como una startup está combatiendo al cáncer
 guest: Tarek Ali Zaki y Gastón Soria
 business: Oncoprecision
 category: Founder
-description: "Acompáñanos con Tarek Ali Zaki y Gastón Soria, CEO y CSO respectivamente de OncoPrecision, la startup latinoamericana que busca combatir el cáncer con tratamientos personalizados para cada paciente.
-<br/><br/>
-Si solo tienes un minuto, lo más importante que pueden aprender operadores, inversionistas y fundadores de OncoPrecision es lo siguiente: 
-<br/>
-- No tienes que dominar una industria para incursionar en ella. Tarek no tenía un background científico, pero ahora, rodeado de un equipo complementario con Gastón, tiene suficientes conocimientos sobre cáncer para bajar millones de dólares de inversión de venture capital.<br/>
-- Los departamentos de R&D necesitan límites y enfoques de producto. En Oncoprecision la mentalidad de mercado orienta a sus científicos a producir los resultados necesarios para el negocio sin dejar que la curiosidad les estorbe en su misión.<br/>
-- Los avances tecnológicos permiten nuevas innovaciones. OncoPrecision no sería posible sin los avances en análisis de muestras, logística y la confianza en las startups como alternativas profesionales que existe hoy en día.<br/>
-- La multidisciplinariedad resuelve problemas más rápido. Gastón nos cuenta como tener ingenieros que no están sesgados por los resultados del laboratorio o científicos programando logran resolver problemas con más velocidad."
+description: "Acompáñanos con Tarek Ali Zaki y Gastón Soria, CEO y CSO respectivamente de OncoPrecision, la startup latinoamericana que busca combatir el cáncer con tratamientos personalizados para cada paciente."
+insights:
+  - <b>No tienes que dominar una industria para incursionar en ella.</b> Tarek no tenía un background científico, pero ahora, rodeado de un equipo complementario con Gastón, tiene suficientes conocimientos sobre cáncer para bajar millones de dólares de inversión de venture capital.
+  - <b>Los departamentos de R&D necesitan límites y enfoques de producto.</b> En Oncoprecision la mentalidad de mercado orienta a sus científicos a producir los resultados necesarios para el negocio sin dejar que la curiosidad les estorbe en su misión.
+  - <b>Los avances tecnológicos permiten nuevas innovaciones.</b> OncoPrecision no sería posible sin los avances en análisis de muestras, logística y la confianza en las startups como alternativas profesionales que existe hoy en día.
+  - <b>La multidisciplinariedad resuelve problemas más rápido.</b> Gastón nos cuenta como tener ingenieros que no están sesgados por los resultados del laboratorio o científicos programando logran resolver problemas con más velocidad.
 apple: https://podcasts.apple.com/us/podcast/as%C3%AD-es-como-una-startup-est%C3%A1-combatiendo-al-c%C3%A1ncer/id1500473556?i=1000587665270
 spotify: https://open.spotify.com/episode/7fwzkD7QhyIAblLpE17GNh
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTc2MjE1Ng

@@ -5,12 +5,12 @@ title: Cómo es un corporativo con la innovación en su ADN
 guest: Luis Pintado
 business: Interprotección
 category: Founder
-description: "Acompáñanos con Luis Pintado, CTO de Interprotección, el broker de seguros más grande de Latinoamérica.</br></br>
-Si solo tienes un minuto, lo más importante que pueden aprender operadores, inversionistas y fundadores de Interprotección es lo siguiente:</br>
-- Acerca a los ingenieros al negocio. En Interprotección, los equipos de desarrollo tienen una relación estrecha con la dirección de negocio para tomar decisiones en conjunto y mantenerse alineados.</br>
-- Cada nueva herramienta digital conlleva riesgos de ciberseguridad. Luis está atento a que al publicar nuevas APIs abiertas y productos de interacción digital debe mantenerse alerta y proteger sus sistemas de posibles ataques.</br>
-- Interprotección evalúa a las startups de su competencia para invertir o competir con ellas según las considere realmente innovadoras.</br>
-- Para evitar bugs, crashes y problemas técnicos en tu tecnologías, arranca pequeño. Luis recomienda resolver el problema más importante primero, y añadir funcionalidades y complejidad cuando el proyecto ya corra sin problemas."
+description: "Acompáñanos con Luis Pintado, CTO de Interprotección, el broker de seguros más grande de Latinoamérica."
+insights:
+- <b>Acerca a los ingenieros al negocio.</b> En Interprotección, los equipos de desarrollo tienen una relación estrecha con la dirección de negocio para tomar decisiones en conjunto y mantenerse alineados.
+- <b>Cada nueva herramienta digital conlleva riesgos de ciberseguridad.</b> Luis está atento a que al publicar nuevas APIs abiertas y productos de interacción digital debe mantenerse alerta y proteger sus sistemas de posibles ataques.
+- Interprotección evalúa a las startups de su competencia para invertir o competir con ellas según las considere realmente innovadoras.
+- <b>Para evitar bugs, crashes y problemas técnicos en tu tecnologías, arranca pequeño.</b> Luis recomienda resolver el problema más importante primero, y añadir funcionalidades y complejidad cuando el proyecto ya corra sin problemas.
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTY3NDM0Mw
 youtube: https://www.youtube.com/watch?v=k4CDIGcQ3gc
 spotify: https://open.spotify.com/episode/0U3kLApIvtGX1PwYTGNHHt

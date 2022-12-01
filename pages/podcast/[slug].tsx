@@ -25,7 +25,10 @@ export default function Episodio({ locale, setTitle, episode, numberOfE }) {
         headerTitle="Episodio"
         es_canonical={`https://acueducto.studio/podcast/${episode.slug}`}
         image={{
-          fileName: episode.episode >= 63 ? `og_image_e${episode.episode}.gif` : `og_image_e${episode.episode}.png`,
+          fileName:
+            episode.episode >= 63
+              ? `og_image_e${episode.episode}.gif`
+              : `og_image_e${episode.episode}.png`,
           alt: episode.title + " | " + episode.guest + ", " + episode.business,
         }}
       ></Head>
@@ -44,6 +47,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "title",
     "guest",
     "date",
+    "insights",
     "business",
     "category",
     "description",
@@ -78,7 +82,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   //For podcast episode number in footer
   const episodes = getAllEpisodes(["slug"]);
   const numberOfE = Object.keys(episodes).length + 1;
-
+  
   if (!episode) {
     return {
       notFound: true,

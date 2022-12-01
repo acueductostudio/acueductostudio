@@ -3,6 +3,8 @@ import { Div } from "components/shared/Dangerously";
 
 export const Content = styled.div``;
 
+export const Insights = styled.div``;
+
 export const Transcript = styled(Div)``;
 
 const CenteredSection = styled.div<{ customBackground?: string }>`
@@ -130,13 +132,32 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
         font-weight: 300;
         font-size: 2rem;
         color: #182024;
-        margin-right: 12px;
+        margin-right: 10px;
       }
     }
     ol li {
       &:before {
         content: counter(my-awesome-counter) ". ";
         margin-right: 6px;
+      }
+    }
+  }
+  ${Insights} {
+    background-color: #f9fcfb;
+    border: 2.5px solid #4da465;
+    ul {
+      color: ${(p) => p.theme.colors.foreground_lowest};
+      list-style: none;
+      li {
+        &::before {
+          content: " ";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50px;
+          background-color: #4da465;
+          margin-bottom:2px;
+        }
       }
     }
   }
@@ -157,6 +178,7 @@ const CenteredSection = styled.div<{ customBackground?: string }>`
       border-radius: 40px;
       p,
       ul,
+      ul li,
       ol {
         font-size: 1.7rem;
         line-height: 25px;

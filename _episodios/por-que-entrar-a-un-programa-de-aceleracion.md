@@ -5,13 +5,13 @@ title: ¿por qué entrar a un programa de aceleración?
 guest: Gina Gotthilf
 business: Latitud
 category: Inversor
-description: "Acompáñanos con Gina Gotthilf, COO y Cofundadora de Latitud, la plataforma de aceleración para startups de tecnología Latinoamericanas. </br></br>
-Si solo tienes un minuto, lo más importante de este capítulo es:</br>
-- No te limites al principio, siempre piensa tu startup globalmente y a escala</br>
-- Algo valioso que puede darte un programa de aceleración es hacerte ver todo lo que no conoces o estas contemplando</br>
-- Cómo constituyes y operas tu startup puede ser la diferencia entre gastar o no millones de dólares a largo plazo</br>
-- No importa si hay algo que no sabes, siempre puedes aprenderlo sobre la marcha</br>
-- Formar una comunidad al rededor de tu negocio puede marcar la diferencia con tu competencia"
+description: Acompáñanos con Gina Gotthilf, COO y Cofundadora de Latitud, la plataforma de aceleración para startups de tecnología Latinoamericanas.
+insights:
+  - No te limites al principio, siempre piensa tu startup globalmente y a escala
+  - Algo valioso que puede darte un programa de aceleración es hacerte ver todo lo que no conoces o estas contemplando
+  - Cómo constituyes y operas tu startup puede ser la diferencia entre gastar o no millones de dólares a largo plazo
+  - No importa si hay algo que no sabes, siempre puedes aprenderlo sobre la marcha
+  - Formar una comunidad al rededor de tu negocio puede marcar la diferencia con tu competencia
 apple: https://podcasts.apple.com/us/podcast/por-qu%C3%A9-entrar-a-un-programa-de-aceleraci%C3%B3n/id1500473556?i=1000582854551
 google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz
 spotify: https://open.spotify.com/episode/02kzTITOVlXKMlFGuadEkx

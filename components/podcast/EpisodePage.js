@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { H1 } from "components/shared/Dangerously";
+import { H1, Li } from "components/shared/Dangerously";
 import { Fade } from "react-awesome-reveal";
 import EpisodePreview from "components/podcast/EpisodePreview";
 import Logo from "public/assets/img/layout/logo.svg";
@@ -9,6 +9,7 @@ import Link from "next/link";
 import BorderLink from "components/shared/BorderedLink";
 import CenteredSection, {
   Content,
+  Insights,
   Transcript,
 } from "components/shared/CenteredSection";
 import ShareRouter from "./ShareRouter";
@@ -18,6 +19,7 @@ const EpisodePage = ({
   title,
   date,
   guest,
+  insights,
   business,
   category,
   description,
@@ -92,6 +94,27 @@ const EpisodePage = ({
           />
         </Fade>
         <Fade triggerOnce>
+          {spotify && insights && (
+            <Content as={Insights}>
+              <ContentType insights>Insights</ContentType>
+              <p>
+                Si solo tienes un minuto, lo más importante que pueden aprender
+                operadores, inversionistas y fundadores de {business} es lo
+                siguiente:
+              </p>
+              <Transcript as={"div"}>
+                {insights && (
+                  <ul>
+                    {insights.map((insight, i) => (
+                      <Li key={"insight" + i}>{insight}</Li>
+                    ))}
+                  </ul>
+                )}
+              </Transcript>
+            </Content>
+          )}
+        </Fade>
+        <Fade>
           {spotify && (
             <Content>
               {content && <ContentType>Transcript</ContentType>}
@@ -177,10 +200,11 @@ const CenteredDiv = styled.div`
 
 const ContentType = styled.span`
   font-weight: 300;
+  font-weight: ${(p) => (p.insights ? 600 : 300)};
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 6px;
-  color: ${(props) => props.theme.colors.background};
+  color: ${(p) => (p.insights ? "#4DA465" : p.theme.colors.background)};
   margin-bottom: 2rem;
   font-size: 1.5rem;
   width: 100%;
