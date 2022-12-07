@@ -96,7 +96,7 @@ function Index({ locale, setTitle, pt }) {
       <FAQSection t={t.faq}/>
       <TitleSection {...t.podcast.intro} borderTop>
         <Fade>
-          <Link href={"/podcast"} passHref>
+          <Link href={"/podcast"} passHref locale="es">
             <HoverablePicture>
               <Picture
                 src="/assets/img/layout/podcast_cover.png"
