@@ -12,6 +12,10 @@ insights:
   - <b>Para ventas B2B, los referidos son lo más efectivo.</b> Ningún líder de empresa pone su nombre en riesgo recomendándote después de un mal servicio, así que enfócate en entregar el mayor valor posible para el cliente adecuado y después instaura un sistema de referidos.
   - <b>Un buen manager motiva a su equipo.</b> Más que dar órdenes, mantener a sus equipos motivados, trabajando contentos y sintiéndose cuidados es lo que hace a un buen líder
   - <b>Los mejores productos hacen muy bien una sola cosa.</b> Cada nueva funcionalidad es una nueva capa de complejidad sobre tu producto, reducir estas variables aumenta tu capacidad de ser el mejor resolviendo un problema.
+apple: https://podcasts.apple.com/us/podcast/es-muy-caro-venderle-al-cliente-incorrecto-juana-barco/id1500473556?i=1000590649426
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTg4NjE4Nw
+youtube: https://www.youtube.com/watch?v=i0w7LoRwKSg
+spotify: https://open.spotify.com/episode/1Aj2znAW42cx5lvmYbtpDE
 ---
 
 **Artemio:** ¡Ya estamos grabando! ¿Qué tal, Ro? ¿Cómo estás?
