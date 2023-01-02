@@ -12,6 +12,10 @@ insights:
   - <b>Deja que las necesidades de tus clientes te saquen de tu zona de confort.</b> Tus solución nunca resolverá todos los problemas de tus usuarios, responder a su llamado cuando necesiten que amplíes tu oferta de servicio puede reposicionarte como líder con cada iteración
   - <b>Preocúpate por lo que puedes controlar.</b> Habrá veces que necesites dejar ir un problema si no tienes los medios para solucionarlo directamente, de la misma forma un problema que si está en tu cancha y dejas pasar, podrá costarte muy caro.
   - <b>Una vez más, haz cosas que no escalen. Para expandirse, Maribel abrió la división de adquisición offline saliendo a la calle con todo su equipo a buscar salones que no conocieran su negocio.
+spotify: https://open.spotify.com/episode/1UMPwBNIJMaenRH1vH5T67
+apple: https://podcasts.apple.com/us/podcast/c%C3%B3mo-emprender-siendo-una-solopreneur-maribel-dom%C3%ADnguez/id1500473556?i=1000591928686
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTk2NDg3Mw?sa=X&ved=0CAUQkfYCahcKEwiYtJ2msqn8AhUAAAAAHQAAAAAQAQ
+youtube: https://www.youtube.com/watch?v=pJPe056Ir58
 ---
 
 **Artemio:**  ¿Qué onda, gente del internet? Bienvenidos. ¿Cómo estás, Ro?
