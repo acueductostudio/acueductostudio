@@ -11,6 +11,10 @@ insights:
   - <b>Ten una visión global desde el primer día.</b> El mercado israelí es tan pequeño que la mayoría de sus emprendimientos están pensados internacionalmente, esto les da una ventaja de escala contra negocios locales.
   - <b>Las ventas con clientes medianos y grandes son complejas pero valen la pena.</b> En Noga buscan trabajar con clientes de este tamaño porque estos tienen recursos y conocen muy bien su mercado y el tipo de soluciones que están buscando.
   - <b>El miedo al fracaso es tu peor enemigo.</b> En Israel la cultura de emprendimiento abraza las fallas cuando se aprende ellas para seguir construyendo mientras que, en Latinoamérica, esto suele frenar muchos emprendimientos.
+apple: https://podcasts.apple.com/us/podcast/las-tres-cosas-que-necesita-tu-negocio-para-innovar/id1500473556?i=1000593096746
+spotify: https://open.spotify.com/episode/1YcGYYz0YwBARt8uMQpSow
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMTk5Mzk0NA
+youtube: https://www.youtube.com/watch?v=1Q5JO_U0zMA
 ---
 
 **Artemio:** ¡Hola! ¿Qué tal? Bienvenidos a todos a una edición remota de este podcast Cuando El Río Suena. El día de hoy me encuentro a distancia con mi socio, como ya es costumbre, Rodrigo. ¿Cómo estás, Ro?
