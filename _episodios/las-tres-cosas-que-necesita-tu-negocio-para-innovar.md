@@ -1,6 +1,6 @@
 ---
 episode: 76
-date: "2023-09-01"
+date: "2023-01-09"
 title: Las tres cosas que necesita tu negocio para innovar
 guest: Rina Fainstein
 business: Noga
