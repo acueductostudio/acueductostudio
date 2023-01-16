@@ -11,6 +11,10 @@ insights:
   - <b>Una visión única es importante para que la gente te siga.</b> Para atraer y retener al mejor talento de tu industria necesitas resolver un problema real, generar un impacto positivo y tener un norte claro para tu startup.
   - <b>Capacitar a tu equipo en tecnología puede traer retornos importantes.</b> Reduce rotación, costos, incertidumbre y empodera a tus empleados para su relación con tu empresa y para sus vidas personales.
   - <b>Los mejores emprendimientos nacen de un dolor propio.</b> Si estás buscando oportunidades, analizar tus propios problemas es un gran lugar para empezar.
+spotify: https://open.spotify.com/episode/4vG0Cjb5p7S3JkENnlgnfI
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS84OTU5NzIucnNz/episode/QnV6enNwcm91dC0xMjAzOTMzNw
+apple: https://podcasts.apple.com/us/podcast/c%C3%B3mo-convertir-un-problema-propio-en-un/id1500473556?i=1000594572252
+youtube: https://www.youtube.com/watch?v=m5YjOzYdDts
 ---
 
 **Artemio:** Hola, ¿qué tal? Bienvenidos a todos a un capítulo más de Cuando El Río Suena. Me acompaña, como ya es costumbre, mi socio Rodrigo Salmerón, ¿cómo estás, Ro?
