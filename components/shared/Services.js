@@ -39,7 +39,7 @@ const Info = styled.div`
     color: ${(props) => props.theme.colors.accent};
     position: absolute;
     left: calc(10% + 10px);
-    margin-top: 10px;
+    margin-top: 0.75rem;
     font-size: 1.5rem;
   }
   p {
@@ -53,7 +53,7 @@ const Info = styled.div`
   }
   @media (max-width: 1300px) {
     span {
-      margin-top: 8px;
+      margin-top: 0.65rem;
     }
     p {
       &:nth-of-type(1) {
@@ -64,6 +64,7 @@ const Info = styled.div`
   @media (max-width: 900px) {
     span {
       left: calc(10%);
+      margin-top: 0.55rem;
     }
     p {
       &:nth-of-type(1) {
@@ -74,17 +75,13 @@ const Info = styled.div`
   @media (max-width: 600px) {
     span {
       left: 0px;
-      margin-top: 7px;
+      margin-top: 0.45rem;
     }
     p {
       margin-left: 7%;
     }
   }
   @media (max-width: 450px) {
-    span {
-      left: 0px;
-      margin-top: 7px;
-    }
     p {
       margin-left: 10%;
     }

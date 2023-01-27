@@ -44,6 +44,9 @@ const ScrollDown = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  ol {
+    list-style: none;
+  }
 `;
 
 const Pinned = styled.div<{ borderTop: boolean; notSticky: boolean }>`
